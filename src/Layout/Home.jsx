@@ -1,9 +1,12 @@
+import { Header } from '../Components/Header';
 
 const Home = () => {
   
   return (
     <>
-    <p>this is a page home</p>
+    <div className='mb-12'>
+    <Header />
+    </div>
     </>
   )
 }

@@ -1,0 +1,27 @@
+.input-hidden {
+  height: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  overflow: hidden;
+  transition: transform .5s linear, ;
+
+}
+
+.input-active {
+  height: auto;
+  transform: scaleY(1);
+  transform-origin: top;
+  overflow: visible;
+  transition: transform .7s linear;
+}
+
+.button-hidden {
+  transition: opacity .5s ease;
+  pointer-events: none !important;
+  opacity: 0;
+}
+
+.button-active {
+  transition: opacity 1.5s ease;
+  opacity: 1;
+}
