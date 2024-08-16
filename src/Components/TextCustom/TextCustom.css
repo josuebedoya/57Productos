@@ -1,0 +1,39 @@
+.title-custom{
+  display: inline-block;
+}
+
+.TitleWithLineStart::after{
+  content: "";
+  display: block;
+  position: relative;
+  width: 20%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  margin: 5px 0;
+}
+
+.TitleWithLineCenter::after{
+  content: "";
+  display: block;
+  position: relative;
+  width: 20%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  margin: 5px auto;
+}
+
+.TitleWithLineEnd::after{
+  content: "";
+  display: block;
+  position: relative;
+  width: 20%;
+  height: 3px;
+  bottom: 0;
+  left: 80%;
+  background-color: var(--color-primary);
+  margin: 5px 0;
+}

@@ -1,5 +1,8 @@
 import { Header } from '../Components/Header';
 import { Slider } from '../Components/Slider/Slider'
+import {Blog} from '../Components/Blog'
+import { MissionAndVision } from '../Components/MissionAndVision/MissionAndVision';
+import { Chance } from '../Components/Chance';
 
 const Home = () => {
 
@@ -14,6 +17,14 @@ const Home = () => {
         <Slider title={titleSlider}>
           !Has crecer tus ganancias con nuestra ayuda¡
         </Slider>
+
+        <Blog>
+        Descubre cómo nuestros servicios especializados te ayudarán a maximizar tus beneficios de manera efectiva. Explora nuestro blog para acceder a estrategias probadas que transformarán tus resultados financieros y empresariales. Únete a nosotros y potencia tu éxito económico hoy mismo.
+        </Blog>
+
+        <MissionAndVision/>
+
+        <Chance />
       </div>
     </>
   )
