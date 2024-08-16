@@ -16,6 +16,10 @@ module.exports = {
         'Primary': '#7f7f7f',
         'Secondary': '#3a3a3a'
       },
+
+      height: {
+        '600': '40pc',
+      }
     },
   },
   plugins: [],

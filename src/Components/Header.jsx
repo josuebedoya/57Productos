@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../Images/logo.jpg';
+import logo from '../Images/logo.png';
 import { Button } from "./Button";
 import { AngleBottomIcon, ProfileIcon, SearchEngineIcon } from "./Icons";
 import { Input } from './Input/Input';
