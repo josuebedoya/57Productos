@@ -1,0 +1,49 @@
+.item-dots:hover{
+  box-shadow: 0 0 8px #313131;
+  border-radius: 50%;
+}
+
+.item-dots.active{
+  background: #8f8f8f;;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+/* ----Sidebars syles with images------*/
+.button-next-image{
+  right: -60px;
+}
+
+.button-prev-image{
+  left: -60px;
+}
+
+.button-prev-image, .button-next-image{
+  border-radius: 50%;
+  background: #fff;
+}
+
+.button-prev-image:hover, .button-next-image:hover{
+  box-shadow: 0 0 4px #3f3f3f;
+  border-radius: 50%;
+  background: none;
+}
+
+.button-next-image:hover > svg > path, .button-prev-image:hover > svg > path{
+  color: var(--color-primary);
+}
+
+/* ----Sidebars syles with others elements------*/
+.button-next-element{
+  right: -8pc;
+}
+
+.button-prev-element{
+  left: -8pc;
+}
+
+.button-prev-element:hover, .button-next-element:hover{
+  box-shadow: 0 0 4px #3f3f3f;
+  border-radius: 50%;
+}
