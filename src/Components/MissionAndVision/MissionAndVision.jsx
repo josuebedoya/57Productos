@@ -1,5 +1,5 @@
 import { TextCustom } from '../TextCustom/TextCustom';
-import logo from '../../Images/logo.jpg';
+import logo from '../../Images/logo.png';
 import './MissionAndVision.css';
 
 const MissionAndVision = () => {

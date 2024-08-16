@@ -3,6 +3,7 @@ import { Slider } from '../Components/Slider/Slider'
 import {Blog} from '../Components/Blog'
 import { MissionAndVision } from '../Components/MissionAndVision/MissionAndVision';
 import { Chance } from '../Components/Chance';
+import { CarouselItems } from '../Components/Carousel/CarouselItems'
 
 const Home = () => {
 
@@ -25,6 +26,7 @@ const Home = () => {
         <MissionAndVision/>
 
         <Chance />
+        <CarouselItems NameToDisplay='Benefits'/>
       </div>
     </>
   )
