@@ -3,6 +3,8 @@ import {MdOutlineCircle} from 'react-icons/md'
 import { GrUserSettings } from "react-icons/gr";
 import { IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward } from "react-icons/io";
 import {FaArrowRight} from "react-icons/fa";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+
 
 // icon magnifying glass
 export const SearchEngineIcon = () => {
@@ -57,5 +59,12 @@ export const CircleIcon = ({ atr }) => {
 export const ArrowRightIcon = ({ atr }) => {
   return (
     <FaArrowRight  style={atr} />
+  )
+}
+
+// Cart Basket
+export const CartIcon = ({ atr }) => {
+  return (
+<AiOutlineShoppingCart  style={atr} />
   )
 }

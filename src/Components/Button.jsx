@@ -1,8 +1,9 @@
-function Button({ children, icon, FuctionButton, iconRight }) {
+function Button({ children, icon, FuctionButton, iconRight, classBtn }) {
   return (
     <>
       <button
-        className="
+        className={`
+                    ${ classBtn }
                     flex
                     items-center
                     gap-2
@@ -14,12 +15,14 @@ function Button({ children, icon, FuctionButton, iconRight }) {
                     py-1.5
                     rounded-full
                     shadow-md
+                    border
+                    border-primary
                     hover:bg-transparent
                     hover:text-Primary
                     hover:border
                     border-Primary
                     hover:font-semibold
-                    duration-150"
+                    duration-150`}
         onClick={FuctionButton}
       >
         {iconRight === true ? (
