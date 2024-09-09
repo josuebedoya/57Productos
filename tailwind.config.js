@@ -14,12 +14,16 @@ module.exports = {
       },
       colors: {
         'Primary': '#7f7f7f',
-        'Secondary': '#3a3a3a',
+        'Secondary': '#2140da',
         'Gray-dark': '#b4b4b4',
       },
       spacing: {
         '600': '40pc',
         'five': '5px',
+        '86': '86px',
+      },
+      fontSize: {
+        '13': '13px',
       },
     },
   },

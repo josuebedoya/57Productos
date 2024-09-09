@@ -18,9 +18,9 @@ function Button({ children, icon, FuctionButton, iconRight, classBtn }) {
                     border
                     border-primary
                     hover:bg-transparent
-                    hover:text-Primary
+                    hover:text-Secondary
                     hover:border
-                    border-Primary
+                    hover:border-Secondary
                     hover:font-semibold
                     duration-150`}
         onClick={FuctionButton}

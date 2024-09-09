@@ -2,23 +2,25 @@ import { useState } from 'react';
 import { CartIcon } from './Icons';
 
 const Cart = () => {
-    const [counter, setcounter] = useState(0);
+    const [counter, setCounter] = useState(0);
 
-    const Addcounter = () => {
+    const AddCounter = () => {
         if (counter <= 99) {
-            setcounter(counter + 1);
+            setCounter(counter + 1);
         }
-    }
+    };
+
     return (
-        <div id='CartDropdown' onClick={Addcounter}>
+        <div id='CartDropdown' onClick={AddCounter}>
             <div className='cart 
                 flex items-center 
-                text-white bg-Primary
-                border border-primary
+              text-white bg-Primary
+                border border-Primary
                 rounded-full
                 hover:bg-transparent
-                hover:text-Primary
-                hover:border border-Primary 
+              hover:text-Secondary
+                hover:border
+              hover:border-Secondary
                 hover:font-semibold 
                 duration-150
                 hover:cursor-pointer
@@ -30,22 +32,29 @@ const Cart = () => {
                     <div className='absolute
                         top-five
                         right-five
-                        bg-white
-                        text-Primary
-                        rounded-full
-                        p-2
-                        w-5
-                        h-5
-                        border-2
-                        border-Gray-dark
                         flex
                         items-center
                         justify-center
-                        transform 
                         translate-x-1/2
                         -translate-y-1/2'
                     >
-                        <span>{counter <= 99 ? counter : '99+'}</span>
+                        <span className='text-13
+                            bg-white
+                            text-Primary
+                            rounded-full 
+                            p-1
+                            min-w-6
+                            min-h-6
+                            max-h-6
+                            border-2
+                            border-Gray-dark
+                            flex
+                            items-center
+                            justify-center
+                            text-center'
+                        >
+                            {counter <= 99 ? counter : '99+'}
+                        </span>
                     </div>
                 )}
             </div>
