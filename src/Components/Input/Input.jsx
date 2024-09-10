@@ -1,13 +1,14 @@
 import React from 'react';
-import './Input.css'
 
-const Input = () => {
+const Input = ({ value, onChange }) => {
     return (
         <div className='input w-full' >
             <input
                 type="text"
                 maxLength={50}
                 placeholder="!Busca Contenido¡"
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
                 className="bg-transparent
                 text-Primary
                 text-sm

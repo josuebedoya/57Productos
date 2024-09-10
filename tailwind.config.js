@@ -11,6 +11,7 @@ module.exports = {
         'inset': 'inset 0 0 10px 5px rgba(0, 0, 0, 0.3)',
         'extense': '0 0 22px #c0c0c0',
         'custom-white': '0 0 7px #fff',
+        'bottom-x': '0 10px 15px -3px rgb(0 0 0 / 0.1)',
       },
       colors: {
         'Primary': '#7f7f7f',

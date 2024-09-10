@@ -10,10 +10,26 @@ import './Header.css';
 
 const Header = () => {
   const [displaySearchEngine, setDisplaySearchEngine] = useState(false);
+  const [valueSearch, setValueSearch] = useState('');
 
-  const toggleSearchEngineDisplay = () => {
+  const SearchEngineDisplay = () => {
     setDisplaySearchEngine(!displaySearchEngine);
   };
+
+  const SearchEngineClose = () => {
+    setDisplaySearchEngine(!displaySearchEngine);
+    if (valueSearch) {
+      alert(`el producto "${valueSearch}" pronto estará disponible`);
+      setValueSearch("");
+    }else{
+      alert('Ingresa un nombre para poder realizar la busqueda');
+    }
+  };
+
+  const onChangeValueSearch = (e) => {
+    setValueSearch(e);
+  }
+
 
   const menuItems = [
     { name: 'Inicio', url: '/online-shop/public' },
@@ -26,7 +42,7 @@ const Header = () => {
   const atr = 'text-Primary hover:font-semibold hover:text-Secondary';
 
   return (
-    <div className="menu-header shadow-custom-shadow bg-white py-4">
+    <div id="menu-header" className=" shadow-custom-shadow bg-white py-4">
       <div className="w-full px-4 grid grid-cols-12 items-center gap-4">
 
         {/* Logo */}
@@ -43,10 +59,10 @@ const Header = () => {
 
         {/* Search button, cart, and profile */}
         <div className="profileSearch-section col-span-3 flex items-center justify-center gap-4 pr-4">
-          <div className={`searchEngine-section ${displaySearchEngine ? 'hidden' : 'block'}`}>
+          <div className={`search-btn-section duration-500 ${displaySearchEngine ? 'button-active' : ''}`}>
             <Button
               icon={<SearchEngineIcon />}
-              FuctionButton={toggleSearchEngineDisplay}
+              FuctionButton={SearchEngineDisplay}
               classBtn="search-btn"
             />
           </div>
@@ -60,23 +76,24 @@ const Header = () => {
             </a>
           </div>
         </div>
+      </div>
 
-        {/* Search Engine Dropdown */}
+      {/* Search Engine Dropdown */}
+      <div className="search-engine-section flex justify-center w-full">
         {displaySearchEngine && (
-          <div className="flex justify-center mt-4 w-full">
-            <div className="input-section w-full md:w-1/2 bg-white p-4 rounded-lg shadow-custom-shadow relative z-10">
-              <div className="flex items-center space-x-4">
-                <Input />
-                <Button
-                  icon={<SearchEngineIcon />}
-                  FuctionButton={toggleSearchEngineDisplay}
-                  classBtn='search-btn'
-                />
-              </div>
+          <div className={`input-section-btn duration-500 ${displaySearchEngine ? 'active' : ''} w-full md:w-1/2 bg-white p-4 rounded-lg shadow-bottom-x absolute z-10`}>
+            <div className="flex items-center space-x-4">
+              <Input value={valueSearch} onChange={onChangeValueSearch} />
+              <Button
+                icon={<SearchEngineIcon />}
+                FuctionButton={SearchEngineClose}
+                classBtn='search-btn'
+              />
             </div>
           </div>
         )}
       </div>
+
     </div>
   );
 };
