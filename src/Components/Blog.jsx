@@ -1,4 +1,4 @@
-import { TextAnimatedWrite } from "./textAnimated";
+import { TextAnimatedWrite } from "./TextAnimated";
 import { Grafic } from "./Grafic/Grafic";
 import { Button } from './Button';
 import { AngleRightDroprightIcon } from './Icons'
