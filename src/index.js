@@ -1,6 +1,8 @@
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
+
+import { Header } from './Components/Header'
 import { Home } from './Layout/Home';
 import { About } from './Layout/About';
 import { PageError } from './Layout/Error';
@@ -11,7 +13,8 @@ import { Contact } from './Layout/Contact';
 export default function App() {
     return (
         <>
-            <BrowserRouter>
+            <Router>
+                <Header />
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/nosotros' element={<About />} />
@@ -20,7 +23,7 @@ export default function App() {
                     <Route path='/contacto' element={<Contact />} />
                     <Route path='*' element={<PageError />} />
                 </Routes>
-            </BrowserRouter>
+            </Router>
         </>
     )
 };
