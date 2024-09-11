@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import logo from '../Images/logo.png';
 import { Button } from "./Button";
 import { ProfileIcon, SearchEngineIcon } from "./Icons";
@@ -9,16 +10,16 @@ import { Menu } from './Menu';
 import './Header.css';
 
 const Header = () => {
-  const [displaySearchEngine, setDisplaySearchEngine] = useState(false);
-  const [valueSearch, setValueSearch] = useState('');
-  const ItemsProduct = { 
+  const [ displaySearchEngine, setDisplaySearchEngine ] = useState(false);
+  const [ valueSearch, setValueSearch ] = useState('');
+  const ItemsProduct = {
     name: "Colores",
-      id: 1,
-  amount: 223,
-   price: 23.000,
-   state: true,
-  wieght: 100
-};
+    id: 1,
+    amount: 223,
+    price: 23.000,
+    state: true,
+    wieght: 100
+  };
 
   const SearchEngineDisplay = () => {
     setDisplaySearchEngine(!displaySearchEngine);
@@ -26,22 +27,21 @@ const Header = () => {
 
   const SearchEngineClose = () => {
     setDisplaySearchEngine(!displaySearchEngine);
-    let  nameProduct = ItemsProduct.name.toLocaleLowerCase();
+    let nameProduct = ItemsProduct.name.toLocaleLowerCase();
     let valueInput = valueSearch.toLocaleLowerCase();
 
     console.log(valueInput);
 
-    if(valueSearch){
+    if (valueSearch) {
       if (valueInput == nameProduct && ItemsProduct.state == true) {
 
-        console.log(nameProduct + "-------------");
 
         alert(`el producto "${valueSearch}" aún está dispible, quedan ${ItemsProduct.amount}`);
         setValueSearch("");
-      }else{
+      } else {
         alert(`No se encontró "${valueSearch}", revisa o intenta más tarde`);
       }
-    }else{
+    } else {
       alert('Ingresa un nombre para poder realizar la busqueda');
     }
   };
@@ -52,7 +52,7 @@ const Header = () => {
 
 
   const menuItems = [
-    { name: 'Inicio', url: '/online-shop/public' },
+    { name: 'Inicio', url: '/' },
     { name: 'Nosotros', url: '/nosotros' },
     { name: 'Servicios', url: '/servicios' },
     { name: 'Tienda', url: '/tienda' },
@@ -103,8 +103,7 @@ const Header = () => {
         {displaySearchEngine && (
           <div className={`input-section-btn duration-500 ${displaySearchEngine ? 'active' : ''} w-full md:w-1/2 bg-white p-4 rounded-lg shadow-bottom-x absolute z-10`}>
             <div className="flex items-center space-x-4">
-              <Input value={valueSearch} onChange={onChangeValueSearch}/>
-              {console.log({valueSearch})}
+              <Input value={valueSearch} onChange={onChangeValueSearch} />
               <Button
                 icon={<SearchEngineIcon />}
                 FuctionButton={SearchEngineClose}
