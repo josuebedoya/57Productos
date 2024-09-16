@@ -3,7 +3,7 @@ function Button({ children, icon, FuctionButton, iconRight, classBtn }) {
     <>
       <button
         className={`
-                    ${ classBtn }
+                    ${classBtn}
                     flex
                     items-center
                     gap-2
@@ -11,7 +11,7 @@ function Button({ children, icon, FuctionButton, iconRight, classBtn }) {
                     bg-Primary
                     text-white
                     font-semibold
-                    px-7
+                    px-1.5
                     py-1.5
                     rounded-full
                     shadow-md

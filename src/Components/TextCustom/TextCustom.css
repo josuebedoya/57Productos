@@ -3,7 +3,7 @@
 }
 
 .TitleWithLineStart::after{
-  content: "";
+  content: '';
   display: block;
   position: relative;
   width: 20%;
@@ -15,7 +15,7 @@
 }
 
 .TitleWithLineCenter::after{
-  content: "";
+  content: '';
   display: block;
   position: relative;
   width: 20%;
@@ -27,7 +27,7 @@
 }
 
 .TitleWithLineEnd::after{
-  content: "";
+  content: '';
   display: block;
   position: relative;
   width: 20%;
