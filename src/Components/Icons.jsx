@@ -72,9 +72,9 @@ export const CartIcon = ({ atr, classIcons }) => {
 };
 
 // star without backgroun, only border
-export const StarLineIcon = ({ atr, classIcons }) => {
+export const StarLineIcon = ({ atr, classIcons, onClick }) => {
   return (
-    <FaRegStar style={atr} className={classIcons} />
+    <FaRegStar style={atr} className={classIcons} onClick={onClick} />
   )
 };
 
