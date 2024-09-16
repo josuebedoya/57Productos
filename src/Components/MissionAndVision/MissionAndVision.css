@@ -1,5 +1,5 @@
 .img-logo::before{
-  content: "";
+  content: '';
   position: absolute;
   width: 70%;
   height: 2px;

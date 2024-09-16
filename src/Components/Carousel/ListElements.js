@@ -1,6 +1,6 @@
-import { MissionAndVision } from "../MissionAndVision/MissionAndVision";
-import { Blog } from "../Blog";
-import { Grafic } from "../Grafic/Grafic";
+import { MissionAndVision } from '../MissionAndVision/MissionAndVision';
+import { Blog } from '../Blog';
+import { Grafic } from '../Grafic/Grafic';
 
 
 const getImages = require.context('../../Images', true, /\.(jpg|png)$/);
@@ -15,14 +15,14 @@ const Benefits = () => {
 
   return (
     <>
-      <div className="carosel">
-        <div className="image">
+      <div className='carosel'>
+        <div className='image'>
           {BestAcccesMarket.img}
         </div>
-        <div className="title">
+        <div className='title'>
           {BestAcccesMarket.title}
         </div>
-        <div className="summary">
+        <div className='summary'>
           {BestAcccesMarket.summary}
         </div>
       </div>

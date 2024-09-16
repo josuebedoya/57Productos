@@ -4,12 +4,12 @@ const Input = ({ value, onChange }) => {
     return (
         <div className='input w-full' >
             <input
-                type="text"
+                type='text'
                 maxLength={50}
-                placeholder="!Busca Contenido¡"
+                placeholder='!Busca Contenido¡'
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
-                className="bg-transparent
+                className='bg-transparent
                 text-Primary
                 text-sm
                 rounded-xl
@@ -20,7 +20,7 @@ const Input = ({ value, onChange }) => {
                 focus:outline-none
                 focus:shadow-custom
                 w-full
-                "
+                '
             />
         </div>
     );

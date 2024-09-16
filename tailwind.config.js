@@ -2,7 +2,7 @@
 module.exports = {
   important: true,
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     extend: {
@@ -26,6 +26,12 @@ module.exports = {
       fontSize: {
         '13': '13px',
       },
+      aspectRatio: {
+        '100/83': '100/83',
+      },
+      scale: {
+        '130': '1.3',
+      }
     },
   },
   plugins: [],

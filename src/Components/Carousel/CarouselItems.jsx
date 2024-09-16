@@ -44,24 +44,24 @@ const CarouselItems = ({ NameToDisplay, isImage }) => {
     <div className='py-10 overflow-hidden'>
       <div className='flex justify-center items-center mt-6 max-h-600 min-h-96'>
         {isImage ? (
-          <div id="imageView" className='carousel-section relative p-2'>
+          <div id='imageView' className='carousel-section relative p-2'>
             <div
-              className="button-prev absolute top-1/2 transform -translate-y-1/2 cursor-pointer"
+              className='button-prev absolute top-1/2 transform -translate-y-1/2 cursor-pointer'
               onClick={() => activeCarousel('prev')}
             >
               <AngleLeftIcon atr={{ fontSize: '30px', margin: '5px' }} className='prev-icon' />
             </div>
-            <div className="image-section overflow-hidden max-w-2xl rounded-3xl shadow-custom-white">
-              <ul ref={elements} className="flex transition-transform duration-300 ease-in-out">
+            <div className='image-section overflow-hidden max-w-2xl rounded-3xl shadow-custom-white'>
+              <ul ref={elements} className='flex transition-transform duration-300 ease-in-out'>
                 {contentToDisplay.map(item => (
-                  <li key={item.id} className="flex-shrink-0 w-full rounded-3xl">
-                    <img src={item.element} alt={`Image ${item.id}`} className="min-w-full max-h-96 object-cover" />
+                  <li key={item.id} className='flex-shrink-0 w-full rounded-3xl'>
+                    <img src={item.element} alt={`Image ${item.id}`} className='min-w-full max-h-96 object-cover' />
                   </li>
                 ))}
               </ul>
             </div>
             <div
-              className="button-next absolute top-1/2 transform -translate-y-1/2 cursor-pointer"
+              className='button-next absolute top-1/2 transform -translate-y-1/2 cursor-pointer'
               onClick={() => activeCarousel('next')}
             >
               <AngleRightIcon atr={{ fontSize: '30px', margin: '5px' }} className='next-icon' />
@@ -79,18 +79,18 @@ const CarouselItems = ({ NameToDisplay, isImage }) => {
             </div>
           </div>
         ) : (
-          <div id="elementView" className='carousel-section relative p-2'>
+          <div id='elementView' className='carousel-section relative p-2'>
             <div
               className={`${isImage ? 'button-prev-image' : 'button-prev-element'} absolute top-1/2 transform -translate-y-1/2 cursor-pointer`}
               onClick={() => activeCarousel('prev')}
             >
               <AngleLeftIcon atr={{ fontSize: '30px', margin: '5px' }} className='prev-icon' />
             </div>
-            <div className="image-section overflow-hidden max-w-3xl">
-              <ul ref={elements} className="flex transition-transform duration-300 ease-in-out">
+            <div className='image-section overflow-hidden max-w-3xl'>
+              <ul ref={elements} className='flex transition-transform duration-300 ease-in-out'>
                 {contentToDisplay.map(item => (
-                  <li key={item.id} className="flex-shrink-0 w-full min-w-0">
-                    <div className="min-w-full">
+                  <li key={item.id} className='flex-shrink-0 w-full min-w-0'>
+                    <div className='min-w-full'>
                       {item.element}
                     </div>
                   </li>
