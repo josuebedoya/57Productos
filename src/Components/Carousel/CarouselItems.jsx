@@ -1,14 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
-import ListElements from './ListElements';
 import { AngleLeftIcon, AngleRightIcon, CircleIcon } from '../Icons';
 import './Carousel.css'
 
-const CarouselItems = ({ NameToDisplay, isImage }) => {
+const CarouselItems = ({ ListElements, isImage }) => {
   const elements = useRef(null);
   const [ imgI, setImgI ] = useState(0);
 
-  const contentToDisplay = Array.isArray(ListElements[ 0 ][ NameToDisplay ])
-    ? ListElements[ 0 ][ NameToDisplay ]
+  const contentToDisplay = Array.isArray(ListElements)
+    ? ListElements
     : [];
 
   useEffect(() => {
