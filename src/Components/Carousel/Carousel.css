@@ -11,26 +11,26 @@
 }
 
 /* ----Sidebars syles with images------*/
-.button-next-image{
-  right: -60px;
+.button-next{
+  right: -60px !important;
 }
 
-.button-prev-image{
-  left: -60px;
+.button-prev{
+  left: -60px !important;
 }
 
-.button-prev-image, .button-next-image{
+.button-prev, .button-next{
   border-radius: 50%;
   background: #fff;
 }
 
-.button-prev-image:hover, .button-next-image:hover{
+.button-prev:hover, .button-next:hover{
   box-shadow: 0 0 4px #3f3f3f;
   border-radius: 50%;
   background: none;
 }
 
-.button-next-image:hover > svg > path, .button-prev-image:hover > svg > path{
+.button-next:hover > svg > path, .button-prev:hover > svg > path{
   color: var(--color-primary);
 }
 

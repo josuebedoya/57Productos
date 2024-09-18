@@ -22,4 +22,5 @@ body {
     padding: 0;
     overflow: auto;
     white-space: normal;
+    box-sizing: border-box;
 }

@@ -3,11 +3,12 @@ import { Blog } from '../Components/Blog';
 import { MissionAndVision } from '../Components/MissionAndVision/MissionAndVision';
 import { Chance } from '../Components/Chance';
 import { CarouselItems } from '../Components/Carousel/CarouselItems';
+import ListElements from '../Components/Carousel/ListElements';
 
 const Home = () => {
 
   const titleSlider = 'Tienda Online';
-
+  
   return (
 
     <>
@@ -23,7 +24,7 @@ const Home = () => {
         <MissionAndVision />
 
         <Chance />
-        <CarouselItems NameToDisplay='Benefits' />
+        <CarouselItems ListElements={ListElements}  isImage/>
       </div>
     </>
   )
