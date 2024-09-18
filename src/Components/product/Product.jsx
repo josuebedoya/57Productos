@@ -1,26 +1,55 @@
 import { AngleRightIcon, HearthCheckIcon, HearthLineIcon, DocumentIcon } from '../Icons';
 import { Button } from '../Button';
 import { Stars } from '../Stars';
+import { useState } from 'react';
+import { Modalproduct } from './ModalProduct';
 
-const getImages = require.context('../../Images/ProductImages', true, /\.(jpg|png)$/);
+const getImagesProduct = require.context('../../Images/ProductImages', true, /\.(jpg|png)$/);
 
 const Product = (props) => {
+    const [IsOpen, setIsOpen] = useState(false);
+    const [outstanding, setOutstanding] = useState(false);
+    const [changeImg, setChangeImg] = useState(false);
 
-    let description = props.children;
+    const HoverChangeImg = () => {
+        if (props.imgHover) {
+            setChangeImg(!changeImg);
+        };
+    };
+
+    /* show a part of the description in the summary */
     let summary = '';
 
-    if (description) {
+    if (props.children) {
 
         for (let i = 0; i <= 250; i++) {
-            summary += description[ i ];
+            summary += props.children[i];
         };
     }
+
+    /* change Icon in outstanding */
+    const Added = () => {
+        setOutstanding(!outstanding);
+    };
+
+    /* open modal with infromation product */
+    const OpenModal = () => {
+        setIsOpen(!IsOpen);
+    };
+
+    if (IsOpen) {
+        return <Modalproduct close={OpenModal} title={props.title} description={props.children} price={props.price} img={props.img} imgHover={props.imgHover} />;
+    };
 
     return (
         <>
             <div id='item-product'>
                 <div className='item-image'>
-                    <img src={getImages(`./${props.img}`)} alt={props.title} className='aspect-100/83 p-2 rounded-3xl border border-Primary cursor-pointer' />
+                    {!changeImg ? (
+                        <img src={getImagesProduct(`./${props.img}`)} alt={props.title} className='h-96 w-96 rounded-3xl shadow-lg cursor-pointer transition-transform duration-300 transform hover:scale-105 z-0' onMouseEnter={HoverChangeImg} />
+                    ) : (
+                        <img src={getImagesProduct(`./${props.imgHover}`)} alt={props.title} className='h-96 w-96 rounded-3xl shadow-lg cursor-pointer z-0' onMouseLeave={HoverChangeImg} />
+                    )}
                 </div>
                 <div className='rating-stars flex gap-1 text-13'>
                     <Stars />
@@ -43,25 +72,16 @@ const Product = (props) => {
                                 Añadir
                             </Button>
                         </div>
-                        <div className='btns-check flex'>
+                        <div className='btns-check flex gap-2'>
                             <div className='btn-outstanding'>
-                                <Button icon={<HearthLineIcon />} classBtn='text-lg' />
+                                <Button icon={!outstanding ? <HearthLineIcon /> : <HearthCheckIcon />} FuctionButton={Added} classBtn='text-lg' />
                             </div>
                             <div className='btn-modal-information'>
-                                <Button icon={<DocumentIcon />} classBtn='text-lg' />
+                                <Button icon={<DocumentIcon />} classBtn='text-lg' FuctionButton={OpenModal} />
                             </div>
                         </div>
                     </div>
-                    {props.IsOpenModal ? (
-                        <>
-                            <div className='content-description text-lg'>
-                                <p className='description'>{props.children}</p>
-                            </div>
-                        </>
-                    ) : (
-                        ''
-                    )
-                    }
+
                 </div>
             </div>
         </>
