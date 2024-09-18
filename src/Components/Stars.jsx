@@ -1,4 +1,4 @@
-import { StarLineIcon } from './Icons';
+import { StarLineIcon, StarIcon } from './Icons';
 import { useState } from 'react';
 
 const Stars = () => {
@@ -13,14 +13,11 @@ const Stars = () => {
         <>
             <div className='stars flex gap-1 mt-4 text-13'>
                 {[1, 2, 3, 4, 5].map((i, index) => (
-                    <StarLineIcon key={index}
-                        classIcons={`
-                            cursor-pointer
-                            ${select >= i ? 'text-red-500' : 'text-Primary'}
-                        `}
-                        onClick={() => SelectStar(i)}
-                    />
-                ))}
+                    select >= i ? (
+                        <StarIcon key={index} onClick={() => SelectStar(i)} />
+                    ) : (
+                        <StarLineIcon key={index} onClick={() => SelectStar(i)} />
+                    )))}
             </div>
         </>
     );
