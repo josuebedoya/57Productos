@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 
@@ -9,6 +9,7 @@ import { PageError } from './Layout/Error';
 import { Services } from './Layout/Services';
 import { Store } from './Layout/Store';
 import { Contact } from './Layout/Contact';
+import { Profile } from './Layout/Profile';
 
 export default function App() {
     return (
@@ -21,6 +22,7 @@ export default function App() {
                     <Route path='/servicios' element={<Services />} />
                     <Route path='/tienda' element={<Store />} />
                     <Route path='/contacto' element={<Contact />} />
+                    <Route path='/perfil' element={<Profile />} />
                     <Route path='*' element={<PageError />} />
                 </Routes>
             </Router>

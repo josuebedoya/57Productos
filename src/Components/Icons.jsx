@@ -1,7 +1,7 @@
 import { BiSearchAlt } from 'react-icons/bi';
 import { MdOutlineCircle } from 'react-icons/md'
 import { GrUserSettings } from 'react-icons/gr';
-import { IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward, IoMdExit } from 'react-icons/io';
 import { FaArrowRight, FaRegHeart } from 'react-icons/fa';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaRegStar, FaHeartCircleCheck } from 'react-icons/fa6';
@@ -96,5 +96,12 @@ export const HearthCheckIcon = ({ atr, classIcons }) => {
 export const DocumentIcon = ({ atr, classIcons }) => {
   return (
     <TiDocumentText style={atr} className={classIcons} />
+  )
+};
+
+//arrow exit between line vox
+export const ExitArrowIcon = ({ atr, classIcons }) => {
+  return (
+    <IoMdExit style={atr} className={classIcons} />
   )
 };
