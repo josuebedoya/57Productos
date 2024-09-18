@@ -2,7 +2,7 @@ import { BiSearchAlt } from 'react-icons/bi';
 import { MdOutlineCircle } from 'react-icons/md'
 import { GrUserSettings } from 'react-icons/gr';
 import { IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward } from 'react-icons/io';
-import { FaArrowRight, FaRegHeart } from 'react-icons/fa';
+import { FaArrowRight, FaRegHeart, FaStar } from 'react-icons/fa';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaRegStar, FaHeartCircleCheck } from 'react-icons/fa6';
 import { TiDocumentText } from 'react-icons/ti';
@@ -68,6 +68,13 @@ export const ArrowRightIcon = ({ atr, classIcons }) => {
 export const CartIcon = ({ atr, classIcons }) => {
   return (
     <AiOutlineShoppingCart style={atr} className={classIcons} />
+  )
+};
+
+// star
+export const StarIcon = ({ atr, classIcons, onClick }) => {
+  return (
+    <FaStar style={atr} className={classIcons} onClick={onClick} />
   )
 };
 
