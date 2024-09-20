@@ -1,7 +1,7 @@
 import { BiSearchAlt } from 'react-icons/bi';
 import { MdOutlineCircle } from 'react-icons/md'
 import { GrUserSettings } from 'react-icons/gr';
-import { IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward, IoMdExit } from 'react-icons/io';
+import { IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward, IoMdExit, IoMdAddCircleOutline, IoMdAddCircle, IoMdRemoveCircle, IoMdRemoveCircleOutline  } from 'react-icons/io';
 import { FaArrowRight, FaRegHeart, FaStar } from 'react-icons/fa';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaRegStar, FaHeartCircleCheck } from 'react-icons/fa6';
@@ -110,5 +110,33 @@ export const DocumentIcon = ({ atr, classIcons }) => {
 export const ExitArrowIcon = ({ atr, classIcons }) => {
   return (
     <IoMdExit style={atr} className={classIcons} />
+  )
+};
+
+// add between an circle outline
+export const AddCircleLineIcon = ({ atr, classIcons }) => {
+  return (
+    <IoMdAddCircleOutline  style={atr} className={classIcons} />
+  )
+};
+
+//add between an circle
+export const AddCircleIcon = ({ atr, classIcons }) => {
+  return (
+    <IoMdAddCircle   style={atr} className={classIcons} />
+  )
+};
+
+//remove bertween an circle
+export const RemoveCircleIcon = ({ atr, classIcons }) => {
+  return (
+    <IoMdRemoveCircle   style={atr} className={classIcons} />
+  )
+};
+
+//remove bertween an circle outLine
+export const RemoveCircleIconLine = ({ atr, classIcons }) => {
+  return (
+    <IoMdRemoveCircleOutline   style={atr} className={classIcons} />
   )
 };

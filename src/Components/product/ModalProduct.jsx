@@ -3,11 +3,12 @@ import { useState } from 'react';
 import { Stars } from '../Stars';
 import { Button } from '../Button';
 import { HearthLineIcon, ExitArrowIcon } from '../Icons';
+import { AddWithAmount } from '../AddWithAmount';
 
 const getImagesProduct = require.context('../../Images/ProductImages', true, /\.(jpg|png)$/);
 
 const Modalproduct = ({ close, title, price, description, img, imgHover }) => {
-  const [changeImg, setChangeImg] = useState(false);
+  const [ changeImg, setChangeImg ] = useState(false);
 
   if (close) {
 
@@ -48,7 +49,8 @@ const Modalproduct = ({ close, title, price, description, img, imgHover }) => {
                 <div className='content-price text-xl font-semibold my-4'>
                   <span>{price}</span>
                 </div>
-                <div className='btns-group flex justify-end'>
+                <div className='btns-group flex justify-between'>
+                  < AddWithAmount />
                   <div className='btn-outstanding'>
                     <Button icon={<HearthLineIcon />} classBtn='text-lg' />
                   </div>
