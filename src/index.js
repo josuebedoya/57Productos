@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
+import { Path_page } from './Routes';
 
 import { Header } from './Components/Header'
 import { Home } from './Layout/Home';
@@ -17,13 +18,13 @@ export default function App() {
             <Router>
                 <Header />
                 <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/nosotros' element={<About />} />
-                    <Route path='/servicios' element={<Services />} />
-                    <Route path='/tienda' element={<Store />} />
-                    <Route path='/contacto' element={<Contact />} />
-                    <Route path='/perfil' element={<Profile />} />
-                    <Route path='*' element={<PageError />} />
+                    <Route path={Path_page.HOME} element={<Home />} />
+                    <Route path={Path_page.US} element={<About />} />
+                    <Route path={Path_page.SERVICES} element={<Services />} />
+                    <Route path={Path_page.STORE} element={<Store />} />
+                    <Route path={Path_page.CONTACT} element={<Contact />} />
+                    <Route path={Path_page.PROFILE} element={<Profile />} />
+                    <Route path={Path_page.ERROR} element={<PageError />} />
                 </Routes>
             </Router>
         </>

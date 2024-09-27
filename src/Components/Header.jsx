@@ -6,6 +6,7 @@ import { ProfileIcon, SearchEngineIcon } from './Icons';
 import { Cart } from './Cart';
 import { Input } from './Input/Input';
 import { Menu } from './Menu';
+import { Path_page } from '../Routes';
 
 import './Header.css';
 
@@ -52,11 +53,11 @@ const Header = () => {
 
 
   const menuItems = [
-    { name: 'Inicio', url: '/' },
-    { name: 'Nosotros', url: '/nosotros' },
-    { name: 'Servicios', url: '/servicios' },
-    { name: 'Tienda', url: '/tienda' },
-    { name: 'Contacto', url: '/contacto' },
+    { name: 'Inicio', url: Path_page.HOME },
+    { name: 'Nosotros', url: Path_page.US },
+    { name: 'Servicios', url: Path_page.SERVICES },
+    { name: 'Tienda', url: Path_page.STORE },
+    { name: 'Contacto', url: Path_page.CONTACT },
   ];
 
   const atr = 'text-Primary hover:font-semibold hover:text-Secondary';
@@ -91,7 +92,7 @@ const Header = () => {
               <Cart />
             </div>
             <div className='profile-section'>
-              <a href='/perfil' target='_blank' className='profile-section-icon text-white bg-Primary border border-Primary rounded-full p-2 flex items-center
+              <a href={Path_page.PROFILE} target='_blank' className='profile-section-icon text-white bg-Primary border border-Primary rounded-full p-2 flex items-center
               hover:bg-transparent hover:text-Secondary hover:border-Secondary transition duration-150'>
                 <ProfileIcon />
               </a>
