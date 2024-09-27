@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CartIcon } from './Icons';
+import { CartIcon } from '../Resources/Icons';
 
 const Cart = () => {
     const [counter, setCounter] = useState(0);

@@ -1,7 +1,7 @@
-import { TextAnimatedWrite } from './TextAnimatedWrite';
-import { Grafic } from './Grafic/Grafic';
-import { Button } from './Button';
-import { AngleRightDroprightIcon } from './Icons'
+import { TextAnimatedWrite } from '../Components/TextAnimatedWrite';
+import { Grafic } from '../Components/Grafic/Grafic';
+import { Button } from '../Components/Button';
+import { AngleRightDroprightIcon } from '../Components/Icons'
 
 const Blog = ({ children }) => {
   const gotoServices = () => {
@@ -28,7 +28,7 @@ const Blog = ({ children }) => {
         </p>
       </div>
       <div className='button-section mt-5'>
-        <Button icon={<AngleRightDroprightIcon />} iconRight={true} FuctionButton={gotoServices}>
+        <Button icon={<AngleRightDroprightIcon />} iconRight={true} onCLick={gotoServices}>
           Navegar blog
         </Button>
       </div>

@@ -74,10 +74,10 @@ const Product = (props) => {
                         </div>
                         <div className='btns-check flex gap-2'>
                             <div className='btn-outstanding'>
-                                <Button icon={!outstanding ? <HearthLineIcon /> : <HearthCheckIcon />} FuctionButton={Added} classBtn='text-lg' />
+                                <Button icon={!outstanding ? <HearthLineIcon /> : <HearthCheckIcon />} onClick={Added} classBtn='text-lg' />
                             </div>
                             <div className='btn-modal-information'>
-                                <Button icon={<DocumentIcon />} classBtn='text-lg' FuctionButton={OpenModal} />
+                                <Button icon={<DocumentIcon />} classBtn='text-lg' onClick={OpenModal} />
                             </div>
                         </div>
                     </div>

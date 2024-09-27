@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 import logo from '../Images/logo.png';
-import { Button } from './Button';
-import { ProfileIcon, SearchEngineIcon } from './Icons';
-import { Cart } from './Cart';
-import { Input } from './Input/Input';
-import { Menu } from './Menu';
-import { Path_page } from '../Routes';
+import { Button } from '../../Components/Button';
+import { ProfileIcon, SearchEngineIcon } from '../../Resources/Icons';
+import { Cart } from '../../Components/Cart';
+import { Input } from '../../Components/Input/Input';
+import { Menu } from '../../Components/Menu';
+import { Path_page } from '../../Routes';
 
 import './Header.css';
 

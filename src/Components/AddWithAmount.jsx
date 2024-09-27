@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "./Button";
-import { AddCircleIcon, AddCircleLineIcon, RemoveCircleIcon, RemoveCircleIconLine } from "./Icons";
+import { AddCircleIcon, AddCircleLineIcon, RemoveCircleIcon, RemoveCircleIconLine } from "../Resources/Icons";
 
 const AddWithAmount = () => {
   const [ addIconHovered, setAddIconHovered ] = useState(false);

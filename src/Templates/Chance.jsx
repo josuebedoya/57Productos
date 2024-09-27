@@ -1,7 +1,7 @@
-import { TextCustom } from './TextCustom/TextCustom';
+import { TextCustom } from '../Components/TextCustom/TextCustom';
 import mercadeo from '../Images/mercadeo.jpg';
-import { Button } from './Button';
-import { ArrowRightIcon } from './Icons';
+import { Button } from '../Components/Button';
+import { ArrowRightIcon } from '../Resources/Icons';
 
 const Chance = () => {
   const styletilte = {
@@ -34,7 +34,7 @@ const Chance = () => {
               <Button
                 icon={<ArrowRightIcon />}
                 iconRight={true}
-                FuctionButton={functiongotocontact}
+                onClick={functiongotocontact}
               >
                  Formar parte
               </Button>

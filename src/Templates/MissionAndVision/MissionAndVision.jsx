@@ -1,4 +1,4 @@
-import { TextCustom } from '../TextCustom/TextCustom';
+import { TextCustom } from '../../Components/TextCustom/TextCustom';
 import logo from '../../Images/logo.png';
 import './MissionAndVision.css';
 
