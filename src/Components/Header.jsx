@@ -84,7 +84,7 @@ const Header = () => {
             <div className={`search-btn-section duration-500 ${displaySearchEngine ? 'button-active' : ''}`}>
               <Button
                 icon={<SearchEngineIcon />}
-                FuctionButton={SearchEngineDisplay}
+                onClick={SearchEngineDisplay}
                 classBtn='search-btn'
               />
             </div>
@@ -108,7 +108,7 @@ const Header = () => {
                 <Input value={valueSearch} onChange={onChangeValueSearch} />
                 <Button
                   icon={<SearchEngineIcon />}
-                  FuctionButton={SearchEngineClose}
+                  onClick={SearchEngineDisplay}
                   classBtn='search-btn'
                 />
               </div>

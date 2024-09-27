@@ -1,4 +1,4 @@
-function Button({ children, icon, FuctionButton, iconRight, classBtn }) {
+function Button({ children, icon, iconRight, classBtn, ...FuctionButton }) {
   return (
     <>
       <button
@@ -23,7 +23,7 @@ function Button({ children, icon, FuctionButton, iconRight, classBtn }) {
                     hover:border-Secondary
                     hover:font-semibold
                     duration-150`}
-        onClick={FuctionButton}
+        {...FuctionButton}
       >
         {iconRight === true ? (
           <>

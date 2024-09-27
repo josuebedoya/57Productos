@@ -24,7 +24,7 @@ const Modalproduct = ({ close, title, price, description, img, imgHover }) => {
           <div className='fixed inset-0 bg-black bg-opacity-80 flex justify-center items-start overflow-auto py-14 z-50'>
             <div className='modal-content-product relative bg-white max-w-5xl w-full p-6 rounded-3xl shadow-modal'>
               <div className='bnt-close flex justify-end'>
-                <Button icon={<ExitArrowIcon />} FuctionButton={close} />
+                <Button icon={<ExitArrowIcon />} onClick={close} />
               </div>
               <div className='content p-7'>
 
