@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import logo from '../Images/logo.png';
+import logo from '../../Resources/Images/logo.png';
 import { Button } from '../../Components/Button';
 import { ProfileIcon, SearchEngineIcon } from '../../Resources/Icons';
 import { Cart } from '../../Components/Cart';

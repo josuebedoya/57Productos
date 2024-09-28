@@ -1,10 +1,10 @@
-import { AngleRightIcon, HearthCheckIcon, HearthLineIcon, DocumentIcon } from '../Icons';
+import { AngleRightIcon, HearthCheckIcon, HearthLineIcon, DocumentIcon } from '../../Resources/Icons';
 import { Button } from '../Button';
 import { Stars } from '../Stars';
 import { useState } from 'react';
 import { Modalproduct } from './ModalProduct';
 
-const getImagesProduct = require.context('../../Images/ProductImages', true, /\.(jpg|png)$/);
+const getImagesProduct = require.context('../../Resources/Images/ProductImages', true, /\.(jpg|png)$/);
 
 const Product = (props) => {
     const [IsOpen, setIsOpen] = useState(false);

@@ -1,7 +1,7 @@
 import { TextAnimatedWrite } from '../Components/TextAnimatedWrite';
 import { Grafic } from '../Components/Grafic/Grafic';
 import { Button } from '../Components/Button';
-import { AngleRightDroprightIcon } from '../Components/Icons'
+import { AngleRightDroprightIcon } from '../Resources/Icons'
 
 const Blog = ({ children }) => {
   const gotoServices = () => {

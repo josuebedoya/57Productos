@@ -2,10 +2,10 @@ import { useState } from 'react';
 
 import { Stars } from '../Stars';
 import { Button } from '../Button';
-import { HearthLineIcon, ExitArrowIcon } from '../Icons';
+import { HearthLineIcon, ExitArrowIcon } from '../../Resources/Icons';
 import { AddWithAmount } from '../AddWithAmount';
 
-const getImagesProduct = require.context('../../Images/ProductImages', true, /\.(jpg|png)$/);
+const getImagesProduct = require.context('../../Resources/Images/ProductImages', true, /\.(jpg|png)$/);
 
 const Modalproduct = ({ close, title, price, description, img, imgHover }) => {
   const [ changeImg, setChangeImg ] = useState(false);

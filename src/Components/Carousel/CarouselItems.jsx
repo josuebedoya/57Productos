@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { AngleLeftIcon, AngleRightIcon, CircleIcon } from '../Icons';
+import { AngleLeftIcon, AngleRightIcon, CircleIcon } from '../../Resources/Icons';
 import './Carousel.css'
 
 const CarouselItems = ({ ListElements, isImage }) => {
