@@ -1,5 +1,5 @@
 import { Slider } from '../Components/Slider/Slider';
-import { Blog } from '../Templates/Blog';
+import { Blog } from '../Templates/Blog/Blog';
 import { MissionAndVision } from '../Templates/MissionAndVision/MissionAndVision';
 import { Chance } from '../Templates/Chance';
 import { CarouselItems } from '../Components/Carousel/CarouselItems';
@@ -16,13 +16,8 @@ const Home = () => {
         <Slider title={titleSlider}>
           !Has crecer tus ganancias con nuestra ayuda¡
         </Slider>
-
-        <Blog>
-          Descubre cómo nuestros servicios especializados te ayudarán a maximizar tus beneficios de manera efectiva. Explora nuestro blog         para acceder a estrategias probadas que transformarán tus resultados financieros y empresariales. Únete a nosotros y potencia tu        éxito económico hoy mismo.
-        </Blog>
-
+        <Blog/>
         <MissionAndVision />
-
         <Chance />
         <CarouselItems ListElements={ListElements}  isImage/>
       </div>
