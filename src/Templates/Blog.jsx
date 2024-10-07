@@ -1,12 +1,19 @@
+import { useNavigate } from 'react-router-dom';
+import { Path_page } from '../Routes';
+
 import { TextAnimatedWrite } from '../Components/TextAnimatedWrite';
 import { Grafic } from '../Components/Grafic/Grafic';
 import { Button } from '../Components/Button';
 import { AngleRightDroprightIcon } from '../Resources/Icons'
 
 const Blog = ({ children }) => {
-  const gotoServices = () => {
-    return alert('this button redirect to page services')
+
+  const routeButton = useNavigate();
+
+  const GotoServices = () => {
+    routeButton(Path_page.SERVICES);
   }
+
   return (
     <div className='container mx-auto flex flex-col items-center py-20'>
       <div className='title-section max-w-4xl min-h-11  h-11 text-center mb-8'>
@@ -28,7 +35,7 @@ const Blog = ({ children }) => {
         </p>
       </div>
       <div className='button-section mt-5'>
-        <Button icon={<AngleRightDroprightIcon />} iconRight={true} onCLick={gotoServices}>
+        <Button icon={<AngleRightDroprightIcon />} iconRight={true} onClick={GotoServices}>
           Navegar blog
         </Button>
       </div>
