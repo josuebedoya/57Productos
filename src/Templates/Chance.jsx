@@ -1,4 +1,4 @@
-import { TextCustom } from '../Components/TextCustom/TextCustom';
+import { TextCustom } from '../Components/TextCustom';
 import mercadeo from '../Resources/Images/mercadeo.jpg';
 import { Button } from '../Components/Button';
 import { ArrowRightIcon } from '../Resources/Icons';

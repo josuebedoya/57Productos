@@ -1,6 +1,6 @@
-import { Slider } from '../Components/Slider/Slider';
-import { Blog } from '../Templates/Blog/Blog';
-import { MissionAndVision } from '../Templates/MissionAndVision/MissionAndVision';
+import { Slider } from '../Components/Slider';
+import { Blog } from '../Templates/Blog';
+import { MissionAndVision } from '../Templates/MissionAndVision';
 import { Chance } from '../Templates/Chance';
 import { CarouselItems } from '../Components/Carousel/CarouselItems';
 import ListElements from '../Components/Carousel/ListElements';
