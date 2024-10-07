@@ -10,7 +10,7 @@ const MissionAndVision = () => {
     fontSize: '23px',
     fontWeight: 'bold',
     textTransform: 'Capitalize',
-    color: 'var(--color-primary)',
+    color:  `red`,
     textAlign: 'center'
   }
   const atrSummary = {
@@ -19,24 +19,16 @@ const MissionAndVision = () => {
     textAlign: 'justify',
     marginTop: '15px'
   }
-  const styleImg = {
-    padding: '20px',
-    border: '1px solid var(--color-primary)',
-    borderRadius: '50%',
-    background: '#fff'
-  }
-
+  
   return (
     <div id='MissionAndVision'>
       <div  className='mx-16 pt-14 pb-8'>
       <div className='flex justify-center img-logo items-center'>
-        <img src={logo} alt='logo' className='h-36' style={styleImg} />
+        <img src={logo} alt='logo' className='h-36'/>
       </div>
       <div className='container mx-auto gap-10 columns-2'>
         <TextCustom title={titleMission}
           lineTitle={true}
-          atrTitle={atrTitle}
-          atrsummary={atrSummary}
           titlePosition='center'
           linePosition='center'
           >
@@ -45,8 +37,6 @@ const MissionAndVision = () => {
 
         <TextCustom title={titleVision}
           lineTitle={true}
-          atrTitle={atrTitle}
-          atrsummary={atrSummary}
           titlePosition='center'
           linePosition='center'
           >

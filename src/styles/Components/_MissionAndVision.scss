@@ -1,5 +1,13 @@
 #MissionAndVision {
   .img-logo {
+
+    img{
+      padding: 20px;
+      border: 1px solid $color-primary;
+      border-radius: 50%;
+      background: #fff;
+    }
+
     &:before {
       content: '';
       position: absolute;
