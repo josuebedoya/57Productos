@@ -1,7 +1,7 @@
 import { Slider } from '../Components/Slider/Slider';
-import { Blog } from '../Components/Blog';
-import { MissionAndVision } from '../Components/MissionAndVision/MissionAndVision';
-import { Chance } from '../Components/Chance';
+import { Blog } from '../Templates/Blog';
+import { MissionAndVision } from '../Templates/MissionAndVision/MissionAndVision';
+import { Chance } from '../Templates/Chance';
 import { CarouselItems } from '../Components/Carousel/CarouselItems';
 import ListElements from '../Components/Carousel/ListElements';
 

@@ -1,6 +1,6 @@
 .slider-section {
   height: 470px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('../../Images/sliderBackground.jpg');
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('../../Resources/Images/sliderBackground.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

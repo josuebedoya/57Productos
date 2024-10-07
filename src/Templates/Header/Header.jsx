@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-import logo from '../Images/logo.png';
-import { Button } from './Button';
-import { ProfileIcon, SearchEngineIcon } from './Icons';
-import { Cart } from './Cart';
-import { Input } from './Input/Input';
-import { Menu } from './Menu';
-import { Path_page } from '../Routes';
+import logo from '../../Resources/Images/logo.png';
+import { Button } from '../../Components/Button';
+import { ProfileIcon, SearchEngineIcon } from '../../Resources/Icons';
+import { Cart } from '../../Components/Cart';
+import { Input } from '../../Components/Input/Input';
+import { Menu } from '../../Components/Menu';
+import { Path_page } from '../../Routes';
 
 import './Header.css';
 
@@ -84,7 +84,7 @@ const Header = () => {
             <div className={`search-btn-section duration-500 ${displaySearchEngine ? 'button-active' : ''}`}>
               <Button
                 icon={<SearchEngineIcon />}
-                FuctionButton={SearchEngineDisplay}
+                onClick={SearchEngineDisplay}
                 classBtn='search-btn'
               />
             </div>
@@ -108,7 +108,7 @@ const Header = () => {
                 <Input value={valueSearch} onChange={onChangeValueSearch} />
                 <Button
                   icon={<SearchEngineIcon />}
-                  FuctionButton={SearchEngineClose}
+                  onClick={SearchEngineDisplay}
                   classBtn='search-btn'
                 />
               </div>

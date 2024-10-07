@@ -1,4 +1,4 @@
-import { StarLineIcon, StarIcon } from './Icons';
+import { StarLineIcon, StarIcon } from '../Resources/Icons';
 import { useState } from 'react';
 
 const Stars = () => {

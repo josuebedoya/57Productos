@@ -1,4 +1,4 @@
-const getImages = require.context('../../Images', true, /\.(jpg|png)$/);
+const getImages = require.context('../../Resources/Images', true, /\.(jpg|png)$/);
 
 const ListElements = [
 

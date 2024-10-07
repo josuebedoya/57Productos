@@ -1,10 +1,10 @@
-import { AngleRightIcon, HearthCheckIcon, HearthLineIcon, DocumentIcon } from '../Icons';
+import { AngleRightIcon, HearthCheckIcon, HearthLineIcon, DocumentIcon } from '../../Resources/Icons';
 import { Button } from '../Button';
 import { Stars } from '../Stars';
 import { useState } from 'react';
 import { Modalproduct } from './ModalProduct';
 
-const getImagesProduct = require.context('../../Images/ProductImages', true, /\.(jpg|png)$/);
+const getImagesProduct = require.context('../../Resources/Images/ProductImages', true, /\.(jpg|png)$/);
 
 const Product = (props) => {
     const [IsOpen, setIsOpen] = useState(false);
@@ -74,10 +74,10 @@ const Product = (props) => {
                         </div>
                         <div className='btns-check flex gap-2'>
                             <div className='btn-outstanding'>
-                                <Button icon={!outstanding ? <HearthLineIcon /> : <HearthCheckIcon />} FuctionButton={Added} classBtn='text-lg' />
+                                <Button icon={!outstanding ? <HearthLineIcon /> : <HearthCheckIcon />} onClick={Added} classBtn='text-lg' />
                             </div>
                             <div className='btn-modal-information'>
-                                <Button icon={<DocumentIcon />} classBtn='text-lg' FuctionButton={OpenModal} />
+                                <Button icon={<DocumentIcon />} classBtn='text-lg' onClick={OpenModal} />
                             </div>
                         </div>
                     </div>

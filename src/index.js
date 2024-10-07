@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import { Path_page } from './Routes';
 
-import { Header } from './Components/Header'
+import { Header } from './Templates/Header/Header'
 import { Home } from './Layout/Home';
 import { About } from './Layout/About';
 import { PageError } from './Layout/Error';
