@@ -1,6 +1,5 @@
-import { TextCustom } from '../../Components/TextCustom/TextCustom';
-import logo from '../../Resources/Images/logo.png';
-import './MissionAndVision.css';
+import { TextCustom } from '../Components/TextCustom';
+import logo from '../Resources/Images/logo.png';
 
 const MissionAndVision = () => {
 
@@ -28,7 +27,8 @@ const MissionAndVision = () => {
   }
 
   return (
-    <div className='visionAndMission mx-16 pt-14 pb-8'>
+    <div id='MissionAndVision'>
+      <div  className='mx-16 pt-14 pb-8'>
       <div className='flex justify-center img-logo items-center'>
         <img src={logo} alt='logo' className='h-36' style={styleImg} />
       </div>
@@ -53,6 +53,7 @@ const MissionAndVision = () => {
           Ser la plataforma líder en intermediación comercial, reconocida por nuestra capacidad para transformar el mercado mediante la conexión efectiva y personalizada entre vendedores y compradores. Aspiramos a crear un ecosistema de negocios en el que cada transacción no solo cumpla con las expectativas, sino que las supere, utilizando tecnología innovadora y un entendimiento profundo del mercado para impulsar el éxito y la satisfacción de todos nuestros clientes.
         </TextCustom>
       </div>
+    </div>
     </div>
   )
 }

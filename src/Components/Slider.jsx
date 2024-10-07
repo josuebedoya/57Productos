@@ -1,9 +1,7 @@
-import './Slider.css'
-
 const Slider = ({ title, children }) => {
   return (
     <>
-      <div className='slider-section '>
+      <div id='slider'>
         <div className='container mx-auto'>
           <div class='content pt-10 '>
             <div className='content-title '>

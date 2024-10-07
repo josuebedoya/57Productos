@@ -1,9 +1,7 @@
-import './TextCustom.css';
-
 const TextCustom = ({ title, children, lineTitle, atrTitle, titlePosition, atrsummary, linePosition }) => {
   return (
     <>
-      <div id='Content'>
+      <div id='TextCustom'>
         <div className='container mx-auto'>
           <div className='tilte-section' style={{ textAlign: titlePosition }}>
             <h2 className={`title-custom 
