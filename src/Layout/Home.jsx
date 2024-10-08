@@ -3,7 +3,6 @@ import { Blog } from '../Templates/Blog';
 import { Chance } from '../Templates/Chance';
 import { CarouselItems } from '../Components/Carousel/CarouselItems';
 import ListElements from '../Components/Carousel/ListElements';
-import { MissionAndVision } from '../Templates/MissionAndVision';
 
 const Home = () => {
 
@@ -18,7 +17,6 @@ const Home = () => {
         </Slider>
         <Blog/>
         <Chance />
-        <MissionAndVision/>
         <CarouselItems ListElements={ListElements}  isImage/>
       </div>
     </>
