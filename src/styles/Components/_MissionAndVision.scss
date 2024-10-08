@@ -1,7 +1,7 @@
 #MissionAndVision {
   .img-logo {
 
-    img{
+    img {
       padding: 20px;
       border: 1px solid $color-primary;
       border-radius: 50%;
@@ -16,6 +16,33 @@
       background: $color-primary;
       z-index: -1;
       margin: 0 auto;
+    }
+  }
+
+  .section-vision,
+  .section-mision {
+    .logo-item {
+      object-fit: contain;
+      aspect-ratio: 1/1;
+      aspect-ratio: 100/30;
+    }
+  }
+
+  #TextCustom {
+    .title-custom {
+      font-size: 23px;
+      font-weight: bold;
+      text-transform: capitalize;
+      color: $color-primary;
+      text-align: center;
+    }
+
+    .summary {
+      font-size: 16px;
+      line-height: 23px;
+      text-align: justify;
+      margin-top: 15px;
+      color: $color-primary;
     }
   }
 }
