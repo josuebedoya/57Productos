@@ -7,7 +7,7 @@ const Chance = () => {
   const styletilte = {
     fontSize: '35px',
     textAlign: 'center',
-    color: 'var(--color-primary)',
+    color: '$color-primary',
     marginBottom: '60px'
   }
 
