@@ -1,9 +1,9 @@
 import { Slider } from '../Components/Slider';
 import { Blog } from '../Templates/Blog';
-import { MissionAndVision } from '../Templates/MissionAndVision';
 import { Chance } from '../Templates/Chance';
 import { CarouselItems } from '../Components/Carousel/CarouselItems';
 import ListElements from '../Components/Carousel/ListElements';
+import { MissionAndVision } from '../Templates/MissionAndVision';
 
 const Home = () => {
 
@@ -17,8 +17,8 @@ const Home = () => {
           !Has crecer tus ganancias con nuestra ayuda¡
         </Slider>
         <Blog/>
-        <MissionAndVision />
         <Chance />
+        <MissionAndVision/>
         <CarouselItems ListElements={ListElements}  isImage/>
       </div>
     </>

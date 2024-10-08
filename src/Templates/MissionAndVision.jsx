@@ -9,7 +9,7 @@ const MissionAndVision = () => {
   return (
     <div id='MissionAndVision'>
       <div className='mx-16 pt-14 pb-8'>
-        <div className='flex justify-center img-logo items-center'>
+        <div className='flex justify-center img-logo items-center relative'>
           <img src={logo} alt='logo' className='h-36' />
         </div>
         <div className='container mx-auto gap-10 columns-2'>
