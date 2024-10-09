@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "./Button";
 import { AddCircleIcon, AddCircleLineIcon, RemoveCircleIcon, RemoveCircleIconLine } from "../Resources/Icons";
-import { InputNumber } from "./Input/Input";
+import { InputNumber } from "./Input";
 
 const AddWithAmount = () => {
   const [changeIconBtnAdd, setChangeIconBtnAdd] = useState(false);
