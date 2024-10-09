@@ -27,3 +27,14 @@ const Input = ({ value, onChange }) => {
 };
 
 export { Input };
+
+const InputNumber  = ({value = 1}) =>{
+    return(
+        <div>
+            <input type="number" placeholder='1' value={value} />
+        </div>
+    );
+};
+
+
+export { InputNumber };
