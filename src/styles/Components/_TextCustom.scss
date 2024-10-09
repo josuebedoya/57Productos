@@ -1,0 +1,32 @@
+#TextCustom {
+  .title-custom {
+    display: inline-block;
+  }
+
+  .TitleWithLineStart::after,
+  .TitleWithLineCenter::after,
+  .TitleWithLineEnd::after {
+    content: '';
+    width: 20%;
+    height: 3px;
+    display: block;
+    position: relative;
+    bottom: 0;
+    background-color: $color-primary;
+  }
+
+  .TitleWithLineStart::after {
+    left: 0;
+    margin: 5px 0;
+  }
+
+  .TitleWithLineCenter::after {
+    left: 0;
+    margin: 5px auto;
+  }
+
+  .TitleWithLineEnd::after {
+    left: 80%;
+    margin: 5px 0;
+  }
+}

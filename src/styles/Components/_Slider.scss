@@ -1,0 +1,27 @@
+#slider {
+  height: 470px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('../../Resources/Images/sliderBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+  .title {
+    font-family: 'Satisfy', cursive;
+    position: relative;
+    color: #fff;
+    text-transform: capitalize;
+    background-image: linear-gradient(-250deg, #ffffff 0%, #ffffff 28%, #2a2a2a00 30%, #ffffff 31%, #ffffff 100%);
+    background-size: 400% 500%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: titleAnimation 15s linear infinite;
+  }
+
+  @keyframes titleAnimation {
+    to {
+      background-position: -200%;
+    }
+  }
+}

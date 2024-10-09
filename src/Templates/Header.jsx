@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 
-import logo from '../../Resources/Images/logo.png';
-import { Button } from '../../Components/Button';
-import { ProfileIcon, SearchEngineIcon } from '../../Resources/Icons';
-import { Cart } from '../../Components/Cart';
-import { Input } from '../../Components/Input/Input';
-import { Menu } from '../../Components/Menu';
-import { Path_page } from '../../Routes';
-
-import './Header.css';
+import logo from '../Resources/Images/logo.png';
+import { Button } from '../Components/Button';
+import { ProfileIcon, SearchEngineIcon } from '../Resources/Icons';
+import { Cart } from '../Components/Cart';
+import { Input } from '../Components/Input';
+import { Menu } from '../Components/Menu';
+import { Path_page } from '../Routes';
 
 const Header = () => {
   const [ displaySearchEngine, setDisplaySearchEngine ] = useState(false);
@@ -108,7 +106,7 @@ const Header = () => {
                 <Input value={valueSearch} onChange={onChangeValueSearch} />
                 <Button
                   icon={<SearchEngineIcon />}
-                  onClick={SearchEngineDisplay}
+                  onClick={SearchEngineClose}
                   classBtn='search-btn'
                 />
               </div>

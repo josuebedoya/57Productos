@@ -1,9 +1,0 @@
-.img-logo::before{
-  content: '';
-  position: absolute;
-  width: 70%;
-  height: 2px;
-  background: var(--color-primary);
-   z-index: -1;
-   margin: 0 auto;
-}
