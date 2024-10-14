@@ -32,9 +32,7 @@ const Header = () => {
     console.log(valueInput);
 
     if (valueSearch) {
-      if (valueInput == nameProduct && ItemsProduct.state == true) {
-
-
+      if (valueInput === nameProduct && ItemsProduct.state === true) {
         alert(`el producto '${valueSearch}' aún está dispible, quedan ${ItemsProduct.amount}`);
         setValueSearch('');
       } else {
@@ -48,7 +46,6 @@ const Header = () => {
   const onChangeValueSearch = (e) => {
     setValueSearch(e);
   }
-
 
   const menuItems = [
     { name: 'Inicio', url: Path_page.HOME },
