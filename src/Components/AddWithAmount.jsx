@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "./Button";
 import { AddCircleIcon, AddCircleLineIcon, RemoveCircleIcon, RemoveCircleIconLine } from "../Resources/Icons";
-import { InputNumber } from "./Input";
+import { Input } from "./Input";
 
 const AddWithAmount = () => {
   const [changeIconBtnAdd, setChangeIconBtnAdd] = useState(false);
@@ -38,7 +38,7 @@ const AddWithAmount = () => {
         >
           {!changeIconBtnAdd ? <AddCircleLineIcon /> : <AddCircleIcon />}
         </Button>
-        <InputNumber value={amount} />
+        <Input value={amount} type='number' />
         <Button
           onMouseEnter={() => setChangeIconBtnRemove(true)}
           onMouseLeave={() => { setChangeIconBtnRemove(false); stopChangingAmount(); }}
