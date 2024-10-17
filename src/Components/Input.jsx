@@ -1,14 +1,18 @@
 import React from 'react';
 
-const Input = ({ value, onChange }) => {
+const Input = ({ value, onChange, placeholder, type, name, maxLength = 20, isRequired = false, label, children }) => {
     return (
-        <div className='input w-full' >
+        <div className='input w-full flex-col' >
+            {label ? <label htmlFor={name} className='label-input'>{children}</label> : ''}
             <input
-                type='text'
-                maxLength={50}
-                placeholder='!Busca Contenido¡'
+                type={type}
+                maxLength={maxLength}
+                placeholder={placeholder ? placeholder.trim() : ''}
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
+                name={name}
+                id={name}
+                required={isRequired ? true : false}
                 className='bg-transparent
                 text-Primary
                 text-sm
@@ -27,14 +31,3 @@ const Input = ({ value, onChange }) => {
 };
 
 export { Input };
-
-const InputNumber  = ({value = 1}) =>{
-    return(
-        <div>
-            <input type="number" placeholder='1' value={value} />
-        </div>
-    );
-};
-
-
-export { InputNumber };

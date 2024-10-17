@@ -19,3 +19,7 @@ body {
     white-space: normal;
     box-sizing: border-box;
 }
+
+.family-oswald{
+    font-family: "Oswald", sans-serif !important;
+}

@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './styles/styles.scss';
+import './Styles/Styles.scss';
 import { Path_page } from './Routes';
 
 import { Header } from './Templates/Header'

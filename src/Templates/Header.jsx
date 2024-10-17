@@ -32,9 +32,7 @@ const Header = () => {
     console.log(valueInput);
 
     if (valueSearch) {
-      if (valueInput == nameProduct && ItemsProduct.state == true) {
-
-
+      if (valueInput === nameProduct && ItemsProduct.state === true) {
         alert(`el producto '${valueSearch}' aún está dispible, quedan ${ItemsProduct.amount}`);
         setValueSearch('');
       } else {
@@ -48,7 +46,6 @@ const Header = () => {
   const onChangeValueSearch = (e) => {
     setValueSearch(e);
   }
-
 
   const menuItems = [
     { name: 'Inicio', url: Path_page.HOME },
@@ -103,7 +100,7 @@ const Header = () => {
           {displaySearchEngine && (
             <div className={`input-section-btn duration-500 ${displaySearchEngine ? 'active' : ''} w-full md:w-1/2 bg-white p-4 rounded-lg shadow-bottom-x absolute z-10`}>
               <div className='flex items-center space-x-4'>
-                <Input value={valueSearch} onChange={onChangeValueSearch} />
+                <Input type='text' maxLength={50} value={valueSearch} onChange={onChangeValueSearch} />
                 <Button
                   icon={<SearchEngineIcon />}
                   onClick={SearchEngineClose}
