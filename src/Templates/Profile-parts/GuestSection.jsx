@@ -1,8 +1,19 @@
 import { Button } from "../../Components/Button";
 import signImg from '../../Resources/Images/Profile.png'
 import { FormLogin } from "./FormLogin";
+import { useState } from "react";
 
 const GuestSection = () => {
+    const [IsOpen, setIsOpen] = useState(false);
+
+    const openFormRegister = () => {
+        setIsOpen(!IsOpen);
+    };
+
+    if (IsOpen) {
+        return <FormLogin />;
+    };
+
     return (
         <>
             <div id="GuestSection">
@@ -24,7 +35,8 @@ const GuestSection = () => {
                                     <Button classBtn='btn-register bg-Secondary text-white py-4 px-6 text-xl uppercase family-oswald tracking-widest'>
                                         Registrate
                                     </Button>
-                                    <Button classBtn='btn-login bg-green-500 text-white py-4 px-6 text-xl hover:border-green-500 hover:text-green-500 uppercase family-oswald tracking-widest'>
+                                    <Button classBtn='btn-login bg-green-500 text-white py-4 px-6 text-xl hover:border-green-500 hover:text-green-500 uppercase family-oswald tracking-widest'
+                                        onClick={openFormRegister}>
                                         Inicia Sesión
                                     </Button>
                                 </div>
@@ -32,7 +44,6 @@ const GuestSection = () => {
                         </div>
                     </div>
                 </div>
-                <FormLogin />
             </div>
         </>
     );
