@@ -2,17 +2,26 @@ import { Button } from "../../Components/Button";
 import signImg from '../../Resources/Images/Profile.png'
 import { FormLogin } from "./FormLogin";
 import { useState } from "react";
+import { FormRegister } from "./FormRegister";
 
 const GuestSection = () => {
-    const [IsOpen, setIsOpen] = useState(false);
+    const [isOpenLogin, setIsOpen] = useState(false);
+    const [isOpenRegister, setIsOpenRegister] = useState(false);
 
+    const openFormLogin = () => {
+        setIsOpen(!isOpenLogin);
+    };
     const openFormRegister = () => {
-        setIsOpen(!IsOpen);
+        setIsOpenRegister(!isOpenRegister);
     };
 
-    if (IsOpen) {
+
+    if (isOpenLogin) {
         return <FormLogin />;
+    } else if (isOpenRegister) {
+        return <FormRegister />;
     };
+
 
     return (
         <>
@@ -32,11 +41,12 @@ const GuestSection = () => {
                             </div>
                             <div className="w-full md:w-5/12 min-h-600 flex justify-center items-center border-2 border-Primary rounded-3xl shadow-bottom-right">
                                 <div className="section-buttons flex space-y-4 md:space-y-0 md:space-x-4 md:flex-row ">
-                                    <Button classBtn='btn-register bg-Secondary text-white py-4 px-6 text-xl uppercase family-oswald tracking-widest'>
+                                    <Button classBtn='btn-register bg-Secondary text-white py-4 px-6 text-xl uppercase family-oswald tracking-widest'
+                                        onClick={openFormRegister}>
                                         Registrate
                                     </Button>
                                     <Button classBtn='btn-login bg-green-500 text-white py-4 px-6 text-xl hover:border-green-500 hover:text-green-500 uppercase family-oswald tracking-widest'
-                                        onClick={openFormRegister}>
+                                        onClick={openFormLogin}>
                                         Inicia Sesión
                                     </Button>
                                 </div>
