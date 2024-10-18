@@ -11,6 +11,7 @@ import { Services } from './Layout/Services';
 import { Store } from './Layout/Store';
 import { Contact } from './Layout/Contact';
 import { Profile } from './Layout/Profile';
+import { TermsAndConditions } from './Layout/TermsAndConditions'
 
 export default function App() {
     return (
@@ -24,6 +25,7 @@ export default function App() {
                     <Route path={Path_page.STORE} element={<Store />} />
                     <Route path={Path_page.CONTACT} element={<Contact />} />
                     <Route path={Path_page.PROFILE} element={<Profile />} />
+                    <Route path={Path_page.TERMSANDCONDITIONS} element={<TermsAndConditions />} />
                     <Route path={Path_page.ERROR} element={<PageError />} />
                 </Routes>
             </Router>
