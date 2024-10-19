@@ -5,5 +5,6 @@ export const Path_page = {
   STORE: '/tienda',
   CONTACT: '/contact',
   PROFILE: '/perfil',
+  TERMSANDCONDITIONS: '/terminos-y-condiciones',
   ERROR: '*'
 };

@@ -50,7 +50,7 @@ const FormLogin = () => {
     return (
         <>
             <div id='FormLogin'>
-                <Form action={SendForm} inputs={inputs} />
+                <Form action={SendForm} inputs={inputs} nameForm='FormLogin'/>
             </div>
         </>
     );
