@@ -31,7 +31,7 @@ const FormLogin = () => {
             type: 'text',
             name: 'user',
             onChange: onChangeValueUser,
-            isRequired: 'isRequired',
+            isRequired: true,
             label: 'label',
             children: 'Tu Usuario'
         },
@@ -41,7 +41,7 @@ const FormLogin = () => {
             type: 'password',
             name: 'password',
             onChange: onChangeValuePassword,
-            isRequired: 'isRequired',
+            isRequired: true,
             label: 'label',
             children: 'Contraseña'
         },
@@ -49,9 +49,13 @@ const FormLogin = () => {
 
     return (
         <>
-            <div id='FormLogin'>
-                <Form action={SendForm} inputs={inputs} nameForm='FormLogin'/>
-            </div>
+            <section id='TemplateFormLogin'>
+                <div className='modal fixed inset-0 bg-black bg-opacity-80 flex justify-center items-start overflow-auto py-28 z-50'>
+                    <div className='modal-content-form relative bg-white p-16 rounded-3xl shadow-modal max-w-93'>
+                        <Form action={SendForm} inputs={inputs} nameForm='FormLogin' />
+                    </div>
+                </div>
+            </section>
         </>
     );
 };

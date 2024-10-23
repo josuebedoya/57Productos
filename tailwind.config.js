@@ -34,9 +34,12 @@ module.exports = {
       scale: {
         '130': '1.3',
       },
-      minHeight:{
+      minHeight: {
         '600': '600px',
       },
+      maxWidth: {
+        '93': '930px'
+      }
     },
   },
   plugins: [],
