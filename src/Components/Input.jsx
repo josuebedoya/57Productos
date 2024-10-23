@@ -2,8 +2,8 @@ import React from 'react';
 
 const Input = ({ value, onChange, placeholder, type, name, maxLength = 20, isRequired = true, label, classContent, classLabel, children }) => {
     return (
-        <div className={` ${classContent} input w-full flex-col`} >
-            {label ? <label htmlFor={name} className={`${classLabel} label-input`}>{children}</label> : ''}
+        <div className={` ${classContent ? classContent : ''} input w-full flex-col`} >
+            {label ? <label htmlFor={name} className={`${classLabel ? classLabel : ''} label-input`}>{children}</label> : ''}
             <input
                 type={type}
                 maxLength={maxLength}
@@ -12,7 +12,7 @@ const Input = ({ value, onChange, placeholder, type, name, maxLength = 20, isReq
                 onChange={(e) => onChange({ name, value: e.target.value })}
                 name={name}
                 id={name}
-                required={isRequired}
+                isRequired
                 className='bg-transparent text-Primary text-sm rounded-xl border border-Primary py-2 px-5 focus:outline-none focus:shadow-custom w-full'
             />
         </div>
