@@ -27,8 +27,8 @@ const Form = ({ action, inputs, termsAndConditions, nameForm = 'FormDefault' }) 
                             maxLength={input.maxLength}
                             isRequired={input.isRequired}
                             label={input.label}
-                            classContent={`mb-6 ${input.classContent}`}
-                            classLabel={`text-Primary ${input.classLabel}`}
+                            classContent={`mb-6 ${input.classContent ? input.classContent: ''}`}
+                            classLabel={`text-Primary ${input.classLabel ? input.classLabel: ''}`}
                         >
                             {input.children}
                         </Input>
