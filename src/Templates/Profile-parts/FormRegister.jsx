@@ -63,6 +63,7 @@ const FormRegister = () => {
             name: 'numberContact',
             onChange: onChangeValue,
             label: 'label',
+            isRequired: true,
             children: 'Numero de Télefono...'
         },
         {

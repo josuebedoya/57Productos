@@ -6,7 +6,7 @@ import { Path_page } from "../Routes";
 
 const Form = ({ action, inputs, termsAndConditions, nameForm = 'FormDefault' }) => {
 
-    const [checkTerms, setCheckTerms] = useState(false);
+    const [ checkTerms, setCheckTerms ] = useState(false);
 
     const eventChangeCheckTerms = () => {
         setCheckTerms(!checkTerms);
@@ -27,8 +27,8 @@ const Form = ({ action, inputs, termsAndConditions, nameForm = 'FormDefault' }) 
                             maxLength={input.maxLength}
                             isRequired={input.isRequired}
                             label={input.label}
-                            classContent={`mb-6 ${input.classContent ? input.classContent: ''}`}
-                            classLabel={`text-Primary ${input.classLabel ? input.classLabel: ''}`}
+                            classContent={`mb-6 ${input.classContent ? input.classContent : ''}`}
+                            classLabel={`text-Primary ${input.classLabel ? input.classLabel : ''}`}
                         >
                             {input.children}
                         </Input>
@@ -52,7 +52,7 @@ const Form = ({ action, inputs, termsAndConditions, nameForm = 'FormDefault' }) 
                         </div>
                     ) : (null)}
                     <div className="btn-send-form w-full">
-                        <Button type='submit' onClick={action} classBtn='submit px-6 py-2 mt-6' >Enviar</Button>
+                        <Button type='submit' classBtn='submit px-6 py-2 mt-6' >Enviar</Button>
                     </div>
                 </form >
             </div>
