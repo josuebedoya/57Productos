@@ -19,6 +19,6 @@ body {
     box-sizing: border-box;
 }
 
-.family-oswald{
+.family-oswald, h1, h2, h3{
     font-family: "Oswald", sans-serif !important;
 } 
