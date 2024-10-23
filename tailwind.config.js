@@ -13,7 +13,7 @@ module.exports = {
         'custom-white': '0 0 7px #fff',
         'bottom-x': '0 10px 15px -3px rgb(0 0 0 / 0.1)',
         'modal': '0 0 20px #00000050',
-        'bottom-right': '5px 5px 8px 2px #00000020;',
+        'bottom-right': '5px 5px 8px 2px #00000020',
       },
       colors: {
         'Primary': '#7f7f7f',
