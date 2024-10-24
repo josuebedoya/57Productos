@@ -1,27 +1,36 @@
-import { Button } from "../../Components/Button";
-import signImg from '../../Resources/Images/Profile.png'
-import { FormLogin } from "./FormLogin";
 import { useState } from "react";
+import { Button } from "../../Components/Button";
+import signImg from '../../Resources/Images/Profile.png';
+import { Modal } from "../../Components/Modal";
+import { FormLogin } from "./FormLogin";
 import { FormRegister } from "./FormRegister";
 
-const GuestSection = () => {
-    const [ isOpenLogin, setIsOpen ] = useState(false);
-    const [ isOpenRegister, setIsOpenRegister ] = useState(false);
+const GuestSection = ({ isLogin }) => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isOpenLogin, setIsOpenLogin] = useState(false);
+    const [isOpenRegister, setIsOpenRegister] = useState(false);
 
     const openFormLogin = () => {
-        setIsOpen(!isOpenLogin);
+        setIsModalOpen(!isModalOpen);
+        setIsOpenLogin(!isOpenLogin);
     };
+
     const openFormRegister = () => {
+        setIsModalOpen(!isModalOpen);
         setIsOpenRegister(!isOpenRegister);
     };
 
-
-    if (isOpenLogin) {
-        return <FormLogin />;
-    } else if (isOpenRegister) {
-        return <FormRegister />;
+    const closeModal = () => {
+        setIsModalOpen(!isModalOpen);
+        setIsOpenLogin(false);
+        setIsOpenRegister(false);
     };
 
+    const ActionForm = () => {
+        setIsModalOpen(false);
+        isLogin();
+    };
 
     return (
         <>
@@ -52,6 +61,23 @@ const GuestSection = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div>
+                        {/* The login and registration forms are displayed here */}
+                        <Modal isOpen={isModalOpen} onClose={closeModal} classModal='max-w-93'>
+                            {isOpenLogin ? (
+                                <>
+                                    <FormLogin
+                                        actionForm={() => ActionForm()}
+                                    />
+                                </>
+
+                            ) : isOpenRegister ? (
+                                <FormRegister
+                                    actionForm={() => ActionForm()}
+                                />
+                            ) : null}
+                        </Modal>
                     </div>
                 </div>
             </section>
