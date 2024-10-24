@@ -87,7 +87,7 @@ const Header = () => {
               <Cart />
             </div>
             <div className='profile-section'>
-              <a href={Path_page.PROFILE} target='_blank' className='profile-section-icon text-white bg-Primary border border-Primary rounded-full p-2 flex items-center
+              <a href={Path_page.PROFILE} target='_self' className='profile-section-icon text-white bg-Primary border border-Primary rounded-full p-2 flex items-center
               hover:bg-transparent hover:text-Secondary hover:border-Secondary transition duration-150'>
                 <ProfileIcon />
               </a>

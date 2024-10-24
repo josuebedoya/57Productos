@@ -1,8 +1,7 @@
-import { Form } from '../../Components/Form';
 import { useState } from "react";
-import { MainSectionProfile } from "./MainSection";
+import { Form } from '../../Components/Form';
 
-const FormRegister = () => {
+const FormRegister = ({ actionForm }) => {
 
     const [formValues, setFormValues] = useState({
         name: '',
@@ -13,27 +12,12 @@ const FormRegister = () => {
         confirmPassword: ''
     });
 
-    const [sent, setSent] = useState(false);
-
     const onChangeValue = (e) => {
         const { name, value } = e;
         setFormValues((prevValues) => ({
             ...prevValues,
             [name]: value,
         }));
-    };
-
-    const SendForm = (e) => {
-        e.preventDefault();
-        const form = e.target;
-
-        if (form.reportValidity()) {
-            setSent(!sent);
-        }
-    };
-
-    if (sent) {
-        return <MainSectionProfile />
     };
 
     const inputs = [
@@ -45,7 +29,7 @@ const FormRegister = () => {
             onChange: onChangeValue,
             isRequired: true,
             label: 'label',
-            children: 'Tu Nombre/s',
+            children: 'Tu Nombre/s'
         },
         {
             value: formValues.lastName,
@@ -101,11 +85,7 @@ const FormRegister = () => {
     return (
         <>
             <section id='TemplateFormRegister'>
-                <div className='modal fixed inset-0 bg-black bg-opacity-80 flex justify-center items-start overflow-auto py-28 z-50'>
-                    <div className='modal-content-form relative bg-white p-16 rounded-3xl shadow-modal max-w-93'>
-                        <Form action={SendForm} inputs={inputs} termsAndConditions nameForm='FormRegister' />
-                    </div>
-                </div>
+                <Form action={actionForm} inputs={inputs} termsAndConditions nameForm='FormRegister' />
             </section>
         </>
     );

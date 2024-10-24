@@ -1,28 +1,18 @@
-import { Form } from '../../Components/Form';
 import { useState } from "react";
-import { MainSectionProfile } from "./MainSection";
+import { Form } from '../../Components/Form';
 
-const FormLogin = () => {
+const FormLogin = ({ actionForm }) => {
 
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
-    const [sent, setSent] = useState(false);
 
     const onChangeValueUser = (e) => {
-        setUser(e);
+        setUser(e.target);
     }
+
     const onChangeValuePassword = (e) => {
-        setPassword(e);
+        setPassword(e.target);
     }
-
-    const SendForm = (e) => {
-        e.preventDefault();
-        setSent(!sent);
-    };
-
-    if (sent) {
-        return <MainSectionProfile />
-    };
 
     const inputs = [
         {
@@ -50,11 +40,7 @@ const FormLogin = () => {
     return (
         <>
             <section id='TemplateFormLogin'>
-                <div className='modal fixed inset-0 bg-black bg-opacity-80 flex justify-center items-start overflow-auto py-28 z-50'>
-                    <div className='modal-content-form relative bg-white p-16 rounded-3xl shadow-modal max-w-93'>
-                        <Form action={SendForm} inputs={inputs} nameForm='FormLogin' />
-                    </div>
-                </div>
+                <Form action={actionForm} inputs={inputs} nameForm='FormLogin' />
             </section>
         </>
     );
