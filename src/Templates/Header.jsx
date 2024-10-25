@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import logo from '../Resources/Images/logo.png';
 import { Button } from '../Components/Button';
@@ -56,6 +56,31 @@ const Header = () => {
   ];
 
   const atr = 'text-Primary hover:font-semibold hover:text-Secondary';
+
+  useEffect(() => {
+    let lastPosition = 0; // starting position
+    const header = document.getElementsByTagName('header')[ 0 ];
+
+    const animationHeader = () => {
+      const isScrolling = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (isScrolling > lastPosition) { // scroll down
+        header.classList.remove('up');
+        header.classList.add('down');
+      } else {
+        header.classList.remove('down');
+        header.classList.add('up');   // scroll upp
+      }
+
+      lastPosition = isScrolling <= 0 ? 0 : isScrolling; //  prevent it from being less than zero
+    };
+
+    window.addEventListener('scroll', animationHeader); // active function
+
+    return () => {
+      window.removeEventListener('scroll', animationHeader); // remove fuction
+    };
+  }, []);
 
   return (
     <header>
