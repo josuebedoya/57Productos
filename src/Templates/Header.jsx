@@ -55,7 +55,7 @@ const Header = () => {
     { name: 'Contacto', url: Path_page.CONTACT },
   ];
 
-  const atr = 'text-Primary hover:font-semibold hover:text-Secondary';
+  const atr = 'text-Primary hover:shadow-Secondary hover:text-Secondary family-oswald';
 
   useEffect(() => {
     let lastPosition = 0; // starting position
