@@ -42,7 +42,7 @@ Se suele recoger a principio del verano. Generalmente, las fresas silvestres son
   return (
     <>
       <div id='Store'>
-        <div className='container mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6  text-Primary text-3xl py-40'>
+        <div className='container mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6  text-Primary text-3xl py-10'>
           <Product title={ProductOne.name} img={ProductOne.img} price={ProductOne.price} />
           <Product title={ProductOne.name} img={ProductOne.img} price={ProductOne.price} />
           <Product title={ProductOne.name} img={ProductOne.img} price={ProductOne.price} />
