@@ -16,8 +16,8 @@ module.exports = {
         'bottom-right': '5px 5px 8px 2px #00000020',
       },
       colors: {
-        'Primary': '#7f7f7f',
-        'Secondary': '#2140da',
+        'Primary': '#121212',
+        'Secondary': '#2a4bf1',
         'Gray-dark': '#b4b4b4',
       },
       spacing: {
