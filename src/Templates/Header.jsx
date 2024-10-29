@@ -8,33 +8,43 @@ import { Input } from '../Components/Input';
 import { Menu } from '../Components/Menu';
 import { Path_page } from '../Routes';
 
+const ItemsProduct = {
+  name: 'Colores',
+  id: 1,
+  amount: 223,
+  price: 23.000,
+  state: true,
+  wieght: 100
+};
+
+const menuItems = [
+  { name: 'Inicio', url: Path_page.HOME },
+  { name: 'Nosotros', url: Path_page.US },
+  { name: 'Servicios', url: Path_page.SERVICES },
+  { name: 'Tienda', url: Path_page.STORE },
+  { name: 'Contacto', url: Path_page.CONTACT },
+];
+
 const Header = () => {
   const [ displaySearchEngine, setDisplaySearchEngine ] = useState(false);
   const [ valueSearch, setValueSearch ] = useState('');
-  const ItemsProduct = {
-    name: 'Colores',
-    id: 1,
-    amount: 223,
-    price: 23.000,
-    state: true,
-    wieght: 100
-  };
 
+  // Open  Search engine
   const SearchEngineDisplay = () => {
     setDisplaySearchEngine(!displaySearchEngine);
   };
 
   const SearchEngineClose = () => {
-    setDisplaySearchEngine(!displaySearchEngine);
+
     let nameProduct = ItemsProduct.name.toLocaleLowerCase();
     let valueInput = valueSearch.toLocaleLowerCase();
 
-    console.log(valueInput);
 
     if (valueSearch) {
       if (valueInput === nameProduct && ItemsProduct.state === true) {
         alert(`el producto '${valueSearch}' aún está dispible, quedan ${ItemsProduct.amount}`);
         setValueSearch('');
+        setDisplaySearchEngine(!displaySearchEngine);
       } else {
         alert(`No se encontró '${valueSearch}', revisa o intenta más tarde`);
       }
@@ -43,17 +53,9 @@ const Header = () => {
     }
   };
 
-  const onChangeValueSearch = (e) => {
-    setValueSearch(e);
+  const onChangeValueSearch = ({ value }) => {
+    setValueSearch(value);
   }
-
-  const menuItems = [
-    { name: 'Inicio', url: Path_page.HOME },
-    { name: 'Nosotros', url: Path_page.US },
-    { name: 'Servicios', url: Path_page.SERVICES },
-    { name: 'Tienda', url: Path_page.STORE },
-    { name: 'Contacto', url: Path_page.CONTACT },
-  ];
 
   const atr = 'text-Primary hover:shadow-Secondary hover:text-Secondary family-oswald';
 
@@ -67,6 +69,12 @@ const Header = () => {
       if (isScrolling > lastPosition) { // scroll down
         header.classList.remove('up');
         header.classList.add('down');
+
+        if (displaySearchEngine === true) {
+          setDisplaySearchEngine(!displaySearchEngine);
+          console.log('cierra buscador--------')
+        }
+
       } else {
         header.classList.remove('down');
         header.classList.add('up');   // scroll upp
@@ -104,8 +112,8 @@ const Header = () => {
             <div className={`search-btn-section duration-500 ${displaySearchEngine ? 'button-active' : ''}`}>
               <Button
                 icon={<SearchEngineIcon />}
-                onClick={SearchEngineDisplay}
                 classBtn='search-btn'
+                onClick={SearchEngineDisplay}
               />
             </div>
             <div className='cart-section'>

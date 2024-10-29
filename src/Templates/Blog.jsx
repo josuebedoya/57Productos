@@ -19,7 +19,7 @@ const Blog = () => {
       <div className='container mx-auto flex flex-col items-center py-20'>
         <div className='title-section max-w-4xl h-11 text-center mb-14'>
           <TextAnimatedWrite stylesText={{
-            color: '#7f7f7f',
+            color: '#121212',
             fontSize: '20px',
             fontWeight: 'bold',
             letterSpacing: '0.5px',
