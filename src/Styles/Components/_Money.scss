@@ -1,0 +1,40 @@
+.amountMoney{
+
+.money{
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+  #select-format {
+    border: 0 !important;
+    border-width: 0 !important;
+    border-bottom: 0 !important;
+    border-style: none !important;
+    background: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: $color-primary;
+    cursor: pointer;
+  
+    &:hover{
+      color: $color-secondary;
+    }
+  
+    &:focus-visible{
+      border: 0 !important;
+    }
+    
+    &:focus{
+      border: 0 !important;
+    }
+  
+    option{
+      font-size: 12px;
+    font-weight: 500;
+     &:hover{
+      background: none !important;
+     }
+    }
+  }
+}
