@@ -1,62 +1,56 @@
 import React, { useState, useEffect } from 'react';
+import { PropTypes } from 'prop-types';
 import { Divisas } from "./Divisas";
 
-const Money = ( { amount = 0 } ) => {
+const Money = ( { amount } ) => {
 
-  const [ convertedAmount, setConvertedAmount ] = useState( amount );
+  const [ convertedAmount, setConvertedAmount ] = useState( amount ? +amount : 0 );
+  const [ rates, setRates ] = useState( {} ); // all coins are stored here
+  const [ format, setFormat ] = useState( 'COP' );
+  const exchangeRatesUse = [  //define here what exchange rates are going to be used
+    'COP',
+    'USD',
+    'EUR',
+    'GBP',
+    'JPY',
+    'hsd',
+    'hshs',
+    'hsdg'
+  ];
 
-  const foreignExchange = [ 'COP', 'USD', 'EUR', 'GBP', 'JPY', 'hsd', 'hshs', 'hsdg' ];
-  let optionsInvalid = []; // The type of currencies not available are stored here
-
-  const [ rates, setRates ] = useState( {
-    COP: null,
-    USD: null,
-    EUR: null,
-    GBP: null,
-    JPY: null,
-  } );
-  const [ formate, setFormat ] = useState( 'COP' );
-
-  useEffect( () => {
-    setTimeout( () => {
-      const convertDivisa = ( { format } ) => {
-        const validDivisa = foreignExchange.filter( divisa => divisa in rates );
-        console.log( `${ rates[ format ] }` );
-        if ( validDivisa.includes( format ) || rates[ format ] !== undefined || rates[ format ] !== null ){
-          console.log( `${ convertedAmount }--------Sin Convertir` );
-          console.log( `${ rates[ format ] }` );
-          console.log( `${ setConvertedAmount( convertedAmount * rates.COP ) }  Convertido` );
-
-          const amountInCOP = convertedAmount / rates.COP;
-          const finalAmount = amountInCOP * rates[ format ];
-          setConvertedAmount( finalAmount );
-        } else{
-          setConvertedAmount( 'N/A' );
-        }
-      };
-      console.log( formate );
-
-      convertDivisa( formate );
-    }, 2000 );
-  }, [ formate ] );
-
+  /*--  Convert amount to money format  --*/
   const moneyFormat = () => {
     return Intl.NumberFormat( 'es-ES', {
       style: 'currency',
-      currency: formate,
+      currency: format,  /*--  Receive Value from format --*/
       minimumFractionDigits: 2,
       maximumFractionDigits: 2
     } ).format( convertedAmount );
   };
 
-  const optionsValid = foreignExchange.map( ( type, i ) => (
+  useEffect( () => {
+    const convertAmount = () => {
+      if ( Object.keys( rates ).length > 0 ){
+        if ( amount !== null && amount !== undefined && !isNaN( amount ) ){
+          const toUSD = amount / rates[ 'COP' ]; // convert amount to USD
+          const toFormat = toUSD * rates[ format ]; // convert amount to format
+          setConvertedAmount( toFormat );
+        } else{
+          setConvertedAmount( 'N/A' );
+        }
+      }
+    };
+    convertAmount();
+  }, [ format, rates, amount ] );
+
+  /*--  Created options, and exclude invalid options  --*/
+  const optionsInvalid = exchangeRatesUse.filter( type => !( type in rates ) );
+  const optionsValid = exchangeRatesUse.map( ( type, i ) => (
     type in rates ? (
       <option key={ i } value={ type }>
         { type }
       </option>
-    ) : (
-      optionsInvalid.push( type )
-    )
+    ) : null
   ) );
 
   return (
@@ -66,7 +60,7 @@ const Money = ( { amount = 0 } ) => {
           <Divisas setRates={ setRates }/>
           { moneyFormat() }
         </span>
-        <select value={ formate } onChange={ ( e ) => setFormat( e.target.value ) } id='select-format'>
+        <select value={ format } onChange={ ( e ) => setFormat( e.target.value ) } id='select-format'>
           { optionsValid }
         </select>
       </span>
@@ -91,5 +85,9 @@ const Money = ( { amount = 0 } ) => {
     </>
   );
 };
+
+Money.propTypes = {
+  amount: PropTypes.number.isRequired,
+}
 
 export { Money };

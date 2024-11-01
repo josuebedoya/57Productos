@@ -14,7 +14,7 @@ const MainSectionProfile = () => {
 
   const hiddenAmountMoney = ( Amount ) => {
     setShowMoney( !showMoney );
-    setMoney( () => '*'.repeat( Amount.length ) );
+    setMoney( () => '*'.repeat( Amount.toString().length ) );
   };
 
   return (
