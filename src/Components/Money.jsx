@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { PropTypes } from 'prop-types';
 import { Divisas } from "./Divisas";
+import { AlertIcon, CloseIcon } from '../Resources/Icons';
 
-const Money = ( { amount } ) => {
+const Money = ({ amount }) => {
 
+  const [ openModal, setOpenModal ] = useState(false);
   const [ convertedAmount, setConvertedAmount ] = useState( amount ? +amount : 0 );
   const [ rates, setRates ] = useState( {} ); // all coins are stored here
   const [ format, setFormat ] = useState( 'COP' );
@@ -55,31 +57,49 @@ const Money = ( { amount } ) => {
 
   return (
     <>
-      <span className='amountMoney flex justify-between gap-1 '>
-        <span className="money family-oswald">
+      <div className='amountMoney relative flex justify-between'>
+        <span className=' flex justify-between gap-1 '>
+          <span className="money family-oswald">
           <Divisas setRates={ setRates }/>
           { moneyFormat() }
-        </span>
+          </span>
         <select value={ format } onChange={ ( e ) => setFormat( e.target.value ) } id='select-format'>
           { optionsValid }
-        </select>
-      </span>
-      <div className='invalid-divisas w-auto'>
+          </select>
+        </span>
         {
-          optionsValid.length !== 0 ? (
+          openModal && optionsInvalid.length > 0 ? (
             <>
-              <h2>DIVISAS INVALIDAS:</h2>
-              <ul>
+              <div className='modal-invalid-divisas absolute bg-white rounded-xl py-6 px-4 w-48 shadow-custom -left-9 -top-1'>
                 {
-                  optionsInvalid.map( ( invalid, i ) => (
-                    <li key={ i } className='text-red-600 family-oswald'>
-                      { invalid }
-                    </li>
-                  ) )
+                  optionsValid.length !== 0 ? (
+                    <>
+                      <div className='modal-top flex justify-between gap-4'>
+                        <h2 className='text-xs tracking-wider mb-2'>DIVISAS INVALIDAS:</h2>
+                        <i onClick={() => setOpenModal(!openModal)}>
+                          <CloseIcon   classIcons='cursor-pointer'/>
+                        </i>
+                      </div>
+
+                      <ul>
+                        {
+                          optionsInvalid.map((invalid, i) => (
+                            <li key={i} className='text-red-600 family-oswald underline text-xs'>
+                              {invalid}
+                            </li>
+                          ))
+                        }
+                      </ul>
+                    </>
+                  ) : null
                 }
-              </ul>
+              </div>
             </>
-          ) : null
+          ) : (
+            <i onClick={() => setOpenModal(!openModal)}>
+              <AlertIcon classIcons='icon-alert cursor-pointer text-red-700 font-bold text-xl' />
+            </i>
+          )
         }
       </div>
     </>

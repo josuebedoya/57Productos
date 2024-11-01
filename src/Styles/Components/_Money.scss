@@ -1,10 +1,10 @@
 .amountMoney{
 
-.money{
-  font-size: 12px;
-  letter-spacing: 1px;
-  font-weight: 300;
-}
+  .money{
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
 
   #select-format {
     border: 0 !important;
@@ -16,25 +16,65 @@
     font-weight: bold;
     color: $color-primary;
     cursor: pointer;
-  
+
     &:hover{
       color: $color-secondary;
     }
-  
+
     &:focus-visible{
       border: 0 !important;
     }
-    
+
     &:focus{
       border: 0 !important;
     }
-  
+
     option{
       font-size: 12px;
-    font-weight: 500;
-     &:hover{
-      background: none !important;
-     }
+      font-weight: 500;
+      
+      &:hover{
+        background: none !important;
+      }
     }
+  }
+
+  .icon-alert {
+    animation: alert 2s infinite;
+    animation-delay: 0s;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes alert {
+  0% {
+    transform: rotate(0deg);
+    transform: scale(1.05);
+  }
+
+  10% {
+    transform: rotate(10deg);
+    transform: scale(0.9);
+  }
+
+  20% {
+    transform: rotate(-10deg);
+  }
+
+  30% {
+    transform: rotate(10deg);
+    transform: scale(1.03);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+    transform: scale(1);
   }
 }

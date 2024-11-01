@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { EyeClose, EyeOpen } from "../../Resources/Icons";
+import { EyeCloseIcon, EyeOpenIcon } from "../../Resources/Icons";
 import { Money } from "../../Components/Money";
 
 const MainSectionProfile = () => {
@@ -27,13 +27,13 @@ const MainSectionProfile = () => {
               <p className="text-center">@josuebedoya348</p>
             </div>
             <div className="money-content w-44">
-              <div className='flex justify-between items-center gap-4 '>
-                <h3>Tu saldo:</h3>
-                <i onClick={ () => hiddenAmountMoney( money ) }>
-                  { showMoney ? <EyeClose/> : <EyeOpen/> }
+              <h3>Tu saldo:</h3>
+              <div className='flex items-center gap-4'>
+                <i onClick={() => hiddenAmountMoney(money)}>
+                  {showMoney ? <EyeCloseIcon /> : <EyeOpenIcon />}
                 </i>
+                {!showMoney ? money : <Money amount={amount} />}
               </div>
-              { !showMoney ? money : <Money amount={ amount }/> }
             </div>
           </div>
         </div>
