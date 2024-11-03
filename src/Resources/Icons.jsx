@@ -4,12 +4,13 @@ import { GrUserSettings } from 'react-icons/gr';
 import {
   IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright,
   IoIosArrowForward, IoMdExit, IoMdAddCircleOutline,
-  IoMdAddCircle, IoMdRemoveCircle, IoMdRemoveCircleOutline } from 'react-icons/io';
+  IoMdAddCircle, IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose  } from 'react-icons/io';
 import { FaArrowRight, FaRegHeart, FaStar, FaRegEye } from 'react-icons/fa';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaRegStar, FaHeartCircleCheck } from 'react-icons/fa6';
 import { TiDocumentText } from 'react-icons/ti';
 import { PiEyeSlashDuotone } from "react-icons/pi";
+import { IoAlert } from "react-icons/io5";
 
 // icon magnifying glass
 export const SearchEngineIcon = ( { atr, classIcons } ) => {
@@ -145,15 +146,29 @@ export const RemoveCircleIconLine = ( { atr, classIcons } ) => {
 };
 
 //eye with line
-export const EyeClose = ( { atr, classIcons } ) => {
+export const EyeCloseIcon = ( { atr, classIcons } ) => {
   return (
     <PiEyeSlashDuotone style={ atr } className={ classIcons }/>
   )
 };
 
 //eye open
-export const EyeOpen = ( { atr, classIcons } ) => {
+export const EyeOpenIcon = ( { atr, classIcons } ) => {
   return (
     <FaRegEye style={ atr } className={ classIcons }/>
+  )
+};
+
+//eye open
+export const AlertIcon = ( { atr, classIcons } ) => {
+  return (
+    <IoAlert style={ atr } className={ classIcons }/>
+  )
+};
+
+//eye open
+export const CloseIcon = ( { atr, classIcons } ) => {
+  return (
+    <IoMdClose style={ atr } className={ classIcons }/>
   )
 };

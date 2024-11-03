@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Button } from "../../Components/Button";
 import signImg from '../../Resources/Images/Profile.png';
 import { Modal } from "../../Components/Modal";
-import { FormLogin } from "./FormLogin";
-import { FormRegister } from "./FormRegister";
+import { FormLogin } from "../Parts/FormLogin";
+import { FormRegister } from "../Parts/FormRegister";
 
 const GuestSection = ({ isLogin }) => {
 
