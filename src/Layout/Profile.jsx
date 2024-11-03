@@ -4,20 +4,19 @@ import { MainSectionProfile } from "../Templates/Profile-parts/MainSection";
 
 const Profile = () => {
 
-  const [ loged, setLoget ] = useState( false );
-
+  const [ loged, setLoget ] = useState(false);
   const handleLoged = () => {
-    setLoget( !loged );
+    setLoget(!loged);
   };
 
   return (
     <>
-      <MainSectionProfile/>
-      {/*{loged ? (*/ }
-      {/*  <MainSectionProfile />*/ }
-      {/*) : (*/ }
-      {/*  <GuestSection isLogin={handleLoged} />*/ }
-      {/*)}*/ }
+        <MainSectionProfile />
+      {/*{loged ? (*/}
+      {/*  <MainSectionProfile />*/}
+      {/*) : (*/}
+      {/*  <GuestSection isLogin={handleLoged} />*/}
+      {/*)}*/}
     </>
   );
 };
