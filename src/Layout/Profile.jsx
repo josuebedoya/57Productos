@@ -11,9 +11,7 @@ const Profile = () => {
 
   return (
     <>
-      <div className="container mx-auto px-16">
         <MainSectionProfile />
-      </div>
       {/*{loged ? (*/}
       {/*  <MainSectionProfile />*/}
       {/*) : (*/}
