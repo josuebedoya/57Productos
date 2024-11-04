@@ -5,7 +5,7 @@ import {
   IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright,
   IoIosArrowForward, IoMdExit, IoMdAddCircleOutline,
   IoMdAddCircle, IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose  } from 'react-icons/io';
-import { FaArrowRight, FaRegHeart, FaStar, FaRegEye } from 'react-icons/fa';
+import { FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt } from 'react-icons/fa';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaRegStar, FaHeartCircleCheck } from 'react-icons/fa6';
 import { TiDocumentText } from 'react-icons/ti';
@@ -170,5 +170,12 @@ export const AlertIcon = ( { atr, classIcons } ) => {
 export const CloseIcon = ( { atr, classIcons } ) => {
   return (
     <IoMdClose style={ atr } className={ classIcons }/>
+  )
+};
+
+//Pencil
+export const PencilIcon = ( { atr, classIcons } ) => {
+  return (
+    <FaPencilAlt style={ atr } className={ classIcons }/>
   )
 };
