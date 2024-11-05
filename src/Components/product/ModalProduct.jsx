@@ -24,7 +24,6 @@ const Modalproduct = ({ close, title, price, description, img, imgHover, isOpen 
         <div id='modalProduct'>
           <Modal isOpen={isOpen} onClose={close}>
             <div className='content p-7'>
-
               <div className='content-title mb-8'>
                 <h1 className='text-center text-4xl font-bold'>{title}</h1>
               </div>
