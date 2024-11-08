@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "baseUrl": "./src",
-    "paths": {
-      "base-datos/*": ["../backend/base-datos/src/*"]  // Alias para la ruta del submódulo
-    }
-  }
-}
