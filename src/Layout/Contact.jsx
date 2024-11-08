@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { GetProducts } from 'base-datos/src';
+import { GetProducts, InsertData } from 'base-datos/src';
 
 function Contact() {
-  const [products, setProducts] = useState([]);
-  const [error, setError] = useState(null);
+  const [ products, setProducts ] = useState([]);
+  const [ error, setError ] = useState(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -15,7 +15,18 @@ function Contact() {
       }
     };
 
+    const insertnewData = async () => {
+      try {
+        await InsertData("test", {
+          name: 'Nuevo dato insertado'
+        });
+      } catch (err) {
+        setError(err.message);
+      }
+    };
+
     fetchProducts();
+    insertnewData();
   }, []);
 
   if (error) {
@@ -23,7 +34,7 @@ function Contact() {
   }
 
   return (
-    <div>
+    <div className='container mx-auto'>
       <h1>Productos</h1>
       <ul>
         {products.map((product, index) => (
@@ -34,4 +45,4 @@ function Contact() {
   );
 }
 
-export {Contact};
+export { Contact };
