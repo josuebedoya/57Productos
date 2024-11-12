@@ -1,3 +1,0 @@
-[submodule "backend/base-datos"]
-	path = backend/base-datos
-	url = https://github.com/josuebedoya/base-datos.git

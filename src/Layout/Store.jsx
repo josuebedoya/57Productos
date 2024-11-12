@@ -81,7 +81,7 @@ Se suele recoger a principio del verano. Generalmente, las fresas silvestres son
           </Product>
 
           {products.length > 0 ? (
-            products.map((product, i) => (
+            products.slice(0, 10).map((product, i) => (
               <>
                 <Product
                   title={product.title}
