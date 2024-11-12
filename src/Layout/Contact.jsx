@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { GetProducts, InsertData } from 'base-datos/src';
+import {insertData, getData} from 'management-supabase';
 
 function Contact() {
-  const [ products, setProducts ] = useState([]);
-  const [ error, setError ] = useState(null);
+  const [products, setProducts] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const productsData = await GetProducts();
+        const productsData = await getData();
         setProducts(productsData);
       } catch (err) {
         setError(err.message);
@@ -17,7 +17,7 @@ function Contact() {
 
     const insertnewData = async () => {
       try {
-        await InsertData("test", {
+        await insertData("test", {
           name: 'Nuevo dato insertado'
         });
       } catch (err) {
