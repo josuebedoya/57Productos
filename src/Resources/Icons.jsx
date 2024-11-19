@@ -8,7 +8,7 @@ import {
 import { FaArrowRight, FaRegHeart, FaStar, FaRegEye } from 'react-icons/fa';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaRegStar, FaHeartCircleCheck } from 'react-icons/fa6';
-import { TiDocumentText } from 'react-icons/ti';
+import { TiDocumentText, TiThMenuOutline } from 'react-icons/ti';
 import { PiEyeSlashDuotone } from "react-icons/pi";
 import { IoAlert } from "react-icons/io5";
 
@@ -170,5 +170,11 @@ export const AlertIcon = ( { atr, classIcons } ) => {
 export const CloseIcon = ( { atr, classIcons } ) => {
   return (
     <IoMdClose style={ atr } className={ classIcons }/>
+  )
+};
+//eye open
+export const MenuBarsIcon = ( { atr, classIcons } ) => {
+  return (
+    <TiThMenuOutline style={ atr } className={ classIcons }/>
   )
 };
