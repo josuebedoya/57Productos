@@ -1,8 +1,10 @@
-const Contact = () =>{
+function Contact() {
+
   return (
-  <div className='flex items-center justify-center bg-gray-200 text-green-700 text-3xl'>
-     pagina Contacto
-  </div>
-  )
+    <div className='container mx-auto'>
+      <h1>Asesorate, deja tus datos y te contactaremos los más rápido posible</h1>
+    </div>
+  );
 }
-export {Contact};
+
+export { Contact };

@@ -34,7 +34,7 @@ const Modal = ({ isOpen, onClose = false, classModal, children }) => {
 
   return (
     <div className='modal fixed inset-0 bg-black bg-opacity-80 flex justify-center items-start overflow-auto py-14 z-modal'>
-      <div ref={modalRef} className={`modal-content bg-white p-8 rounded-3xl shadow-modal w-full max-w-95 md:max-w-80${classModal ? classModal : ''}`}>
+      <div ref={modalRef} className={`modal-content bg-white p-8 rounded-3xl shadow-modal w-full max-w-95 md:max-w-80 ${classModal ? classModal : ''}`}>
         <div className='bnt-close flex justify-end'>
           <Button icon={<ExitArrowIcon />} onClick={onClose} />
         </div>
