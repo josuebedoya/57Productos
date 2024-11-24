@@ -1,10 +1,8 @@
 import { BiSearchAlt } from 'react-icons/bi';
 import { MdOutlineCircle } from 'react-icons/md'
 import { GrUserSettings } from 'react-icons/gr';
-import {
-  IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright,
-  IoIosArrowForward, IoMdExit, IoMdAddCircleOutline,
-  IoMdAddCircle, IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose  } from 'react-icons/io';
+import { IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward, IoMdExit, IoMdAddCircleOutline, IoMdAddCircle,
+          IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose  } from 'react-icons/io';
 import { FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt } from 'react-icons/fa';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaRegStar, FaHeartCircleCheck } from 'react-icons/fa6';
