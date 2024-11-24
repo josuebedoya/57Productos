@@ -16,7 +16,7 @@ const Blog = () => {
 
   return (
     <section id='Blog'>
-      <div className='container mx-auto flex flex-col items-center py-8 md:py-12 lg:py-20'>
+      <div className='container mx-auto flex flex-col items-center py-8 md:py-12 lg:py-20 px-3'>
         <div className='title-section max-w-4xl min-h-11 text-center mb-8 tl:mb-14'>
           <TextAnimatedWrite stylesText={{
             color: '#121212',
