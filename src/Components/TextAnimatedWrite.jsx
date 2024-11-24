@@ -47,7 +47,7 @@ const TextAnimatedWrite = ({ children, stylesText }) => {
   return (
     <div className='text-section flex justify-center'>
       <div className='text w-auto'>
-        <p id='TextAnimated' className={textDanger} style={stylesText}>
+        <p className={`${textDanger} text-animated`} style={stylesText}>
           {content}
         </p>
       </div>
