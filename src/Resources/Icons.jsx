@@ -1,6 +1,9 @@
 import { BiSearchAlt } from 'react-icons/bi';
 import { MdOutlineCircle } from 'react-icons/md'
 import { GrUserSettings } from 'react-icons/gr';
+import { IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward, IoMdExit, IoMdAddCircleOutline, IoMdAddCircle,
+          IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose  } from 'react-icons/io';
+import { FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt } from 'react-icons/fa';
 import {
   IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright,
   IoIosArrowForward, IoMdExit, IoMdAddCircleOutline,
@@ -173,6 +176,11 @@ export const CloseIcon = ( { atr, classIcons } ) => {
   )
 };
 
+//Pencil
+export const PencilIcon = ( { atr, classIcons } ) => {
+  return (
+    <FaPencilAlt style={ atr } className={ classIcons }/>
+    
 // Menu Bats
 export const MenuBarsIcon = ( { atr, classIcons } ) => {
   return (
