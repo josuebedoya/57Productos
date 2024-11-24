@@ -1,17 +1,9 @@
 import { BiSearchAlt } from 'react-icons/bi';
 import { MdOutlineCircle } from 'react-icons/md'
 import { GrUserSettings } from 'react-icons/gr';
-import {
-  IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward, IoMdExit, IoMdAddCircleOutline, IoMdAddCircle,
-  IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose
-} from 'react-icons/io';
-import { FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt } from 'react-icons/fa';
-import {
-  IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright,
-  IoIosArrowForward, IoMdExit, IoMdAddCircleOutline,
-  IoMdAddCircle, IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose
-} from 'react-icons/io';
-import { FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaSeedling } from 'react-icons/fa';
+import { IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward, IoMdExit, IoMdAddCircleOutline, IoMdAddCircle,
+  IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose } from 'react-icons/io';
+import { FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt, FaSeedling } from 'react-icons/fa';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaRegStar, FaHeartCircleCheck, FaHandshakeSimple } from 'react-icons/fa6';
 import { TiDocumentText, TiThMenuOutline } from 'react-icons/ti';
