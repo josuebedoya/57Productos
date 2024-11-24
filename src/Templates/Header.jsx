@@ -28,6 +28,7 @@ const menuItems = [
 const Header = () => {
   const [ displaySearchEngine, setDisplaySearchEngine ] = useState(false);
   const [ valueSearch, setValueSearch ] = useState('');
+  const [ isOpenMenu, setIsOpenMenu ] = useState(false);
 
   // Open  Search engine
   const SearchEngineDisplay = () => {
@@ -55,40 +56,46 @@ const Header = () => {
 
   const onChangeValueSearch = ({ value }) => {
     setValueSearch(value);
-  }
+  };
 
   const atr = 'text-Primary hover:shadow-Secondary hover:text-Secondary family-oswald';
 
+  const handldeOpenModal = () => {
+    setIsOpenMenu(!isOpenMenu);
+  };
+
   useEffect(() => {
-    let lastPosition = 0; // starting position
-    const header = document.getElementsByTagName('header')[ 0 ];
+    if (!isOpenMenu) {
 
-    const animationHeader = () => {
-      const isScrolling = window.pageYOffset || document.documentElement.scrollTop;
+      let lastPosition = 0; // starting position
+      const header = document.getElementsByTagName('header')[ 0 ];
 
-      if (isScrolling > lastPosition) { // scroll down
-        header.classList.remove('up');
-        header.classList.add('down');
+      const animationHeader = () => {
+        const isScrolling = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (displaySearchEngine === true) {
-          setDisplaySearchEngine(!displaySearchEngine);
-          console.log('cierra buscador--------')
+        if (isScrolling > lastPosition && lastPosition > header.offsetHeight) { // scroll down
+          header.classList.remove('up');
+          header.classList.add('down');
+
+          if (displaySearchEngine === true) {
+            setDisplaySearchEngine(!displaySearchEngine);
+          }
+
+        } else if (isScrolling < lastPosition && lastPosition > header.offsetHeight) {
+          header.classList.remove('down');
+          header.classList.add('up');   // scroll upp
         }
 
-      } else {
-        header.classList.remove('down');
-        header.classList.add('up');   // scroll upp
-      }
+        lastPosition = isScrolling <= 0 ? 0 : isScrolling; //  prevent it from being less than zero
+      };
 
-      lastPosition = isScrolling <= 0 ? 0 : isScrolling; //  prevent it from being less than zero
+      window.addEventListener('scroll', animationHeader); // active function
+
+      return () => {
+        window.removeEventListener('scroll', animationHeader); // remove fuction
+      };
     };
-
-    window.addEventListener('scroll', animationHeader); // active function
-
-    return () => {
-      window.removeEventListener('scroll', animationHeader); // remove fuction
-    };
-  }, []);
+  }, [ isOpenMenu ]);
 
   return (
     <header>
@@ -104,7 +111,7 @@ const Header = () => {
 
           {/* List Menu */}
           <div className='list-menu-section col-span-7 flex items-center justify-end'>
-            <Menu items={menuItems} atr={atr} />
+            <Menu items={menuItems} atr={atr} menuH withMenuBars openMenu={handldeOpenModal} />
           </div>
 
           {/* Search button, cart, and profile */}

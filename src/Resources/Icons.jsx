@@ -5,11 +5,11 @@ import {
   IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright,
   IoIosArrowForward, IoMdExit, IoMdAddCircleOutline,
   IoMdAddCircle, IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose  } from 'react-icons/io';
-import { FaArrowRight, FaRegHeart, FaStar, FaRegEye } from 'react-icons/fa';
+import { FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaSeedling  } from 'react-icons/fa';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-import { FaRegStar, FaHeartCircleCheck } from 'react-icons/fa6';
-import { TiDocumentText } from 'react-icons/ti';
-import { PiEyeSlashDuotone } from "react-icons/pi";
+import { FaRegStar, FaHeartCircleCheck, FaHandshakeSimple  } from 'react-icons/fa6';
+import { TiDocumentText, TiThMenuOutline } from 'react-icons/ti';
+import { PiEyeSlashDuotone, PiMoneyWavyBold } from "react-icons/pi";
 import { IoAlert } from "react-icons/io5";
 
 // icon magnifying glass
@@ -159,16 +159,44 @@ export const EyeOpenIcon = ( { atr, classIcons } ) => {
   )
 };
 
-//eye open
+// Alert - !
 export const AlertIcon = ( { atr, classIcons } ) => {
   return (
     <IoAlert style={ atr } className={ classIcons }/>
   )
 };
 
-//eye open
+// close
 export const CloseIcon = ( { atr, classIcons } ) => {
   return (
     <IoMdClose style={ atr } className={ classIcons }/>
+  )
+};
+
+// Menu Bats
+export const MenuBarsIcon = ( { atr, classIcons } ) => {
+  return (
+    <TiThMenuOutline style={ atr } className={ classIcons }/>
+  )
+};
+
+// Ticket Money 
+export const TicketMoney = ( { atr, classIcons } ) => {
+  return (
+    <PiMoneyWavyBold style={ atr } className={ classIcons }/>
+  )
+};
+
+// Plant 
+export const Plant = ( { atr, classIcons } ) => {
+  return (
+    <FaSeedling  style={ atr } className={ classIcons }/>
+  )
+};
+
+// Hands Estrech 
+export const HandEstrech = ( { atr, classIcons } ) => {
+  return (
+    <FaHandshakeSimple   style={ atr } className={ classIcons }/>
   )
 };

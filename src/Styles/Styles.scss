@@ -4,16 +4,17 @@
 
 // styles components 
 
-@import './Components/Blog';
-@import './Components/MissionAndVision';
 @import './Components/Headers';
 @import './Components/Carousel';
 @import './Components/Grafic';
 @import './Components/Slider';
 @import './Components/TextCustom';
 @import './Components/FormDefault';
-@import './Components/Money';
 @import './Components/Product';
 
 //styles templates
-@import './Templates/Profile-parts/GuestSection'
+@import './Templates/Profile-parts/GuestSection';
+@import './Templates/Chance';
+@import './Components/Blog';
+@import './Components/MissionAndVision';
+@import './Components/Money';
