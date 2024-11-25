@@ -103,14 +103,14 @@ const Header = () => {
         <div className='w-full px-4 grid grid-cols-12 items-center gap-4'>
 
           {/* Logo */}
-          <div className='logo-section col-span-2 flex items-center justify-center pl-4'>
+          <div className='logo-section col-span-3  flex items-center justify-center pl-4'>
             <a href='/'>
-              <img src={logo} alt='Logo de la aplicación' className='h-16' />
+              <img src={logo} alt='Logo de la aplicación' className='w-60 max-w-60' />
             </a>
           </div>
 
           {/* List Menu */}
-          <div className='list-menu-section col-span-7 flex items-center justify-end'>
+          <div className='list-menu-section col-span-6 flex items-center justify-end'>
             <Menu items={menuItems} atr={atr} menuH withMenuBars openMenu={handldeOpenModal} />
           </div>
 
