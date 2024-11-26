@@ -60,7 +60,7 @@ const Money = ({ amount }) => {
         ) : null
       )));
     };
-  }, [exchangeRatesUse]);
+  }, [exchangeRatesUse, rates]);
 
   /* hidden money, replace for ** */
   const hiddenAmountMoney = (amount) => {

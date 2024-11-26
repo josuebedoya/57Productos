@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Stars } from '../Stars';
 import { Button } from '../Button';
-import { HearthLineIcon, ExitArrowIcon } from '../../Resources/Icons';
+import { HearthLineIcon } from '../../Resources/Icons';
 import { AddWithAmount } from '../AddWithAmount';
 import { Modal } from '../Modal';
 
