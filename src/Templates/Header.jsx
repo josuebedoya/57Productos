@@ -109,7 +109,7 @@ const Header = () => {
         window.removeEventListener('scroll', animationHeader); // remove fuction
       };
     };
-  }, [ isOpenMenu ]);
+  }, [ isOpenMenu, displaySearchEngine, showIcons ]);
 
   return (
     <header>

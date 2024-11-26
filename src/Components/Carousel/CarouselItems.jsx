@@ -54,7 +54,7 @@ const CarouselItems = ({ ListElements, isImage }) => {
                 <ul ref={elements} className='flex transition-transform duration-300 ease-in-out'>
                   {contentToDisplay.map(item => (
                     <li key={item.id} className='flex-shrink-0 w-full rounded-3xl'>
-                      <img src={item.element} alt={`Image ${item.id}`} className='min-w-full max-h-96 object-cover' />
+                      <img src={item.element} alt={`${item.id}`} className='min-w-full max-h-96 object-cover' />
                     </li>
                   ))}
                 </ul>
