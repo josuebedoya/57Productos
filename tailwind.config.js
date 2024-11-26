@@ -50,6 +50,10 @@ module.exports = {
       },
       screens: {
         'tl': '900px',
+        'mn': {max:'639.98px'}
+      },
+      translate:{
+        '22': '90px',
       }
     },
   },

@@ -7,11 +7,11 @@ header {
 }
 
 header.up {
-    animation: showHeader 150ms ease-in both;
+    animation: showHeader .3s ease-in both;
 }
 
 header.down {
-    animation: hiddenHeader .8s ease-out both;
+    animation: hiddenHeader 1s ease-out both;
 }
 
 @keyframes hiddenHeader {
@@ -36,7 +36,7 @@ header.down {
     }
 
     100% {
-        transform: translateY(-100%);
+        transform: translateY(-110%);
     }
 }
 
