@@ -33,7 +33,7 @@ const Menu = ({ items, atr, menuH, withMenuBars, openMenu }) => {
       </ul >
       {
         withMenuBars ?
-          <span className='block lg:hidden' onClick={handleOpenModal}>
+          <span className='block lg:hidden text-2xl' onClick={handleOpenModal}>
             <MenuBarsIcon classIcons='cursor-pointer' />
           </span> : null
       }
