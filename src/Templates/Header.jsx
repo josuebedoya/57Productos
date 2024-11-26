@@ -113,7 +113,7 @@ const Header = () => {
 
   return (
     <header>
-      <div id='menu-header' className=' shadow-custom-shadow bg-white  py-2 lg:py-4 mb-4'>
+      <div id='menu-header' className=' shadow-custom-shadow bg-white  py-2 lg:py-4 mn:mb-4'>
         <div className='w-full px-4 grid grid-cols-12 items-center justify-center md:justify-normal md:gap-4 relative'>
 
           {/* Logo */}
