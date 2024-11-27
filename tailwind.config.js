@@ -48,13 +48,18 @@ module.exports = {
       zIndex: {
         'modal': '9999',
       },
-      screens: {
-        'tl': '900px',
-        'mn': {max:'639.98px'}
-      },
       translate:{
         '22': '90px',
       }
+    },
+    screens: {
+      'mn': {max:'639.98px'},
+      'sm': '640px',
+      'md': '768px',
+      'tl': '900px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px'
     },
   },
   plugins: [],
