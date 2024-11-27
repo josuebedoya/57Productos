@@ -8,17 +8,31 @@ const Store = () => {
 
   const [ error, setError ] = useState(null);
   const [ products, setProducts ] = useState([]);
+  const [ productsByCategory, setProductsByCategory ] = useState([]);
 
-  // get product from database
   useEffect(() => {
+    // get product from database
     const fetchProducts = async () => {
       try {
-        const res = await getData();
+        const res = await getData('productos');
         setProducts(res);
       } catch (err) {
         setError(err.message);
       }
     };
+
+    const fetchProductsByCategory = async () => {
+      try {
+        const res = await getData('producto_categorias',{
+          categoria_id: 1
+        });
+        setProductsByCategory(res);
+      } catch (err) {
+        setError(err.message);
+      }
+    }
+
+    fetchProductsByCategory();
     fetchProducts();
   }, []);
 
@@ -46,6 +60,14 @@ const Store = () => {
           ) : (
             <p>Cargando productos, no debería tardar demasiado</p>
           )}
+        </div>
+        <div className='container mx-auto'>
+          {productsByCategory.length > 0 ?(
+            productsByCategory.map((product, i) => (
+              <li key={i}>
+                {product.categoria_id}
+              </li>
+            ))) : null}
         </div>
         <div className="container mx-auto">
           <Modalproduct />

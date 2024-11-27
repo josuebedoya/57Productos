@@ -28,7 +28,7 @@ const Modal = ({ isOpen, onClose = false, classModal, children }) => {
       window.removeEventListener('click', clickOutside);
     };
 
-  }, [ isOpen ]);
+  }, [ isOpen, clickOutside ]);
 
   if (!isOpen) return null;
 
