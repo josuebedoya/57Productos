@@ -63,7 +63,7 @@ const Header = () => {
     setValueSearch(value);
   };
 
-  const atr = 'text-Primary hover:shadow-Secondary hover:text-Secondary family-oswald';
+  const atr = 'text-Primary hover:shadow-Secondary hover:text-Secondary family-oswald text-lg tracking-wide';
 
   const handldeOpenModal = () => {
     setIsOpenMenu(!isOpenMenu);
