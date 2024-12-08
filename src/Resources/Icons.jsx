@@ -4,7 +4,7 @@ import { GrUserSettings } from 'react-icons/gr';
 import { IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward, IoMdExit, IoMdAddCircleOutline, IoMdAddCircle,
   IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose } from 'react-icons/io';
 import { FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt, FaSeedling } from 'react-icons/fa';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineShoppingCart, AiTwotoneDislike, AiTwotoneLike } from 'react-icons/ai';
 import { FaRegStar, FaHeartCircleCheck, FaHandshakeSimple } from 'react-icons/fa6';
 import { TiDocumentText, TiThMenuOutline } from 'react-icons/ti';
 import { PiEyeSlashDuotone, PiMoneyWavyBold } from "react-icons/pi";
@@ -203,5 +203,19 @@ export const Plant = ({ atr, classIcons }) => {
 export const HandEstrech = ({ atr, classIcons }) => {
   return (
     <FaHandshakeSimple style={atr} className={classIcons} />
+  )
+};
+
+// Hands of Like 
+export const HandLike = ({ atr, classIcons }) => {
+  return (
+    <AiTwotoneLike style={atr} className={classIcons} />
+  )
+};
+
+// Hands of not like 
+export const HandDontLike = ({ atr, classIcons }) => {
+  return (
+    <AiTwotoneDislike style={atr} className={classIcons} />
   )
 };
