@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { AngleRightIcon, HearthCheckIcon, HearthLineIcon, DocumentIcon } from '../../Resources/Icons';
+import { CartIcon, HearthCheckIcon, HearthLineIcon, DocumentIcon } from '../../Resources/Icons';
 import { Button } from '../Button';
 import { Stars } from '../Stars';
 import { Modalproduct } from './ModalProduct';
@@ -51,7 +51,7 @@ const Product = (props) => {
           )}
         </div>
         <div className='item-stars text-13'>
-          <Stars />
+          <Stars  classIcons='cursor-pointer hover:rotate-45 duration-300 '/>
         </div>
         <div className='content mx-2'>
           <div className='item-title text-base font-bold my-3'>
@@ -67,7 +67,7 @@ const Product = (props) => {
           </div>
           <div className='group-buttons flex gap-1 items-center justify-between'>
             <div className='btn-add-to-basket'>
-              <Button icon={<AngleRightIcon />} iconRight classBtn='text-sm trasn'>
+              <Button icon={<CartIcon />} iconRight classBtn='text-sm trasn'>
                 Añadir
               </Button>
             </div>
