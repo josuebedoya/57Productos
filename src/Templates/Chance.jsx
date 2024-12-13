@@ -25,7 +25,7 @@ const Chance = () => {
       <section id='Chance' className='bg-black/10'>
         <div className='container mx-auto px-3 pt-10 pb-8 tl:pt-20 tl:pb-16 xl:pt-28 xl:pb-24'>
           <div className='section-title text-center'>
-            <TextCustom title='¿Estás listo para iniciar tu aventura con nosotros?' atrTitle={styletilte} />
+            <TextCustom title='¿Estás listo para iniciar tu aventura con nosotros?' atrTitle={styletilte} classTitle='text-shadow-white' />
           </div>
           <div className='content tl:flex items-center'>
             <div className='section-image w-full tl:w-1/2 flex justify-center tl:justify-start xl:justify-center'>

@@ -1,4 +1,4 @@
-const TextCustom = ({ title, children, lineTitle, atrTitle, titlePosition, atrsummary, linePosition }) => {
+const TextCustom = ({ title, children, lineTitle, atrTitle, titlePosition, atrsummary, linePosition, classTitle = '', classSummary = '' }) => {
   return (
     <>
       <div className='text-custom'>
@@ -6,7 +6,7 @@ const TextCustom = ({ title, children, lineTitle, atrTitle, titlePosition, atrsu
           <div className='tilte-section' style={{ textAlign: titlePosition }}>
             {
               title ?
-                <h2 className={`title 
+                <h2 className={`title ${classTitle}
                   ${lineTitle && linePosition === 'start' ? 'TitleWithLineStart' :
                     lineTitle && linePosition === 'center' ? 'TitleWithLineCenter' :
                       lineTitle && linePosition === 'end' ? 'TitleWithLineEnd' :
@@ -21,7 +21,7 @@ const TextCustom = ({ title, children, lineTitle, atrTitle, titlePosition, atrsu
           <div className='summary-section'>
             {
               children ?
-                <div className='summary'>
+                <div className={`summary ${classSummary}`}>
                   <p style={atrsummary}>
                     {children}
                   </p>

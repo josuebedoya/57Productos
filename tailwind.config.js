@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   important: true,
@@ -26,7 +28,7 @@ module.exports = {
         '86': '86px',
       },
       fontSize: {
-        '13': '13px', 
+        '13': '13px',
         '15': '15px',
       },
       aspectRatio: {
@@ -48,7 +50,7 @@ module.exports = {
       zIndex: {
         'modal': '9999',
       },
-      translate:{
+      translate: {
         '22': '90px',
       },
       height: {
@@ -56,7 +58,7 @@ module.exports = {
       },
     },
     screens: {
-      'mn': {max:'639.98px'},
+      'mn': { max: '639.98px' },
       'sm': '640px',
       'md': '768px',
       'tl': '900px',
@@ -64,6 +66,24 @@ module.exports = {
       'xl': '1280px',
       '2xl': '1536px'
     },
+    textShadow: {
+      'text-shadow-white': 'text-shadow: 2px 4px 3px #ffffff',
+      'text-shadow-black': 'text-shadow: 2px 4px 3px #ffffff70',
+    },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.text-shadow-white': {
+          textShadow: '2px 4px 3px #ffffff',
+        },
+        '.text-shadow-black': {
+          textShadow: '2px 4px 3px #00000070',
+        }
+      }
+  
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    }
+  ]
+ 
 }
