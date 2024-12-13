@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Input = ({ value, onChange, placeholder, type, name, maxLength = 20, isRequired , label, classContent, classLabel, children }) => {
+const Input = ({ value, onChange, placeholder, type, name, maxLength = 20, minLength = 0, isRequired , label, classContent, classLabel, children }) => {
     return (
         <div className={` ${classContent ? classContent : ''} input w-full flex-col`} >
             {label ? <label htmlFor={name} className={`${classLabel ? classLabel : ''} label-input`}>{children}</label> : ''}
             <input
                 type={type}
                 maxLength={maxLength}
+                min={minLength}
                 placeholder={placeholder ? placeholder.trim() : ''}
                 value={value}
                 onChange={(e) => onChange({ name, value: e.target.value })}

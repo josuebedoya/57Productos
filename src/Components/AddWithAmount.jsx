@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "./Button";
-import { AddCircleIcon, AddCircleLineIcon, RemoveCircleIcon, RemoveCircleIconLine } from "../Resources/Icons";
+import { AddCircleIcon, CartIcon, RemoveCircleIcon } from "../Resources/Icons";
 import { Input } from "./Input";
 
 const AddWithAmount = () => {
@@ -12,14 +12,14 @@ const AddWithAmount = () => {
   const incrementAmount = () => {
     const id = setInterval(() => {
       setAmount((prevAmount) => prevAmount + 1);
-    }, 130);
+    }, 65); // incrementa cada 65 ms
     setIntervalId(id);
   };
 
   const decrementAmount = () => {
     const id = setInterval(() => {
       setAmount((prevAmount) => Math.max(0, prevAmount - 1));
-    }, 130); // Decrementa cada 100 ms
+    }, 65); // Decrementa cada 65 ms
     setIntervalId(id);
   };
 
@@ -27,31 +27,40 @@ const AddWithAmount = () => {
     clearInterval(intervalId);
   };
 
+  const onChangeAmount = (e) => {
+    setAmount(e.target);
+  }
+
   return (
     <>
-      <div className="btn-add-amount">
-        <Button
-          onMouseEnter={() => setChangeIconBtnAdd(true)}
-          onMouseLeave={() => { setChangeIconBtnAdd(false); stopChangingAmount(); }}
-          onMouseDown={incrementAmount}
-          onMouseUp={stopChangingAmount}
-        >
-          {!changeIconBtnAdd ? <AddCircleLineIcon /> : <AddCircleIcon />}
-        </Button>
-        <Input value={amount} type='number' />
-        <Button
-          onMouseEnter={() => setChangeIconBtnRemove(true)}
-          onMouseLeave={() => { setChangeIconBtnRemove(false); stopChangingAmount(); }}
-          onMouseDown={decrementAmount}
-          onMouseUp={stopChangingAmount}
-        >
-          {!changeIconBtnRemove ? <RemoveCircleIconLine /> : <RemoveCircleIcon />}
-        </Button>
-      </div>
-      <div>
-        <Button>
-          Añadir
-        </Button>
+      <div className="btn-add-amount  flex justify-between items-center text-">
+        <div className="flex justify-between items-center mr-5">
+          <Button
+            classBtn='btn-reduce bg-transparent border-0 shadow-none hover:border-0 text-4xl p-0'
+            onMouseEnter={() => setChangeIconBtnRemove(true)}
+            onMouseLeave={() => { setChangeIconBtnRemove(false); stopChangingAmount(); }}
+            onMouseDown={decrementAmount}
+            onMouseUp={stopChangingAmount}
+          >
+            <RemoveCircleIcon classIcons={!changeIconBtnRemove ? 'text-Primary' : 'textSecondary duration-150'} />
+
+          </Button>
+          <Input value={amount} type='number' onChange={onChangeAmount} classContent='input-amount' />
+          <Button
+            classBtn='btn-increase bg-transparent border-0 shadow-none hover:border-0 text-4xl p-0'
+            onMouseEnter={() => setChangeIconBtnAdd(true)}
+            onMouseLeave={() => { setChangeIconBtnAdd(false); stopChangingAmount(); }}
+            onMouseDown={incrementAmount}
+            onMouseUp={stopChangingAmount}
+          >
+            <AddCircleIcon classIcons={!changeIconBtnAdd ? 'text-Primary' : 'textSecondary duration-150'} />
+          </Button>
+        </div>
+        <div>
+          <Button classBtn='btn-add px-4' icon={<CartIcon />}>
+            Añadir
+          </Button>
+        </div>
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Stars } from '../Stars';
 import { Button } from '../Button';
-import { HearthLineIcon } from '../../Resources/Icons';
+import { HearthLineIcon, HearthCheckIcon } from '../../Resources/Icons';
 import { AddWithAmount } from '../AddWithAmount';
 import { Modal } from '../Modal';
 
@@ -10,6 +10,7 @@ const getImagesProduct = require.context('../../Resources/Images/ProductImages',
 
 const Modalproduct = ({ close, title, price, description, img, imgHover, isOpen }) => {
   const [ changeImg, setChangeImg ] = useState(false);
+  const [ outstanding, setOutstanding ] = useState(false);
 
   if (close) {
 
@@ -17,6 +18,10 @@ const Modalproduct = ({ close, title, price, description, img, imgHover, isOpen 
       if (imgHover) {
         setChangeImg(!changeImg);
       };
+    };
+
+    const Added = () => {
+      setOutstanding(!outstanding);
     };
 
     return (
@@ -30,25 +35,25 @@ const Modalproduct = ({ close, title, price, description, img, imgHover, isOpen 
               <div className='content-image flex justify-center'>
 
                 {!changeImg ? (
-                  <img src={getImagesProduct(`./${img}`)} alt={title} className='h-96 w-96 rounded-3xl shadow-lg cursor-pointer' onMouseEnter={HoverChangeImg} />
+                  <img src={getImagesProduct(`./${img}`)} alt={title} className='max-h-600 rounded-3xl shadow-lg cursor-pointer aspect-100/83' onMouseEnter={HoverChangeImg} />
                 ) : (
-                  <img src={getImagesProduct(`./${imgHover}`)} alt={title} className='h-96 w-96 rounded-3xl shadow-lg cursor-pointer' onMouseLeave={HoverChangeImg} />
+                  <img src={getImagesProduct(`./${imgHover}`)} alt={title} className='max-h-600 rounded-3xl shadow-lg cursor-pointer aspect-100/83' onMouseLeave={HoverChangeImg} />
                 )}
 
               </div>
               <div className='rating-stars mt-6'>
-                <Stars />
+                <Stars  classIcons='cursor-pointer hover:rotate-45 duration-300'/>
               </div>
               <div className='content-description my-6 whitespace-pre-wrap text-lg text-justify'>
                 <p>{description}</p>
               </div>
               <div className='content-price text-xl font-semibold my-4'>
-                <span>{price}</span>
+                <span>${price}</span>
               </div>
               <div className='btns-group flex justify-between'>
                 < AddWithAmount />
                 <div className='btn-outstanding'>
-                  <Button icon={<HearthLineIcon />} classBtn='text-lg' />
+                  <Button icon={!outstanding ? <HearthLineIcon /> : <HearthCheckIcon />} onClick={Added} classBtn='text-lg' />
                 </div>
               </div>
             </div>
