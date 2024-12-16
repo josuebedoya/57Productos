@@ -21,6 +21,8 @@ module.exports = {
         'Primary': '#121212',
         'Secondary': '#2a4bf1',
         'Gray-dark': '#b4b4b4',
+        scrollbar: '#121212',
+        scrollbarThumb: '#121212',
       },
       spacing: {
         '600': '40pc',
@@ -41,6 +43,13 @@ module.exports = {
       },
       minHeight: {
         '600': '600px',
+      },
+      maxHeight:{
+        '100': '400px',
+        '101': '404px',
+        '105': '420px',
+        '110': '440px',
+        '103': '412px',
       },
       maxWidth: {
         '93': '930px',
@@ -79,11 +88,11 @@ module.exports = {
         },
         '.text-shadow-black': {
           textShadow: '2px 4px 3px #00000070',
-        }
-      }
+        },
+      };
   
       addUtilities(newUtilities, ['responsive', 'hover']);
-    }
+    },
+    require('tailwind-scrollbar'),
   ]
- 
 }

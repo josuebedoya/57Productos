@@ -2,13 +2,14 @@ import { BiSearchAlt } from 'react-icons/bi';
 import { MdOutlineCircle } from 'react-icons/md'
 import { GrUserSettings } from 'react-icons/gr';
 import { IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward, IoMdExit, IoMdAddCircleOutline, IoMdAddCircle,
-  IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose } from 'react-icons/io';
+  IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose, IoMdRemove, IoIosAdd  } from 'react-icons/io';
 import { FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt, FaSeedling } from 'react-icons/fa';
 import { AiOutlineShoppingCart, AiTwotoneDislike, AiTwotoneLike } from 'react-icons/ai';
 import { FaRegStar, FaHeartCircleCheck, FaHandshakeSimple } from 'react-icons/fa6';
 import { TiDocumentText, TiThMenuOutline } from 'react-icons/ti';
 import { PiEyeSlashDuotone, PiMoneyWavyBold } from "react-icons/pi";
 import { IoAlert } from "react-icons/io5";
+import { TbShoppingCartDown } from "react-icons/tb";
 
 // icon magnifying glass
 export const SearchEngineIcon = ({ atr, classIcons }) => {
@@ -73,6 +74,13 @@ export const CartIcon = ({ atr, classIcons }) => {
   )
 };
 
+// Cart with arrow down
+export const CartDown = ({ atr, classIcons }) => {
+  return (
+    <TbShoppingCartDown  style={atr} className={classIcons} />
+  )
+};
+
 // star
 export const StarIcon = ({ atr, classIcons, onClick }) => {
   return (
@@ -129,6 +137,13 @@ export const AddCircleIcon = ({ atr, classIcons }) => {
   )
 };
 
+// icon add +
+export const AddIcon = ({ atr, classIcons }) => {
+  return (
+    <IoIosAdd  style={atr} className={classIcons} />
+  )
+};
+
 //remove between a circle
 export const RemoveCircleIcon = ({ atr, classIcons }) => {
   return (
@@ -140,6 +155,13 @@ export const RemoveCircleIcon = ({ atr, classIcons }) => {
 export const RemoveCircleIconLine = ({ atr, classIcons }) => {
   return (
     <IoMdRemoveCircleOutline style={atr} className={classIcons} />
+  )
+};
+
+// Remove icon   --
+export const RemoveIcon = ({ atr, classIcons }) => {
+  return (
+    <IoMdRemove style={atr} className={classIcons} />
   )
 };
 
