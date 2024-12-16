@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="↔ component Money, +toString() in hiddenAmount" />
+    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="↔ component Money, +toString() in hiddenAmount">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Icons.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Icons.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templates/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,12 +50,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="Divisas" />
-                    <option name="lastUsedInstant" value="1730256270" />
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1734361373" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1730256269" />
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1734361270" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="Divisas" />
+                    <option name="lastUsedInstant" value="1730256270" />
                   </RecentBranch>
                 </list>
               </option>
@@ -62,6 +76,9 @@
     &quot;accountId&quot;: &quot;d73f0ae0-65a2-491b-8f16-121fd4804986&quot;
   }
 }</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -70,20 +87,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Divisas&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Vue template&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2024.1.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="dev" />
@@ -93,8 +112,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18034.69" />
-        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18034.69" />
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.15026.12" />
       </set>
     </attachedChunks>
   </component>
@@ -111,6 +129,7 @@
       <workItem from="1730256130793" duration="10133000" />
       <workItem from="1730335083009" duration="15699000" />
       <workItem from="1730747654458" duration="484000" />
+      <workItem from="1734360888862" duration="20562000" />
     </task>
     <task id="LOCAL-00001" summary="Add two icons">
       <option name="closed" value="true" />
@@ -189,6 +208,12 @@
           <url>file://$PROJECT_DIR$/src/Resources/Icons.jsx</url>
           <line>21</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Components/Modal.jsx</url>
+          <line>34</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
