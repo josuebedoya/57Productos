@@ -77,3 +77,13 @@ header.down {
         transition: 40s;
     }
 }
+
+@media (max-width: 900px) {
+    #menu-header{
+        .modal-menu{
+            .menu-item{
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

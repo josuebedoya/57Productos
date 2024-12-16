@@ -1,0 +1,38 @@
+#modalProduct {
+  .modal-content {
+    .content {
+      .btns-group {
+        .btn-add-amount {
+          .input-amount {
+            & input {
+              border-radius: 5px !important;
+              border: 0 !important;
+              padding: 0 !important;
+              margin-inline: 10px;
+              font-weight: 600;
+              color: $color-primary !important;
+              max-width: 65px;
+              place-items: center;
+
+              &:focus {
+                box-shadow: none !important;
+              }
+            }
+
+            & input[type=number] {
+              -webkit-appearance: textfield !important;
+              margin: 0;
+              -moz-appearance: textfield !important;
+              appearance: none !important;
+            }
+          }
+
+          .btn-increase,
+          .btn-reduce {
+            padding: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
