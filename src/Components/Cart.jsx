@@ -3,13 +3,20 @@ import {AddIcon, CartDown, CartIcon, RemoveIcon} from '../Resources/Icons';
 import img from '../Resources/Images/ProductImages/Fruit4.jpg'
 import {Button} from "./Button";
 
-const Cart = (props) => {
+const Cart = ({close}, props) => {
   const [totalAmount, setTotalAmount] = useState(0); // total products
   const [amountProduct, setAmountProduct] = useState(0); // amount to each product
   const [intervalId, setIntervalId] = useState(null);
   const [openModal, setOpenModal] = useState(false);
   const modalRef = useRef(null);
-  const [items, setItems] = useState([1, 2, 3, 4, 5]);
+  const [items, setItems] = useState([
+   {title: 'Producto 1', price: 12000, img: img, amount: 1},
+   {title: 'Producto 2', price: 15000, img: img, amount: 1},
+   {title: 'Producto 3', price: 20500, img: img, amount: 1},
+   {title: 'Producto 4', price: 100, img: img, amount: 1},
+   {title: 'Producto 5', price: 1540, img: img, amount: 1},
+   {title: 'Producto 6', price: 1003400, img: img, amount: 1},
+  ]);
 
   const AddTotalAmount = () => {
     if (totalAmount <= 99) {
@@ -37,6 +44,13 @@ const Cart = (props) => {
   const handleOpenModal = () => {
     setOpenModal(!openModal);
   }; // open modal
+
+  // if do scroll down close modal
+  useEffect(() => {
+    if (close) {
+      setOpenModal(false);
+    }
+  }, [close]);
 
   // close modal if do click outside
 
@@ -78,27 +92,27 @@ const Cart = (props) => {
        )}
        {
          openModal ? (
-          <div className='cart-products absolute p-4 rounded-lg shadow-custom w-64 -left-40 top-10 bg-white z-50 min-h-20 max-h-101 overflow-y-scroll scrollbar-thin scrollbar-thumb-scrollbar scrollbar-track-transparent'
+          <div className={`${openModal ? 'animate-fade-in': 'animate-fade-out'} cart-products absolute p-4 rounded-lg shadow-custom w-64 -left-40 top-10 bg-white z-50 min-h-20 max-h-101 overflow-y-scroll scrollbar-thin scrollbar-thumb-scrollbar scrollbar-track-transparent`}
            onClick={(e) => e.stopPropagation()}>
             {totalAmount > 0 ? (
              <>
-               <div  className='top-section flex justify-between items-end text-Primary text-15 border-b border-b-gray-200 pb-1'>
+               <div className='top-section flex justify-between items-end text-Primary text-15 border-b border-b-gray-200 pb-1'>
                  <h3 className='total-products-title'>Productos en carrito: </h3>
                  <p className='total border border-gray-300 rounded-full p-y-0.5 px-1.5'>{totalAmount}</p>
                </div>
                <div className='list-section pt-4'>
                  {
-                   items.map((index) => (
+                   items.map((item, index) => (
                     <div key={index}  className='item-product flex flex-wrap  mb-3 pb-3 border-b border-b-gray-200 last:mb-0 last:border-b-0 last:pb-0'>
                       <div className='image w-2/6'>
-                        <img src={img} alt="image-title" className='w-full h-16 rounded-lg object-cover'/>
+                        <img src={item.img} alt="image-title" className='w-full h-16 rounded-lg object-cover'/>
                       </div>
                       <div className='information w-4/6 group/info pl-2'>
-                        <h5  className='title text-Primary text-13 family-oswald group-hover/info:text-Secondary group-hover/info:underline duration-150'>
-                          {props.title}
+                        <h5 className='title text-Primary text-13 family-oswald group-hover/info:text-Secondary group-hover/info:underline duration-150'>
+                          {item.title}
                         </h5>
                         <div className='amount-price flex justify-between text-xs'>
-                          <span className='price text-zinc-600'>${props.price}</span>
+                          <span className='price text-zinc-600'>${item.price}</span>
                           <div className='item-amount family-oswald text-Primary flex justify-between'>
                             <i onMouseLeave={() => { stopChangingAmount() }}
                              onMouseDown={decrementAmount}
