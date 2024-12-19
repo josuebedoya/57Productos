@@ -12,6 +12,7 @@ import { Store } from './Layout/Store';
 import { Contact } from './Layout/Contact';
 import { Profile } from './Layout/Profile';
 import { TermsAndConditions } from './Layout/TermsAndConditions'
+import { Payments } from "./Layout/Payments";
 
 export default function App() {
     return (
@@ -19,12 +20,13 @@ export default function App() {
             <Router>
                 <Header />
                 <Routes>
-                    <Route path={Path_page.HOME} element={<Home />} />
+                    <Route index path={Path_page.HOME} element={<Home />} />
                     <Route path={Path_page.US} element={<About />} />
                     <Route path={Path_page.SERVICES} element={<Services />} />
                     <Route path={Path_page.STORE} element={<Store />} />
                     <Route path={Path_page.CONTACT} element={<Contact />} />
                     <Route path={Path_page.PROFILE} element={<Profile />} />
+                    <Route path={Path_page.PAYMENTS} element={<Payments/>}/>
                     <Route path={Path_page.TERMSANDCONDITIONS} element={<TermsAndConditions />} />
                     <Route path={Path_page.ERROR} element={<PageError />} />
                 </Routes>
