@@ -3,7 +3,7 @@ import { MdOutlineCircle } from 'react-icons/md'
 import { GrUserSettings } from 'react-icons/gr';
 import { IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward, IoMdExit, IoMdAddCircleOutline, IoMdAddCircle,
   IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose, IoMdRemove, IoIosAdd  } from 'react-icons/io';
-import { FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt, FaSeedling } from 'react-icons/fa';
+import { FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt, FaSeedling, FaTrash, FaTrashRestore } from 'react-icons/fa';
 import { AiOutlineShoppingCart, AiTwotoneDislike, AiTwotoneLike } from 'react-icons/ai';
 import { FaRegStar, FaHeartCircleCheck, FaHandshakeSimple } from 'react-icons/fa6';
 import { TiDocumentText, TiThMenuOutline } from 'react-icons/ti';
@@ -239,5 +239,19 @@ export const HandLike = ({ atr, classIcons }) => {
 export const HandDontLike = ({ atr, classIcons }) => {
   return (
     <AiTwotoneDislike style={atr} className={classIcons} />
+  )
+};
+
+// Trash
+export const TrashIcon = ({ atr, classIcons }) => {
+  return (
+    < FaTrash style={atr} className={classIcons} />
+  )
+};
+
+// Trash with  open cover
+export const TrashOpenIcon  = ({ atr, classIcons }) => {
+  return (
+   < FaTrashRestore  style={atr} className={classIcons} />
   )
 };
