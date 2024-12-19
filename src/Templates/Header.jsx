@@ -8,14 +8,13 @@ import { Input } from '../Components/Input';
 import { Menu } from '../Components/Menu';
 import { Path_page } from '../Routes';
 
-const ItemsProduct = {
-  name: 'Colores',
-  id: 1,
-  amount: 223,
-  price: 23.000,
-  state: true,
-  wieght: 100
-};
+const itemsProduct = [
+  {id: 1, title: 'Colores', amount: 223, price: 23.000, state: true, weight: 100, img: logo},
+  {id: 2, title: 'Naranajas', amount: 5223, price: 1000, state: true, weight: 340, img: logo},
+  {id: 3, title: 'Bananas', amount: 433, price: 5.000, state: true, weight: 100 ,img: logo},
+  {id: 4, title: 'Fresas', amount: 223, price: 35.000, state: true, weight: 100,  img: logo},
+  {id: 5, title: 'Cafe', amount: 223, price: 98.6700, state: true, weight: 100,  img: logo},
+];
 
 const menuItems = [
   { name: 'Inicio', url: Path_page.HOME },
@@ -30,6 +29,7 @@ const Header = () => {
   const [valueSearch, setValueSearch] = useState('');
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [showIcons, setShowIcons] = useState(false);
+  const [modalCart, setModalCart] = useState(false);
 
   // Open  Search engine
   const SearchEngineDisplay = () => {
@@ -42,13 +42,12 @@ const Header = () => {
 
   const SearchEngineClose = () => {
 
-    let nameProduct = ItemsProduct.name.toLocaleLowerCase();
     let valueInput = valueSearch.toLocaleLowerCase();
-
+    let productFound = itemsProduct.find(product => product.title.toLocaleLowerCase() === valueInput);
 
     if (valueSearch) {
-      if (valueInput === nameProduct && ItemsProduct.state === true) {
-        alert(`el producto '${valueSearch}' aún está dispible, quedan ${ItemsProduct.amount}`);
+      if ( productFound) {
+        alert(`el producto '${valueSearch}' aún está dispible, quedan ${productFound.amount}`);
         setValueSearch('');
         setDisplaySearchEngine(!displaySearchEngine);
       } else {
@@ -94,10 +93,12 @@ const Header = () => {
           if (showIcons === false) { // Hidde icons from menu
             setShowIcons(!showIcons);
           }
+          setModalCart(true);
 
         } else if (isScrolling < lastPosition && lastPosition > header.offsetHeight) {
           header.classList.remove('down');
           header.classList.add('up');   // scroll upp
+          setModalCart(false);
         }
 
         lastPosition = isScrolling <= 0 ? 0 : isScrolling; //  prevent it from being less than zero
@@ -138,7 +139,7 @@ const Header = () => {
               />
             </div>
             <div className='cart-section'>
-              <Cart />
+              <Cart close={modalCart}  products={itemsProduct}/>
             </div>
             <div className='profile-section'>
               <a href={Path_page.PROFILE} target='_self' className='profile-section-icon text-white bg-Primary border border-Primary rounded-full p-2 flex items-center
