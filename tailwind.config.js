@@ -65,6 +65,38 @@ module.exports = {
       height: {
         '38': '150px',
       },
+      animation: {
+        'fade-out': 'fade-out .2s ease-in both',
+        'fade-in': 'fade-in .2s ease-in both',
+        'shaking': 'shaking  2.5s linear infinite'
+      },
+      keyframes: {
+        'fade-out': {
+          '0%': { opacity: 1 },
+          '100%': { opacity: 0 },
+        },
+        'fade-in': {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        shaking: {
+          "0%": {
+            transform: "scale3d(1, 1, 1)",
+          },
+          "10%, 20%": {
+            transform: "scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)",
+          },
+          "30%, 50%, 70%, 90%": {
+            transform: "scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)",
+          },
+          "40%, 60%, 80%": {
+            transform: "scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)",
+          },
+          "100%": {
+            transform: "scale3d(1, 1, 1)",
+          },
+        },
+      },
     },
     screens: {
       'mn': { max: '639.98px' },
