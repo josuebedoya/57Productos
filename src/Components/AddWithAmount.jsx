@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "./Button";
 import { AddCircleIcon, CartIcon, RemoveCircleIcon } from "../Resources/Icons";
 import { Input } from "./Input";
 
-const AddWithAmount = () => {
+const AddWithAmount = ( { functionAdd, handleAmount } ) => {
   const [changeIconBtnAdd, setChangeIconBtnAdd] = useState(false);
   const [changeIconBtnRemove, setChangeIconBtnRemove] = useState(false);
   const [amount, setAmount] = useState(1);
@@ -28,8 +28,12 @@ const AddWithAmount = () => {
   };
 
   const onChangeAmount = (e) => {
-    setAmount(e.target);
+    setAmount(Number(e.value));
   }
+
+  useEffect( () => {
+    handleAmount( amount );
+  }, [amount] );
 
   return (
     <>
@@ -45,7 +49,7 @@ const AddWithAmount = () => {
             <RemoveCircleIcon classIcons={!changeIconBtnRemove ? 'text-Primary' : 'textSecondary duration-150'} />
 
           </Button>
-          <Input value={amount} type='number' onChange={onChangeAmount} classContent='input-amount' />
+          <Input value={amount} type='number' onChange={onChangeAmount} minLength={0} classContent='input-amount' />
           <Button
             classBtn='btn-increase bg-transparent border-0 shadow-none hover:border-0 text-4xl p-0'
             onMouseEnter={() => setChangeIconBtnAdd(true)}
@@ -57,7 +61,7 @@ const AddWithAmount = () => {
           </Button>
         </div>
         <div>
-          <Button classBtn='btn-add px-4' icon={<CartIcon />}>
+          <Button classBtn='btn-add px-4' icon={<CartIcon />} onClick={() =>{ functionAdd(); setAmount(1) }}>
             Añadir
           </Button>
         </div>

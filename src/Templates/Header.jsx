@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {useCart} from "../Components/Context/cartContext";
 
 import logo from '../Resources/Images/logo.png';
 import { Button } from '../Components/Button';
@@ -7,14 +8,6 @@ import { Cart } from '../Components/Cart';
 import { Input } from '../Components/Input';
 import { Menu } from '../Components/Menu';
 import { Path_page } from '../Routes';
-
-const itemsProduct = [
-  {id: 1, title: 'Colores', amount: 223, price: 23.000, state: true, weight: 100, img: logo},
-  {id: 2, title: 'Naranajas', amount: 5223, price: 1000, state: true, weight: 340, img: logo},
-  {id: 3, title: 'Bananas', amount: 433, price: 5.000, state: true, weight: 100 ,img: logo},
-  {id: 4, title: 'Fresas', amount: 223, price: 35.000, state: true, weight: 100,  img: logo},
-  {id: 5, title: 'Cafe', amount: 223, price: 98.6700, state: true, weight: 100,  img: logo},
-];
 
 const menuItems = [
   { name: 'Inicio', url: Path_page.HOME },
@@ -30,6 +23,7 @@ const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [showIcons, setShowIcons] = useState(false);
   const [modalCart, setModalCart] = useState(false);
+  const {cart} = useCart();
 
   // Open  Search engine
   const SearchEngineDisplay = () => {
@@ -43,7 +37,7 @@ const Header = () => {
   const SearchEngineClose = () => {
 
     let valueInput = valueSearch.toLocaleLowerCase();
-    let productFound = itemsProduct.find(product => product.title.toLocaleLowerCase() === valueInput);
+    let productFound = cart.find(product => product.title.toLocaleLowerCase() === valueInput);
 
     if (valueSearch) {
       if ( productFound) {
@@ -139,7 +133,7 @@ const Header = () => {
               />
             </div>
             <div className='cart-section'>
-              <Cart close={modalCart}  products={itemsProduct}/>
+              <Cart close={modalCart} />
             </div>
             <div className='profile-section'>
               <a href={Path_page.PROFILE} target='_self' className='profile-section-icon text-white bg-Primary border border-Primary rounded-full p-2 flex items-center
