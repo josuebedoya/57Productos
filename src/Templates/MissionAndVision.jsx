@@ -1,43 +1,65 @@
+import { useState } from "react";
 import { TextCustom } from '../Components/TextCustom';
-import logo from '../Resources/Images/logo.png';
-import Vision from '../Resources/Images/vision-logo.png'
+import { AngleBottomIcon, AngleRightIcon } from "../Resources/Icons";
+
 const MissionAndVision = () => {
+  const [ open, setOpen ] = useState( null );
 
-  const titleMission = 'misión';
-  const titleVision = 'visión';
+  const content = [
+    {
+      title: 'misión',
+      content: 'Facilitar el éxito comercial al conectar de manera efectiva a vendedores y compradores, ofreciendo soluciones personalizadas que maximicen los beneficios para los vendedores. Nos comprometemos proporcionar un servicio de intermediación transparente y eficiente, utilizando tecnología avanzada y un profundo conocimiento del mercado para asegurar que cada transacción sea beneficiosa y satisfactoria.'
+    },
+    {
+      title: 'visión',
+      content: ' Facilitar el éxito comercial al conectar de manera efectiva a vendedores y compradores, ofreciendo soluciones personalizadas que maximicen los beneficios para los vendedores. Nos comprometemos a proporcionar un servicio de intermediación transparente y eficiente, utilizando tecnología avanzada y un profundo conocimiento del mercado para asegurar que cada transacción sea beneficiosa y satisfactoria.'
+    }
+  ];
 
-  return (
-    <div id='MissionAndVision'>
-      <div className='mx-16 pt-14 pb-8'>
-        <div className='flex justify-center img-logo items-center relative'>
-          <img src={logo} alt='logo' className='h-36' />
+  const handleOpen = ( index ) => {
+    setOpen( open === index ? null : index );
+  };
+
+  return ( <section id='MissionAndVision' className='w-full border-b border-b-gray-300 pb-8 tl:pb-16'>
+    <div className='container mx-auto grid grid-cols-12 mt-6 tl:mt-10 px-3'>
+      <div className='section-mision grid grid-cols-12 col-span-full md:col-span-6'>
+        <div
+         className={ `md:col-end-12 col-span-full shadow-md px-3 pt-3 pb-4 rounded-2xl ${ open !== 0 ? 'max-h-16' : null }` }>
+          <button type='button' onClick={ () => handleOpen( 0 ) }
+                  className='flex justify-between items-center w-full'>
+            <TextCustom title={ content[ 0 ].title } lineTitle linePosition='start'
+                        classTitle='textPrimary capitalize text-xl text-2xl text-shadow-black'/>
+            { open === 0 ? <AngleBottomIcon/> : <AngleRightIcon/> }
+          </button>
+          {
+           open === 0 && (
+            <TextCustom classSummary='text-15 tl:text-lg text-justify mt-4 animate-fade-in'>
+              { content[ 0 ].content }
+            </TextCustom>
+           )
+          }
         </div>
-        <div className='container mx-auto gap-10 columns-2'>
-          <div className='section-mision'>
-            <img src={Vision} alt={titleMission} className='logo-item' />
-            <TextCustom title={titleMission}
-              lineTitle={true}
-              titlePosition='center'
-              linePosition='center'
-            >
-              Facilitar el éxito comercial al conectar de manera efectiva a vendedores y compradores, ofreciendo soluciones personalizadas que maximicen los beneficios para los vendedores. Nos comprometemos a proporcionar un servicio de intermediación transparente y eficiente, utilizando tecnología avanzada y un profundo conocimiento del mercado para asegurar que cada transacción sea beneficiosa y satisfactoria.
+      </div>
+      <div className='section-vision grid grid-cols-12 col-span-full md:col-span-6'>
+        <div
+         className={ `md:col-start-2 col-span-full shadow-md px-3 pt-3 pb-4 rounded-2xl ${ open !== 1 ? 'max-h-16' : null }` }>
+          <button type='button' onClick={ () => handleOpen( 1 ) }
+                  className='flex justify-between items-center w-full'>
+            <TextCustom title={ content[ 1 ].title } lineTitle linePosition='start'
+                        classTitle=' textPrimary capitalize text-2xl text-xl text-shadow-black'/>
+            { open === 1 ? <AngleBottomIcon/> : <AngleRightIcon/> }
+          </button>
+          {
+           open === 1 && (
+            <TextCustom classSummary='text-15 tl:text-lg text-justify mt-4 animate-fade-in'>
+              { content[ 1 ].content }
             </TextCustom>
-          </div>
-          <div className='section-vision'>
-            <img src={Vision} alt={titleVision} className='logo-item' />
-            <TextCustom title={titleVision}
-              lineTitle={true}
-              titlePosition='center'
-              linePosition='center'
-            >
-              Ser la plataforma líder en intermediación comercial, reconocida por nuestra capacidad para transformar el mercado mediante la conexión efectiva y personalizada entre vendedores y compradores. Aspiramos a crear un ecosistema de negocios en el que cada transacción no solo cumpla con las expectativas, sino que las supere, utilizando tecnología innovadora y un entendimiento profundo del mercado para impulsar el éxito y la satisfacción de todos nuestros clientes.
-            </TextCustom>
-          </div>
-
+           )
+          }
         </div>
       </div>
     </div>
-  )
+  </section> )
 }
 
 export { MissionAndVision };
