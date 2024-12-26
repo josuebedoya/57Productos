@@ -48,10 +48,12 @@ const Store = () => {
             products.slice(0,30).map((product, i) => (
               <>
                 <Product key={i}
+                  id={product.id}
                   title={product.nombre}
                   price={product.precio}
                   img='Fruit2.jpg'
                   imgHover='Fruit2.jpg'
+                  amount={1}
                 >
                   {product.descripcion}
                 </Product>

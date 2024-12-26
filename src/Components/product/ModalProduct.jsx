@@ -5,12 +5,15 @@ import { Button } from '../Button';
 import { HearthLineIcon, HearthCheckIcon } from '../../Resources/Icons';
 import { AddWithAmount } from '../AddWithAmount';
 import { Modal } from '../Modal';
+import { useCart } from "../Context/cartContext";
 
 const getImagesProduct = require.context('../../Resources/Images/ProductImages', true, /\.(jpg|png)$/);
 
-const Modalproduct = ({ close, title, price, description, img, imgHover, isOpen }) => {
+const Modalproduct = ({ close, title, price, description, img, imgHover, isOpen, id }) => {
   const [ changeImg, setChangeImg ] = useState(false);
   const [ outstanding, setOutstanding ] = useState(false);
+  const  [amount, setAmount] = useState(0);
+  const { addCart } = useCart();
 
   if (close) {
 
@@ -23,6 +26,20 @@ const Modalproduct = ({ close, title, price, description, img, imgHover, isOpen 
     const Added = () => {
       setOutstanding(!outstanding);
     };
+
+     const handleAmount = (amount) =>{
+       setAmount(amount);
+     };
+
+    const addToCart = () =>{
+      const   product = {
+        id: id,
+        title: title,
+        amount: amount,
+        price: price,
+      }
+      addCart(product);
+    }; // add product to cart
 
     return (
       <>
@@ -51,7 +68,7 @@ const Modalproduct = ({ close, title, price, description, img, imgHover, isOpen 
                 <span>${price}</span>
               </div>
               <div className='btns-group flex justify-between'>
-                < AddWithAmount />
+                < AddWithAmount  functionAdd={ addToCart } handleAmount={ handleAmount }/>
                 <div className='btn-outstanding'>
                   <Button icon={!outstanding ? <HearthLineIcon /> : <HearthCheckIcon />} onClick={Added} classBtn='text-lg' />
                 </div>

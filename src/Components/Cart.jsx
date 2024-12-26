@@ -1,17 +1,23 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import {useCart} from "./Context/cartContext";
 import { AddIcon, CartDown, CartIcon, RemoveIcon, TicketMoney, TrashIcon, TrashOpenIcon } from '../Resources/Icons';
 import { Button } from "./Button";
 import { Path_page, Slug } from '../Routes';
 
-const Cart = ( { close,  products } ) => {
+const Cart = ( { close } ) => {
   const navigate =  useNavigate();
+  const {cart, removeItem, removeAll} = useCart();
 
   const [ totalAmountProducts, setTotalAmountProducts ] = useState( 0 ); // total products
   const [ openModal, setOpenModal ] = useState( false );
   const [ iconDelete, setIconDelete ] = useState( false );
   const modalRef = useRef( null );
-  const [ items, setItems ] = useState( products ); // items in cart
+  const [ items, setItems ] = useState( cart ); // items in cart
+
+  useEffect( () => {
+    setItems( cart );
+  }, [cart] ); //  handle  listener changes in cart.
 
   useEffect( () => {
     const addTotalAmount = () => {
@@ -46,12 +52,6 @@ const Cart = ( { close,  products } ) => {
     setItems( newItems );
   }; // decrement amount product
 
-  const removeProduct = ( id ) => {
-    const newItems = items.filter( item => item.id !== id );
-    setItems( newItems );
-    console.log( 'Removed Product' + id );
-  }; // Remove products from car list
-
   const handleOpenModal = () => {
     setOpenModal( !openModal );
   }; // open modal
@@ -83,10 +83,6 @@ const Cart = ( { close,  products } ) => {
     };
 
   }, [ openModal, close ] );  // handle listener click to close modal or scroll down
-
-  const removeAllProducts = () => {
-    setItems( [] );
-  }; // Remove all product from cart
 
   const goToPayments = () => {
     navigate(Path_page.PAYMENTS);
@@ -145,7 +141,7 @@ const Cart = ( { close,  products } ) => {
                           <Button classBtn='text-sm family-oswald pr-5' btnText>
                             Comprar
                           </Button>
-                          <i title='Sacar Producto del carrito' className='flex justify-center items-center' onClick={ () => removeProduct( item.id ) }>
+                          <i title='Sacar Producto del carrito' className='flex justify-center items-center' onClick={ () => removeItem( item.id ) }>
                               <CartDown classIcons='remove-item text-red-600 cursor-pointer hover:scale-110'/>
                           </i>
                         </div>
@@ -161,7 +157,7 @@ const Cart = ( { close,  products } ) => {
                  <i title='Eliminar todo del carrio' className='flex justify-center items-center hover:animate-shaking'
                     onMouseOver={ () => setIconDelete( true ) }
                     onMouseLeave={ () => setIconDelete( false ) }
-                    onClick={ removeAllProducts }
+                    onClick={()=> removeAll() }
                  >
                    {
                      iconDelete ?

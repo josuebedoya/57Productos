@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useCart } from "../Context/cartContext";
 
 import { CartIcon, HearthCheckIcon, HearthLineIcon, DocumentIcon } from '../../Resources/Icons';
 import { Button } from '../Button';
@@ -8,6 +9,7 @@ import { Modalproduct } from './ModalProduct';
 const getImagesProduct = require.context('../../Resources/Images/ProductImages', true, /\.(jpg|png)$/);
 
 const Product = (props) => {
+  const { addCart } = useCart();
   const [ IsOpen, setIsOpen ] = useState(false);
   const [ outstanding, setOutstanding ] = useState(false);
   const [ changeImg, setChangeImg ] = useState(false);
@@ -36,8 +38,18 @@ const Product = (props) => {
   };
 
   if (IsOpen) {
-    return <Modalproduct close={OpenModal} title={props.title} description={props.children} price={props.price} img={props.img} imgHover={props.imgHover} isOpen={IsOpen} />;
+    return <Modalproduct close={OpenModal} title={props.title} description={props.children} price={props.price} img={props.img} imgHover={props.imgHover} id={props.id} isOpen={IsOpen} />;
   };
+
+  const addToCart = () =>{
+   const   product = {
+       id: props.id,
+       title: props.title,
+       amount: props.amount,
+       price: props.price,
+     }
+     addCart(product);
+  }; // add product to cart
 
   return (
     <>
@@ -67,7 +79,7 @@ const Product = (props) => {
           </div>
           <div className='group-buttons flex gap-1 items-center justify-between'>
             <div className='btn-add-to-basket'>
-              <Button icon={<CartIcon />} iconRight classBtn='text-sm trasn'>
+              <Button icon={<CartIcon />} iconRight classBtn='text-sm trasn' onClick={ addToCart }>
                 Añadir
               </Button>
             </div>
