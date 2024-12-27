@@ -1,10 +1,12 @@
 import { MissionAndVision } from "../Templates/MissionAndVision";
+import { InfoAbout } from "../Templates/InfoAbout";
 
-const About = () =>{
+const About = () => {
   return (
-  <div className='flex flex-col items-center justify-center'>
-     <MissionAndVision />
-  </div>
+   <main className='page-about-us m-0 p-0 relative'>
+     <InfoAbout/>
+     <MissionAndVision/>
+   </main>
   )
 }
-export {About};
+export { About };
