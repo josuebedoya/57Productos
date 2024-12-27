@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="✓ Vision And vision Section | ↔ &quot;tilte&quot; to &quot;title&quot;">
-      <change afterPath="$PROJECT_DIR$/src/Styles/Templates/_InfoAbout.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Templates/InfoAbout.jsx" afterDir="false" />
+    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="✓ Page About | + History">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Carousel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Carousel.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Layout/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/Styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +114,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\Resources\Images" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\Styles\Templates" />
     </key>
   </component>
@@ -149,7 +146,7 @@
       <workItem from="1735230835071" duration="7087000" />
       <workItem from="1735241965139" duration="8323000" />
       <workItem from="1735252665841" duration="251000" />
-      <workItem from="1735307496471" duration="18223000" />
+      <workItem from="1735307496471" duration="21410000" />
     </task>
     <task id="LOCAL-00001" summary="Add two icons">
       <option name="closed" value="true" />
@@ -279,7 +276,23 @@
       <option name="project" value="LOCAL" />
       <updated>1735314519312</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="+ Breakpoints to Carousel">
+      <option name="closed" value="true" />
+      <created>1735330539995</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1735330539995</updated>
+    </task>
+    <task id="LOCAL-00018" summary="✓ info Template">
+      <option name="closed" value="true" />
+      <created>1735330675658</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1735330675658</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,9 +338,11 @@
     <MESSAGE value="+ new animation to tailwind | ↔ cart, add condition  to close modal if scroll down, add animation" />
     <MESSAGE value="+ Context to cart | + validation to prevent items cloned in cart  | + add with quantity funcionnality." />
     <MESSAGE value="✓ Vision And vision Section | ↔ &quot;tilte&quot; to &quot;title&quot; |" />
-    <MESSAGE value="✓ Vision And vision Section | ↔ &quot;tilte&quot; to &quot;title&quot;" />
     <MESSAGE value="+ new effect to carousel" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ new effect to carousel" />
+    <MESSAGE value="+ Breakpoints to Carousel" />
+    <MESSAGE value="✓ Vision And vision Section | ↔ &quot;tilte&quot; to &quot;title&quot;" />
+    <MESSAGE value="✓ info Template" />
+    <option name="LAST_COMMIT_MESSAGE" value="✓ info Template" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
