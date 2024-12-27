@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
+    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="✓ Vision And vision Section | ↔ &quot;tilte&quot; to &quot;title&quot;">
+      <change afterPath="$PROJECT_DIR$/src/Styles/Components/_Carousel.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templates/InfoAbout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TextCustom.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TextCustom.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Carousel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Carousel.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Layout/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/Templates/_MissionAndVision.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Templates/_MissionAndVision.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templates/MissionAndVision.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templates/MissionAndVision.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/Styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,32 +84,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "copyright",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="dev" />
@@ -141,7 +142,9 @@
       <workItem from="1734617853433" duration="26548000" />
       <workItem from="1734702822315" duration="19806000" />
       <workItem from="1735230835071" duration="7087000" />
-      <workItem from="1735241965139" duration="7163000" />
+      <workItem from="1735241965139" duration="8323000" />
+      <workItem from="1735252665841" duration="251000" />
+      <workItem from="1735307496471" duration="6795000" />
     </task>
     <task id="LOCAL-00001" summary="Add two icons">
       <option name="closed" value="true" />
@@ -255,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734724510200</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="✓ Vision And vision Section | ↔ &quot;tilte&quot; to &quot;title&quot; |">
+      <option name="closed" value="true" />
+      <created>1735250856209</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1735250856209</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +311,8 @@
     <MESSAGE value="✓ cart" />
     <MESSAGE value="+ new animation to tailwind | ↔ cart, add condition  to close modal if scroll down, add animation" />
     <MESSAGE value="+ Context to cart | + validation to prevent items cloned in cart  | + add with quantity funcionnality." />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Context to cart | + validation to prevent items cloned in cart  | + add with quantity funcionnality." />
+    <MESSAGE value="✓ Vision And vision Section | ↔ &quot;tilte&quot; to &quot;title&quot; |" />
+    <option name="LAST_COMMIT_MESSAGE" value="✓ Vision And vision Section | ↔ &quot;tilte&quot; to &quot;title&quot; |" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
