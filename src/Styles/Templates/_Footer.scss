@@ -1,0 +1,36 @@
+#footer{
+  .comments{
+    & textarea{
+      color: #fff !important;
+      font-size: 15px !important;
+      letter-spacing: 2px;
+      background: #ffffff40 !important;
+      border-radius: 20px !important;
+      height: 40px;
+      max-height: 250px !important;
+      min-height: 32px;
+
+      &:focus{
+        box-shadow: 0 0 5px #ffffff !important;
+        border: 0 !important;
+      }
+    }
+
+    & textarea.empty{
+      border: 2px solid red !important;
+
+    }
+  }
+}
+
+@media (max-width: 900px){
+  #footer{
+    .comments{
+      & textarea{
+        color: #fff !important;
+        font-size: 12.5px !important;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

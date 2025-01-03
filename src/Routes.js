@@ -5,8 +5,15 @@ export const Path_page = {
   STORE: '/tienda',
   CONTACT: '/contacto',
   PROFILE: '/perfil',
-  TERMSANDCONDITIONS: '/terminos-y-condiciones',
+  TERMS_AND_CONDITIONS: '/terminos-y-condiciones',
+  PRIVACY_POLICY: '/politica-de-privacidad',
+  FREQUENTLY_ASKED_QUESTIONS: '/preguntas-frecuentes',
   PAYMENTS: 'perfil/pagos',
+  CATEGORIES_STORE: {
+  FEATURED: '/destacados',
+    OFFER: '/ofertas',
+    NEW: '/nuevos',
+  },
   ERROR: '*'
 };
 
