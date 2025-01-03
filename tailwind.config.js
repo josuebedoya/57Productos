@@ -16,6 +16,7 @@ module.exports = {
         'bottom-x': '0 10px 15px -3px rgb(0 0 0 / 0.1)',
         'modal': '0 0 20px #00000050',
         'bottom-right': '5px 5px 8px 2px #00000020',
+        'top-black': '-19px 0 60px 10px;',
       },
       colors: {
         'Primary': '#121212',

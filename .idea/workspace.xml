@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="✓ Page About | + History">
+      <change afterPath="$PROJECT_DIR$/src/Components/Context/commentsContext.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/Templates/_Footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templates/Footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Layout/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/About.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Input.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Input.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Menu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/Store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Store.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Icons.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Icons.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/Styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +125,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\Resources" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\Resources\Images" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\Styles\Templates" />
     </key>
@@ -146,7 +158,9 @@
       <workItem from="1735230835071" duration="7087000" />
       <workItem from="1735241965139" duration="8323000" />
       <workItem from="1735252665841" duration="251000" />
-      <workItem from="1735307496471" duration="21410000" />
+      <workItem from="1735307496471" duration="27349000" />
+      <workItem from="1735830168248" duration="22935000" />
+      <workItem from="1735913321521" duration="4575000" />
     </task>
     <task id="LOCAL-00001" summary="Add two icons">
       <option name="closed" value="true" />
@@ -292,7 +306,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735330675658</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="✓ Page About | + History">
+      <option name="closed" value="true" />
+      <created>1735333912175</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1735333912175</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +364,8 @@
     <MESSAGE value="+ Breakpoints to Carousel" />
     <MESSAGE value="✓ Vision And vision Section | ↔ &quot;tilte&quot; to &quot;title&quot;" />
     <MESSAGE value="✓ info Template" />
-    <option name="LAST_COMMIT_MESSAGE" value="✓ info Template" />
+    <MESSAGE value="✓ Page About | + History" />
+    <option name="LAST_COMMIT_MESSAGE" value="✓ Page About | + History" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -351,11 +374,6 @@
           <url>file://$PROJECT_DIR$/src/Templates/Header.jsx</url>
           <line>69</line>
           <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Components/Context/cartContext.jsx</url>
-          <line>7</line>
-          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
