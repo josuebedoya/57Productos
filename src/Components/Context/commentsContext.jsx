@@ -20,9 +20,9 @@ const CommentProvider = ({ children }) => {
     fetchComments();
   }, [] );
 
-  const addMessage = async ( message ) => { // add new comment
-    if ( message ) {
-      try { await insertData( 'comments_users', { name: message })
+  const addMessage = async ( message, name ) => { // add new comment
+    if ( message && name) {
+      try { await insertData( 'comments_users', { name: name, comment: message })
       } catch ( err ) {
         console.log( err.message );
         return <div> No se pudo completar el proceso de envio.</div>
