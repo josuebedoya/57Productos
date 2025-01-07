@@ -7,6 +7,7 @@ export const Path_page = {
   PROFILE: '/perfil',
   TERMSANDCONDITIONS: '/terminos-y-condiciones',
   PAYMENTS: 'perfil/pagos',
+  COMMENTS: '/comentarios',
   ERROR: '*'
 };
 
