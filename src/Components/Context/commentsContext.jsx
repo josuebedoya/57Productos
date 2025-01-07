@@ -1,13 +1,32 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
+import { insertData, getData } from "management-supabase";
 
 const CommentContext = createContext();
 
 const CommentProvider = ({ children }) => {
   const [ comments, setComments ] = useState( [] );
 
-  const addMessage = ( message ) => {
+  const fetchComments = async () => {  // get Comments
+    try {
+      const res = await getData( 'comments_users' );
+      setComments( res );
+    } catch ( err ) {
+      console.log( err.message );
+      return <div> No se pudo completar el proceso de obtención</div>
+    }
+  };
+
+  useEffect( () => {
+    fetchComments();
+  }, [] );
+
+  const addMessage = async ( message ) => { // add new comment
     if ( message ) {
-      setComments(( prev ) => [ ...prev, message ]);
+      try { await insertData( 'comments_users', { name: message })
+      } catch ( err ) {
+        console.log( err.message );
+        return <div> No se pudo completar el proceso de envio.</div>
+      }
     }
   };
 
