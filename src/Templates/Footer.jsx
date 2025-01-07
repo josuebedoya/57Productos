@@ -2,25 +2,36 @@ import { useState } from "react";
 import { Input } from "../Components/Input";
 import { Path_page } from "../Routes";
 import { Button } from "../Components/Button";
-import { FacebookIcon, InstagramColorIcon, PaperPlane, TikTokIcon, WhatsappIcon, YoutubeIcon } from "../Resources/Icons";
+import { CloseIcon, FacebookIcon, InstagramColorIcon, PaperPlane, TikTokIcon, WhatsappIcon, YoutubeIcon } from "../Resources/Icons";
 import { useComment } from "../Components/Context/commentsContext";
 import { Menu } from "../Components/Menu";
+import { Form } from "../Components/Form";
+import { CSSTransition } from "react-transition-group";
 
 const Footer = () => {
   const [ comment, setComment ] = useState( '' )
   const [ showTextW, setShowTextW ] = useState( false );
   const { addMessage } = useComment();
   const [ sendEmpty, setSendEmpty ] = useState( false );
+  const [ showForm, setShowForm ] = useState( false );
+  const [ email, setEmail ] = useState( '' );
+  const [ name, setName ] = useState( '' );
 
   const handleComments = ( e ) => {
     setComment( e.value );
     setSendEmpty( false );
   };
 
-  const sendMessage = ( comment ) => {
+  const sendMessage = ( comment, name ) => {
+    addMessage( comment, name );
+    setComment( '' );
+    setEmail( '' );
+    setName( '' );
+  };
+
+  const handleShowForm = () => {
     if ( comment ) {
-      addMessage( comment );
-      setComment( '' );
+      setShowForm( true );
     } else {
       setSendEmpty( true );
     }
@@ -44,23 +55,63 @@ const Footer = () => {
       { url: Path_page.FREQUENTLY_ASKED_QUESTIONS, name: 'Preguntas Frecuentes', target: '_blank' }
     ]
   ];
-  
+
   const artMenus = 'text-sm tl:text-base family-oswald text-stone-300 tracking-wider leading-6 tl:leading-8 capitalize hover:text-white hover:underline';
+
+  const onChangeValueName = ( e ) => {
+    setName( e.value );
+  }
+
+  const onChangeValueEmail = ( e ) => {
+    setEmail( e.value );
+  }
+
+  const inputs = [
+    {
+      value: name,
+      placeholder: 'Nombre...',
+      type: 'text',
+      name: 'name',
+      onChange: onChangeValueName,
+      isRequired: true,
+    },
+    {
+      value: email,
+      placeholder: 'micorreo@gmail.com',
+      type: 'email',
+      name: 'email',
+      onChange: onChangeValueEmail,
+      isRequired: true,
+      maxLength: 50
+    },
+  ]
 
   return (
    <footer className='footer  bg-Primary pt-8 tl:pt-14 shadow-top-black' id='footer'>
+     <CSSTransition in={ showForm } timeout={ 300 } unmountOnExit mountOnEnter classNames='send'>
+       <div className='form absolute w-full xn:w-auto xn:right-8 flex justify-center'>
+         <div className='flex justify-between max-w-95 xn:max-w-[450px] rounded-3xl shadow-custom-white bg-Primary'>
+           <Form action={ () => { sendMessage( comment, name ); setShowForm( false )}}
+                 inputs={ inputs } nameForm='FormComment' termsAndConditions/>
+           <i className='relative w-2' onClick={ () => setShowForm( false ) }>
+             <CloseIcon classIcons='text-white text-lg w-7 h-7 absolute -left-5 top-2 cursor-pointer hover:animate-shaking'/>
+           </i>
+         </div>
+
+       </div>
+     </CSSTransition>
      <div className='comments container mx-auto px-3 pb-5 tl:pb-10'>
        <h2 className='text-stone-200 text-center text-base tl:text-lg tracking-wider w-full mb-5'>
          Dejanos tu opinion, es de gran ayuda para nosotros poder ser mejores dia a dia.
        </h2>
        <div className='send-message flex flex-col xn:flex-row justify-between items-end '>
-         <Input type='text' placeholder='Dejanos tu comentario... ¿Qué opinas acercá de Nosotros?'
+         <Input textTarea type='text' placeholder='Dejanos tu comentario... ¿Qué opinas acercá de Nosotros?'
                 onChange={ handleComments } value={ comment } maxLength={ 1000 }
-                classInput={` ${sendEmpty ? 'empty' : ''} scrollbar scrollbar-track-transparent py-2`} textTarea></Input>
+                classInput={` ${sendEmpty ? 'empty' : ''} scrollbar scrollbar-track-transparent py-2`} />
          <Button classBtn=' ml-2.5 px-4 tl:px-7 py-2 text-stone-200 border border-transparent hover:text-white hover:border-stone-200 rounded-full duration-200 text-sm tl:text-base'
-                  btnText icon={ <PaperPlane/> } iconRight
-                  onClick={ () => sendMessage( comment ) }>
-              Enviar...
+          btnText icon={ <PaperPlane/> } iconRight
+          onClick={ handleShowForm }>
+           Enviar...
          </Button>
        </div>
      </div>
