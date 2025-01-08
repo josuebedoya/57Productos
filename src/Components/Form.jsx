@@ -11,17 +11,11 @@ const Form = ({ action, inputs, termsAndConditions, nameForm = 'FormDefault' }) 
     const eventChangeCheckTerms = () => {
         setCheckTerms(!checkTerms);
     };
-    const handleSubmit = (event) =>{
-        event.preventDefault();
-        if ( action ){
-            action();
-        }
-    };
 
     return (
         <>
             <div id="Form" className=" p-10">
-                <form onSubmit={handleSubmit} id={nameForm} className="flex flex-col justify-center">
+                <form onSubmit={action} id={nameForm} className="flex flex-col justify-center">
                     {inputs.map((input, i) => (
                         <Input
                             key={i}
@@ -51,12 +45,12 @@ const Form = ({ action, inputs, termsAndConditions, nameForm = 'FormDefault' }) 
                             />
                             <label htmlFor='chekTermsAndConditions' className='label-input'>
                                 Al marcar la casilla, aceptas nuestros
-                                <Link to={Path_page.TERMS_AND_CONDITIONS} className=" font-bold text-Primary mx-2 px-1 decoration-Primary underline">
+                                <Link to={Path_page.TERMSANDCONDITIONS} className=" font-bold text-Primary mx-2 px-1 decoration-Primary underline">
                                     Términos y Condiciónes
                                 </Link>
                             </label>
                         </div>
-                    ) : null}
+                    ) : (null)}
                     <div className="btn-send-form w-full">
                         <Button type='submit' classBtn='submit px-6 py-2 mt-6' >Enviar</Button>
                     </div>

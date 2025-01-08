@@ -3,24 +3,14 @@ export const Path_page = {
   US: '/nosotros',
   SERVICES: '/servicios',
   STORE: '/tienda',
-  CONTACT: '/contacto',
+  CONTACT: '/contact',
   PROFILE: '/perfil',
-  TERMS_AND_CONDITIONS: '/terminos-y-condiciones',
-  PRIVACY_POLICY: '/politica-de-privacidad',
-  FREQUENTLY_ASKED_QUESTIONS: '/preguntas-frecuentes',
+  TERMSANDCONDITIONS: '/terminos-y-condiciones',
   PAYMENTS: 'perfil/pagos',
-  CATEGORIES_STORE: {
-  FEATURED: '/destacados',
-    OFFER: '/ofertas',
-    NEW: '/nuevos',
-  },
+  COMMENTS: '/comentarios',
   ERROR: '*'
 };
 
-export const Slug = (t) => {
-  return t
-   .trim() // Delete spaces from sides
-   .replaceAll(' ', '-') // Replace spaces to script
-   .replace(/[^a-zA-Z0-9-]/g, '') // Delete characters what not is letter
-   .toLowerCase(); // Covert to lower case
+export const Slug = ( t ) => {
+   return  t.replaceAll( ' ', '-' ).toLowerCase();
 };

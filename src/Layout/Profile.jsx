@@ -11,11 +11,12 @@ const Profile = () => {
 
   return (
     <>
-      {loged ? (
         <MainSectionProfile />
-      ) : (
-        <GuestSection isLogin={handleLoged} />
-      )}
+      {/*{loged ? (*/}
+      {/*  <MainSectionProfile />*/}
+      {/*) : (*/}
+      {/*  <GuestSection isLogin={handleLoged} />*/}
+      {/*)}*/}
     </>
   );
 };

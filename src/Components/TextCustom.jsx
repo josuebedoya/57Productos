@@ -3,7 +3,7 @@ const TextCustom = ({ title, children, lineTitle, atrTitle, titlePosition, atrsu
     <>
       <div className='text-custom'>
         <div className='container mx-auto'>
-          <div className='title-section' style={{ textAlign: titlePosition }}>
+          <div className='tilte-section' style={{ textAlign: titlePosition }}>
             {
               title ?
                 <h2 className={`title ${classTitle}
