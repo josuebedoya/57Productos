@@ -8,6 +8,7 @@ export const Path_page = {
   TERMS_AND_CONDITIONS: '/terminos-y-condiciones',
   PRIVACY_POLICY: '/politica-de-privacidad',
   FREQUENTLY_ASKED_QUESTIONS: '/preguntas-frecuentes',
+  COMMENTS: '/comentarios',
   PAYMENTS: 'perfil/pagos',
   CATEGORIES_STORE: {
   FEATURED: '/destacados',

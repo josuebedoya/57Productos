@@ -5,6 +5,7 @@ const CommentContext = createContext();
 
 const CommentProvider = ({ children }) => {
   const [ comments, setComments ] = useState( [] );
+  const [ localComments, setLocalComments ] = useState( [] );
 
   const fetchComments = async () => {  // get Comments
     try {
@@ -22,7 +23,9 @@ const CommentProvider = ({ children }) => {
 
   const addMessage = async ( message, name ) => { // add new comment
     if ( message && name) {
-      try { await insertData( 'comments_users', { name: name, comment: message })
+      try {
+        await insertData( 'comments_users', { name: name, comment: message });
+        setLocalComments(prevComment => [...prevComment, {name: name, value: message}])
       } catch ( err ) {
         console.log( err.message );
         return <div> No se pudo completar el proceso de envio.</div>
@@ -31,7 +34,7 @@ const CommentProvider = ({ children }) => {
   };
 
   return (
-   <CommentContext.Provider value={{  comments, addMessage }}>
+   <CommentContext.Provider value={{localComments, comments, addMessage }}>
      { children }
    </CommentContext.Provider>
   );
