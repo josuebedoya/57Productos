@@ -146,9 +146,9 @@ const Footer = () => {
          <Menu items={ itemsMenus[ 0 ] } atr={ artMenus }/>
        </div>
        <div className='menu-info block sm:flex sm:justify-center  border-y xn:border-y-0 border-y-white xn:border-r xn:border-r-white sm:border-x sm:border-x-white py-6 my-6 xn:py-0 xn:my-0 mx-0 xn:mr-10 sm:mr-0'>
-         <Menu items={ itemsMenus[ 1 ] } atr={ artMenus }/>
+         <Menu items={ itemsMenus[ 1 ] } atr={ artMenus } />
        </div>
-       <div className='menu-policy block sm:flex sm:justify-center'>
+       <div classN ame='menu-policy block sm:flex sm:justify-center'>
          <Menu items={ itemsMenus[ 2 ] } atr={ artMenus }/>
        </div>
      </div>
