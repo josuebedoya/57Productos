@@ -52,7 +52,7 @@ const Form = ({ action, inputs, termsAndConditions, nameForm = 'FormDefault' }) 
                             />
                             <label htmlFor='chekTermsAndConditions' className='label-input'>
                                 Al marcar la casilla, aceptas nuestros
-                                <Link to={Path_page.TERMSANDCONDITIONS} className=" font-bold text-Primary mx-2 px-1 decoration-Primary underline">
+                                <Link to={Path_page.TERMS_AND_CONDITIONS} className=" font-bold text-Primary mx-2 px-1 decoration-Primary underline">
                                     Términos y Condiciónes
                                 </Link>
                             </label>
