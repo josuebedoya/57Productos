@@ -44,7 +44,7 @@ const Store = () => {
     <>
       <div id="Store">
         <div className="container mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 py-10">
-          {products.length > 0 ? (
+          {products ? (
             products.slice(0,30).map((product, i) => (
               <>
                 <Product key={i}
@@ -64,7 +64,7 @@ const Store = () => {
           )}
         </div>
         <div className='container mx-auto'>
-          {productsByCategory.length > 0 ?(
+          {productsByCategory ?(
             productsByCategory.map((product, i) => (
               <li key={i}>
                 {product.categoria_id}

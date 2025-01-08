@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { MenuBarsIcon, AngleRightIcon } from '../Resources/Icons';
 
-const Menu = ({ items, atr, menuH, withMenuBars, openMenu }) => {
+const Menu = ({ items, atr, menuH, withMenuBars, openMenu, target = '_self' }) => {
 
   const [ openMenuBars, setOpenMenuBars ] = useState(false);
 
@@ -24,7 +24,7 @@ const Menu = ({ items, atr, menuH, withMenuBars, openMenu }) => {
         {
           items.map((item, index) => (
             <li key={index} className='menu-item'>
-              <Link to={item.url} className={`item-link ${atr}`} onClick={handleOpenModal}>
+              <Link to={item.url} className={`item-link ${atr}`} onClick={handleOpenModal} target={target && item.target}>
                 {item.name}
               </Link>
             </li>
@@ -45,7 +45,7 @@ const Menu = ({ items, atr, menuH, withMenuBars, openMenu }) => {
                 {
                   items.map((item, index) => (
                     <li key={index} className='menu-item'>
-                      <Link to={item.url} className={`item-link ${atr}`} onClick={handleOpenModal}>
+                      <Link to={item.url} className={`item-link ${atr}`} onClick={handleOpenModal}  target={target && item.target}>
                         {item.name}
                       </Link>
                     </li>
