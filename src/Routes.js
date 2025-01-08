@@ -6,6 +6,10 @@ export const Path_page = {
   CONTACT: '/contact',
   PROFILE: '/perfil',
   TERMSANDCONDITIONS: '/terminos-y-condiciones',
+  TERMS_AND_CONDITIONS: '/terminos-y-condiciones',
+  PRIVACY_POLICY: '/politica-de-privacidad',
+  FREQUENTLY_ASKED_QUESTIONS: '/preguntas-frecuentes',
+  COMMENTS: '/comentarios',
   PAYMENTS: 'perfil/pagos',
   COMMENTS: '/comentarios',
   ERROR: '*'
