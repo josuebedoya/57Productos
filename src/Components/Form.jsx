@@ -12,10 +12,17 @@ const Form = ({ action, inputs, termsAndConditions, nameForm = 'FormDefault' }) 
         setCheckTerms(!checkTerms);
     };
 
+    const handleSubmit = (event) =>{
+        event.preventDefault();
+        if ( action ){
+            action();
+        }
+    };
+
     return (
         <>
             <div id="Form" className=" p-10">
-                <form onSubmit={action} id={nameForm} className="flex flex-col justify-center">
+                <form onSubmit={ handleSubmit } id={nameForm} className="flex flex-col justify-center">
                     {inputs.map((input, i) => (
                         <Input
                             key={i}

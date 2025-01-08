@@ -9,7 +9,7 @@ import { Form } from "../Components/Form";
 import { CSSTransition } from "react-transition-group";
 
 const Footer = () => {
-  const [ comment, setComment ] = useState( '' )
+  const [ comment, setComment ] = useState( '' );
   const [ showTextW, setShowTextW ] = useState( false );
   const { addMessage } = useComment();
   const [ sendEmpty, setSendEmpty ] = useState( false );

@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="+ new animation to tailwind | ↔ cart, add condition  to close modal if scroll down, add animation">
-      <change afterPath="$PROJECT_DIR$/src/Components/Context/cartContext.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/Templates/_Footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/AddWithAmount.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AddWithAmount.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/product/ModalProduct.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/product/ModalProduct.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/product/Product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/product/Product.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Layout/Store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Store.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templates/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templates/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/Styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templates/Footer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,13 +295,11 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Templates/Header.jsx</url>
           <line>69</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Components/Context/cartContext.jsx</url>
           <line>8</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>

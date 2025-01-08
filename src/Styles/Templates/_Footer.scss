@@ -1,0 +1,82 @@
+#footer{
+  .comments{
+    & textarea{
+      color: #fff !important;
+      font-size: 15px !important;
+      letter-spacing: 2px;
+      background: #ffffff40 !important;
+      border-radius: 20px !important;
+      height: 40px;
+      max-height: 250px !important;
+      min-height: 32px;
+      &:focus{
+        box-shadow: 0 0 5px #ffffff !important;
+        border: 0 !important;
+      }
+    }
+    & textarea.empty{
+      border: 2px solid red !important;
+    }
+  }
+
+  .form{
+    #FormComment{
+      margin: -15px !important;
+      & input{
+        color: #fff !important;
+        font-size: 15px !important;
+        letter-spacing: 2px;
+        background: #ffffff40 !important;
+        border: 1px solid #fff !important;
+      }
+      .terms-and-conditions{
+        & input{
+          width: 10px !important;
+        }
+        .label-input, .label-input a{
+          color: #ffffff !important;
+          font-size: 12px !important;
+        }
+      }
+    }
+  }
+  .send-enter{
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  .send-enter-active{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .send-exit{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .send-exit-active{
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 300ms, transform 300ms;
+  }
+}
+@media (max-width: 900px){
+  #footer{
+    .comments{
+      & textarea{
+        color: #fff !important;
+        font-size: 12.5px !important;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+@media (max-width: 640px){
+  #footer{
+    .btn-send-form{
+      & button{
+        font-size: 14px !important;
+        padding: 8px 18px !important;
+      }
+    }
+  }
+}
