@@ -34,7 +34,7 @@ export default function App() {
                   <Route path={Path_page.CONTACT} element={<Contact />} />
                   <Route path={Path_page.PROFILE} element={<Profile />} />
                   <Route path={Path_page.PAYMENTS} element={<Payments/>}/>
-                  <Route path={Path_page.TERMSANDCONDITIONS} element={<TermsAndConditions />} />
+                  <Route path={Path_page.TERMS_AND_CONDITIONS} element={<TermsAndConditions />} />
                   <Route path={Path_page.ERROR} element={<PageError />} />
                 </Routes>
               </main>
