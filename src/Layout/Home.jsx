@@ -11,13 +11,13 @@ const Home = () => {
   return (
     <>
       <div className='mb-12'>
-       <Opinions/>
         <Slider title={titleSlider}>
           !Has crecer tus ganancias con nuestra ayuda¡
         </Slider>
         <Blog />
         <Chance />
         <HomeTextMain />
+        <Opinions/>
       </div>
     </>
   )
