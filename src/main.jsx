@@ -1,4 +1,5 @@
-import {createRoot} from 'react-dom/client';
+import{ React} from  'react' ;
+import { createRoot }  from  'react-dom/client'
 // import { BrowserRouter as Router, Routes, Route, useLocation  } from 'react-router';
 import { Path_page, Slug } from './Routes.js';
 import { CartProvider } from './Components/Context/cartContext.jsx';
@@ -45,4 +46,4 @@ export default function App() {
     )
 };
 
-createRoot(document.getElementById('root')).render(<App /> );
+ReactDOM.createRoot(document.getElementById('root')).render( <App />);
