@@ -1,5 +1,5 @@
-import { Slider } from '../Components/Slider';
-import { Blog } from '../Templates/Blog';
+import { Slider } from '../Components/Slider.jsx';
+import { Blog } from '../Templates/Blog.jsx';
 import { Chance } from '../Templates/Chance';
 import { HomeTextMain } from '../Templates/H1-home';
 import { Opinions } from "../Templates/Opinions";

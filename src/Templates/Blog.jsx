@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { Path_page } from '../Routes';
 
 import { TextAnimatedWrite } from '../Components/TextAnimatedWrite';

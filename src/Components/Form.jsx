@@ -1,7 +1,7 @@
 import { Button } from "./Button";
 import { Input } from "./Input";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { Path_page } from "../Routes";
 
 const Form = ({ action, inputs, termsAndConditions, nameForm = 'FormDefault' }) => {

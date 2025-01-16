@@ -1,10 +1,10 @@
-import {useNavigate, useEffect} from "react-router";
+import {useNavigate,} from 'react-router';
 import { Carousel } from '../Components/Carousel';
 import { OpinionItem } from './Parts/OpinionsItem';
-import { Button } from "../Components/Button";
+import { Button } from '../Components/Button';
 import { AngleRightIcon } from '../Resources/Icons';
-import { Path_page } from "../Routes";
-import { useComment } from "../Components/Context/commentsContext";
+import { Path_page } from '../Routes';
+import { useComment } from '../Components/Context/commentsContext';
 
 const Opinions = () => {
   const navigate = useNavigate();

@@ -1,3 +1,4 @@
+@use '../Settings';
 #InfoAbout{
   .carousel{
     .swiper-wrapper-2{
@@ -5,12 +6,12 @@
         height: 9px !important;
         width: 9px !important;
         &:hover{
-          box-shadow: 0 0 5px $color-primary;
+          box-shadow: 0 0 5px Settings.$color-primary;
           transform: scale(1.2);
         }
       }
       .swiper-pagination-bullet-active{
-        background: $color-primary;
+        background: Settings.$color-primary;
         height: 11px !important;
         width: 11px !important;
       }

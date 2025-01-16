@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { TextCustom } from '../Components/TextCustom';
 import mercadeo from '../Resources/Images/mercadeo.jpg';
 import { Button } from '../Components/Button';

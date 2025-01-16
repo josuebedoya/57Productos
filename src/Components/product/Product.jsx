@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useCart } from "../Context/cartContext";
+import { useCart } from "../Context/cartContext.jsx";
 
 import { CartIcon, HearthCheckIcon, HearthLineIcon, DocumentIcon } from '../../Resources/Icons';
 import { Button } from '../Button';

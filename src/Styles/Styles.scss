@@ -1,23 +1,24 @@
+@use "sass:meta";
 // global Settings
 @import './index.css';
-@import './Settings';
+@include meta.load-css('Settings');
 
 // styles components 
 
-@import './Components/Grafic';
-@import './Components/Slider';
-@import './Components/TextCustom';
-@import './Components/FormDefault';
-@import './Components/Product/Product';
-@import './Components/Product/_ModalProduct';
-@import  './Components/Carousel';
+@include meta.load-css('Components/Grafic');
+@include meta.load-css('Components/Slider');
+@include meta.load-css('Components/TextCustom');
+@include meta.load-css('Components/FormDefault');
+@include meta.load-css('Components/Product/Product');
+@include meta.load-css('Components/Product/_ModalProduct');
+@include meta.load-css('Components/Carousel');
 
 //styles templates
-@import './Templates/Header';
-@import './Templates/Profile-parts/GuestSection';
-@import './Templates/Chance';
-@import './Templates/Blog';
-@import './Templates/MissionAndVision';
-@import './Templates/Parts/Money';
-@import  './Templates/InfoAbout';
-@import './Templates/Footer';
+@include meta.load-css('Templates/Header');
+@include meta.load-css('Templates/Profile-parts/GuestSection');
+@include meta.load-css('Templates/Chance');
+@include meta.load-css('Templates/Blog');
+@include meta.load-css('Templates/MissionAndVision');
+@include meta.load-css('Templates/Parts/Money');
+@include meta.load-css('Templates/InfoAbout');
+@include meta.load-css('Templates/Footer');
