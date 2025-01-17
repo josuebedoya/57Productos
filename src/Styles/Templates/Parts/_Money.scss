@@ -1,5 +1,5 @@
-@use '../../Settings';
 .amountMoney{
+
   .money{
     font-size: 12px;
     letter-spacing: 1px;
@@ -14,11 +14,11 @@
     background: none;
     font-size: 12px;
     font-weight: bold;
-    color: Settings.$color-primary;
+    color: $color-primary;
     cursor: pointer;
 
     &:hover{
-      color: Settings.$color-secondary;
+      color: $color-secondary;
     }
 
     &:focus-visible{
@@ -32,7 +32,7 @@
     option{
       font-size: 12px;
       font-weight: 500;
-      
+
       &:hover{
         background: none !important;
       }

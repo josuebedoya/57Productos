@@ -1,32 +1,31 @@
-@use '../Settings';
 .text-custom {
   .title {
     display: inline-block;
   }
 
-  .TitleWithLineStart::after,
-  .TitleWithLineCenter::after,
-  .TitleWithLineEnd::after {
+  .TitleWithLinestart::after,
+  .TitleWithLinecenter::after,
+  .TitleWithLineend::after {
     content: '';
     width: 20%;
     height: 3px;
     display: block;
     position: relative;
     bottom: 0;
-    background-color: Settings.$color-primary;
+    background-color: $color-primary;
   }
 
-  .TitleWithLineStart::after {
+  .TitleWithLinestart::after {
     left: 0;
     margin: 5px 0;
   }
 
-  .TitleWithLineCenter::after {
+  .TitleWithLinecenter::after {
     left: 0;
     margin: 5px auto;
   }
 
-  .TitleWithLineEnd::after {
+  .TitleWithLineend::after {
     left: 80%;
     margin: 5px 0;
   }

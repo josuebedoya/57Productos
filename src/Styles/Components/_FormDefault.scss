@@ -1,4 +1,3 @@
-@use '../Settings';
 #Form {
   .input {
     .label-input {
@@ -19,14 +18,14 @@
     }
 
     .label-input {
-      color: Settings.$color-primary;
+      color: $color-primary;
       font-size: 16px;
       & a{
         background: #76767630;
         letter-spacing: 0.5px;
         font-size: 14px;
         &:hover{
-          color: Settings.$color-secondary !important;
+          color: $color-secondary !important;
         }
       }
     }

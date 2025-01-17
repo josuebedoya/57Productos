@@ -5,29 +5,122 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Styles/_glogal.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templates/Parts/infoAbout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templates/Parts/misionAndVision.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/cart.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/about.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/contact.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/payments.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/services.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/store.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/termsAndConditions.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.local" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/Profile-S7pnan3X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/browser-D3WPtGD7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/corazon-DizDWeQb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img-fruit-flat-BJIJYMkc.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-W7dR3KXT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-Zvo4zLfW.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/logo-CcU0MMkJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/mercadeo-CWzxIg7r.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AddWithAmount.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Carousel.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Context/cartContext.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Context/commentsContext.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Divisas.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Form.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Grafic.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Input.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Input.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/product/Product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/product/Product.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Layout/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Modal.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Slider.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Stars.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TextAnimatedWrite.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TextCustom.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/product/ModalProduct.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/product/Product.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/About.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/Contact.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/Error.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/Home.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/Payments.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/Profile.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/Services.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/Store.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layout/TermsAndConditions.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Icons.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/icons.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/Icons/Profile-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/Icons/Profile-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/Icons/Profile-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/Icons/Profile-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/Icons/Profile-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/Icons/Profile-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/Icons/Profile-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/Icons/Profile-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/Icons/Profile-9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/Icons/logo/logo/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/Icons/logo/logo/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/ProductImages/Fruit1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/ProductImages/Fruit2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/ProductImages/Fruit3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/ProductImages/Fruit4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/Profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/bestMarket.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/corazon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/img-fruit-flat.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/images/img-fruit-flat.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/lessCost.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/mercadeo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/onlineShopping.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/payment.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/sliderBackground.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Images/vision-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/Components/Product/_ModalProduct.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Components/Product/_ModalProduct.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/Components/_FormDefault.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Components/_FormDefault.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/Components/_Grafic.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Components/_Grafic.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/Components/_Slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Components/_Slider.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/Components/_TextCustom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Components/_TextCustom.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/Styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/Styles.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/Templates/Parts/_Money.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Templates/Parts/_Money.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/Templates/Profile-parts/_GuestSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Templates/Profile-parts/_GuestSection.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/Templates/_Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Templates/_Header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/Templates/_InfoAbout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Templates/_InfoAbout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templates/Blog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templates/Blog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templates/Chance.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templates/Chance.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templates/Opinions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templates/Opinions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/_Settings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/_Settings.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/Blog.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/Chance.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templates/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/H1-home.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/InfoAbout.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/MissionAndVision.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/Opinions.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/Parts/FormLogin.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/Parts/FormRegister.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/Parts/Money.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/Parts/OpinionsItem.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/Profile-parts/GuestSection.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templates/Profile-parts/MainSection.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +184,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/Styles/Components/_TextCustom.scss" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/resources/icons.jsx" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -104,28 +197,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "git-widget-placeholder": "Migrate",
-    "last_opened_file_path": "C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.sourceCode.HTML",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Migrate&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.12.2&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.12.14&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.HTML&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="dev" />
@@ -133,11 +229,15 @@
     </force-push-targets>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\vite-app-migrate\shop-online" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\vite-app-migrate\shop-online\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates\parts" />
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\resources\images" />
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\resources" />
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates" />
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\Resources\Images" />
     </key>
   </component>
   <component name="RunManager">
@@ -182,6 +282,12 @@
       <workItem from="1734554251403" duration="7802000" />
       <workItem from="1734617853433" duration="26548000" />
       <workItem from="1734702822315" duration="18292000" />
+      <workItem from="1737068456255" duration="438000" />
+      <workItem from="1737125926343" duration="2365000" />
+      <workItem from="1737128351610" duration="3711000" />
+      <workItem from="1737132385414" duration="3366000" />
+      <workItem from="1737135798892" duration="8074000" />
+      <workItem from="1737145532042" duration="7239000" />
     </task>
     <task id="LOCAL-00001" summary="Add two icons">
       <option name="closed" value="true" />
@@ -295,7 +401,39 @@
       <option name="project" value="LOCAL" />
       <updated>1736345806297</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Migrate to vite">
+      <option name="closed" value="true" />
+      <created>1737063766557</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1737063766557</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Migrate to vite">
+      <option name="closed" value="true" />
+      <created>1737063780660</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1737063780660</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Migrate to vite">
+      <option name="closed" value="true" />
+      <created>1737063842405</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1737063842405</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Migrate to vite">
+      <option name="closed" value="true" />
+      <created>1737068894962</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1737068894963</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,25 +478,20 @@
     <MESSAGE value="✓ cart" />
     <MESSAGE value="+ new animation to tailwind | ↔ cart, add condition  to close modal if scroll down, add animation" />
     <MESSAGE value="+ files" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ files" />
+    <MESSAGE value="Migrate to vite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Migrate to vite" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Templates/Header.jsx</url>
-          <line>69</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Components/Context/cartContext.jsx</url>
+          <url>file://$PROJECT_DIR$/src/components/Context/cartContext.jsx</url>
           <line>8</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/node_modules/management-supabase/src/supabase.ts</url>
           <line>8</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>

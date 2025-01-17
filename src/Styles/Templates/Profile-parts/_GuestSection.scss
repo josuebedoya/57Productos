@@ -1,4 +1,3 @@
-@use '../../Settings';
 #GuestSection {
   .section-content {
     .section-buttons {
@@ -59,7 +58,7 @@
 
           &::before,
           &::after {
-            background: Settings.$color-secondary;
+            background: $color-secondary;
           }
         }
       }

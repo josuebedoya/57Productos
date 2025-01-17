@@ -1,5 +1,4 @@
-@use '../../Settings';
-;#modalProduct {
+#modalProduct {
   .modal-content {
     .content {
       .btns-group {
@@ -11,7 +10,7 @@
               padding: 0 !important;
               margin-inline: 10px;
               font-weight: 600;
-              color: Settings.$color-primary !important;
+              color: $color-primary !important;
               max-width: 65px;
               place-items: center;
 
