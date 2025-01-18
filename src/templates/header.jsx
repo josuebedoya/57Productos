@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { ProfileIcon, SearchEngineIcon, AngleBottomIcon } from '../resources/icons';
-import logo from '../resources/images/logo.png';
-import { Button } from '../components/button';
-import { Cart } from '../components/cart';
-import { Input } from '../components/input';
-import { Menu } from '../components/menu';
-import { Path_page } from '../routes';
-import { useCart } from '../context/cart';
+import { ProfileIcon, SearchEngineIcon, AngleBottomIcon } from '@/resources/icons';
+import logo from '@/resources/images/logo.png';
+import { Button } from '@/components/button';
+import { Cart } from '@/components/cart';
+import { Input } from '@/components/input';
+import { Menu } from '@/components/menu';
+import { Path_page } from '@/routes';
+import { useCart } from '@/context/cart';
 
 const menuItems = [
   { name: 'Inicio', url: Path_page.HOME },

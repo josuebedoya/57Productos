@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { MenuBarsIcon, AngleRightIcon } from '../Resources/Icons';
+import { MenuBarsIcon, AngleRightIcon } from '@/resources/icons';
 
 const Menu = ( { items, classLink, menuH, withMenuBars, openMenu, target = '_self' } ) => {
 

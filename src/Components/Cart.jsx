@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect, } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { AddIcon, CartDown, CartIcon, RemoveIcon, TicketMoney, TrashIcon, TrashOpenIcon } from '../Resources/Icons';
+import { AddIcon, CartDown, CartIcon, RemoveIcon, TicketMoney, TrashIcon, TrashOpenIcon } from '@/resources/icons';
 import { Button } from './Button';
-import { Path_page, Slug } from '../routes.jsx';
-import { useCart } from "../context/cart.jsx";
+import { Path_page, Slug } from '@/routes.jsx';
+import { useCart } from "@/context/cart.jsx";
 
 const Cart = ( { close } ) => {
   const navigate = useNavigate();
@@ -83,7 +83,7 @@ const Cart = ( { close } ) => {
       window.removeEventListener( 'click', clickOutside );
     };
 
-  }, [ openModal ] );  // handle listener click to close modal or scroll down
+  }, [ openModal, close ] );  // handle listener click to close modal or scroll down
 
   const goToPayments = () => {
     navigate( Path_page.PAYMENTS );

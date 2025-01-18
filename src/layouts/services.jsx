@@ -1,8 +1,8 @@
 const Services = () => {
   return (
-   <div>
+   <main>
      Services
-   </div>
+   </main>
   );
 };
 

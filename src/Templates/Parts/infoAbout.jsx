@@ -1,6 +1,6 @@
-import { Carousel } from "../../components/carousel";
-import  img1 from '../../resources/images/logo.png'
-import  img2 from '../../resources/images/img-fruit-flat.webp'
+import { Carousel } from "@/components/carousel";
+import  img1 from '@/resources/images/logo.png'
+import  img2 from '@/resources/images/img-fruit-flat.webp'
 const InfoAbout = () => {
   const responsive = [
     { width: 0, itemsView: 'auto', spaceBetween: 0, },
@@ -8,10 +8,10 @@ const InfoAbout = () => {
   ]
 
    const group1 =  [0, 1, 2, 3, 4, 5].map((img, i) => (
-    <img src={img1} alt={`Img num ${img}`} key={i}/>
+    <img src={img1} alt={`Img num ${img}`} key={i} className='object-cover'/>
    ))
   const group2 =  [0, 1, 2, 3, 4, 5].map((img, i) => (
-    <img src={img2} alt={`Img num ${img}`} key={i}/>
+    <img src={img2} alt={`Img num ${img}`} key={i} className='object-cover'/>
    ))
   const group3 = [...group1, ...group2];
 

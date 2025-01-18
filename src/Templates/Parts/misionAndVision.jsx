@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { TextCustom } from '../../components/textCustom'
-import { AngleBottomIcon, AngleRightIcon } from '../../resources/icons'
+import { TextCustom } from '@/components/textCustom'
+import { AngleBottomIcon, AngleRightIcon } from '@/resources/icons'
 
 const MissionAndVision = () => {
   const [ open, setOpen ] = useState( null );
