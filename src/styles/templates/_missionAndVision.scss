@@ -1,0 +1,11 @@
+#MissionAndVision {
+  .text-custom {
+    .title-section {
+      .title {
+        &:after {
+          width: 40% !important;
+        }
+      }
+    }
+  }
+}
