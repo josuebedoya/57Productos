@@ -5,11 +5,14 @@ import { App } from './App.jsx'
 import '/src/styles/_glogal.scss'
 import './main.css'
 import { CartProvider } from './context/cart.jsx'
+import { CommentProvider } from "@/context/comments.jsx"
 
 createRoot( document.getElementById( 'root' ) ).render( <StrictMode>
-  <CartProvider>
-    <Router>
-      <App/>
-    </Router>
-  </CartProvider>
+  <CommentProvider>
+    <CartProvider>
+      <Router>
+        <App/>
+      </Router>
+    </CartProvider>
+  </CommentProvider>
 </StrictMode> );
