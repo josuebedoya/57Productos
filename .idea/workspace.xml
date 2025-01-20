@@ -6,7 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/grafic.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/grafic.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/icons.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/icons.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/Profile.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/Profile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/corazon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/corazon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/img-fruit-flat.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/img-fruit-flat.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/mercadeo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/mercadeo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/products/albahaca.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/products/albahaca.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/products/corn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/products/corn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/products/green.apple.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/products/green.apple.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/products/lettuce.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/products/lettuce.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/products/oinios.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/products/oinios.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/products/pumkim.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/products/pumkim.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/products/spinach.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/products/spinach.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/products/strawnberry.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/products/strawnberry.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/products/tomatoes.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/products/tomatoes.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/images/slider-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/images/slider-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/_glogal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/_glogal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +115,7 @@
     &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Migrate&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;migrate.2&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.12.2&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.12.14&quot;,
@@ -187,6 +206,7 @@
       <workItem from="1737381810652" duration="137000" />
       <workItem from="1737381956673" duration="33000" />
       <workItem from="1737395924645" duration="5619000" />
+      <workItem from="1737402870141" duration="118000" />
     </task>
     <task id="LOCAL-00001" summary="Add two icons">
       <option name="closed" value="true" />
@@ -429,10 +449,6 @@
           <url>file://$PROJECT_DIR$/node_modules/management-supabase/src/supabase.ts</url>
           <line>8</line>
           <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/templates/header.jsx</url>
-          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

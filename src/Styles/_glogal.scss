@@ -1,5 +1,5 @@
 // global settings
-@import './settings';
+@import 'settings';
 
 // styles components
 @import './components/grafic';
@@ -16,6 +16,6 @@
 @import './templates/chance';
 @import './templates/blog';
 @import './templates/missionAndVision';
-@import './templates/parts/money';
+@import 'templates/parts/money';
 @import './templates/infoAbout';
 @import './templates/footer';
