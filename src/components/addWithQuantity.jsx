@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Button } from './button_T.jsx';
+import { Button } from './button.jsx';
 import { AddCircleIcon, CartIcon, RemoveCircleIcon } from '@/resources/icons.jsx';
 import { Input } from './input.jsx';
 

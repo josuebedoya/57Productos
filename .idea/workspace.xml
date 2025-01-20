@@ -196,7 +196,7 @@
       <workItem from="1737402870141" duration="118000" />
       <workItem from="1737403625474" duration="95000" />
       <workItem from="1737403751897" duration="118000" />
-      <workItem from="1737404046692" duration="437000" />
+      <workItem from="1737404046692" duration="826000" />
     </task>
     <task id="LOCAL-00001" summary="Add two icons">
       <option name="closed" value="true" />
@@ -390,7 +390,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737404447577</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Migrate to vite V-3.4.3">
+      <option name="closed" value="true" />
+      <created>1737404873398</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1737404873398</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +451,8 @@
     <MESSAGE value="Migrate to vite V-3.1" />
     <MESSAGE value="Migrate to vite V-3.4.1" />
     <MESSAGE value="Migrate to vite V-3.4.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migrate to vite V-3.4.2" />
+    <MESSAGE value="Migrate to vite V-3.4.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Migrate to vite V-3.4.3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

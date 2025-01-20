@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import { Button } from './button_T.jsx';
+import { Button } from './button.jsx';
 import { ExitArrowIcon } from '@/resources/icons';
 
 const Modal = ( { isOpen, onClose, classModal, children } ) => {

@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AddIcon, CartDown, CartIcon, RemoveIcon, TicketMoney, TrashIcon, TrashOpenIcon } from '@/resources/icons';
-import { Button } from './button_T.jsx';
+import { Button } from './button.jsx';
 import { Path_page, Slug } from '@/routes.jsx';
 import { useCart } from "@/context/cart.jsx";
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useCart } from '@/context/cart.jsx';
 
 import { CartIcon, HearthCheckIcon, HearthLineIcon, DocumentIcon } from '@/resources/icons.jsx';
-import { Button } from '@/components/button_T.jsx';
+import { Button } from '@/components/button.jsx';
 import { Stars } from '@/components/stars.jsx';
 import { ModalProduct } from './modalProduct.jsx';
 
