@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Components/stars.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/stars.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/icons.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/icons.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +130,11 @@
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates\parts" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="global" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -181,7 +186,7 @@
       <workItem from="1737210652503" duration="11638000" />
       <workItem from="1737381810652" duration="137000" />
       <workItem from="1737381956673" duration="33000" />
-      <workItem from="1737395924645" duration="5318000" />
+      <workItem from="1737395924645" duration="5619000" />
     </task>
     <task id="LOCAL-00001" summary="Add two icons">
       <option name="closed" value="true" />
@@ -351,7 +356,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737401392374</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Migrate to vite V-3.1">
+      <option name="closed" value="true" />
+      <created>1737401538520</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1737401538520</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +414,8 @@
     <MESSAGE value="Migrate to vite V-1" />
     <MESSAGE value="Migrate to vite V-2" />
     <MESSAGE value="Migrate to vite V-3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migrate to vite V-3" />
+    <MESSAGE value="Migrate to vite V-3.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Migrate to vite V-3.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
