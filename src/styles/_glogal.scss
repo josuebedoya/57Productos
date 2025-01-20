@@ -1,0 +1,21 @@
+// global settings
+@import 'settings';
+
+// styles components
+@import 'components/grafic';
+@import 'components/slider';
+@import 'components/textCustom';
+@import './components/formDefault';
+@import './components/product/product';
+@import './components/product/modalProduct';
+@import './components/carousel';
+
+// styles templates
+@import './templates/header';
+@import './templates/parts/profile/guestSection';
+@import './templates/chance';
+@import './templates/blog';
+@import './templates/missionAndVision';
+@import 'templates/parts/money';
+@import './templates/infoAbout';
+@import './templates/footer';

@@ -1,10 +1,10 @@
-const plugin = require('tailwindcss');
+const plugin = require( 'tailwindcss' );
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   important: true,
   content: [
-    './src/**/*.{js,jsx,ts,tsx}',
+    './src/**/*.{js,jsx,ts,tsx, html}',
   ],
   theme: {
     extend: {
@@ -45,7 +45,7 @@ module.exports = {
       minHeight: {
         '600': '600px',
       },
-      maxHeight:{
+      maxHeight: {
         '100': '400px',
         '101': '404px',
         '105': '420px',
@@ -81,27 +81,27 @@ module.exports = {
           '100%': { opacity: 1 },
         },
         shaking: {
-          "0%": {
-            transform: "scale3d(1, 1, 1)",
+          '0%': {
+            transform: 'scale3d(1, 1, 1)',
           },
-          "10%, 20%": {
-            transform: "scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)",
+          '10%, 20%': {
+            transform: 'scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)',
           },
-          "30%, 50%, 70%, 90%": {
-            transform: "scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)",
+          '30%, 50%, 70%, 90%': {
+            transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)',
           },
-          "40%, 60%, 80%": {
-            transform: "scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)",
+          '40%, 60%, 80%': {
+            transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)',
           },
-          "100%": {
-            transform: "scale3d(1, 1, 1)",
+          '100%': {
+            transform: 'scale3d(1, 1, 1)',
           },
         },
       },
     },
     screens: {
       'mn': { max: '639.98px' },
-      'xn': {min: '500px'},
+      'xn': { min: '500px' },
       'sm': '640px',
       'md': '768px',
       'tl': '900px',
@@ -115,7 +115,7 @@ module.exports = {
     },
   },
   plugins: [
-    function({ addUtilities }) {
+    function ( { addUtilities } ) {
       const newUtilities = {
         '.text-shadow-white': {
           textShadow: '2px 4px 3px #ffffff',
@@ -124,9 +124,9 @@ module.exports = {
           textShadow: '2px 4px 3px #00000070',
         },
       };
-  
-      addUtilities(newUtilities, ['responsive', 'hover']);
+
+      addUtilities( newUtilities, [ 'responsive', 'hover' ] );
     },
-    require('tailwind-scrollbar'),
+    require( 'tailwind-scrollbar' ),
   ]
 }

@@ -6,17 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Context/commentsContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Context/commentsContext.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Input.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Input.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Layout/Store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Store.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/Icons.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Icons.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_glogal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_glogal.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +17,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="migrate.2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -52,6 +47,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="Migrate" />
+                    <option name="lastUsedInstant" value="1737403449" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
                     <option name="lastUsedInstant" value="1734361373" />
@@ -79,6 +78,9 @@
     &quot;accountId&quot;: &quot;d73f0ae0-65a2-491b-8f16-121fd4804986&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/resources/icons.jsx" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -86,12 +88,16 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2nuRkq9jGzXVtXTgTuEaht6TszM" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
@@ -99,13 +105,17 @@
     &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Migrate&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.12.2&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.12.14&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.HTML&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -116,6 +126,40 @@
       <force-push-target remote-path="origin" branch="dev" />
       <force-push-target remote-path="origin" branch="Divisas" />
     </force-push-targets>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\temp" />
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\resources\images\products" />
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\components" />
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\resources\images" />
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="global" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -142,6 +186,20 @@
       <workItem from="1734554251403" duration="7802000" />
       <workItem from="1734617853433" duration="26548000" />
       <workItem from="1734702822315" duration="18292000" />
+      <workItem from="1737068456255" duration="438000" />
+      <workItem from="1737125926343" duration="2365000" />
+      <workItem from="1737128351610" duration="3711000" />
+      <workItem from="1737132385414" duration="3366000" />
+      <workItem from="1737135798892" duration="8074000" />
+      <workItem from="1737145532042" duration="7494000" />
+      <workItem from="1737210652503" duration="11638000" />
+      <workItem from="1737381810652" duration="137000" />
+      <workItem from="1737381956673" duration="33000" />
+      <workItem from="1737395924645" duration="5619000" />
+      <workItem from="1737402870141" duration="118000" />
+      <workItem from="1737403625474" duration="95000" />
+      <workItem from="1737403751897" duration="118000" />
+      <workItem from="1737404046692" duration="1142000" />
     </task>
     <task id="LOCAL-00001" summary="Add two icons">
       <option name="closed" value="true" />
@@ -255,7 +313,103 @@
       <option name="project" value="LOCAL" />
       <updated>1736345806297</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Migrate to vite">
+      <option name="closed" value="true" />
+      <created>1737063766557</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1737063766557</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Migrate to vite">
+      <option name="closed" value="true" />
+      <created>1737063780660</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1737063780660</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Migrate to vite">
+      <option name="closed" value="true" />
+      <created>1737063842405</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1737063842405</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Migrate to vite">
+      <option name="closed" value="true" />
+      <created>1737068894962</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1737068894963</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Migrate to vite V-1">
+      <option name="closed" value="true" />
+      <created>1737155614098</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1737155614098</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Migrate to vite V-2">
+      <option name="closed" value="true" />
+      <created>1737225804751</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1737225804751</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Migrate to vite V-3">
+      <option name="closed" value="true" />
+      <created>1737401392374</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1737401392374</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Migrate to vite V-3.1">
+      <option name="closed" value="true" />
+      <created>1737401538520</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1737401538520</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Migrate to vite V-3.4.1">
+      <option name="closed" value="true" />
+      <created>1737403654303</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1737403654303</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Migrate to vite V-3.4.2">
+      <option name="closed" value="true" />
+      <created>1737404447577</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1737404447577</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Migrate to vite V-3.4.3">
+      <option name="closed" value="true" />
+      <created>1737404873398</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1737404873398</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Migrate to vite V-3.4.4">
+      <option name="closed" value="true" />
+      <created>1737405006864</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1737405006864</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +439,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add two icons" />
     <MESSAGE value="Advanced MainSectionProfile, add price with money global" />
     <MESSAGE value="↔ money, main section, profile, No finish..." />
@@ -300,20 +455,34 @@
     <MESSAGE value="✓ cart" />
     <MESSAGE value="+ new animation to tailwind | ↔ cart, add condition  to close modal if scroll down, add animation" />
     <MESSAGE value="+ files" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ files" />
+    <MESSAGE value="Migrate to vite" />
+    <MESSAGE value="Migrate to vite V-1" />
+    <MESSAGE value="Migrate to vite V-2" />
+    <MESSAGE value="Migrate to vite V-3" />
+    <MESSAGE value="Migrate to vite V-3.1" />
+    <MESSAGE value="Migrate to vite V-3.4.1" />
+    <MESSAGE value="Migrate to vite V-3.4.2" />
+    <MESSAGE value="Migrate to vite V-3.4.3" />
+    <MESSAGE value="Migrate to vite V-3.4.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Migrate to vite V-3.4.4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Templates/Header.jsx</url>
-          <line>69</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Components/Context/cartContext.jsx</url>
+          <url>file://$PROJECT_DIR$/src/components/Context/cartContext.jsx</url>
           <line>8</line>
           <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/management-supabase/src/supabase.ts</url>
+          <line>8</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/layouts/profile.jsx</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
