@@ -12,7 +12,7 @@ import { Contact } from '@/layouts/contact'
 import { Profile } from '@/layouts/profile'
 import { TermsAndConditions } from '@/layouts/termsAndConditions'
 import { Payments } from "@/layouts/payments"
-import { Footer } from "@/templates/footer"
+import { Footer } from "@/templates/footer.jsx"
 import { ModalProduct } from "@/components/product/modalProduct.jsx";
 
 function App() {

@@ -1,3 +1,4 @@
+@import '@/styles/_glogal.scss';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
