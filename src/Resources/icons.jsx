@@ -1,323 +1,293 @@
 import { BiSearchAlt, BiSolidPaperPlane } from 'react-icons/bi';
 import { MdOutlineCircle } from 'react-icons/md'
 import { GrUserSettings } from 'react-icons/gr';
-import {
-  IoIosArrowBack,
-  IoIosArrowDown,
-  IoIosArrowDropright,
-  IoIosArrowForward,
-  IoMdExit,
-  IoMdAddCircleOutline,
-  IoMdAddCircle,
-  IoMdRemoveCircle,
-  IoMdRemoveCircleOutline,
-  IoMdClose, IoMdRemove,
-  IoIosAdd
-} from 'react-icons/io';
-import {
-  FaArrowRight,
-  FaRegHeart,
-  FaStar,
-  FaRegEye,
-  FaPencilAlt,
-  FaSeedling,
-  FaTrash,
-  FaTrashRestore,
-  FaFacebook,
-  FaYoutube,
-  FaTiktok,
-  FaWhatsapp
-} from 'react-icons/fa';
-import {
-  AiOutlineShoppingCart,
-  AiTwotoneDislike,
-  AiTwotoneLike
-} from 'react-icons/ai';
-import {
-  FaRegStar,
-  FaHeartCircleCheck,
-  FaHandshakeSimple
-} from 'react-icons/fa6';
-import {
-  TiDocumentText,
-  TiThMenuOutline
-} from 'react-icons/ti';
-import {
-  PiEyeSlashDuotone,
-  PiMoneyWavyBold
-} from 'react-icons/pi';
+import { FaRegStar, FaHeartCircleCheck, FaHandshakeSimple } from 'react-icons/fa6';
+import { TiDocumentText, TiThMenuOutline } from 'react-icons/ti';
 import { IoAlert } from 'react-icons/io5';
 import { TbShoppingCartDown } from 'react-icons/tb';
 import { RiInstagramFill } from 'react-icons/ri';
+import { AiOutlineShoppingCart, AiTwotoneDislike, AiTwotoneLike } from 'react-icons/ai';
+import { PiEyeSlashDuotone, PiMoneyWavyBold } from 'react-icons/pi';
+import {
+  IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward, IoMdExit, IoMdAddCircleOutline,
+  IoMdAddCircle, IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose, IoMdRemove, IoIosAdd
+} from 'react-icons/io';
+import {
+  FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt, FaSeedling, FaTrash, FaTrashRestore, FaFacebook,
+  FaYoutube, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 
 /* eslint-disable */
 // icon magnifying glass
-export const SearchEngineIcon = ( { atr, classIcons } ) => {
+export const SearchEngineIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <BiSearchAlt style={ atr } className={ classIcons }/>
+   <BiSearchAlt style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // icon profile avatar
-export const ProfileIcon = ( { atr, classIcons } ) => {
+export const ProfileIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <GrUserSettings style={ atr } className={ classIcons }/>
+   <GrUserSettings style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // angle pointing down
-export const AngleBottomIcon = ( { atr, classIcons } ) => {
+export const AngleBottomIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <IoIosArrowDown style={ atr } className={ classIcons }/>
+   <IoIosArrowDown style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // angle pointing right between a circle
-export const AngleRightDropRightIcon = ( { atr, classIcons } ) => {
+export const AngleRightDropRightIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <IoIosArrowDropright style={ atr } className={ classIcons }/>
+   <IoIosArrowDropright style={ atr } className={ classIcons } { ...props } />
   )
 };
 
-// angle pointing right  type angle
-export const AngleRightIcon = ( { atr, classIcons } ) => {
+// angle pointing right type angle
+export const AngleRightIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <IoIosArrowForward style={ atr } className={ classIcons }/>
+   <IoIosArrowForward style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // angle pointing left type angle
-export const AngleLeftIcon = ( { atr, classIcons } ) => {
+export const AngleLeftIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <IoIosArrowBack style={ atr } className={ classIcons }/>
+   <IoIosArrowBack style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // circle
-export const CircleIcon = ( { atr, classIcons } ) => {
+export const CircleIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <MdOutlineCircle style={ atr } className={ classIcons }/>
+   <MdOutlineCircle style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 //  arrow pointing right
-export const ArrowRightIcon = ( { atr, classIcons } ) => {
+export const ArrowRightIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <FaArrowRight style={ atr } className={ classIcons }/>
+   <FaArrowRight style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // Cart Basket
-export const CartIcon = ( { atr, classIcons } ) => {
+export const CartIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <AiOutlineShoppingCart style={ atr } className={ classIcons }/>
+   <AiOutlineShoppingCart style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // Cart with arrow down
-export const CartDown = ( { atr, classIcons } ) => {
+export const CartDown = ( { atr, classIcons, ...props } ) => {
   return (
-   <TbShoppingCartDown style={ atr } className={ classIcons }/>
+   <TbShoppingCartDown style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // star
-export const StarIcon = ( { atr, classIcons, onClick } ) => {
+export const StarIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <FaStar style={ atr } className={ classIcons } onClick={ onClick }/>
+   <FaStar style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // star without background, only border
-export const StarLineIcon = ( { atr, classIcons, onClick } ) => {
+export const StarLineIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <FaRegStar style={ atr } className={ classIcons } onClick={ onClick }/>
+   <FaRegStar style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 //Hearth with only border
-export const HearthLineIcon = ( { atr, classIcons } ) => {
+export const HearthLineIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <FaRegHeart style={ atr } className={ classIcons }/>
+   <FaRegHeart style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 //Heart with check
-export const HearthCheckIcon = ( { atr, classIcons } ) => {
+export const HearthCheckIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <FaHeartCircleCheck style={ atr } className={ classIcons }/>
+   <FaHeartCircleCheck style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 //Document paper
-export const DocumentIcon = ( { atr, classIcons } ) => {
+export const DocumentIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <TiDocumentText style={ atr } className={ classIcons }/>
+   <TiDocumentText style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 //arrow exit between line vox
-export const ExitArrowIcon = ( { atr, classIcons } ) => {
+export const ExitArrowIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <IoMdExit style={ atr } className={ classIcons }/>
+   <IoMdExit style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // add between a circle outline
-export const AddCircleLineIcon = ( { atr, classIcons } ) => {
+export const AddCircleLineIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <IoMdAddCircleOutline style={ atr } className={ classIcons }/>
+   <IoMdAddCircleOutline style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 //add between a circle
-export const AddCircleIcon = ( { atr, classIcons } ) => {
+export const AddCircleIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <IoMdAddCircle style={ atr } className={ classIcons }/>
+   <IoMdAddCircle style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // icon add +
-export const AddIcon = ( { atr, classIcons } ) => {
+export const AddIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <IoIosAdd style={ atr } className={ classIcons }/>
+   <IoIosAdd style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 //remove between a circle
-export const RemoveCircleIcon = ( { atr, classIcons } ) => {
+export const RemoveCircleIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <IoMdRemoveCircle style={ atr } className={ classIcons }/>
+   <IoMdRemoveCircle style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 //remove between a circle outLine
-export const RemoveCircleIconLine = ( { atr, classIcons } ) => {
+export const RemoveCircleIconLine = ( { atr, classIcons, ...props } ) => {
   return (
-   <IoMdRemoveCircleOutline style={ atr } className={ classIcons }/>
+   <IoMdRemoveCircleOutline style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // Remove icon   --
-export const RemoveIcon = ( { atr, classIcons } ) => {
+export const RemoveIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <IoMdRemove style={ atr } className={ classIcons }/>
+   <IoMdRemove style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 //eye with line
-export const EyeCloseIcon = ( { atr, classIcons } ) => {
+export const EyeCloseIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <PiEyeSlashDuotone style={ atr } className={ classIcons }/>
+   <PiEyeSlashDuotone style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 //eye open
-export const EyeOpenIcon = ( { atr, classIcons } ) => {
+export const EyeOpenIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <FaRegEye style={ atr } className={ classIcons }/>
+   <FaRegEye style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // Alert - !
-export const AlertIcon = ( { atr, classIcons } ) => {
+export const AlertIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <IoAlert style={ atr } className={ classIcons }/>
+   <IoAlert style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // close
-export const CloseIcon = ( { atr, classIcons } ) => {
+export const CloseIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <IoMdClose style={ atr } className={ classIcons }/>
+   <IoMdClose style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 //Pencil
-export const PencilIcon = ( { atr, classIcons } ) => {
+export const PencilIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <FaPencilAlt style={ atr } className={ classIcons }/>
+   <FaPencilAlt style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // Menu Bats
-export const MenuBarsIcon = ( { atr, classIcons } ) => {
+export const MenuBarsIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   <TiThMenuOutline style={ atr } className={ classIcons }/>
+   <TiThMenuOutline style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // Ticket Money
-export const TicketMoney = ( { atr, classIcons } ) => {
+export const TicketMoney = ( { atr, classIcons, ...props } ) => {
   return (
-   <PiMoneyWavyBold style={ atr } className={ classIcons }/>
+   <PiMoneyWavyBold style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // Plant
-export const Plant = ( { atr, classIcons } ) => {
+export const Plant = ( { atr, classIcons, ...props } ) => {
   return (
-   <FaSeedling style={ atr } className={ classIcons }/>
+   <FaSeedling style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // Hands Estrech
-export const HandEstrech = ( { atr, classIcons } ) => {
+export const HandEstrech = ( { atr, classIcons, ...props } ) => {
   return (
-   <FaHandshakeSimple style={ atr } className={ classIcons }/>
+   <FaHandshakeSimple style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // Hands of Like
-export const HandLike = ( { atr, classIcons } ) => {
+export const HandLike = ( { atr, classIcons, ...props } ) => {
   return (
-   <AiTwotoneLike style={ atr } className={ classIcons }/>
+   <AiTwotoneLike style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // Hands of not like
-export const HandDontLike = ( { atr, classIcons } ) => {
+export const HandDontLike = ( { atr, classIcons, ...props } ) => {
   return (
-   <AiTwotoneDislike style={ atr } className={ classIcons }/>
+   <AiTwotoneDislike style={ atr } className={ classIcons } { ...props } />
   )
 };
 
 // Trash
-export const TrashIcon = ( { atr, classIcons } ) => {
+export const TrashIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   < FaTrash style={ atr } className={ classIcons }/>
+   <FaTrash style={ atr } className={ classIcons } { ...props } />
   )
 };
 
-// Trash with  open cover
-export const TrashOpenIcon = ( { atr, classIcons } ) => {
+// Trash with open cover
+export const TrashOpenIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   < FaTrashRestore style={ atr } className={ classIcons }/>
+   <FaTrashRestore style={ atr } className={ classIcons } { ...props } />
   )
 };
+
 // Facebook
-export const FacebookIcon = ( { atr, classIcons } ) => {
+export const FacebookIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   < FaFacebook style={ atr } className={ classIcons }/>
+   <FaFacebook style={ atr } className={ classIcons } { ...props } />
   )
 };
+
 // Youtube
-export const YoutubeIcon = ( { atr, classIcons } ) => {
+export const YoutubeIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   < FaYoutube style={ atr } className={ classIcons }/>
+   <FaYoutube style={ atr } className={ classIcons } { ...props } />
   )
 };
+
 // Instagram
-export const InstagramIcon = ( { atr, classIcons } ) => {
+export const InstagramIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   < RiInstagramFill style={ atr } className={ classIcons }/>
+   <RiInstagramFill style={ atr } className={ classIcons } { ...props } />
   )
 };
+
 // Instagram
-export const InstagramColorIcon = ( { atr, classIcons } ) => {
+export const InstagramColorIcon = ( { atr, classIcons, ...props } ) => {
   return (
    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' width='48px' height='48px' style={ atr }
-        className={ classIcons }>
+        className={ classIcons } { ...props } >
      <path fill='#304ffe'
            d='M41.67,13.48c-0.4,0.26-0.97,0.5-1.21,0.77c-0.09,0.09-0.14,0.19-0.12,0.29v1.03l-0.3,1.01l-0.3,1l-0.33,1.1 l-0.68,2.25l-0.66,2.22l-0.5,1.67c0,0.26-0.01,0.52-0.03,0.77c-0.07,0.96-0.27,1.88-0.59,2.74c-0.19,0.53-0.42,1.04-0.7,1.52 c-0.1,0.19-0.22,0.38-0.34,0.56c-0.4,0.63-0.88,1.21-1.41,1.72c-0.41,0.41-0.86,0.79-1.35,1.11c0,0,0,0-0.01,0 c-0.08,0.07-0.17,0.13-0.27,0.18c-0.31,0.21-0.64,0.39-0.98,0.55c-0.23,0.12-0.46,0.22-0.7,0.31c-0.05,0.03-0.11,0.05-0.16,0.07 c-0.57,0.27-1.23,0.45-1.89,0.54c-0.04,0.01-0.07,0.01-0.11,0.02c-0.4,0.07-0.79,0.13-1.19,0.16c-0.18,0.02-0.37,0.03-0.55,0.03 l-0.71-0.04l-3.42-0.18c0-0.01-0.01,0-0.01,0l-1.72-0.09c-0.13,0-0.27,0-0.4-0.01c-0.54-0.02-1.06-0.08-1.58-0.19 c-0.01,0-0.01,0-0.01,0c-0.95-0.18-1.86-0.5-2.71-0.93c-0.47-0.24-0.93-0.51-1.36-0.82c-0.18-0.13-0.35-0.27-0.52-0.42 c-0.48-0.4-0.91-0.83-1.31-1.27c-0.06-0.06-0.11-0.12-0.16-0.18c-0.06-0.06-0.12-0.13-0.17-0.19c-0.38-0.48-0.7-0.97-0.96-1.49 c-0.24-0.46-0.43-0.95-0.58-1.49c-0.06-0.19-0.11-0.37-0.15-0.57c-0.01-0.01-0.02-0.03-0.02-0.05c-0.1-0.41-0.19-0.84-0.24-1.27 c-0.06-0.33-0.09-0.66-0.09-1c-0.02-0.13-0.02-0.27-0.02-0.4l1.91-2.95l1.87-2.88l0.85-1.31l0.77-1.18l0.26-0.41v-1.03 c0.02-0.23,0.03-0.47,0.02-0.69c-0.01-0.7-0.15-1.38-0.38-2.03c-0.22-0.69-0.53-1.34-0.85-1.94c-0.38-0.69-0.78-1.31-1.11-1.87 C14,7.4,13.66,6.73,13.75,6.26C14.47,6.09,15.23,6,16,6h16c4.18,0,7.78,2.6,9.27,6.26C41.43,12.65,41.57,13.06,41.67,13.48z'/>
      <path fill='#4928f4'
@@ -351,33 +321,33 @@ export const InstagramColorIcon = ( { atr, classIcons } ) => {
      <path fill='#ffecb3'
            d='M26.06,39.52c0,0.41-0.05,0.8-0.16,1.17c-0.1,0.4-0.25,0.78-0.44,1.14c-0.03,0.06-0.1,0.17-0.1,0.17h-8.88 c-0.01-0.01-0.02-0.03-0.02-0.04c-0.12-0.19-0.22-0.38-0.3-0.59c-0.2-0.46-0.32-0.96-0.36-1.48c-0.02-0.12-0.02-0.25-0.02-0.37 c0-0.06,0-0.13,0.01-0.19c0.01-0.44,0.07-0.86,0.19-1.25c0.1-0.36,0.23-0.69,0.4-1.01c0,0,0.01-0.01,0.01-0.02 c0.12-0.21,0.25-0.42,0.4-0.62c0.49-0.66,1.14-1.2,1.89-1.55c0.01,0,0.01,0,0.01,0c0.24-0.12,0.49-0.22,0.75-0.29c0,0,0,0,0.01,0 c0.46-0.14,0.96-0.21,1.47-0.21c0.59,0,1.16,0.09,1.68,0.28c0.19,0.05,0.37,0.13,0.55,0.22c0,0,0,0,0.01,0 c0.86,0.41,1.59,1.05,2.09,1.85c0.1,0.15,0.19,0.31,0.27,0.48c0.04,0.07,0.08,0.15,0.11,0.22c0.23,0.52,0.37,1.09,0.41,1.69 c0.01,0.05,0.01,0.1,0.01,0.16C26.06,39.36,26.06,39.44,26.06,39.52z'/>
      <g>
-       <path fill='none' stroke='#fff' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='10'
-             strokeWidth='2'
-             d='M30,11H18c-3.9,0-7,3.1-7,7v12c0,3.9,3.1,7,7,7h12c3.9,0,7-3.1,7-7V18C37,14.1,33.9,11,30,11z'/>
+       <path fill='none' stroke='#fff' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='10' strokeWidth='2' d='M30,11H18c-3.9,0-7,3.1-7,7v12c0,3.9,3.1,7,7,7h12c3.9,0,7-3.1,7-7V18C37,14.1,33.9,11,30,11z'/>
        <circle cx='31' cy='16' r='1' fill='#fff'/>
      </g>
      <g>
-       <circle cx='24' cy='24' r='6' fill='none' stroke='#fff' strokeLinecap='round' strokeLinejoin='round'
-               strokeMiterlimit='10' strokeWidth='2'/>
+       <circle cx='24' cy='24' r='6' fill='none' stroke='#fff' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='10' strokeWidth='2'/>
      </g>
    </svg>
   )
 };
+
 // Tik tok
-export const TikTokIcon = ( { atr, classIcons } ) => {
+export const TikTokIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   < FaTiktok style={ atr } className={ classIcons }/>
+   < FaTiktok style={ atr } className={ classIcons } { ...props } />
   )
 };
+
 // Whatsapp
-export const WhatsappIcon = ( { atr, classIcons } ) => {
+export const WhatsappIcon = ( { atr, classIcons, ...props } ) => {
   return (
-   < FaWhatsapp style={ atr } className={ classIcons }/>
+   < FaWhatsapp style={ atr } className={ classIcons } { ...props } />
   )
 };
+
 // Plane paper
-export const PaperPlane = ( { atr, classIcons } ) => {
+export const PaperPlane = ( { atr, classIcons, ...props } ) => {
   return (
-   < BiSolidPaperPlane style={ atr } className={ classIcons }/>
+   < BiSolidPaperPlane style={ atr } className={ classIcons } { ...props } />
   )
 };

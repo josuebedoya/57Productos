@@ -20,7 +20,7 @@ const Stars = ( { classIcons } ) => {
   return (
    <>
      <div
-      className="stars flex gap-1 mt-4"
+      className='stars flex gap-1 mt-4'
       onMouseLeave={ handleMouseLeave }
      >
        { [ 1, 2, 3, 4, 5 ].map( ( i ) => (
