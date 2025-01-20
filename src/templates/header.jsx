@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { ProfileIcon, SearchEngineIcon, AngleBottomIcon } from '@/resources/icons';
 import logo from '@/resources/images/logo.png';
-import { Button } from '@/components/button';
-import { Cart } from '@/components/cart';
+import { Button } from '@/components/button_T.jsx';
+import { Cart } from '@/components/cart_T.jsx';
 import { Input } from '@/components/input.jsx';
 import { Menu } from '@/components/menu.jsx';
 import { Path_page } from '@/routes';

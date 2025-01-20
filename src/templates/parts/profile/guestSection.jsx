@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Button } from '@/components/button';
-import signImg from '@/resources/images/profile.png';
+import { Button } from '@/components/button_T.jsx';
+import signImg from '@/resources/images/profile_T.png';
 import { Modal } from '@/components/modal';
 import { FormLogin } from './formLogin';
 import { FormRegister } from './formRegister';

@@ -3,7 +3,7 @@ import { Path_page } from '@/routes';
 
 import { TextAnimatedWrite } from '@/components/textAnimatedWrite.jsx'
 import { Grafic } from '@/components/grafic.jsx'
-import { Button } from '@/components/button.jsx'
+import { Button } from '@/components/button_T.jsx'
 import { AngleRightIcon } from '@/resources/icons'
 
 const Blog = () => {
