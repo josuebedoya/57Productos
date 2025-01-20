@@ -1,4 +1,4 @@
-import { PropTypes, string } from "prop-types";
+import { PropTypes, string } from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import {
   Navigation,
@@ -66,7 +66,7 @@ export function Carousel( { items = [], itemsView = 3, itemsSpace = 10, navs = f
         ) ) }
       </Swiper>
      ) : (
-      console.error( `Carousel: The object "items", can't be empty. items = ${ items.length }` )
+      console.error( `Carousel: The object 'items', can't be empty. items = ${ items.length }` )
      ) }
    </div>
   );

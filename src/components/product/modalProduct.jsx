@@ -5,7 +5,7 @@ import { Button } from '@/components/button.jsx';
 import { HearthLineIcon, HearthCheckIcon } from '@/resources/icons.jsx';
 import { AddWithQuantity } from '@/components/addWithQuantity.jsx';
 import { Modal } from '@/components/modal.jsx';
-import { useCart } from "@/context/cart.jsx";
+import { useCart } from '@/context/cart.jsx';
 
 const ModalProduct = ( { close, title, price, description, img, imgHover, isOpen, id } ) => {
   const [ changeImg, setChangeImg ] = useState( false );

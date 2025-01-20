@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
-import { Path_page, Slug } from "@/routes"
+import { Path_page, Slug } from '@/routes'
 
 //Components imports
 import { Header } from '@/templates/header'
@@ -11,9 +11,9 @@ import { Store } from '@/layouts/store'
 import { Contact } from '@/layouts/contact'
 import { Profile } from '@/layouts/profile'
 import { TermsAndConditions } from '@/layouts/termsAndConditions'
-import { Payments } from "@/layouts/payments"
-import { Footer } from "@/templates/footer.jsx"
-import { ModalProduct } from "@/components/product/modalProduct.jsx";
+import { Payments } from '@/layouts/payments'
+import { Footer } from '@/templates/footer.jsx'
+import { ModalProduct } from '@/components/product/modalProduct.jsx';
 
 function App() {
   const location = useLocation();

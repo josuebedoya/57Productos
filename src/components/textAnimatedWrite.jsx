@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { PropTypes } from "prop-types";
+import { PropTypes } from 'prop-types';
 
 const TextAnimatedWrite = ( { children, classText, atrText } ) => {
   const [ content, setContent ] = useState( '' );

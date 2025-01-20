@@ -1,5 +1,5 @@
-import { createContext, useState, useContext, useEffect } from "react";
-import { insertData, getData } from "management-supabase";
+import { createContext, useState, useContext, useEffect } from 'react';
+import { insertData, getData } from 'management-supabase';
 
 const CommentContext = createContext();
 
