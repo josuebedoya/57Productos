@@ -2,6 +2,7 @@ import { Slider } from '@/components/slider.jsx';
 import {Blog} from '@/templates/blog.jsx';
 import { Chance } from '@/templates/chance.jsx';
 import { TextMain } from '@/templates/text-main.jsx';
+import { Opinions } from '@/templates/opinions';
 
 const Home = () => {
 
@@ -15,6 +16,7 @@ const Home = () => {
      <Blog />
      <Chance />
      <TextMain />
+     <Opinions/>
    </main>
   );
 };
