@@ -14,8 +14,8 @@ const Home = () => {
        !Has crecer tus ganancias con nuestra ayuda¡
      </Slider>
      <Blog />
-     <Chance />
      <TextMain />
+     <Chance />
      <Opinions/>
    </main>
   );

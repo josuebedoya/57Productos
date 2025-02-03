@@ -24,17 +24,17 @@ useEffect(() => {
   };
 
   return ( <section id='Opinions'>
-    <div className='container mx-auto'>
+    <div className='container mx-auto pt-16'>
       <div className='top-section flex justify-between items-center'>
-        <div className='title'>
+        <div className='title text-2xl'>
           <h2>Algunos comentarios de nuestros clientes</h2>
         </div>
         <div className='view-all-btn'>
-          <Button btnText iconRight icon={ <AngleRightIcon /> } onClick={gotToOpinios}>Ver más</Button>
+          <Button btnText iconRight icon={ <AngleRightIcon /> } onClick={gotToOpinios} classBtn='text-xl family-oswald' >Ver más</Button>
         </div>
       </div>
-      <div className="carousel-section p-10">
-        <Carousel items={AllComments} effect={1} itemsSpace={0} navs cursor /* autoplay autoplayDelay={10000}  */loop itemClass="rounded-3xl px-10 py-16"/>
+      <div className="carousel-section p-10 pt-5">
+        <Carousel items={AllComments} effect={1} itemsSpace={0} navs autoplay autoplayDelay={8000} itemClass="rounded-3xl px-10 py-16 bg-white block"/>
       </div>
     </div>
   </section> )

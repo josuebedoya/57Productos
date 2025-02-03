@@ -8,8 +8,7 @@ const OpinionItem = (props) => {
 
   return (
     <div className='item-option-users'>
-      <div className='flex justify-center items-center'>
-        <div className='flex container mx-auto px-3 gap-12'>
+        <div className='flex justify-center items-center max-w-80 container mx-auto px-3 gap-12'>
           <div className='info-section flex flex-col justify-center items-center'>
             <div className='image-user'>
               <img src={props.img ? props.img : img} alt={props.name} className='min-w-40 max-w-none h-auto tl:h-38' />
@@ -34,7 +33,6 @@ const OpinionItem = (props) => {
               </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
   );
