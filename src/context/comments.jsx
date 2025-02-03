@@ -24,7 +24,7 @@ const CommentProvider = ( { children } ) => {
     if ( message && name ) {
       try {
         await insertData( 'comments_users', { name: name, comment: message } );
-        setLocalComments( prevComment => [ ...prevComment, { name: name, value: message } ] )
+        setLocalComments( prevComment => [ ...prevComment, { name: name, comment: message } ] )
       } catch ( err ) {
         setError( err.message );
       }
