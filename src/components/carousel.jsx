@@ -1,4 +1,4 @@
-import { PropTypes, string } from 'prop-types';
+import { PropTypes } from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import {
   Navigation,
@@ -31,6 +31,8 @@ export function Carousel( { items = [], itemsView = 3, itemsSpace = 10, navs = f
      return acc;
    }, {} )
    : false;
+
+  if(items.length === 0) return;
 
   return (
    <div className={ `swiper-container swiper-wrapper-${ effect === 2 ? effect : '' }` }>
@@ -74,7 +76,7 @@ export function Carousel( { items = [], itemsView = 3, itemsSpace = 10, navs = f
 
 Carousel.propTypes = {
   items: PropTypes.array.isRequired,
-  itemsView: PropTypes.number | string,
+  itemsView: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   itemsSpace: PropTypes.number,
   navs: PropTypes.bool,
   dots: PropTypes.bool,

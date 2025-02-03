@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import { useEffect, useState } from "react";
 import { Carousel } from '@/components/carousel';
 import { OpinionItem } from './parts/opinionItem';
 import { Button } from "@/components/button";
@@ -9,10 +10,14 @@ import { useComment } from "@/context/comments";
 const Opinions = () => {
   const navigate = useNavigate();
   const { comments, localComments } =  useComment();
+  const [AllComments, setAllComments] = useState([]);
 
-  const opinions = [...comments].map((opinion, i) => <OpinionItem name={opinion.name} key={i}>{opinion.comment}</OpinionItem>);
-  const opinionsLocal = [...localComments].map((opinion, i) => <OpinionItem name={opinion.name} key={i}>{opinion.value}</OpinionItem>);
-  const opinionsLast = localComments ? [...opinions, ...opinionsLocal].reverse() : opinions.reverse();
+useEffect(() => {
+  
+  const AllOpinions = [ ...( comments || [] ), ...( localComments || [] ) ].map(( opinion ) => <OpinionItem name={opinion.name} key={ opinion.id }>{ opinion.comment }</OpinionItem>).reverse();
+  setAllComments(AllOpinions);
+
+}, [comments, localComments])
 
   const gotToOpinios = () =>{
     navigate(Path_page.COMMENTS);
@@ -29,7 +34,7 @@ const Opinions = () => {
         </div>
       </div>
       <div className="carousel-section p-10">
-        <Carousel items={opinionsLast} effect={1} itemsSpace={0} navs cursor /* autoplay autoplayDelay={10000}  */loop itemClass="rounded-3xl px-10 py-16"/>
+        <Carousel items={AllComments} effect={1} itemsSpace={0} navs cursor /* autoplay autoplayDelay={10000}  */loop itemClass="rounded-3xl px-10 py-16"/>
       </div>
     </div>
   </section> )
