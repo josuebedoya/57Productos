@@ -3,7 +3,7 @@ import {Blog} from '@/templates/blog.jsx';
 import { Chance } from '@/templates/chance.jsx';
 import { TextMain } from '@/templates/text-main.jsx';
 import { Opinions } from '@/templates/opinions';
-import { AvaibleProducts } from '@/templates/avaibleProducts';
+import { CategoriesList } from '@/templates/categoriesList.jsx';
 
 const Home = () => {
 
@@ -16,7 +16,7 @@ const Home = () => {
      </Slider>
      <Blog />
      <TextMain />
-     <AvaibleProducts/>
+     <CategoriesList/>
      <Chance />
      <Opinions/>
    </main>
