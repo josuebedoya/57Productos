@@ -116,7 +116,7 @@ const Footer = () => {
        <h2 className='text-stone-200 text-center text-base tl:text-lg tracking-wider w-full mb-5'>
          Dejanos tu opinion, es de gran ayuda para nosotros poder ser mejores dia a dia.
        </h2>
-       <div className='send-message flex flex-col xn:flex-row justify-between items-end '>
+       <div className='send-message flex flex-col xn:flex-row justify-between items-end w-3/4 mx-auto'>
          <Input textTarea type='text' placeholder='Dejanos tu comentario... ¿Qué opinas acercá de Nosotros?'
                 onChange={ handleComments } value={ comment } maxLength={ 1000 }
                 classInput={ ` ${ sendEmpty ? 'empty' : '' } scrollbar scrollbar-track-transparent py-2` }/>
