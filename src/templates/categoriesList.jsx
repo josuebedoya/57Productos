@@ -42,7 +42,9 @@ const CategoriesList = () => {
    < section id='listCategories' className='bg-Primary py-16'>
      <div className="container px-3 mx-auto">
        < List gap='gap-10'
-              itemClass='flex items-center shadow rounded-lg  px-4 py-10 hover:scale-105 duration-300 group/item'>
+              itemClass='flex items-center shadow rounded-lg  px-4 py-10 hover:scale-105 duration-300 group/item'
+              columns={4}
+              itemsShow={10}>
          {
            categories.map( ( category, i ) => (
             <div key={ i }
