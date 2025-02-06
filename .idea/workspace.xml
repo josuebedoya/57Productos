@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_glogal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_glogal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/list.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/list.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/categoriesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/categoriesList.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="migrate.2" />
+        <entry key="$PROJECT_DIR$" value="Migrate" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,12 +52,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="Migrate" />
-                    <option name="lastUsedInstant" value="1737403449" />
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1737830918" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1734361373" />
+                    <option name="branchName" value="Migrate" />
+                    <option name="lastUsedInstant" value="1737403449" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -84,6 +88,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\tools\php81\php.exe" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -105,7 +110,7 @@
     &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Migrate&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.12.2&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.12.14&quot;,
@@ -200,6 +205,10 @@
       <workItem from="1737403625474" duration="95000" />
       <workItem from="1737403751897" duration="118000" />
       <workItem from="1737404046692" duration="1142000" />
+      <workItem from="1737830891350" duration="1076000" />
+      <workItem from="1737989096547" duration="622000" />
+      <workItem from="1738687383183" duration="13476000" />
+      <workItem from="1738701498916" duration="30931000" />
     </task>
     <task id="LOCAL-00001" summary="Add two icons">
       <option name="closed" value="true" />
@@ -409,7 +418,31 @@
       <option name="project" value="LOCAL" />
       <updated>1737405006864</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="+ onclick function to button  | + add valitadtion from slug | change route output.css">
+      <option name="closed" value="true" />
+      <created>1738709885921</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1738709885921</updated>
+    </task>
+    <task id="LOCAL-00028" summary="+ fetch categories from database | ↔ rename file Avaible to categoiresList | ↔ component list">
+      <option name="closed" value="true" />
+      <created>1738710160286</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1738710160286</updated>
+    </task>
+    <task id="LOCAL-00029" summary=" ↔ Footer Styles">
+      <option name="closed" value="true" />
+      <created>1738787893120</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1738787893120</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,8 +473,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add two icons" />
-    <MESSAGE value="Advanced MainSectionProfile, add price with money global" />
     <MESSAGE value="↔ money, main section, profile, No finish..." />
     <MESSAGE value=" + validation to button text" />
     <MESSAGE value="↔ component Money, +toString() in hiddenAmount" />
@@ -464,7 +495,10 @@
     <MESSAGE value="Migrate to vite V-3.4.2" />
     <MESSAGE value="Migrate to vite V-3.4.3" />
     <MESSAGE value="Migrate to vite V-3.4.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migrate to vite V-3.4.4" />
+    <MESSAGE value="+ onclick function to button  | + add valitadtion from slug | change route output.css" />
+    <MESSAGE value="+ fetch categories from database | ↔ rename file Avaible to categoiresList | ↔ component list" />
+    <MESSAGE value=" ↔ Footer Styles" />
+    <option name="LAST_COMMIT_MESSAGE" value=" ↔ Footer Styles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -481,8 +515,24 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/layouts/profile.jsx</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/context/comments.jsx</url>
+          <line>10</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/templates/categoriesList.jsx</url>
+          <line>26</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/list.jsx</url>
+          <line>74</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
