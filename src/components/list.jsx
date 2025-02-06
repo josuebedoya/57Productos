@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
+import { Button } from '@/components/button.jsx';
 
-const List = ( { columns = 4, gap = 4, itemClass = '', rows = 1, automatic = true, children } ) => {
+const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, children } ) => {
 
   const [ indexLast, setIndexLast ] = useState( ( columns * rows ) );
   const [ indexFirst, setindexFirst ] = useState( 0 );
@@ -11,37 +12,25 @@ const List = ( { columns = 4, gap = 4, itemClass = '', rows = 1, automatic = tru
   useEffect( () => {
     setIndexLast( ( columns * rows ) );
   }, [ rows, columns ] );
-  var animate2 = 1;
+
   const nextPage = () => {
-    animate2++;
-    if ( children.length > indexLast ) {
-      // setIsChanged( true );
+    if(children.length >= indexLast ){
+      setIsChanged( true );
       setTimeout( () => {
         setIndexLast( indexLast + ( columns * rows ) );
         setindexFirst( indexFirst + ( columns * rows ) );
-      }, 1000 );
-    }else if(children.length  <= indexLast ){
-      setIndexLast( ( columns * rows ) );
-      setindexFirst( 0 );
+      }, 300 );
     }
   };
 
   const prevPage = () => {
     if ( indexFirst > 0 ) {
+      setIsChanged( true );
       setTimeout( () => {
         setIndexLast( indexLast - ( columns * rows ) );
         setindexFirst( indexFirst - ( columns * rows ) );
-        setIsChanged( true );
       }, 300 );
     }
-  };
-  var animate = 1;
-
-  const transitionAutomatic = () => {
-      nextPage();
-
-    console.log( animate + '----', animate2 )
-    return animate;
   };
 
 
@@ -50,33 +39,27 @@ const List = ( { columns = 4, gap = 4, itemClass = '', rows = 1, automatic = tru
     setTimeout( () => setIsChanged( false ), 450 );
   }, [ isChanged ] );
 
-  // start animation automatic
-  useEffect( () => {
-    // setInterval( () => {
-      if ( animate <= 10 ) {
-        let t = transitionAutomatic();
-        console.log( t );
-      }
-    // }, 1000 );
-
-    [ animate ]
-  } );
-
   return (
    <div className='list-items'>
-     {/*<div className='flex items-center pb-3 justify-between'>*/ }
-     {/*  < button className='text-white disabled:opacity-30 disabled:hover:cursor-no-drop' onClick={ () => prevPage() }*/ }
-     {/*           disabled={ indexFirst === 0 }*/ }
-     {/*           title={ indexFirst === 0 && 'No puedes retroceder más' }>Volver*/ }
-     {/*  </button>*/ }
-     {/*  <button className='text-white disabled:opacity-30 disabled:hover:cursor-no-drop' onClick={ () => nextPage() }*/ }
-     {/*          disabled={ children.length <= indexLast }*/ }
-     {/*          title={ children.length <= indexLast && 'No hay mas items para mostrar' }>Siguiente*/ }
-     {/*  </button>*/ }
-
-     {/*</div>*/ }
-     <div
-      className={ clsx( 'content grid', `grid-cols-${ columns } gap-${ gap }`, `${ isChanged ? 'animate-fade-out' : 'animate-fade-in' }` ) }>
+     <div className='flex items-center pb-3 justify-between'>
+       <Button btnText
+               classBtn='text-white disabled:opacity-30 disabled:hover:cursor-no-drop'
+               onClick={ () => prevPage() }
+               disabled={ indexFirst === 0 }
+               title={ indexFirst === 0 ? 'No puedes retroceder más' : undefined }
+          >
+            Volver
+       </Button>
+       <Button btnText
+               classBtn='text-white disabled:opacity-30 disabled:hover:cursor-no-drop'
+               onClick={ () => nextPage() }
+               disabled={ children.length <= indexLast }
+               title={ children.length <= indexLast ? 'No hay mas items para mostrar': undefined }
+          >
+            Siguiente
+        </Button>
+     </div>
+     <div className={ clsx( 'content grid', `grid-cols-${ columns } gap-${ gap }`, `${ isChanged ? 'animate-fade-out' : 'animate-fade-in' }` ) }>
        {
          React.Children.map( children.slice( indexFirst, indexLast ), ( child ) =>
           React.cloneElement( child, {
@@ -85,8 +68,7 @@ const List = ( { columns = 4, gap = 4, itemClass = '', rows = 1, automatic = tru
          ) }
      </div>
    </div>
-  )
-   ;
+  );
 };
 
 export { List };
