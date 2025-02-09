@@ -12,6 +12,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.9",
+    "clsx": "^2.1.1",
     "management-supabase": "^1.0.10",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",

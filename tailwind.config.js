@@ -1,8 +1,10 @@
+import CSafelist from './src/utils/tailwind.class';
 const plugin = require( 'tailwindcss' );
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   important: true,
+  safelist: CSafelist(),
   content: [
     './src/**/*.{js,jsx,ts,tsx, html}',
   ],
