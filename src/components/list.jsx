@@ -2,11 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
 import { Button } from '@/components/button.jsx';
 
-const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, children } ) => {
-
-  const [ indexLast, setIndexLast ] = useState( ( columns * rows ) );
-  const [ indexFirst, setindexFirst ] = useState( 0 );
+const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, children } ) => {
+  const [ indexLast, setIndexLast ] = useState( columns * rows );
+  const [ indexFirst, setIndexFirst ] = useState( 0 );
   const [ isChanged, setIsChanged ] = useState( false );
+
+  const defaultBreakpoints = {
+    zero: columns,
+    sm: columns,
+    md: columns,
+    lg: columns,
+    xl: columns,
+  };
 
   // get index start
   useEffect( () => {
@@ -18,7 +25,7 @@ const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, children } ) =
       setIsChanged( true );
       setTimeout( () => {
         setIndexLast( indexLast + ( columns * rows ) );
-        setindexFirst( indexFirst + ( columns * rows ) );
+        setIndexFirst( indexFirst + ( columns * rows ) );
       }, 300 );
     }
   };
@@ -28,13 +35,13 @@ const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, children } ) =
       setIsChanged( true );
       setTimeout( () => {
         setIndexLast( indexLast - ( columns * rows ) );
-        setindexFirst( indexFirst - ( columns * rows ) );
+        setIndexFirst( indexFirst - ( columns * rows ) );
       }, 300 );
     }
   };
 
 
-//Restart isChanged after animate
+  //Restart isChanged after animate
   useEffect( () => {
     setTimeout( () => setIsChanged( false ), 450 );
   }, [ isChanged ] );
@@ -58,8 +65,19 @@ const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, children } ) =
           >
             Siguiente
         </Button>
-     </div>
-     <div className={ clsx( 'content grid', `grid-cols-${ columns } gap-${ gap }`, `${ isChanged ? 'animate-fade-out' : 'animate-fade-in' }` ) }>
+      </div>
+      <div
+        className={clsx(
+          'content grid',
+          `grid-cols-${ breakpoints?.zero ?? defaultBreakpoints.zero } gap-${ gap }`,
+          /* Breakpoints */
+          Object.entries( breakpoints ?? {} )?.slice( 1 )
+          .map( ([ b, v ]) => `${ b }:grid-cols-${ v }` )
+          .join(' '),
+          /* Animate */
+          `${ isChanged ? 'animate-fade-out' : 'animate-fade-in' }`
+        )}
+      >
        {
          React.Children.map( children.slice( indexFirst, indexLast ), ( child ) =>
           React.cloneElement( child, {

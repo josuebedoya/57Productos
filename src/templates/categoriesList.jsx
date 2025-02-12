@@ -32,6 +32,12 @@ const CategoriesList = () => {
     navigate( Path_page.STORE + '/' + name );
   };
   const colours = [ 'blue', 'red', 'yellow', 'purple','green', 'cyan', 'fuchsia', 'pink', 'orange'];
+  const breakpoints = {
+    zero: 1,
+    md: 2,
+    lg: 3,
+    xl: 4,
+  }
 
   if ( error ) <div>Algo ha fallado: { error.message }</div>; // if something  wrong in fetch
   if ( loading ) <div>Cargando, no debería tardar demasiado</div>; // if are loading fetch
@@ -43,6 +49,7 @@ const CategoriesList = () => {
               itemClass='flex items-center shadow rounded-lg  px-4 py-10 hover:scale-105 duration-300 group/item'
               columns={ 4 }
               rows={ 2 }
+              breakpoints={ breakpoints }
        >
          {
            categories.map( ( category, i ) => (
