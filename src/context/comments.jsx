@@ -1,5 +1,5 @@
 import { createContext, useState, useContext, useEffect } from 'react';
-import { insertData, getData } from 'management-supabase';
+import { insertData, getData, updateData } from 'management-supabase';
 
 const CommentContext = createContext();
 
@@ -24,10 +24,22 @@ const CommentProvider = ( { children } ) => {
     if ( message && name ) {
       try {
         await insertData( 'comments_users', { name: name, comment: message } );
-        setLocalComments( prevComment => [ ...prevComment, { name: name, comment: message } ] )
+        setLocalComments( prevComment => [ ...prevComment, { name: name, comment: message, like: 0, dont_like: 0 } ] )
       } catch ( err ) {
         setError( err.message );
       }
+    }
+  };
+
+  const rateLike = async (id, qualification) =>{
+    try {
+      await updateData('comments_users',
+       {likes: qualification, dont_likes: qualification},
+       'id',
+       id
+      );
+    }catch ( error ){
+      return <div>Algo ha fallado: { error.message }</div>;
     }
   };
 
@@ -37,7 +49,7 @@ const CommentProvider = ( { children } ) => {
   }
 
   return (
-   <CommentContext.Provider value={ { localComments, comments, addMessage } }>
+   <CommentContext.Provider value={ { localComments, comments, addMessage, rateLike } }>
      { children }
    </CommentContext.Provider>
   );

@@ -14,7 +14,17 @@ const Opinions = () => {
 
 useEffect(() => {
   
-  const AllOpinions = [ ...( comments || [] ), ...( localComments || [] ) ].map(( opinion ) => <OpinionItem name={opinion.name} key={ opinion.id }>{ opinion.comment }</OpinionItem>).reverse();
+  const AllOpinions = [ ...( comments || [] ), ...( localComments || [] ) ].map(( opinion ) =>
+   <OpinionItem
+                id={opinion.id}
+                name={opinion.name}
+                likes={opinion.likes  || 0}
+                dontLike={opinion.dont_likes  || 0}
+                key={ opinion.id }
+   >
+     { opinion.comment }
+   </OpinionItem>).reverse();
+
   setAllComments(AllOpinions);
 
 }, [comments, localComments])
