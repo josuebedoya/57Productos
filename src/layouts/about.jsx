@@ -1,6 +1,6 @@
 import { MissionAndVision } from '@/templates/parts/misionAndVision.jsx'
 import { InfoAbout } from '@/templates/parts/infoAbout.jsx'
-import imgFruitFlat from '@/resources/images/img-fruit-flat.webp'
+import imgFruitFlat from '/images/img-fruit-flat.webp'
 
 const About = () => {
   return ( <main className='page-about-us m-0 p-0 relative'>

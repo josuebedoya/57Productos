@@ -1,6 +1,6 @@
 import {Stars} from '@/components/stars'
 import { HandLike, HandDontLike } from '@/resources/icons'
-import img from '@/resources/images/profile.png'
+import img from '/images/profile.png'
 
 
 const OpinionItem = (props) => {

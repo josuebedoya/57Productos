@@ -1,4 +1,4 @@
-import hearthColombia from '@/resources/images/corazon.png';
+import hearthColombia from '/images/corazon.png';
 function TextMain() {
   return (
    <section id='textH1' className='text-main container mx-auto flex justify-center items-center gap-1 py-6 md:py-8 tl:py-12 px-3 '>
