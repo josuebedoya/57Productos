@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ProfileIcon, SearchEngineIcon, AngleBottomIcon } from '@/resources/icons';
-import logo from '@/resources/images/logo.png';
+import logo from '/images/logo.png';
 import { Button } from '@/components/button.jsx';
 import { Cart } from '@/components/cart.jsx';
 import { Input } from '@/components/input.jsx';
