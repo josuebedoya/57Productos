@@ -19,7 +19,7 @@ import 'swiper/css/effect-fade'
 import 'swiper/css/effect-coverflow'
 
 export function Carousel( { items = [], itemsView = 3, itemsSpace = 10, navs = false, dots = false, effect = 0, lineProgress = false, itemClass = '', autoplay = false, autoplayDelay = 2500,
-                            loop = false, cursor = false, centerItems = false, responsive = [] } ) {
+                            loop = false, cursor = false, centerItems = false, responsive = [], isMedia = false, itemImgClass='w-full', itemVideoClass='w-full' } ) {
 
   const breakpoints = responsive.length > 0 ? responsive.reduce( ( acc, query ) => {
      const { width, itemsView, spaceBetween, ...others } = query;
@@ -63,7 +63,22 @@ export function Carousel( { items = [], itemsView = 3, itemsSpace = 10, navs = f
       >
         { items.map( ( item, i ) => (
          <SwiperSlide key={ i } className={ `item-slide ${ itemClass }` }>
-           { item }
+           { isMedia 
+              ? item.type === 'video' 
+                ?
+                  <video autoPlay controls className={`slide-video ${ itemVideoClass }`}>
+                    <source 
+                      src={ item.src }
+                      type={`video/${item.src
+                        .split('.')
+                        .pop()
+                      }`} 
+                    />  
+                    Tu navegador no soporta videos.
+                  </video> 
+                : <img src={ item.src } alt={`${ item.type }-${ i }`} className={`slide-img ${ itemImgClass }`}/>
+              : item 
+           }
          </SwiperSlide>
         ) ) }
       </Swiper>
@@ -87,5 +102,9 @@ Carousel.propTypes = {
   loop: PropTypes.bool,
   effect: PropTypes.number,
   cursor: PropTypes.bool,
+  centerItems: PropTypes.bool,
   responsive: PropTypes.object,
+  isMedia: PropTypes.bool,
+  itemImgClass: PropTypes.string,
+  itemVideoClass: PropTypes.string,
 };
