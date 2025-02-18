@@ -1,33 +1,41 @@
-import { useState, useEffect } from 'react';
-import { insertData, getData, updateData } from 'management-supabase';
-import { WarningModal } from '@/components/warningModal';
+import { useState } from 'react';
+import { insertData as addData, getData as fetchData, updateData } from 'management-supabase';
 
-export const useDatabase = ( table ) => {
+export const useDatabase = () => {
 
   const [ data, setData ] = useState( null );
   const [ loading, setLoading ] = useState( false );
-  const [ error, setErr ] = useState( true );
+  const [ successful, setSuccessful ] = useState( null );
+  const [ showMessage, setShowMessage ] = useState( null );
+  const [ error, setError ] = useState( null );
 
-  // get All
-  const fetchAll = async () => {
-    try {
-      const res = await getData( table );
+  // get Data
+  const getData = async ( table, options = {} ) => {
+    setLoading( true );
+    try{
+      const res = await fetchData( table, options );
       setData( res );
-    } catch ( err ) {
-      setErr( err.message );
-    } finally {
+    }catch( err ){
+      setError( err.message );
+    }finally{
       setLoading( false );
     }
   };
 
-  // init Fetch
-  useEffect( () => fetchAll, [] );
+  // insert new data
 
-  if ( error ) {
-    return <WarningModal type='error'>
-      { error.message }
-    </WarningModal>
-  }
+  const insertData = async ( table, data ) => {
+    setShowMessage( false );  // close modal
+    try{
+      await addData( table, data );
+      setSuccessful( true );
+    }catch( error ){
+      setError( error.message );
+      setSuccessful( false );
+    }finally{
+      setShowMessage( true ); // open modal
+    }
+  };
 
-  return { data, loading, error };
+  return { data, loading, successful, showMessage, error, getData, insertData };
 };
