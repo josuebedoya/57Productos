@@ -1,16 +1,17 @@
 import { createContext, useState, useContext, useEffect } from 'react';
-import { updateData } from 'management-supabase';
-import  { useDatabase } from "@/utils/database.jsx";
+import { useDatabase } from "@/utils/database.jsx";
 
 const CommentContext = createContext();
 
 const CommentProvider = ( { children } ) => {
   const [ comments, setComments ] = useState( [] );
   const [ localComments, setLocalComments ] = useState( [] );
-  const  { data, getData, insertData} =  useDatabase();
+  const [ isLiked, setIsLiked ] = useState( false );
+  const [ isDontLiked, setIsDontLiked ] = useState( false );
+  const { data, successful, showMessage, loading, error, get, insert, update } = useDatabase();
 
   useEffect( () => {
-  getData( 'comments_users' );
+    get( 'comments_users' );
   }, [] ); // get Comments
 
   useEffect( () => {
@@ -18,29 +19,44 @@ const CommentProvider = ( { children } ) => {
   }, [data] ); // update comments
 
   const addMessage = ( message, name ) => { // add new comment
-    if ( message && name ) {
-      insertData( 'comments_users', { name: name, comment: message } );
-        setLocalComments( prevComment => [ ...prevComment, { name: name, comment: message, like: 0, dont_like: 0 } ] );
+    if( message && name ){
+      insert( 'comments_users', { name: name, comment: message } );
+      setLocalComments( prevComment => [ ...prevComment, { name: name, comment: message, likes: 0, dont_likes: 0 } ] );
     }
   };
 
-  const rateLike = async (id, qualification) =>{
-    try {
-      await updateData('comments_users',
-       {likes: qualification, dont_likes: qualification},
-       'id',
-       id
-      );
-    }catch ( error ){
-      return <div>Algo ha fallado: { error.message }</div>;
+  // Qualification comment
+  const rateLike = async ( id, qualification = {} ) => {
+
+    // prevent more of one reaction
+    if ((qualification.likes && isLiked) || (qualification.dont_likes && isDontLiked)) {
+      return;
     }
+
+    // handle states option like
+    if( qualification.likes ){
+      setIsLiked( true );
+      setIsDontLiked( false );
+    }else{
+      setIsDontLiked( true );
+      setIsLiked( false );
+    }
+
+    // update  new qualification
+    update( 'comments_users', qualification, 'id', id );
+
+    // update local qualification per comment
+    const newComments = comments.map( c => c.id === id ? { ...c, ...qualification }: c );
+
+    setLocalComments( newComments );
   };
 
-  return (
-   <CommentContext.Provider value={ { localComments, comments, addMessage, rateLike } }>
-     { children }
-   </CommentContext.Provider>
-  );
+  return ( <CommentContext.Provider
+    value={ {
+      localComments, comments, successful, showMessage, loading, error, addMessage, rateLike
+    } }>
+    { children }
+  </CommentContext.Provider> );
 };
 
 // eslint-disable-next-line react-refresh/only-export-components

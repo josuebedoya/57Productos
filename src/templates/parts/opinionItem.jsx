@@ -32,13 +32,13 @@ const { rateLike } = useComment();
               <div className="content-likes flex justify-between items-center gap-2">
                 <span>
                   <HandLike classIcons='cursor-pointer duration-100 hover:scale-125'
-                            onClick={ ()=> rateLike(props.id, props.likes + 1)}
+                            onClick={ ()=> rateLike(props.id, { likes: props.likes + 1 })}
                   />
                   { props.likes }
                 </span>
                 <span>
                   <HandDontLike classIcons='cursor-pointer duration-100 hover:scale-125'
-                                onClick={ ()=> rateLike(props.id, props.dontLike + 1) }
+                                onClick={ ()=> rateLike(props.id, { dont_likes: props.dontLike + 1 }) }
                   />
                   { props.dontLike }
                 </span>

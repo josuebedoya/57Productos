@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { insertData as addData, getData as fetchData, updateData } from 'management-supabase';
+import { insertData, getData, updateData } from 'management-supabase';
 
 export const useDatabase = () => {
 
@@ -10,10 +10,10 @@ export const useDatabase = () => {
   const [ error, setError ] = useState( null );
 
   // get Data
-  const getData = async ( table, options = {} ) => {
+  const get = async ( table, options = {} ) => {
     setLoading( true );
     try{
-      const res = await fetchData( table, options );
+      const res = await getData( table, options );
       setData( res );
     }catch( err ){
       setError( err.message );
@@ -23,11 +23,10 @@ export const useDatabase = () => {
   };
 
   // insert new data
-
-  const insertData = async ( table, data ) => {
+  const insert = async ( table, data ) => {
     setShowMessage( false );  // close modal
     try{
-      await addData( table, data );
+      await insertData( table, data );
       setSuccessful( true );
     }catch( error ){
       setError( error.message );
@@ -37,5 +36,19 @@ export const useDatabase = () => {
     }
   };
 
-  return { data, loading, successful, showMessage, error, getData, insertData };
+  // update Data
+  const update = async ( table, data, where, valueWhere ) => {
+    setShowMessage( false );
+    try{
+      await updateData( table, data, where, valueWhere );
+      setSuccessful( true );
+    }catch( error ){
+      setError( error.message );
+      setSuccessful( false );
+    }finally{
+      setShowMessage( true );
+    }
+  }
+
+  return { data, loading, successful, showMessage, error, get, insert, update };
 };
