@@ -103,7 +103,7 @@ Carousel.propTypes = {
   effect: PropTypes.number,
   cursor: PropTypes.bool,
   centerItems: PropTypes.bool,
-  responsive: PropTypes.object,
+  responsive: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   isMedia: PropTypes.bool,
   itemImgClass: PropTypes.string,
   itemVideoClass: PropTypes.string,

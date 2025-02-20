@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
+    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="+ hook update | ↔ parameter qualification | use update in contextComment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/carousel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/carousel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/slider.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/database.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/parts/infoAbout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/parts/infoAbout.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,32 +99,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "git-widget-placeholder": "dev",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "20.16.0",
-    "javascript.nodejs.core.library.typings.version": "20.16.15",
-    "last_opened_file_path": "C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "settings.editor.selected.configurable": "inlay.hints",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2024.1.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.16.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.16.15&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2024.1.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="dev" />
@@ -134,11 +136,11 @@
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\josue\OneDrive\Desktop\Proyect React\shopp-online\src\templates" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\temp" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\resources\images\products" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\components" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\resources\images" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -208,7 +210,9 @@
       <workItem from="1738687383183" duration="13476000" />
       <workItem from="1738701498916" duration="30931000" />
       <workItem from="1739844161516" duration="177000" />
-      <workItem from="1739844352503" duration="8693000" />
+      <workItem from="1739844352503" duration="8986000" />
+      <workItem from="1739933000215" duration="7717000" />
+      <workItem from="1740018476027" duration="3674000" />
     </task>
     <task id="LOCAL-00001" summary="Add two icons">
       <option name="closed" value="true" />
@@ -458,7 +462,31 @@
       <option name="project" value="LOCAL" />
       <updated>1739851816603</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="+ hook insert data">
+      <option name="closed" value="true" />
+      <created>1739854316464</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1739854316464</updated>
+    </task>
+    <task id="LOCAL-00033" summary="+ hook update | ↔ parameter qualification | use update in contextComment">
+      <option name="closed" value="true" />
+      <created>1739940997960</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1739940997960</updated>
+    </task>
+    <task id="LOCAL-00034" summary="↔ Use hook to get categories">
+      <option name="closed" value="true" />
+      <created>1740019986059</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1740019986059</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,9 +517,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="↔ component Money, +toString() in hiddenAmount" />
-    <MESSAGE value="+ icons | + new class to scrollbar and max-heights | + add view to cart component" />
-    <MESSAGE value="+ new animation" />
     <MESSAGE value="+ Function to create Slugs  | + page payments" />
     <MESSAGE value="+ page payments" />
     <MESSAGE value="+ icons" />
@@ -514,7 +539,10 @@
     <MESSAGE value=" ↔ Footer Styles" />
     <MESSAGE value="+ Error Boundary" />
     <MESSAGE value="+ interval to warning modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ interval to warning modal" />
+    <MESSAGE value="+ hook insert data" />
+    <MESSAGE value="+ hook update | ↔ parameter qualification | use update in contextComment" />
+    <MESSAGE value="↔ Use hook to get categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="↔ Use hook to get categories" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -535,18 +563,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/context/comments.jsx</url>
-          <line>10</line>
+          <line>16</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/templates/categoriesList.jsx</url>
-          <line>26</line>
+          <line>16</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/list.jsx</url>
           <line>74</line>
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/layouts/store.jsx</url>
+          <line>9</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
