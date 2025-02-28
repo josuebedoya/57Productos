@@ -1,7 +1,7 @@
 import { BiSearchAlt, BiSolidPaperPlane } from 'react-icons/bi';
 import { MdOutlineCircle } from 'react-icons/md'
 import { GrUserSettings } from 'react-icons/gr';
-import { FaRegStar, FaHeartCircleCheck, FaHandshakeSimple } from 'react-icons/fa6';
+import { FaRegStar, FaHeartCircleCheck, FaHandshakeSimple, FaCirclePause } from 'react-icons/fa6';
 import { TiDocumentText, TiThMenuOutline } from 'react-icons/ti';
 import { IoAlert } from 'react-icons/io5';
 import { TbShoppingCartDown } from 'react-icons/tb';
@@ -14,7 +14,7 @@ import {
 } from 'react-icons/io';
 import {
   FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt, FaSeedling, FaTrash, FaTrashRestore, FaFacebook,
-  FaYoutube, FaTiktok, FaWhatsapp } from 'react-icons/fa';
+  FaYoutube, FaTiktok, FaWhatsapp, FaCaretRight } from 'react-icons/fa';
 
 /* eslint-disable */
 // icon magnifying glass
@@ -349,5 +349,19 @@ export const WhatsappIcon = ( { atr, classIcons, ...props } ) => {
 export const PaperPlane = ( { atr, classIcons, ...props } ) => {
   return (
    < BiSolidPaperPlane style={ atr } className={ classIcons } { ...props } />
+  )
+};
+
+// Pause icon
+export const Pause = ( { atr, classIcons, ...props } ) => {
+  return (
+    <FaCirclePause style={ atr } className={ classIcons } { ...props }/>
+  )
+};
+
+// triangle Right
+export const TriangleRight = ( { atr, classIcons, ...props } ) => {
+  return (
+    <FaCaretRight style={ atr } className={ classIcons } { ...props }/>
   )
 };

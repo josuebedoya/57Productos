@@ -14,28 +14,31 @@ import { TermsAndConditions } from '@/layouts/termsAndConditions'
 import { Payments } from '@/layouts/payments'
 import { Footer } from '@/templates/footer.jsx'
 import { ModalProduct } from '@/components/product/modalProduct.jsx';
+import ErrorBoundary from "@/utils/errorBoundary.jsx";
 
-function App() {
+function App(){
   const location = useLocation();
 
   return ( <>
-      <ModalProduct/>
-    <Header/>
-    <main id='Page'
-          className={ `page page-${ Slug( location.pathname === '/' ? 'inicio' : location.pathname ) } m-0 p-0 w-full max-w-full h-auto max-h-full` }>
-      <Routes>
-        <Route index path={ Path_page.HOME } element={ <Home/> }/>
-        <Route path={ Path_page.US } element={ <About/> }/>
-        <Route path={ Path_page.SERVICES } element={ <Services/> }/>
-        <Route path={ Path_page.STORE } element={ <Store/> }/>
-        <Route path={ Path_page.CONTACT } element={ <Contact/> }/>
-        <Route path={ Path_page.PROFILE } element={ <Profile/> }/>
-        <Route path={ Path_page.PAYMENTS } element={ <Payments/> }/>
-        <Route path={ Path_page.TERMS_AND_CONDITIONS } element={ <TermsAndConditions/> }/>
-        <Route path={ Path_page.ERROR } element={ <Error/> }/>
-      </Routes>
-    </main>
-    <Footer/>
+    <ErrorBoundary>
+    <ModalProduct/>
+      <Header/>
+      <main id='Page'
+            className={ `page page-${ Slug( location.pathname === '/' ? 'inicio': location.pathname ) } m-0 p-0 w-full max-w-full h-auto max-h-full` }>
+        <Routes>
+          <Route index path={ Path_page.HOME } element={ <Home/> }/>
+          <Route path={ Path_page.US } element={ <About/> }/>
+          <Route path={ Path_page.SERVICES } element={ <Services/> }/>
+          <Route path={ Path_page.STORE } element={ <Store/> }/>
+          <Route path={ Path_page.CONTACT } element={ <Contact/> }/>
+          <Route path={ Path_page.PROFILE } element={ <Profile/> }/>
+          <Route path={ Path_page.PAYMENTS } element={ <Payments/> }/>
+          <Route path={ Path_page.TERMS_AND_CONDITIONS } element={ <TermsAndConditions/> }/>
+          <Route path={ Path_page.ERROR } element={ <Error/> }/>
+        </Routes>
+      </main>
+      <Footer/>
+    </ErrorBoundary>
   </> );
 }
 

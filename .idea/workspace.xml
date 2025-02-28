@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="+ hook update | ↔ parameter qualification | use update in contextComment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/list.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/list.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/categoriesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/categoriesList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/carousel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/carousel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/parts/infoAbout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/parts/infoAbout.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,7 @@
   </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/josuebedoya/shopp-online.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/josuebedoya/57Productos.git&quot;,
     &quot;accountId&quot;: &quot;d73f0ae0-65a2-491b-8f16-121fd4804986&quot;
   }
 }</component>
@@ -112,8 +111,8 @@
     &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.12.2&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.12.14&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.16.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.16.15&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -121,8 +120,8 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.HTML&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2024.1.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -137,11 +136,11 @@
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\josue\OneDrive\Desktop\Proyect React\shopp-online\src\templates" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\temp" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\resources\images\products" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\components" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\resources\images" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -169,7 +168,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.15026.12" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18034.69" />
+        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18034.69" />
       </set>
     </attachedChunks>
   </component>
@@ -209,6 +209,10 @@
       <workItem from="1737989096547" duration="622000" />
       <workItem from="1738687383183" duration="13476000" />
       <workItem from="1738701498916" duration="30931000" />
+      <workItem from="1739844161516" duration="177000" />
+      <workItem from="1739844352503" duration="8986000" />
+      <workItem from="1739933000215" duration="7717000" />
+      <workItem from="1740018476027" duration="3674000" />
     </task>
     <task id="LOCAL-00001" summary="Add two icons">
       <option name="closed" value="true" />
@@ -442,7 +446,47 @@
       <option name="project" value="LOCAL" />
       <updated>1738787893120</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="+ Error Boundary">
+      <option name="closed" value="true" />
+      <created>1739846956764</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1739846956764</updated>
+    </task>
+    <task id="LOCAL-00031" summary="+ interval to warning modal">
+      <option name="closed" value="true" />
+      <created>1739851816603</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1739851816603</updated>
+    </task>
+    <task id="LOCAL-00032" summary="+ hook insert data">
+      <option name="closed" value="true" />
+      <created>1739854316464</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1739854316464</updated>
+    </task>
+    <task id="LOCAL-00033" summary="+ hook update | ↔ parameter qualification | use update in contextComment">
+      <option name="closed" value="true" />
+      <created>1739940997960</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1739940997960</updated>
+    </task>
+    <task id="LOCAL-00034" summary="↔ Use hook to get categories">
+      <option name="closed" value="true" />
+      <created>1740019986059</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1740019986059</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,11 +517,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="↔ money, main section, profile, No finish..." />
-    <MESSAGE value=" + validation to button text" />
-    <MESSAGE value="↔ component Money, +toString() in hiddenAmount" />
-    <MESSAGE value="+ icons | + new class to scrollbar and max-heights | + add view to cart component" />
-    <MESSAGE value="+ new animation" />
     <MESSAGE value="+ Function to create Slugs  | + page payments" />
     <MESSAGE value="+ page payments" />
     <MESSAGE value="+ icons" />
@@ -498,7 +537,12 @@
     <MESSAGE value="+ onclick function to button  | + add valitadtion from slug | change route output.css" />
     <MESSAGE value="+ fetch categories from database | ↔ rename file Avaible to categoiresList | ↔ component list" />
     <MESSAGE value=" ↔ Footer Styles" />
-    <option name="LAST_COMMIT_MESSAGE" value=" ↔ Footer Styles" />
+    <MESSAGE value="+ Error Boundary" />
+    <MESSAGE value="+ interval to warning modal" />
+    <MESSAGE value="+ hook insert data" />
+    <MESSAGE value="+ hook update | ↔ parameter qualification | use update in contextComment" />
+    <MESSAGE value="↔ Use hook to get categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="↔ Use hook to get categories" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -519,20 +563,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/context/comments.jsx</url>
-          <line>10</line>
+          <line>16</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/templates/categoriesList.jsx</url>
-          <line>26</line>
-          <properties lambdaOrdinal="-1" />
+          <line>16</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/list.jsx</url>
           <line>74</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/layouts/store.jsx</url>
+          <line>9</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

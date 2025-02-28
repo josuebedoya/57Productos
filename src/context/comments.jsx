@@ -1,46 +1,62 @@
 import { createContext, useState, useContext, useEffect } from 'react';
-import { insertData, getData } from 'management-supabase';
+import { useDatabase } from "@/utils/database.jsx";
 
 const CommentContext = createContext();
 
 const CommentProvider = ( { children } ) => {
   const [ comments, setComments ] = useState( [] );
   const [ localComments, setLocalComments ] = useState( [] );
-  const [ error, setError ] = useState( null );
+  const [ isLiked, setIsLiked ] = useState( false );
+  const [ isDontLiked, setIsDontLiked ] = useState( false );
+  const { data, successful, showMessage, loading, error, get, insert, update } = useDatabase();
 
   useEffect( () => {
-    const fetchComments = async () => {  // get Comments
-      try {
-        const res = await getData( 'comments_users' );
-        setComments( res );
-      } catch ( err ) {
-        setError( err.message );
-      }
-    };
-    fetchComments();
-  }, [] );
+    get( 'comments_users' );
+  }, [] ); // get Comments
 
-  const addMessage = async ( message, name ) => { // add new comment
-    if ( message && name ) {
-      try {
-        await insertData( 'comments_users', { name: name, comment: message } );
-        setLocalComments( prevComment => [ ...prevComment, { name: name, comment: message } ] )
-      } catch ( err ) {
-        setError( err.message );
-      }
+  useEffect( () => {
+    setComments(data);
+  }, [data] ); // update comments
+
+  const addMessage = ( message, name ) => { // add new comment
+    if( message && name ){
+      insert( 'comments_users', { name: name, comment: message } );
+      setLocalComments( prevComment => [ ...prevComment, { name: name, comment: message, likes: 0, dont_likes: 0 } ] );
     }
   };
 
-  if ( error ) {
-    console.log( error.message )
-    return <div>Algo ha fallado: { error.message }</div>;
-  }
+  // Qualification comment
+  const rateLike = async ( id, qualification = {} ) => {
 
-  return (
-   <CommentContext.Provider value={ { localComments, comments, addMessage } }>
-     { children }
-   </CommentContext.Provider>
-  );
+    // prevent more of one reaction
+    if ((qualification.likes && isLiked) || (qualification.dont_likes && isDontLiked)) {
+      return;
+    }
+
+    // handle states option like
+    if( qualification.likes ){
+      setIsLiked( true );
+      setIsDontLiked( false );
+    }else{
+      setIsDontLiked( true );
+      setIsLiked( false );
+    }
+
+    // update  new qualification
+    update( 'comments_users', qualification, 'id', id );
+
+    // update local qualification per comment
+    const newComments = comments.map( c => c.id === id ? { ...c, ...qualification }: c );
+
+    setLocalComments( newComments );
+  };
+
+  return ( <CommentContext.Provider
+    value={ {
+      localComments, comments, successful, showMessage, loading, error, addMessage, rateLike
+    } }>
+    { children }
+  </CommentContext.Provider> );
 };
 
 // eslint-disable-next-line react-refresh/only-export-components

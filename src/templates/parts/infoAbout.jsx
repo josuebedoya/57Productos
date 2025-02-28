@@ -5,15 +5,12 @@ const InfoAbout = () => {
   const responsive = [
     { width: 0, itemsView: 'auto', spaceBetween: 0, },
     { width: 640, itemsView: 'auto', spaceBetween: 5 },
-  ]
+  ];
 
-   const group1 =  [0, 1, 2, 3, 4, 5].map((img, i) => (
-    <img src={img1} alt={`Img num ${img}`} key={i} className='object-cover'/>
-   ))
-  const group2 =  [0, 1, 2, 3, 4, 5].map((img, i) => (
-    <img src={img2} alt={`Img num ${img}`} key={i} className='object-cover'/>
-   ))
-  const group3 = [...group1, ...group2];
+   const ImgsToCarousel = [
+     [...Array(5)].map(() => ({src: img1, type: 'image'})),
+     [...Array(5)].map(() => ({src: img2, type: 'image'}))
+   ].flat();
 
   return (
    <section id='InfoAbout' className='py-6 sm:py-10 lg:py-16'>
@@ -29,7 +26,7 @@ const InfoAbout = () => {
            </p>
          </div>
          <div className='carousel tl:flex-1 w-full tl:w-1/2 tl:pr-5 lg:pl-7 rounded-3xl max-w-full order-1 tl:order-2'>
-           <Carousel items={ group3 } responsive={ responsive } itemsView={ 'auto' } itemsSpace={ 5 } effect={ 2 } loop dots cursor itemClass='w-52 h-52 md:h-64 md:w-64 2xl:w-64 2xl:h-64 rounded-lg shadow-lg overflow-hidden'/>
+           <Carousel isMedia  items={ ImgsToCarousel } responsive={ responsive } itemsView={ 'auto' } itemsSpace={ 5 } effect={ 2 } loop dots cursor itemClass='w-52 h-52 md:h-64 md:w-64 2xl:w-64 2xl:h-64 rounded-lg shadow-lg overflow-hidden'/>
          </div>
        </div>
      </div>

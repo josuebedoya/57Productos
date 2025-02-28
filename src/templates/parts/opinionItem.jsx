@@ -1,10 +1,12 @@
 import {Stars} from '@/components/stars'
 import { HandLike, HandDontLike } from '@/resources/icons'
 import img from '/images/profile.png'
+import  { useComment } from "@/context/comments.jsx";
 
 
 const OpinionItem = (props) => {
 
+const { rateLike } = useComment();
 
   return (
     <div className='item-option-users'>
@@ -28,8 +30,18 @@ const OpinionItem = (props) => {
                 <Stars classIcons='cursor-pointer duration-100 hover:scale-125' />
               </div>
               <div className="content-likes flex justify-between items-center gap-2">
-                <HandLike classIcons='cursor-pointer duration-100 hover:scale-125' />
-                <HandDontLike classIcons='cursor-pointer duration-100 hover:scale-125' />
+                <span>
+                  <HandLike classIcons='cursor-pointer duration-100 hover:scale-125'
+                            onClick={ ()=> rateLike(props.id, { likes: props.likes + 1 })}
+                  />
+                  { props.likes }
+                </span>
+                <span>
+                  <HandDontLike classIcons='cursor-pointer duration-100 hover:scale-125'
+                                onClick={ ()=> rateLike(props.id, { dont_likes: props.dontLike + 1 }) }
+                  />
+                  { props.dontLike }
+                </span>
               </div>
             </div>
           </div>

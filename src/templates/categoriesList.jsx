@@ -1,31 +1,26 @@
 import { List } from "@/components/list";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import { getData } from "management-supabase";
+import { useDatabase } from "@/utils/database.jsx";
 import { Slug, Path_page } from "@/routes.jsx";
 import { Button } from "@/components/button.jsx";
 import { ArrowRightIcon } from '@/resources/icons.jsx';
+import { WarningModal } from '@/components/warningModal.jsx';
 
 const CategoriesList = () => {
   const [ categories, setCategories ] = useState( [] );
-  const [ loading, setLoading ] = useState( true );
-  const [ error, setError ] = useState( null );
   const navigate = useNavigate();
+  const { get, data, loading, error } =  useDatabase();
 
-  const fetchCategories = async () => {
-    try {
-      const res = await getData( 'productos' );
-      setCategories( res );
-    } catch ( error ) {
-      setError( error.message );
-    } finally {
-      setLoading( false );
-    }
-  };
   // get categories store
   useEffect( () => {
-    fetchCategories();
+    get('categorias');
   }, [] );
+
+  //update categories
+  useEffect( () => {
+    if(data !== null)setCategories(data); // prevent null value
+  }, [data] );
 
   // go to category  function
   const goToCategory = ( name ) => {
@@ -40,7 +35,7 @@ const CategoriesList = () => {
   }
 
   if ( error ) <div>Algo ha fallado: { error.message }</div>; // if something  wrong in fetch
-  if ( loading ) <div>Cargando, no debería tardar demasiado</div>; // if are loading fetch
+  if ( loading ) <WarningModal timeClose={ 6000 } type={ error } className='text-white text-center text-lg'>Cargando, no debería tardar demasiado</WarningModal>; // if are loading fetch
 
   return (
    < section id='listCategories' className='bg-Primary py-16'>
@@ -59,10 +54,10 @@ const CategoriesList = () => {
                 <p className="text-white text-center text-lg h-36 line-clamp-5">
                   { category.descripcion }
                 </p>
-                <Button btnText 
-                        icon={ <ArrowRightIcon/> } 
+                <Button btnText
+                        icon={ <ArrowRightIcon/> }
                         classBtn='text-white opacity-0 group-hover/item:opacity-100'
-                        iconRight 
+                        iconRight
                         onClick={ () => goToCategory(Slug( category.nombre )) }>
                   Ver más
                 </Button>
