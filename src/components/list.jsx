@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
 import { Button } from '@/components/button.jsx';
+ import { WarningModal } from "@/components/warningModal.jsx";
 
 const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, children } ) => {
   const [ indexLast, setIndexLast ] = useState( columns * rows );
@@ -46,6 +47,13 @@ const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, c
     setTimeout( () => setIsChanged( false ), 450 );
   }, [ isChanged ] );
 
+  //Render alert
+    if(children.length === 0 ) {
+      // console.log(children.length ===0 ? 'Cero ' : children.length)
+      return <WarningModal type='warning' bgColor='bg-gray-400' itemClass='rounded-lg shadow-white' >No hay elementos para mostrar</WarningModal>
+    }
+
+  // Render view
   return (
    <div className='list-items'>
      <div className='flex items-center pb-3 justify-between'>
