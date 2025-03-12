@@ -14,7 +14,7 @@ import {
 } from 'react-icons/io';
 import {
   FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt, FaSeedling, FaTrash, FaTrashRestore, FaFacebook,
-  FaYoutube, FaTiktok, FaWhatsapp, FaCaretRight } from 'react-icons/fa';
+  FaYoutube, FaTiktok, FaWhatsapp, FaCaretRight, FaDropbox } from 'react-icons/fa';
 
 /* eslint-disable */
 // icon magnifying glass
@@ -363,5 +363,12 @@ export const Pause = ( { atr, classIcons, ...props } ) => {
 export const TriangleRight = ( { atr, classIcons, ...props } ) => {
   return (
     <FaCaretRight style={ atr } className={ classIcons } { ...props }/>
+  )
+};
+
+// Box open
+export const BoxOpen = ( { atr, classIcons, ...props } ) => {
+  return (
+    <FaDropbox style={ atr } className={ classIcons } { ...props }/>
   )
 };
