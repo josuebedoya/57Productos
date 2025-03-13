@@ -12,7 +12,7 @@ import {
   YoutubeIcon
 } from '@/resources/icons';
 import { useComment } from '@/context/comments';
-import { Menu } from '@/components/menu.jsx';
+import { Menu } from '@/components/menu/menu.jsx';
 import { Form } from '@/components/form';
 import { CSSTransition } from 'react-transition-group';
 
