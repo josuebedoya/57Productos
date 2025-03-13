@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { MenuBarsIcon, AngleRightIcon } from '@/resources/icons';
+import { MenuBarsIcon, AngleRightIcon } from '@/resources/icons.jsx';
 
 const Menu = ( { items, classLink, menuH, withMenuBars, openMenu, target = '_self' } ) => {
 
@@ -23,7 +23,7 @@ const Menu = ( { items, classLink, menuH, withMenuBars, openMenu, target = '_sel
        {
          items.map( ( item, index ) => (
           <li key={ index } className='menu-item'>
-            <Link to={ item.url } className={ `item-link ${ classLink }` } onClick={ handleOpenModal }
+            <Link to={ item.url } className={ `item-link  relative${ classLink }` } onClick={ handleOpenModal }
                   target={ target && item.target }>
               { item.name }
             </Link>
