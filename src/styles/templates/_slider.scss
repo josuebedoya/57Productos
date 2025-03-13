@@ -1,7 +1,6 @@
 #slider {
   height: 470px;
-  // The Next Line must be Removed
-  //background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('../../resources/images/slider-bg.jpg');
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
