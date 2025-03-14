@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="+ hook update | ↔ parameter qualification | use update in contextComment">
-      <change afterPath="$PROJECT_DIR$/src/components/menu/dropdown.jsx" afterDir="false" />
+    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/dropdown.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/dropdown.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,8 +110,8 @@
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
     "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "20.16.0",
-    "javascript.nodejs.core.library.typings.version": "20.16.15",
+    "javascript.nodejs.core.library.configured.version": "22.13.0",
+    "javascript.nodejs.core.library.typings.version": "22.13.10",
     "last_opened_file_path": "C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -168,8 +167,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18034.69" />
-        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18034.69" />
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.15026.12" />
       </set>
     </attachedChunks>
   </component>
@@ -216,6 +214,7 @@
       <workItem from="1740623450513" duration="2216000" />
       <workItem from="1740881022363" duration="3725000" />
       <workItem from="1741834701935" duration="235000" />
+      <workItem from="1741962820174" duration="29818000" />
     </task>
     <task id="LOCAL-00001" summary="Add two icons">
       <option name="closed" value="true" />
@@ -513,7 +512,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740625066703</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="+ dropdown component to menu |  ↔ move menu inside directory menu">
+      <option name="closed" value="true" />
+      <created>1741908387001</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1741908387001</updated>
+    </task>
+    <task id="LOCAL-00039" summary="+ hook update | ↔ parameter qualification | use update in contextComment">
+      <option name="closed" value="true" />
+      <created>1741908399569</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1741908399569</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +559,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Payments routes" />
     <MESSAGE value="✓ cart | + add validation to close modal | + news products test" />
     <MESSAGE value="✓ cart" />
     <MESSAGE value="+ new animation to tailwind | ↔ cart, add condition  to close modal if scroll down, add animation" />
@@ -567,9 +581,10 @@
     <MESSAGE value="↔ Use hook to get categories" />
     <MESSAGE value="+ validation to carousel prop" />
     <MESSAGE value="↔ Carousel to carousel media" />
-    <MESSAGE value="+ hook update | ↔ parameter qualification | use update in contextComment" />
     <MESSAGE value="+ Spin component" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Spin component" />
+    <MESSAGE value="+ dropdown component to menu |  ↔ move menu inside directory menu" />
+    <MESSAGE value="+ hook update | ↔ parameter qualification | use update in contextComment" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ hook update | ↔ parameter qualification | use update in contextComment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
