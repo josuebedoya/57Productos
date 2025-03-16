@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { MenuBarsIcon, AngleRightIcon } from '@/resources/icons';
+import { MenuBarsIcon, AngleRightIcon } from '@/resources/icons.jsx';
+import { Dropdown } from "@/components/menu/dropdown.jsx";
 
 const Menu = ( { items, classLink, menuH, withMenuBars, openMenu, target = '_self' } ) => {
 
@@ -15,22 +16,10 @@ const Menu = ( { items, classLink, menuH, withMenuBars, openMenu, target = '_sel
 
   return (
    <div className='navbar menu'>
-     <ul className={ `menu-nav ${ menuH && withMenuBars ? 'hidden lg:flex flex-row space-x-7'
-      : withMenuBars ? 'hidden lg:block'
-       : menuH ? 'flex flex-row space-x-7'
-        : 'block' }`}
+     <nav className={ `menu-nav ${ withMenuBars ? 'hidden lg:block' : 'block' }`}
      >
-       {
-         items.map( ( item, index ) => (
-          <li key={ index } className='menu-item'>
-            <Link to={ item.url } className={ `item-link ${ classLink }` } onClick={ handleOpenModal }
-                  target={ target && item.target }>
-              { item.name }
-            </Link>
-          </li>
-         ) )
-       }
-     </ul>
+       <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal } menuH={ menuH }/>
+     </nav>
      {
        withMenuBars ?
         <span className='block lg:hidden text-2xl' onClick={ handleOpenModal }>
@@ -43,18 +32,9 @@ const Menu = ( { items, classLink, menuH, withMenuBars, openMenu, target = '_sel
          className='modal-menu lg:hidden absolute w-full h-full min-h-screen min-w-full bg-black/70 left-0 top-0 z-modal flex justify-start items-center'>
           <div
            className='menu-nav-mobile left-0 top-0 h-screen min-h-full w-64 p-4 bg-white z-modal overflow-y-auto overflow-x-hidden'>
-            <ul className='menu-nav block lg:hidden'>
-              {
-                items.map( ( item, index ) => (
-                 <li key={ index } className='menu-item'>
-                   <Link to={ item.url } className={ `item-link ${ classLink }` } onClick={ handleOpenModal }
-                         target={ target && item.target }>
-                     { item.name }
-                   </Link>
-                 </li>
-                ) )
-              }
-            </ul>
+            <nav className='menu-nav block lg:hidden'>
+             <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal } menuH={ menuH }/>
+            </nav>
           </div>
           <div className='close-menu h-screen w-5 bg-transparent flex items-center relative left-5'>
               <span onClick={ handleOpenModal }>

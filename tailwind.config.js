@@ -72,7 +72,9 @@ module.exports = {
       animation: {
         'fade-out': 'fade-out .2s ease-in both',
         'fade-in': 'fade-in .2s ease-in both',
-        'shaking': 'shaking  2.5s linear infinite'
+        'shaking': 'shaking  2.5s linear infinite',
+        'collapse-top-in': 'collapse-top-in .5s ease-in both',
+        'collapse-top-out': 'collapse-top-out .5s ease-out both'
       },
       keyframes: {
         'fade-out': {
@@ -98,8 +100,16 @@ module.exports = {
           },
           '100%': {
             transform: 'scale3d(1, 1, 1)',
-          },
+          }
         },
+        'collapse-top-out': {
+          '0%': { clipPath: 'inset(0 0 0)' },
+          '100%': { clipPath: 'inset(0 0 100%)' }
+        },
+        'collapse-top-in': {
+          '0%': { clipPath: 'inset(0 0 100%)'  },
+          '100%': { clipPath: 'inset(0 0 0)' }
+        }
       },
     },
     screens: {

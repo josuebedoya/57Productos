@@ -4,7 +4,7 @@ import logo from '/images/logo.png';
 import { Button } from '@/components/button.jsx';
 import { Cart } from '@/components/cart.jsx';
 import { Input } from '@/components/input.jsx';
-import { Menu } from '@/components/menu.jsx';
+import { Menu } from '@/components/menu/menu.jsx';
 import { Path_page } from '@/routes';
 import { useCart } from '@/context/cart';
 
