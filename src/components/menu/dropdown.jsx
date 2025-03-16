@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "@/styles/components/_menu.scss";
 import { useState } from "react";
 
 const Dropdown = ( { items, level = 0, target, classLink = "px-2", handleOpenModal, menuH, atr } ) => {
