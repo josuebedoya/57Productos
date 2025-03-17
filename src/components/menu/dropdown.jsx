@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const Dropdown = ( { items, level = 0, target, classLink = "px-2", handleOpenModal, menuH, atr, hoverDropdown } ) => {
+const Dropdown = ( { items, level = 0, target, classLink = "px-2", handleOpenModal, horizontal, atr, hoverDropdown } ) => {
 
   const [ show, setShow ] = useState( {} );
 
@@ -11,7 +11,7 @@ const Dropdown = ( { items, level = 0, target, classLink = "px-2", handleOpenMod
   };
 
   return ( <ol
-   className={ `${ level > 0 ? `modal sub-level-${ level } ${ atr } ${ level === 1 ? 'lg:absolute ml-3' : 'relative' } bg-white overflow-y-auto overflow-x-hidden pl-4` : "" } ${ menuH && level === 0 ? 'lg:flex lg:flex-row' : 'block' } max-h-min` }
+   className={ `content-items ${ level > 0 ? `modal sub-level-${ level } ${ atr } ${ level === 1 ? 'lg:absolute ml-3' : 'relative' } bg-white overflow-y-auto overflow-x-hidden pl-4` : "" } ${ horizontal && level === 0 ? 'lg:flex lg:flex-row' : 'block' } max-h-min` }
   >
     { items.map( ( item, i ) =>
 
