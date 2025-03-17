@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { MenuBarsIcon, AngleRightIcon } from '@/resources/icons.jsx';
 import { Dropdown } from "@/components/menu/dropdown.jsx";
 
-const Menu = ( { items, classLink, menuH, withMenuBars, openMenu, target = '_self' } ) => {
+const Menu = ( { items, classLink, menuH, withMenuBars, openMenu, target = '_self',  hoverDropdown = true} ) => {
 
   const [ openMenuBars, setOpenMenuBars ] = useState( false );
 
@@ -18,7 +18,7 @@ const Menu = ( { items, classLink, menuH, withMenuBars, openMenu, target = '_sel
    <div className='navbar menu'>
      <nav className={ `menu-nav ${ withMenuBars ? 'hidden lg:block' : 'block' }`}
      >
-       <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal } menuH={ menuH }/>
+       <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal } menuH={ menuH } hoverDropdown={ hoverDropdown }/>
      </nav>
      {
        withMenuBars ?
