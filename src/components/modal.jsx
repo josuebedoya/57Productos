@@ -1,9 +1,10 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Button } from './button.jsx';
 import { ExitArrowIcon } from '@/resources/icons';
 
-const Modal = ( { isOpen, onClose, classModal, children } ) => {
+const Modal = ( { isOpen, onClose, iconClose, classModal = 'bg-white p-8 rounded-3xl', animationEntrance, animationExit, children } ) => {
   const modalRef = useRef( null );
+  const [ showing, setShowing ] = useState( isOpen );
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const clickOutside = ( event ) => {
@@ -14,10 +15,16 @@ const Modal = ( { isOpen, onClose, classModal, children } ) => {
 
   useEffect( () => {
 
-    let waitingTime;
-
+    //Disabled Scroll Window
     if ( isOpen ) {
-      //interval to prevent onClose from being executed once at startup
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    //interval to prevent onClose from being executed once at startup
+    let waitingTime;
+    if ( isOpen ) {
       waitingTime = setInterval( () => {
         window.addEventListener( 'click', clickOutside );
       }, 200 );
@@ -30,22 +37,29 @@ const Modal = ( { isOpen, onClose, classModal, children } ) => {
 
   }, [ isOpen, clickOutside ] );
 
-  if ( !isOpen ) return null;
-
   const handleModalClick = ( event ) => {
     event.stopPropagation();
   };
 
+  const handleShowing = () => {
+    if ( !isOpen ) setShowing( false );
+  }
+
+  if ( !showing ) return null;
+
   return (
-   <div className='modal fixed inset-0 bg-black bg-opacity-80 flex justify-center items-start overflow-auto py-14 z-modal'>
-     <div  className={ `modal-content bg-white p-8 rounded-3xl shadow-modal w-full max-w-95 md:max-w-80 ${ classModal && classModal  }` }
-      ref={ modalRef }
-      onClick={ handleModalClick }
-     >
-       <div className='bnt-close flex justify-end'>
-         <Button icon={ <ExitArrowIcon/> } onClick={ onClose }/>
+   <div className='modal fixed inset-0 bg-black bg-opacity-80 z-modal h-screen'>
+     <div className='flex justify-center items-center w-full h-full'>
+       <div className={ `modal-content shadow-modal w-full max-w-95 md:max-w-80 min-h-fit overflow-y-auto ${ isOpen ? animationEntrance || 'animate-fade-in' : animationExit || 'animate-fade-out' } ${ classModal }` }
+        ref={ modalRef }
+        onClick={ handleModalClick }
+        onAnimationEnd={ handleShowing }
+       >
+         <div className='bnt-close flex justify-end'>
+           <Button icon={ iconClose ? iconClose : <ExitArrowIcon/> } onClick={ onClose }/>
+         </div>
+         { children }
        </div>
-       { children }
      </div>
    </div>
   );
