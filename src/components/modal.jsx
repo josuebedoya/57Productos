@@ -14,6 +14,8 @@ const Modal = ( { isOpen, onClose, iconClose, classModal = 'bg-white p-8 rounded
   };
 
   useEffect( () => {
+    // Open Modal
+    if(isOpen) setShowing(isOpen);
 
     //Disabled Scroll Window
     if ( isOpen ) {
