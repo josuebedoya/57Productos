@@ -2,9 +2,12 @@ import { useRef, useEffect, useState } from 'react';
 import { Button } from './button.jsx';
 import { ExitArrowIcon } from '@/resources/icons';
 
-const Modal = ( { isOpen, onClose, iconClose, classModal = 'bg-white p-8 rounded-2xl max-h-full-vh max-w-95 md:max-w-80', animationEntrance, animationExit, children } ) => {
+const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, animationExit, type = 3 , children } ) => {
   const modalRef = useRef( null );
   const [ showing, setShowing ] = useState( isOpen );
+
+  // Class Container Default
+  const classContainer = `modal-${ type } fixed inset-0 bg-black bg-opacity-80 z-modal h-screen`;
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const clickOutside = ( event ) => {
@@ -49,22 +52,58 @@ const Modal = ( { isOpen, onClose, iconClose, classModal = 'bg-white p-8 rounded
 
   if ( !showing ) return null;
 
-  return (
-   <div className={`modal fixed inset-0 bg-black bg-opacity-80 z-modal h-screen ${ isOpen ? animationEntrance || 'animate-fade-in' : animationExit || 'animate-fade-out' }`}
-        onAnimationEnd={ handleShowing }>
-     <div className='flex justify-center items-center w-full h-full'>
-       <div className={`modal-content shadow-modal w-full overflow-y-auto ${ classModal }`}
-        ref={ modalRef }
-        onClick={ handleModalClick }
-       >
-         <div className='bnt-close flex justify-end'>
-           <Button icon={ iconClose ? iconClose : <ExitArrowIcon/> } onClick={ onClose }/>
-         </div>
-         { children }
-       </div>
-     </div>
-   </div>
-  );
+  switch ( type ) {
+    // Left
+    case( 1 ):
+      return  <div className={ `${ classContainer } ${ isOpen ? animationEntrance || 'animate-fade-in' : animationExit || 'animate-fade-out' }` }
+       onAnimationEnd={ handleShowing }>
+        <div className="flex justify-start items-center w-full h-full">
+          <div
+           className={ `bg-white modal-content w-full max-w-xs md:max-w-lg x-w-lg h-screen py-10 px-4 ${ classModal } max-h-full-vh` }
+           ref={ modalRef }
+           onClick={ handleModalClick }>
+            <div className='bnt-close flex justify-end'>
+              <Button icon={ iconClose ? iconClose : <ExitArrowIcon classIcons='cursor-pointer'/> } onClick={ onClose }/>
+            </div>
+            { children }
+          </div>
+        </div>
+      </div>
+   // Right
+    case( 2 ):
+      return <div className={ `${ classContainer } ${ isOpen ? animationEntrance || 'animate-fade-in' : animationExit || 'animate-fade-out' }` }
+       onAnimationEnd={ handleShowing }>
+        <div className="flex justify-end text-end items-center w-full h-full">
+          <div
+           className={ `bg-white modal-content w-full max-w-xs md:max-w-lg x-w-lg h-screen py-10 px-4 ${ classModal } max-h-full-vh` }
+           ref={ modalRef }
+           onClick={ handleModalClick }>
+            <div className='bnt-close flex justify-start'>
+              <Button icon={ iconClose ? iconClose : <ExitArrowIcon classIcons='rotate-180 cursor-pointer' /> } onClick={ onClose }/>
+            </div>
+            { children }
+          </div>
+        </div>
+      </div>
+   // Default all window
+    default:
+      return <div
+       className={ `${ classContainer } ${ isOpen ? animationEntrance || 'animate-fade-in' : animationExit || 'animate-fade-out' }` }
+       onAnimationEnd={ handleShowing }>
+        <div className='flex justify-center items-center w-full h-full'>
+          <div
+           className={ `bg-white modal-content shadow-modal w-full overflow-y-auto p-5 ${ classModal } ${ type === 3 ? 'max-w-95 md:max-w-80 rounded-lg md:rounded-2xl h-600' : 'h-full max-h-full-vh' }` }
+           ref={ modalRef }
+           onClick={ handleModalClick }
+          >
+            <div className='bnt-close flex justify-end'>
+              <Button icon={ iconClose ? iconClose : <ExitArrowIcon classIcons='cursor-pointer'/> } onClick={ onClose }/>
+            </div>
+            { children }
+          </div>
+        </div>
+      </div>
+  }
 };
 
 export { Modal };

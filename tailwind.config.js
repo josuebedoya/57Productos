@@ -71,8 +71,8 @@ module.exports = {
         '38': '150px',
       },
       animation: {
-        'fade-out': 'fade-out .4s ease-in both',
-        'fade-in': 'fade-in .4s ease-in both',
+        'fade-out': 'fade-out .34s ease-in both',
+        'fade-in': 'fade-in .34s ease-in both',
         'shaking': 'shaking  2.5s linear infinite',
         'collapse-top-in': 'collapse-top-in .5s ease-in both',
         'collapse-top-out': 'collapse-top-out .5s ease-out both'
