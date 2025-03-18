@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import { Button } from './button.jsx';
 import { ExitArrowIcon } from '@/resources/icons';
 
-const Modal = ( { isOpen, onClose, iconClose, classModal = 'bg-white p-8 rounded-3xl', animationEntrance, animationExit, children } ) => {
+const Modal = ( { isOpen, onClose, iconClose, classModal = 'bg-white p-8 rounded-2xl max-h-full-vh max-w-95 md:max-w-80', animationEntrance, animationExit, children } ) => {
   const modalRef = useRef( null );
   const [ showing, setShowing ] = useState( isOpen );
 
@@ -53,7 +53,7 @@ const Modal = ( { isOpen, onClose, iconClose, classModal = 'bg-white p-8 rounded
    <div className={`modal fixed inset-0 bg-black bg-opacity-80 z-modal h-screen ${ isOpen ? animationEntrance || 'animate-fade-in' : animationExit || 'animate-fade-out' }`}
         onAnimationEnd={ handleShowing }>
      <div className='flex justify-center items-center w-full h-full'>
-       <div className={`modal-content shadow-modal w-full max-w-95 md:max-w-80 min-h-fit overflow-y-auto ${ classModal }`}
+       <div className={`modal-content shadow-modal w-full overflow-y-auto ${ classModal }`}
         ref={ modalRef }
         onClick={ handleModalClick }
        >
