@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MenuBarsIcon } from '@/resources/icons.jsx';
 import { Dropdown } from "@/components/menu/dropdown.jsx";
 import { Modal } from '@/components/modal.jsx';
@@ -6,6 +6,28 @@ import { Modal } from '@/components/modal.jsx';
 const Menu = ( { items, classLink, horizontal, withMenuBars, openMenu, target = '_self', hoverDropdown = true} ) => {
 
   const [ openMenuBars, setOpenMenuBars ] = useState( false );
+  const [ isMobile, setIsMobile ] = useState( false );
+
+  const handleResize = () => {
+    if ( window.innerWidth < 1024 ) {
+      setIsMobile( false )
+    } else {
+      setIsMobile( true )
+    }
+  };
+
+  useEffect( () => {
+   // execute function start
+    handleResize();
+
+    // Handle resize event
+    window.addEventListener( 'resize', handleResize );
+
+    // Clear Component
+    return () => {
+      window.removeEventListener( 'resize', handleResize );
+    };
+  }, [] );
 
   const handleOpenModal = () => {
     setOpenMenuBars( !openMenuBars );
@@ -14,39 +36,31 @@ const Menu = ( { items, classLink, horizontal, withMenuBars, openMenu, target = 
     }
   };
 
-  return (
-   <div className='navbar menu'>
+  return ( <div className='navbar menu'>
 
-     {/* ------------ Section Desktop -----------*/}
-      <nav className='menu-nav menu-content desktop-menu'>
-        <div className={ withMenuBars ? 'hidden lg:block' : 'block' }>
-          <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal }
-                    horizontal={ horizontal } hoverDropdown={ hoverDropdown }/>
+    { isMobile ? //------------ Section Desktop ----------
+     <nav className='menu-nav menu-content desktop-menu'>
+       <div className={ withMenuBars ? 'hidden lg:block' : 'block' }>
+         <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal }
+                   horizontal={ horizontal } hoverDropdown={ hoverDropdown }/>
 
-        </div>
-        {
-          // Icon
-         withMenuBars && (
-          <span className='block lg:hidden text-2xl animate-fade-in' onClick={ handleOpenModal }>
-            <MenuBarsIcon classIcons='cursor-pointer'/>
-          </span>
-         ) }
-      </nav>
+       </div>
+     </nav>
 
-      { withMenuBars && openMenuBars && (
-
-      //----------- Section Mobile  -----------
-      <nav className='menu-nav menu-content mobil-menu'>
-        <Modal isOpen={ openMenuBars } onClose={ handleOpenModal }>
-          <div className='content-menu block lg:hidden'>
-            <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal }
-                      menuH={ horizontal }/>
-          </div>
-        </Modal>
-      </nav>
-     )}
-   </div>
-  );
+     : withMenuBars && (   //----------- Section Mobile  -----------
+     <nav className='menu-nav menu-content mobil-menu'>
+         <span className='block lg:hidden text-2xl animate-fade-in' onClick={ handleOpenModal }>
+           <MenuBarsIcon classIcons='cursor-pointer'/>
+         </span>
+       <Modal isOpen={ openMenuBars } onClose={ handleOpenModal }>
+         <div className='content-menu block lg:hidden'>
+           <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal }
+                     menuH={ horizontal }/>
+         </div>
+       </Modal>
+     </nav>
+    )}
+  </div> );
 };
 
 export { Menu };
