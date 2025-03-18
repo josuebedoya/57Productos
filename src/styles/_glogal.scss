@@ -19,3 +19,8 @@
 @import 'templates/parts/money';
 @import './templates/infoAbout';
 @import './templates/footer';
+
+// Default Styles Template
+a{
+  color: var( $color-primary );
+}

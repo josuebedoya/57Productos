@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { MenuBarsIcon, AngleRightIcon } from '@/resources/icons.jsx';
+import { MenuBarsIcon } from '@/resources/icons.jsx';
 import { Dropdown } from "@/components/menu/dropdown.jsx";
+import { Modal } from '@/components/modal.jsx';
 
-const Menu = ( { items, classLink, menuH, withMenuBars, openMenu, target = '_self' } ) => {
+const Menu = ( { items, classLink, horizontal, withMenuBars, openMenu, target = '_self', hoverDropdown = true} ) => {
 
   const [ openMenuBars, setOpenMenuBars ] = useState( false );
 
@@ -16,34 +16,35 @@ const Menu = ( { items, classLink, menuH, withMenuBars, openMenu, target = '_sel
 
   return (
    <div className='navbar menu'>
-     <nav className={ `menu-nav ${ withMenuBars ? 'hidden lg:block' : 'block' }`}
-     >
-       <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal } menuH={ menuH }/>
-     </nav>
-     {
-       withMenuBars ?
-        <span className='block lg:hidden text-2xl' onClick={ handleOpenModal }>
-            <MenuBarsIcon classIcons='cursor-pointer'/>
-          </span> : null
-     }
-     {
-       withMenuBars && openMenuBars ? (
-        <div
-         className='modal-menu lg:hidden absolute w-full h-full min-h-screen min-w-full bg-black/70 left-0 top-0 z-modal flex justify-start items-center'>
-          <div
-           className='menu-nav-mobile left-0 top-0 h-screen min-h-full w-64 p-4 bg-white z-modal overflow-y-auto overflow-x-hidden'>
-            <nav className='menu-nav block lg:hidden'>
-             <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal } menuH={ menuH }/>
-            </nav>
-          </div>
-          <div className='close-menu h-screen w-5 bg-transparent flex items-center relative left-5'>
-              <span onClick={ handleOpenModal }>
-                <AngleRightIcon classIcons='text-white cursor-pointer text-xl hover:scale-125 duration-200'/>
-              </span>
-          </div>
+
+     {/* ------------ Section Desktop -----------*/}
+      <nav className='menu-nav menu-content desktop-menu'>
+        <div className={ withMenuBars ? 'hidden lg:block' : 'block' }>
+          <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal }
+                    horizontal={ horizontal } hoverDropdown={ hoverDropdown }/>
+
         </div>
-       ) : null
-     }
+        {
+          // Icon
+         withMenuBars && (
+          <span className='block lg:hidden text-2xl animate-fade-in' onClick={ handleOpenModal }>
+            <MenuBarsIcon classIcons='cursor-pointer'/>
+          </span>
+         ) }
+      </nav>
+
+      { withMenuBars && openMenuBars && (
+
+      //----------- Section Mobile  -----------
+      <nav className='menu-nav menu-content mobil-menu'>
+        <Modal isOpen={ openMenuBars } onClose={ handleOpenModal }>
+          <div className='content-menu block lg:hidden'>
+            <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal }
+                      menuH={ horizontal }/>
+          </div>
+        </Modal>
+      </nav>
+     )}
    </div>
   );
 };

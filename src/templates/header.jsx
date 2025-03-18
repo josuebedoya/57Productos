@@ -16,7 +16,7 @@ const menuItems = [
   { name: 'Contacto', url: Path_page.CONTACT },
 ];
 
-const classLink = 'text-Primary hover:shadow-Secondary hover:text-Secondary family-oswald text-lg tracking-wide';
+const classLink = 'text-Primary hover:shadow-Secondary hover:text-Secondary family-oswald text-lg tracking-wide px-4';
 
 const Header = () => {
   const [ displaySearchEngine, setDisplaySearchEngine ] = useState( false );
@@ -121,7 +121,7 @@ const Header = () => {
          {/* List Menu */ }
          <div
           className='list-menu-section px-4 lg:pr-0 col-span-2 sm:col-span-1 lg:col-span-6 flex items-center justify-end order-2 sm:order-3 lg:order-2'>
-           <Menu items={ menuItems } classLink={ classLink } menuH withMenuBars openMenu={ handldeOpenModal }/>
+           <Menu items={ menuItems } classLink={ classLink } horizontal withMenuBars openMenu={ handldeOpenModal }/>
          </div>
 
          {/* Search button, cart, and profile */ }
