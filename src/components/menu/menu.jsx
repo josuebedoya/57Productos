@@ -10,9 +10,9 @@ const Menu = ( { items, classLink, horizontal, withMenuBars, openMenu, target = 
 
   const handleResize = () => {
     if ( window.innerWidth < 1024 ) {
-      setIsMobile( false )
-    } else {
       setIsMobile( true )
+    } else {
+      setIsMobile( false )
     }
   };
 
@@ -38,7 +38,7 @@ const Menu = ( { items, classLink, horizontal, withMenuBars, openMenu, target = 
 
   return ( <div className='navbar menu'>
 
-    { isMobile ? //------------ Section Desktop ----------
+    { !isMobile ? //------------ Section Desktop ----------
      <nav className='menu-nav menu-content desktop-menu'>
        <div className={ withMenuBars ? 'hidden lg:block' : 'block' }>
          <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal }
