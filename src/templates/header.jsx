@@ -11,7 +11,7 @@ import { useCart } from '@/context/cart';
 const menuItems = [
   { name: 'Inicio', url: Path_page.HOME },
   { name: 'Nosotros', url: Path_page.US },
-  { name: 'Servicios', url: Path_page.SERVICES },
+  { name: 'Servicios', url: Path_page.SERVICES, items: [{name: 'Servicio 1', url: Path_page.SERVICES + 'Servicio-1'}] },
   { name: 'Tienda', url: Path_page.STORE },
   { name: 'Contacto', url: Path_page.CONTACT },
 ];
@@ -121,7 +121,7 @@ const Header = () => {
          {/* List Menu */ }
          <div
           className='list-menu-section px-4 lg:pr-0 col-span-2 sm:col-span-1 lg:col-span-6 flex items-center justify-end order-2 sm:order-3 lg:order-2'>
-           <Menu items={ menuItems } classLink={ classLink } horizontal withMenuBars openMenu={ handldeOpenModal }/>
+           <Menu items={ menuItems } classLink={ classLink } horizontal withMenuBars openMenu={ handldeOpenModal } typeMenuMobile={ 1 }/>
          </div>
 
          {/* Search button, cart, and profile */ }
