@@ -21,6 +21,7 @@ const Dropdown = ( { items, level = 0, target, classLink = "px-2", handleOpenMod
 
         // Close Dropdown if navigation
              onClick={ () => {
+               handleOpenModal();
                setShow( {} )
              } }
        >
@@ -33,6 +34,7 @@ const Dropdown = ( { items, level = 0, target, classLink = "px-2", handleOpenMod
          // Close Dropdown in Click
          onClick={ ( e ) => {
            handleShow( item.id );
+           handleOpenModal();
            e.stopPropagation();
          } }
 

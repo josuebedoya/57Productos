@@ -41,7 +41,7 @@ const Menu = ( { items, classLink, horizontal, withMenuBars, openMenu, target = 
     { !isMobile ? //------------ Section Desktop ----------
      <nav className='menu-nav menu-content desktop-menu'>
        <div className={ withMenuBars ? 'hidden lg:block' : 'block' }>
-         <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal }
+         <Dropdown items={ items } classLink={ classLink } target={ target }
                    horizontal={ horizontal } hoverDropdown={ hoverDropdown }/>
 
        </div>
