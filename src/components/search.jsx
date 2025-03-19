@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
+import { useState } from "react";
 import { SearchEngineIcon } from "@/resources/icons.jsx";
 import { Button } from "@/components/button.jsx";
 import { Input } from "@/components/input.jsx";
@@ -87,8 +86,8 @@ const Search = () => {
      {/* Search Engine Dropdown */ }
      <div className='search-engine-section flex justify-center items-center w-full z-modal'>
        { showModal && (
-        <div className='content'>
-          <div className={ `input-section-btn ${ showModal ? 'active' : '' }` }>
+        <div className='content w-1/2'>
+          <div className={ `modal-search w-screen z-modal absolute inset-0 bg-white animate-fade-in ${ showModal ? 'active' : '' }` }>
             <div className='flex items-center space-x-4 w-full'>
               <form method='GET' onSubmit={ submitQuery }>
                 <Input type='text' maxLength={ 70 } value={ valueSearch } onChange={ handleValueSearch } name='search'/>
