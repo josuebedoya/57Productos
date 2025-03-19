@@ -1,4 +1,4 @@
-import { Spin } from '@/components/Spin.jsx';
+import { Spin } from '@/components/spin.jsx';
 
 const Slider = ( { title, children } ) => {
   return ( <>
