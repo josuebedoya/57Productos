@@ -21,11 +21,9 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
     if(isOpen) setShowing(isOpen);
 
     //Disabled Scroll Window
-    if ( isOpen ) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+      const preventScroll = (event) => event.preventDefault();
+      isOpen ? window.addEventListener("wheel", preventScroll, { passive: false })
+       : window.removeEventListener("wheel", preventScroll);
 
     //interval to prevent onClose from being executed once at startup
     let waitingTime;
@@ -38,6 +36,7 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
     return () => {
       clearTimeout( waitingTime );
       window.removeEventListener( 'click', clickOutside );
+      window.removeEventListener("wheel", preventScroll);
     };
 
   }, [ isOpen, clickOutside ] );
