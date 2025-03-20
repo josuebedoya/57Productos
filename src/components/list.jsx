@@ -3,15 +3,15 @@ import { clsx } from 'clsx';
 import { Button } from '@/components/button.jsx';
  import { WarningModal } from "@/components/warningModal.jsx";
 
-const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, children } ) => {
+const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, textEmpty, children } ) => {
   const [ indexLast, setIndexLast ] = useState( columns * rows );
   const [ indexFirst, setIndexFirst ] = useState( 0 );
   const [ isChanged, setIsChanged ] = useState( false );
 
   const defaultBreakpoints = {
-    zero: columns,
-    sm: columns,
-    md: columns,
+    zero: columns- 2,
+    sm: columns - 2,
+    md: columns - 1,
     lg: columns,
     xl: columns,
   };
@@ -48,9 +48,11 @@ const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, c
   }, [ isChanged ] );
 
   //Render alert
-    if(children.length === 0 ) {
+    if(!children ) {
       // console.log(children.length ===0 ? 'Cero ' : children.length)
-      return <WarningModal type='warning' bgColor='bg-gray-400' itemClass='rounded-lg shadow-white' >No hay elementos para mostrar</WarningModal>
+      return <WarningModal type='warning' bgColor='bg-gray-400' itemClass='rounded-lg shadow-white' >
+        {textEmpty ? textEmpty : 'No hay elementos para mostrar' }
+      </WarningModal>
     }
 
   // Render view
