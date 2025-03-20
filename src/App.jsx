@@ -14,7 +14,7 @@ import { Profile } from '@/layouts/profile'
 import { TermsAndConditions } from '@/layouts/termsAndConditions'
 import { Payments } from '@/layouts/payments'
 import { Footer } from '@/templates/footer.jsx'
-import { ModalProduct } from '@/components/product/modalProduct.jsx';
+import { FindResults } from "@/layouts/findResults.jsx";
 import ErrorBoundary from "@/utils/errorBoundary.jsx";
 
 function App(){
@@ -22,7 +22,6 @@ function App(){
 
   return ( <>
     <ErrorBoundary>
-    <ModalProduct/>
       <Header/>
       <main id='Page'
             className={ `page page-${ Slug( location.pathname === '/' ? 'inicio': location.pathname ) } m-0 p-0 w-full max-w-full h-auto max-h-full` }>
@@ -34,6 +33,7 @@ function App(){
           <Route path={ Path_page.CONTACT } element={ <Contact/> }/>
           <Route path={ Path_page.PROFILE } element={ <Profile/> }/>
           <Route path={ Path_page.PAYMENTS } element={ <Payments/> }/>
+          <Route path={ Path_page.SEARCH } element={ <FindResults/> }/>
           <Route path={ Path_page.TERMS_AND_CONDITIONS } element={ <TermsAndConditions/> }/>
           <Route path={ Path_page.ERROR } element={ <Error/> }/>
         </Routes>

@@ -9,6 +9,7 @@ export const Path_page = {
   PRIVACY_POLICY: '/politica-de-privacidad',
   FREQUENTLY_ASKED_QUESTIONS: '/preguntas-frecuentes',
   PAYMENTS: 'perfil/pagos',
+  SEARCH: 'resultados',
   CATEGORIES_STORE: {
     FEATURED: '/destacados',
     OFFER: '/ofertas',
