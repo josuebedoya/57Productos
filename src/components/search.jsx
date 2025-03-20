@@ -1,40 +1,80 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 import { SearchEngineIcon } from "@/resources/icons.jsx";
 import { Button } from "@/components/button.jsx";
 import { Input } from "@/components/input.jsx";
-import { useCart } from "@/context/cart.jsx";
+import { useDatabase } from "@/utils/database.jsx";
+import { useResults } from "@/context/ParamsUrl.jsx";
+import { normalizeText } from "@/utils/handleText.jsx";
+import { Path_page } from "@/routes.jsx";
 
 const Search = () => {
   const [ showModal, SetShowModal ] = useState( false );
   const [ valueSearch, setValueSearch ] = useState( '' );
-  const { cart } = useCart();
-  console.log(cart)
+  const [ message, setMessage ] = useState( '' );
+  const [ found, setFound ] = useState( [] );
+  const { get, data } = useDatabase();
+  const { termToGet } = useResults();
+
+  const navigate = useNavigate();
+
+  // get Products
+  useEffect( () => {
+    get( 'productos' );
+  }, [] );
 
   // Open  Search engine
   const openModal = () => {
-    SetShowModal( !showModal );
+    SetShowModal( true );
+    window.addEventListener( 'wheel', ( e ) => e.preventDefault(), { passive: true } );
   }
 
-  const onChangeValueSearch = ( { value } ) => {
+  // Close  Search engine && send query
+  const submitQuery = (e) => {
+    e.preventDefault();
+    if(valueSearch.trim() !== ''){
+      navigate( Path_page.SEARCH + `?${ termToGet }=${ encodeURIComponent( valueSearch ) }` );
+      SetShowModal( false );
+      window.removeEventListener( 'wheel', ( e ) => e.preventDefault() );
+    }else{
+      setMessage( 'No se pueden buscar solo espacios en blanco...' );
+      setFound( [] );
+    }
+  }
+
+  //handle Onchange value input
+  const handleValueSearch = ( { value } ) => {
     setValueSearch( value );
   };
 
-  const CloseModal = () => {
+  //  handle search results
+  const handleFoundItems = () => {
 
-    let valueInput = valueSearch.toLocaleLowerCase();
-    let productFound = cart.find( product => product.title.toLocaleLowerCase() === valueInput );
+    // get value search
+    const inputSearcher = normalizeText( valueSearch );
 
-    if ( valueSearch ) {
-      if ( productFound ) {
-        alert( `el producto '${ valueSearch }' aún está dispible, quedan ${ productFound.amount }` );
-        setValueSearch( '' );
-      } else {
-        alert( `No se encontró '${ valueSearch }', revisa o intenta más tarde` );
-      }
-    } else {
-      alert( 'Ingresa un nombre para poder realizar la busqueda' );
+    // Filtered items found
+    const itemsFound = data.filter( item => normalizeText( item.nombre ).includes( inputSearcher ) );
+
+    // if not found items
+    if ( itemsFound.length === 0 ) {
+      setFound( [] );
+      setMessage( `No se encontraron producto/os "${ valueSearch }"` )
+      return;
     }
+
+    // Update list found
+    setFound( itemsFound );
   };
+
+  useEffect( () => {
+    if ( data && valueSearch ) {
+      handleFoundItems();
+    } else {
+      setMessage( 'Debes ingresar almenos un Caracter' );
+      setFound( [] );
+    }
+  }, [ valueSearch ] );
 
   return (
    <>
@@ -47,16 +87,19 @@ const Search = () => {
      {/* Search Engine Dropdown */ }
      <div className='search-engine-section flex justify-center items-center w-full z-modal'>
        { showModal && (
-        <div className={ `input-section-btn ${ showModal ? 'active' : '' }` }>
-          <div className='flex items-center space-x-4 w-full'>
-            <Input type='text' maxLength={ 50 } value={ valueSearch } onChange={ onChangeValueSearch }/>
-            <Button icon={ <SearchEngineIcon/> } onClick={ CloseModal } classBtn='search-btn'/>
+        <div className='content'>
+          <div className={ `input-section-btn ${ showModal ? 'active' : '' }` }>
+            <div className='flex items-center space-x-4 w-full'>
+              <form method='GET' onSubmit={ submitQuery }>
+                <Input type='text' maxLength={ 70 } value={ valueSearch } onChange={ handleValueSearch } name='search'/>
+              </form>
+              <Button icon={ <SearchEngineIcon/> } onClick={ submitQuery } classBtn='search-btn' type='submit'/>
+            </div>
           </div>
         </div>
        ) }
      </div>
    </>
-
   );
 };
 
