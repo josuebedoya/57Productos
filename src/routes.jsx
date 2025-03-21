@@ -1,4 +1,3 @@
-// eslint-disable-next-line react-refresh/only-export-components
 export const Path_page = {
   HOME: '/',
   US: '/nosotros',
@@ -10,6 +9,7 @@ export const Path_page = {
   PRIVACY_POLICY: '/politica-de-privacidad',
   FREQUENTLY_ASKED_QUESTIONS: '/preguntas-frecuentes',
   PAYMENTS: 'perfil/pagos',
+  SEARCH: 'resultados',
   CATEGORIES_STORE: {
     FEATURED: '/destacados',
     OFFER: '/ofertas',
@@ -17,12 +17,4 @@ export const Path_page = {
   },
   COMMENTS: '/comentarios',
   ERROR: '*'
-};
-
-export const Slug = (t) => {
-  return t.trim() // Delete spaces from sides
-   .replaceAll(' ', '-') // Replace spaces to script
-   .replace(/[^a-zA-Z0-9-]/g, '') // Delete characters what not is letter
-   .replace(/-+/g, '-') // If there are more the one "-" ,  leaves only one
-   .toLowerCase(); // Covert to lower case
 };

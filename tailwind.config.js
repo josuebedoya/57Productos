@@ -75,7 +75,9 @@ module.exports = {
         'fade-in': 'fade-in .34s ease-in both',
         'shaking': 'shaking  2.5s linear infinite',
         'collapse-top-in': 'collapse-top-in .5s ease-in both',
-        'collapse-top-out': 'collapse-top-out .5s ease-out both'
+        'collapse-top-out': 'collapse-top-out .5s ease-out both',
+        'fade-up-in': 'fade-up-in .33s ease-in both',
+        'fade-down-in': 'fade-down-in .33 ease-in both'
       },
       keyframes: {
         'fade-out': {
@@ -110,6 +112,14 @@ module.exports = {
         'collapse-top-in': {
           '0%': { clipPath: 'inset(0 0 100%)'  },
           '100%': { clipPath: 'inset(0 0 0)' }
+        },
+        'fade-up-in': {
+          '0%': {transform:'translateY(-70px)', opacity: 0},
+          '100%': {transform:'translateY(0)', opacity: 1}
+        },
+        'fade-down-in': {
+          '0%': {transform:'translateY(70px)', opacity: 0},
+          '100%': {transform:'translateY(0)', opacity: 1}
         }
       },
     },

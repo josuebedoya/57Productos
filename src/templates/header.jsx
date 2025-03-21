@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
-import { ProfileIcon, SearchEngineIcon, AngleBottomIcon } from '@/resources/icons';
+import { ProfileIcon, AngleBottomIcon } from '@/resources/icons';
 import logo from '/images/logo.png';
-import { Button } from '@/components/button.jsx';
+import { Search } from "@/components/search.jsx";
 import { Cart } from '@/components/cart.jsx';
-import { Input } from '@/components/input.jsx';
 import { Menu } from '@/components/menu/menu.jsx';
 import { Path_page } from '@/routes';
-import { useCart } from '@/context/cart';
 
 const menuItems = [
   { name: 'Inicio', url: Path_page.HOME },
@@ -20,49 +18,16 @@ const classLink = 'text-Primary hover:shadow-Secondary hover:text-Secondary fami
 
 const Header = () => {
   const [ displaySearchEngine, setDisplaySearchEngine ] = useState( false );
-  const [ valueSearch, setValueSearch ] = useState( '' );
   const [ isOpenMenu, setIsOpenMenu ] = useState( false );
   const [ showIcons, setShowIcons ] = useState( false );
   const [ modalCart, setModalCart ] = useState( false );
-  const { cart } = useCart();
 
-  // Open  Search engine
-  const SearchEngineDisplay = () => {
-    setDisplaySearchEngine( !displaySearchEngine );
-
-    if ( showIcons === false ) { // Hidde icons from menu
-      setShowIcons( !showIcons );
-    }
-  }
-
-  const SearchEngineClose = () => {
-
-    let valueInput = valueSearch.toLocaleLowerCase();
-    let productFound = cart.find( product => product.title.toLocaleLowerCase() === valueInput );
-
-    if ( valueSearch ) {
-      if ( productFound ) {
-        alert( `el producto '${ valueSearch }' aún está dispible, quedan ${ productFound.amount }` );
-        setValueSearch( '' );
-        setDisplaySearchEngine( !displaySearchEngine );
-      } else {
-        alert( `No se encontró '${ valueSearch }', revisa o intenta más tarde` );
-      }
-    } else {
-      alert( 'Ingresa un nombre para poder realizar la busqueda' );
-    }
-  };
-
-  const onChangeValueSearch = ( { value } ) => {
-    setValueSearch( value );
-  };
 
   const handldeOpenModal = () => {
     setIsOpenMenu( !isOpenMenu );
   };
 
   const handleShowIconsMobile = () => {
-    console.log( showIcons );
     setShowIcons( !showIcons );
   };
 
@@ -127,12 +92,8 @@ const Header = () => {
          {/* Search button, cart, and profile */ }
          <div
           className={ `profileSearch-section ${ showIcons ? 'mn:-translate-y-12 mn:delay-100' : 'mn:translate-y-22 mn:pt-3 mn:pb-4' } mn:-z-10 mn:bg-white mn:absolute mn:duration-700 w-full sm:w-auto sm:col-span-4 md:col-span-3 flex items-center justify-center sm:justify-end lg:justify-center gap-4 lg:pr-4 order-3 sm:order-2 lg:order-3` }>
-           <div className={ `search-btn-section duration-500 ${ displaySearchEngine ? 'button-active' : '' }` }>
-             <Button
-              icon={ <SearchEngineIcon/> }
-              classBtn='search-btn'
-              onClick={ SearchEngineDisplay }
-             />
+           <div className='search-section'>
+             <Search/>
            </div>
            <div className='cart-section'>
              <Cart close={ modalCart }/>
@@ -149,23 +110,6 @@ const Header = () => {
        <span
         className={ `${ showIcons ? 'mn:-translate-y-0 mn:delay-0 mn:h-5' : 'mn:translate-y-14 mn:delay-300 mn:h-8' } mn:absolute  duration-500 sm:hidden mx-auto w-full flex justify-center items-center bg-white` }
         onClick={ handleShowIconsMobile }> < AngleBottomIcon/></span>
-
-       {/* Search Engine Dropdown */ }
-       <div className='search-engine-section flex justify-center w-full z-50'>
-         { displaySearchEngine && (
-          <div
-           className={ `input-section-btn duration-500 ${ displaySearchEngine ? 'active' : '' } w-full md:w-1/2 bg-white p-4 rounded-lg shadow-bottom-x absolute z-10` }>
-            <div className='flex items-center space-x-4'>
-              <Input type='text' maxLength={ 50 } value={ valueSearch } onChange={ onChangeValueSearch }/>
-              <Button
-               icon={ <SearchEngineIcon/> }
-               onClick={ SearchEngineClose }
-               classBtn='search-btn'
-              />
-            </div>
-          </div>
-         ) }
-       </div>
      </div>
    </header>
   );

@@ -3,7 +3,7 @@ import { MenuBarsIcon } from '@/resources/icons.jsx';
 import { Dropdown } from "@/components/menu/dropdown.jsx";
 import { Modal } from '@/components/modal.jsx';
 
-const Menu = ( { items, classLink, horizontal, withMenuBars, openMenu, target = '_self', hoverDropdown = true} ) => {
+const Menu = ( { items, classLink, horizontal, withMenuBars, typeMenuMobile, openMenu, target = '_self', hoverDropdown = true} ) => {
 
   const [ openMenuBars, setOpenMenuBars ] = useState( false );
   const [ isMobile, setIsMobile ] = useState( false );
@@ -52,7 +52,7 @@ const Menu = ( { items, classLink, horizontal, withMenuBars, openMenu, target = 
          <span className='block lg:hidden text-2xl animate-fade-in' onClick={ handleOpenModal }>
            <MenuBarsIcon classIcons='cursor-pointer'/>
          </span>
-       <Modal isOpen={ openMenuBars } onClose={ handleOpenModal }>
+       <Modal isOpen={ openMenuBars } onClose={ handleOpenModal } type={ typeMenuMobile }>
          <div className='content-menu block lg:hidden'>
            <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal }
                      menuH={ horizontal }/>

@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
+    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="+ Use">
+      <change afterPath="$PROJECT_DIR$/src/layouts/findResults.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/dropdown.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/dropdown.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/search.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +83,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/resources/icons.jsx" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/styles/_glogal.scss" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -98,32 +100,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "git-widget-placeholder": "dev",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "22.13.0",
-    "javascript.nodejs.core.library.typings.version": "22.13.10",
-    "last_opened_file_path": "C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "settings.editor.selected.configurable": "configurable.group.language",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.13.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.13.10&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="dev" />
@@ -135,11 +137,11 @@
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\components\menu" />
       <recent name="C:\Users\josue\OneDrive\Desktop\Proyect React\shopp-online\src\styles\templates" />
       <recent name="C:\Users\josue\OneDrive\Desktop\Proyect React\shopp-online\src\templates" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\temp" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\resources\images\products" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -148,6 +150,16 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -215,134 +227,9 @@
       <workItem from="1740881022363" duration="3725000" />
       <workItem from="1741834701935" duration="235000" />
       <workItem from="1741962820174" duration="29818000" />
-    </task>
-    <task id="LOCAL-00001" summary="Add two icons">
-      <option name="closed" value="true" />
-      <created>1730166741698</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1730166741698</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Advanced MainSectionProfile, add price with money global">
-      <option name="closed" value="true" />
-      <created>1730175342782</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1730175342782</updated>
-    </task>
-    <task id="LOCAL-00003" summary="↔ money, main section, profile, No finish...">
-      <option name="closed" value="true" />
-      <created>1730266389539</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1730266389540</updated>
-    </task>
-    <task id="LOCAL-00004" summary=" + validation to button text">
-      <option name="closed" value="true" />
-      <created>1734385167247</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1734385167247</updated>
-    </task>
-    <task id="LOCAL-00005" summary="+ icons | + new class to scrollbar and max-heights | + add view to cart component">
-      <option name="closed" value="true" />
-      <created>1734385633057</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1734385633057</updated>
-    </task>
-    <task id="LOCAL-00006" summary="+ new animation to tailwind | ↔ cart, add condition  to close modal if scroll down, add animation">
-      <option name="closed" value="true" />
-      <created>1734562004103</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1734562004103</updated>
-    </task>
-    <task id="LOCAL-00007" summary="+ new animation">
-      <option name="closed" value="true" />
-      <created>1734642004204</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1734642004204</updated>
-    </task>
-    <task id="LOCAL-00008" summary="+ Function to create Slugs  | + page payments">
-      <option name="closed" value="true" />
-      <created>1734642096490</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1734642096490</updated>
-    </task>
-    <task id="LOCAL-00009" summary="+ page payments">
-      <option name="closed" value="true" />
-      <created>1734642132337</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1734642132337</updated>
-    </task>
-    <task id="LOCAL-00010" summary="+ icons">
-      <option name="closed" value="true" />
-      <created>1734642290370</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1734642290370</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Payments routes">
-      <option name="closed" value="true" />
-      <created>1734642323527</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1734642323527</updated>
-    </task>
-    <task id="LOCAL-00012" summary="✓ cart | + add validation to close modal | + news products test">
-      <option name="closed" value="true" />
-      <created>1734647065779</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1734647065779</updated>
-    </task>
-    <task id="LOCAL-00013" summary="✓ cart">
-      <option name="closed" value="true" />
-      <created>1734648473223</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1734648473223</updated>
-    </task>
-    <task id="LOCAL-00014" summary="+ files">
-      <option name="closed" value="true" />
-      <created>1736345806297</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1736345806297</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Migrate to vite">
-      <option name="closed" value="true" />
-      <created>1737063766557</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1737063766557</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Migrate to vite">
-      <option name="closed" value="true" />
-      <created>1737063780660</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1737063780660</updated>
+      <workItem from="1742221180990" duration="27976000" />
+      <workItem from="1742314369811" duration="22460000" />
+      <workItem from="1742402314210" duration="49677000" />
     </task>
     <task id="LOCAL-00017" summary="Migrate to vite">
       <option name="closed" value="true" />
@@ -528,7 +415,215 @@
       <option name="project" value="LOCAL" />
       <updated>1741908399569</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="+ variables : Styles">
+      <option name="closed" value="true" />
+      <created>1742238605144</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1742238605144</updated>
+    </task>
+    <task id="LOCAL-00041" summary="+ hover handle show dropdown : Components">
+      <option name="closed" value="true" />
+      <created>1742238688226</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1742238688226</updated>
+    </task>
+    <task id="LOCAL-00042" summary="+ variable Tailwind">
+      <option name="closed" value="true" />
+      <created>1742254571442</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1742254571442</updated>
+    </task>
+    <task id="LOCAL-00043" summary="- Styles p">
+      <option name="closed" value="true" />
+      <created>1742254724280</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1742254724280</updated>
+    </task>
+    <task id="LOCAL-00044" summary="↔ prop MenuH to horizontal">
+      <option name="closed" value="true" />
+      <created>1742254776597</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1742254776597</updated>
+    </task>
+    <task id="LOCAL-00045" summary="↔ Modal and MEnu">
+      <option name="closed" value="true" />
+      <created>1742254834274</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1742254834274</updated>
+    </task>
+    <task id="LOCAL-00046" summary="+ handle opening modal variable">
+      <option name="closed" value="true" />
+      <created>1742314003727</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1742314003727</updated>
+    </task>
+    <task id="LOCAL-00047" summary="↔ Observer animation modal">
+      <option name="closed" value="true" />
+      <created>1742314294165</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1742314294165</updated>
+    </task>
+    <task id="LOCAL-00048" summary="+ Validation content mobile &amp; desktop : Components | + Resize event listener">
+      <option name="closed" value="true" />
+      <created>1742316686715</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1742316686715</updated>
+    </task>
+    <task id="LOCAL-00049" summary="- .env">
+      <option name="closed" value="true" />
+      <created>1742316853198</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1742316853198</updated>
+    </task>
+    <task id="LOCAL-00050" summary="↔ Validation isMobile to menu : Components">
+      <option name="closed" value="true" />
+      <created>1742317443458</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1742317443459</updated>
+    </task>
+    <task id="LOCAL-00051" summary="↔ default class to modal &amp; height">
+      <option name="closed" value="true" />
+      <created>1742324880722</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1742324880722</updated>
+    </task>
+    <task id="LOCAL-00052" summary="+ Close Modal in Mobile :  Components">
+      <option name="closed" value="true" />
+      <created>1742325304963</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1742325304963</updated>
+    </task>
+    <task id="LOCAL-00053" summary="↔ Time animation Fade">
+      <option name="closed" value="true" />
+      <created>1742330631370</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1742330631370</updated>
+    </task>
+    <task id="LOCAL-00054" summary="↔ Time animation Fade">
+      <option name="closed" value="true" />
+      <created>1742331910107</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1742331910107</updated>
+    </task>
+    <task id="LOCAL-00055" summary="+ Use Type Modal inMobile">
+      <option name="closed" value="true" />
+      <created>1742333906921</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1742333906921</updated>
+    </task>
+    <task id="LOCAL-00056" summary="+ Prop typeMenu">
+      <option name="closed" value="true" />
+      <created>1742339849439</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1742339849439</updated>
+    </task>
+    <task id="LOCAL-00057" summary="+ Search Component">
+      <option name="closed" value="true" />
+      <created>1742339919834</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1742339919834</updated>
+    </task>
+    <task id="LOCAL-00058" summary="+ util handle text">
+      <option name="closed" value="true" />
+      <created>1742410317479</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1742410317480</updated>
+    </task>
+    <task id="LOCAL-00059" summary="↔  handle disabled scroll">
+      <option name="closed" value="true" />
+      <created>1742418703798</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1742418703798</updated>
+    </task>
+    <task id="LOCAL-00060" summary="↔ Upgrate Filter Search">
+      <option name="closed" value="true" />
+      <created>1742426011604</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1742426011604</updated>
+    </task>
+    <task id="LOCAL-00061" summary="+ Context to handle params url">
+      <option name="closed" value="true" />
+      <created>1742486612729</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1742486612729</updated>
+    </task>
+    <task id="LOCAL-00062" summary="+ Use search but url params &amp; use database products">
+      <option name="closed" value="true" />
+      <created>1742487812287</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1742487812287</updated>
+    </task>
+    <task id="LOCAL-00063" summary="↔ Validation children | ↔ Default breakpoints: Components">
+      <option name="closed" value="true" />
+      <created>1742489955208</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1742489955208</updated>
+    </task>
+    <task id="LOCAL-00064" summary="+ Component Pagination | + new type pagination list :  Component">
+      <option name="closed" value="true" />
+      <created>1742511939833</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1742511939833</updated>
+    </task>
+    <task id="LOCAL-00065" summary="+ library">
+      <option name="closed" value="true" />
+      <created>1742511965130</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1742511965130</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,32 +654,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="✓ cart | + add validation to close modal | + news products test" />
-    <MESSAGE value="✓ cart" />
-    <MESSAGE value="+ new animation to tailwind | ↔ cart, add condition  to close modal if scroll down, add animation" />
-    <MESSAGE value="+ files" />
-    <MESSAGE value="Migrate to vite" />
-    <MESSAGE value="Migrate to vite V-1" />
-    <MESSAGE value="Migrate to vite V-2" />
-    <MESSAGE value="Migrate to vite V-3" />
-    <MESSAGE value="Migrate to vite V-3.1" />
-    <MESSAGE value="Migrate to vite V-3.4.1" />
-    <MESSAGE value="Migrate to vite V-3.4.2" />
-    <MESSAGE value="Migrate to vite V-3.4.3" />
-    <MESSAGE value="Migrate to vite V-3.4.4" />
-    <MESSAGE value="+ onclick function to button  | + add valitadtion from slug | change route output.css" />
-    <MESSAGE value="+ fetch categories from database | ↔ rename file Avaible to categoiresList | ↔ component list" />
-    <MESSAGE value=" ↔ Footer Styles" />
-    <MESSAGE value="+ Error Boundary" />
-    <MESSAGE value="+ interval to warning modal" />
-    <MESSAGE value="+ hook insert data" />
-    <MESSAGE value="↔ Use hook to get categories" />
-    <MESSAGE value="+ validation to carousel prop" />
-    <MESSAGE value="↔ Carousel to carousel media" />
-    <MESSAGE value="+ Spin component" />
-    <MESSAGE value="+ dropdown component to menu |  ↔ move menu inside directory menu" />
-    <MESSAGE value="+ hook update | ↔ parameter qualification | use update in contextComment" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ hook update | ↔ parameter qualification | use update in contextComment" />
+    <MESSAGE value="+ hover handle show dropdown : Components" />
+    <MESSAGE value="+ variable Tailwind" />
+    <MESSAGE value="- Styles p" />
+    <MESSAGE value="↔ prop MenuH to horizontal" />
+    <MESSAGE value="↔ Modal and MEnu" />
+    <MESSAGE value="+ handle opening modal variable" />
+    <MESSAGE value="↔ Observer animation modal" />
+    <MESSAGE value="+ Validation content mobile &amp; desktop : Components | + Resize event listener" />
+    <MESSAGE value="- .env" />
+    <MESSAGE value="↔ Validation isMobile to menu : Components" />
+    <MESSAGE value="↔ default class to modal &amp; height" />
+    <MESSAGE value="+ Close Modal in Mobile :  Components" />
+    <MESSAGE value="↔ Time animation Fade" />
+    <MESSAGE value="+ Use Type Modal inMobile" />
+    <MESSAGE value="+ Prop typeMenu" />
+    <MESSAGE value="+ Search Component" />
+    <MESSAGE value="+ util handle text" />
+    <MESSAGE value="↔  handle disabled scroll" />
+    <MESSAGE value="↔ Upgrate Filter Search" />
+    <MESSAGE value="+ Context to handle params url" />
+    <MESSAGE value="+ Use search but url params &amp; use database products" />
+    <MESSAGE value="↔ Validation children | ↔ Default breakpoints: Components" />
+    <MESSAGE value="+ Component Pagination | + new type pagination list :  Component" />
+    <MESSAGE value="+ Use" />
+    <MESSAGE value="+ library" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ library" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -604,24 +699,9 @@
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/context/comments.jsx</url>
-          <line>16</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/templates/categoriesList.jsx</url>
-          <line>16</line>
+          <line>17</line>
           <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/list.jsx</url>
-          <line>82</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/layouts/store.jsx</url>
-          <line>9</line>
-          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
