@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="+ Use">
-      <change afterPath="$PROJECT_DIR$/src/layouts/findResults.jsx" afterDir="false" />
+    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/images/products/carrot.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/grapes.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/tomato.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/watermelon.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/search.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/green.apple.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/green_apple.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/oinios.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/oinion.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/tomatoes.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/tomatoes_cherry.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/findResults.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/findResults.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,11 +142,11 @@
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public\images\products" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\components\menu" />
       <recent name="C:\Users\josue\OneDrive\Desktop\Proyect React\shopp-online\src\styles\templates" />
       <recent name="C:\Users\josue\OneDrive\Desktop\Proyect React\shopp-online\src\templates" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\temp" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -229,15 +234,8 @@
       <workItem from="1741962820174" duration="29818000" />
       <workItem from="1742221180990" duration="27976000" />
       <workItem from="1742314369811" duration="22460000" />
-      <workItem from="1742402314210" duration="49677000" />
-    </task>
-    <task id="LOCAL-00017" summary="Migrate to vite">
-      <option name="closed" value="true" />
-      <created>1737063842405</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1737063842405</updated>
+      <workItem from="1742402314210" duration="49773000" />
+      <workItem from="1742568151303" duration="3764000" />
     </task>
     <task id="LOCAL-00018" summary="Migrate to vite">
       <option name="closed" value="true" />
@@ -623,7 +621,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742511965130</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="↔ Name search to findResults | add view">
+      <option name="closed" value="true" />
+      <created>1742512125005</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1742512125005</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -654,7 +660,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="+ hover handle show dropdown : Components" />
     <MESSAGE value="+ variable Tailwind" />
     <MESSAGE value="- Styles p" />
     <MESSAGE value="↔ prop MenuH to horizontal" />
@@ -677,9 +682,10 @@
     <MESSAGE value="+ Use search but url params &amp; use database products" />
     <MESSAGE value="↔ Validation children | ↔ Default breakpoints: Components" />
     <MESSAGE value="+ Component Pagination | + new type pagination list :  Component" />
-    <MESSAGE value="+ Use" />
     <MESSAGE value="+ library" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ library" />
+    <MESSAGE value="+ Use" />
+    <MESSAGE value="↔ Name search to findResults | add view" />
+    <option name="LAST_COMMIT_MESSAGE" value="↔ Name search to findResults | add view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
