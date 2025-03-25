@@ -5,13 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/products/default-product.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/melon.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/store.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/database.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Migrate" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,6 +46,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="store" />
+                    <option name="lastUsedInstant" value="1742945075" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
                     <option name="lastUsedInstant" value="1737830918" />
@@ -103,32 +100,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.13.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.13.10&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/USUARIO/Desktop/Practices/josue-practices/database/base-datos-react&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
+    "WebServerToolWindowPanel.toolwindow.show.date": "false",
+    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
+    "WebServerToolWindowPanel.toolwindow.show.size": "false",
+    "git-widget-placeholder": "store",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "22.13.0",
+    "javascript.nodejs.core.library.typings.version": "22.13.10",
+    "last_opened_file_path": "C:/Users/USUARIO/Desktop/Practices/josue-practices/database/base-datos-react",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="dev" />
@@ -238,15 +235,7 @@
       <workItem from="1742578313555" duration="1238000" />
       <workItem from="1742915882409" duration="620000" />
       <workItem from="1742920891019" duration="34000" />
-      <workItem from="1742920948799" duration="21568000" />
-    </task>
-    <task id="LOCAL-00019" summary="Migrate to vite V-1">
-      <option name="closed" value="true" />
-      <created>1737155614098</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1737155614098</updated>
+      <workItem from="1742920948799" duration="21868000" />
     </task>
     <task id="LOCAL-00020" summary="Migrate to vite V-2">
       <option name="closed" value="true" />
@@ -632,7 +621,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742572400619</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="+ storage files new function to get">
+      <option name="closed" value="true" />
+      <created>1742945016762</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1742945016762</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +660,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="- Styles p" />
     <MESSAGE value="↔ prop MenuH to horizontal" />
     <MESSAGE value="↔ Modal and MEnu" />
     <MESSAGE value="+ handle opening modal variable" />
@@ -688,7 +684,8 @@
     <MESSAGE value="+ Use" />
     <MESSAGE value="↔ Name search to findResults | add view" />
     <MESSAGE value="+ Files products &amp; rename" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Files products &amp; rename" />
+    <MESSAGE value="+ storage files new function to get" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ storage files new function to get" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
