@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="+ method to get files products">
+      <change afterPath="$PROJECT_DIR$/public/default-image.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/media.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/database.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/product/product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/store.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/getMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getMedia.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +115,7 @@
     "WebServerToolWindowPanel.toolwindow.show.date": "false",
     "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "store",
     "ignore.virus.scanning.warn.message": "true",
     "javascript.nodejs.core.library.configured.version": "22.13.0",
     "javascript.nodejs.core.library.typings.version": "22.13.10",
@@ -139,11 +143,11 @@
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public\images\products" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\components\menu" />
       <recent name="C:\Users\josue\OneDrive\Desktop\Proyect React\shopp-online\src\styles\templates" />
-      <recent name="C:\Users\josue\OneDrive\Desktop\Proyect React\shopp-online\src\templates" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -241,14 +245,6 @@
       <workItem from="1742915882409" duration="620000" />
       <workItem from="1742920891019" duration="34000" />
       <workItem from="1742920948799" duration="32418000" />
-    </task>
-    <task id="LOCAL-00024" summary="Migrate to vite V-3.4.2">
-      <option name="closed" value="true" />
-      <created>1737404447577</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1737404447577</updated>
     </task>
     <task id="LOCAL-00025" summary="Migrate to vite V-3.4.3">
       <option name="closed" value="true" />
@@ -634,7 +630,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743010860133</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="- innecesary for">
+      <option name="closed" value="true" />
+      <created>1743015916016</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1743015916016</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,8 +669,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="- .env" />
-    <MESSAGE value="↔ Validation isMobile to menu : Components" />
     <MESSAGE value="↔ default class to modal &amp; height" />
     <MESSAGE value="+ Close Modal in Mobile :  Components" />
     <MESSAGE value="↔ Time animation Fade" />
@@ -690,7 +692,9 @@
     <MESSAGE value="- Media files extensioon" />
     <MESSAGE value="+ new images products" />
     <MESSAGE value="+ method get files" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ method get files" />
+    <MESSAGE value="+ method to get files products" />
+    <MESSAGE value="- innecesary for" />
+    <option name="LAST_COMMIT_MESSAGE" value="- innecesary for" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -708,6 +712,12 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/layouts/profile.jsx</url>
           <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/getMedia.js</url>
+          <line>24</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
