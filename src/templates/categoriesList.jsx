@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { useDatabase } from "@/utils/database.jsx";
 import { Path_page } from "@/routes.jsx";
-import { Slug } from "@/utils/handleText.jsx";
+import { Slug } from "@/utils/handleText.js";
 import { Button } from "@/components/button.jsx";
 import { ArrowRightIcon } from '@/resources/icons.jsx';
 import { WarningModal } from '@/components/warningModal.jsx';
