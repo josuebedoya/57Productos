@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDatabase } from "@/utils/database.jsx";
 import { Product } from '@/components/product/product.jsx';
-import img from '/images/products/carrot.jpg';
 
 const Store = () => {
   const [ products, setProducts ] = useState( [] );
@@ -18,7 +17,6 @@ const Store = () => {
       setProducts( data );
     }
   }, [ data ] );
-
 
   // handle error && loading
   if ( error ) {
@@ -37,8 +35,8 @@ const Store = () => {
                   id={ product.id }
                   title={ product.nombre }
                   price={ product.precio }
-                  img={ product.image || img }
-          // imgHover={ path || img }
+                  img={ product.imagen }
+                  imgHover={ product.imagen_hover}
                   amount={ 1 }
          >
            { product.descripcion }
