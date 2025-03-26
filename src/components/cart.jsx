@@ -4,7 +4,7 @@ import { AddIcon, CartDown, CartIcon, RemoveIcon, TicketMoney, TrashIcon, TrashO
 import { Button } from './button.jsx';
 import { Path_page } from '@/routes.jsx';
 import { Slug } from "@/utils/handleText.js";
-import { useCart } from '@/context/cart.js';
+import { useCart } from '@/context/cart.jsx';
 
 const Cart = ( { close } ) => {
   const navigate = useNavigate();

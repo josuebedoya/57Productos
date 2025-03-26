@@ -1,7 +1,7 @@
 import { useDatabase } from "@/utils/database.jsx";
 import { useResults } from "@/context/ParamsUrl.jsx";
 import { useEffect, useState } from "react";
-import { normalizeText } from "@/utils/handleText.jsx";
+import { normalizeText } from "@/utils/handleText.js";
 import { List } from '@/components/list.jsx';
 import { Product } from "@/components/product/product.jsx";
 import img from '/images/products/lettuce.jpg';
