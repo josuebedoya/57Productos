@@ -1,4 +1,3 @@
-// eslint-disable-next-line react-refresh/only-export-components
 export const normalizeText = ( t ) => {
   return t.toLocaleLowerCase() // Convert lower case
    .trim()// Remove spaces sides
