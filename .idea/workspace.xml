@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
+    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="+ method to get files products">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/findResults.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/findResults.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/categoriesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/categoriesList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/database.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="65a86714c8b115b85da71fdcc3b7e046151a86bb" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -116,7 +111,7 @@
     "WebServerToolWindowPanel.toolwindow.show.date": "false",
     "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "git-widget-placeholder": "store",
+    "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true",
     "javascript.nodejs.core.library.configured.version": "22.13.0",
     "javascript.nodejs.core.library.typings.version": "22.13.10",
@@ -179,6 +174,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.build" />
       </list>
@@ -668,7 +665,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="+ Validation content mobile &amp; desktop : Components | + Resize event listener" />
     <MESSAGE value="- .env" />
     <MESSAGE value="↔ Validation isMobile to menu : Components" />
     <MESSAGE value="↔ default class to modal &amp; height" />
@@ -693,7 +689,8 @@
     <MESSAGE value="↔ Extension utils files | ↔ getMedia method" />
     <MESSAGE value="- Media files extensioon" />
     <MESSAGE value="+ new images products" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ new images products" />
+    <MESSAGE value="+ method get files" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ method get files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -711,11 +708,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/layouts/profile.jsx</url>
           <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/templates/categoriesList.jsx</url>
-          <line>17</line>
-          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

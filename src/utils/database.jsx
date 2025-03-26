@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { getData, getFile, insertData, updateData } from 'management-supabase';
+import { getMedia } from "@/utils/getMedia.js";
 
 export const useDatabase = () => {
 
@@ -10,13 +11,15 @@ export const useDatabase = () => {
   const [ error, setError ] = useState( null );
 
   // get Data
-  const get = async ( table, options = {}, bucketImages, optionsFiles = {} ) => {
+  const get = async ( table, options = {} ) => {
     setLoading( true );
     try{
       const res = await getData( table, options );
 
       for  (const item of res) {
-          item.image =  await getFile( bucketImages, item.imagen, optionsFiles )  || 'images/products/default-product.webp';
+        item.imagen ?
+          item.image =  await getMedia( item.imagen ) || 'images/products/default-product.webp'
+         :'images/products/default-product.webp';
       }
 
       setData( res );
