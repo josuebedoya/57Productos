@@ -5,6 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/findResults.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/findResults.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/categoriesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/categoriesList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/database.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +120,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "javascript.nodejs.core.library.configured.version": "22.13.0",
     "javascript.nodejs.core.library.typings.version": "22.13.10",
-    "last_opened_file_path": "C:/Users/USUARIO/Desktop/Practices/josue-practices/database/base-datos-react",
+    "last_opened_file_path": "C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public/images/products",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -134,6 +140,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public\images\products" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -172,6 +179,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
@@ -235,39 +243,7 @@
       <workItem from="1742578313555" duration="1238000" />
       <workItem from="1742915882409" duration="620000" />
       <workItem from="1742920891019" duration="34000" />
-      <workItem from="1742920948799" duration="21868000" />
-    </task>
-    <task id="LOCAL-00020" summary="Migrate to vite V-2">
-      <option name="closed" value="true" />
-      <created>1737225804751</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1737225804751</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Migrate to vite V-3">
-      <option name="closed" value="true" />
-      <created>1737401392374</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1737401392374</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Migrate to vite V-3.1">
-      <option name="closed" value="true" />
-      <created>1737401538520</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1737401538520</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Migrate to vite V-3.4.1">
-      <option name="closed" value="true" />
-      <created>1737403654303</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1737403654303</updated>
+      <workItem from="1742920948799" duration="32418000" />
     </task>
     <task id="LOCAL-00024" summary="Migrate to vite V-3.4.2">
       <option name="closed" value="true" />
@@ -629,7 +605,39 @@
       <option name="project" value="LOCAL" />
       <updated>1742945016762</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="commit test">
+      <option name="closed" value="true" />
+      <created>1742945134773</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1742945134773</updated>
+    </task>
+    <task id="LOCAL-00070" summary="↔ Extension utils files | ↔ getMedia method">
+      <option name="closed" value="true" />
+      <created>1743010769640</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1743010769640</updated>
+    </task>
+    <task id="LOCAL-00071" summary="- Media files extensioon">
+      <option name="closed" value="true" />
+      <created>1743010815525</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1743010815525</updated>
+    </task>
+    <task id="LOCAL-00072" summary="+ new images products">
+      <option name="closed" value="true" />
+      <created>1743010860133</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1743010860133</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -646,7 +654,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev" />
+                        <option value="origin/dev" />
                       </list>
                     </value>
                   </entry>
@@ -660,10 +668,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="↔ prop MenuH to horizontal" />
-    <MESSAGE value="↔ Modal and MEnu" />
-    <MESSAGE value="+ handle opening modal variable" />
-    <MESSAGE value="↔ Observer animation modal" />
     <MESSAGE value="+ Validation content mobile &amp; desktop : Components | + Resize event listener" />
     <MESSAGE value="- .env" />
     <MESSAGE value="↔ Validation isMobile to menu : Components" />
@@ -685,7 +689,11 @@
     <MESSAGE value="↔ Name search to findResults | add view" />
     <MESSAGE value="+ Files products &amp; rename" />
     <MESSAGE value="+ storage files new function to get" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ storage files new function to get" />
+    <MESSAGE value="commit test" />
+    <MESSAGE value="↔ Extension utils files | ↔ getMedia method" />
+    <MESSAGE value="- Media files extensioon" />
+    <MESSAGE value="+ new images products" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ new images products" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
