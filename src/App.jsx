@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { Path_page } from '@/routes'
-import { Slug } from "@/utils/handleText.jsx";
+import { Slug } from "@/utils/handleText.js";
 
 //Components imports
 import { Header } from '@/templates/header'
