@@ -5,7 +5,6 @@ import img from '/images/products/carrot.jpg';
 
 const Store = () => {
   const [ products, setProducts ] = useState( [] );
-  const [ images, setImages ] = useState( [] );
   const { get, data, error, loading } = useDatabase();
 
   // get product from database
