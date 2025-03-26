@@ -9,6 +9,8 @@ import { normalizeText, Slug } from '@/utils/handleText.js';
 import { Path_page } from '@/routes.jsx';
 import { TextAnimatedWrite } from '@/components/textAnimatedWrite.jsx';
 
+
+
 const Search = () => {
   const [showModal, SetShowModal] = useState(false);
   const [valueSearch, setValueSearch] = useState('');
