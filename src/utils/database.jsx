@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { insertData, getData, updateData } from 'management-supabase';
+import { getData, getFile, insertData, updateData } from 'management-supabase';
 
 export const useDatabase = () => {
 
@@ -10,10 +10,15 @@ export const useDatabase = () => {
   const [ error, setError ] = useState( null );
 
   // get Data
-  const get = async ( table, options = {} ) => {
+  const get = async ( table, options = {}, bucketImages, optionsFiles = {} ) => {
     setLoading( true );
     try{
       const res = await getData( table, options );
+
+      for  (const item of res) {
+          item.image =  await getFile( bucketImages, item.imagen, optionsFiles )  || 'images/products/default-product.webp';
+      }
+
       setData( res );
     }catch( err ){
       setError( err.message );
@@ -50,5 +55,17 @@ export const useDatabase = () => {
     }
   }
 
-  return { data, loading, successful, showMessage, error, get, insert, update };
+  // Get files
+  const getFiles = async ( src, name, options = {} ) => {
+    setLoading( true );
+    try {
+      return await getFile( src, name, options );
+    } catch ( err ) {
+      setError( err.message );
+    } finally {
+      setLoading( false );
+    }
+  };
+
+  return { data, loading, successful, showMessage, error, get, insert, update, getFiles };
 };
