@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { insertData, getData, updateData } from 'management-supabase';
+import { getData, getFile, insertData, updateData } from 'management-supabase';
 
 export const useDatabase = () => {
 
@@ -14,6 +14,7 @@ export const useDatabase = () => {
     setLoading( true );
     try{
       const res = await getData( table, options );
+
       setData( res );
     }catch( err ){
       setError( err.message );
@@ -50,5 +51,17 @@ export const useDatabase = () => {
     }
   }
 
-  return { data, loading, successful, showMessage, error, get, insert, update };
+  // Get files
+  const getFiles = async ( src, name, options = {} ) => {
+    setLoading( true );
+    try {
+      return await getFile( src, name, options );
+    } catch ( err ) {
+      setError( err.message );
+    } finally {
+      setLoading( false );
+    }
+  };
+
+  return { data, loading, successful, showMessage, error, get, insert, update, getFiles };
 };

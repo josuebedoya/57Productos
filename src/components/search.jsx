@@ -5,10 +5,11 @@ import { Button } from '@/components/button.jsx';
 import { Input } from '@/components/input.jsx';
 import { useDatabase } from '@/utils/database.jsx';
 import { useResults } from '@/context/ParamsUrl.jsx';
-import { normalizeText } from '@/utils/handleText.jsx';
+import { normalizeText, Slug } from '@/utils/handleText.js';
 import { Path_page } from '@/routes.jsx';
 import { TextAnimatedWrite } from '@/components/textAnimatedWrite.jsx';
-import { Slug } from '@/utils/handleText.jsx';
+
+
 
 const Search = () => {
   const [showModal, SetShowModal] = useState(false);

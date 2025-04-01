@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/products/carrot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/grapes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/tomato.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/watermelon.jpg" afterDir="false" />
+    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="+ method to get files products">
+      <change afterPath="$PROJECT_DIR$/public/default-image.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/media.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/green.apple.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/green_apple.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/oinios.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/oinion.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/tomatoes.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/tomatoes_cherry.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/findResults.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/findResults.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/product/product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/store.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/getMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getMedia.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Migrate" />
+        <entry key="$PROJECT_DIR$" value="65a86714c8b115b85da71fdcc3b7e046151a86bb" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,6 +51,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="store" />
+                    <option name="lastUsedInstant" value="1742945075" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
                     <option name="lastUsedInstant" value="1737830918" />
@@ -105,32 +105,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.13.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.13.10&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
+    "WebServerToolWindowPanel.toolwindow.show.date": "false",
+    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
+    "WebServerToolWindowPanel.toolwindow.show.size": "false",
+    "git-widget-placeholder": "store",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "22.13.0",
+    "javascript.nodejs.core.library.typings.version": "22.13.10",
+    "last_opened_file_path": "C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public/images/products",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="dev" />
@@ -139,14 +139,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public\images\products" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public\images\products" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\components\menu" />
       <recent name="C:\Users\josue\OneDrive\Desktop\Proyect React\shopp-online\src\styles\templates" />
-      <recent name="C:\Users\josue\OneDrive\Desktop\Proyect React\shopp-online\src\templates" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -177,6 +178,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
@@ -236,62 +240,11 @@
       <workItem from="1742314369811" duration="22460000" />
       <workItem from="1742402314210" duration="49773000" />
       <workItem from="1742568151303" duration="3764000" />
-    </task>
-    <task id="LOCAL-00018" summary="Migrate to vite">
-      <option name="closed" value="true" />
-      <created>1737068894962</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1737068894963</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Migrate to vite V-1">
-      <option name="closed" value="true" />
-      <created>1737155614098</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1737155614098</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Migrate to vite V-2">
-      <option name="closed" value="true" />
-      <created>1737225804751</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1737225804751</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Migrate to vite V-3">
-      <option name="closed" value="true" />
-      <created>1737401392374</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1737401392374</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Migrate to vite V-3.1">
-      <option name="closed" value="true" />
-      <created>1737401538520</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1737401538520</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Migrate to vite V-3.4.1">
-      <option name="closed" value="true" />
-      <created>1737403654303</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1737403654303</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Migrate to vite V-3.4.2">
-      <option name="closed" value="true" />
-      <created>1737404447577</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1737404447577</updated>
+      <workItem from="1742572358967" duration="49000" />
+      <workItem from="1742578313555" duration="1238000" />
+      <workItem from="1742915882409" duration="620000" />
+      <workItem from="1742920891019" duration="34000" />
+      <workItem from="1742920948799" duration="32418000" />
     </task>
     <task id="LOCAL-00025" summary="Migrate to vite V-3.4.3">
       <option name="closed" value="true" />
@@ -629,7 +582,63 @@
       <option name="project" value="LOCAL" />
       <updated>1742512125005</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="+ Files products &amp; rename">
+      <option name="closed" value="true" />
+      <created>1742572400619</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1742572400619</updated>
+    </task>
+    <task id="LOCAL-00068" summary="+ storage files new function to get">
+      <option name="closed" value="true" />
+      <created>1742945016762</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1742945016762</updated>
+    </task>
+    <task id="LOCAL-00069" summary="commit test">
+      <option name="closed" value="true" />
+      <created>1742945134773</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1742945134773</updated>
+    </task>
+    <task id="LOCAL-00070" summary="↔ Extension utils files | ↔ getMedia method">
+      <option name="closed" value="true" />
+      <created>1743010769640</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1743010769640</updated>
+    </task>
+    <task id="LOCAL-00071" summary="- Media files extensioon">
+      <option name="closed" value="true" />
+      <created>1743010815525</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1743010815525</updated>
+    </task>
+    <task id="LOCAL-00072" summary="+ new images products">
+      <option name="closed" value="true" />
+      <created>1743010860133</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1743010860133</updated>
+    </task>
+    <task id="LOCAL-00073" summary="- innecesary for">
+      <option name="closed" value="true" />
+      <created>1743015916016</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1743015916016</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -646,7 +655,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev" />
+                        <option value="origin/dev" />
                       </list>
                     </value>
                   </entry>
@@ -660,15 +669,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="+ variable Tailwind" />
-    <MESSAGE value="- Styles p" />
-    <MESSAGE value="↔ prop MenuH to horizontal" />
-    <MESSAGE value="↔ Modal and MEnu" />
-    <MESSAGE value="+ handle opening modal variable" />
-    <MESSAGE value="↔ Observer animation modal" />
-    <MESSAGE value="+ Validation content mobile &amp; desktop : Components | + Resize event listener" />
-    <MESSAGE value="- .env" />
-    <MESSAGE value="↔ Validation isMobile to menu : Components" />
     <MESSAGE value="↔ default class to modal &amp; height" />
     <MESSAGE value="+ Close Modal in Mobile :  Components" />
     <MESSAGE value="↔ Time animation Fade" />
@@ -685,7 +685,16 @@
     <MESSAGE value="+ library" />
     <MESSAGE value="+ Use" />
     <MESSAGE value="↔ Name search to findResults | add view" />
-    <option name="LAST_COMMIT_MESSAGE" value="↔ Name search to findResults | add view" />
+    <MESSAGE value="+ Files products &amp; rename" />
+    <MESSAGE value="+ storage files new function to get" />
+    <MESSAGE value="commit test" />
+    <MESSAGE value="↔ Extension utils files | ↔ getMedia method" />
+    <MESSAGE value="- Media files extensioon" />
+    <MESSAGE value="+ new images products" />
+    <MESSAGE value="+ method get files" />
+    <MESSAGE value="+ method to get files products" />
+    <MESSAGE value="- innecesary for" />
+    <option name="LAST_COMMIT_MESSAGE" value="- innecesary for" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -705,9 +714,10 @@
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/templates/categoriesList.jsx</url>
-          <line>17</line>
-          <option name="timeStamp" value="32" />
+          <url>file://$PROJECT_DIR$/src/utils/getMedia.js</url>
+          <line>24</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
