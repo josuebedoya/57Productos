@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useDatabase } from "@/utils/database.jsx";
+import { useDatabase } from '@/utils/database.jsx';
 import { Product } from '@/components/product/product.jsx';
 
 const Store = () => {
@@ -8,15 +8,17 @@ const Store = () => {
 
   // get product from database
   useEffect( () => {
-    get( 'productos', {}, 'products');
+    get( 'productos' );
   }, [] );
 
   // update local products
   useEffect( () => {
-    if ( data ) {
-      setProducts( data );
+    if( data?.[ 'productos' ] ){
+      setProducts( data[ 'productos' ] );
     }
-  }, [ data ] );
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ data?.[ 'productos' ] ] );
 
   // handle error && loading
   if ( error ) {

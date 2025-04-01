@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { insertData, getData, updateData } from 'management-supabase';
+import { insertData, getData, updateData, getFile } from 'management-supabase';
 
 export const useDatabase = () => {
 
