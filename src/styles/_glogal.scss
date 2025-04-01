@@ -24,3 +24,17 @@
 a{
   color: var( $color-primary );
 }
+
+#results {
+  & .options::-webkit-scrollbar {
+    display: none;
+  }
+
+  & .filters {
+    scroll-snap-type: x mandatory;
+  }
+
+  & .filters button {
+    scroll-snap-align: start;
+  }
+}
