@@ -21,16 +21,17 @@ const FindResults = () => {
     const handleFoundItems = () => {
 
       // Filtered items found
-      const itemsFound = data.filter( item => normalizeText( item.nombre ).includes( normalizeText( query ) ) );
-
+      const itemsFound = data?.['productos'].filter( item => normalizeText( item.nombre ).includes( normalizeText( query ) ) );
       // Update list found
       setFound( itemsFound );
     };
 
-    if ( data ) {
+    if ( data?.['productos'] ) {
       handleFoundItems();
     }
-  }, [ data, query ] );
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ data?.['productos'], query ] );
 
   const breakpoints = {
     zero: 2,

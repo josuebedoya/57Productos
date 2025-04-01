@@ -60,7 +60,7 @@ const Search = () => {
     const inputSearcher = normalizeText( valueSearch );
 
     // Filtered items found
-    const itemsFound = data['productos'].filter( item => normalizeText( item.nombre ).includes( inputSearcher ) );
+    const itemsFound = data?.['productos'].filter( item => normalizeText( item.nombre ).includes( inputSearcher ) );
 
     if (itemsFound.length === 0) {
       setFound([]);
@@ -72,13 +72,13 @@ const Search = () => {
   };
 
   useEffect( () => {
-    if ( data['productos'] && valueSearch ) {
+    if ( data?.['productos'] && valueSearch ) {
       handleFoundItems();
     } else {
       setFound( [] );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ valueSearch , data['productos']] );
+  }, [ valueSearch , data?.['productos']] );
 
   return (
    <>
