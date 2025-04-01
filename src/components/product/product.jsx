@@ -5,6 +5,7 @@ import { CartIcon, HearthCheckIcon, HearthLineIcon, DocumentIcon } from '@/resou
 import { Button } from '@/components/button.jsx';
 import { Stars } from '@/components/stars.jsx';
 import { ModalProduct } from './modalProduct.jsx';
+import { Media } from '@/components/media.jsx'
 
 
 const Product = ( props ) => {
@@ -57,12 +58,11 @@ const Product = ( props ) => {
           className='z-0 transition-transform duration-300 transform hover:scale-101 hover:shadow-custom bg-white rounded-2xl p-1'>
        <div className='item-image'>
          { !changeImg ? (
-          <img src={ props.img } alt={ props.title }
-               className='rounded-2xl cursor-pointer z-0 max-h-56 w-full max-w-full'
-               onMouseEnter={ HoverChangeImg }/>
+          <Media src={ props.img } classFile='rounded-2xl cursor-pointer z-0 h-56 w-full max-w-full'
+                 onMouseEnter={ HoverChangeImg } />
          ) : (
-          <img src={ props.imgHover } alt={ props.title }
-               className='rounded-2xl cursor-pointer z-0 max-h-56 w-full max-w-full ' onMouseLeave={ HoverChangeImg }/>
+          <Media src={ props.imgHover } classFile='rounded-2xl cursor-pointer z-0 h-56 w-full max-w-full'
+                 onMouseLeave={HoverChangeImg} />
          ) }
        </div>
        <div className='item-stars text-13'>

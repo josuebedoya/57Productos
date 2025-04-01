@@ -15,8 +15,11 @@ const CommentProvider = ( { children } ) => {
   }, [] ); // get Comments
 
   useEffect( () => {
-    setComments(data);
-  }, [data] ); // update comments
+
+    setComments( data?.['comments_users'] );
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ data?.['comments_users'] ] ); // update comments
 
   const addMessage = ( message, name ) => { // add new comment
     if( message && name ){

@@ -20,7 +20,8 @@ const CategoriesList = () => {
 
   //update categories
   useEffect( () => {
-    if(data !== null)setCategories(data); // prevent null value
+    if( data?.['categorias'] !== null) setCategories(data?.['categorias']); // prevent null value
+
   }, [data] );
 
   // go to category  function
@@ -47,7 +48,7 @@ const CategoriesList = () => {
               rows={ 2 }
               breakpoints={ breakpoints }
        >
-         {
+         { categories &&
            categories.map( ( category, i ) => (
             <div key={ i }
                  className={ `shadow-${ colours[Math.floor( Math.random() * colours.length )] }-500 hover:shadow-${ colours[ Math.floor( Math.random() * colours.length ) ] }-500` }>

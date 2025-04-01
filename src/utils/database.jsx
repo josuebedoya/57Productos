@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { getData, getFile, insertData, updateData } from 'management-supabase';
-import { getMedia } from "@/utils/getMedia.js";
+import { insertData, getData, updateData, getFile } from 'management-supabase';
 
 export const useDatabase = () => {
 
@@ -13,49 +12,54 @@ export const useDatabase = () => {
   // get Data
   const get = async ( table, options = {} ) => {
     setLoading( true );
+
     try{
       const res = await getData( table, options );
+      setData( prev => ({ ...prev, [table]: res }) );
 
-      for  (const item of res) {
-        item.imagen ?
-          item.image =  await getMedia( item.imagen ) || 'images/products/default-product.webp'
-         :'images/products/default-product.webp';
-      }
-
-      setData( res );
     }catch( err ){
       setError( err.message );
+
     }finally{
       setLoading( false );
+
     }
   };
 
   // insert new data
   const insert = async ( table, data ) => {
     setShowMessage( false );  // close modal
+
     try{
       await insertData( table, data );
       setSuccessful( true );
+
     }catch( error ){
       setError( error.message );
       setSuccessful( false );
+
     }finally{
       setShowMessage( true ); // open modal
     }
+
   };
 
   // update Data
   const update = async ( table, data, where, valueWhere ) => {
     setShowMessage( false );
+
     try{
       await updateData( table, data, where, valueWhere );
       setSuccessful( true );
+
     }catch( error ){
       setError( error.message );
       setSuccessful( false );
+
     }finally{
       setShowMessage( true );
     }
+
   }
 
   // Get files

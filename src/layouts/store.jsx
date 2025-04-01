@@ -1,25 +1,24 @@
 import { useEffect, useState } from 'react';
-import { useDatabase } from "@/utils/database.jsx";
+import { useDatabase } from '@/utils/database.jsx';
 import { Product } from '@/components/product/product.jsx';
-import img from '/images/products/carrot.jpg';
 
 const Store = () => {
   const [ products, setProducts ] = useState( [] );
-  const [ images, setImages ] = useState( [] );
   const { get, data, error, loading } = useDatabase();
 
   // get product from database
   useEffect( () => {
-    get( 'productos', {}, 'products');
+    get( 'productos' );
   }, [] );
 
   // update local products
   useEffect( () => {
-    if ( data ) {
-      setProducts( data );
+    if( data?.[ 'productos' ] ){
+      setProducts( data[ 'productos' ] );
     }
-  }, [ data ] );
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ data?.[ 'productos' ] ] );
 
   // handle error && loading
   if ( error ) {
@@ -38,8 +37,8 @@ const Store = () => {
                   id={ product.id }
                   title={ product.nombre }
                   price={ product.precio }
-                  img={ product.image || img }
-          // imgHover={ path || img }
+                  img={ product.imagen }
+                  imgHover={ product.imagen_hover}
                   amount={ 1 }
          >
            { product.descripcion }
