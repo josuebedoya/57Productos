@@ -4,30 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="+ method to get files products">
+    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/about.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/about.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/contact.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/error.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/error.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/services.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/services.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/store.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/termsAndConditions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/termsAndConditions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/blog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/home/blog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/categoriesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/home/categoriesList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/chance.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/home/chance.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/opinions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/opinions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/parts/infoAbout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/about/infoAbout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/parts/misionAndVision.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/about/misionAndVision.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/parts/money.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/profile/parts/money.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/parts/opinionItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/home/parts/opinionItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/parts/profile/formLogin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/profile/formLogin.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/parts/profile/formRegister.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/profile/formRegister.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/parts/profile/guestSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/profile/guestSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/parts/profile/mainSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/profile/mainSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/home/slider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/text-main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/home/text-main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,11 +139,11 @@
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates\home" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates\profile" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates\home\parts" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates\us" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates\home" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -263,15 +242,7 @@
       <workItem from="1742915882409" duration="620000" />
       <workItem from="1742920891019" duration="34000" />
       <workItem from="1742920948799" duration="32418000" />
-      <workItem from="1743704835402" duration="1180000" />
-    </task>
-    <task id="LOCAL-00025" summary="Migrate to vite V-3.4.3">
-      <option name="closed" value="true" />
-      <created>1737404873398</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1737404873398</updated>
+      <workItem from="1743704835402" duration="1513000" />
     </task>
     <task id="LOCAL-00026" summary="Migrate to vite V-3.4.4">
       <option name="closed" value="true" />
@@ -657,7 +628,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743015916016</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="+ Refactor Struture Templates">
+      <option name="closed" value="true" />
+      <created>1743706201382</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1743706201382</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,7 +667,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="↔ default class to modal &amp; height" />
     <MESSAGE value="+ Close Modal in Mobile :  Components" />
     <MESSAGE value="↔ Time animation Fade" />
     <MESSAGE value="+ Use Type Modal inMobile" />
@@ -711,9 +689,10 @@
     <MESSAGE value="- Media files extensioon" />
     <MESSAGE value="+ new images products" />
     <MESSAGE value="+ method get files" />
-    <MESSAGE value="+ method to get files products" />
     <MESSAGE value="- innecesary for" />
-    <option name="LAST_COMMIT_MESSAGE" value="- innecesary for" />
+    <MESSAGE value="+ method to get files products" />
+    <MESSAGE value="+ Refactor Struture Templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Refactor Struture Templates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
