@@ -1,16 +1,16 @@
-import { Slider } from '@/templates/slider.jsx';
-import {Blog} from '@/templates/blog.jsx';
-import { Chance } from '@/templates/chance.jsx';
-import { TextMain } from '@/templates/text-main.jsx';
-import { Opinions } from '@/templates/opinions';
-import { CategoriesList } from '@/templates/categoriesList.jsx';
+import { Slider } from '@/templates/home/slider.jsx';
+import {Blog} from '@/templates/home/blog.jsx';
+import { Chance } from '@/templates/home/chance.jsx';
+import { TextMain } from '@/templates/home/text-main.jsx';
+import { Opinions } from '@/templates/home/opinions.jsx';
+import { CategoriesList } from '@/templates/home/categoriesList.jsx';
 
 const Home = () => {
 
   const titleSlider = 'Tienda Online';
 
   return (
-   <main className='mb-12'>
+   <section className='mb-12'>
      <Slider title={ titleSlider }>
        !Has crecer tus ganancias con nuestra ayuda¡
      </Slider>
@@ -19,7 +19,7 @@ const Home = () => {
      <CategoriesList/>
      <Chance />
      <Opinions/>
-   </main>
+   </section>
   );
 };
 

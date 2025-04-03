@@ -1,9 +1,9 @@
-import { MissionAndVision } from '@/templates/parts/misionAndVision.jsx'
-import { InfoAbout } from '@/templates/parts/infoAbout.jsx'
+import { MissionAndVision } from '@/templates/about/misionAndVision.jsx'
+import { InfoAbout } from '@/templates/about/infoAbout.jsx'
 import imgFruitFlat from '/images/img-fruit-flat.webp'
 
 const About = () => {
-  return ( <main className='page-about-us m-0 p-0 relative'>
+  return ( <section className='page-about-us m-0 p-0 relative'>
     <InfoAbout/>
     <MissionAndVision/>
     <section id='ourHistory' className='py-14'>
@@ -45,6 +45,6 @@ const About = () => {
         </div>
       </div>
     </section>
-  </main> )
+  </section> )
 };
 export { About };

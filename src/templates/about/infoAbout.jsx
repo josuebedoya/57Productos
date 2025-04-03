@@ -1,4 +1,4 @@
-import { Carousel } from '@/components/carousel';
+import { Carousel } from '@/components/carousel.jsx';
 import  img1 from '/images/logo.png'
 import  img2 from '/images/img-fruit-flat.webp'
 const InfoAbout = () => {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { PropTypes } from 'prop-types';
-import { Divisas } from '@/components/divisas';
-import { AlertIcon, CloseIcon, EyeCloseIcon, EyeOpenIcon, PencilIcon } from '@/resources/icons';
+import { Divisas } from '@/components/divisas.jsx';
+import { AlertIcon, CloseIcon, EyeCloseIcon, EyeOpenIcon, PencilIcon } from '@/resources/icons.jsx';
 import { Input } from '@/components/input.jsx';
 
 const Money = ( { amount } ) => {

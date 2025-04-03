@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { GuestSection } from '@/templates/parts/profile/guestSection.jsx';
-import { MainSection } from '@/templates/parts/profile/mainSection.jsx';
+import { GuestSection } from '@/templates/profile/guestSection.jsx';
+import { MainSection } from '@/templates/profile/mainSection.jsx';
 
 const Profile = () => {
 
@@ -10,13 +10,13 @@ const Profile = () => {
   };
 
   return (
-   <main>
+   <section>
      { loged ? (
       <MainSection/>
      ) : (
       <GuestSection isLogin={ handleLoged }/>
      ) }
-   </main>
+   </section>
   );
 };
 export { Profile };

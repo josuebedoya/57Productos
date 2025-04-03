@@ -1,4 +1,4 @@
-import { List } from "@/components/list";
+import { List } from "@/components/list.jsx";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { useDatabase } from "@/utils/database.jsx";
