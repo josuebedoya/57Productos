@@ -20,3 +20,57 @@
 .shape-figure-one .shape-fill {
   fill: #fff;
 }
+
+@keyframes waveMove1 {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.2); }
+}
+
+@keyframes waveMove2 {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.15); }
+}
+
+@keyframes waveMove3 {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.1); }
+}
+
+@keyframes waveMove4 {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.18); }
+}
+
+@keyframes waveMove5 {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.12); }
+}
+
+@keyframes waveMove6 {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.14); }
+}
+
+.wave1 {
+  animation: waveMove1 2s ease-in-out infinite;
+}
+
+.wave2 {
+  animation: waveMove2 2.5s ease-in-out infinite;
+}
+
+.wave3 {
+  animation: waveMove3 2.2s ease-in-out infinite;
+}
+
+.wave4 {
+  animation: waveMove4 2.3s ease-in-out infinite;
+}
+
+.wave5 {
+  animation: waveMove5 2.1s ease-in-out infinite;
+}
+
+.wave6 {
+  animation: waveMove6 2.4s ease-in-out infinite;
+}
