@@ -1,0 +1,21 @@
+.shape-figure-one {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.shape-figure-one svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.9px);
+  height: 100px;
+  transform: rotateY(180deg);
+}
+
+.shape-figure-one .shape-fill {
+  fill: #fff;
+}
