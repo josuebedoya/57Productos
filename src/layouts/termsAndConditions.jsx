@@ -1,8 +1,8 @@
 const TermsAndConditions = () => {
   return (
-   <main>
+   <section>
      Terms and Conditions
-   </main>
+   </section>
   );
 };
 

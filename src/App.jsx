@@ -24,7 +24,7 @@ function App(){
     <ErrorBoundary>
       <Header/>
       <main id='Page'
-            className={ `page page-${ Slug( location.pathname === '/' ? 'inicio': location.pathname ) } m-0 p-0 w-full max-w-full h-auto max-h-full` }>
+            className={ `page page-${ Slug( location.pathname === '/' ? 'inicio': location.pathname ) } m-0 p-0 w-full max-w-full h-auto max-h-full min-h-[21.6vh]` }>
         <Routes>
           <Route index path={ Path_page.HOME } element={ <Home/> }/>
           <Route path={ Path_page.US } element={ <About/> }/>

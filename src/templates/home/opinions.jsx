@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router";
 import { useEffect, useState } from "react";
-import { Carousel } from '@/components/carousel';
-import { OpinionItem } from './parts/opinionItem';
-import { Button } from "@/components/button";
-import { AngleRightIcon } from '@/resources/icons';
-import { Path_page } from "@/routes";
-import { useComment } from "@/context/comments";
+import { Carousel } from '@/components/carousel.jsx';
+import { OpinionItem } from './parts/opinionItem.jsx';
+import { Button } from "@/components/button.jsx";
+import { AngleRightIcon } from '@/resources/icons.jsx';
+import { Path_page } from "@/routes.jsx";
+import { useComment } from "@/context/comments.jsx";
 
 const Opinions = () => {
   const navigate = useNavigate();

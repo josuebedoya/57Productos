@@ -20,6 +20,9 @@
 @import './templates/infoAbout';
 @import './templates/footer';
 
+// styles resources
+@import "./resources/svgForms";
+
 // Default Styles Template
 a{
   color: var( $color-primary );

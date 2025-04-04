@@ -29,7 +29,7 @@ const Store = () => {
   }
 
   return (
-   <main id='Store'>
+   <section id='Store'>
      <div className='container mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 py-10'>
        { products ? (
         products.slice( 0, 30 ).map( ( product, i ) => (
@@ -49,7 +49,7 @@ const Store = () => {
        )
        }
      </div>
-   </main>
+   </section>
   )
 }
 

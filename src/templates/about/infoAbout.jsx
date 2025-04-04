@@ -1,6 +1,6 @@
-import { Carousel } from '@/components/carousel';
-import  img1 from '/images/logo.png'
-import  img2 from '/images/img-fruit-flat.webp'
+import { Carousel } from '@/components/carousel.jsx';
+import  img1 from '/logo-white.png';
+import  img2 from '/logo-black.png';
 const InfoAbout = () => {
   const responsive = [
     { width: 0, itemsView: 'auto', spaceBetween: 0, },

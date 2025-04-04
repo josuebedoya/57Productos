@@ -1,4 +1,4 @@
-import { Money } from '@/templates/parts/money.jsx';
+import { Money } from '@/templates/profile/parts/money.jsx';
 
 const MainSection = () => {
 
