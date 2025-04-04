@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ProfileIcon, AngleBottomIcon } from '@/resources/icons';
-import logo from '/images/logo.png';
+import logoBlack from '/logo-black.png';
+import logoWhite from '/logo-white.png';
 import { Search } from "@/components/search.jsx";
 import { Cart } from '@/components/cart.jsx';
 import { Menu } from '@/components/menu/menu.jsx';
@@ -72,20 +73,21 @@ const Header = () => {
 
   return (
    <header>
-     <div id='menu-header' className=' shadow-custom-shadow bg-white  py-2 lg:py-4 mn:mb-4'>
+     <div id='menu-header' className=' shadow-custom-shadow bg-white  py-2 lg:py-4 mn:mb-4 w-full duration-500'>
        <div className='w-full px-4 grid grid-cols-12 items-center justify-center md:justify-normal md:gap-4 relative'>
 
          {/* Logo */ }
          <div
-          className='logo-section col-span-10  sm:col-span-7 md:col-span-8 lg:col-span-3  flex items-center justify-start lg:justify-center sm:pl-4 order-1'>
+          className='logo-section col-span-10  sm:col-span-7 md:col-span-8 lg:col-span-2  flex items-center justify-start lg:justify-center sm:pl-4 order-1'>
            <a href='/'>
-             <img src={ logo } alt='Logo de la aplicación' className='w-60 max-w-60'/>
+             <img src={ logoBlack } alt='Logo de la aplicación' className='w-48 max-w-48 black'/>
+             <img src={ logoWhite } alt='Logo de la aplicación' className='w-48  max-w-48 white hidden'/>
            </a>
          </div>
 
          {/* List Menu */ }
          <div
-          className='list-menu-section px-4 lg:pr-0 col-span-2 sm:col-span-1 lg:col-span-6 flex items-center justify-end order-2 sm:order-3 lg:order-2'>
+          className='list-menu-section px-4 lg:pr-0 col-span-2 sm:col-span-1 lg:col-span-7 flex items-center justify-end order-2 sm:order-3 lg:order-2'>
            <Menu items={ menuItems } classLink={ classLink } horizontal withMenuBars openMenu={ handldeOpenModal } typeMenuMobile={ 1 }/>
          </div>
 
