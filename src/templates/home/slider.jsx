@@ -6,16 +6,27 @@ import japan from '/images/flags/japan.png'
 import brazil from '/images/flags/brazil.png'
 import canada from '/images/flags/canada.png'
 import { Media } from "@/components/media.jsx";
+import { Tooltip } from "@/components/tooltip.jsx";
 
 const Slider = ( ) => {
 
   const images = [
-   <Media src={colombia}  key={1}/>,
-    <Media src={usa} key={2}/>,
-    <Media src={japan} key={3}/>,
-    <Media src={brazil} key={4}/>,
-    <Media src={canada} key={5}/>];
-  console.log(images)
+     <Tooltip key={1} content='Colombia'>
+       <Media src={colombia} classFile='h-12 w-12'/>
+     </Tooltip>,
+     <Tooltip key={2} content='Usa'>
+       <Media src={usa} classFile='h-12 w-12'/>
+     </Tooltip>,
+    <Tooltip key={ 3 } content='Japan'>
+      <Media src={ japan } classFile='h-12 w-12'/>
+    </Tooltip>,
+    <Tooltip key={ 4 } content='Brazil'>
+      < Media src={ brazil } classFile='h-12 w-12'/>
+    </Tooltip>,
+    <Tooltip key={ 5 } content='Canada'>
+      <Media src={ canada } classFile='h-12 w-12'/>
+    </Tooltip>
+  ];
 
   return ( <>
     <section id="slider" className="relative w-full aspect-100/83 md:aspect-100/48">
@@ -33,11 +44,11 @@ const Slider = ( ) => {
             <div className="spin px-5 z-10 hidden md:block bottom-[6vh] relative">
               <Spin
                items={ images }
-               withButton={ false }
+               withButton
                classItem="h-12 w-12 flex items-center justify-center cursor-pointer duration-500"
-               autoPlay
+               // autoPlay
                pauseHover
-               playHover
+               playHover={false}
                radio={ 170 }
                speed={ 0.8 }
                border='border border-white shadow-white'
