@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Pause, TriangleRight } from "@/resources/icons.jsx";
 
 const Spin = ( { items = [], classItem = 'w-12 h-12', radio = 100, autoPlay = false, withButton = true, classBtn = '',
-                 directionLeft = true, speed = 2, playHover = true, border =  'border border-Primary' }) => {
+                 directionLeft = true, speed = 2, playHover = true, pauseHover = false, border =  'border border-Primary' }) => {
 
   const [ pause, setPause ] = useState( false );
   const spinRef = useRef( null );
@@ -57,8 +57,8 @@ const Spin = ( { items = [], classItem = 'w-12 h-12', radio = 100, autoPlay = fa
 
   return ( <div className="w-full h-auto flex justify-center items-center">
     <div ref={ spinRef }
-         onMouseEnter={() => { if( playHover && !autoPlay ) startAnimation() }}
-         onMouseLeave={() => { if( playHover && !autoPlay ) stopAnimation() }}
+         onMouseEnter={() => { if( playHover && !autoPlay ) startAnimation(); if(pauseHover && autoPlay) stopAnimation() }}
+         onMouseLeave={() => { if( playHover && !autoPlay ) stopAnimation(); if(pauseHover && autoPlay) startAnimation() }}
          className={`content-spins relative flex justify-center items-center rounded-full ${ border }`}
          style={{ height: `${ radio * 2 }px`, width: `${ radio * 2 }px` }}
     >
