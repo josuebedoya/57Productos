@@ -8,68 +8,60 @@ const Tooltip = ( {
 
   const [ classPositions, setClassPosition ] = useState( {} )
 
+   // Declare de class for tooltip position
   const getDirection = ( position ) => {
     switch ( position ) {
       case( 'top' ):
-        setClassPosition( {
+        return {
           tooltip: `group-hover/tooltip:-translate-y-${ spaceY }`,
           arrow: '-bottom-4 rotate-90'
-        } );
-        break;
+        };
       case( 'bottom' ):
-        setClassPosition( {
+        return {
           tooltip: `group-hover/tooltip:translate-y-${ spaceY }`,
           arrow: '-top-4  -rotate-90'
-        } );
-        break;
+        };
       case( 'left' ):
-        setClassPosition( {
+        return {
           tooltip: `group-hover/tooltip:-translate-x-${ spaceX }`,
           arrow: '-right-4 rotate-0'
-        } );
-        break;
+        };
       case( 'right' ):
-        setClassPosition( {
+        return {
           tooltip: `group-hover/tooltip:translate-x-${ spaceX }`,
           arrow: '-left-4 rotate-180'
-        } );
-        break;
+        };
       case( 'corner-1' ):
-        setClassPosition( {
+        return {
           tooltip: `group-hover/tooltip:-translate-y-${ spaceY } group-hover/tooltip:-translate-x-${ spaceX }`,
           arrow: '-right-2.5 -bottom-2.5 rotate-45'
-        } );
-        break;
+        };
       case( 'corner-2' ):
-        setClassPosition( {
+        return {
           tooltip: `group-hover/tooltip:-translate-y-${ spaceY } group-hover/tooltip:translate-x-${ spaceX }`,
           arrow: '-left-2.5 -bottom-2.5 -rotate-[225deg]'
-        } );
-        break;
+        };
       case( 'corner-3' ):
-        setClassPosition( {
+        return {
           tooltip: `group-hover/tooltip:translate-y-${ spaceY } group-hover/tooltip:translate-x-${ spaceX }`,
           arrow: '-left-2.5 -top-2.5 -rotate-[135deg]'
-        } );
-        break;
+        };
       case( 'corner-4' ):
-        setClassPosition( `group-hover/tooltip:translate-y-${ spaceY } group-hover/tooltip:-translate-x-${ spaceX }` );
-        setClassPosition( {
+        return {
           tooltip: `group-hover/tooltip:translate-y-${ spaceY } group-hover/tooltip:-translate-x-${ spaceX }`,
           arrow: '-right-2.5 -top-2.5 -rotate-45'
-        } );
-        break;
+        };
       default:
-        setClassPosition( `group-hover/tooltip:-translate-y-${ spaceY }` );
-        setClassPosition( {
+        return {
           tooltip: `group-hover/tooltip:-translate-y-${ spaceY }`,
           arrow: '-bottom-4 rotate-90'
-        } );
+        };
     }
-  }
+  };
 
+   // Update Class to tooltip
   useEffect( () => {
-    getDirection( position );
+    setClassPosition( getDirection( position ) );
   }, [ position ] );
 
   const classTooltip = `absolute rounded-md opacity-0 group-hover/tooltip:opacity-100 duration-300 ${ !dark ? 'bg-white text-black' : 'bg-gray-800 text-white' } py-1 px-3 translate-0 z-modal ${ classPositions.tooltip }`;

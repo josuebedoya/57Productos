@@ -44,11 +44,11 @@ const Slider = ( ) => {
             <div className="spin px-5 z-10 hidden md:block bottom-[6vh] relative">
               <Spin
                items={ images }
-               withButton
+               withButton={ false }
                classItem="h-12 w-12 flex items-center justify-center cursor-pointer duration-500"
-               // autoPlay
+               rotateItem
+               autoPlay
                pauseHover
-               playHover={false}
                radio={ 170 }
                speed={ 0.8 }
                border='border border-white shadow-white'
