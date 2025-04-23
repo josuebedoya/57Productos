@@ -14,7 +14,7 @@ const MainSection = () => {
              <p className='text-center'>@josuebedoya348</p>
            </div>
            <div className='money-content w-44'>
-             <Money amount={ amount }/>
+             <Money />
            </div>
          </div>
        </div>
