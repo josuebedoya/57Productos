@@ -38,9 +38,9 @@ const Search = () => {
   const submitQuery = (e) => {
     e.preventDefault();
     if(valueSearch.trim() !== ''){
+      window.removeEventListener('wheel', (e) => e.preventDefault());
       navigate(Path_page.SEARCH + `?${termToGet}=${encodeURIComponent(valueSearch)}`);
       SetShowModal(false);
-      window.removeEventListener('wheel', (e) => e.preventDefault());
       setMessage(null);
     } else{
       setMessage( messages[0] );

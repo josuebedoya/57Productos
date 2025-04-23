@@ -1,4 +1,5 @@
-const Input = ( { value, onChange, placeholder, type = 'text', name, maxLength = 20, minLength = 0, isRequired, label, classContent, classLabel, classInput, children, textTarea } ) => {
+const Input = ( { value, onChange, placeholder, type = 'text', name, maxLength = 20, minLength = 0, isRequired, label,
+                  classContent, classLabel, classInput, children, textTarea, dir } ) => {
   const Component = textTarea ? 'textarea' : 'input';
   return (
    <div className={ `${ classContent ? classContent : '' } input w-full flex-col items-center justify-center` }>
@@ -16,6 +17,7 @@ const Input = ( { value, onChange, placeholder, type = 'text', name, maxLength =
       id={ name }
       required={ isRequired }
       className={ `bg-transparent text-Primary text-sm rounded-xl border border-Primary px-5 focus:outline-none focus:shadow-custom w-full ${ classInput && classInput }` }
+      dir={dir}
      />
    </div>
   );

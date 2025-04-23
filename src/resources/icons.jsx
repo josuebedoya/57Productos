@@ -1,5 +1,5 @@
 import { BiSearchAlt, BiSolidPaperPlane } from 'react-icons/bi';
-import { MdOutlineCircle } from 'react-icons/md'
+import { MdOutlineCircle, MdOutlineSettings  } from 'react-icons/md'
 import { GrUserSettings } from 'react-icons/gr';
 import { FaRegStar, FaHeartCircleCheck, FaHandshakeSimple, FaCirclePause } from 'react-icons/fa6';
 import { TiDocumentText, TiThMenuOutline } from 'react-icons/ti';
@@ -370,5 +370,12 @@ export const TriangleRight = ( { atr, classIcons, ...props } ) => {
 export const BoxOpen = ( { atr, classIcons, ...props } ) => {
   return (
     <FaDropbox style={ atr } className={ classIcons } { ...props }/>
+  )
+};
+
+// Setting
+export const SettingIcon = ( { atr, classIcons, ...props } ) => {
+  return (
+    <MdOutlineSettings  style={ atr } className={ classIcons } { ...props }/>
   )
 };

@@ -4,7 +4,7 @@
  * You can add child folders to path, peer default the root are in public
  * @param extensionsImage - Here place the extension allowed to images (e.g., png, jpg, etc...)
  * @param extensionsVideo - Here place the extension allowed to videos (e.g., mp4, mp4, etc...)
- * @returns {object} - Re
+ * @returns {object} - return the file Name and type of media
  */
 
 export const getMedia = ( path, extensionsImage = [ 'jpg', 'jpeg', 'png', 'webp' ], extensionsVideo = [ 'mov', 'mp4' ] ) => {
