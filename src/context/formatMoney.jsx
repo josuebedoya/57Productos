@@ -8,8 +8,6 @@ const FormatMoneyProvider = ( { children } ) => {
   const [ rates, setRates ] = useState( {} ); // all coins are stored here
   const [ ratesToUse, setRatesToUse ] = useState( [ 'COP', 'CAD', 'dff', 'JPY', 'GBP' ] ); // Define rates to use
   const [ format, setFormat ] = useState( 'COP' ); // Default format
-  const [ amount, setAmount ] = useState( 0 );
-  const [ finalConverted, setFinalConverted ] = useState( amount );
 
   // Get exchange rates
   useEffect( () => {
@@ -43,16 +41,17 @@ const FormatMoneyProvider = ( { children } ) => {
     }
   };
 
-  useEffect( () => {
+  const finalAmount = ( amount ) => {
     if ( rates && Object.keys( rates ).length > 0 && amount != null && !isNaN( amount ) ) {
       const converted = convertAmount( amount, format ); // Convert Amount
-      const formatted = formatAmount( converted, format ); // Formatted Amount
-      setFinalConverted( formatted ); // update amount formatted
+      return formatAmount( converted, format ); // Formatted Amount && return
     }
-  }, [ amount, format, rates ] );
+
+    return  formatAmount( 0, format )
+  };
 
   return <FormatMoneyContext.Provider
-   value={ { rates, ratesToUse, AddNewRate, setFormat, format, finalConverted, amount, setAmount } }>
+   value={ { rates, ratesToUse, AddNewRate, setFormat, format, finalAmount } }>
     { children }
   </FormatMoneyContext.Provider>
 }
