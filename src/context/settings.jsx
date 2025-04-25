@@ -5,10 +5,10 @@ import { getStorage, setStorage } from "@/utils/storage.js";
 const SettingsContext = createContext( null );
 
 const SettingsProvider = ( { children } ) => {
-  const [ settings, setSettings ] = useState( [] );
+  const [ settings, setSettings ] = useState( null );
   const [ error, setError ] = useState( null );
 
-  // Handle settings default
+  // Synchronize settings with storage
   useEffect( () => {
     const defaultSettings = allSettings(); // get Settings
     const settingsStorage = getStorage( "settings" ); // Found settings from Storage
@@ -16,23 +16,37 @@ const SettingsProvider = ( { children } ) => {
     if ( settingsStorage ) {
       setSettings( settingsStorage ); // if there are settings, use them
     } else {
-
+      const defaultSettings = allSettings(); // Load default settings
       setSettings( defaultSettings );
       setStorage( "settings", defaultSettings ); // Send Settings to storage
     }
   }, [] );
 
+  // Update settings & storage
   const updateSettings = ( setting, value ) => {
     if ( setting && value ) {
-
       if ( getSetting( setting ) ) {
+        // Update the setting
         setSetting( setting, value );
-        const newsSettings = allSettings(); // get new Settings
-        setStorage( 'settings', newsSettings ); // update settings from storage
 
-      } else setError( 'la configuración que intentas editar no existe.' );
+        // Get the new settings
+        const newSettings = allSettings();
 
-    } else setError( 'Faltan valores por ingresar, por favor revisa.' );
+        // Update local settings
+        setSettings( prevSettings => ( {
+          ...prevSettings,
+          ...newSettings,
+        } ) );
+
+        // Send new settings to storage
+        setStorage( "settings", newSettings );
+
+      } else {
+        setError( "La configuración que intentas editar no existe." );
+      }
+    } else {
+      setError( "Faltan algunos valores. Por favor revisa." );
+    }
   };
 
   return (
