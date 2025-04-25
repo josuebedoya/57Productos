@@ -15,13 +15,11 @@ import { TermsAndConditions } from '@/layouts/termsAndConditions'
 import { Payments } from '@/layouts/payments'
 import { Footer } from '@/templates/footer.jsx'
 import { FindResults } from "@/layouts/findResults.jsx";
-import ErrorBoundary from "@/utils/errorBoundary.jsx";
 
 function App(){
   const location = useLocation();
 
   return ( <>
-    <ErrorBoundary>
       <Header/>
       <main id='Page'
             className={ `page page-${ Slug( location.pathname === '/' ? 'inicio': location.pathname ) } m-0 p-0 w-full max-w-full h-auto max-h-full min-h-[21.6vh]` }>
@@ -39,7 +37,6 @@ function App(){
         </Routes>
       </main>
       <Footer/>
-    </ErrorBoundary>
   </> );
 }
 

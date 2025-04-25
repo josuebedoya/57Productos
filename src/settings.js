@@ -1,20 +1,39 @@
 class Settings {
   constructor() {
+    // Global Settings
     this.settings = {
-      site: {
-        name: "+57 Productos",
-        theme: "dark",
-        language: "es"
+      public: {
+        site: {
+          theme: "dark",
+          language: "es"
+        },
+        user: {
+          role: 'admin',
+          id: 1,
+          username: '@josuebedoya',
+          info: {
+            name: 'Josué Bedoya',
+            phone: 3004001122,
+            email: 'josue@gmail.com'
+          }
+        }
+      },
+      private: {
+        site: {
+          name: "+57 Productos"
+        }
       }
     };
   }
 
-  setSetting( path, newValue ) {
-    const keys = path.split( "." );
-    let setting = this.settings;
+  // set setting
+  setSettings( settingPath, newValue ) {
+    const keys = settingPath.split( "." ); // Get path separated by points
+    let setting = this.settings.public.user.role === 'admin' ? this.settings : this.settings.public;
 
     for ( let i = 0; i < keys.length - 1; i++ ) {
-      if ( !setting[ keys[ i ] ] ) return; // si la ruta no existe
+      if ( !setting[ keys[ i ] ] ) return; // If not found path
+
       setting = setting[ keys[ i ] ];
     }
 
@@ -24,9 +43,10 @@ class Settings {
     }
   }
 
-  getSetting( path ) {
-    const keys = path.split( "." );
-    let setting = this.settings;
+  // return only one setting
+  getSettings( settingPath ) {
+    const keys = settingPath.split( "." );
+    let setting = this.settings.public.user.role === 'admin' ? this.settings : this.settings.public;
 
     for ( let key of keys ) {
       if ( !setting[ key ] ) return null;
@@ -35,14 +55,26 @@ class Settings {
 
     return setting;
   }
+
+  // Return all settings
+  getAllSettings() {
+    return this.settings.public.user.role === 'admin'
+     ? this.settings // if are admin
+     : this.settings.public; // if are client
+  }
+
 }
 
 const setting = new Settings();
 
-export const useSetSetting = ( path, value ) => {
-  setting.setSetting( path, value );
+export const setSetting = ( path, newValue ) => {
+  setting.setSettings( path, newValue );
 };
 
-export const useGetSetting = ( path ) => {
-  return setting.getSetting( path );
+export const getSetting = ( path ) => {
+  return setting.getSettings( path );
+};
+
+export const allSettings = () => {
+  return setting.getAllSettings();
 };
