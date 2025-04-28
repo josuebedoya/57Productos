@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
+import ReactDOM from 'react-dom';
 import { Button } from './button.jsx';
 import { ExitArrowIcon } from '@/resources/icons';
 
@@ -7,7 +8,7 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
   const [ showing, setShowing ] = useState( isOpen );
 
   // Class Container Default
-  const classContainer = `modal-${ type } fixed inset-0 bg-black bg-opacity-80 z-modal h-screen`;
+  const classContainer = `modal-${ type } fixed inset-0 bg-black bg-opacity-80 z-modal h-screen max-w-full w-full overflow-x-hidden`;
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const clickOutside = ( event ) => {
@@ -54,7 +55,8 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
   switch ( type ) {
     // Left
     case( 1 ):
-      return  <div className={ `${ classContainer } ${ isOpen ? animationEntrance || 'animate-fade-in' : animationExit || 'animate-fade-out' }` }
+      return ReactDOM.createPortal( <div
+       className={ `${ classContainer } ${ isOpen ? animationEntrance || 'animate-fade-in' : animationExit || 'animate-fade-out' }` }
        onAnimationEnd={ handleShowing }>
         <div className="flex justify-start items-center w-full h-full">
           <div
@@ -67,10 +69,11 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
             { children }
           </div>
         </div>
-      </div>
+      </div>, document.getElementById( 'test-root' ) )
    // Right
     case( 2 ):
-      return <div className={ `${ classContainer } ${ isOpen ? animationEntrance || 'animate-fade-in' : animationExit || 'animate-fade-out' }` }
+      return ReactDOM.createPortal( <div
+       className={ `${ classContainer } ${ isOpen ? animationEntrance || 'animate-fade-in' : animationExit || 'animate-fade-out' }` }
        onAnimationEnd={ handleShowing }>
         <div className="flex justify-end text-end items-center w-full h-full">
           <div
@@ -83,10 +86,10 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
             { children }
           </div>
         </div>
-      </div>
+      </div>, document.getElementById( 'test-root' ) )
    // Default all window
     default:
-      return <div
+      return ReactDOM.createPortal( <div
        className={ `${ classContainer } ${ isOpen ? animationEntrance || 'animate-fade-in' : animationExit || 'animate-fade-out' }` }
        onAnimationEnd={ handleShowing }>
         <div className='flex justify-center items-center w-full h-full'>
@@ -101,7 +104,7 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
             { children }
           </div>
         </div>
-      </div>
+      </div>, document.getElementById( 'modal-root' ) );
   }
 };
 
