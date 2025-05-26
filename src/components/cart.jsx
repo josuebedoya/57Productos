@@ -5,6 +5,7 @@ import { Button } from './button.jsx';
 import { Path_page } from '@/routes.jsx';
 import { Slug } from "@/utils/handleText.js";
 import { useCart } from '@/context/cart.jsx';
+import { Media } from "@/components/media.jsx";
 
 const Cart = ( { close } ) => {
   const navigate = useNavigate();
@@ -121,7 +122,7 @@ const Cart = ( { close } ) => {
                     <div key={ index }
                          className='item-product flex flex-wrap  mb-3 pb-3 border-b border-b-gray-200 last:mb-0 last:pb-2'>
                       <div className='image w-2/6'>
-                        <img src={ item.img } alt='image-title' className='w-full h-16 rounded-lg object-cover'/>
+                        <Media src={item.img} alt={item.img + index} classFile='w-full h-16 rounded-lg object-contain'></Media>
                       </div>
                       <div className='information w-4/6 group/info pl-2'>
                         <Link to={ 'tienda/' + Slug( item.title ) } target='_self'>

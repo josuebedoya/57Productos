@@ -48,6 +48,7 @@ const Product = ( props ) => {
       title: props.title,
       amount: props.amount,
       price: props.price,
+      img: props.img
     }
     addCart( product );
   }; // add product to cart
