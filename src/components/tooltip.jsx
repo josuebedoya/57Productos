@@ -3,7 +3,7 @@ import { TriangleRight } from "@/resources/icons.jsx";
 
 const Tooltip = ( {
                     children, content = '', position = 'center', spaceY =5, spaceX = 6,
-                    tooltipClass = '', withArrow = true, dark
+                    tooltipClass = '', contentClass = '', withArrow = true, dark
                   } ) => {
 
   const [ classPositions, setClassPosition ] = useState( {} )
@@ -81,7 +81,9 @@ const Tooltip = ( {
            </TriangleRight>
         </span>
        }
-       { content }
+       <span className={ contentClass || 'text-sm text-Primary'}>
+           { content }
+       </span>
      </span>
      { children }
    </div>
