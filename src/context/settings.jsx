@@ -10,7 +10,6 @@ const SettingsProvider = ( { children } ) => {
 
   // Synchronize settings with storage
   useEffect( () => {
-    const defaultSettings = allSettings(); // get Settings
     const settingsStorage = getStorage( "settings" ); // Found settings from Storage
 
     if ( settingsStorage ) {
