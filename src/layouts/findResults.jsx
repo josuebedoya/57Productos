@@ -63,6 +63,7 @@ const FindResults = () => {
                 price={ item.precio }
                 img={ img }
                 imgHover={ img }
+                amount={ 1 }
                >
                  { item.descripcion }
                </Product>
