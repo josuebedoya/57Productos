@@ -143,19 +143,19 @@ const Footer = () => {
          </p>
        </div>
        <div className=' social flex flex-row justify-around items-center sm:gap-0.5'>
-         <a href='/' className=' facebook p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#090C9B] rounded-full duration-200'
+         <a href='https://www.facebook.com' className=' facebook p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#090C9B] rounded-full duration-200'
             target='_blank'>
            <FacebookIcon classIcons='text-blue-700 cursor-pointer w-5 h-5 sm:w-6 sm:h-6'/>
          </a>
-         <a href='/' className='youtube p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#BF0603] rounded-full duration-200'
+         <a href='https://youtube.com' className='youtube p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#BF0603] rounded-full duration-200'
             target='_blank'>
            <YoutubeIcon classIcons='text-red-600 cursor-pointer w-5 h-5 sm:w-6 sm:h-6'/>
          </a>
-         <a href='/' className='instagram p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#FDB833] rounded-full duration-200'
+         <a href='https://www.instagram.com' className='instagram p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#FDB833] rounded-full duration-200'
             target='_blank'>
            <InstagramColorIcon classIcons='cursor-pointer w-5 h-5 sm:w-6 sm:h-6 rounded-full'/>
          </a>
-         <a href='/' className='tiktok p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#FFFFFF] rounded-full duration-200'
+         <a href='https://www.tiktok.com' className='tiktok p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#FFFFFF] rounded-full duration-200'
             target='_blank'>
            <TikTokIcon classIcons='text-stone-200 cursor-pointer w-5 h-5 sm:w-6 sm:h-6'/>
          </a>

@@ -6,6 +6,7 @@ import { Search } from "@/components/search.jsx";
 import { Cart } from '@/components/cart.jsx';
 import { Menu } from '@/components/menu/menu.jsx';
 import { Path_page } from '@/routes';
+import { Link } from "react-router-dom";
 
 const menuItems = [
   { name: 'Inicio', url: Path_page.HOME },
@@ -79,10 +80,10 @@ const Header = () => {
          {/* Logo */ }
          <div
           className='logo-section col-span-10  sm:col-span-7 md:col-span-8 lg:col-span-2  flex items-center justify-start lg:justify-center sm:pl-4 order-1'>
-           <a href='/'>
+           <Link to='/'>
              <img src={ logoBlack } alt='Logo de la aplicación' className='w-48 max-w-48 black'/>
              <img src={ logoWhite } alt='Logo de la aplicación' className='w-48  max-w-48 white hidden'/>
-           </a>
+           </Link>
          </div>
 
          {/* List Menu */ }
@@ -101,10 +102,10 @@ const Header = () => {
              <Cart close={ modalCart }/>
            </div>
            <div className='profile-section'>
-             <a href={ Path_page.PROFILE } target='_self' className='profile-section-icon text-white bg-Primary border border-Primary rounded-full p-2 flex items-center
+             <Link to={ Path_page.PROFILE } target='_self' className='profile-section-icon text-white bg-Primary border border-Primary rounded-full p-2 flex items-center
               hover:bg-transparent hover:text-Secondary hover:border-Secondary transition duration-150'>
                <ProfileIcon/>
-             </a>
+             </Link>
            </div>
          </div>
        </div>

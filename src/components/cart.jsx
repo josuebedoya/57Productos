@@ -6,6 +6,7 @@ import { Path_page } from '@/routes.jsx';
 import { Slug } from "@/utils/handleText.js";
 import { useCart } from '@/context/cart.jsx';
 import { Media } from "@/components/media.jsx";
+import { Tooltip } from "@/components/tooltip.jsx";
 
 const Cart = ( { close } ) => {
   const navigate = useNavigate();
@@ -20,6 +21,7 @@ const Cart = ( { close } ) => {
 
   useEffect( () => {
     setItems( cart );
+    console.log(items)
   }, [ cart ] ); //  handle  listener changes in cart.
 
   useEffect( () => {
@@ -149,35 +151,41 @@ const Cart = ( { close } ) => {
                           <Button classBtn='text-sm family-oswald pr-5' btnText>
                             Comprar
                           </Button>
-                          <i title='Sacar Producto del carrito' className='flex justify-center items-center'
+                          <Tooltip content='Sacar Producto del carrito' position='left' contentClass='text-sm text-red-500 whitespace-nowrap font-medium'
+                                   tooltipClass='shadow-md'>
+                          <i className='flex justify-center items-center'
                              onClick={ () => removeItem( item.id ) }>
                             <CartDown classIcons='remove-item text-red-600 cursor-pointer hover:scale-110'/>
                           </i>
+                          </Tooltip>
                         </div>
                       </div>
                     </div>
                    ) )
                  }
                </div>
-               <div className='bottom-section flex justify-between sticky -bottom-0.5 py-4 bg-white tracking-'>
-                 <Button classBtn='text-xs  pr-5 tracking-wider' iconRight icon={ <TicketMoney classIcons='text-lg'/> }
+               <div className='bottom-section flex justify-between sticky -bottom-0.5 py-4 bg-white family-oswald'>
+                 <Button classBtn='text-xs  pr-5 px-4 tracking-wider' iconRight icon={ <TicketMoney classIcons='text-lg'/> }
                          onClick={ () => {
                            goToPayments();
                            setOpenModal( false )
                          } }>
                    Comprar Todo
                  </Button>
-                 <i title='Eliminar todo del carrio' className='flex justify-center items-center hover:animate-shaking'
-                    onMouseOver={ () => setIconDelete( true ) }
-                    onMouseLeave={ () => setIconDelete( false ) }
-                    onClick={ () => removeAll() }
-                 >
-                   {
-                     iconDelete ?
-                      <TrashOpenIcon classIcons='remove-item text-red-600 cursor-pointer hover:scale-110'/>
-                      : <TrashIcon classIcons='remove-item text-red-600 cursor-pointer hover:scale-110 '/>
-                   }
-                 </i>
+                 <Tooltip content='Eliminar todo del carrio' position='left' contentClass='text-sm text-red-500 whitespace-nowrap font-medium'
+                                tooltipClass='shadow-md'>
+                     <i className='flex justify-center items-center hover:animate-shaking'
+                        onMouseOver={ () => setIconDelete( true ) }
+                        onMouseLeave={ () => setIconDelete( false ) }
+                        onClick={ () => removeAll() }
+                     >
+                       {
+                         iconDelete ?
+                          <TrashOpenIcon classIcons='remove-item text-red-600 cursor-pointer hover:scale-110'/>
+                          : <TrashIcon classIcons='remove-item text-red-600 cursor-pointer hover:scale-110 '/>
+                       }
+                     </i>
+                 </Tooltip>
                </div>
              </>
             ) : (
