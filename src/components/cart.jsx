@@ -10,7 +10,7 @@ import { Tooltip } from "@/components/tooltip.jsx";
 
 const Cart = ( { close } ) => {
   const navigate = useNavigate();
-  const { cart, removeItem, removeAll } = useCart();
+  const { cart, removeItem, removeAll, decrementAmount, incrementAmount } = useCart();
 
 
   const [ totalAmountProducts, setTotalAmountProducts ] = useState( 0 ); // total products
@@ -21,7 +21,6 @@ const Cart = ( { close } ) => {
 
   useEffect( () => {
     setItems( cart );
-    console.log(items)
   }, [ cart ] ); //  handle  listener changes in cart.
 
   useEffect( () => {
@@ -37,29 +36,6 @@ const Cart = ( { close } ) => {
     addTotalAmount();
 
   }, [ items ] ); // handle total amount
-
-  const incrementAmount = ( id ) => {
-    const newItems = items.map( item => (
-     item.id === id ? { ...item, amount: item.amount + 1 } : item
-    ) )
-
-    setItems( newItems );
-  };  // increment amount product
-
-  const decrementAmount = ( id ) => {
-    const newItems = items.map( item => {
-      if ( item.amount > 1 ) {
-        return item.id === id ? { ...item, amount: item.amount - 1 } : item
-      }
-      return item;
-    } );
-
-    setItems( newItems );
-  }; // decrement amount product
-
-  const handleOpenModal = () => {
-    setOpenModal( !openModal );
-  }; // open modal
 
   useEffect( () => {
 
@@ -94,7 +70,7 @@ const Cart = ( { close } ) => {
   }; // Navigation to payments page
 
   return (
-   <div id='CartDropdown' onClick={ () => handleOpenModal() }>
+   <div id='CartDropdown' onClick={ () =>   setOpenModal( !openModal ) }>
      <div ref={ modalRef }
           className='cart flex items-center relative bg-Primary hover:bg-transparent rounded-full border border-Primary hover:border hover:border-Secondary d duration-150 group/cart cursor-pointer z-[100]'>
        <CartIcon classIcons='text-white duration-150 cursor-pointer group-hover/cart:text-Secondary'/>
