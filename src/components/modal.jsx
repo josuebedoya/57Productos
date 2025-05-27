@@ -69,7 +69,7 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
             { children }
           </div>
         </div>
-      </div>, document.getElementById( 'test-root' ) )
+      </div>, document.getElementById( 'modal-root' ) );
    // Right
     case( 2 ):
       return ReactDOM.createPortal( <div
@@ -86,7 +86,7 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
             { children }
           </div>
         </div>
-      </div>, document.getElementById( 'test-root' ) )
+      </div>, document.getElementById( 'modal-root' ) );
    // Default all window
     default:
       return ReactDOM.createPortal( <div
