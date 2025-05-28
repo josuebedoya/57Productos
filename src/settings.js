@@ -2,25 +2,19 @@ class Settings {
   constructor() {
     // Global Settings
     this.settings = {
-      public: {
-        site: {
-          theme: "dark",
-          language: "es"
-        },
-        user: {
-          role: 'admin',
-          id: 1,
-          username: '@josuebedoya',
-          info: {
-            name: 'Josué Bedoya',
-            phone: 3004001122,
-            email: 'josue@gmail.com'
-          }
-        }
+      site: {
+        theme: "dark",
+        language: "es",
+        name: "+57 Productos Colombia"
       },
-      private: {
-        site: {
-          name: "+57 Productos"
+      user: {
+        role: 'admin',
+        id: 1,
+        username: '@josuebedoya',
+        info: {
+          name: 'Josué Bedoya',
+          phone: 3004001122,
+          email: 'josue@gmail.com'
         }
       }
     };
@@ -29,10 +23,10 @@ class Settings {
   // set setting
   setSettings( settingPath, newValue ) {
     const keys = settingPath.split( "." ); // Get path separated by points
-    let setting = this.settings.public.user.role === 'admin' ? this.settings : this.settings.public;
+    let setting = this.settings;
 
     for ( let i = 0; i < keys.length - 1; i++ ) {
-      if ( !setting[ keys[ i ] ] ) return; // If not found path
+      if ( !setting[ keys[ i ] ] ) return ; // If not found path
 
       setting = setting[ keys[ i ] ];
     }
@@ -46,10 +40,10 @@ class Settings {
   // return only one setting
   getSettings( settingPath ) {
     const keys = settingPath.split( "." );
-    let setting = this.settings.public.user.role === 'admin' ? this.settings : this.settings.public;
+    let setting = this.settings;
 
     for ( let key of keys ) {
-      if ( !setting[ key ] ) return null;
+      if ( !setting[ key ] ) return settingPath;
       setting = setting[ key ];
     }
 
@@ -58,9 +52,7 @@ class Settings {
 
   // Return all settings
   getAllSettings() {
-    return this.settings.public.user.role === 'admin'
-     ? this.settings // if are admin
-     : this.settings.public; // if are client
+    return this.settings
   }
 
 }
