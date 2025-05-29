@@ -13,7 +13,7 @@ const MainSection = () => {
              <h1 className='text-center'>Tu Perfil</h1>
              <p className='text-center'>@josuebedoya348</p>
            </div>
-           <div className='money-content w-44'>
+           <div className='money-content w-auto'>
              <Money />
            </div>
          </div>

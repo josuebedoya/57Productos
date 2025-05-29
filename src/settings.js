@@ -15,7 +15,8 @@ class Settings {
           name: 'Josué Bedoya',
           phone: 3004001122,
           email: 'josue@gmail.com'
-        }
+        },
+        money: 1000000
       }
     };
   }

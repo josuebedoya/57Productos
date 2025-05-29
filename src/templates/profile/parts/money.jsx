@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 import { useFormatMoney } from "@/context/formatMoney.jsx";
 import { AlertIcon, CloseIcon, EyeCloseIcon, EyeOpenIcon, PencilIcon, SettingIcon } from '@/resources/icons.jsx';
 import { Input } from '@/components/input.jsx';
+import { getSetting } from "@/settings.js";
 
 const Money = () => {
-
+const amount =  getSetting('user.money');
   const [ showMoney, setShowMoney ] = useState( true );
   const [ openModal, setOpenModal ] = useState( false );
   const [ openModalAddRate, setOpenModalAddRate ] = useState( false );
-  const { rates, ratesToUse, AddNewRate, amount, setFormat, format, finalConverted } = useFormatMoney();
+  const { rates, ratesToUse, AddNewRate, setFormat, format, finalAmount } = useFormatMoney();
   const [ newRate, setNewRate ] = useState( '' );
   const [ optionsInvalid, setOptionsInvalid ] = useState( [] );
   const [ optionsValid, setOptionsValid ] = useState( [] );
@@ -69,8 +70,8 @@ const Money = () => {
        { !showMoney ? amountCharacters : (
         <>
           <div className=' flex justify-between gap-1 '>
-              <span className='money family-oswald w-20'>
-                { finalConverted }
+              <span className='money family-oswald w-auto min-w-max'>
+                { finalAmount(amount) }
               </span>
             <select value={ format } onChange={ ( e ) => setFormat( e.target.value ) } id='select-format'>
               { optionsValid?.map( option => (
