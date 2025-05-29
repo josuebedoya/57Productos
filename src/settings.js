@@ -5,12 +5,13 @@ class Settings {
       site: {
         theme: "dark",
         language: "es",
-        name: "+57 Productos Colombia"
+        name: "+57 Productos Colombia",
+        rateExchange: 'COP'
       },
       user: {
         role: 'admin',
         id: 1,
-        username: '@josuebedoya',
+        username: 'josuebedoya',
         info: {
           name: 'Josué Bedoya',
           phone: 3004001122,

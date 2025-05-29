@@ -3,6 +3,7 @@ import { useFormatMoney } from "@/context/formatMoney.jsx";
 import { AlertIcon, CloseIcon, EyeCloseIcon, EyeOpenIcon, PencilIcon, SettingIcon } from '@/resources/icons.jsx';
 import { Input } from '@/components/input.jsx';
 import { getSetting } from "@/settings.js";
+import { useSettings } from "@/context/settings.jsx";
 
 const Money = () => {
 const amount =  getSetting('user.money');
@@ -14,6 +15,7 @@ const amount =  getSetting('user.money');
   const [ optionsInvalid, setOptionsInvalid ] = useState( [] );
   const [ optionsValid, setOptionsValid ] = useState( [] );
   const [ amountCharacters, setAmountCharacters ] = useState( '*' );
+  const { updateSettings } = useSettings();
 
   //  Separated valid & invalid options
   useEffect( () => {
@@ -55,6 +57,12 @@ const amount =  getSetting('user.money');
     setOpenModalAddRate( !openModalAddRate );
   };
 
+  // Set format
+  const setFormatRate = ( e ) => {
+    setFormat( e.target.value );
+    updateSettings('site.rateExchange', e.target.value );
+  }
+
   return (
    <div className='amountMoney relative'>
      <div className='top-section flex justify-between mb-2'>
@@ -73,7 +81,7 @@ const amount =  getSetting('user.money');
               <span className='money family-oswald w-auto min-w-max'>
                 { finalAmount(amount) }
               </span>
-            <select value={ format } onChange={ ( e ) => setFormat( e.target.value ) } id='select-format'>
+            <select value={ format } onChange={ ( e ) => setFormatRate( e ) } id='select-format'>
               { optionsValid?.map( option => (
                <option key={ option } value={ option } className={ `option ${ option }` }>
                  { option }
