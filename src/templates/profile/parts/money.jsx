@@ -10,7 +10,7 @@ const amount =  getSetting('user.money');
   const [ showMoney, setShowMoney ] = useState( true );
   const [ openModal, setOpenModal ] = useState( false );
   const [ openModalAddRate, setOpenModalAddRate ] = useState( false );
-  const { rates, ratesToUse, AddNewRate, setFormat, format, finalAmount } = useFormatMoney();
+  const { rates, ratesToUse, AddNewRate, setFormat, format, formatMoney } = useFormatMoney();
   const [ newRate, setNewRate ] = useState( '' );
   const [ optionsInvalid, setOptionsInvalid ] = useState( [] );
   const [ optionsValid, setOptionsValid ] = useState( [] );
@@ -79,7 +79,7 @@ const amount =  getSetting('user.money');
         <>
           <div className=' flex justify-between gap-1 '>
               <span className='money family-oswald w-auto min-w-max'>
-                { finalAmount(amount) }
+                { formatMoney(amount) }
               </span>
             <select value={ format } onChange={ ( e ) => setFormatRate( e ) } id='select-format'>
               { optionsValid?.map( option => (

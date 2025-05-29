@@ -50,7 +50,7 @@ const FormatMoneyProvider = ( { children } ) => {
     }
   };
 
-  const finalAmount = ( amount ) => {
+  const formatMoney = ( amount ) => {
     if ( rates && Object.keys( rates ).length > 0 && amount != null && !isNaN( amount ) ) {
       const converted = convertAmount( amount, format ); // Convert Amount
       return formatAmount( converted, format ); // Formatted Amount && return
@@ -60,7 +60,7 @@ const FormatMoneyProvider = ( { children } ) => {
   };
 
   return <FormatMoneyContext.Provider
-   value={ { rates, ratesToUse, AddNewRate, setFormat, format, finalAmount } }>
+   value={ { rates, ratesToUse, AddNewRate, setFormat, format, formatMoney } }>
     { children }
   </FormatMoneyContext.Provider>
 }

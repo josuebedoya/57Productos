@@ -6,7 +6,7 @@ import { useFormatMoney } from "@/context/formatMoney.jsx";
 const Store = () => {
   const [ products, setProducts ] = useState( [] );
   const { get, data, error, loading } = useDatabase();
-  const { finalAmount } = useFormatMoney();
+  const { formatMoney } = useFormatMoney();
 
 
   // get product from database
@@ -37,7 +37,7 @@ const Store = () => {
         <Product key={ i }
          id={ product.id }
          title={ product.nombre }
-         price={ finalAmount( product.precio ) }
+         price={ formatMoney( product.precio ) }
          img={ product.imagen }
          imgHover={ product.imagen_hover}
          amount={ 1 }
