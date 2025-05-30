@@ -72,7 +72,8 @@ const Cart = ( { close } ) => {
   return (
    <div id='CartDropdown' onClick={ () =>   setOpenModal( !openModal ) }>
      <div ref={ modalRef }
-          className='cart flex items-center relative bg-Primary hover:bg-transparent rounded-full border border-Primary hover:border hover:border-Secondary d duration-150 group/cart cursor-pointer z-[100]'>
+          className='cart flex items-center relative bg-Primary hover:bg-transparent rounded-full border border-Primary hover:border hover:border-Secondary d duration-150 group/cart cursor-pointer z-[100]'
+          role='show-cart'>
        <CartIcon classIcons='text-white duration-150 cursor-pointer group-hover/cart:text-Secondary'/>
        { totalAmountProducts > 0 && !openModal && (
         <div className='absolute top-five right-five flex items-center justify-center translate-x-1/2 -translate-y-1/2'>
@@ -86,7 +87,7 @@ const Cart = ( { close } ) => {
          openModal ? (
           <div
            className={ `${ openModal ? 'animate-fade-in' : 'animate-fade-out' } cursor-auto cart-products absolute px-6 rounded-lg shadow-custom w-64 -left-40 top-10 bg-white min-h-20 max-h-[373px] ${ totalAmountProducts && ( 'overflow-y-scroll scrollbar-thin scrollbar-thumb-scrollbar scrollbar-track-transparent' ) }` }
-           onClick={ ( e ) => e.stopPropagation() }>
+           onClick={ ( e ) => e.stopPropagation() } role='modal' aria-modal={openModal} aria-hidden={!openModal}>
             { totalAmountProducts > 0 ? (
              <>
                <div
