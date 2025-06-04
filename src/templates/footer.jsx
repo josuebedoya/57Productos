@@ -15,6 +15,7 @@ import { useComment } from '@/context/comments';
 import { Menu } from '@/components/menu/menu.jsx';
 import { Form } from '@/components/form';
 import { CSSTransition } from 'react-transition-group';
+import { Copyright } from "@/components/copyright.jsx";
 
 const Footer = () => {
   const [ comment, setComment ] = useState( '' );
@@ -174,11 +175,7 @@ const Footer = () => {
          <Menu items={ itemsMenus[ 2 ] } classLink={ artMenus }/>
        </div>
      </div>
-     <div className='copiright text-stone-200 text-end container mx-auto px-3 py-4 border-t border-t-stone-50'>
-       <p className='family-oswald tracking-wider text-13 tl:text-15'>
-         © 2025. Todos los derechos reservados para este sitio. +57 Productos-Colombia.
-       </p>
-     </div>
+     <Copyright copyrightClass='family-oswald tracking-wider tl:text-15 text-stone-200 text-end px-3 py-4 border-t border-t-stone-50 font-extralight'/>
    </footer>
   );
 };

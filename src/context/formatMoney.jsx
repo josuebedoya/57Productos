@@ -1,13 +1,22 @@
 import { createContext, useState, useContext, useEffect } from 'react';
 import { getExchangeRates } from '@/utils/divisas.jsx';
+import { useSettings } from "@/context/settings.jsx";
 
 const FormatMoneyContext = createContext();
 
 const FormatMoneyProvider = ( { children } ) => {
 
+  const { settings } = useSettings();
+  const settingFormat = settings?.site?.rateExchange ?? 'COP';
+
   const [ rates, setRates ] = useState( {} ); // all coins are stored here
   const [ ratesToUse, setRatesToUse ] = useState( [ 'COP', 'CAD', 'dff', 'JPY', 'GBP' ] ); // Define rates to use
-  const [ format, setFormat ] = useState( 'COP' ); // Default format
+  const [ format, setFormat ] = useState( settingFormat ); // Default format
+
+  // Get format from settings
+  useEffect( () => {
+    setFormat( settingFormat )
+  }, [ settingFormat ] );
 
   // Get exchange rates
   useEffect( () => {
@@ -41,17 +50,17 @@ const FormatMoneyProvider = ( { children } ) => {
     }
   };
 
-  const finalAmount = ( amount ) => {
+  const formatMoney = ( amount ) => {
     if ( rates && Object.keys( rates ).length > 0 && amount != null && !isNaN( amount ) ) {
       const converted = convertAmount( amount, format ); // Convert Amount
       return formatAmount( converted, format ); // Formatted Amount && return
     }
 
-    return  formatAmount( 0, format )
+    return formatAmount( 0, format )
   };
 
   return <FormatMoneyContext.Provider
-   value={ { rates, ratesToUse, AddNewRate, setFormat, format, finalAmount } }>
+   value={ { rates, ratesToUse, AddNewRate, setFormat, format, formatMoney } }>
     { children }
   </FormatMoneyContext.Provider>
 }

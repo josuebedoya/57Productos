@@ -1,20 +1,27 @@
-import { useState } from 'react';
 import { GuestSection } from '@/templates/profile/guestSection.jsx';
 import { MainSection } from '@/templates/profile/mainSection.jsx';
+import { setStorage, getStorage } from "@/utils/storage.js";
+import { useCallback, useEffect, useState } from "react";
 
 const Profile = () => {
+  const [ isLogin, setIsLogin ] = useState( false )
 
-  const [ loged, setLoged ] = useState( false );
-  const handleLoged = () => {
-    setLoged( !loged );
-  };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const handleLogin = useCallback( () => {
+    setStorage( 'login', true );
+    window.location.reload();
+  } );
+
+  useEffect( () => {
+    setIsLogin( getStorage( 'login' ) )
+  }, [] );
 
   return (
    <section>
-     { loged ? (
+     { isLogin ? (
       <MainSection/>
      ) : (
-      <GuestSection isLogin={ handleLoged }/>
+      <GuestSection isLogin={ handleLogin }/>
      ) }
    </section>
   );
