@@ -6,6 +6,7 @@ class Settings {
         theme: "dark",
         language: "es",
         name: "+57 Productos Colombia",
+        description: "De colombia para el mundo ❤️",
         rateExchange: 'COP'
       },
       user: {

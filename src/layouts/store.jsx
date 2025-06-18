@@ -2,11 +2,14 @@ import { useEffect, useState } from 'react';
 import { useDatabase } from '@/utils/database.jsx';
 import { Product } from '@/components/product/product.jsx';
 import { useFormatMoney } from "@/context/formatMoney.jsx";
+import { useSettings } from "@/context/settings.jsx";
+import { Metas } from "@/components/metas.jsx";
 
 const Store = () => {
   const [ products, setProducts ] = useState( [] );
   const { get, data, error, loading } = useDatabase();
   const { formatMoney } = useFormatMoney();
+  const { settings } = useSettings();
 
 
   // get product from database
@@ -16,7 +19,7 @@ const Store = () => {
 
   // update local products
   useEffect( () => {
-    if( data?.[ 'productos' ] ){
+    if ( data?.[ 'productos' ] ) {
       setProducts( data[ 'productos' ] );
     }
 
@@ -31,22 +34,28 @@ const Store = () => {
     return <div>Cargando contenido-----</div>;
   }
 
-  return ( <section id='Store'>
-    <div className='container mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 py-10'>
-      { products ? ( products.slice( 0, 30 ).map( ( product, i ) => (
-        <Product key={ i }
-         id={ product.id }
-         title={ product.nombre }
-         price={ formatMoney( product.precio ) }
-         img={ product.imagen }
-         imgHover={ product.imagen_hover}
-         amount={ 1 }
-        >
-          { product.descripcion }
-        </Product>))
-      ):( <p>Cargando productos, no debería tardar demasiado</p>)}
-    </div>
-  </section>)
+  return ( <>
+    <Metas
+     title={ `${ settings?.site.name } | Tienda` }
+     description='Explora nuestra tienda y descubre una variedad de productos frescos y de calidad.'
+     type='website'/>
+    <section id='Store'>
+      <div className='container mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 py-10'>
+        { products ? ( products.slice( 0, 30 ).map( ( product, i ) => (
+          <Product key={ i }
+                   id={ product.id }
+                   title={ product.nombre }
+                   price={ formatMoney( product.precio ) }
+                   img={ product.imagen }
+                   imgHover={ product.imagen_hover }
+                   amount={ 1 }
+          >
+            { product.descripcion }
+          </Product> ) )
+        ) : ( <p>Cargando productos, no debería tardar demasiado</p> ) }
+      </div>
+    </section>
+  </> )
 }
 
 export { Store };

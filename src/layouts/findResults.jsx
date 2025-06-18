@@ -5,11 +5,13 @@ import { normalizeText } from "@/utils/handleText.js";
 import { List } from '@/components/list.jsx';
 import { Product } from "@/components/product/product.jsx";
 import img from '/images/products/lettuce.jpg';
+import { Metas } from "@/components/metas.jsx";
 
 const FindResults = () => {
   const { get, data } = useDatabase();
   const [ found, setFound ] = useState( [] );
   const { query } = useResults();
+  const { settings } = useDatabase();
 
   // Get products
   useEffect( () => {
@@ -21,17 +23,17 @@ const FindResults = () => {
     const handleFoundItems = () => {
 
       // Filtered items found
-      const itemsFound = data?.['productos'].filter( item => normalizeText( item.nombre ).includes( normalizeText( query ) ) );
+      const itemsFound = data?.[ 'productos' ].filter( item => normalizeText( item.nombre ).includes( normalizeText( query ) ) );
       // Update list found
       setFound( itemsFound );
     };
 
-    if ( data?.['productos'] ) {
+    if ( data?.[ 'productos' ] ) {
       handleFoundItems();
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ data?.['productos'], query ] );
+  }, [ data?.[ 'productos' ], query ] );
 
   const breakpoints = {
     zero: 2,
@@ -41,20 +43,25 @@ const FindResults = () => {
   }
 
   return (
-   <section id='results'>
-     <div className='found-items container mx-auto px-3 py-16'>
-       <div className="top-section mb-16">
-         {
-           found.length > 0 && query !== '' ?
-            <h1
-             dangerouslySetInnerHTML={ { __html: `Prodcutos encontrados para "<em><strong>${ query }</strong></em>".` } }/>
-            : null
-         }
-       </div>
-       <List textEmpty={ `No se encontraron productos relacionados con "${ query }".` } breakpoints={ breakpoints }
-             columns={ 1 } rows={ 2 } pagination typePagination={ 2 }>
-         {
-           found.length > 0 && query !== ''  &&
+   <>
+     <Metas
+      title={ `${ settings?.site.name } | Resultados` }
+      description='Aquí encontrarás los resultados de tu búsqueda.'
+      type='website'/>
+     <section id='results'>
+       <div className='found-items container mx-auto px-3 py-16'>
+         <div className="top-section mb-16">
+           {
+             found.length > 0 && query !== '' ?
+              <h1
+               dangerouslySetInnerHTML={ { __html: `Prodcutos encontrados para "<em><strong>${ query }</strong></em>".` } }/>
+              : null
+           }
+         </div>
+         <List textEmpty={ `No se encontraron productos relacionados con "${ query }".` } breakpoints={ breakpoints }
+               columns={ 1 } rows={ 2 } pagination typePagination={ 2 }>
+           {
+            found.length > 0 && query !== '' &&
             found.map( item => (
              <div key={ item.id } className={ `item-found-${ item.id }` }>
                <Product
@@ -69,10 +76,11 @@ const FindResults = () => {
                </Product>
              </div>
             ) )
-         }
-       </List>
-     </div>
-   </section>
+           }
+         </List>
+       </div>
+     </section>
+   </>
   );
 };
 

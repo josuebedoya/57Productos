@@ -2,9 +2,12 @@ import { GuestSection } from '@/templates/profile/guestSection.jsx';
 import { MainSection } from '@/templates/profile/mainSection.jsx';
 import { setStorage, getStorage } from "@/utils/storage.js";
 import { useCallback, useEffect, useState } from "react";
+import { Metas } from "@/components/metas.jsx";
+import { useSettings } from "@/context/settings.jsx";
 
 const Profile = () => {
   const [ isLogin, setIsLogin ] = useState( false )
+  const { settings } = useSettings();
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleLogin = useCallback( () => {
@@ -17,13 +20,19 @@ const Profile = () => {
   }, [] );
 
   return (
-   <section>
-     { isLogin ? (
-      <MainSection/>
-     ) : (
-      <GuestSection isLogin={ handleLogin }/>
-     ) }
-   </section>
+   <>
+     <Metas
+      title={ `${ settings?.site.name } | Perfil` }
+      description='Administra tu perfil, revisa tus pedidos y más.'
+      type='website'/>
+     <section>
+       { isLogin ? (
+        <MainSection/>
+       ) : (
+        <GuestSection isLogin={ handleLogin }/>
+       ) }
+     </section>
+   </>
   );
 };
 export { Profile };
