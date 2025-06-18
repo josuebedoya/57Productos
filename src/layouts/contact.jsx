@@ -1,5 +1,5 @@
 import { useSettings } from '@/context/settings';
-import { Metas } from '@/components/Metas';
+import { Metas } from '@/components/metas';
 
 const Contact = () => {
   const { settings } = useSettings();
