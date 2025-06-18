@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ProfileIcon, AngleBottomIcon } from '@/resources/icons';
+import { ProfileIcon, AngleBottomIcon } from '@/assets/icons';
 import logoBlack from '/logo-black.png';
 import logoWhite from '/logo-white.png';
 import { Search } from "@/components/search.jsx";

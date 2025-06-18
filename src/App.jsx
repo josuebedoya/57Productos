@@ -4,17 +4,17 @@ import { Slug } from "@/utils/handleText.js";
 
 //Components imports
 import { Header } from '@/templates/header'
-import { Home } from '@/layouts/home'
-import { About } from '@/layouts/about'
-import { Error } from '@/layouts/error'
-import { Services } from '@/layouts/services'
-import { Store } from '@/layouts/store'
-import { Contact } from '@/layouts/contact'
-import { Profile } from '@/layouts/profile'
-import { TermsAndConditions } from '@/layouts/termsAndConditions'
-import { Payments } from '@/layouts/payments'
+import { Home } from '@/pages/home/index.jsx'
+import { Us } from '@/pages/us/index.jsx'
+import { Error } from '@/pages/error/index.jsx'
+import { Services } from '@/pages/services/index.jsx'
+import { Store } from '@/pages/store/index.jsx'
+import { Contact } from '@/pages/contact/index.jsx'
+import { Profile } from '@/pages/auth/index.jsx'
+import { TermsAndConditions } from '@/pages/auth/indexT&c.jsx'
+import { Payments } from '@/pages/store/indexPay.jsx'
 import { Footer } from '@/templates/footer.jsx'
-import { FindResults } from "@/layouts/findResults.jsx";
+import { Search } from "@/pages/search/index.jsx";
 
 function App() {
   const location = useLocation();
@@ -25,13 +25,13 @@ function App() {
     <main className='flex-1'>
       <Routes>
         <Route index path={ Path_page.HOME } element={ <Home/> }/>
-        <Route path={ Path_page.US } element={ <About/> }/>
+        <Route path={ Path_page.US } element={ <Us/> }/>
         <Route path={ Path_page.SERVICES } element={ <Services/> }/>
         <Route path={ Path_page.STORE } element={ <Store/> }/>
         <Route path={ Path_page.CONTACT } element={ <Contact/> }/>
         <Route path={ Path_page.PROFILE } element={ <Profile/> }/>
         <Route path={ Path_page.PAYMENTS } element={ <Payments/> }/>
-        <Route path={ Path_page.SEARCH } element={ <FindResults/> }/>
+        <Route path={ Path_page.SEARCH } element={ <Search/> }/>
         <Route path={ Path_page.TERMS_AND_CONDITIONS } element={ <TermsAndConditions/> }/>
         <Route path={ Path_page.ERROR } element={ <Error/> }/>
       </Routes>

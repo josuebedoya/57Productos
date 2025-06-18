@@ -1,4 +1,4 @@
-import {AddCircleIcon, CartIcon, TicketMoney, Plant, HandEstrech} from '@/resources/icons.jsx';
+import {AddCircleIcon, CartIcon, TicketMoney, Plant, HandEstrech} from '@/assets/icons.jsx';
 
 const Grafic = () => {
   return (

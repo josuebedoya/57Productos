@@ -1,10 +1,10 @@
-import { MissionAndVision } from '@/templates/about/misionAndVision.jsx'
-import { InfoAbout } from '@/templates/about/infoAbout.jsx'
+import { MissionAndVision } from '@/pages/us/templates/misionAndVision.jsx'
+import { InfoAbout } from '@/pages/us/templates/infoAbout.jsx'
 import imgFruitFlat from '/images/img-fruit-flat.webp'
 import { Metas } from "@/components/metas.jsx";
 import { useSettings } from "@/context/settings.jsx";
 
-const About = () => {
+const Us = () => {
   const { settings } = useSettings();
   return (
    <>
@@ -62,4 +62,5 @@ const About = () => {
      </section>
    </> )
 };
-export { About };
+
+export { Us };

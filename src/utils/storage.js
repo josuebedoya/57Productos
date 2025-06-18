@@ -4,7 +4,7 @@ export const getStorage = ( key ) => {
     return data ? JSON.parse( data ) : null;
 
   } catch ( e ) {
-    console.error( "Error parsing storage key:", key + '\n ' + e );
+    console.error( "Index parsing storage key:", key + '\n ' + e );
     return null;
   }
 };

@@ -1,5 +1,5 @@
 import { Spin } from '@/components/spin.jsx';
-import { FigureOne } from '@/resources/svgFigures.jsx';
+import { FigureOne } from '@/assets/svgFigures.jsx';
 import colombia from '/images/flags/colombia.png'
 import usa from '/images/flags/usa.png'
 import japan from '/images/flags/japan.png'

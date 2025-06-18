@@ -4,7 +4,7 @@ import { Path_page } from '@/routes.jsx';
 import { TextAnimatedWrite } from '@/components/textAnimatedWrite.jsx'
 import { Grafic } from '@/components/grafic.jsx'
 import { Button } from '@/components/button.jsx'
-import { AngleRightIcon } from '@/resources/icons.jsx'
+import { AngleRightIcon } from '@/assets/icons.jsx'
 
 const Blog = () => {
 

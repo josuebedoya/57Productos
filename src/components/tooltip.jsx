@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { TriangleRight } from "@/resources/icons.jsx";
+import { TriangleRight } from "@/assets/icons.jsx";
 
 const Tooltip = ( {
                     children, content = '', position = 'center', spaceY = 5, spaceX = 6,

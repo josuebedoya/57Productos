@@ -5,8 +5,77 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/auth/components/formLogin.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/auth/components/formRegister.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/auth/components/money.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/auth/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/auth/indexT&amp;c.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/auth/templates/guestSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/auth/templates/mainSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/contact/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/error/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/home/components/opinionItem.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/home/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/home/templates/blog.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/home/templates/categoriesList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/home/templates/chance.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/home/templates/opinions.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/home/templates/slider.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/home/templates/text-main.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/search/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/services/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/store/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/store/indexPay.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/us/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/us/templates/infoAbout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/us/templates/misionAndVision.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/addWithQuantity.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/addWithQuantity.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/grafic.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grafic.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/product/modalProduct.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/modalProduct.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/product/product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/spin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spin.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/stars.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/stars.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tooltip.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tooltip.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/warningModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/warningModal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/about.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/contact.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/error.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/findResults.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/home.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/payments.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/profile.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/services.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/store.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/termsAndConditions.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/icons.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/svgFigures.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/svgFigures.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/about/infoAbout.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/about/misionAndVision.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/home/blog.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/home/categoriesList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/home/chance.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/home/opinions.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/home/parts/opinionItem.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/home/slider.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/home/text-main.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/profile/formLogin.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/profile/formRegister.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/profile/guestSection.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/profile/mainSection.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/profile/parts/money.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/errorBoundary.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/errorBoundary.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/storage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +84,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="REBASE" />
+      </set>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -49,7 +125,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1743704849" />
+                    <option name="lastUsedInstant" value="1748364525" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="store" />
@@ -101,32 +177,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "git-widget-placeholder": "dev",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "22.13.0",
-    "javascript.nodejs.core.library.typings.version": "22.13.10",
-    "last_opened_file_path": "C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public/images/products",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.13.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.13.10&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public/images/products&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="dev" />
@@ -139,11 +215,11 @@
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates\home" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates\profile" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates\home\parts" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\templates\us" />
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts" />
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts\auth\templates" />
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts\auth\components" />
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts\us\templates" />
+      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts\home\templates" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -243,102 +319,11 @@
       <workItem from="1742920891019" duration="34000" />
       <workItem from="1742920948799" duration="32418000" />
       <workItem from="1743704835402" duration="1513000" />
-    </task>
-    <task id="LOCAL-00026" summary="Migrate to vite V-3.4.4">
-      <option name="closed" value="true" />
-      <created>1737405006864</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1737405006864</updated>
-    </task>
-    <task id="LOCAL-00027" summary="+ onclick function to button  | + add valitadtion from slug | change route output.css">
-      <option name="closed" value="true" />
-      <created>1738709885921</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1738709885921</updated>
-    </task>
-    <task id="LOCAL-00028" summary="+ fetch categories from database | ↔ rename file Avaible to categoiresList | ↔ component list">
-      <option name="closed" value="true" />
-      <created>1738710160286</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1738710160286</updated>
-    </task>
-    <task id="LOCAL-00029" summary=" ↔ Footer Styles">
-      <option name="closed" value="true" />
-      <created>1738787893120</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1738787893120</updated>
-    </task>
-    <task id="LOCAL-00030" summary="+ Error Boundary">
-      <option name="closed" value="true" />
-      <created>1739846956764</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1739846956764</updated>
-    </task>
-    <task id="LOCAL-00031" summary="+ interval to warning modal">
-      <option name="closed" value="true" />
-      <created>1739851816603</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1739851816603</updated>
-    </task>
-    <task id="LOCAL-00032" summary="+ hook insert data">
-      <option name="closed" value="true" />
-      <created>1739854316464</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1739854316464</updated>
-    </task>
-    <task id="LOCAL-00033" summary="+ hook update | ↔ parameter qualification | use update in contextComment">
-      <option name="closed" value="true" />
-      <created>1739940997960</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1739940997960</updated>
-    </task>
-    <task id="LOCAL-00034" summary="↔ Use hook to get categories">
-      <option name="closed" value="true" />
-      <created>1740019986059</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1740019986059</updated>
-    </task>
-    <task id="LOCAL-00035" summary="+ validation to carousel prop">
-      <option name="closed" value="true" />
-      <created>1740022233288</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1740022233288</updated>
-    </task>
-    <task id="LOCAL-00036" summary="↔ Carousel to carousel media">
-      <option name="closed" value="true" />
-      <created>1740022352595</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1740022352595</updated>
-    </task>
-    <task id="LOCAL-00037" summary="+ Spin component">
-      <option name="closed" value="true" />
-      <created>1740625066703</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1740625066703</updated>
+      <workItem from="1748539737260" duration="8335000" />
+      <workItem from="1749070623317" duration="17902000" />
+      <workItem from="1749243045396" duration="748000" />
+      <workItem from="1750191586071" duration="27648000" />
+      <workItem from="1750287655316" duration="187000" />
     </task>
     <task id="LOCAL-00038" summary="+ dropdown component to menu |  ↔ move menu inside directory menu">
       <option name="closed" value="true" />
@@ -636,7 +621,103 @@
       <option name="project" value="LOCAL" />
       <updated>1743706201382</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="+ Functions clear &amp;&amp; removeItem to storage.js | + storage to cart context  | ↔ fix cart component">
+      <option name="closed" value="true" />
+      <created>1748373691688</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1748373691688</updated>
+    </task>
+    <task id="LOCAL-00076" summary="↔ Fix root id modal">
+      <option name="closed" value="true" />
+      <created>1748383871528</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1748383871528</updated>
+    </task>
+    <task id="LOCAL-00077" summary="+ Add CopyRight Component | ↔ fix settings functions">
+      <option name="closed" value="true" />
+      <created>1748446287774</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1748446287774</updated>
+    </task>
+    <task id="LOCAL-00078" summary="+ Add Amount in settings">
+      <option name="closed" value="true" />
+      <created>1748531087914</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1748531087914</updated>
+    </task>
+    <task id="LOCAL-00079" summary="+ Add session login to storage">
+      <option name="closed" value="true" />
+      <created>1748546380878</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1748546380879</updated>
+    </task>
+    <task id="LOCAL-00080" summary="↔ use rate with storage settings">
+      <option name="closed" value="true" />
+      <created>1748546505571</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1748546505571</updated>
+    </task>
+    <task id="LOCAL-00081" summary="↔ Change name the format amount function ---- Before: finalAmount __ After: formatMoney ----">
+      <option name="closed" value="true" />
+      <created>1748550744775</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1748550744775</updated>
+    </task>
+    <task id="LOCAL-00082" summary="+add attributes dom">
+      <option name="closed" value="true" />
+      <created>1748613945835</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1748613945835</updated>
+    </task>
+    <task id="LOCAL-00083" summary="+ Add Metas component for SEO in multiple pages">
+      <option name="closed" value="true" />
+      <created>1750267116953</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1750267116954</updated>
+    </task>
+    <task id="LOCAL-00084" summary="+ Add package-lock.json to .gitignore">
+      <option name="closed" value="true" />
+      <created>1750267170511</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1750267170511</updated>
+    </task>
+    <task id="LOCAL-00085" summary="↔ Fix import of metas component">
+      <option name="closed" value="true" />
+      <created>1750267944165</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1750267944165</updated>
+    </task>
+    <task id="LOCAL-00086" summary="+ Add Collapsible component">
+      <option name="closed" value="true" />
+      <created>1750287355900</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1750287355900</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -667,18 +748,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="+ Close Modal in Mobile :  Components" />
-    <MESSAGE value="↔ Time animation Fade" />
-    <MESSAGE value="+ Use Type Modal inMobile" />
-    <MESSAGE value="+ Prop typeMenu" />
-    <MESSAGE value="+ Search Component" />
-    <MESSAGE value="+ util handle text" />
-    <MESSAGE value="↔  handle disabled scroll" />
-    <MESSAGE value="↔ Upgrate Filter Search" />
-    <MESSAGE value="+ Context to handle params url" />
-    <MESSAGE value="+ Use search but url params &amp; use database products" />
-    <MESSAGE value="↔ Validation children | ↔ Default breakpoints: Components" />
-    <MESSAGE value="+ Component Pagination | + new type pagination list :  Component" />
     <MESSAGE value="+ library" />
     <MESSAGE value="+ Use" />
     <MESSAGE value="↔ Name search to findResults | add view" />
@@ -692,7 +761,19 @@
     <MESSAGE value="- innecesary for" />
     <MESSAGE value="+ method to get files products" />
     <MESSAGE value="+ Refactor Struture Templates" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Refactor Struture Templates" />
+    <MESSAGE value="+ Functions clear &amp;&amp; removeItem to storage.js | + storage to cart context  | ↔ fix cart component" />
+    <MESSAGE value="↔ Fix root id modal" />
+    <MESSAGE value="+ Add CopyRight Component | ↔ fix settings functions" />
+    <MESSAGE value="+ Add Amount in settings" />
+    <MESSAGE value="+ Add session login to storage" />
+    <MESSAGE value="↔ use rate with storage settings" />
+    <MESSAGE value="↔ Change name the format amount function ---- Before: finalAmount __ After: formatMoney ----" />
+    <MESSAGE value="+add attributes dom" />
+    <MESSAGE value="+ Add Metas component for SEO in multiple pages" />
+    <MESSAGE value="+ Add package-lock.json to .gitignore" />
+    <MESSAGE value="↔ Fix import of metas component" />
+    <MESSAGE value="+ Add Collapsible component" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Add Collapsible component" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -708,13 +789,14 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/layouts/profile.jsx</url>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/utils/getMedia.js</url>
           <line>24</line>
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/context/settings.jsx</url>
+          <line>25</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

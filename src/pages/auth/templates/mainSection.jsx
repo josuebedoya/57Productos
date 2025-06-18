@@ -1,4 +1,4 @@
-import { Money } from '@/templates/profile/parts/money.jsx';
+import { Money } from '@/pages/auth/components/money.jsx';
 import { getSetting } from "@/settings.js";
 
 const MainSection = () => {

@@ -10,7 +10,7 @@ import {
   TikTokIcon,
   WhatsappIcon,
   YoutubeIcon
-} from '@/resources/icons';
+} from '@/assets/icons';
 import { useComment } from '@/context/comments';
 import { Menu } from '@/components/menu/menu.jsx';
 import { Form } from '@/components/form';

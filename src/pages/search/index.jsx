@@ -7,7 +7,7 @@ import { Product } from "@/components/product/product.jsx";
 import img from '/images/products/lettuce.jpg';
 import { Metas } from "@/components/metas.jsx";
 
-const FindResults = () => {
+const Search = () => {
   const { get, data } = useDatabase();
   const [ found, setFound ] = useState( [] );
   const { query } = useResults();
@@ -84,4 +84,4 @@ const FindResults = () => {
   );
 };
 
-export { FindResults };
+export { Search };

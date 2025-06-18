@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { TextCustom } from '@/components/textCustom.jsx'
 import mercadeo from '/images/mercadeo.jpg'
 import { Button } from '@/components/button.jsx'
-import { ArrowRightIcon } from '@/resources/icons.jsx'
+import { ArrowRightIcon } from '@/assets/icons.jsx'
 import { Path_page } from '@/routes.jsx'
 
 const Chance = () => {

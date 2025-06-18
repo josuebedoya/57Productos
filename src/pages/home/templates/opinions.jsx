@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import { Carousel } from '@/components/carousel.jsx';
-import { OpinionItem } from './parts/opinionItem.jsx';
+import { OpinionItem } from '../components/opinionItem.jsx';
 import { Button } from "@/components/button.jsx";
-import { AngleRightIcon } from '@/resources/icons.jsx';
+import { AngleRightIcon } from '@/assets/icons.jsx';
 import { Path_page } from "@/routes.jsx";
 import { useComment } from "@/context/comments.jsx";
 

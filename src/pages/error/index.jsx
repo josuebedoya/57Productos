@@ -6,8 +6,8 @@ const Error = () => {
   return (
    <>
      <Metas
-      title={ `${ settings?.site.name } | Error` }
-      description='Error, la página que buscas no está disponible.'
+      title={ `${ settings?.site.name } | Index` }
+      description='Index, la página que buscas no está disponible.'
       type='website'/>
      <section>
        <div className='text-Primary text-lg text-center'>!Ups, intentas acceder a una pagina no disponible¡</div>

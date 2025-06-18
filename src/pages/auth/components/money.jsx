@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useFormatMoney } from "@/context/formatMoney.jsx";
-import { AlertIcon, CloseIcon, EyeCloseIcon, EyeOpenIcon, PencilIcon, SettingIcon } from '@/resources/icons.jsx';
+import { AlertIcon, CloseIcon, EyeCloseIcon, EyeOpenIcon, PencilIcon, SettingIcon } from '@/assets/icons.jsx';
 import { Input } from '@/components/input.jsx';
 import { getSetting } from "@/settings.js";
 import { useSettings } from "@/context/settings.jsx";

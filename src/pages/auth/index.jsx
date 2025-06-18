@@ -1,5 +1,5 @@
-import { GuestSection } from '@/templates/profile/guestSection.jsx';
-import { MainSection } from '@/templates/profile/mainSection.jsx';
+import { GuestSection } from '@/pages/auth/templates/guestSection.jsx';
+import { MainSection } from '@/pages/auth/templates/mainSection.jsx';
 import { setStorage, getStorage } from "@/utils/storage.js";
 import { useCallback, useEffect, useState } from "react";
 import { Metas } from "@/components/metas.jsx";

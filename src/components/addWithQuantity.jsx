@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from './button.jsx';
-import { AddCircleIcon, CartIcon, RemoveCircleIcon } from '@/resources/icons.jsx';
+import { AddCircleIcon, CartIcon, RemoveCircleIcon } from '@/assets/icons.jsx';
 import { Input } from './input.jsx';
 
 const AddWithQuantity = ( { functionAdd, handleAmount } ) => {

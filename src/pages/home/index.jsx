@@ -1,9 +1,9 @@
-import { Slider } from '@/templates/home/slider.jsx';
-import { Blog } from '@/templates/home/blog.jsx';
-import { Chance } from '@/templates/home/chance.jsx';
-import { TextMain } from '@/templates/home/text-main.jsx';
-import { Opinions } from '@/templates/home/opinions.jsx';
-import { CategoriesList } from '@/templates/home/categoriesList.jsx';
+import { Slider } from '@/pages/home/templates/slider.jsx';
+import { Blog } from '@/pages/home/templates/blog.jsx';
+import { Chance } from '@/pages/home/templates/chance.jsx';
+import { TextMain } from '@/pages/home/templates/text-main.jsx';
+import { Opinions } from '@/pages/home/templates/opinions.jsx';
+import { CategoriesList } from '@/pages/home/templates/categoriesList.jsx';
 import { useEffect } from "react";
 import { Metas } from "@/components/metas.jsx";
 import { useSettings } from "@/context/settings.jsx";
