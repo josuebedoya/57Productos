@@ -1,7 +1,7 @@
 import { getMedia } from "@/utils/getMedia.js";
 import { PropTypes } from "prop-types";
 
-const Media = ( { src, defaultSrc = 'default-image.webp', alt, controls, autoplay,
+const Media = ( { src, defaultSrc = '/images/system/default-image.webp', alt, controls, autoplay,
                   muted = true, loop, classFile, ...events } ) => {
 
   const { filePath, type } = getMedia( src || defaultSrc );
@@ -10,7 +10,7 @@ const Media = ( { src, defaultSrc = 'default-image.webp', alt, controls, autopla
 
     // image
     ? <img src={ filePath } alt={ alt || `image-${ filePath.split( '/' ).pop() }` }
-           className={ `media-image ${ classFile ? classFile : 'w-full max-w-full' }` }
+           className={ `img ${ classFile ? classFile : 'w-full max-w-full' }` }
            { ...events }
     />
 
@@ -29,7 +29,7 @@ const Media = ( { src, defaultSrc = 'default-image.webp', alt, controls, autopla
 
      //  Default Image
      : <img src={ defaultSrc } alt={ alt || `image-${ defaultSrc.split( '/' ).pop() }` }
-            className={ `media-image ${ classFile ? classFile : 'w-full max-w-full' }` }
+            className={ `img ${ classFile ? classFile : 'w-full max-w-full' } img-default` }
             { ...events }
      />
   );
