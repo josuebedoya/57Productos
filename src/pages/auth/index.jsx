@@ -15,7 +15,7 @@ const Profile = () => {
   const handleLogin = useCallback( () => {
     setStorage( 'login', true );
     window.location.reload();
-  } );
+  } ); 
 
   useEffect( () => {
     setIsLogin( getStorage( 'login' ) )
