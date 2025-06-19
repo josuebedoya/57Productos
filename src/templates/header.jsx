@@ -102,7 +102,7 @@ const Header = () => {
              <Cart close={ modalCart }/>
            </div>
            <div className='profile-section'>
-             <Link to={ Path_page.PROFILE } target='_self' className='profile-section-icon text-white bg-Primary border border-Primary rounded-full p-2 flex items-center
+             <Link to={ Path_page.AUTH.MAIN } target='_self' className='profile-section-icon text-white bg-Primary border border-Primary rounded-full p-2 flex items-center
               hover:bg-transparent hover:text-Secondary hover:border-Secondary transition duration-150'>
                <ProfileIcon/>
              </Link>

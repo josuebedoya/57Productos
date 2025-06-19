@@ -56,7 +56,7 @@ const Footer = () => {
     [ { url: Path_page.SERVICES, name: 'Servicios' },
       { url: Path_page.US, name: 'Nosotros' },
       { url: Path_page.CONTACT, name: 'Contacto' },
-      { url: Path_page.PROFILE, name: 'Tu Perfil' }
+      { url: Path_page.AUTH.MAIN, name: 'Tu Perfil' }
     ],
     [
       { url: Path_page.TERMS_AND_CONDITIONS, name: 'Términos y Condiciones', target: '_blank' },

@@ -5,7 +5,7 @@ import { Modal } from '@/components/modal.jsx';
 import { FormLogin } from '../components/formLogin.jsx';
 import { FormRegister } from '../components/formRegister.jsx';
 
-const GuestSection = ( { isLogin } ) => {
+const Guest = ( { isLogin } ) => {
 
   const [ isModalOpen, setIsModalOpen ] = useState( false );
   const [ isOpenLogin, setIsOpenLogin ] = useState( false );
@@ -87,4 +87,4 @@ const GuestSection = ( { isLogin } ) => {
   );
 };
 
-export { GuestSection };
+export { Guest };

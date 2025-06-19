@@ -16,7 +16,7 @@ import {
   FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt, FaSeedling, FaTrash, FaTrashRestore, FaFacebook,
   FaYoutube, FaTiktok, FaWhatsapp, FaCaretRight, FaDropbox } from 'react-icons/fa';
 
-/* eslint-disable */
+ 
 // icon magnifying glass
 export const SearchEngineIcon = ( { atr, classIcons, ...props } ) => {
   return (
