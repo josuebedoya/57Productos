@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Stars } from '@/components/stars.jsx';
 import { Button } from '@/components/button.jsx';
-import { HearthLineIcon, HearthCheckIcon } from '@/resources/icons.jsx';
+import { HearthLineIcon, HearthCheckIcon } from '@/assets/icons.jsx';
 import { AddWithQuantity } from '@/components/addWithQuantity.jsx';
 import { Modal } from '@/components/modal.jsx';
 import { useCart } from '@/context/cart.jsx';

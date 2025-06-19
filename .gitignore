@@ -13,11 +13,13 @@ dist-ssr
 *.local
 .env
 .env.local
+package-lock.json
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
+.idea/workspace.xml
 .DS_Store
 *.suo
 *.ntvs*

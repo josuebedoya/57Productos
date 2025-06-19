@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { TriangleRight } from "@/resources/icons.jsx";
+import { TriangleRight } from "@/assets/icons.jsx";
 
 const Tooltip = ( {
                     children, content = '', position = 'center', spaceY = 5, spaceX = 6,
@@ -73,7 +73,7 @@ const Tooltip = ( {
   const classTooltip = `absolute rounded-md opacity-0 group-hover/tooltip:opacity-100 ${ delayShow } duration-500 pointer-events-none ${ !dark ? 'bg-white text-black' : 'bg-gray-800 text-white' } py-1 px-3 translate-0 z-modal ${ classPositions.tooltip }`;
 
   return (
-   <div className={ `has-tooltip ${ show ? 'group/tooltip' : '' } relative flex items-center justify-center ` }>
+   <div className={ `has-tooltip ${ show ? 'group/tooltip' : '' } relative flex items-center justify-center` }>
      <span className={ `tooltip ${ classTooltip } ${ tooltipClass } block` } data-child='tooltip'>
        { withArrow && position !== 'center' &&
         <span className='flex justify-center w-full h-full'>

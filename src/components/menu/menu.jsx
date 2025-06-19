@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { MenuBarsIcon } from '@/resources/icons.jsx';
+import { MenuBarsIcon } from '@/assets/icons.jsx';
 import { Dropdown } from "@/components/menu/dropdown.jsx";
 import { Modal } from '@/components/modal.jsx';
 

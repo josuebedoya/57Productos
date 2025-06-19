@@ -1,9 +1,10 @@
 import { useRef, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Button } from './button.jsx';
-import { ExitArrowIcon } from '@/resources/icons';
+import { ExitArrowIcon } from '@/assets/icons';
 
-const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, animationExit, type = 3 , children } ) => {
+const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, animationExit, type = 3 , children,
+                        withButtonClose = true} ) => {
   const modalRef = useRef( null );
   const [ showing, setShowing ] = useState( isOpen );
 
@@ -23,8 +24,8 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
 
     //Disabled Scroll Window
       const preventScroll = (event) => event.preventDefault();
-      isOpen ? window.addEventListener("wheel", preventScroll, { passive: false })
-       : window.removeEventListener("wheel", preventScroll);
+      // isOpen ? document.body.addEventListener("wheel", preventScroll, { passive: false })
+      //  : document.body.removeEventListener("wheel", preventScroll);
 
     //interval to prevent onClose from being executed once at startup
     let waitingTime;
@@ -63,9 +64,12 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
            className={ `bg-white modal-content w-full max-w-xs md:max-w-lg x-w-lg h-screen py-10 px-4 ${ classModal } max-h-full-vh` }
            ref={ modalRef }
            onClick={ handleModalClick }>
-            <div className='bnt-close flex justify-end'>
-              <Button icon={ iconClose ? iconClose : <ExitArrowIcon classIcons='cursor-pointer'/> } onClick={ onClose }/>
-            </div>
+            {withButtonClose && (
+             <div className='bnt-close flex justify-end'>
+               <Button icon={ iconClose ? iconClose : <ExitArrowIcon classIcons='cursor-pointer'/> }
+                       onClick={ onClose }/>
+             </div>
+            ) }
             { children }
           </div>
         </div>
@@ -80,9 +84,12 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
            className={ `bg-white modal-content w-full max-w-xs md:max-w-lg x-w-lg h-screen py-10 px-4 ${ classModal } max-h-full-vh` }
            ref={ modalRef }
            onClick={ handleModalClick }>
-            <div className='bnt-close flex justify-start'>
-              <Button icon={ iconClose ? iconClose : <ExitArrowIcon classIcons='rotate-180 cursor-pointer' /> } onClick={ onClose }/>
-            </div>
+            {withButtonClose && (
+             <div className='bnt-close flex justify-end'>
+               <Button icon={ iconClose ? iconClose : <ExitArrowIcon classIcons='cursor-pointer'/> }
+                       onClick={ onClose }/>
+             </div>
+            ) }
             { children }
           </div>
         </div>
@@ -98,10 +105,15 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
            ref={ modalRef }
            onClick={ handleModalClick }
           >
-            <div className='bnt-close flex justify-end'>
-              <Button icon={ iconClose ? iconClose : <ExitArrowIcon classIcons='cursor-pointer'/> } onClick={ onClose }/>
+            <div className='body'>
+              {withButtonClose && (
+               <div className='bnt-close flex justify-end'>
+                 <Button icon={ iconClose ? iconClose : <ExitArrowIcon classIcons='cursor-pointer'/> }
+                         onClick={ onClose }/>
+               </div>
+              ) }
+              { children }
             </div>
-            { children }
           </div>
         </div>
       </div>, document.getElementById( 'modal-root' ) );

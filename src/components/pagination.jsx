@@ -1,5 +1,5 @@
 import ReactPaginate from "react-paginate";
-import { AngleRightIcon, AngleLeftIcon } from "@/resources/icons.jsx";
+import { AngleRightIcon, AngleLeftIcon } from "@/assets/icons.jsx";
 import { useState } from "react";
 
 const Pagination = ( {

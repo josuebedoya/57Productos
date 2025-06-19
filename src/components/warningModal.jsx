@@ -1,5 +1,5 @@
 import  { useEffect, useState } from "react";
-import { BoxOpen } from "@/resources/icons.jsx";
+import { BoxOpen } from "@/assets/icons.jsx";
 
 const WarningModal = ({type, timeClose = 5000, isFloating, bgColor = 'bg-Secondary', itemClass, children}) => {
   const [show, setShow] = useState(true);

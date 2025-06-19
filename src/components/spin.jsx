@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Pause, TriangleRight } from "@/resources/icons.jsx";
+import { Pause, TriangleRight } from "@/assets/icons.jsx";
 
 const Spin = ({items = [], classItem = 'w-12 h-12', radio = 100, autoPlay = false, withButton = true, classBtn = '', directionLeft = true,
                 speed = 2, playHover = true, pauseHover = false, border = 'border border-Primary', rotateItem = false }) => {

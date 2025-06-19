@@ -4,7 +4,11 @@ export const Path_page = {
   SERVICES: '/servicios',
   STORE: '/tienda',
   CONTACT: '/contacto',
-  PROFILE: '/perfil',
+  AUTH: {
+    MAIN: '/perfil',
+    LOGIN: 'iniciar-sesion',
+    EDIT_INFO: 'editar-informacion',
+  },
   TERMS_AND_CONDITIONS: '/terminos-y-condiciones',
   PRIVACY_POLICY: '/politica-de-privacidad',
   FREQUENTLY_ASKED_QUESTIONS: '/preguntas-frecuentes',
