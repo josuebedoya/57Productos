@@ -6,6 +6,7 @@ import { Outlet } from 'react-router-dom';
 import { Metas } from "@/components/metas.jsx";
 import { useSettings } from "@/context/settings.jsx";
 import { HeaderAuth } from "@/pages/auth/components/headerAuth.jsx";
+import { Path_page } from "@/routes.jsx";
 
 const Profile = () => {
   const [ isLogin, setIsLogin ] = useState( false )
@@ -15,12 +16,12 @@ const Profile = () => {
   const handleLogin = useCallback( () => {
     setStorage( 'login', true );
     window.location.reload();
-  } ); 
+  } );
 
   useEffect( () => {
     setIsLogin( getStorage( 'login' ) )
   }, [] );
-  const isSubPage = location.pathname !== '/perfil';
+  const isSubPage = location.pathname !== Path_page.AUTH.MAIN;
   return (
    <>
      <Metas
