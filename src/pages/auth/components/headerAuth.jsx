@@ -66,7 +66,7 @@ const HeaderAuth = () => {
              <div className='user-info border-l-2 border-gray-300 pl-4 flex items-center'>
                <Media src={ settings?.user?.photo }
                       alt={ settings?.user?.photo || 'User Avatar' }
-                      defaultSrc='images/system/default-profile.png'
+                      defaultSrc='/images/system/default-profile.png'
                       classFile='w-14 h-14 rounded-full object-cover mr-3'
                />
                <div>

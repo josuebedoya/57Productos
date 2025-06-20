@@ -21,14 +21,17 @@ const Profile = () => {
   useEffect( () => {
     setIsLogin( getStorage( 'login' ) )
   }, [] );
+
   const isSubPage = location.pathname !== Path_page.AUTH.MAIN;
+  const isEditInfo = location.pathname.split( '/' ).slice( -1 )[ 0 ] === Path_page.AUTH.EDIT_INFO;
+
   return (
    <>
      <Metas
       title={ `${ settings?.site.name } | Perfil` }
       description='Administra tu perfil, revisa tus pedidos y más.'
       type='website'/>
-     <HeaderAuth/>
+     { !isEditInfo && <HeaderAuth/> }
      <section>
        {
          !isSubPage ? (
