@@ -9,7 +9,7 @@ class Settings {
         description: "De colombia para el mundo ❤️",
         rateExchange: 'COP',
         media: {
-          extensionsImage: [ 'jpg', 'jpeg', 'png', 'webp' ],
+          extensionsImage: [ 'jpg', 'jpeg', 'png', 'webp', 'svg' ],
           extensionsVideo: [ 'mov', 'mp4' ],
           extensionsAudio: [ 'mp3', 'wav', 'ogg' ],
           extensionsDocument: [ 'pdf', 'docx', 'txt' ]
