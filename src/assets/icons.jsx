@@ -14,10 +14,10 @@ import {
 } from 'react-icons/io';
 import {
   FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt, FaSeedling, FaTrash, FaTrashRestore, FaFacebook,
-  FaYoutube, FaTiktok, FaWhatsapp, FaCaretRight, FaDropbox, FaCameraRetro
+  FaYoutube, FaTiktok, FaWhatsapp, FaCaretRight, FaDropbox, FaCopy
 } from 'react-icons/fa';
 import { BsCameraFill } from "react-icons/bs";
-
+import { LuCopyCheck } from "react-icons/lu";
 
 
 // icon magnifying glass
@@ -390,5 +390,19 @@ export const SettingIcon = ( { atr, classIcons, ...props } ) => {
 export const CameraIcon = ( { atr, classIcons, ...props } ) => {
   return (
    <BsCameraFill style={ atr } className={ classIcons } { ...props }/>
+  )
+};
+
+// Copy
+export const CopyIcon = ( { atr, classIcons, ...props } ) => {
+  return (
+   <FaCopy style={ atr } className={ classIcons } { ...props }/>
+  )
+};
+
+// Check
+export const CopyCheckIcon = ( { atr, classIcons, ...props } ) => {
+  return (
+   <LuCopyCheck  style={ atr } className={ classIcons } { ...props }/>
   )
 };
