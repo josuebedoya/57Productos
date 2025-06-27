@@ -1,4 +1,4 @@
-import { useDatabase } from "@/utils/database.jsx";
+import { useDatabase } from "@/hooks/useDatabase.jsx";
 import { useResults } from "@/context/ParamsUrl.jsx";
 import { useEffect, useState } from "react";
 import { normalizeText } from "@/utils/handleText.js";

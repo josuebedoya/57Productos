@@ -7,7 +7,7 @@ import { CartProvider } from './context/cart.jsx'
 import { CommentProvider } from "@/context/comments.jsx"
 import { ParamsUrlProvider } from '@/context/ParamsUrl.jsx'
 import { FormatMoneyProvider } from '@/context/formatMoney.jsx'
-import ErrorBoundary from "@/utils/errorBoundary.jsx";
+import ErrorBoundary from "@/components/errorBoundary.jsx";
 import { SettingsProvider } from "@/context/settings.jsx";
 import { Metas } from "@/components/metas.jsx";
 

@@ -1,5 +1,5 @@
 import { createContext, useState, useContext, useEffect } from 'react';
-import { getExchangeRates } from '@/utils/divisas.jsx';
+import { getExchangeRates } from '@/hooks/useDivisas.jsx';
 import { useSettings } from "@/context/settings.jsx";
 
 const FormatMoneyContext = createContext();
