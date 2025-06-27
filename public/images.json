@@ -50,5 +50,7 @@
   "49": "/assets/compressed/dummy.rar",
   "50": "/assets/integrations/dummy.json",
   "51": "/assets/integrations/dummy.csv",
-  "52": "/assets/integrations/dummy.xml"
+  "52": "/assets/integrations/dummy.xml",
+  "53": "/images.json",
+  "54": "/test.xml"
 }

@@ -5,6 +5,7 @@ class Settings {
       site: {
         theme: "dark",
         language: "es",
+        hostname: "localhost:5173",
         name: "+57 Productos Colombia",
         description: "De colombia para el mundo ❤️",
         rateExchange: 'COP',
