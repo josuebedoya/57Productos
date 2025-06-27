@@ -1,11 +1,11 @@
-import { useDatabase } from "@/utils/database.jsx";
+import { useDatabase } from "@/hooks/useDatabase.jsx";
 import { useResults } from "@/context/ParamsUrl.jsx";
 import { useEffect, useState } from "react";
 import { normalizeText } from "@/utils/handleText.js";
 import { List } from '@/components/list.jsx';
 import { Product } from "@/components/product/product.jsx";
-import img from '/images/products/lettuce.jpg';
-import { Metas } from "@/components/metas.jsx";
+import img from '/assets/images/products/lettuce.jpg';
+import { Metas } from "@/components/metas/metas.jsx";
 
 const Search = () => {
   const { get, data } = useDatabase();

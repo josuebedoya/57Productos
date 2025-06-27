@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useDatabase } from '@/utils/database.jsx';
+import { useDatabase } from '@/hooks/useDatabase.jsx';
 import { Product } from '@/components/product/product.jsx';
 import { useFormatMoney } from "@/context/formatMoney.jsx";
 import { useSettings } from "@/context/settings.jsx";
-import { Metas } from "@/components/metas.jsx";
+import { Metas } from "@/components/metas/metas.jsx";
 
 const Store = () => {
   const [ products, setProducts ] = useState( [] );

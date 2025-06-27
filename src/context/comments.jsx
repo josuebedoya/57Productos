@@ -1,5 +1,5 @@
 import { createContext, useState, useContext, useEffect } from 'react';
-import { useDatabase } from "@/utils/database.jsx";
+import { useDatabase } from "@/hooks/useDatabase.jsx";
 
 const CommentContext = createContext();
 

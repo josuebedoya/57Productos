@@ -5,15 +5,22 @@ class Settings {
       site: {
         theme: "dark",
         language: "es",
+        hostname: "localhost:5173",
         name: "+57 Productos Colombia",
         description: "De colombia para el mundo ❤️",
-        rateExchange: 'COP'
+        rateExchange: 'COP',
+        media: {
+          extensionsImage: [ 'jpg', 'jpeg', 'png', 'webp', 'svg' ],
+          extensionsVideo: [ 'mov', 'mp4' ],
+          extensionsAudio: [ 'mp3', 'wav', 'ogg' ],
+          extensionsDocument: [ 'pdf', 'docx', 'txt' ]
+        }
       },
       user: {
         role: 'admin',
         id: 1,
         username: 'josuebedoya',
-        photo: '/images/profile-cat.jpg',
+        photo: '/assets/images/user/profile-cat.jpg',
         info: {
           name: 'Josué Bedoya',
           phone: 3004001122,

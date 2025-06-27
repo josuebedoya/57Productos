@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { SearchEngineIcon } from '@/assets/icons.jsx';
 import { Button } from '@/components/button.jsx';
 import { Input } from '@/components/input.jsx';
-import { useDatabase } from '@/utils/database.jsx';
+import { useDatabase } from '@/hooks/useDatabase.jsx';
 import { useResults } from '@/context/ParamsUrl.jsx';
 import { normalizeText, Slug } from '@/utils/handleText.js';
 import { Path_page } from '@/routes.jsx';

@@ -1,5 +1,5 @@
 import { BiSearchAlt, BiSolidPaperPlane } from 'react-icons/bi';
-import { MdOutlineCircle, MdOutlineSettings  } from 'react-icons/md'
+import { MdOutlineCircle, MdOutlineSettings } from 'react-icons/md'
 import { GrUserSettings } from 'react-icons/gr';
 import { FaRegStar, FaHeartCircleCheck, FaHandshakeSimple, FaCirclePause } from 'react-icons/fa6';
 import { TiDocumentText, TiThMenuOutline } from 'react-icons/ti';
@@ -14,9 +14,12 @@ import {
 } from 'react-icons/io';
 import {
   FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt, FaSeedling, FaTrash, FaTrashRestore, FaFacebook,
-  FaYoutube, FaTiktok, FaWhatsapp, FaCaretRight, FaDropbox } from 'react-icons/fa';
+  FaYoutube, FaTiktok, FaWhatsapp, FaCaretRight, FaDropbox, FaCopy
+} from 'react-icons/fa';
+import { BsCameraFill } from "react-icons/bs";
+import { LuCopyCheck } from "react-icons/lu";
 
- 
+
 // icon magnifying glass
 export const SearchEngineIcon = ( { atr, classIcons, ...props } ) => {
   return (
@@ -321,11 +324,14 @@ export const InstagramColorIcon = ( { atr, classIcons, ...props } ) => {
      <path fill='#ffecb3'
            d='M26.06,39.52c0,0.41-0.05,0.8-0.16,1.17c-0.1,0.4-0.25,0.78-0.44,1.14c-0.03,0.06-0.1,0.17-0.1,0.17h-8.88 c-0.01-0.01-0.02-0.03-0.02-0.04c-0.12-0.19-0.22-0.38-0.3-0.59c-0.2-0.46-0.32-0.96-0.36-1.48c-0.02-0.12-0.02-0.25-0.02-0.37 c0-0.06,0-0.13,0.01-0.19c0.01-0.44,0.07-0.86,0.19-1.25c0.1-0.36,0.23-0.69,0.4-1.01c0,0,0.01-0.01,0.01-0.02 c0.12-0.21,0.25-0.42,0.4-0.62c0.49-0.66,1.14-1.2,1.89-1.55c0.01,0,0.01,0,0.01,0c0.24-0.12,0.49-0.22,0.75-0.29c0,0,0,0,0.01,0 c0.46-0.14,0.96-0.21,1.47-0.21c0.59,0,1.16,0.09,1.68,0.28c0.19,0.05,0.37,0.13,0.55,0.22c0,0,0,0,0.01,0 c0.86,0.41,1.59,1.05,2.09,1.85c0.1,0.15,0.19,0.31,0.27,0.48c0.04,0.07,0.08,0.15,0.11,0.22c0.23,0.52,0.37,1.09,0.41,1.69 c0.01,0.05,0.01,0.1,0.01,0.16C26.06,39.36,26.06,39.44,26.06,39.52z'/>
      <g>
-       <path fill='none' stroke='#fff' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='10' strokeWidth='2' d='M30,11H18c-3.9,0-7,3.1-7,7v12c0,3.9,3.1,7,7,7h12c3.9,0,7-3.1,7-7V18C37,14.1,33.9,11,30,11z'/>
+       <path fill='none' stroke='#fff' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='10'
+             strokeWidth='2'
+             d='M30,11H18c-3.9,0-7,3.1-7,7v12c0,3.9,3.1,7,7,7h12c3.9,0,7-3.1,7-7V18C37,14.1,33.9,11,30,11z'/>
        <circle cx='31' cy='16' r='1' fill='#fff'/>
      </g>
      <g>
-       <circle cx='24' cy='24' r='6' fill='none' stroke='#fff' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='10' strokeWidth='2'/>
+       <circle cx='24' cy='24' r='6' fill='none' stroke='#fff' strokeLinecap='round' strokeLinejoin='round'
+               strokeMiterlimit='10' strokeWidth='2'/>
      </g>
    </svg>
   )
@@ -355,27 +361,48 @@ export const PaperPlane = ( { atr, classIcons, ...props } ) => {
 // Pause icon
 export const Pause = ( { atr, classIcons, ...props } ) => {
   return (
-    <FaCirclePause style={ atr } className={ classIcons } { ...props }/>
+   <FaCirclePause style={ atr } className={ classIcons } { ...props }/>
   )
 };
 
 // triangle Right
 export const TriangleRight = ( { atr, classIcons, ...props } ) => {
   return (
-    <FaCaretRight style={ atr } className={ classIcons } { ...props }/>
+   <FaCaretRight style={ atr } className={ classIcons } { ...props }/>
   )
 };
 
 // Box open
 export const BoxOpen = ( { atr, classIcons, ...props } ) => {
   return (
-    <FaDropbox style={ atr } className={ classIcons } { ...props }/>
+   <FaDropbox style={ atr } className={ classIcons } { ...props }/>
   )
 };
 
 // Setting
 export const SettingIcon = ( { atr, classIcons, ...props } ) => {
   return (
-    <MdOutlineSettings  style={ atr } className={ classIcons } { ...props }/>
+   <MdOutlineSettings style={ atr } className={ classIcons } { ...props }/>
+  )
+};
+
+// Camera
+export const CameraIcon = ( { atr, classIcons, ...props } ) => {
+  return (
+   <BsCameraFill style={ atr } className={ classIcons } { ...props }/>
+  )
+};
+
+// Copy
+export const CopyIcon = ( { atr, classIcons, ...props } ) => {
+  return (
+   <FaCopy style={ atr } className={ classIcons } { ...props }/>
+  )
+};
+
+// Check
+export const CopyCheckIcon = ( { atr, classIcons, ...props } ) => {
+  return (
+   <LuCopyCheck  style={ atr } className={ classIcons } { ...props }/>
   )
 };

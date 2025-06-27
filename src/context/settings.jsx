@@ -47,9 +47,33 @@ const SettingsProvider = ( { children } ) => {
       setError( "Faltan algunos valores. Por favor revisa." );
     }
   };
+  // Update settings & storage
+  const emptySetting = ( setting ) => {
+    if ( setting ) {
+      if ( getSetting( setting ) ) {
+        // Update the setting
+        setSetting( setting, null );
+
+        // Get the new settings
+        const newSettings = allSettings();
+
+        // Update local settings
+        setSettings( prevSettings => ( {
+          ...prevSettings,
+          ...newSettings,
+        } ) );
+
+        // Send new settings to storage
+        setStorage( "settings", newSettings );
+
+      } else {
+        setError( "La configuración que intentas editar no existe." );
+      }
+    }
+  };
 
   return (
-   <SettingsContext.Provider value={ { settings, error, updateSettings } }>
+   <SettingsContext.Provider value={ { settings, error, updateSettings, emptySetting } }>
      { children }
    </SettingsContext.Provider>
   );

@@ -1,6 +1,6 @@
 import {Stars} from '@/components/stars.jsx'
 import { HandLike, HandDontLike } from '@/assets/icons.jsx'
-import img from '/images/profile.png'
+import img from '/assets/images/profile.png'
 import  { useComment } from "@/context/comments.jsx";
 
 

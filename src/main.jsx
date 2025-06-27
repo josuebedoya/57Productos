@@ -1,15 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async';
 import { App } from './App.jsx'
 import './main.css'
 import { CartProvider } from './context/cart.jsx'
 import { CommentProvider } from "@/context/comments.jsx"
 import { ParamsUrlProvider } from '@/context/ParamsUrl.jsx'
 import { FormatMoneyProvider } from '@/context/formatMoney.jsx'
-import ErrorBoundary from "@/utils/errorBoundary.jsx";
+import ErrorBoundary from "@/components/errorBoundary.jsx";
 import { SettingsProvider } from "@/context/settings.jsx";
-import { Metas } from "@/components/metas.jsx";
+import { GlobalMetas } from "@/components/metas/global.jsx";
 
 createRoot( document.getElementById( 'root' ) ).render( <StrictMode>
    <Router>
@@ -19,14 +20,10 @@ createRoot( document.getElementById( 'root' ) ).render( <StrictMode>
            <ParamsUrlProvider>
              <CartProvider>
                <FormatMoneyProvider>
-                 <Metas>
-                   <link rel='preconnect' href='https://fonts.googleapis.com'/>
-                   <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin/>
-                   <link
-                    href='https://fonts.googleapis.com/css2?family=Bree+Serif&family=Satisfy&family=Quicksand:wght@300..700&family=Oswald:wght@200..700&display=swap'
-                    rel='stylesheet'/>
-                 </Metas>
-                 <App/>
+                 <HelmetProvider>
+                   <GlobalMetas/>
+                   <App/>
+                 </HelmetProvider>
                </FormatMoneyProvider>
              </CartProvider>
            </ParamsUrlProvider>

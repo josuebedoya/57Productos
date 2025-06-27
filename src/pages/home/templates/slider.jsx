@@ -1,10 +1,10 @@
 import { Spin } from '@/components/spin.jsx';
 import { FigureOne } from '@/assets/svgFigures.jsx';
-import colombia from '/images/flags/colombia.png'
-import usa from '/images/flags/usa.png'
-import japan from '/images/flags/japan.png'
-import brazil from '/images/flags/brazil.png'
-import canada from '/images/flags/canada.png'
+import colombia from '/assets/images/flags/colombia.png'
+import usa from '/assets/images/flags/usa.png'
+import japan from '/assets/images/flags/japan.png'
+import brazil from '/assets/images/flags/brazil.png'
+import canada from '/assets/images/flags/canada.png'
 import { Media } from "@/components/media.jsx";
 import { Tooltip } from "@/components/tooltip.jsx";
 

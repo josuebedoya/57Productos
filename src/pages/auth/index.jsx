@@ -3,7 +3,7 @@ import { Dashboard } from '@/pages/auth/pages/dashboard.jsx';
 import { setStorage, getStorage } from "@/utils/storage.js";
 import { useCallback, useEffect, useState } from "react";
 import { Outlet } from 'react-router-dom';
-import { Metas } from "@/components/metas.jsx";
+import { Metas } from "@/components/metas/metas.jsx";
 import { useSettings } from "@/context/settings.jsx";
 import { HeaderAuth } from "@/pages/auth/components/headerAuth.jsx";
 import { Path_page } from "@/routes.jsx";
@@ -21,14 +21,17 @@ const Profile = () => {
   useEffect( () => {
     setIsLogin( getStorage( 'login' ) )
   }, [] );
+
   const isSubPage = location.pathname !== Path_page.AUTH.MAIN;
+  const isEditInfo = location.pathname.split( '/' ).slice( -1 )[ 0 ] === Path_page.AUTH.EDIT_INFO;
+
   return (
    <>
      <Metas
       title={ `${ settings?.site.name } | Perfil` }
       description='Administra tu perfil, revisa tus pedidos y más.'
       type='website'/>
-     <HeaderAuth/>
+     { !isEditInfo && <HeaderAuth/> }
      <section>
        {
          !isSubPage ? (
