@@ -20,7 +20,7 @@ class Settings {
         role: 'admin',
         id: 1,
         username: 'josuebedoya',
-        photo: '/images/user/profile-cat.jpg',
+        photo: '/assets/images/user/profile-cat.jpg',
         info: {
           name: 'Josué Bedoya',
           phone: 3004001122,
