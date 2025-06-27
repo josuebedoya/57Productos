@@ -1,4 +1,4 @@
-import { Metas } from "@/components/metas.jsx";
+import { Metas } from "@/components/metas/metas.jsx";
 import { useSettings } from "@/context/settings.jsx";
 
 const Services = () => {
