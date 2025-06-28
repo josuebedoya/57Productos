@@ -3,6 +3,7 @@ import { useSettings } from "@/context/settings.jsx";
 import { CameraIcon } from "@/assets/icons.jsx";
 import { Dropdown } from "@/components/dropdown.jsx";
 import { useEffect, useState } from "react";
+import defaultImg from '/assets/images/system/default-profile.png';
 
 const SettingsInfo = () => {
 
@@ -42,7 +43,7 @@ const SettingsInfo = () => {
        <div className='info'>
          <div className="card-user">
            <div className="img relative">
-             <Media src={ settings?.user?.photo }
+             <Media src={ settings?.user?.photo || defaultImg }
                     alt={ settings?.user?.photo || 'User Avatar' }
                     defaultSrc='/images/system/default-profile.png'
                     classFile='max-w-64 max-h-64 rounded-full object-cover'
