@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Path_page } from '@/routes';
 
-const Form = ( { action, inputs, termsAndConditions, nameForm = 'FormDefault' } ) => {
+const Form = ( { action, inputs, termsAndConditions, nameForm = 'FormDefault', withButton = true } ) => {
 
   const [ checkTerms, setCheckTerms ] = useState( false );
 
@@ -23,7 +23,7 @@ const Form = ( { action, inputs, termsAndConditions, nameForm = 'FormDefault' } 
    <>
      <div id='Form' className=' p-10'>
        <form onSubmit={ handleSubmit } id={ nameForm } className='flex flex-col justify-center'>
-         { inputs.map( ( input, i ) => (
+         { inputs?.map( ( input, i ) => (
           <Input
            key={ i }
            value={ input.value }
@@ -59,9 +59,12 @@ const Form = ( { action, inputs, termsAndConditions, nameForm = 'FormDefault' } 
             </label>
           </div>
          ) : ( null ) }
-         <div className='btn-send-form w-full'>
-           <Button type='submit' classBtn='submit px-6 py-2 mt-6'>Enviar</Button>
-         </div>
+         {
+          withButton &&
+          <div className='btn-send-form w-full'>
+            <Button type='submit' classBtn='submit px-6 py-2 mt-6'>Enviar</Button>
+          </div>
+         }
        </form>
      </div>
    </>
