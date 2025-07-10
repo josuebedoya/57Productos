@@ -35,7 +35,7 @@ const Form = ( { action, inputs, termsAndConditions, nameForm = 'FormDefault', w
            isRequired={ input.isRequired }
            label={ input.label }
            classContent={ `mb-6 ${ input.classContent ? input.classContent : '' }` }
-           classInput={classInput}
+           classInput={input.classInput}
            classLabel={ `text-Primary ${ input.classLabel ? input.classLabel : '' }` }
           >
             { input.children }
