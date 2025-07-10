@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Path_page } from '@/routes';
 
-const Form = ( { action, inputs, termsAndConditions, nameForm = 'FormDefault', withButton = true } ) => {
+const Form = ( { action, inputs, termsAndConditions, nameForm = 'FormDefault', withButton = true, classInput = '' } ) => {
 
   const [ checkTerms, setCheckTerms ] = useState( false );
 
@@ -35,6 +35,7 @@ const Form = ( { action, inputs, termsAndConditions, nameForm = 'FormDefault', w
            isRequired={ input.isRequired }
            label={ input.label }
            classContent={ `mb-6 ${ input.classContent ? input.classContent : '' }` }
+           classInput={classInput}
            classLabel={ `text-Primary ${ input.classLabel ? input.classLabel : '' }` }
           >
             { input.children }
