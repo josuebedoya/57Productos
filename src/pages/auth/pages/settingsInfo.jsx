@@ -21,7 +21,6 @@ const SettingsInfo = () => {
       const reader = new FileReader();
 
       reader.onload = ( e ) => {
-        console.log( e.target.result );
         updateSettings( 'user.photo', e.target.result ); // Upload new photo
       };
 
@@ -30,10 +29,7 @@ const SettingsInfo = () => {
     // Close the dropdown after selecting a file
     setDropdown( false );
   }
-  useEffect( () => {
-    // updateSettings( 'user.photo', '/images/user/profile-cat.jpg' );
 
-  }, [] );
   return (
    <div className='user-info'>
      <div className='flex justify-between items-center mb-4'>
