@@ -5,77 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/profile-cat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/system/default-profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/collapsible.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/metas.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/auth/components/headerAuth.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/auth/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/auth/pages/dashboard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/auth/pages/settingsInfo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/contact/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/error/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/privacy/tyc.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/services/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/store/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/store/indexPay.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/us/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/default-image.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/system/default-image.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/addWithQuantity.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/addWithQuantity.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/grafic.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grafic.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/media.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/media.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product/modalProduct.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/modalProduct.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product/product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/spin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spin.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/stars.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/stars.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tooltip.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tooltip.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/warningModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/warningModal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/about.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/contact.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/error.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/findResults.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/search/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/home.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/payments.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/profile.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/services.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/store.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/termsAndConditions.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/icons.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/svgFigures.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/svgFigures.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/about/infoAbout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/us/templates/infoAbout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/about/misionAndVision.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/us/templates/misionAndVision.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/home/blog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/templates/blog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/home/categoriesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/templates/categoriesList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/home/chance.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/templates/chance.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/home/opinions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/templates/opinions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/home/parts/opinionItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/components/opinionItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/home/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/templates/slider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/home/text-main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/templates/text-main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/profile/formLogin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/components/formLogin.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/profile/formRegister.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/components/formRegister.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/profile/guestSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/pages/guest.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/profile/mainSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/profile/parts/money.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/components/money.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/errorBoundary.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/errorBoundary.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/storage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tabList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tabs/tab.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/tab.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/auth/pages/settingsInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/pages/settingsInfo.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,32 +110,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "git-widget-placeholder": "Merging main",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "22.13.0",
-    "javascript.nodejs.core.library.typings.version": "22.13.10",
-    "last_opened_file_path": "C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public/images/products",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.13.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.13.10&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public/images/products&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="dev" />
@@ -324,78 +257,8 @@
       <workItem from="1749243045396" duration="748000" />
       <workItem from="1750191586071" duration="27648000" />
       <workItem from="1750287655316" duration="187000" />
-    </task>
-    <task id="LOCAL-00038" summary="+ dropdown component to menu |  ↔ move menu inside directory menu">
-      <option name="closed" value="true" />
-      <created>1741908387001</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1741908387001</updated>
-    </task>
-    <task id="LOCAL-00039" summary="+ hook update | ↔ parameter qualification | use update in contextComment">
-      <option name="closed" value="true" />
-      <created>1741908399569</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1741908399569</updated>
-    </task>
-    <task id="LOCAL-00040" summary="+ variables : Styles">
-      <option name="closed" value="true" />
-      <created>1742238605144</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1742238605144</updated>
-    </task>
-    <task id="LOCAL-00041" summary="+ hover handle show dropdown : Components">
-      <option name="closed" value="true" />
-      <created>1742238688226</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1742238688226</updated>
-    </task>
-    <task id="LOCAL-00042" summary="+ variable Tailwind">
-      <option name="closed" value="true" />
-      <created>1742254571442</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1742254571442</updated>
-    </task>
-    <task id="LOCAL-00043" summary="- Styles p">
-      <option name="closed" value="true" />
-      <created>1742254724280</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1742254724280</updated>
-    </task>
-    <task id="LOCAL-00044" summary="↔ prop MenuH to horizontal">
-      <option name="closed" value="true" />
-      <created>1742254776597</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1742254776597</updated>
-    </task>
-    <task id="LOCAL-00045" summary="↔ Modal and MEnu">
-      <option name="closed" value="true" />
-      <created>1742254834274</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1742254834274</updated>
-    </task>
-    <task id="LOCAL-00046" summary="+ handle opening modal variable">
-      <option name="closed" value="true" />
-      <created>1742314003727</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1742314003727</updated>
+      <workItem from="1751124408377" duration="518000" />
+      <workItem from="1752185512236" duration="25745000" />
     </task>
     <task id="LOCAL-00047" summary="↔ Observer animation modal">
       <option name="closed" value="true" />
@@ -717,7 +580,79 @@
       <option name="project" value="LOCAL" />
       <updated>1750287355900</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Remove console log and unused effect in settingsInfo component">
+      <option name="closed" value="true" />
+      <created>1752185660525</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1752185660526</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Remove console log and unused effect in settingsInfo component">
+      <option name="closed" value="true" />
+      <created>1752186381234</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1752186381234</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Add optional button rendering to form component">
+      <option name="closed" value="true" />
+      <created>1752187162538</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1752187162538</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Add classInput prop to form component for customizable input styling">
+      <option name="closed" value="true" />
+      <created>1752187880019</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1752187880019</updated>
+    </task>
+    <task id="LOCAL-00091" summary="Add classInput prop to form component for customizable input styling">
+      <option name="closed" value="true" />
+      <created>1752187963191</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1752187963191</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Add MarkIcon component and refactor Form to accept children for customizable input rendering">
+      <option name="closed" value="true" />
+      <created>1752266108552</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1752266108552</updated>
+    </task>
+    <task id="LOCAL-00093" summary="Add Tab component">
+      <option name="closed" value="true" />
+      <created>1752272193136</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1752272193136</updated>
+    </task>
+    <task id="LOCAL-00094" summary="+ Body component">
+      <option name="closed" value="true" />
+      <created>1752272260131</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1752272260131</updated>
+    </task>
+    <task id="LOCAL-00095" summary="+ Body component">
+      <option name="closed" value="true" />
+      <created>1752276481469</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1752276481470</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -748,12 +683,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="+ library" />
-    <MESSAGE value="+ Use" />
-    <MESSAGE value="↔ Name search to findResults | add view" />
-    <MESSAGE value="+ Files products &amp; rename" />
-    <MESSAGE value="+ storage files new function to get" />
-    <MESSAGE value="commit test" />
     <MESSAGE value="↔ Extension utils files | ↔ getMedia method" />
     <MESSAGE value="- Media files extensioon" />
     <MESSAGE value="+ new images products" />
@@ -773,7 +702,13 @@
     <MESSAGE value="+ Add package-lock.json to .gitignore" />
     <MESSAGE value="↔ Fix import of metas component" />
     <MESSAGE value="+ Add Collapsible component" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Add Collapsible component" />
+    <MESSAGE value="Remove console log and unused effect in settingsInfo component" />
+    <MESSAGE value="Add optional button rendering to form component" />
+    <MESSAGE value="Add classInput prop to form component for customizable input styling" />
+    <MESSAGE value="Add MarkIcon component and refactor Form to accept children for customizable input rendering" />
+    <MESSAGE value="Add Tab component" />
+    <MESSAGE value="+ Body component" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Body component" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

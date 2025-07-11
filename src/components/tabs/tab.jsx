@@ -14,6 +14,7 @@ const Tab = ( {
     onClick={ click }
     className={ `p-2 font-medium transition-all duration-200 flex items-center gap-2 ${ itemClass }` }
     { ...events }
+    aria-selected={ active}
    >
      { children }
    </button>

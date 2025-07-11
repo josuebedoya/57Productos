@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import defaultImg from '/assets/images/system/default-profile.png';
 import { Input } from "@/components/input.jsx";
 import { Tooltip } from "@/components/tooltip.jsx";
+import { Tabs } from "@/components/tabList.jsx";
 
 const SettingsInfo = () => {
 
@@ -14,6 +15,8 @@ const SettingsInfo = () => {
   const { settings, emptySetting, updateSettings } = useSettings();
   const [ userInfo, setUserInfo ] = useState( {} );
   const [ editInfo, setEditInfo ] = useState( {} );
+  const [ activeTab, setActiveTab ] = useState( 0 );
+
 
   // Get user info from settings
   useEffect( () => {
@@ -25,9 +28,7 @@ const SettingsInfo = () => {
   // Update editInfo state
   useEffect( () => {
     if ( settings?.user?.info ) {
-      const editsStates = Object.keys( settings.user.info ).map( info => (
-       { [ info ]: false }
-      ) )
+      const editsStates = Object.keys( settings.user.info ).map( info => ( { [ info ]: false } ) )
 
       setEditInfo( editsStates );
     }
@@ -134,36 +135,71 @@ const SettingsInfo = () => {
     classLabel: 'text-Primary'
   } ];
 
+  const texts = [
+    { title: 'Información', icon: <PencilIcon/> },
+    { title: 'Seguridad', icon: <PencilIcon/> },
+    { title: 'Zona roja', icon: <PencilIcon/> },
+  ]
+
   return ( <div className='user-info'>
     <div className="container mx-auto px-4">
       <div className="top-section">
         <h2 className='text-Primary text-lg lg:text-xl xl:text-2xl'>Aqui podrás editar tú información</h2>
       </div>
-      <div className='flex justify-between items-center mb-4 px-3'>
-        <div className='common flex-1 max-w-[500px]'>
+      <div className='flex justify-between mb-4 px-3'>
+        <div className='common flex-1'>
+          <div className="div">
+            <div className="div">
+              <Tabs>
 
-          { <Form nameForm='editInfoUser' inputs={ inputs } withButton={ false }>
-            { Object.entries( userInfo )?.map( ( [ key, value ], i ) => ( <ul key={ i } className='list-none'>
-              <li className='text-Primary text-md mb-2 flex'>
-                <Input value={ value } disabled={ !editInfo[ i ][ key ] } classInput='disabled:border-0'/>
-                {
-                  editInfo[ i ][ key ] ?
-                   <div className='flex items-center gap-2 ml-2'>
-                     <CloseIcon classIcons='cursor-pointer text-red-500 hover:text-Secondary duration-200'
-                                onClick={ () => handleEditInfo( key ) }/>
-                     <MarkIcon classIcons='cursor-pointer text-green-500 hover:text-Secondary duration-200'
-                               onClick={ () => handleEditInfo( key ) }/>
-                   </div>
-                   :
-                   <Tooltip content={ `Editar ${ key }` } delayShow={ 400 } position='left'
-                            contentClass='text-sm text-nowrap'>
-                     <PencilIcon classIcons='cursor-pointer hover:text-Secondary duration-200'
-                                 onClick={ () => handleEditInfo( key ) }/>
-                   </Tooltip>
-                }
-              </li>
-            </ul> ) ) }
-          </Form> }
+                <div className='flex border-gray-300 p-3 pr-10 flex-col border-r'>
+                  {
+                    texts.map( ( tap, index ) => (
+                      <Tabs.TapItem key={ index }
+                                    click={ () => setActiveTab( index ) }
+                                    active={ index === activeTab }
+                                    tapClass='text-nowrap items-center justify-center text-sm border border-Primary h-[100px] w-[100px] rotate-45 aria-selected:bg-red-500'
+                      >
+                        <div className='flex flex-col items-center -rotate-45'>
+                          { tap.icon }
+                          { tap.title }
+                        </div>
+                      </Tabs.TapItem>
+                     )
+                    )
+                  }
+                </div>
+
+                <Tabs.BodyITem bodyClass="animate-fade-in p-10" active={ activeTab === 0 }>
+
+                  <Form nameForm='editInfoUser' inputs={ inputs } withButton={ false } className='p-0'>
+                    { Object.entries( userInfo )?.map( ( [ key, value ], i ) => ( <ul key={ i } className='list-none'>
+                      <li className='text-Primary text-md mb-2 flex'>
+                        <Input value={ value } disabled={ !editInfo[ i ][ key ] } classInput='disabled:border-0'/>
+                        { editInfo[ i ][ key ] ? <div className='flex items-center gap-2 ml-2'>
+                          <CloseIcon classIcons='cursor-pointer text-red-500 hover:text-Secondary duration-200'
+                                     onClick={ () => handleEditInfo( key ) }/>
+                          <MarkIcon classIcons='cursor-pointer text-green-500 hover:text-Secondary duration-200'
+                                    onClick={ () => handleEditInfo( key ) }/>
+                        </div> : <Tooltip content={ `Editar ${ key }` } delayShow={ 400 } position='left'
+                                          contentClass='text-sm text-nowrap'>
+                          <PencilIcon classIcons='cursor-pointer hover:text-Secondary duration-200'
+                                      onClick={ () => handleEditInfo( key ) }/>
+                        </Tooltip> }
+                      </li>
+                    </ul> ) ) }
+                  </Form>
+
+                </Tabs.BodyITem>
+                <Tabs.BodyITem bodyClass="animate-fade-in p-10" active={ activeTab === 1 }>
+                  <p>Seguridad</p>
+                </Tabs.BodyITem>
+                <Tabs.BodyITem bodyClass="animate-fade-in p-10" active={ activeTab === 2 }>
+                  Notificaciones
+                </Tabs.BodyITem>
+              </Tabs>
+            </div>
+          </div>
         </div>
         <div className='info'>
           <div className="card-user">
@@ -206,4 +242,6 @@ const SettingsInfo = () => {
   </div> );
 };
 
-export { SettingsInfo };
+export {
+  SettingsInfo
+};

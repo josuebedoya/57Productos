@@ -12,8 +12,10 @@ const Tabs = ( { children } ) => {
   }
 
   Tabs.BodyITem = function BodyITem( { children, activeClass, active } ) {
-    return ( active && <Body
-     bodyClass={ activeClass }>{ children }</Body> )
+    return ( active && <div aria-selected={ active } className={ activeClass || '' }>
+      <Body
+       bodyClass={ activeClass }>{ children }</Body>
+    </div> )
   }
 
   return ( <div className='w-full flex'>
