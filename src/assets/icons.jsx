@@ -18,6 +18,7 @@ import {
 } from 'react-icons/fa';
 import { BsCameraFill } from "react-icons/bs";
 import { LuCopyCheck } from "react-icons/lu";
+import { GiCheckMark } from "react-icons/gi";
 
 
 // icon magnifying glass
@@ -400,9 +401,16 @@ export const CopyIcon = ( { atr, classIcons, ...props } ) => {
   )
 };
 
-// Check
+// Check Coy
 export const CopyCheckIcon = ( { atr, classIcons, ...props } ) => {
   return (
    <LuCopyCheck  style={ atr } className={ classIcons } { ...props }/>
+  )
+};
+
+// Check Coy
+export const MarkIcon = ( { atr, classIcons, ...props } ) => {
+  return (
+   <GiCheckMark  style={ atr } className={ classIcons } { ...props }/>
   )
 };
