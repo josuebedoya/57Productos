@@ -2,7 +2,7 @@ const Tab = ( {
                 children,
                 click,
                 active,
-                tapClass = 'rounded-md text-Primary m-1 text-sm',
+                tapClass = 'rounded-md text-Primary m-1 text-sm transition-all duration-200',
                 activeClass = 'bg-stone-300 font-semibold shadow-sm shadow-Primary',
                 ...events
               } ) => {
@@ -12,7 +12,7 @@ const Tab = ( {
   return (
    <button
     onClick={ click }
-    className={ `p-2 font-medium transition-all duration-200 flex items-center gap-2 ${ itemClass }` }
+    className={ `p-2 font-medium flex items-center gap-2 ${ itemClass }` }
     { ...events }
     aria-selected={ active}
    >

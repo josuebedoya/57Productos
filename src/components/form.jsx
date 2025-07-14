@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Path_page } from '@/routes';
 
-const Form = ( { action, inputs, termsAndConditions, nameForm = 'FormDefault', withButton = true, children } ) => {
+const Form = ( { action, inputs, termsAndConditions, nameForm = 'FormDefault', withButton = true, labelButton, children } ) => {
 
   const [ checkTerms, setCheckTerms ] = useState( false );
 
@@ -61,7 +61,7 @@ const Form = ( { action, inputs, termsAndConditions, nameForm = 'FormDefault', w
         </div> ) : null }
 
         { withButton && <div className='btn-send-form w-full'>
-          <Button type='submit' classBtn='submit px-6 py-2 mt-6'>Enviar</Button>
+          <Button type='submit' classBtn='submit px-6 py-2 mt-6'>{ labelButton ?? 'Enviar' }</Button>
         </div> }
 
       </form>

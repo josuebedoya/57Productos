@@ -3,12 +3,14 @@ import { Body } from "@/components/body.jsx";
 
 const Tabs = ( { children } ) => {
 
-  Tabs.TapItem = function TapItem( { children, click, active, tapClass, activeClass } ) {
+   Tabs.TapItem =  function TapItem( { children, click, active, tapClass, activeClass, ...events } ) {
     return ( <Tab
      click={ click }
      active={ active }
      tapClass={ tapClass }
-     activeClass={ activeClass }>{ children }</Tab> )
+     activeClass={ activeClass }
+     { ...events }
+    >{ children }</Tab> )
   }
 
   Tabs.BodyITem = function BodyITem( { children, activeClass, active } ) {

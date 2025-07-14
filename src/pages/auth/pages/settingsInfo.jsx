@@ -1,20 +1,17 @@
 import { Media } from "@/components/media.jsx";
 import { useSettings } from "@/context/settings.jsx";
-import { CameraIcon, CloseIcon, MarkIcon, PencilIcon } from "@/assets/icons.jsx";
+import { CameraIcon, PencilIcon } from "@/assets/icons.jsx";
 import { Dropdown } from "@/components/dropdown.jsx";
-import { Form } from "@/components/form.jsx";
 import { useEffect, useState } from "react";
 import defaultImg from '/assets/images/system/default-profile.png';
-import { Input } from "@/components/input.jsx";
-import { Tooltip } from "@/components/tooltip.jsx";
 import { Tabs } from "@/components/tabList.jsx";
+import { UserInformation } from "../partials/UserInformation.jsx";
 
 const SettingsInfo = () => {
 
   const [ dropdown, setDropdown ] = useState( false );
   const { settings, emptySetting, updateSettings } = useSettings();
   const [ userInfo, setUserInfo ] = useState( {} );
-  const [ editInfo, setEditInfo ] = useState( {} );
   const [ activeTab, setActiveTab ] = useState( 0 );
 
 
@@ -25,27 +22,6 @@ const SettingsInfo = () => {
     }
   }, [ settings?.user?.info ] );
 
-  // Update editInfo state
-  useEffect( () => {
-    if ( settings?.user?.info ) {
-      const editsStates = Object.keys( settings.user.info ).map( info => ( { [ info ]: false } ) )
-
-      setEditInfo( editsStates );
-    }
-  }, [ settings?.user?.info ] );
-
-  // Handle editInfo state change
-  const handleEditInfo = ( key ) => {
-    setEditInfo( prevState => {
-      return prevState.map( ( item ) => {
-        if ( item[ key ] !== undefined ) {
-          return { [ key ]: !item[ key ] };
-        }
-
-        return item;
-      } );
-    } );
-  }
 
   const removeUserPhoto = () => {
     emptySetting( 'user.photo' );
@@ -69,7 +45,7 @@ const SettingsInfo = () => {
 
   const inputs = [
     {
-      value: userInfo.name || '',
+      value: userInfo?.name || '',
       onChange: ( e ) => updateSettings( 'user.name', e.target.value ),
       placeholder: 'Nombre',
       type: 'text',
@@ -171,25 +147,7 @@ const SettingsInfo = () => {
               </div>
               <div>
                 <Tabs.BodyITem activeClass="animate-fade-in" active={ activeTab === 0 }>
-
-                  <Form nameForm='editInfoUser' inputs={ inputs } withButton={ false }>
-                    { Object.entries( userInfo )?.map( ( [ key, value ], i ) => ( <ul key={ i } className='list-none'>
-                      <li className='text-Primary text-md mb-2 flex'>
-                        <Input value={ value } disabled={ !editInfo[ i ][ key ] } classInput='disabled:border-0'/>
-                        { editInfo[ i ][ key ] ? <div className='flex items-center gap-2 ml-2'>
-                          <CloseIcon classIcons='cursor-pointer text-red-500 hover:text-Secondary duration-200'
-                                     onClick={ () => handleEditInfo( key ) }/>
-                          <MarkIcon classIcons='cursor-pointer text-green-500 hover:text-Secondary duration-200'
-                                    onClick={ () => handleEditInfo( key ) }/>
-                        </div> : <Tooltip content={ `Editar ${ key }` } delayShow={ 400 } position='left'
-                                          contentClass='text-sm text-nowrap'>
-                          <PencilIcon classIcons='cursor-pointer hover:text-Secondary duration-200'
-                                      onClick={ () => handleEditInfo( key ) }/>
-                        </Tooltip> }
-                      </li>
-                    </ul> ) ) }
-                  </Form>
-
+                  <UserInformation userInfo={ userInfo }/>
                 </Tabs.BodyITem>
                 <Tabs.BodyITem activeClass="animate-fade-in p-10" active={ activeTab === 1 }>
                   <p>Seguridad</p>
