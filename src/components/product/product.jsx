@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useCart } from '@/context/cart.jsx';
 
 import { CartIcon, HearthCheckIcon, HearthLineIcon, DocumentIcon } from '@/assets/icons.jsx';
-import { Button } from '@/components/button.jsx';
+import { Button } from '@/components/button/index.tsx';
 import { Stars } from '@/components/stars.jsx';
 import { ModalProduct } from './modalProduct.jsx';
 import { Media } from '@/components/media.jsx'
@@ -90,7 +90,7 @@ const Product = ( props ) => {
            <div className='btns-check flex gap-2'>
              <div className='btn-outstanding'>
                <Button icon={ !outstanding ? <HearthLineIcon/> : <HearthCheckIcon/> } onClick={ Added }
-                       classBtn='text-sm'/>
+                      classBtn='text-sm'/>
              </div>
              <div className='btn-modal-information'>
                <Button icon={ <DocumentIcon/> } classBtn='text-sm' onClick={ OpenModal }/>

@@ -3,7 +3,7 @@ import { Path_page } from '@/routes.jsx';
 
 import { TextAnimatedWrite } from '@/components/textAnimatedWrite.jsx'
 import { Grafic } from '@/components/grafic.jsx'
-import { Button } from '@/components/button.jsx'
+import { Button } from '@/components/button/index.tsx'
 import { AngleRightIcon } from '@/assets/icons.jsx'
 
 const Blog = () => {
@@ -34,7 +34,7 @@ const Blog = () => {
        </div>
        <div className='button-section mt-7 tl:mt-11'>
          <Button classBtn='btn-go-to-services family-oswald tracking-widest text-15 lg:text-lg'
-                 icon={ <AngleRightIcon classIcons='icon'/> } iconRight={ true } onClick={ GotoServices }>
+                icon={ <AngleRightIcon classIcons='icon'/> } iconRight={ true } onClick={ GotoServices }>
            Navegar blog
          </Button>
        </div>

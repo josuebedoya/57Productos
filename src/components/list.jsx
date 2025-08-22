@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
-import { Button } from '@/components/button.jsx';
+import { Button } from '@/components/button/index.tsx';
 import { WarningModal } from "@/components/warningModal.jsx";
 import { Pagination } from "@/components/pagination.jsx";
 
@@ -75,18 +75,18 @@ const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, t
        { pagination && typePagination === 1 && (
         <div className='pagination flex items-center pb-3 justify-between'>
           <Button btnText
-                  classBtn='text-white disabled:opacity-30 disabled:hover:cursor-no-drop'
-                  onClick={ () => prevPage() }
-                  disabled={ indexFirst === 0 }
-                  title={ indexFirst === 0 ? 'No puedes retroceder más' : undefined }
+                 classBtn='text-white disabled:opacity-30 disabled:hover:cursor-no-drop'
+                 onClick={ () => prevPage() }
+                 disabled={ indexFirst === 0 }
+                 title={ indexFirst === 0 ? 'No puedes retroceder más' : undefined }
           >
             Volver
           </Button>
           <Button btnText
-                  classBtn='text-white disabled:opacity-30 disabled:hover:cursor-no-drop'
-                  onClick={ () => nextPage() }
-                  disabled={ children.length <= indexLast }
-                  title={ children.length <= indexLast ? 'No hay mas items para mostrar': undefined }
+                 classBtn='text-white disabled:opacity-30 disabled:hover:cursor-no-drop'
+                 onClick={ () => nextPage() }
+                 disabled={ children.length <= indexLast }
+                 title={ children.length <= indexLast ? 'No hay mas items para mostrar': undefined }
           >
             Siguiente
           </Button>
