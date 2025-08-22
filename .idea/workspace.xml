@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/styles/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tabList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tabs/tab.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/tab.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/auth/pages/settingsInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/pages/settingsInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_glogal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_settings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/_formDefault.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/_formDefault.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/_textCustom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/_textCustom.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/product/_modalProduct.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/product/_modalProduct.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/templates/_infoAbout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/templates/_infoAbout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/templates/parts/_money.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/templates/parts/_money.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/templates/parts/profile/_guestSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/templates/parts/profile/_guestSection.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,23 +65,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1748364525" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="store" />
-                    <option name="lastUsedInstant" value="1742945075" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="Migrate" />
-                    <option name="lastUsedInstant" value="1737403449" />
+                    <option name="lastUsedInstant" value="1755901789" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
                     <option name="lastUsedInstant" value="1734361270" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="Divisas" />
-                    <option name="lastUsedInstant" value="1730256270" />
                   </RecentBranch>
                 </list>
               </option>
@@ -88,7 +83,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/josuebedoya/57Productos.git&quot;,
-    &quot;accountId&quot;: &quot;d73f0ae0-65a2-491b-8f16-121fd4804986&quot;
+    &quot;accountId&quot;: &quot;5b5d5e68-0689-4e01-bf70-44271be3904d&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -110,32 +105,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.13.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.13.10&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public/images/products&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
+    "WebServerToolWindowPanel.toolwindow.show.date": "false",
+    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
+    "WebServerToolWindowPanel.toolwindow.show.size": "false",
+    "git-widget-placeholder": "dev",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "22.17.1",
+    "javascript.nodejs.core.library.typings.version": "22.17.2",
+    "last_opened_file_path": "C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public/images/products",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="dev" />
@@ -194,7 +191,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.15026.12" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PS-251.26927.60" />
+        <option value="bundled-php-predefined-a98d8de5180a-e5747d4f5a45-com.jetbrains.php.sharedIndexes-PS-251.26927.60" />
       </set>
     </attachedChunks>
   </component>
@@ -259,6 +257,8 @@
       <workItem from="1750287655316" duration="187000" />
       <workItem from="1751124408377" duration="518000" />
       <workItem from="1752185512236" duration="25745000" />
+      <workItem from="1755640751713" duration="2291000" />
+      <workItem from="1755901711764" duration="2306000" />
     </task>
     <task id="LOCAL-00047" summary="↔ Observer animation modal">
       <option name="closed" value="true" />
