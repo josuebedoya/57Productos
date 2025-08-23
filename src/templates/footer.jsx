@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Input } from '@/components/input.jsx';
 import { Path_page } from '@/routes';
-import { Button } from '@/components/button.jsx';
+import { Button } from '@/components/button/index.tsx';
 import {
   CloseIcon,
   FacebookIcon,

@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AddIcon, CartDown, CartIcon, RemoveIcon, TicketMoney, TrashIcon, TrashOpenIcon } from '@/assets/icons';
-import { Button } from './button.jsx';
+import { Button } from './button/index.tsx';
 import { Path_page } from '@/routes.jsx';
 import { Slug } from "@/utils/handleText.js";
 import { useCart } from '@/context/cart.jsx';
@@ -143,7 +143,7 @@ const Cart = ( { close } ) => {
                </div>
                <div className='bottom-section flex justify-between sticky -bottom-0.5 py-4 bg-white family-oswald'>
                  <Button classBtn='text-xs  pr-5 px-4 tracking-wider' iconRight icon={ <TicketMoney classIcons='text-lg'/> }
-                         onClick={ () => {
+                        onClick={ () => {
                            goToPayments();
                            setOpenModal( false )
                          } }>

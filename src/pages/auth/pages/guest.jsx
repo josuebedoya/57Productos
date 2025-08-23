@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button } from '@/components/button.jsx';
+import { Button } from '@/components/button/index.tsx';
 import signImg from '/assets/images/profile.png';
 import { Modal } from '@/components/modal.jsx';
 import { FormLogin } from '../components/formLogin.jsx';
@@ -50,11 +50,11 @@ const Guest = ( { isLogin } ) => {
              </div>
              <div className='w-auto md:w-2/5 flex justify-start items-center'>
                <div className='section-buttons flex space-y-4 md:space-y-0 md:space-x-4 md:flex-row '>
-                 <Button
+                 <Index
                   classBtn='btn-register bg-Secondary text-white py-4 px-6 text-xl duration-500 uppercase family-oswald tracking-widest'
                   onClick={ openFormRegister }>
                    Registrate
-                 </Button>
+                 </Index>
                  <Button
                   classBtn='btn-login bg-green-500 text-white py-4 px-6 text-xl hover:border-green-500 hover:text-green-500 duration-500 uppercase family-oswald tracking-widest'
                   onClick={ openFormLogin }>

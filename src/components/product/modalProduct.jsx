@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { Stars } from '@/components/stars.jsx';
-import { Button } from '@/components/button.jsx';
+import { Button } from '@/components/button/index.tsx';
 import { HearthLineIcon, HearthCheckIcon } from '@/assets/icons.jsx';
 import { AddWithQuantity } from '@/components/addWithQuantity.jsx';
 import { Modal } from '@/components/modal.jsx';

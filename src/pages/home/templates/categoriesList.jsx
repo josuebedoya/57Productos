@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { useDatabase } from "@/hooks/useDatabase.jsx";
 import { Path_page } from "@/routes.jsx";
 import { Slug } from "@/utils/handleText.js";
-import { Button } from "@/components/button.jsx";
+import { Button } from "@/components/button/index.tsx";
 import { ArrowRightIcon } from '@/assets/icons.jsx';
 import { WarningModal } from '@/components/warningModal.jsx';
 
@@ -57,10 +57,10 @@ const CategoriesList = () => {
                   { category.descripcion }
                 </p>
                 <Button btnText
-                        icon={ <ArrowRightIcon/> }
-                        classBtn='text-white opacity-0 group-hover/item:opacity-100'
-                        iconRight
-                        onClick={ () => goToCategory(Slug( category.nombre )) }>
+                       icon={ <ArrowRightIcon/> }
+                       classBtn='text-white opacity-0 group-hover/item:opacity-100'
+                       iconRight
+                       onClick={ () => goToCategory(Slug( category.nombre )) }>
                   Ver más
                 </Button>
               </div>

@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from './button.jsx';
+import { Button } from './button/index.tsx';
 import { ExitArrowIcon } from '@/assets/icons';
 
 const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, animationExit, type = 3 , children,

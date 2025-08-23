@@ -1,0 +1,43 @@
+// global settings
+@use 'variables' as *;
+
+// styles components
+@use './components/grafic';
+@use './templates/slider';
+@use './components/textCustom';
+@use './components/formDefault';
+@use './components/product/product';
+@use './components/product/modalProduct';
+@use './components/carousel';
+
+// styles templates
+@use './templates/header';
+@use './templates/parts/profile/guestSection';
+@use './templates/chance';
+@use './templates/blog';
+@use './templates/missionAndVision';
+@use './templates/parts/money';
+@use './templates/infoAbout';
+@use './templates/footer';
+
+// styles resources
+@use "./resources/svgForms";
+
+// Default Styles Template
+a{
+  color: var($color-primary);
+}
+
+#results{
+  & .options::-webkit-scrollbar{
+    display: none;
+  }
+
+  & .filters{
+    scroll-snap-type: x mandatory;
+  }
+
+  & .filters button{
+    scroll-snap-align: start;
+  }
+}

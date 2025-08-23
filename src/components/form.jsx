@@ -1,4 +1,4 @@
-import { Button } from './button.jsx';
+import { Button } from './button/index.tsx';
 import { Input } from './input.jsx';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';

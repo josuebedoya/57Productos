@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { TextCustom } from '@/components/textCustom.jsx'
 import mercadeo from '/assets/images/mercadeo.jpg'
-import { Button } from '@/components/button.jsx'
+import { Button } from '@/components/button/index.tsx'
 import { ArrowRightIcon } from '@/assets/icons.jsx'
 import { Path_page } from '@/routes.jsx'
 
