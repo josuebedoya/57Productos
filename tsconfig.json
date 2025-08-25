@@ -4,7 +4,9 @@
     // File Layout
     // "rootDir": "./src",
     // "outDir": "./dist",
-
+    "paths": {
+      "@/*": ["src/*"]
+    },
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
@@ -14,7 +16,7 @@
     // "lib": ["esnext"],
     // "types": ["node"],
     // and npm install -D @types/node
-
+    "allowImportingTsExtensions": true,
     // Other Outputs
     "sourceMap": true,
     "declaration": true,
