@@ -26,25 +26,37 @@ export const vars = {
       solid: {
         primary: 'bg-Primary text-white border border-Primary',
         secondary: 'bg-Secondary text-white border border-Secondary',
+        white: 'bg-white text-Primary border border-white',
+        black: 'bg-black text-white border border-black',
         hover: {
           primary: 'hover:bg-Primary hover:text-white hover:border hover:border-Primary',
           secondary: 'hover:bg-Secondary hover:text-white hover:border hover:border-Secondary',
+          white: 'hover:bg-white hover:text-Primary hover:border hover:border-white',
+          black: 'hover:bg-black hover:text-white hover:border hover:border-black',
         }
       },
       outline: {
         primary: 'bg-transparent text-Primary border border-Primary',
         secondary: 'bg-transparent text-Secondary border border-Secondary',
+        white: 'bg-transparent text-white border border-white',
+        black: 'bg-transparent text-black border border-black',
         hover: {
           primary: 'hover:bg-transparent hover:text-Primary hover:border hover:border-Primary',
           secondary: 'hover:bg-transparent hover:text-Secondary hover:border hover:border-Secondary',
+          white: 'hover:bg-transparent hover:text-white hover:border hover:border-white',
+          black: 'hover:bg-transparent hover:text-black hover:border hover:border-black',
         }
       },
       flat: {
         primary: 'text-Primary bg-transparent border border-transparent',
         secondary: 'text-Secondary bg-transparent border border-transparent',
+        white: 'text-white bg-transparent border border-transparent',
+        black: 'text-black bg-transparent border border-transparent',
         hover: {
           primary: 'hover:bg-Primary/10 hover:text-Primary hover:border-transparent',
           secondary: 'hover:bg-Secondary/10 hover:text-Secondary hover:border-transparent',
+          white: 'hover:bg-white/10 hover:text-white hover:border-transparent',
+          black: 'hover:bg-black/10 hover:text-black hover:border-transparent',
         }
       }
     },

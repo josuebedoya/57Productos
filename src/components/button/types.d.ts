@@ -12,4 +12,5 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   color?: string;
   colorHover?: string;
   rounded?: string;
+  noStyles?: boolean;
 }

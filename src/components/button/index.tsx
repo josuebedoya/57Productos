@@ -7,6 +7,7 @@ const Button: React.FC<ButtonProps> = (
     children,
     icon,
     iconRight = false,
+    noStyles = false,
     classes = '',
     ...rest
   }
@@ -38,7 +39,7 @@ const Button: React.FC<ButtonProps> = (
 
   return (
     <button
-      className={`btn btn-${rest?.variant} ${baseClasses} ${btnStyle} ${classes}`}
+      className={`btn ${!noStyles && `btn-${rest?.variant} ${btnStyle}`} ${baseClasses}  ${classes}`}
       {...rest}
     >
       {!iconRight && icon}
