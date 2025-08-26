@@ -24,7 +24,7 @@ const Select: React.FC<SelectProps> = (
           className={classes}
           {...rest}
         >
-          {op.label ?? op.value}
+          {label ?? value}
         </option>
       ))}
     </select>
