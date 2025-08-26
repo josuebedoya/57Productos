@@ -16,12 +16,13 @@ const Select: React.FC<SelectProps> = (
       onChange={onChange}
       {...rest}
     >
-      {options.map((op: OptionsProps, index: number) => (
+      {options.map(({value, label, disabled, classes, ...rest}: OptionsProps, index: number) => (
         <option
           key={index}
-          value={op.value}
-          disabled={op.disabled}
-          className={op.classes}
+          value={value}
+          disabled={disabled}
+          className={classes}
+          {...rest}
         >
           {op.label ?? op.value}
         </option>
