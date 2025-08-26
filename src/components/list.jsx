@@ -4,17 +4,19 @@ import { Button } from '@/components/button/index.tsx';
 import { WarningModal } from "@/components/warningModal.jsx";
 import { Pagination } from "@/components/pagination.jsx";
 
-const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, textEmpty, pagination = true,
+const List = ( {
+                 columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, textEmpty, pagination = true,
                  typePagination = 2, classLinkPagination, activeClassPagination, classDotsPagination,
                  iconNextPagination, iconPrevPagination, labelNextPagination, labelPrevPagination,
-                 children } ) => {
+                 children
+               } ) => {
 
   const [ indexLast, setIndexLast ] = useState( columns * rows );
   const [ indexFirst, setIndexFirst ] = useState( 0 );
   const [ isChanged, setIsChanged ] = useState( false );
 
   const defaultBreakpoints = {
-    zero: columns- 2,
+    zero: columns - 2,
     sm: columns - 2,
     md: columns - 1,
     lg: columns,
@@ -59,12 +61,12 @@ const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, t
   }, [ isChanged ] );
 
   //Render alert
-    if(!children ) {
-      // console.log(children.length ===0 ? 'Cero ' : children.length)
-      return <WarningModal type='warning' bgColor='bg-gray-400' itemClass='rounded-lg shadow-white' >
-        {textEmpty ? textEmpty : 'No hay elementos para mostrar' }
-      </WarningModal>
-    }
+  if ( !children ) {
+    // console.log(children.length ===0 ? 'Cero ' : children.length)
+    return <WarningModal type='warning' bgColor='bg-gray-400' itemClass='rounded-lg shadow-white'>
+      { textEmpty ? textEmpty : 'No hay elementos para mostrar' }
+    </WarningModal>
+  }
 
   // Render view
   return (
@@ -74,19 +76,21 @@ const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, t
        {/*Type pagination 1*/ }
        { pagination && typePagination === 1 && (
         <div className='pagination flex items-center pb-3 justify-between'>
-          <Button btnText
-                 classBtn='text-white disabled:opacity-30 disabled:hover:cursor-no-drop'
-                 onClick={ () => prevPage() }
-                 disabled={ indexFirst === 0 }
-                 title={ indexFirst === 0 ? 'No puedes retroceder más' : undefined }
+          <Button variant='flat'
+                  color='white'
+                  classses='disabled:opacity-30 disabled:hover:cursor-no-drop'
+                  onClick={ () => prevPage() }
+                  disabled={ indexFirst === 0 }
+                  title={ indexFirst === 0 ? 'No puedes retroceder más' : undefined }
           >
             Volver
           </Button>
-          <Button btnText
-                 classBtn='text-white disabled:opacity-30 disabled:hover:cursor-no-drop'
-                 onClick={ () => nextPage() }
-                 disabled={ children.length <= indexLast }
-                 title={ children.length <= indexLast ? 'No hay mas items para mostrar': undefined }
+          <Button variant='flat'
+                  color='white'
+                  classses='disabled:opacity-30 disabled:hover:cursor-no-drop'
+                  onClick={ () => nextPage() }
+                  disabled={ children.length <= indexLast }
+                  title={ children.length <= indexLast ? 'No hay mas items para mostrar' : undefined }
           >
             Siguiente
           </Button>
@@ -111,7 +115,7 @@ const List = ( { columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, t
        </div>
      </div>
 
-      {/*Type pagination 2*/ }
+     {/*Type pagination 2*/ }
      { pagination && typePagination === 2 && (
       <div className='list-pagination flex items-center justify-center mt-8'>
         <Pagination itemsPerPage={ columns * rows } items={ children } nextPage={ nextPage } prevPage={ prevPage }

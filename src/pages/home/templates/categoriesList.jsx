@@ -11,24 +11,24 @@ import { WarningModal } from '@/components/warningModal.jsx';
 const CategoriesList = () => {
   const [ categories, setCategories ] = useState( [] );
   const navigate = useNavigate();
-  const { get, data, loading, error } =  useDatabase();
+  const { get, data, loading, error } = useDatabase();
 
-  // get categories store
+  // get category store
   useEffect( () => {
-    get('categorias');
+    get( 'categorias' );
   }, [] );
 
   //update categories
   useEffect( () => {
-    if( data?.['categorias'] !== null) setCategories(data?.['categorias']); // prevent null value
+    if ( data?.[ 'categorias' ] !== null ) setCategories( data?.[ 'categorias' ] ); // prevent null value
 
-  }, [data] );
+  }, [ data ] );
 
   // go to category  function
   const goToCategory = ( name ) => {
     navigate( Path_page.STORE + '/' + name );
   };
-  const colours = [ 'blue', 'red', 'yellow', 'purple','green', 'cyan', 'fuchsia', 'pink', 'orange'];
+  const colours = [ 'blue', 'red', 'yellow', 'purple', 'green', 'cyan', 'fuchsia', 'pink', 'orange' ];
   const breakpoints = {
     zero: 1,
     md: 2,
@@ -36,8 +36,9 @@ const CategoriesList = () => {
     xl: 4,
   }
 
-  if ( error ) <div>Algo ha fallado: { error.message }</div>; // if something  wrong in fetch
-  if ( loading ) <WarningModal timeClose={ 6000 } type={ error } className='text-white text-center text-lg'>Cargando, no debería tardar demasiado</WarningModal>; // if are loading fetch
+  if ( error ) <div>Algo ha fallado: { error.message }</div>; // if something wrong in fetch
+  if ( loading ) <WarningModal timeClose={ 6000 } type={ error } className='text-white text-center text-lg'>Cargando, no
+    debería tardar demasiado</WarningModal>; // if are loading fetch
 
   return (
    < section id='listCategories' className='bg-Primary py-16'>
@@ -49,23 +50,26 @@ const CategoriesList = () => {
               breakpoints={ breakpoints }
        >
          { categories &&
-           categories.map( ( category, i ) => (
-            <div key={ i }
-                 className={ `shadow-${ colours[Math.floor( Math.random() * colours.length )] }-500 hover:shadow-${ colours[ Math.floor( Math.random() * colours.length ) ] }-500` }>
-              <div className="content flex flex-col items-center gap-8">
-                <p className="text-white text-center text-lg h-36 line-clamp-5">
-                  { category.descripcion }
-                </p>
-                <Button btnText
-                       icon={ <ArrowRightIcon/> }
-                       classBtn='text-white opacity-0 group-hover/item:opacity-100'
-                       iconRight
-                       onClick={ () => goToCategory(Slug( category.nombre )) }>
-                  Ver más
-                </Button>
-              </div>
-            </div>
-           ) )
+          categories.map( ( category, i ) => (
+           <div key={ i }
+                className={ `shadow-${ colours[ Math.floor( Math.random() * colours.length ) ] }-500 hover:shadow-${ colours[ Math.floor( Math.random() * colours.length ) ] }-500` }>
+             <div className="content flex flex-col items-center gap-8">
+               <p className="text-white text-center text-lg h-36 line-clamp-5">
+                 { category.descripcion }
+               </p>
+               <Button
+                variant='flat'
+                color='white'
+                colorHover='white'
+                icon={ <ArrowRightIcon/> }
+                classes='opacity-0 group-hover/item:opacity-100'
+                iconRight
+                onClick={ () => goToCategory( Slug( category.nombre ) ) }>
+                 Ver más
+               </Button>
+             </div>
+           </div>
+          ) )
          }
        </List>
      </div>

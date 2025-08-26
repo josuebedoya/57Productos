@@ -50,13 +50,22 @@ const Guest = ( { isLogin } ) => {
              </div>
              <div className='w-auto md:w-2/5 flex justify-start items-center'>
                <div className='section-buttons flex space-y-4 md:space-y-0 md:space-x-4 md:flex-row '>
-                 <Index
-                  classBtn='btn-register bg-Secondary text-white py-4 px-6 text-xl duration-500 uppercase family-oswald tracking-widest'
+                 <Button
+                  classes='btn-register uppercase family-oswald tracking-widest'
+                  variant='solid'
+                  size='xl'
+                  padding='lg'
+                  variantHover='outline'
+                  color='secondary'
                   onClick={ openFormRegister }>
                    Registrate
-                 </Index>
+                 </Button>
                  <Button
-                  classBtn='btn-login bg-green-500 text-white py-4 px-6 text-xl hover:border-green-500 hover:text-green-500 duration-500 uppercase family-oswald tracking-widest'
+                  classes='btn-login bg-green-500 border-green-500 hover:border-green-500 hover:text-green-500 uppercase family-oswald tracking-widest'
+                  variant='solid'
+                  size='xl'
+                  padding='lg'
+                  variantHover='outline'
                   onClick={ openFormLogin }>
                    Inicia Sesión
                  </Button>

@@ -40,7 +40,9 @@ const AddWithQuantity = ( { functionAdd, handleAmount } ) => {
      <div className='btn-add-amount  flex justify-between items-center text-'>
        <div className='flex justify-between items-center mr-5'>
          <Button
-          classBtn='btn-reduce bg-transparent border-0 shadow-none hover:border-0 text-4xl p-0'
+          size='xl'
+          variant='flat'
+          classes='btn-reduce p-0'
           onMouseEnter={ () => setChangeIconBtnRemove( true ) }
           onMouseLeave={ () => {
             setChangeIconBtnRemove( false );
@@ -54,7 +56,9 @@ const AddWithQuantity = ( { functionAdd, handleAmount } ) => {
          </Button>
          <Input value={ amount } type='number' onChange={ onChangeAmount } minLength={ 0 } classContent='input-amount'/>
          <Button
-          classBtn='btn-increase bg-transparent border-0 shadow-none hover:border-0 text-4xl p-0'
+          size='xl'
+          variant='flat'
+          classes='btn-reduce p-0'
           onMouseEnter={ () => setChangeIconBtnAdd( true ) }
           onMouseLeave={ () => {
             setChangeIconBtnAdd( false );
@@ -67,7 +71,7 @@ const AddWithQuantity = ( { functionAdd, handleAmount } ) => {
          </Button>
        </div>
        <div>
-         <Button classBtn='btn-add px-4' icon={ <CartIcon/> } onClick={ () => {
+         <Button classes='btn-add' padding='lg' icon={ <CartIcon/> } onClick={ () => {
            functionAdd();
            setAmount( 1 )
          } }>

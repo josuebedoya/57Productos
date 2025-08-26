@@ -89,7 +89,7 @@ const Search = () => {
    <>
      <div>
        <div className={ `search-btn-section duration-500 ${ showModal ? 'button-active' : '' }` }>
-         <Button icon={ <SearchEngineIcon/> } classBtn='search-btn' onClick={ openModal }/>
+         <Button icon={ <SearchEngineIcon/> } classes='search-btn' onClick={ openModal }/>
        </div>
      </div>
 
@@ -99,7 +99,7 @@ const Search = () => {
          <form method='GET' onSubmit={ submitQuery } className='flex items-center w-full max-w-600 gap-5'>
            <Input type='text' maxLength={ 70 } value={ valueSearch } onChange={ handleValueSearch } name='search'
                   className='flex-grow'/>
-           <Button icon={ <SearchEngineIcon/> } onClick={ submitQuery } classBtn='search-btn' type='submit'/>
+           <Button icon={ <SearchEngineIcon/> } onClick={ submitQuery } classes='search-btn' type='submit'/>
          </form>
        </div>
 

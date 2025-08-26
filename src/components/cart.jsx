@@ -125,7 +125,7 @@ const Cart = ( { close } ) => {
                           </div>
                         </div>
                         <div className='btns-group flex justify-between pt-2'>
-                          <Button classBtn='text-sm family-oswald pr-5' btnText>
+                          <Button size='sm' classes='family-oswald pr-5' variant='flat'>
                             Comprar
                           </Button>
                           <Tooltip content='Sacar Producto del carrito' position='left' contentClass='text-sm text-red-500 whitespace-nowrap font-medium'
@@ -142,7 +142,10 @@ const Cart = ( { close } ) => {
                  }
                </div>
                <div className='bottom-section flex justify-between sticky -bottom-0.5 py-4 bg-white family-oswald'>
-                 <Button classBtn='text-xs  pr-5 px-4 tracking-wider' iconRight icon={ <TicketMoney classIcons='text-lg'/> }
+                 <Button
+                  size='sm'
+                  padding='md'
+                  classes='tracking-wider' iconRight icon={ <TicketMoney classIcons='text-lg'/> }
                         onClick={ () => {
                            goToPayments();
                            setOpenModal( false )

@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps> = (
     variant = 'solid',
     variantHover = rest?.variant || 'solid',
   } = rest || {};
-  
+
   useEffect(() => {
     const sizeClass = gVar(`text.size.${size}`);
     const paddingClass = gVar(`button.padding.${padding}`);

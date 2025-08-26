@@ -73,7 +73,7 @@ const ModalProduct = ( { close, title, price, description, img, imgHover, isOpen
                < AddWithQuantity functionAdd={ addToCart } handleAmount={ handleAmount }/>
                <div className='btn-outstanding'>
                  <Button icon={ !outstanding ? <HearthLineIcon/> : <HearthCheckIcon/> } onClick={ Added }
-                         classBtn='text-lg'/>
+                         size='lg'/>
                </div>
              </div>
            </div>

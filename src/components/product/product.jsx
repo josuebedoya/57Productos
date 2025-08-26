@@ -83,17 +83,20 @@ const Product = ( props ) => {
          </div>
          <div className='group-buttons flex gap-1 items-center justify-between'>
            <div className='btn-add-to-basket'>
-             <Button icon={ <CartIcon/> } iconRight classBtn='text-sm trasn' onClick={ addToCart }>
+             <Button
+              icon={ <CartIcon/> }
+              iconRight
+              size='sm' onClick={ addToCart }>
                Añadir
              </Button>
            </div>
            <div className='btns-check flex gap-2'>
              <div className='btn-outstanding'>
                <Button icon={ !outstanding ? <HearthLineIcon/> : <HearthCheckIcon/> } onClick={ Added }
-                      classBtn='text-sm'/>
+                      size='sm'/>
              </div>
              <div className='btn-modal-information'>
-               <Button icon={ <DocumentIcon/> } classBtn='text-sm' onClick={ OpenModal }/>
+               <Button icon={ <DocumentIcon/> } size='sm' onClick={ OpenModal }/>
              </div>
            </div>
          </div>

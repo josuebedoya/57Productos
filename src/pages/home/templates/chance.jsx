@@ -25,7 +25,8 @@ const Chance = () => {
      <section id='Chance' className='bg-black/10'>
        <div className='container mx-auto px-3 pt-10 pb-8 tl:pt-20 tl:pb-16 xl:pt-28 xl:pb-24'>
          <div className='section-title text-center'>
-           <TextCustom title='¿Estás listo para iniciar tu aventura con nosotros?' atrTitle={ styletilte } classTitle='text-shadow-white textPrimary font-semibold'/>
+           <TextCustom title='¿Estás listo para iniciar tu aventura con nosotros?' atrTitle={ styletilte }
+                       classTitle='text-shadow-white textPrimary font-semibold'/>
          </div>
          <div className='content tl:flex items-center'>
            <div className='section-image w-full tl:w-1/2 flex justify-center tl:justify-start xl:justify-center'>
@@ -33,7 +34,8 @@ const Chance = () => {
                   className='w-full h-auto rounded-3xl shadow-extense hover:scale-105 duration-500 max-w-95 tl:max-w-sm lg:max-w-md xl:max-w-xl 2xl:max-w-2xl aspect-100/63 tl:aspect-100/83 lg:aspect-auto'/>
            </div>
            <div className='section-info w-full tl:w-1/2  pl-3 pt-6 tl:pt-0'>
-             <div className='description text-justify tl:max-w-lg text-15 leading-7 md:text-lg md:leading-8 xl:text-xl xl:leading-9 '>
+             <div
+              className='description text-justify tl:max-w-lg text-15 leading-7 md:text-lg md:leading-8 xl:text-xl xl:leading-9 '>
                <TextCustom>
                  ¡Únete a nuestro equipo y potencia tus oportunidades de éxito!{ '\n' }
                  En nuestro ambiente colaborativo, te ofrecemos la oportunidad de facilitar transacciones que maximicen
@@ -47,7 +49,8 @@ const Chance = () => {
                 icon={ <ArrowRightIcon/> }
                 iconRight={ true }
                 onClick={ functionGoToContact }
-                classBtn={ 'btn-join text-15 tl:text-lg family-oswald' }
+                classes='btn-join family-oswald hover:scale-105'
+                size='text-[15px] tl:text-lg'
                >
                  Formar parte
                </Button>
