@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps> = (
       colorHover = 'secondary',
       rounded = 'md',
       variant = 'solid',
-      variantHover = 'solid'
+      variantHover = rest?.variant || ' solid',
     } = rest || {};
 
     const sizeClass = gVar(`text.size.${size}`);
