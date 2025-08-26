@@ -6,12 +6,14 @@ const Select: React.FC<SelectProps> = (
     options = [],
     defaultValue = 0,
     classes = '',
+    onChange,
     ...rest
   }) => {
   return (
     <select
       defaultValue={defaultValue}
       className={classes}
+      onChange={onChange}
       {...rest}
     >
       {options.map((op: OptionsProps, index: number) => (

@@ -1,3 +1,5 @@
+import {SelectHTMLAttributes, ChangeEvent} from "react";
+
 interface OptionsProps {
   label?: string;
   value: string | number;
@@ -11,4 +13,5 @@ export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   value: string | number;
   defaultValue?: string | number;
   classes: string
-};
+  onChange: (e: ChangeEvent<HTMLSelectElement>) => void;
+}
