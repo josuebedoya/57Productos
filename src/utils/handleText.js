@@ -6,13 +6,10 @@ export const normalizeText = ( t ) => {
 };
 
 export const Slug = ( t ) => {
-  const converted =t.trim() // Delete spaces from sides
-   .replaceAll( ' ', '-' ) // Replace spaces to script
-   .replaceAll( '/', '-' ) // Replace hash
-   .replace( /[^a-zA-Z0-9-]/g, '' ) // Delete characters what not is letter
-   .replace( /-+/g, '-' ) // If there are more the one "-" ,  leaves only one
-   .toLowerCase(); // Covert to lower case
-
-  return converted[0] === '-' ||  converted[0] === '/' ? converted.slice(1) : converted;
+  return t
+   .toLowerCase()
+   .normalize( 'NFD' ) // Normalize cents EJ. ñ by n
+   .replace( /[\u0300-\u036f]/g, '' )     // Remove and replace tildes
+   .replace( /[^a-z0-9]+/g, '-' )  // Remove chars alphanumerics
+   .replace( /^-+|-+$/g, '' ); // Remove ebd and star script "-"
 };
-
