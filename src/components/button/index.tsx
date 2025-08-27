@@ -31,14 +31,12 @@ const Button: React.FC<ButtonProps> = (
     const hoverClass = gVar(`button.variant.${variantHover}.hover.${colorHover}`);
     const roundedClass = gVar(`button.rounded.${rounded}`);
 
-    setBtnStyle([sizeClass, paddingClass, variantClass, hoverClass, roundedClass].join(' '));
+    setBtnStyle([gVar('button.base'),sizeClass, paddingClass, variantClass, hoverClass, roundedClass].join(' '));
   }, [rest])
-
-  const baseClasses = 'flex items-center gap-2 duration-300 ease-in-out';
 
   return (
     <button
-      className={`btn ${!noStyles && `btn-${variant} ${btnStyle}`} ${baseClasses}  ${classes}`}
+      className={`btn ${!noStyles && `btn-${variant} ${btnStyle}`} ${classes}`}
       {...rest}
     >
       {!iconRight && icon}
