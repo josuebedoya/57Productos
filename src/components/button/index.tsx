@@ -25,13 +25,16 @@ const Button: React.FC<ButtonProps> = (
   } = rest || {};
 
   useEffect(() => {
-    const sizeClass = gVar(`text.size.${size}`);
-    const paddingClass = gVar(`button.padding.${padding}`);
-    const variantClass = gVar(`button.variant.${variant || 'solid'}.${color}`);
-    const hoverClass = gVar(`button.variant.${variantHover}.hover.${colorHover}`);
-    const roundedClass = gVar(`button.rounded.${rounded}`);
+    const btnStyle = gVar([
+      "button.base",
+      `text.size.${size}`,
+      `button.padding.${padding}`,
+      `button.variant.${variant || 'solid'}.${color}`,
+      `button.variant.${variantHover}.hover.${colorHover}`,
+      `button.rounded.${rounded}`
+    ]);
 
-    setBtnStyle([gVar('button.base'),sizeClass, paddingClass, variantClass, hoverClass, roundedClass].join(' '));
+    setBtnStyle(btnStyle);
   }, [rest])
 
   return (

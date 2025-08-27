@@ -7,8 +7,15 @@ const isCustomValue = (val: string): boolean => {
 
   return isTailwindArbitrary || isRawColor;
 };
-const gVar = (path: string | number): string => {
+const gVar = (path: string | number | Array<string | number>): string => {
   if (!path) return "";
+
+  if (Array.isArray(path)) {
+    return path
+      .map((p: string | number) => gVar(p))
+      .filter(Boolean)
+      .join('  ')
+  }
 
   const sPath = String(path).trim();
 
