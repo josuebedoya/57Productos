@@ -31,7 +31,7 @@ const Button: React.FC<ButtonProps> = (
       `button.padding.${padding}`,
       `button.variant.${variant || 'solid'}.${color}`,
       `button.variant.${variantHover}.hover.${colorHover}`,
-      `button.rounded.${rounded}`
+      `rounded.${rounded}`
     ]);
 
     setBtnStyle(btnStyle);
