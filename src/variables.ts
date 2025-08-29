@@ -8,6 +8,7 @@ export const vars = {
       black: 'text-black',
       gray: 'text-gray-500',
     },
+
     size: {
       sm: 'text-sm leading-5',
       md: 'text-base leading-6',
@@ -15,20 +16,32 @@ export const vars = {
       xl: 'text-xl leading-8',
     }
   },
+
+  rounded: {
+    none: 'rounded-none',
+    sm: 'rounded-sm',
+    md: 'rounded-md',
+    lg: 'rounded-lg',
+    full: 'rounded-full',
+  },
+
   button: {
-    base: 'inline-flex items-center justify-center transition focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed',
+    base: 'inline-flex items-center justify-center transition focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer',
+
     padding: {
       sm: 'px-3 py-2',
       md: 'px-4 py-2.5',
       lg: 'px-6 py-3',
       xl: 'px-9 py-4',
     },
+
     variant: {
       solid: {
         primary: 'bg-Primary text-white border border-Primary',
         secondary: 'bg-Secondary text-white border border-Secondary',
         white: 'bg-white text-Primary border border-white',
         black: 'bg-black text-white border border-black',
+
         hover: {
           primary: 'hover:bg-Primary hover:text-white hover:border hover:border-Primary',
           secondary: 'hover:bg-Secondary hover:text-white hover:border hover:border-Secondary',
@@ -36,11 +49,13 @@ export const vars = {
           black: 'hover:bg-black hover:text-white hover:border hover:border-black',
         }
       },
+
       outline: {
         primary: 'bg-transparent text-Primary border border-Primary',
         secondary: 'bg-transparent text-Secondary border border-Secondary',
         white: 'bg-transparent text-white border border-white',
         black: 'bg-transparent text-black border border-black',
+
         hover: {
           primary: 'hover:bg-transparent hover:text-Primary hover:border hover:border-Primary',
           secondary: 'hover:bg-transparent hover:text-Secondary hover:border hover:border-Secondary',
@@ -48,11 +63,13 @@ export const vars = {
           black: 'hover:bg-transparent hover:text-black hover:border hover:border-black',
         }
       },
+
       flat: {
         primary: 'text-Primary bg-transparent border border-transparent',
         secondary: 'text-Secondary bg-transparent border border-transparent',
         white: 'text-white bg-transparent border border-transparent',
         black: 'text-black bg-transparent border border-transparent',
+
         hover: {
           primary: 'hover:bg-Primary/10 hover:text-Primary hover:border-transparent',
           secondary: 'hover:bg-Secondary/10 hover:text-Secondary hover:border-transparent',
@@ -60,13 +77,33 @@ export const vars = {
           black: 'hover:bg-black/10 hover:text-black hover:border-transparent',
         }
       }
-    },
-    rounded: {
-      none: 'rounded-none',
-      sm: 'rounded-sm',
-      md: 'rounded-md',
-      lg: 'rounded-lg',
-      full: 'rounded-full',
+    }
+  },
+
+  select: {
+    base: "block w-full transition appearance-none focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed p-2 cursor-pointer scrollbar-thin scrollbar-track-transparent",
+
+    variant: {
+      solid: {
+        primary: "bg-Primary text-white border border-Primary focus-visible:ring-Primary",
+        secondary: "bg-Secondary text-white border border-Secondary focus-visible:ring-Secondary",
+        white: "bg-white text-black border border-gray-300 focus-visible:ring-gray-400",
+        black: "bg-black text-white border border-black focus-visible:ring-gray-600"
+      },
+
+      outline: {
+        primary: "bg-transparent text-Primary border border-Primary focus-visible:ring-Primary",
+        secondary: "bg-transparent text-Secondary border border-Secondary focus-visible:ring-Secondary",
+        white: "bg-transparent text-white border border-white focus-visible:ring-white",
+        black: "bg-transparent text-black border border-black focus-visible:ring-black"
+      },
+
+      flat: {
+        primary: "bg-transparent text-Primary border-none focus-visible:ring-0",
+        secondary: "bg-transparent text-Secondary border-none focus-visible:ring-0",
+        white: "bg-transparent text-white border-none focus-visible:ring-0",
+        black: "bg-transparent text-black border-none focus-visible:ring-0"
+      }
     }
   }
 }

@@ -13,8 +13,8 @@ export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   defaultValue?: string | number;
   classes?: string
   variant?:string,
-  color:?string,
-  rounded:?string,
+  color?:string,
+  rounded?:string,
   icon?: ReactNode,
   onChange: (e: ChangeEvent<HTMLSelectElement>) => void;
 }

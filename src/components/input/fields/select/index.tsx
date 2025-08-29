@@ -8,9 +8,6 @@ const Select: React.FC<SelectProps> = (
     options = [],
     defaultValue = 0,
     classes = '',
-    variant = 'outline',
-    color = 'secondary',
-    rounded = 'md',
     icon,
     onChange,
     ...rest
@@ -18,6 +15,12 @@ const Select: React.FC<SelectProps> = (
 
   const [selectStyles, setSelectStyles] = useState('');
   const [open, setOpen] = useState(false);
+
+  const {
+    color = 'primary',
+    rounded = 'md',
+    variant = 'solid',
+  } = rest || {};
 
   // Update style class
   useEffect(() => {
@@ -53,12 +56,14 @@ const Select: React.FC<SelectProps> = (
           </option>
         ))}
       </select>
-      <span
-        className={`right-2 order-1 absolute ${open ? 'rotate-90' : 'rotate-0'} duration-300 transition text-Primary text-15 hover:text-Secondary cursor-pointer`}>
+      {
+        !rest?.multiple && <span
+        className={`right-2 order-1 absolute ${open ? 'rotate-90' : 'rotate-0'} !w-auto ${selectStyles}`}>
         {
           icon ? icon : <AngleRightIcon/>
         }
       </span>
+      }
     </div>
   );
 };
