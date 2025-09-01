@@ -3,7 +3,11 @@ import type {InputProps} from "../types.ts";
 import {gVar} from "@/utils/gVar.js";
 import {MarkIcon} from '@/assets/icons.tsx'
 
-const CheckBox = (props: InputProps) => {
+const CheckBox = (
+  {
+    className = '',
+    ...props
+  }) => {
 
   const [checkboxStyles, setCheckboxStyles] = useState('');
   const [checked, setChecked] = useState(false);
@@ -39,9 +43,9 @@ const CheckBox = (props: InputProps) => {
   return (
     <div className="relative flex justify-center items-center w-full h-auto">
       <input
-        name={props.name || 'checkbox'}
+        name={props.name ?? 'checkbox'}
         type='checkbox'
-        className={`checkbox ${checkboxStyles} ${props.className}`}
+        className={`checkbox ${checkboxStyles} ${className}`}
         onClick={() => setChecked(!checked)}
         {...props}
       />
