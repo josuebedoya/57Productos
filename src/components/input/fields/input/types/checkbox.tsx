@@ -3,7 +3,7 @@ import type {InputProps} from "../types.ts";
 import {gVar} from "@/utils/gVar.js";
 import {MarkIcon} from '@/assets/icons.tsx'
 
-const CheckBox = (
+const CheckBox: React.FC<InputProps> = (
   {
     className = '',
     ...props
