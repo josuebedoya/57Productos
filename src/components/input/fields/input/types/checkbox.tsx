@@ -39,6 +39,7 @@ const CheckBox = (props: InputProps) => {
   return (
     <div className="relative flex justify-center items-center w-full h-auto">
       <input
+        name={props.name || 'checkbox'}
         type='checkbox'
         className={`checkbox ${checkboxStyles} ${props.className}`}
         onClick={() => setChecked(!checked)}
