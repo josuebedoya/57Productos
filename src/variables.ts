@@ -105,5 +105,50 @@ export const vars = {
         black: "bg-transparent text-black border-none focus-visible:ring-0"
       }
     }
+  },
+
+  textarea: {
+    base: 'focus:opacity-80 block w-full appearance-none focus:outline-none transition duration-300',
+
+    padding: {
+      sm: 'p2',
+      md: 'p-3',
+      lg: 'p-5',
+      xl: 'p-7'
+    },
+
+    variant: {
+      solid: {
+        primary:
+          "bg-Primary text-white border border-Primary placeholder-white focus-visible:ring-Primary focus:outline-none",
+        secondary:
+          "bg-Secondary text-white border border-Secondary placeholder-white focus-visible:ring-Secondary focus:outline-none",
+        white:
+          "bg-white text-black border border-gray-300 placeholder-gray-500 focus-visible:ring-gray-400 focus:outline-none",
+        black:
+          "bg-black text-white border border-black placeholder-white focus-visible:ring-gray-600 focus:outline-none",
+      },
+
+      outline: {
+        primary:
+          "bg-transparent text-Primary border border-Primary placeholder-Primary focus-visible:ring-Primary focus:outline-none",
+        secondary:
+          "bg-transparent text-Secondary border border-Secondary placeholder-Secondary focus-visible:ring-Secondary focus:outline-none",
+        white:
+          "bg-transparent text-white border border-white placeholder-white focus-visible:ring-white focus:outline-none",
+        black:
+          "bg-transparent text-black border border-black placeholder-black focus-visible:ring-black focus:outline-none",
+      },
+
+      flat: {
+        primary: "bg-Primary/10 text-Primary border-none placeholder-Primary focus-visible:ring-0 focus:outline-none",
+        secondary:
+          "bg-Secondary/10 text-Secondary border-none placeholder-Secondary focus-visible:ring-0 focus:outline-none",
+        white:
+          "bg-white/10 text-white border-none placeholder-white focus-visible:ring-0 focus:outline-none",
+        black:
+          "bg-black/10 text-black border-none placeholder-black focus-visible:ring-0 focus:outline-none",
+      }
+    }
   }
 }
