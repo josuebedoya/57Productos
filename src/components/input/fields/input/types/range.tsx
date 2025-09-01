@@ -8,7 +8,7 @@ const Range: React.FC<InputProps> = ({className = '', ...props}) => {
 
   const {
     color = 'primary',
-    rounded = 'md',
+    rounded = 'full',
     variant = 'solid',
     min = 0,
     max = 100,
@@ -20,7 +20,7 @@ const Range: React.FC<InputProps> = ({className = '', ...props}) => {
   useEffect(() => {
     const checkboxStyles = gVar([
       'input.range.base',
-      `rounded.${rounded}`,
+      `input.range.rounded.${rounded}`,
       `input.range.variant.${variant}.${color}`,
     ]);
 
