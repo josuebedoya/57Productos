@@ -150,5 +150,81 @@ export const vars = {
           "bg-black/10 text-black border-none placeholder-black focus-visible:ring-0 focus:outline-none",
       }
     }
+  },
+
+  input: {
+    base: 'block w-full text-sm transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-1',
+
+    padding: {
+      sm: 'px-2 py-1',
+      md: 'px-3 py-2',
+      lg: 'px-4 py-3',
+      xl: 'px-5 py-4'
+    },
+
+    variant: {
+      solid: {
+        primary: 'bg-Primary text-white border border-Primary placeholder-white focus:ring-Primary',
+        secondary: 'bg-Secondary text-white border border-Secondary placeholder-white focus:ring-Secondary',
+        white: 'bg-white text-black border border-gray-300 placeholder-gray-500 focus:ring-gray-400',
+        black: 'bg-black text-white border border-black placeholder-white focus:ring-gray-600',
+      },
+
+      outline: {
+        primary: 'bg-transparent text-Primary border border-Primary placeholder-Primary focus:ring-Primary',
+        secondary: 'bg-transparent text-Secondary border border-Secondary placeholder-Secondary focus:ring-Secondary',
+        white: 'bg-transparent text-white border border-white placeholder-white focus:ring-white',
+        black: 'bg-transparent text-black border border-black placeholder-black focus:ring-black',
+      },
+
+      flat: {
+        primary: 'bg-Primary/10 text-Primary border border-transparent placeholder-Primary focus:ring-0',
+        secondary: 'bg-Secondary/10 text-Secondary border border-transparent placeholder-Secondary focus:ring-0',
+        white:
+          'bg-white/10 text-white border border-transparent placeholder-white focus:ring-0',
+        black: 'bg-black/10 text-black border border-transparent placeholder-black focus:ring-0',
+      }
+    },
+
+    checkbox: {
+      base: 'appearance-none !auto max-w-max cursor-pointer border',
+
+      padding: {
+        sm: 'p-2',
+        md: 'p-4',
+        lg: 'p-5',
+        xl: 'p-7'
+      },
+
+      variant: {
+        solid: {
+          primary: 'checked:bg-Primary border-Primary',
+          secondary: 'checked:bg-Secondary border-Secondary',
+          white: 'checked:bg-white border-white',
+          black: 'checked:bg-black border-black',
+
+          icon: {
+            primary: 'text-white',
+            secondary: 'text-white',
+            white: 'text-black',
+            black: 'text-white'
+          }
+        },
+
+        outline: {
+          primary: 'bg-transparent border-Primary checked:bg-transparent checked:border-2',
+          secondary: 'bg-transparent border-Secondary checked:bg-transparent checked:border-2',
+          white: 'bg-transparent border-white checked:bg-transparent checked:border-2',
+          black: 'bg-transparent border-black checked:bg-transparent checked:border-2',
+        },
+
+        flat: {
+          primary: 'bg-Primary/10 checked:bg-Primary/30 border-0 checked:border-0',
+          secondary: 'bg-Secondary/10 checked:bg-Secondary/30 border-0 checked:border-0',
+          white: 'bg-white/10 checked:bg-white/30 border-0 checked:border-0',
+          black: 'bg-black/10 checked:bg-black/30 border-0 checked:border-0'
+        }
+      }
+    }
   }
 }
