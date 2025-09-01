@@ -6,8 +6,9 @@ import {AngleRightIcon} from '@/assets/icons'
 const Select: React.FC<SelectProps> = (
   {
     options = [],
+    name = 'select',
     defaultValue = 0,
-    classes = '',
+    className,
     icon,
     onChange,
     ...rest
@@ -36,20 +37,20 @@ const Select: React.FC<SelectProps> = (
   return (
     <div className='relative flex justify-between items-center w-full h-auto'>
       <select
+        name={name}
         defaultValue={defaultValue}
-        className={`controller select-${rest.name} order-0 ${selectStyles} ${classes}`}
+        className={`controller select-${rest.name} order-0 ${selectStyles} ${className}`}
         onChange={onChange}
         onFocus={() => setOpen(true)}
         onBlur={() => setOpen(false)}
         {...rest}
       >
-        {options.map(({value, label, disabled, classes, ...rest}: OptionsProps, index: number) => (
+        {options.map(({value, label, disabled,  ...rest}: OptionsProps, index: number) => (
           <option
             id={index.toString()}
             key={index}
             value={value}
             disabled={disabled}
-            className={classes}
             {...rest}
           >
             {label ?? value}
