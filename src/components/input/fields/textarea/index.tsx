@@ -27,7 +27,7 @@ const TextArea: React.FC<TextAreaProps> = ({className, ...rest}) => {
 
   return (
     <textarea
-      className={`${textAreaStyles} ${className}`}
+      className={`textarea ${textAreaStyles} ${className}`}
       {...rest} />
   );
 };
