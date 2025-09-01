@@ -1,0 +1,160 @@
+@use '@/styles/variables' as *;
+
+// =========================================
+// BASE INPUT RANGE RESET
+// =========================================
+
+input[type='range'].range{
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  height: 1rem;
+}
+
+input[type='range'].range::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  border: none;
+  margin-top: -0.375rem;
+  background: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type='range'].range::-webkit-slider-runnable-track{
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: gray;
+}
+
+input[type='range'].range::-moz-range-thumb{
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type='range'].range::-moz-range-track{
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: gray;
+}
+
+// =========================================
+// VARIANTS - SOLID
+// =========================================
+
+input[type='range'].range-solid-primary::-webkit-slider-runnable-track{
+  background: $color-primary;
+}
+
+input[type='range'].range-solid-primary::-webkit-slider-thumb{
+  background: lighten($color-primary, 20%);
+}
+
+input[type='range'].range-solid-secondary::-webkit-slider-runnable-track{
+  background: $color-secondary;
+}
+
+input[type='range'].range-solid-secondary::-webkit-slider-thumb{
+  background: lighten($color-secondary, 20%);
+}
+
+input[type='range'].range-solid-white::-webkit-slider-runnable-track{
+  background: $color-white;
+}
+
+input[type='range'].range-solid-white::-webkit-slider-thumb{
+  background: darken($color-white, 20%);
+}
+
+input[type='range'].range-solid-black::-webkit-slider-runnable-track{
+  background: $color-black;
+}
+
+input[type='range'].range-solid-black::-webkit-slider-thumb{
+  background: lighten($color-black, 20%);
+}
+
+// =========================================
+// VARIANTS - OUTLINE
+// =========================================
+
+input[type='range'].range-outline-primary::-webkit-slider-runnable-track{
+  background: transparent;
+  border: 2px solid $color-primary;
+}
+
+input[type='range'].range-outline-primary::-webkit-slider-thumb{
+  background: $color-primary;
+}
+
+input[type='range'].range-outline-secondary::-webkit-slider-runnable-track{
+  background: transparent;
+  border: 2px solid $color-secondary;
+}
+
+input[type='range'].range-outline-secondary::-webkit-slider-thumb{
+  background: $color-secondary;
+}
+
+input[type='range'].range-outline-white::-webkit-slider-runnable-track{
+  background: transparent;
+  border: 2px solid $color-white;
+}
+
+input[type='range'].range-outline-white::-webkit-slider-thumb{
+  background: $color-white;
+}
+
+input[type='range'].range-outline-black::-webkit-slider-runnable-track{
+  background: transparent;
+  border: 2px solid $color-black;
+}
+
+input[type='range'].range-outline-black::-webkit-slider-thumb{
+  background: $color-black;
+}
+
+// =========================================
+// VARIANTS - FLAT
+// =========================================
+
+input[type='range'].range-flat-primary::-webkit-slider-runnable-track{
+  background: rgba($color-primary, 0.1);
+}
+
+input[type='range'].range-flat-primary::-webkit-slider-thumb{
+  background: rgba($color-primary, 0.8);
+}
+
+input[type='range'].range-flat-secondary::-webkit-slider-runnable-track{
+  background: rgba($color-secondary, 0.2);
+}
+
+input[type='range'].range-flat-secondary::-webkit-slider-thumb{
+  background: rgba($color-secondary, 0.8);
+}
+
+input[type='range'].range-flat-white::-webkit-slider-runnable-track{
+  background: rgba($color-white, 0.1);
+}
+
+input[type='range'].range-flat-white::-webkit-slider-thumb{
+  background: rgba($color-white, 0.8);
+}
+
+input[type='range'].range-flat-black::-webkit-slider-runnable-track{
+  background: rgba($color-black, 0.1);
+}
+
+input[type='range'].range-flat-black::-webkit-slider-thumb{
+  background: rgba($color-black, 0.8);
+}
