@@ -225,6 +225,45 @@ export const vars = {
           black: 'bg-black/10 checked:bg-black/30 border-0 checked:border-0'
         }
       }
+    },
+
+    range: {
+      base: ' w-full cursor-pointer focus:outline-none focus:ring-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none [&[variant=flat]]:ring-0',
+
+      size: {
+        sm: 'h-2',
+        md: 'h-3',
+        lg: 'h-4',
+        xl: 'h-5',
+      },
+
+      rounded: {
+        none: 'square',
+        full: 'full'
+      },
+
+      variant: {
+        solid: {
+          primary: 'range-solid-primary',
+          secondary: 'range-solid-secondary',
+          white: 'range-solid-white',
+          black: 'range-solid-black',
+        },
+
+        outline: {
+          primary: 'range-outline-primary',
+          secondary: 'range-outline-secondary',
+          white: 'range-outline-white',
+          black: 'range-outline-black',
+        },
+
+        flat: {
+          primary: 'range-flat-primary',
+          secondary: 'range-flat-secondary',
+          white: 'range-flat-white',
+          black: 'range-flat-black',
+        }
+      }
     }
   }
 }
