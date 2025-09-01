@@ -24,9 +24,6 @@ const TextArea: React.FC<TextAreaProps> = ({className, ...rest}) => {
 
     setTextAreaStyles(selectStyles);
   }, [rest]);
-  useEffect(() => {
-    console.info(textAreaStyles)
-  }, [textAreaStyles]);
 
   return (
     <textarea
