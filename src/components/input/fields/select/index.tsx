@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import type {OptionsProps, SelectProps} from './types.ts';
 import {gVar} from "@/utils/gVar.js";
-import {AngleRightIcon} from '@/assets/icons'
+import {AngleRightIcon} from '@/assets/icons.tsx'
 
 const Select: React.FC<SelectProps> = (
   {
@@ -39,13 +39,13 @@ const Select: React.FC<SelectProps> = (
       <select
         name={name}
         defaultValue={defaultValue}
-        className={`controller select-${rest.name} order-0 ${selectStyles} ${className}`}
+        className={`controller select-${name} order-0 ${selectStyles} ${className}`}
         onChange={onChange}
         onFocus={() => setOpen(true)}
         onBlur={() => setOpen(false)}
         {...rest}
       >
-        {options.map(({value, label, disabled,  ...rest}: OptionsProps, index: number) => (
+        {options.map(({value, label, disabled, ...rest}: OptionsProps, index: number) => (
           <option
             id={index.toString()}
             key={index}
