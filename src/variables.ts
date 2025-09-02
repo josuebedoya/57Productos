@@ -228,40 +228,33 @@ export const vars = {
     },
 
     range: {
-      base: ' w-full cursor-pointer focus:outline-none focus:ring-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none [&[variant=flat]]:ring-0',
-
-      size: {
-        sm: 'h-2',
-        md: 'h-3',
-        lg: 'h-4',
-        xl: 'h-5',
-      },
+      base: 'absolute appearance-none disabled:cursor-disabled pointer-events-none',
 
       rounded: {
         none: 'square',
-        full: 'full'
+        full: 'rounded-full'
       },
 
       variant: {
         solid: {
-          primary: 'range-solid-primary',
-          secondary: 'range-solid-secondary',
-          white: 'range-solid-white',
-          black: 'range-solid-black',
+          primary: 'bg-Primary',
+          secondary: 'bg-Secondary',
+          white: 'bg-white',
+          black: 'bg-black'
         },
 
         outline: {
-          primary: 'range-outline-primary',
-          secondary: 'range-outline-secondary',
-          white: 'range-outline-white',
-          black: 'range-outline-black',
+          primary: 'bg-transparent border border-Primary',
+          secondary: 'bg-transparent border border-Secondary',
+          white: 'bg-transparent border border-white',
+          black: 'bg-transparent border border-black',
         },
 
         flat: {
-          primary: 'range-flat-primary',
-          secondary: 'range-flat-secondary',
-          white: 'range-flat-white',
-          black: 'range-flat-black',
+          primary: 'bg-Primary h-0.5',
+          secondary: 'bg-Secondary h-0.5',
+          white: 'bg-white h-0.5',
+          black: 'bg-black h-0.5'
         }
       }
     }
