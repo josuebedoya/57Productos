@@ -4,42 +4,39 @@ import {gVar} from "@/utils/gVar.js";
 
 const Range: React.FC<InputProps> = ({className = '', ...props}) => {
 
-  const [lineActiveStyles, setLineActiveStyles] = useState('');
-  const [lineInactiveStyles, setLineInactiveStyles] = useState('');
-  const [pointStyles, setPointStyles] = useState('');
-  const [valueStyles, setValueStyles] = useState('');
-  const [positionPoint, setPositionPoint] = useState(0);
-
   const {
+    name = 'range',
     color = 'primary',
     colorInactiveRange = 'primary',
     colorPointRange = 'primary',
     rounded = 'full',
     variant = 'solid',
     sizeValueRange = 'md',
+    dualRange = false,
+    showValueInRange = false,
+    onChange2 = (e: any) => console.log(e.target.value2),
     min = 0,
     max = 100,
-    step = 5,
-    value = Math.floor((Number(props.max) || 0) / 2)
+    step = 5
   } = props || {};
+
+  const [lineActiveStyles, setLineActiveStyles] = useState('');
+  const [lineInactiveStyles, setLineInactiveStyles] = useState('');
+  const [pointStyles, setPointStyles] = useState('');
+  const [valueStyles, setValueStyles] = useState('');
+
+  const [positionPointMin, setPositionPointMin] = useState(0);
+  const [positionPointMax, setPositionPointMax] = useState(100);
+
+  const [rangeValue, setRangeValueMin] = useState(dualRange ? min : Math.floor((Number(min) + Number(max)) / 2));
+  const [rangeValue2, setRangeValueMax] = useState(dualRange ? max : 0);
 
   // Update style class
   useEffect(() => {
     const base = gVar(['input.range.base', `input.range.rounded.${rounded}`]);
-
-    const activeLine = gVar([
-      `input.range.variant.${variant}.${color}`,
-    ]);
-
-    const inactiveLine = gVar([
-      `input.range.variant.${variant}.${colorInactiveRange}`,
-      'opacity-50'
-    ]);
-
-    const point = gVar([
-      `input.range.variant.${variant}.${colorPointRange}`,
-    ]);
-
+    const activeLine = gVar(`input.range.variant.${variant}.${color}`);
+    const point = gVar(`input.range.variant.${variant}.${colorPointRange}`);
+    const inactiveLine = gVar(`input.range.variant.${variant}.${colorInactiveRange}`);
     const valueStyles = gVar([
       `text.size.${sizeValueRange}`,
       `text.color.${color}`
@@ -48,44 +45,144 @@ const Range: React.FC<InputProps> = ({className = '', ...props}) => {
     setLineActiveStyles([base, activeLine].join(' '));
     setLineInactiveStyles([base, inactiveLine].join(' '));
     setPointStyles([base, point].join(' '));
-
     setValueStyles(valueStyles);
-  }, [props]);
+  }, [rounded, color, variant, colorInactiveRange, colorPointRange, sizeValueRange]);
 
   // Update Position points
   useEffect(() => {
 
     const parts = 100 / Number(max);
-    const wB = parts * Number(value) || 0;
+    const wB = parts * Number(rangeValue) || 0;
+    const wB2 = parts * Number(rangeValue2) || 0;
 
-    setPositionPoint(wB)
+    setPositionPointMin(wB)
+    setPositionPointMax(wB2)
 
-  }, [value]);
+  }, [rangeValue2, rangeValue, dualRange, max, min]);
+
+  const handleValueMin = (e: any) => {
+    const maximum = Number(rangeValue2);
+    const newValue = e.target.value;
+    const current = Number(rangeValue);
+
+    const value = newValue < maximum ? newValue : current;
+    setRangeValueMin(value);
+  }
+
+  const handleValueMax = (e: any) => {
+    const minium = Number(rangeValue);
+    const newValue = e.target.value;
+    const current = Number(rangeValue2);
+
+    const value = newValue > minium ? newValue : current;
+    setRangeValueMax(value);
+  }
 
   return (
     <div className='range-input flex flex-col justify-center items-center w-full'>
-      <div className='relative w-full flex justify-start items-center'>
-        <input
-          name={props.name ?? 'range'}
-          type='range'
-          className={`range ${className} w-full h-auto bg-transparent appearance-none`}
-          min={min}
-          max={max}
-          step={step}
-          value={value}
-          {...props}
-        />
-        <div
-          className={`${lineActiveStyles} h-2 z-10 active-line border-r-0`}
-          style={{width: `${positionPoint}%`}}
-        />
-        <div className={`${lineInactiveStyles} w-full h-2 z-0 inactive-line border-l-0`}/>
-        <div
-          className={`${pointStyles} w-5 h-5 -translate-x-2.5 z-50 point border-2 min-h-5`}
-          style={{left: `${positionPoint}%`}}
-        />
+      <div className='controller relative w-full flex items-center'>
+
+        <div className='lines'>
+          {/* Inactive Line */}
+          <div className={`${lineInactiveStyles} w-full h-2 z-0 rounded opacity-50 -top-1`} aria-label='inactive-line'/>
+
+          {/* Active Line */}
+          {dualRange ? (
+            <div
+              className={`${lineActiveStyles} h-2 z-10 absolute rounded -top-1`}
+              aria-label='active-line'
+              style={{
+                left: `${Math.min(positionPointMin, positionPointMax)}%`,
+                width: `${Math.abs(positionPointMin - positionPointMax)}%`,
+              }}
+            />
+          ) : (
+            <div
+              className={`${lineActiveStyles} h-2 z-10 absolute rounded`}
+              aria-label='active-line'
+              style={{
+                width: `${positionPointMin}%`,
+              }}
+            />
+          )}
+        </div>
+        <div className="inputs">
+          {/* First input */}
+          <input
+            {...props}
+
+            id='min'
+            aria-label='input-minium'
+            name={name}
+            type='range'
+            className={`range ${className} w-full h-0 bg-transparent appearance-none absolute inset-0 z-20 pointer-events-none`}
+            min={min}
+            max={max}
+            step={step}
+            value={rangeValue}
+            onChange={(e: any) => handleValueMin(e)}
+          />
+
+          {/* Second input (WHEN IS DUAL RANGE) */}
+          {dualRange && (
+            <input
+              {...props}
+
+              id='max'
+              aria-label='input-maximum'
+              name={`${name}-2`}
+              type='range'
+              className={`range ${className} w-full h-0 bg-transparent appearance-none absolute inset-0 z-20 pointer-events-none`}
+              min={min}
+              max={max}
+              step={step}
+              value={rangeValue2}
+              onChange={(e: any) => {
+                handleValueMax(e)
+                onChange2(e);
+              }}
+
+            />
+          )}
+        </div>
+
+        <div className="points">
+          {/* First Point */}
+          <div
+            className={`${pointStyles} w-5 h-5 z-40 point border-2 absolute top-1/2 -translate-y-1/2 -translate-x-1/2`}
+            aria-label='point-minium'
+            style={{left: `${positionPointMin}%`}}
+          />
+
+          {/* Second Point (WHEN IS DUAL RANGE) */}
+          {dualRange && (
+            <div
+              className={`${pointStyles} w-5 h-5 z-40 point border-2 absolute top-1/2 -translate-y-1/2 -translate-x-1/2`}
+              aria-label='point-maxium'
+              style={{left: `${positionPointMax}%`}}
+            />
+          )}
+        </div>
       </div>
-      <small className={`font-semibold mt-2 ${valueStyles}`}>{props.name} {value}</small>
+
+      {/* Values */}
+      {showValueInRange && (
+        <div className='values flex gap-4 justify-center items-center mt-5'>
+          <div className='min'>
+            <small className={`value font-semibold ${valueStyles}`}>{rangeValue}</small>
+            <span className='name'>{props.nameValueInRange}</span>
+          </div>
+          {dualRange && (
+            <>
+              <span className='separator'>-</span>
+              <div className='max'>
+                <small className={`value font-semibold ${valueStyles}`}>{rangeValue2}</small>
+                <span className='name'>{props.nameValueInRange}</span>
+              </div>
+            </>
+          )}
+        </div>
+      )}
     </div>
   );
 };
