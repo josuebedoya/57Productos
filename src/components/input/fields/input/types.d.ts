@@ -15,4 +15,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   sizeValueRange?: string;
   colorInactiveRange?: string;
   colorPointRange?: string;
+  withLabel?: boolean;
+  label?: string;
+  labelClassName?: string;
 }
