@@ -2,16 +2,21 @@ import React, {useEffect, useState} from 'react';
 import type {TextAreaProps} from "./types.ts";
 import {gVar} from "@/utils/gVar.js";
 
-const TextArea: React.FC<TextAreaProps> = ({className, ...rest}) => {
-
-  const [textAreaStyles, setTextAreaStyles] = useState('');
-
-  const {
+const TextArea: React.FC<TextAreaProps> = (
+  {
+    className = '',
+    name,
+    label,
+    withLabel = false,
+    labelClassName = '',
     color = 'primary',
     rounded = 'md',
     variant = 'solid',
     padding = 'md',
-  } = rest || {};
+    ...rest
+  }) => {
+
+  const [textAreaStyles, setTextAreaStyles] = useState('');
 
   // Update style class
   useEffect(() => {
@@ -26,9 +31,19 @@ const TextArea: React.FC<TextAreaProps> = ({className, ...rest}) => {
   }, [rest]);
 
   return (
-    <textarea
-      className={`textarea ${textAreaStyles} ${className}`}
-      {...rest} />
+    <>
+      {(label && withLabel) && (
+        <label className={`label ${labelClassName}`} htmlFor={name}>
+          {label}
+        </label>
+      )}
+      <textarea
+        className={`textarea ${textAreaStyles} ${className}`}
+        aria-label={`${name ?? ''}-textarea`}
+        name={name}
+        {...rest} />
+    </>
+
   );
 };
 
