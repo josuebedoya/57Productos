@@ -1,0 +1,13 @@
+{
+  "welcome": "Bienvenido",
+  "login": {
+    "title": "Iniciar sesión",
+    "button": "Ingresar"
+  },
+  "form": {
+    "button": {
+      "send": "Enviar",
+      "cancel": "Cancelar"
+    }
+  }
+}
