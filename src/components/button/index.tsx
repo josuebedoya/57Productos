@@ -8,21 +8,19 @@ const Button: React.FC<ButtonProps> = (
     icon,
     iconRight = false,
     noStyles = false,
-    classes = '',
-    ...rest
-  }
-) => {
-
-  const [btnStyle, setBtnStyle] = useState('');
-  const {
+    className = '',
     size = 'md',
     padding = 'md',
     color = 'primary',
     colorHover = 'secondary',
     rounded = 'md',
     variant = 'solid',
-    variantHover = rest?.variant || 'solid',
-  } = rest || {};
+    variantHover = 'solid',
+    ...props
+  }
+) => {
+
+  const [btnStyle, setBtnStyle] = useState('');
 
   useEffect(() => {
     const btnStyle = gVar([
@@ -33,14 +31,13 @@ const Button: React.FC<ButtonProps> = (
       `button.variant.${variantHover}.hover.${colorHover}`,
       `rounded.${rounded}`
     ]);
-
     setBtnStyle(btnStyle);
-  }, [rest])
+  }, [size, padding, variant, variantHover, color, colorHover, rounded])
 
   return (
     <button
-      className={`btn ${!noStyles && `btn-${variant} ${btnStyle}`} ${classes}`}
-      {...rest}
+      className={`btn ${!noStyles && `btn-${variant} ${btnStyle}`} ${className}`}
+      {...props}
     >
       {!iconRight && icon}
       {children}

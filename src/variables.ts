@@ -14,6 +14,13 @@ export const vars = {
       md: 'text-base leading-6',
       lg: 'text-lg leading-7',
       xl: 'text-xl leading-8',
+    },
+
+    position: {
+      left: 'text-left',
+      center: 'text-center',
+      right: 'text-right',
+      justify: 'text-justify'
     }
   },
 

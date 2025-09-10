@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Input } from '@/components/input.jsx';
 import { Path_page } from '@/routes';
-import  Button  from '@/components/button/index.tsx';
+import Button from '@/components/button/index.tsx';
 import {
   CloseIcon,
   FacebookIcon,
@@ -122,9 +122,16 @@ const Footer = () => {
                 onChange={ handleComments } value={ comment } maxLength={ 1000 }
                 classInput={ ` ${ sendEmpty ? 'empty' : '' } scrollbar scrollbar-track-transparent py-2` }/>
          <Button
-          classBtn=' ml-2.5 px-4 tl:px-7 py-2 text-stone-200 border border-transparent hover:text-white hover:border-stone-200 rounded-full duration-200 text-sm tl:text-base'
-          btnText icon={ <PaperPlane/> } iconRight
-          onClick={ handleShowForm }>
+          variant='flat'
+          color='white'
+          rounded='full'
+          variantHover='outline'
+          colorHover='white'
+          size='md'
+          icon={ <PaperPlane/> }
+          iconRight
+          onClick={ handleShowForm }
+         >
            Enviar...
          </Button>
        </div>
@@ -144,19 +151,23 @@ const Footer = () => {
          </p>
        </div>
        <div className=' social flex flex-row justify-around items-center sm:gap-0.5'>
-         <a href='https://www.facebook.com' className=' facebook p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#090C9B] rounded-full duration-200'
+         <a href='https://www.facebook.com'
+            className=' facebook p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#090C9B] rounded-full duration-200'
             target='_blank'>
            <FacebookIcon classIcons='text-blue-700 cursor-pointer w-5 h-5 sm:w-6 sm:h-6'/>
          </a>
-         <a href='https://youtube.com' className='youtube p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#BF0603] rounded-full duration-200'
+         <a href='https://youtube.com'
+            className='youtube p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#BF0603] rounded-full duration-200'
             target='_blank'>
            <YoutubeIcon classIcons='text-red-600 cursor-pointer w-5 h-5 sm:w-6 sm:h-6'/>
          </a>
-         <a href='https://www.instagram.com' className='instagram p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#FDB833] rounded-full duration-200'
+         <a href='https://www.instagram.com'
+            className='instagram p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#FDB833] rounded-full duration-200'
             target='_blank'>
            <InstagramColorIcon classIcons='cursor-pointer w-5 h-5 sm:w-6 sm:h-6 rounded-full'/>
          </a>
-         <a href='https://www.tiktok.com' className='tiktok p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#FFFFFF] rounded-full duration-200'
+         <a href='https://www.tiktok.com'
+            className='tiktok p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#FFFFFF] rounded-full duration-200'
             target='_blank'>
            <TikTokIcon classIcons='text-stone-200 cursor-pointer w-5 h-5 sm:w-6 sm:h-6'/>
          </a>
@@ -175,7 +186,8 @@ const Footer = () => {
          <Menu items={ itemsMenus[ 2 ] } classLink={ artMenus }/>
        </div>
      </div>
-     <Copyright copyrightClass='family-oswald tracking-wider tl:text-15 text-stone-200 text-end px-3 py-4 border-t border-t-stone-50 font-extralight'/>
+     <Copyright
+      copyrightClass='family-oswald tracking-wider tl:text-15 text-stone-200 text-end px-3 py-4 border-t border-t-stone-50 font-extralight'/>
    </footer>
   );
 };
