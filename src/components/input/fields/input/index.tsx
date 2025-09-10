@@ -1,8 +1,8 @@
 import React from 'react';
 import type {InputProps} from "./types.d.ts";
-import Basic from "./types/basic.js";
-import CheckBox from "./types/checkbox.ts";
-import Range from "./types/range.ts";
+import Basic from "./types/basic.tsx";
+import CheckBox from "./types/checkbox.tsx";
+import Range from "./types/range.tsx";
 
 const Input: React.FC<InputProps> = ({type, ...props}) => {
   if (type === 'range') <Range {...props}/>;

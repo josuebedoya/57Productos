@@ -30,11 +30,19 @@ const Basic: React.FC<InputProps> = (
   }, [props]);
 
   return (
-    <input type={type}
-           className={`checkbox ${inputStyles} ${className}`}
-           {...props}
-    />
-  );
+    <div className='input-container w-full'>
+      {(label && withLabel) && (
+        <label className={`label ${labelClassName}`} htmlFor={props.name}>
+          {label}
+        </label>
+      )}
+      <input type={type}
+             className={`checkbox ${inputStyles} ${className}`}
+             {...props}
+      />
+    </div>
+  )
+    ;
 };
 
 export default Basic;

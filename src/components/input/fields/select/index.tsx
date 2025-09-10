@@ -35,7 +35,7 @@ const Select: React.FC<SelectProps> = (
   }, [rest]);
 
   return (
-    <>
+    <div className='select-container w-full'>
       {(label && withLabel) && (
         <label className={`label ${labelClassName}`} htmlFor={name}>
           {label}
@@ -80,7 +80,7 @@ const Select: React.FC<SelectProps> = (
       </span>
         }
       </div>
-    </>
+    </div>
 
   );
 };

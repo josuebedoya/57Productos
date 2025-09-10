@@ -82,7 +82,7 @@ const Range: React.FC<InputProps> = ({className = '', ...props}) => {
   }
 
   return (
-    <>
+    <div className='range-container w-full'>
       {(label && withLabel) && (
         <label className={`label ${labelClassName}`} htmlFor={name}>
           {label}
@@ -194,7 +194,7 @@ const Range: React.FC<InputProps> = ({className = '', ...props}) => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

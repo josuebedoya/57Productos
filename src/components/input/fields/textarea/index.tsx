@@ -31,7 +31,7 @@ const TextArea: React.FC<TextAreaProps> = (
   }, [rest]);
 
   return (
-    <>
+    <div className='textarea-container w-full'>
       {(label && withLabel) && (
         <label className={`label ${labelClassName}`} htmlFor={name}>
           {label}
@@ -42,7 +42,7 @@ const TextArea: React.FC<TextAreaProps> = (
         aria-label={`${name ?? ''}-textarea`}
         name={name}
         {...rest} />
-    </>
+    </div>
 
   );
 };
