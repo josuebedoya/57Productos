@@ -11,4 +11,4 @@ const Input: React.FC<InputProps> = ({type, ...props}) => {
   return <Basic type={type} {...props}/>;
 };
 
-export {Input};
+export default Input;
