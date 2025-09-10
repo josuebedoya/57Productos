@@ -14,17 +14,14 @@ const Select: React.FC<SelectProps> = (
     className,
     icon,
     onChange,
+    color = 'primary',
+    rounded = 'md',
+    variant = 'solid',
     ...rest
   }) => {
 
   const [selectStyles, setSelectStyles] = useState('');
   const [open, setOpen] = useState(false);
-
-  const {
-    color = 'primary',
-    rounded = 'md',
-    variant = 'solid',
-  } = rest || {};
 
   // Update style class
   useEffect(() => {
