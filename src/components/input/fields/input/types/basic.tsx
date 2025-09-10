@@ -2,15 +2,20 @@ import React, {useEffect, useState} from 'react';
 import type {InputProps} from "@/components/input/fields/input/types.js";
 import {gVar} from "@/utils/gVar.js";
 
-const Basic: React.FC<InputProps> = ({type = 'text', className, ...props}) => {
-  const [inputStyles, setInputStyles] = useState('');
-
-  const {
+const Basic: React.FC<InputProps> = (
+  {
+    type = 'text',
+    label,
+    withLabel,
+    labelClassName = '',
+    className,
     color = 'primary',
     rounded = 'md',
     variant = 'solid',
     padding = 'md',
-  } = props || {};
+    ...props
+  }) => {
+  const [inputStyles, setInputStyles] = useState('');
 
   // Update style class
   useEffect(() => {

@@ -6,19 +6,19 @@ import {MarkIcon} from '@/assets/icons.tsx'
 const CheckBox: React.FC<InputProps> = (
   {
     className = '',
+    label,
+    withLabel,
+    labelClassName = '',
+    color = 'primary',
+    rounded = 'md',
+    variant = 'solid',
+    padding = 'md',
     ...props
   }) => {
 
   const [checkboxStyles, setCheckboxStyles] = useState('');
   const [checked, setChecked] = useState(false);
   const [iconColor, setIconColor] = useState('text-Primary');
-
-  const {
-    color = 'primary',
-    rounded = 'md',
-    variant = 'solid',
-    padding = 'md',
-  } = props || {};
 
   // Update style class
   useEffect(() => {
