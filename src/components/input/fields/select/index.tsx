@@ -11,7 +11,7 @@ const Select: React.FC<SelectProps> = (
     labelClassName = '',
     withLabel,
     defaultValue = 0,
-    className,
+    className = '',
     icon,
     onChange,
     color = 'primary',
@@ -51,6 +51,14 @@ const Select: React.FC<SelectProps> = (
           onBlur={() => setOpen(false)}
           {...rest}
         >
+          <option
+            id={name}
+            value={name}
+            disabled={false}
+            {...rest}
+          >
+            {name}
+          </option>
           {options.map(({value, label, disabled, ...rest}: OptionsProps, index: number) => (
             <option
               id={index.toString()}
@@ -65,7 +73,7 @@ const Select: React.FC<SelectProps> = (
         </select>
         {
           !rest?.multiple && <span
-          className={`right-2 order-1 absolute ${open ? 'rotate-90' : 'rotate-0'} !w-auto ${selectStyles}`}>
+          className={`right-2 order-1 absolute ${open ? 'rotate-90' : 'rotate-0'} !w-auto ${selectStyles} w-auto max-w-max`}>
         {
           icon ? icon : <AngleRightIcon/>
         }
