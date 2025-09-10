@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
-import { Button } from '@/components/button/index.tsx';
+import  Button from '@/components/button/index.tsx';
 import { WarningModal } from "@/components/warningModal.jsx";
 import { Pagination } from "@/components/pagination.jsx";
 

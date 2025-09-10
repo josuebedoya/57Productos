@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { useDatabase } from "@/hooks/useDatabase.jsx";
 import { Path_page } from "@/routes.jsx";
 import { Slug } from "@/utils/handleText.js";
-import { Button } from "@/components/button/index.tsx";
+import  Button from "@/components/button/index.tsx";
 import { ArrowRightIcon } from '@/assets/icons.jsx';
 import { WarningModal } from '@/components/warningModal.jsx';
 
