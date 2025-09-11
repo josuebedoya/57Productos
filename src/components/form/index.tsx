@@ -11,6 +11,7 @@ const Form: React.FC<FormProps> = (
   {
     fields,
     action,
+    withButton,
     buttonProps = {
       type: 'submit',
       variant: 'solid',
@@ -18,6 +19,7 @@ const Form: React.FC<FormProps> = (
       size: 'lg'
     },
     buttonPosition = 'right',
+    children,
     ...props
   }) => {
 
@@ -30,28 +32,32 @@ const Form: React.FC<FormProps> = (
 
   return (
     <form onSubmit={handleSubmit} name={props.name || "form"} {...props}>
-      <div className='p-4'>
-        <div className="fields">
-          {fields.length > 0 && Object.entries(fields).map(([key, field]): any => {
-              const type = field?.type || 'text';
-              const className = `my-2 ${field?.className || ''}`;
-              switch (type) {
-                case 'select':
-                  return <Select key={key} {...field} className={className}/>;
-                case 'textarea':
-                  return <TextArea key={key} {...field} className={className}/>;
-                default:
-                  return <Input key={key} {...field} className={className}/>;
+      {children || (
+        <div className='p-4'>
+          <div className="fields">
+            {fields.length > 0 && Object.entries(fields || []).map(([key, field]): any => {
+                const type = field?.type || 'text';
+                const className = `my-2 ${field?.className || ''}`;
+                switch (type) {
+                  case 'select':
+                    return <Select key={key} {...field} className={className}/>;
+                  case 'textarea':
+                    return <TextArea key={key} {...field} className={className}/>;
+                  default:
+                    return <Input key={key} {...field} className={className}/>;
+                }
               }
-            }
-          )}
+            )}
+          </div>
+          {withButton && (
+              <div className={`btn ${gVar(`text.position.${buttonPosition}`)} mt-4`}>
+                <Button>
+                  {buttonProps?.children || t('form.button.send')}
+                </Button>
+              </div>
+            )}
         </div>
-        <div className={`btn ${gVar(`text.position.${buttonPosition}`)} mt-4`}>
-          <Button>
-            {buttonProps?.children || t('form.button.send')}
-          </Button>
-        </div>
-      </div>
+      )}
     </form>
   );
 };

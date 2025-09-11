@@ -9,9 +9,21 @@ type FieldProps =
   | ({ type: "select" } & SelectProps)
   | ({ type: "textarea" } & TextAreaProps);
 
-export interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
+type BaseProps = FormHTMLAttributes<HTMLFormElement> & {
   action: () => void;
-  fields: Record<string, FieldProps>;
+  withButton?: boolean;
   buttonProps?: Record<string, ButtonProps>;
   buttonPosition?: 'left' | 'center' | 'right';
 }
+
+type WithChildren = BaseProps & {
+  children: React.ReactNode;
+  fields?: never;
+};
+
+type WithFields = BaseProps & {
+  children?: never;
+  fields: Record<string, FieldProps>;
+};
+
+export type FormProps = WithChildren | WithFields;
