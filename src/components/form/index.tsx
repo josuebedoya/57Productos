@@ -35,7 +35,7 @@ const Form: React.FC<FormProps> = (
       {children || (
         <div className='p-4'>
           <div className="fields">
-            {fields.length > 0 && Object.entries(fields || []).map(([key, field]): any => {
+            {(fields && fields.length > 0) && Object.entries(fields || []).map(([key, field]): any => {
                 const type = field?.type || 'text';
                 const className = `my-2 ${field?.className || ''}`;
                 switch (type) {
@@ -50,12 +50,12 @@ const Form: React.FC<FormProps> = (
             )}
           </div>
           {withButton && (
-              <div className={`btn ${gVar(`text.position.${buttonPosition}`)} mt-4`}>
-                <Button>
-                  {buttonProps?.children || t('form.button.send')}
-                </Button>
-              </div>
-            )}
+            <div className={`btn ${gVar(`text.position.${buttonPosition}`)} mt-4`}>
+              <Button>
+                {buttonProps?.children || t('form.button.send')}
+              </Button>
+            </div>
+          )}
         </div>
       )}
     </form>
