@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Form } from "@/components/form.jsx";
+import  Form  from "@/components/form/index.tsx";
 import { Input } from "@/components/input.jsx";
 import { CloseIcon, MarkIcon, PencilIcon } from "@/assets/icons.jsx";
 import { Tooltip } from "@/components/tooltip.jsx";
