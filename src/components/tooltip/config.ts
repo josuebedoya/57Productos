@@ -11,7 +11,7 @@ const getDirection = (position: string = 'center', spaceX: number, spaceY: numbe
     'corner-4': `group-hover/tooltip:translate-y-${spaceY} group-hover/tooltip:-translate-x-${spaceX}`,
   };
 
-  return directionMap[position] ?? directionMap[center];
+  return directionMap[position] ?? directionMap['center'];
 }
 
 export default getDirection;
