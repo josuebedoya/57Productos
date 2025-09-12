@@ -31,6 +31,18 @@ export const vars = {
     lg: 'rounded-lg',
     full: 'rounded-full',
   },
+  delay: {
+    none: 'duration-0',
+    50: 'duration-50',
+    75: 'duration-75',
+    100: 'duration-100',
+    150: 'duration-150',
+    200: 'duration-200',
+    300: 'duration-300',
+    500: 'duration-500',
+    700: 'duration-700',
+    1000: 'duration-1000',
+  },
 
   button: {
     base: 'inline-flex items-center justify-center transition focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer',
@@ -263,6 +275,52 @@ export const vars = {
           white: 'bg-white h-0.5',
           black: 'bg-black h-0.5'
         }
+      }
+    }
+  },
+
+  tooltip: {
+    base: 'absolute rounded-md opacity-0 group-hover/tooltip:opacity-100 pointer-events-none py-1 px-3 translate-0 z-modal block transition-all',
+    baseArrow: ' absolute text-2xl z-10 pointer-events-none cursor-default',
+    variant: {
+      solid: {
+        primary: 'bg-Primary text-white border border-Primary',
+        secondary: 'bg-Secondary text-white border border-Secondary',
+        white: 'bg-white text-black border border-gray-400',
+        black: 'bg-black text-white border border-black',
+      },
+
+      outline: {
+        primary: 'bg-transparent text-Primary border border-Primary',
+        secondary: 'bg-transparent text-Secondary border border-Secondary',
+        white: 'bg-transparent text-white border border-white',
+        black: 'bg-transparent text-black border border-black',
+      }
+    },
+    position: {
+      arrow: {
+        base: 'absolute text-2xl z-10 pointer-events-none cursor-default',
+        default: '-bottom-4 rotate-90',
+        right: '-left-4 -rotate-180',
+        left: '-right-4',
+        top: '-bottom-4 rotate-90',
+        bottom: '-top-4 -rotate-90',
+        'corner-1': '-right-2.5 -bottom-2.5 rotate-45',
+        'corner-2': '-left-2.5 -bottom-2.5 -rotate-[225deg]',
+        'corner-3': '-left-2.5 -top-2.5 -rotate-[135deg]',
+        'corner-4': '-right-2.5 -top-2.5 -rotate-45',
+        center: 'hidden'
+      },
+      body: {
+        left: 'right-1/2',
+        right: 'left-1/2',
+        top: 'bottom-1/2',
+        bottom: 'top-1/2',
+        center: 'inset-auto',
+        'corner-1': 'bottom-1/2 right-1/2',
+        'corner-2': 'bottom-1/2 left-1/2',
+        'corner-3': 'top-1/2 left-1/2 ',
+        'corner-4': 'top-1/2 right-1/2',
       }
     }
   }
