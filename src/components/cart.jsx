@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect, } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AddIcon, CartDown, CartIcon, RemoveIcon, TicketMoney, TrashIcon, TrashOpenIcon } from '@/assets/icons';
-import  Button  from './button/index.tsx';
+import Button from './button/index.tsx';
 import { Path_page } from '@/routes.jsx';
 import { Slug } from "@/utils/handleText.js";
 import { useCart } from '@/context/cart.jsx';
 import { Media } from "@/components/media.jsx";
-import { Tooltip } from "@/components/tooltip.jsx";
+import Tooltip from "@/components/tooltip/index.tsx";
 
 const Cart = ( { close } ) => {
   const navigate = useNavigate();
@@ -70,7 +70,7 @@ const Cart = ( { close } ) => {
   }; // Navigation to payments page
 
   return (
-   <div id='CartDropdown' onClick={ () =>   setOpenModal( !openModal ) }>
+   <div id='CartDropdown' onClick={ () => setOpenModal( !openModal ) }>
      <div ref={ modalRef }
           className='cart flex items-center relative bg-Primary hover:bg-transparent rounded-full border border-Primary hover:border hover:border-Secondary d duration-150 group/cart cursor-pointer z-[100]'
           role='show-cart'>
@@ -87,7 +87,7 @@ const Cart = ( { close } ) => {
          openModal ? (
           <div
            className={ `${ openModal ? 'animate-fade-in' : 'animate-fade-out' } cursor-auto cart-products absolute px-6 rounded-lg shadow-custom w-64 -left-40 top-10 bg-white min-h-20 max-h-[373px] ${ totalAmountProducts && ( 'overflow-y-scroll scrollbar-thin scrollbar-thumb-scrollbar scrollbar-track-transparent' ) }` }
-           onClick={ ( e ) => e.stopPropagation() } role='modal' aria-modal={openModal} aria-hidden={!openModal}>
+           onClick={ ( e ) => e.stopPropagation() } role='modal' aria-modal={ openModal } aria-hidden={ !openModal }>
             { totalAmountProducts > 0 ? (
              <>
                <div
@@ -101,7 +101,8 @@ const Cart = ( { close } ) => {
                     <div key={ index }
                          className='item-product flex flex-wrap  mb-3 pb-3 border-b border-b-gray-200 last:mb-0 last:pb-2'>
                       <div className='image w-2/6'>
-                        <Media src={item.img} alt={item.img + index} classFile='w-full h-16 rounded-lg object-contain'></Media>
+                        <Media src={ item.img } alt={ item.img + index }
+                               classFile='w-full h-16 rounded-lg object-contain'></Media>
                       </div>
                       <div className='information w-4/6 group/info pl-2'>
                         <Link to={ 'tienda/' + Slug( item.title ) } target='_self'>
@@ -128,12 +129,16 @@ const Cart = ( { close } ) => {
                           <Button size='sm' classes='family-oswald pr-5' variant='flat'>
                             Comprar
                           </Button>
-                          <Tooltip content='Sacar Producto del carrito' position='left' contentClass='text-sm text-red-500 whitespace-nowrap font-medium'
-                                   tooltipClass='shadow-md'>
-                          <i className='flex justify-center items-center'
-                             onClick={ () => removeItem( item.id ) }>
-                            <CartDown classIcons='remove-item text-red-600 cursor-pointer hover:scale-110'/>
-                          </i>
+                          <Tooltip
+                           content='Sacar Producto del carrito'
+                           position='left'
+                           contentClass='text-sm text-red-500 whitespace-nowrap font-medium'
+                           className='shadow-md'
+                          >
+                            <i className='flex justify-center items-center'
+                               onClick={ () => removeItem( item.id ) }>
+                              <CartDown classIcons='remove-item text-red-600 cursor-pointer hover:scale-110'/>
+                            </i>
                           </Tooltip>
                         </div>
                       </div>
@@ -146,25 +151,26 @@ const Cart = ( { close } ) => {
                   size='sm'
                   padding='md'
                   classes='tracking-wider' iconRight icon={ <TicketMoney classIcons='text-lg'/> }
-                        onClick={ () => {
-                           goToPayments();
-                           setOpenModal( false )
-                         } }>
+                  onClick={ () => {
+                    goToPayments();
+                    setOpenModal( false )
+                  } }>
                    Comprar Todo
                  </Button>
-                 <Tooltip content='Eliminar todo del carrio' position='left' contentClass='text-sm text-red-500 whitespace-nowrap font-medium'
-                                tooltipClass='shadow-md'>
-                     <i className='flex justify-center items-center hover:animate-shaking'
-                        onMouseOver={ () => setIconDelete( true ) }
-                        onMouseLeave={ () => setIconDelete( false ) }
-                        onClick={ () => removeAll() }
-                     >
-                       {
-                         iconDelete ?
-                          <TrashOpenIcon classIcons='remove-item text-red-600 cursor-pointer hover:scale-110'/>
-                          : <TrashIcon classIcons='remove-item text-red-600 cursor-pointer hover:scale-110 '/>
-                       }
-                     </i>
+                 <Tooltip content='Eliminar todo del carrio' position='left'
+                          contentClass='text-sm text-red-500 whitespace-nowrap font-medium'
+                          tooltipClass='shadow-md'>
+                   <i className='flex justify-center items-center hover:animate-shaking'
+                      onMouseOver={ () => setIconDelete( true ) }
+                      onMouseLeave={ () => setIconDelete( false ) }
+                      onClick={ () => removeAll() }
+                   >
+                     {
+                       iconDelete ?
+                        <TrashOpenIcon classIcons='remove-item text-red-600 cursor-pointer hover:scale-110'/>
+                        : <TrashIcon classIcons='remove-item text-red-600 cursor-pointer hover:scale-110 '/>
+                     }
+                   </i>
                  </Tooltip>
                </div>
              </>

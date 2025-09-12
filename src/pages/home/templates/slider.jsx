@@ -6,7 +6,7 @@ import japan from '/assets/images/flags/japan.png'
 import brazil from '/assets/images/flags/brazil.png'
 import canada from '/assets/images/flags/canada.png'
 import { Media } from "@/components/media.jsx";
-import { Tooltip } from "@/components/tooltip.jsx";
+import  Tooltip  from "@/components/tooltip/index.tsx";
 
 const Slider = ( ) => {
 
