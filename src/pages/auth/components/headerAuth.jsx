@@ -1,4 +1,4 @@
-import { Tooltip } from "@/components/tooltip.jsx";
+import Tooltip from "@/components/tooltip/index.tsx";
 import { ExitArrowIcon, SettingIcon } from "@/assets/icons.jsx";
 import { Media } from "@/components/media.jsx";
 import { Money } from "@/pages/auth/components/money.jsx";
@@ -47,18 +47,18 @@ const HeaderAuth = () => {
              <div className='logout mr-4 flex flex-col gap-2'>
                <Tooltip content='Cerrar sesión'
                         position='right'
-                        delayShow={ 100 }
-                        spaceX={ 8 }
+                        delayShow='500'
+                        spaceX={ 4 }
                         contentClass='text-nowrap text-sm family-oswald'
-                        dark>
+               >
                  <ExitArrowIcon classIcons='cursor-pointer text-xl rotate-180' onClick={ logout }/>
                </Tooltip>
                <Tooltip content='Ajustes'
                         position='right'
-                        delayShow={ 100 }
-                        spaceX={ 8 }
+                        delayShow='500'
+                        spaceX={ 4 }
                         contentClass='text-nowrap text-sm family-oswald'
-                        dark>
+               >
                  <SettingIcon classIcons='cursor-pointer text-xl  hover:animate-spin hover:text-Secondary '
                               onClick={ () => navigate( path.AUTH.EDIT_INFO ) }/>
                </Tooltip>
