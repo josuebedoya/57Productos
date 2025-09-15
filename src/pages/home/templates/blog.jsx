@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { Path_page } from '@/routes.jsx';
 
 import { TextAnimatedWrite } from '@/components/textAnimatedWrite.jsx'
-import { Grafic } from '@/components/grafic.jsx'
+import { Grafic } from '@/pages/home/components/grafic.jsx'
 import Button from '@/components/button/index.tsx'
 import { AngleRightIcon } from '@/assets/icons.jsx'
 
