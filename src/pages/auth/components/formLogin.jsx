@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {Form} from '@/components/form.jsx';
+import Form from "@/components/form/index.tsx";
 
 const FormLogin = ( { actionForm } ) => {
 
@@ -40,7 +40,7 @@ const FormLogin = ( { actionForm } ) => {
   return (
    <>
      <section id='TemplateFormLogin'>
-       <Form action={ actionForm } inputs={ inputs } nameForm='FormLogin'/>
+       <Form action={ actionForm } fields={ inputs } name='FormLogin'/>
      </section>
    </>
   );
