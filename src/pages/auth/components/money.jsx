@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useFormatMoney } from "@/context/formatMoney.jsx";
 import { AlertIcon, CloseIcon, EyeCloseIcon, EyeOpenIcon, PencilIcon, SettingIcon } from '@/assets/icons.jsx';
-import { Input } from '@/components/input.jsx';
+import Input from '@/components/input/fields/input/index.tsx';
 import { getSetting } from "@/settings.js";
 import { useSettings } from "@/context/settings.jsx";
 
 const Money = () => {
-const amount =  getSetting('user.money');
+  const amount = getSetting( 'user.money' );
   const [ showMoney, setShowMoney ] = useState( true );
   const [ openModal, setOpenModal ] = useState( false );
   const [ openModalAddRate, setOpenModalAddRate ] = useState( false );
@@ -60,7 +60,7 @@ const amount =  getSetting('user.money');
   // Set format
   const setFormatRate = ( e ) => {
     setFormat( e.target.value );
-    updateSettings('site.rateExchange', e.target.value );
+    updateSettings( 'site.rateExchange', e.target.value );
   }
 
   return (
@@ -79,7 +79,7 @@ const amount =  getSetting('user.money');
         <>
           <div className=' flex justify-between gap-1 '>
               <span className='money family-oswald w-auto min-w-max'>
-                { formatMoney(amount) }
+                { formatMoney( amount ) }
               </span>
             <select value={ format } onChange={ ( e ) => setFormatRate( e ) } id='select-format'>
               { optionsValid?.map( option => (
@@ -133,7 +133,7 @@ const amount =  getSetting('user.money');
            </p>
            <div className='flex'>
              <Input type='text' value={ newRate } onChange={ handleOnChageRate }
-                    classInput='input-rate rounded-r-none h-6'/>
+                    className='input-rate rounded-r-none h-6'/>
              <span onClick={ handleAddRate }
                    className='add-rate bg-Primary text-white rounded-s-lg px-2 h-[24,7px] border border-Primary border-l-0 cursor-pointer hover:bg-transparent hover:text-Primary duration-200'
                    dir='rtl'>+</span>

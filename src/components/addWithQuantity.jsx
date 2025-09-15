@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import  Button  from './button/index.tsx';
+import Button from './button/index.tsx';
 import { AddCircleIcon, CartIcon, RemoveCircleIcon } from '@/assets/icons.jsx';
-import { Input } from './input.jsx';
+import Input from "@/components/input/fields/input/index.tsx"
 
 const AddWithQuantity = ( { functionAdd, handleAmount } ) => {
   const [ changeIconBtnAdd, setChangeIconBtnAdd ] = useState( false );
@@ -54,7 +54,7 @@ const AddWithQuantity = ( { functionAdd, handleAmount } ) => {
            <RemoveCircleIcon classIcons={ !changeIconBtnRemove ? 'text-Primary' : 'textSecondary duration-150' }/>
 
          </Button>
-         <Input value={ amount } type='number' onChange={ onChangeAmount } minLength={ 0 } classContent='input-amount'/>
+         <Input value={ amount } type='number' onChange={ onChangeAmount } minLength={ 0 } className='input-amount'/>
          <Button
           size='xl'
           variant='flat'

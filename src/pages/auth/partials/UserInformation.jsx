@@ -1,15 +1,13 @@
 import { useEffect, useState } from 'react';
 import  Form  from "@/components/form/index.tsx";
-import { Input } from "@/components/input.jsx";
+import Input from "@/components/input/fields/input/index.tsx"
 import { CloseIcon, MarkIcon, PencilIcon } from "@/assets/icons.jsx";
-import { Tooltip } from "@/components/tooltip.jsx";
-import { useSettings } from "@/context/settings.jsx";
+import Tooltip from "@/components/tooltip/index.tsx";
 
 const UserInformation = ( { userInfo } ) => {
 
   const [ editInfo, setEditInfo ] = useState( false );
   const [ info, setInfo ] = useState( {} );
-  const { settings, updateSettings } = useSettings();
 
   // Update info state
   useEffect( () => {
@@ -23,10 +21,6 @@ const UserInformation = ( { userInfo } ) => {
     setEditInfo( !editInfo );
   }
 
-  useEffect( () => {
-     console.info( 'editInfo', editInfo );
-   }
-   , [ editInfo ] );
 
   return ( info &&
    <Form nameForm='editInfoUser' withButton={ false } action={ () => console.log( 'submit' ) }>
@@ -34,7 +28,7 @@ const UserInformation = ( { userInfo } ) => {
        <div className='inputs'>
          { Object.values( info )?.map( ( value, i ) => ( <ul key={ i } className='list-none'>
            <li className='text-Primary text-md mb-2 flex'>
-             <Input value={ value } disabled={ !editInfo } classInput='disabled:border-0'/>
+           <Input value={value} disabled={!editInfo} className='disabled:border-0'/>
            </li>
          </ul> ) ) }
 

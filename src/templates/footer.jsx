@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Input } from '@/components/input.jsx';
+import TextArea from "@/components/input/fields/textarea/index.tsx";
 import { Path_page } from '@/routes';
 import Button from '@/components/button/index.tsx';
 import {
@@ -118,9 +118,14 @@ const Footer = () => {
          Dejanos tu opinion, es de gran ayuda para nosotros poder ser mejores dia a dia.
        </h2>
        <div className='send-message flex flex-col xn:flex-row justify-between items-end w-3/4 mx-auto'>
-         <Input textTarea type='text' placeholder='Dejanos tu comentario... ¿Qué opinas acercá de Nosotros?'
-                onChange={ handleComments } value={ comment } maxLength={ 1000 }
-                classInput={ ` ${ sendEmpty ? 'empty' : '' } scrollbar scrollbar-track-transparent py-2` }/>
+         <TextArea
+          onChange={ handleComments }
+          placeholder='Dejanos tu comentario...  ¿Qué opinas acercá de Nosotros?'
+          name='message'
+          value={ comment }
+          maxLength={ 300 }
+          className={ ` ${ sendEmpty ? 'empty' : '' } scrollbar scrollbar-track-transparent py-2` }
+         />
          <Button
           variant='flat'
           color='white'

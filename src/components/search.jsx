@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { SearchEngineIcon } from '@/assets/icons.jsx';
 import  Button  from '@/components/button/index.tsx';
-import { Input } from '@/components/input.jsx';
+import Input from "@/components/input/fields/input/index.tsx"
 import { useDatabase } from '@/hooks/useDatabase.jsx';
 import { useResults } from '@/context/ParamsUrl.jsx';
 import { normalizeText, Slug } from '@/utils/handleText.js';
