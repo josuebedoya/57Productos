@@ -1,9 +1,9 @@
 import { Tab } from "@/components/tabs/tab.jsx";
-import { Body } from "@/components/body.jsx";
+import Body from "@/components/body/index.tsx";
 
 const Tabs = ( { children } ) => {
 
-   Tabs.TapItem =  function TapItem( { children, click, active, tapClass, activeClass, ...events } ) {
+  Tabs.TapItem = function TapItem( { children, click, active, tapClass, activeClass, ...events } ) {
     return ( <Tab
      click={ click }
      active={ active }
@@ -15,10 +15,8 @@ const Tabs = ( { children } ) => {
 
   Tabs.BodyITem = function BodyITem( { children, activeClass, active } ) {
     return ( active && <div aria-selected={ active } className={ activeClass || '' }>
-      <Body
-       bodyClass={ activeClass }>{ children }</Body>
-    </div> )
-  }
+      <Body className={ activeClass }>{ children }</Body>
+    </div> )}
 
   return ( <div className='w-full flex'>
     { children }
