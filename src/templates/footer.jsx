@@ -13,7 +13,7 @@ import {
 } from '@/assets/icons';
 import { useComment } from '@/context/comments';
 import { Menu } from '@/components/menu/menu.jsx';
-import { Form } from '@/components/form';
+import Form from '@/components/form/index.tsx';
 import { CSSTransition } from 'react-transition-group';
 import { Copyright } from "@/components/copyright.jsx";
 
