@@ -31,6 +31,38 @@ export const vars = {
     lg: 'rounded-lg',
     full: 'rounded-full',
   },
+
+  margin: {
+    inl: {
+      1: 'mx-1',
+      2: 'mx-2',
+      3: 'mx-3',
+      4: 'mx-4',
+      5: 'mx-5',
+    },
+    blk: {
+      1: 'my-1',
+      2: 'my-2',
+      3: 'my-3',
+      4: 'my-4',
+      5: 'my-5',
+    },
+
+    1: 'm-1',
+    2: 'm-2',
+    3: 'm-3',
+    4: 'm-4',
+    5: 'm-5',
+  },
+
+  padding: {
+    1: 'p-1',
+    2: 'p-2',
+    3: 'p-3',
+    4: 'p-4',
+    5: 'p-5',
+  },
+
   delay: {
     none: 'duration-0',
     50: 'duration-50',
@@ -321,6 +353,56 @@ export const vars = {
         'corner-2': 'bottom-1/2 left-1/2',
         'corner-3': 'top-1/2 left-1/2 ',
         'corner-4': 'top-1/2 right-1/2',
+      }
+    }
+  },
+
+  pagination: {
+    base: {
+      main: '',
+      items: 'flex items-center justify-center aria-disabled:cursor-not-allowed transition w-auto h-auto max-w-max max-h-max leading-none'
+    },
+    variant: {
+      solid: {
+        primary: 'bg-Primary text-white border border-Primary',
+        secondary: 'bg-Secondary text-white border border-Secondary',
+        white: 'bg-white text-Primary border border-white',
+        black: 'bg-black text-white border border-black',
+
+        active: {
+          primary: '[&:is(.active)]:bg-Primary [&:is(.active)]:text-white [&:is(.active)]:border [&:is(.active)]:border-Primary',
+          secondary: '[&:is(.active)]:bg-Secondary [&:is(.active)]:text-white [&:is(.active)]:border [&:is(.active)]:border-Secondary',
+          white: '[&:is(.active)]:bg-white [&:is(.active)]:text-Primary [&:is(.active)]:border [&:is(.active)]:border-white',
+          black: '[&:is(.active)]:bg-black [&:is(.active)]:text-white [&:is(.active)]:border [&:is(.active)]:border-black',
+        }
+      },
+
+      outline: {
+        primary: 'bg-transparent text-Primary border border-Primary',
+        secondary: 'bg-transparent text-Secondary border border-Secondary',
+        white: 'bg-transparent text-white border border-white',
+        black: 'bg-transparent text-black border border-black',
+
+        active: {
+          primary: '[&:is(.active)]:bg-transparent [&:is(.active)]:text-Primary [&:is(.active)]:border [&:is(.active)]:border-Primary',
+          secondary: '[&:is(.active)]:bg-transparent [&:is(.active)]:text-Secondary [&:is(.active)]:border [&:is(.active)]:border-Secondary',
+          white: '[&:is(.active)]:bg-transparent [&:is(.active)]:text-white [&:is(.active)]:border [&:is(.active)]:border-white',
+          black: '[&:is(.active)]:bg-transparent [&:is(.active)]:text-black [&:is(.active)]:border [&:is(.active)]:border-black',
+        }
+      },
+
+      flat: {
+        primary: 'text-Primary bg-transparent border border-transparent',
+        secondary: 'text-Secondary bg-transparent border border-transparent',
+        white: 'text-white bg-transparent border border-transparent',
+        black: 'text-black bg-transparent border border-transparent',
+
+        active: {
+          primary: '[&:is(.active)]:bg-Primary/10 [&:is(.active)]:text-Primary [&:is(.active)]:border-transparent',
+          secondary: '[&:is(.active)]:bg-Secondary/10 [&:is(.active)]:text-Secondary [&:is(.active)]:border-transparent',
+          white: '[&:is(.active)]:bg-white/10 [&:is(.active)]:text-white [&:is(.active)]:border-transparent',
+          black: '[&:is(.active)]:bg-black/10 [&:is(.active)]:text-black [&:is(.active)]:border-transparent',
+        }
       }
     }
   }
