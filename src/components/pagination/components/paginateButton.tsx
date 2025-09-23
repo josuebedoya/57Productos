@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import type {PaginateButtonProps} from "../pa.d.ts";
-import {AngleLeftIcon, AngleRightIcon} from "@/assets/icons.tsx";
 import {gVar} from "@/utils/gVar.js";
 import clsx from "clsx";
 
@@ -25,7 +24,7 @@ const handleStylesButton = (
 const PaginateButton: React.FC<PaginateButtonProps> = (
   {
     label,
-    icon = <AngleRightIcon/>,
+    icon,
     directionControl,
     variant = 'solid',
     color = 'secondary',
