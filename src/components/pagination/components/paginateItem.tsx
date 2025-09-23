@@ -1,4 +1,4 @@
-import React, {forwardRef, useEffect, useState} from 'react';
+import React, {type ForwardedRef, forwardRef, useEffect, useState} from 'react';
 import type {PaginateItemProps} from "../pa.d.ts";
 import {gVar} from "@/utils/gVar.js";
 import clsx from "clsx";
@@ -16,11 +16,11 @@ const PaginateItem = forwardRef<HTMLDivElement, PaginateItemProps>(
      colorActive = 'secondary',
      space = 2,
      onClick
-   }, ref) => {
+   }: PaginateItemProps, ref: ForwardedRef<HTMLDivElement>): React.ReactElement => {
 
-    const [stylesItem, setStylesItem] = useState('');
+    const [stylesItem, setStylesItem] = useState<string>('');
     const baseStyle = gVar(`pagination.base.items`);
-    const [stylesItemActive, setStylesItemActive] = useState('')
+    const [stylesItemActive, setStylesItemActive] = useState<string>('')
 
     useEffect(() => {
       const base = gVar([
@@ -36,7 +36,8 @@ const PaginateItem = forwardRef<HTMLDivElement, PaginateItemProps>(
     }, [rounded, variant, color, colorActive, variantActive]);
 
     return (
-      <div aria-label={`Page ${label}`} onClick={onClick} ref={ref}>
+      <div ref={ref} className='flex justify-center items-center' aria-label={`Page ${label}`}
+           onClick={onClick}>
         <li className={clsx(gVar(`margin.inl.${space}`), {"active": active})}>
           <a className={clsx("link", stylesItem, className, {[stylesItemActive]: active})}>
             {label}
