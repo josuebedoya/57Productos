@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import type {PaginateButtonProps} from "../pa.d.ts";
+import type {PaginateButtonProps} from "../type.d.ts";
 import {gVar} from "@/utils/gVar.js";
 import clsx from "clsx";
 

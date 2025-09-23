@@ -1,5 +1,5 @@
 import React, {type ForwardedRef, forwardRef, useEffect, useState} from 'react';
-import type {PaginateItemProps} from "../pa.d.ts";
+import type {PaginateItemProps} from "../type.d.ts";
 import {gVar} from "@/utils/gVar.js";
 import clsx from "clsx";
 
