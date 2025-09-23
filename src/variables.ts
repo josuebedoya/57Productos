@@ -360,7 +360,7 @@ export const vars = {
   pagination: {
     base: {
       main: '',
-      items: 'flex items-center justify-center aria-disabled:cursor-not-allowed transition w-auto h-auto max-w-max max-h-max leading-none'
+      items: 'flex items-center justify-center aria-disabled:cursor-not-allowed transition w-auto h-auto leading-none'
     },
     variant: {
       solid: {
