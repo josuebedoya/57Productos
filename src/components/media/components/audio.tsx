@@ -1,7 +1,7 @@
 import React from 'react';
 import type {AudioProps} from "@/components/media/types.js";
 
-const Video: React.FC<AudioProps> = (
+const Audio: React.FC<AudioProps> = (
   {
     src,
     extensions = ['mp4'],
@@ -31,7 +31,7 @@ const Video: React.FC<AudioProps> = (
             <source
               key={ext}
               src={`${newSrc}.${ext}`}
-              type={mimeMap[ext] || `video/${ext}`}
+              type={mimeMap[ext] || `audio/${ext}`}
             />
           )
         })}
@@ -42,4 +42,4 @@ const Video: React.FC<AudioProps> = (
   );
 };
 
-export default Video;
+export default Audio;
