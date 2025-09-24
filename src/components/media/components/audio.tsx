@@ -1,18 +1,17 @@
 import React from 'react';
 import type {AudioProps} from "@/components/media/types.js";
+import formattedSrc from "@/components/media/helpers/formattedSrc.ts";
+import AVPlayer from "@/components/media/components/AVPlayer.js";
 
 const Audio: React.FC<AudioProps> = (
   {
     src,
-    extensions = ['mp4'],
-    autoPlay,
+    extensions = ['mp3'],
     controls = true,
-    loop,
     muted = true,
-    events,
     unsupportedLabel = 'Tu navegador no soporta videos.',
     ...props
-  }: VideoProps): React.ReactElement => {
+  }: AudioProps): React.ReactElement => {
 
   const mimeMap: Record<string, string> = {
     mp3: "audio/mpeg",
@@ -20,25 +19,19 @@ const Audio: React.FC<AudioProps> = (
     ogv: "audio/ogg",
   };
 
+  const data = formattedSrc(src, extensions || ['mp3']);
+
   return (
-    <div {...events} className='f-audio'>
-      <audio autoPlay={autoPlay} controls={controls} muted={muted} loop={loop} {...props}>
-
-        {/* HERE MAP THE ALLOWED EXTENSIONS TO RENDER BY FILE*/}
-        {extensions.map((ext: string) => {
-          const newSrc = src?.split('.').shift();
-          return (
-            <source
-              key={ext}
-              src={`${newSrc}.${ext}`}
-              type={mimeMap[ext] || `audio/${ext}`}
-            />
-          )
-        })}
-
-        {unsupportedLabel}
-      </audio>
-    </div>
+    <AVPlayer
+      type={2}
+      src={src}
+      data={data}
+      mimes={mimeMap}
+      extensions={extensions}
+      muted={muted}
+      controls={controls}
+      {...props}
+    />
   );
 };
 
