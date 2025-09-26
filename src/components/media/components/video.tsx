@@ -1,15 +1,14 @@
 import React from 'react';
 import type {VideoProps} from "@/components/media/types.js";
+import formattedSrc from "@/components/media/helpers/formattedSrc.ts";
+import AVPlayer from "@/components/media/components/AVPlayer.js";
 
 const Video: React.FC<VideoProps> = (
   {
     src,
     extensions = ['mp4'],
-    autoPlay,
     controls = true,
-    loop,
     muted = true,
-    events,
     unsupportedLabel = 'Tu navegador no soporta videos.',
     ...props
   }: VideoProps): React.ReactElement => {
@@ -21,25 +20,19 @@ const Video: React.FC<VideoProps> = (
     mov: "video/quicktime",
   };
 
+  const data = formattedSrc(src, extensions || ['mp4']);
+
   return (
-    <div {...events} className='f-video'>
-      <video autoPlay={autoPlay} controls={controls} muted={muted} loop={loop} {...props}>
-
-        {/* HERE MAP THE ALLOWED EXTENSIONS TO RENDER BY FILE*/}
-        {extensions.map((ext: string) => {
-          const newSrc = src?.split('.').shift();
-          return (
-            <source
-              key={ext}
-              src={`${newSrc}.${ext}`}
-              type={mimeMap[ext] || `video/${ext}`}
-            />
-          )
-        })}
-
-        {unsupportedLabel}
-      </video>
-    </div>
+    <AVPlayer
+      src={src}
+      data={data}
+      mimes={mimeMap}
+      type={1}
+      extensions={extensions}
+      muted={muted}
+      controls={controls}
+      {...props}
+    />
   );
 };
 
