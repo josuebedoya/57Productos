@@ -5,6 +5,8 @@ const Document: React.FC<DocumentProps> = (
   {
     className = 'w-full max-w-full',
     src,
+    width = '100%',
+    height = 700,
     typeFile = 'text',
     ...props
   }
@@ -20,8 +22,8 @@ const Document: React.FC<DocumentProps> = (
         src={newSrc}
         className={`iframe ${className} ${isOffice ? 'office' : 'google'}-document`}
         frameBorder="0"
-        height={'800px'}
-        width={'800px'}
+        height={height}
+        width={width}
         title={`Document - ${isOffice ? 'Microsoft Office' : 'Google Docs'}`}
         style={{aspectRatio: '1/1'}}
         {...props}
