@@ -1,3 +1,20 @@
+/**
+ * getMedia
+ * --------------
+ * Analyzes a source (`string` or `Blob`) to determine its MIME type and classify it.
+ *
+ * @param src - String (URL, Base64) or Blob representing the file to evaluate.
+ * @param allowedExtensions - List of allowed file extensions (without the dot).
+ *
+ * @returns Promise<{ fileSrc: string | Blob, typeFile: string }>
+ *    - fileSrc: The original source if valid, or an empty string if not.
+ *    - typeFile: Classified file type (e.g., 'image', 'video', 'audio', 'unsupported', 'default').
+ *
+ * Behavior:
+ *  - If `src` does not exist → { fileSrc: '', typeFile: 'default' }
+ *  - If the extension is not allowed → { fileSrc: '', typeFile: 'unsupported' }
+ *  - If an error occurs → { fileSrc: '', typeFile: 'default' }
+ */
 import mime from "mime";
 import getExt from './getExt.ts';
 import getTypeFile from './getTypeFile.ts';
