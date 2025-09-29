@@ -19,7 +19,8 @@ const AvPlayer: React.FC<AVPlayerProps> = (
         {data?.map((s: Record<string, string>, i: number) => (
           <source
             key={i}
-            src={s.src}
+            aria-label={Component}
+            srcSet={s.src}
             type={mimes[s.ext || ''] || `${Component}/${s.ext}`}
           />
         ))}

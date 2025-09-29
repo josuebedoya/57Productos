@@ -1,8 +1,15 @@
-import type {AudioHTMLAttributes, IframeHTMLAttributes, MediaHTMLAttributes, VideoHTMLAttributes} from "react";
+import type {
+  AudioHTMLAttributes,
+  IframeHTMLAttributes,
+  ImgHTMLAttributes,
+  VideoHTMLAttributes
+} from "react";
 
-export interface MediaProps extends MediaHTMLAttributes<HTMLMediaElement> {
-
-}
+export type MediaProps =
+  | { type: 'video'; props: VideoProps }
+  | { type: 'audio'; props: AudioProps }
+  | { type: 'image'; props: ImageProps }
+  | { type: 'document'; props: DocumentProps };
 
 interface AudioAndVideoBaseProps {
   unsupportedLabel?: string;
@@ -27,4 +34,7 @@ interface AVPlayerProps extends VideoProps, AudioProps {
 
 export interface DocumentProps extends IframeHTMLAttributes<HTMLIFrameElement> {
   typeFile: string;
+}
+
+export interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
 }

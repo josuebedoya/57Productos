@@ -2,6 +2,7 @@ import React from 'react';
 import type {AudioProps} from "@/components/media/types.js";
 import formattedSrc from "@/components/media/helpers/formattedSrc.ts";
 import AVPlayer from "@/components/media/components/AVPlayer.js";
+import {mimesAudio} from "@/components/media/configs/mimesFiles.ts";
 
 const Audio: React.FC<AudioProps> = (
   {
@@ -13,12 +14,6 @@ const Audio: React.FC<AudioProps> = (
     ...props
   }: AudioProps): React.ReactElement => {
 
-  const mimeMap: Record<string, string> = {
-    mp3: "audio/mpeg",
-    wav: "audio/wav",
-    ogv: "audio/ogg",
-  };
-
   const data = formattedSrc(src, extensions || ['mp3']);
 
   return (
@@ -26,7 +21,7 @@ const Audio: React.FC<AudioProps> = (
       type={2}
       src={src}
       data={data}
-      mimes={mimeMap}
+      mimes={mimesAudio}
       extensions={extensions}
       muted={muted}
       controls={controls}
