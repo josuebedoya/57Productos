@@ -21,18 +21,23 @@ import getTypeFile from './getTypeFile.ts';
 import {getMimeFromBlob, getMimeFromBase64} from "./getMimes.ts";
 
 const getMedia = async (src: string | Blob, allowedExtensions: string[]):
-  Promise<Record<string, string | Blob>> => {
+  Promise<Record<string, string>> => {
 
   // If src doest no exist return default type
   if (!src) return {fileSrc: '', typeFile: 'default'};
 
   try {
     let mimeType: string | null = null;
+    let srcFormatted = src;
 
     if (typeof src === 'string' && src.startsWith('data:')) {
       mimeType = getMimeFromBase64(src);
+      srcFormatted = src;
+
     } else if (src instanceof Blob) {
-      mimeType = getMimeFromBlob(src)
+      mimeType = getMimeFromBlob(src);
+      srcFormatted = URL.createObjectURL(src);
+
     } else {
       const ext = getExt(src).toLowerCase();
       const normalizedAllowed = allowedExtensions.map(e => e.toLowerCase());
@@ -47,11 +52,12 @@ const getMedia = async (src: string | Blob, allowedExtensions: string[]):
       }
 
       mimeType = mime.getType(ext) || '';
+      srcFormatted = src as string;
     }
 
     // Return type detected and src
     const typeFile = getTypeFile(mimeType);
-    return {fileSrc: src, typeFile};
+    return {fileSrc: srcFormatted, typeFile};
 
   } catch (err) {
     console.error("Error processing File:", src, err);
