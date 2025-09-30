@@ -1,5 +1,3 @@
-import {useMemo} from "react";
-
 export const defaultsImg = {
   notfound: '/assets/images/system/not-found.png',
   unsupported: '/assets/images/system/unsupported.png',
@@ -8,4 +6,4 @@ export const defaultsImg = {
   image: ''
 };
 
-export const defaultExt = useMemo(() => ['png', 'jpeg', 'jpg', 'mp4', 'mov', 'pdf'], []);
+export const defaultExt = ['png', 'jpeg', 'jpg', 'mp4', 'mov', 'pdf'];
