@@ -9,6 +9,10 @@ export interface MediaProps {
   audioProps?: AudioProps;
   imageProps?: ImageProps;
   documentProps?: DocumentProps;
+  notfound?: string
+  unsupported?: string
+  defaults?: string
+  unknown?: string
 }
 
 interface AudioAndVideoBaseProps {
