@@ -1,6 +1,6 @@
 import Tooltip from "@/components/tooltip/index.tsx";
 import { ExitArrowIcon, SettingIcon } from "@/assets/icons.jsx";
-import { Media } from "@/components/media.jsx";
+import Media from '@/components/media/index.tsx';
 import { Money } from "@/pages/auth/components/money.jsx";
 import { useSettings } from "@/context/settings.jsx";
 import { useNavigate } from "react-router-dom";
@@ -65,9 +65,11 @@ const HeaderAuth = () => {
              </div>
              <div className='user-info border-l-2 border-gray-300 pl-4 flex items-center'>
                <Media src={ settings?.user?.photo }
-                      alt={ settings?.user?.photo || 'User Avatar' }
-                      defaultSrc='/images/system/default-profile.png'
-                      classFile='w-14 h-14 rounded-full object-cover mr-3'
+                      imageProps={ {
+                        alt: settings?.user?.photo || 'User Avatar',
+                        className: 'w-14 h-14 rounded-full object-cover mr-3'
+                      } }
+                      defaults='/images/system/default-profile.png'
                />
                <div>
                  <h3 className='text-lg font-bold family-oswald text-gray-800'>

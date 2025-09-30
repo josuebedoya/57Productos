@@ -5,7 +5,7 @@ import Button from './button/index.tsx';
 import { Path_page } from '@/routes.jsx';
 import { Slug } from "@/utils/handleText.js";
 import { useCart } from '@/context/cart.jsx';
-import { Media } from "@/components/media.jsx";
+import Media from '@/components/media/index.tsx';
 import Tooltip from "@/components/tooltip/index.tsx";
 
 const Cart = ( { close } ) => {
@@ -101,8 +101,11 @@ const Cart = ( { close } ) => {
                     <div key={ index }
                          className='item-product flex flex-wrap  mb-3 pb-3 border-b border-b-gray-200 last:mb-0 last:pb-2'>
                       <div className='image w-2/6'>
-                        <Media src={ item.img } alt={ item.img + index }
-                               classFile='w-full h-16 rounded-lg object-contain'></Media>
+                        <Media src={ item.img }
+                               imageProps={ {
+                                 alt: item.img + index,
+                                 className: 'w-full h-16 rounded-lg object-contain'
+                               } }/>
                       </div>
                       <div className='information w-4/6 group/info pl-2'>
                         <Link to={ 'tienda/' + Slug( item.title ) } target='_self'>

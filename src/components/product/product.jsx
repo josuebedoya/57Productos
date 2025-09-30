@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { useCart } from '@/context/cart.jsx';
 
 import { CartIcon, HearthCheckIcon, HearthLineIcon, DocumentIcon } from '@/assets/icons.jsx';
-import  Button  from '@/components/button/index.tsx';
+import Button from '@/components/button/index.tsx';
 import { Stars } from '@/components/stars.jsx';
 import { ModalProduct } from './modalProduct.jsx';
-import { Media } from '@/components/media.jsx'
+import Media from '@/components/media/index.tsx';
 
 
 const Product = ( props ) => {
@@ -59,11 +59,19 @@ const Product = ( props ) => {
           className='z-0 transition-transform duration-300 transform hover:scale-101 hover:shadow-custom bg-white rounded-2xl p-1'>
        <div className='item-image'>
          { !changeImg ? (
-          <Media src={ props.img } classFile='rounded-2xl cursor-pointer z-0 h-56 w-full max-w-full'
-                 onMouseEnter={ HoverChangeImg } />
+          <Media src={ props.img }
+                 imageProps={ {
+                   alt: props.img,
+                   className: 'rounded-2xl cursor-pointer z-0 h-56 w-full max-w-full',
+                   onMouseEnter: HoverChangeImg
+                 } }/>
          ) : (
-          <Media src={ props.imgHover } classFile='rounded-2xl cursor-pointer z-0 h-56 w-full max-w-full'
-                 onMouseLeave={HoverChangeImg} />
+          <Media src={ props.img }
+                 imageProps={ {
+                   alt: props.img,
+                   className: 'rounded-2xl cursor-pointer z-0 h-56 w-full max-w-full',
+                   onMouseLeave: HoverChangeImg
+                 } }/>
          ) }
        </div>
        <div className='item-stars text-13'>
@@ -93,7 +101,7 @@ const Product = ( props ) => {
            <div className='btns-check flex gap-2'>
              <div className='btn-outstanding'>
                <Button icon={ !outstanding ? <HearthLineIcon/> : <HearthCheckIcon/> } onClick={ Added }
-                      size='sm'/>
+                       size='sm'/>
              </div>
              <div className='btn-modal-information'>
                <Button icon={ <DocumentIcon/> } size='sm' onClick={ OpenModal }/>

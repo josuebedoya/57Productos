@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="Refactor pagination component types and improve code formatting">
+    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="+ Added files default types">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/product/product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/auth/components/headerAuth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/components/headerAuth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/auth/pages/settingsInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/pages/settingsInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contact/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/templates/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/templates/slider.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +107,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
@@ -111,6 +118,7 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.17.1&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.17.2&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/USUARIO/Desktop/Practices/josue-practices/shopp-online/public/images/products&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -119,6 +127,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.build.executor&quot;: &quot;Run&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.TypeScript&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Imagina\\Desktop\\YO\\57Productos\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -135,11 +144,11 @@
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Imagina\Desktop\YO\57Productos\src\components\media\helpers" />
+      <recent name="C:\Users\Imagina\Desktop\YO\57Productos\src\context" />
       <recent name="C:\Users\Imagina\PhpstormProjects\57-productos\src\components\button" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts" />
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts\auth\templates" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts\auth\components" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts\us\templates" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -181,8 +190,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PS-251.26927.60" />
-        <option value="bundled-php-predefined-a98d8de5180a-e5747d4f5a45-com.jetbrains.php.sharedIndexes-PS-251.26927.60" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-PS-252.25557.128" />
+        <option value="bundled-php-predefined-a98d8de5180a-ce40d0652d34-com.jetbrains.php.sharedIndexes-PS-252.25557.128" />
       </set>
     </attachedChunks>
   </component>
@@ -250,142 +259,11 @@
       <workItem from="1755640751713" duration="2291000" />
       <workItem from="1755901711764" duration="5073000" />
       <workItem from="1756236750010" duration="677000" />
-    </task>
-    <task id="LOCAL-00053" summary="↔ Time animation Fade">
-      <option name="closed" value="true" />
-      <created>1742330631370</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1742330631370</updated>
-    </task>
-    <task id="LOCAL-00054" summary="↔ Time animation Fade">
-      <option name="closed" value="true" />
-      <created>1742331910107</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1742331910107</updated>
-    </task>
-    <task id="LOCAL-00055" summary="+ Use Type Modal inMobile">
-      <option name="closed" value="true" />
-      <created>1742333906921</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1742333906921</updated>
-    </task>
-    <task id="LOCAL-00056" summary="+ Prop typeMenu">
-      <option name="closed" value="true" />
-      <created>1742339849439</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1742339849439</updated>
-    </task>
-    <task id="LOCAL-00057" summary="+ Search Component">
-      <option name="closed" value="true" />
-      <created>1742339919834</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1742339919834</updated>
-    </task>
-    <task id="LOCAL-00058" summary="+ util handle text">
-      <option name="closed" value="true" />
-      <created>1742410317479</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1742410317480</updated>
-    </task>
-    <task id="LOCAL-00059" summary="↔  handle disabled scroll">
-      <option name="closed" value="true" />
-      <created>1742418703798</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1742418703798</updated>
-    </task>
-    <task id="LOCAL-00060" summary="↔ Upgrate Filter Search">
-      <option name="closed" value="true" />
-      <created>1742426011604</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1742426011604</updated>
-    </task>
-    <task id="LOCAL-00061" summary="+ Context to handle params url">
-      <option name="closed" value="true" />
-      <created>1742486612729</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1742486612729</updated>
-    </task>
-    <task id="LOCAL-00062" summary="+ Use search but url params &amp; use database products">
-      <option name="closed" value="true" />
-      <created>1742487812287</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1742487812287</updated>
-    </task>
-    <task id="LOCAL-00063" summary="↔ Validation children | ↔ Default breakpoints: Components">
-      <option name="closed" value="true" />
-      <created>1742489955208</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1742489955208</updated>
-    </task>
-    <task id="LOCAL-00064" summary="+ Component Pagination | + new type pagination list :  Component">
-      <option name="closed" value="true" />
-      <created>1742511939833</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1742511939833</updated>
-    </task>
-    <task id="LOCAL-00065" summary="+ library">
-      <option name="closed" value="true" />
-      <created>1742511965130</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1742511965130</updated>
-    </task>
-    <task id="LOCAL-00066" summary="↔ Name search to findResults | add view">
-      <option name="closed" value="true" />
-      <created>1742512125005</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1742512125005</updated>
-    </task>
-    <task id="LOCAL-00067" summary="+ Files products &amp; rename">
-      <option name="closed" value="true" />
-      <created>1742572400619</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1742572400619</updated>
-    </task>
-    <task id="LOCAL-00068" summary="+ storage files new function to get">
-      <option name="closed" value="true" />
-      <created>1742945016762</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1742945016762</updated>
-    </task>
-    <task id="LOCAL-00069" summary="commit test">
-      <option name="closed" value="true" />
-      <created>1742945134773</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1742945134773</updated>
+      <workItem from="1758658604445" duration="5372000" />
+      <workItem from="1758664891461" duration="15924000" />
+      <workItem from="1758739518411" duration="6130000" />
+      <workItem from="1759158515105" duration="26144000" />
+      <workItem from="1759242052232" duration="17427000" />
     </task>
     <task id="LOCAL-00070" summary="↔ Extension utils files | ↔ getMedia method">
       <option name="closed" value="true" />
@@ -643,7 +521,143 @@
       <option name="project" value="LOCAL" />
       <updated>1758657695189</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="+ Add pagination component and related items with customizable props">
+      <option name="closed" value="true" />
+      <created>1758658791712</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1758658791713</updated>
+    </task>
+    <task id="LOCAL-00103" summary="+ Add Video component with customizable props and support for multiple video formats">
+      <option name="closed" value="true" />
+      <created>1758666778154</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1758666778154</updated>
+    </task>
+    <task id="LOCAL-00104" summary="+ Add Audio component with customizable props and support for multiple audio formats">
+      <option name="closed" value="true" />
+      <created>1758667318920</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1758667318920</updated>
+    </task>
+    <task id="LOCAL-00105" summary="Rename Video component to Audio and update mime type handling for audio formats">
+      <option name="closed" value="true" />
+      <created>1758731371987</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1758731371987</updated>
+    </task>
+    <task id="LOCAL-00106" summary="Add AVPlayer component and refactor Audio component to use it for audio playback">
+      <option name="closed" value="true" />
+      <created>1758744040061</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1758744040062</updated>
+    </task>
+    <task id="LOCAL-00107" summary="Add Doc to helper">
+      <option name="closed" value="true" />
+      <created>1759158874071</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1759158874072</updated>
+    </task>
+    <task id="LOCAL-00108" summary="+ Document component">
+      <option name="closed" value="true" />
+      <created>1759163667615</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1759163667615</updated>
+    </task>
+    <task id="LOCAL-00109" summary="+ Fix size document default">
+      <option name="closed" value="true" />
+      <created>1759163872988</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1759163872988</updated>
+    </task>
+    <task id="LOCAL-00110" summary="+ Added Image component | ↔ Separate mimes files">
+      <option name="closed" value="true" />
+      <created>1759167526068</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1759167526068</updated>
+    </task>
+    <task id="LOCAL-00111" summary="+ Fix capitalize name">
+      <option name="closed" value="true" />
+      <created>1759168540539</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1759168540539</updated>
+    </task>
+    <task id="LOCAL-00112" summary="Add media handling utilities for file type detection">
+      <option name="closed" value="true" />
+      <created>1759189850022</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1759189850022</updated>
+    </task>
+    <task id="LOCAL-00113" summary="- context.Settings.ts">
+      <option name="closed" value="true" />
+      <created>1759189902432</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1759189902432</updated>
+    </task>
+    <task id="LOCAL-00114" summary="↔ Fix media return &amp;&amp; + use Media hook">
+      <option name="closed" value="true" />
+      <created>1759254578623</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1759254578623</updated>
+    </task>
+    <task id="LOCAL-00115" summary="↔ Added main file to Media files">
+      <option name="closed" value="true" />
+      <created>1759262229755</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1759262229755</updated>
+    </task>
+    <task id="LOCAL-00116" summary="+ Added default values file">
+      <option name="closed" value="true" />
+      <created>1759262245622</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1759262245622</updated>
+    </task>
+    <task id="LOCAL-00117" summary="-- Remove memo to default content">
+      <option name="closed" value="true" />
+      <created>1759264107798</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1759264107798</updated>
+    </task>
+    <task id="LOCAL-00118" summary="+ Added files default types">
+      <option name="closed" value="true" />
+      <created>1759265464263</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1759265464263</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,23 +688,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="+ Refactor Struture Templates" />
-    <MESSAGE value="+ Functions clear &amp;&amp; removeItem to storage.js | + storage to cart context  | ↔ fix cart component" />
-    <MESSAGE value="↔ Fix root id modal" />
-    <MESSAGE value="+ Add CopyRight Component | ↔ fix settings functions" />
-    <MESSAGE value="+ Add Amount in settings" />
-    <MESSAGE value="+ Add session login to storage" />
-    <MESSAGE value="↔ use rate with storage settings" />
-    <MESSAGE value="↔ Change name the format amount function ---- Before: finalAmount __ After: formatMoney ----" />
-    <MESSAGE value="+add attributes dom" />
-    <MESSAGE value="+ Add Metas component for SEO in multiple pages" />
-    <MESSAGE value="+ Add package-lock.json to .gitignore" />
-    <MESSAGE value="↔ Fix import of metas component" />
-    <MESSAGE value="+ Add Collapsible component" />
-    <MESSAGE value="Remove console log and unused effect in settingsInfo component" />
-    <MESSAGE value="Add optional button rendering to form component" />
-    <MESSAGE value="Add classInput prop to form component for customizable input styling" />
-    <MESSAGE value="Add MarkIcon component and refactor Form to accept children for customizable input rendering" />
     <MESSAGE value="Add Tab component" />
     <MESSAGE value="+ Body component" />
     <MESSAGE value="↔ Change @import by @use into sass files" />
@@ -699,7 +696,24 @@
     <MESSAGE value="Refactor button component to simplify props destructuring and improve variant handling" />
     <MESSAGE value="Refactor paginate button icon prop to allow custom icons" />
     <MESSAGE value="Refactor pagination component types and improve code formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor pagination component types and improve code formatting" />
+    <MESSAGE value="+ Add pagination component and related items with customizable props" />
+    <MESSAGE value="+ Add Video component with customizable props and support for multiple video formats" />
+    <MESSAGE value="+ Add Audio component with customizable props and support for multiple audio formats" />
+    <MESSAGE value="Rename Video component to Audio and update mime type handling for audio formats" />
+    <MESSAGE value="Add AVPlayer component and refactor Audio component to use it for audio playback" />
+    <MESSAGE value="Add Doc to helper" />
+    <MESSAGE value="+ Document component" />
+    <MESSAGE value="+ Fix size document default" />
+    <MESSAGE value="+ Added Image component | ↔ Separate mimes files" />
+    <MESSAGE value="+ Fix capitalize name" />
+    <MESSAGE value="Add media handling utilities for file type detection" />
+    <MESSAGE value="- context.Settings.ts" />
+    <MESSAGE value="↔ Fix media return &amp;&amp; + use Media hook" />
+    <MESSAGE value="↔ Added main file to Media files" />
+    <MESSAGE value="+ Added default values file" />
+    <MESSAGE value="-- Remove memo to default content" />
+    <MESSAGE value="+ Added files default types" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Added files default types" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -715,14 +729,9 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/utils/getMedia.js</url>
-          <line>24</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/context/settings.jsx</url>
-          <line>25</line>
-          <option name="timeStamp" value="44" />
+          <url>file://$PROJECT_DIR$/src/components/media.jsx</url>
+          <line>57</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

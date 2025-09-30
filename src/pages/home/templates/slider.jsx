@@ -5,26 +5,26 @@ import usa from '/assets/images/flags/usa.png'
 import japan from '/assets/images/flags/japan.png'
 import brazil from '/assets/images/flags/brazil.png'
 import canada from '/assets/images/flags/canada.png'
-import { Media } from "@/components/media.jsx";
+import Media from '@/components/media/index.tsx'
 import  Tooltip  from "@/components/tooltip/index.tsx";
 
 const Slider = ( ) => {
 
   const images = [
      <Tooltip key={1} content='Colombia'>
-       <Media src={colombia} classFile='h-12 w-12'/>
+       <Media src={colombia} imageProps={{className:'h-12 w-12'}}/>
      </Tooltip>,
      <Tooltip key={2} content='Usa'>
-       <Media src={usa} classFile='h-12 w-12'/>
+       <Media src={usa} imageProps={{className:'h-12 w-12'}}/>
      </Tooltip>,
     <Tooltip key={ 3 } content='Japan'>
-      <Media src={ japan } classFile='h-12 w-12'/>
+      <Media src={ japan } imageProps={{className:'h-12 w-12'}}/>
     </Tooltip>,
     <Tooltip key={ 4 } content='Brazil'>
-      < Media src={ brazil } classFile='h-12 w-12'/>
+      < Media src={ brazil } imageProps={{className:'h-12 w-12'}}/>
     </Tooltip>,
     <Tooltip key={ 5 } content='Canada'>
-      <Media src={ canada } classFile='h-12 w-12'/>
+      <Media src={ canada } imageProps={{className:'h-12 w-12'}}/>
     </Tooltip>
   ];
 

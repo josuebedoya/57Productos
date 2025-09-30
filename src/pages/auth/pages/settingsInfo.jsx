@@ -1,4 +1,4 @@
-import { Media } from "@/components/media.jsx";
+import Media from '@/components/media/index.tsx';
 import { useSettings } from "@/context/settings.jsx";
 import { CameraIcon, PencilIcon } from "@/assets/icons.jsx";
 import { Dropdown } from "@/components/dropdown.jsx";
@@ -164,10 +164,12 @@ const SettingsInfo = () => {
           <div className="card-user">
             <div className=' rounded-lg border border-gray-300'>
               <div className="img relative m-2">
-                <Media src={ settings?.user?.photo || defaultImg }
-                       alt={ settings?.user?.photo || 'User Avatar' }
-                       defaultSrc='/images/system/default-profile.png'
-                       classFile='max-w-64 max-h-64 rounded-full object-cover'
+                <Media src={ settings?.user?.photo }
+                       imageProps={ {
+                         alt: settings?.user?.photo || 'User Avatar',
+                         className: 'max-w-64 max-h-64 rounded-full object-cover'
+                       } }
+                       defaults={defaultImg}
                 />
                 <div className="edit-photo absolute bottom-0 left-0">
                   <Dropdown show={ dropdown } closed={ () => setDropdown( false ) } classDropdown='bg-white p-0'
