@@ -9,5 +9,8 @@
       "send": "Send",
       "cancel": "Cancel"
     }
+  },
+  "copyright":{
+    "label": "All rights reserved by"
   }
 }
