@@ -15,7 +15,7 @@ import { useComment } from '@/context/comments';
 import { Menu } from '@/components/menu/menu.jsx';
 import Form from '@/components/form/index.tsx';
 import { CSSTransition } from 'react-transition-group';
-import { Copyright } from "@/components/copyright.jsx";
+import Copyright from "@/components/copyright/index.tsx";
 
 const Footer = () => {
   const [ comment, setComment ] = useState( '' );
@@ -192,7 +192,7 @@ const Footer = () => {
        </div>
      </div>
      <Copyright
-      copyrightClass='family-oswald tracking-wider tl:text-15 text-stone-200 text-end px-3 py-4 border-t border-t-stone-50 font-extralight'/>
+      className='text-sm family-oswald tracking-wider tl:text-15 text-stone-200 text-end px-3 py-4 border-t border-t-stone-50 font-extralight'/>
    </footer>
   );
 };
