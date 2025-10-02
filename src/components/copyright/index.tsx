@@ -1,8 +1,9 @@
 import React, {type HTMLAttributes} from 'react';
 import {fromEnv} from "@/utils/fromEnv.ts";
-import {t} from 'i18next';
+import {useTranslation} from "react-i18next";
 
 const Copyright = (props: HTMLAttributes<HTMLDivElement>) => {
+  const {t} = useTranslation();
 
   const date = new Date().toLocaleDateString('es-co', {'year': 'numeric'});
   const label = t('copyright.label');
