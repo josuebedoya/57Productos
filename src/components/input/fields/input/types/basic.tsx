@@ -37,12 +37,11 @@ const Basic: React.FC<InputProps> = (
         </label>
       )}
       <input type={type}
-             className={`checkbox ${inputStyles} ${className}`}
+             className={`input ${inputStyles} ${className}`}
              {...props}
       />
     </div>
-  )
-    ;
+  );
 };
 
 export default Basic;

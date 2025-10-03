@@ -43,17 +43,17 @@ const CheckBox: React.FC<InputProps> = (
   return (
     <div className='checkbox-container w-full'>
       {(label && withLabel) && (
-        <label className={`label ${labelClassName}`} htmlFor={props.name}>
+        <label className={`label ${labelClassName}`} htmlFor={props.name ?? 'checkbox'}>
           {label}
         </label>
       )}
       <div className="relative flex justify-center items-center w-full h-auto">
         <input
-          name={props.name ?? 'checkbox'}
           type='checkbox'
           className={`checkbox ${checkboxStyles} ${className}`}
           onClick={() => setChecked(!checked)}
           {...props}
+          name={props.name ?? 'checkbox'}
         />
         <span className={`check-icon absolute text-center pointer-events-none duration-300 ${iconColor}`}>
         {props.iconCheckbox ? props.iconCheckbox : <MarkIcon/>}
