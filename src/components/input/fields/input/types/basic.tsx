@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React from "react";
 import type {InputProps} from "@/components/input/fields/input/types.js";
-import {gVar} from "@/utils/gVar.js";
+import useInputStyles from "@/components/input/hooks/useInputStyles.js";
 
 const Basic: React.FC<InputProps> = (
   {
@@ -15,19 +15,8 @@ const Basic: React.FC<InputProps> = (
     padding = 'md',
     ...props
   }) => {
-  const [inputStyles, setInputStyles] = useState('');
 
-  // Update style class
-  useEffect(() => {
-    const inputStyles = gVar([
-      'input.base',
-      `rounded.${rounded}`,
-      `input.padding.${padding}`,
-      `input.variant.${variant}.${color}`,
-    ]);
-
-    setInputStyles(inputStyles);
-  }, [props]);
+  const {stylesClass} = useInputStyles({rounded, variant, color, padding});
 
   return (
     <div className='input-container w-full'>
@@ -37,7 +26,7 @@ const Basic: React.FC<InputProps> = (
         </label>
       )}
       <input type={type}
-             className={`input ${inputStyles} ${className}`}
+             className={`input ${stylesClass} ${className}`}
              {...props}
       />
     </div>

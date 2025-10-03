@@ -31,14 +31,12 @@ const CheckBox: React.FC<InputProps> = (
     ]);
 
     setCheckboxStyles(checkboxStyles);
-  }, [props]);
 
-  // Update icon color
-  useEffect(() => {
+    // Update icon color
     const pathStyles = !checked || variant !== 'solid' ? `text.color.${color}` : `input.checkbox.variant.solid.icon.${color}`;
-
     setIconColor(gVar(pathStyles));
   }, [props]);
+
 
   return (
     <div className='checkbox-container w-full'>
