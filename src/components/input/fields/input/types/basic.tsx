@@ -1,13 +1,14 @@
 import React from "react";
 import type {InputProps} from "@/components/input/fields/input/types.js";
 import useInputStyles from "@/components/input/hooks/useInputStyles.js";
+import clsx from "clsx";
 
 const Basic: React.FC<InputProps> = (
   {
     type = 'text',
     label,
     withLabel,
-    labelClassName = '',
+    labelClassName,
     className,
     color = 'primary',
     rounded = 'md',
@@ -21,13 +22,14 @@ const Basic: React.FC<InputProps> = (
   return (
     <div className='input-container w-full'>
       {(label && withLabel) && (
-        <label className={`label ${labelClassName}`} htmlFor={props.name}>
+        <label className={clsx('label', labelClassName)} htmlFor={props.name}>
           {label}
         </label>
       )}
-      <input type={type}
-             className={`input ${stylesClass} ${className}`}
-             {...props}
+      <input
+        type={type}
+        className={clsx(type, stylesClass, className)}
+        {...props}
       />
     </div>
   );

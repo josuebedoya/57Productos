@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import type {OptionsProps, SelectProps} from './types.ts';
 import {gVar} from "@/utils/gVar.js";
 import {AngleRightIcon} from '@/assets/icons.tsx'
+import clsx from "clsx";
 
 const Select: React.FC<SelectProps> = (
   {
@@ -37,7 +38,7 @@ const Select: React.FC<SelectProps> = (
   return (
     <div className='select-container w-full'>
       {(label && withLabel) && (
-        <label className={`label ${labelClassName}`} htmlFor={name}>
+        <label className={clsx('label', labelClassName)} htmlFor={name}>
           {label}
         </label>
       )}
@@ -45,7 +46,7 @@ const Select: React.FC<SelectProps> = (
         <select
           name={name}
           defaultValue={defaultValue}
-          className={`controller select-${name} order-0 ${selectStyles} ${className}`}
+          className={clsx('controller order-0', `select-${name}`, selectStyles, className)}
           onChange={onChange}
           onFocus={() => setOpen(true)}
           onBlur={() => setOpen(false)}
@@ -71,14 +72,13 @@ const Select: React.FC<SelectProps> = (
             </option>
           ))}
         </select>
-        {
-          !rest?.multiple && <span
-          className={`right-2 order-1 absolute ${open ? 'rotate-90' : 'rotate-0'} !w-auto ${selectStyles} w-auto max-w-max`}>
+
+        {!rest?.multiple && <span
+         className={clsx('right-2 order-1 absolute', open ? 'rotate-90' : 'rotate-0', selectStyles, '!w-auto max-w-max')}>
         {
           icon ? icon : <AngleRightIcon/>
         }
-      </span>
-        }
+      </span>}
       </div>
     </div>
 

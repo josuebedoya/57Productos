@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import type {InputProps} from "../types.ts";
 import {gVar} from "@/utils/gVar.js";
 import {MarkIcon} from '@/assets/icons.tsx'
+import clsx from "clsx";
 
 const CheckBox: React.FC<InputProps> = (
   {
@@ -37,23 +38,22 @@ const CheckBox: React.FC<InputProps> = (
     setIconColor(gVar(pathStyles));
   }, [props]);
 
-
   return (
     <div className='checkbox-container w-full'>
       {(label && withLabel) && (
-        <label className={`label ${labelClassName}`} htmlFor={props.name ?? 'checkbox'}>
+        <label className={clsx('label', labelClassName)} htmlFor={props.name ?? 'checkbox'}>
           {label}
         </label>
       )}
       <div className="relative flex justify-center items-center w-full h-auto">
         <input
           type='checkbox'
-          className={`checkbox ${checkboxStyles} ${className}`}
+          className={clsx('checkbox', checkboxStyles, className)}
           onClick={() => setChecked(!checked)}
           {...props}
           name={props.name ?? 'checkbox'}
         />
-        <span className={`check-icon absolute text-center pointer-events-none duration-300 ${iconColor}`}>
+        <span className={clsx('check-icon absolute text-center pointer-events-none duration-300', iconColor)}>
         {props.iconCheckbox ? props.iconCheckbox : <MarkIcon/>}
       </span>
       </div>

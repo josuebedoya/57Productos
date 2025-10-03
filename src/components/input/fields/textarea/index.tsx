@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import type {TextAreaProps} from "./types.ts";
 import {gVar} from "@/utils/gVar.js";
+import clsx from "clsx";
 
 const TextArea: React.FC<TextAreaProps> = (
   {
@@ -33,12 +34,12 @@ const TextArea: React.FC<TextAreaProps> = (
   return (
     <div className='textarea-container w-full'>
       {(label && withLabel) && (
-        <label className={`label ${labelClassName}`} htmlFor={name}>
+        <label className={clsx('label', labelClassName)} htmlFor={name}>
           {label}
         </label>
       )}
       <textarea
-        className={`textarea ${textAreaStyles} ${className}`}
+        className={clsx('textarea', textAreaStyles, className)}
         aria-label={`${name ?? ''}-textarea`}
         name={name}
         {...rest} />

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import type {InputProps} from "@/components/input/fields/input/types.js";
 import {gVar} from "@/utils/gVar.js";
+import clsx from "clsx";
 
 const Range: React.FC<InputProps> = ({className = '', ...props}) => {
 
@@ -8,7 +9,7 @@ const Range: React.FC<InputProps> = ({className = '', ...props}) => {
     name = 'range',
     label,
     withLabel,
-    labelClassName = '',
+    labelClassName,
     color = 'primary',
     colorInactiveRange = 'primary',
     colorPointRange = 'primary',
@@ -93,13 +94,13 @@ const Range: React.FC<InputProps> = ({className = '', ...props}) => {
 
           <div className='lines'>
             {/* Inactive Line */}
-            <div className={`${lineInactiveStyles} w-full h-2 z-0 rounded opacity-50 -top-1`}
+            <div className={clsx(lineInactiveStyles, 'w-full h-2 z-0 rounded opacity-50 -top-1')}
                  aria-label='inactive-line'/>
 
             {/* Active Line */}
             {dualRange ? (
               <div
-                className={`${lineActiveStyles} h-2 z-10 absolute rounded -top-1`}
+                className={clsx(lineInactiveStyles, 'h-2 z-10 absolute rounded -top-1')}
                 aria-label='active-line'
                 style={{
                   left: `${Math.min(positionPointMin, positionPointMax)}%`,
@@ -108,7 +109,7 @@ const Range: React.FC<InputProps> = ({className = '', ...props}) => {
               />
             ) : (
               <div
-                className={`${lineActiveStyles} h-2 z-10 absolute rounded`}
+                className={clsx(lineActiveStyles, 'h-2 z-10 absolute rounded')}
                 aria-label='active-line'
                 style={{
                   width: `${positionPointMin}%`,
@@ -125,7 +126,7 @@ const Range: React.FC<InputProps> = ({className = '', ...props}) => {
               aria-label='input-minium'
               name={name}
               type='range'
-              className={`range ${className} w-full h-0 bg-transparent appearance-none absolute inset-0 z-20 pointer-events-none`}
+              className={clsx('range', className, 'w-full h-0 bg-transparent appearance-none absolute inset-0 z-20 pointer-events-none')}
               min={min}
               max={max}
               step={step}
@@ -142,7 +143,7 @@ const Range: React.FC<InputProps> = ({className = '', ...props}) => {
                 aria-label='input-maximum'
                 name={`${name}-2`}
                 type='range'
-                className={`range ${className} w-full h-0 bg-transparent appearance-none absolute inset-0 z-20 pointer-events-none`}
+                className={clsx('range', className, 'w-full h-0 bg-transparent appearance-none absolute inset-0 z-20 pointer-events-none')}
                 min={min}
                 max={max}
                 step={step}
@@ -159,7 +160,7 @@ const Range: React.FC<InputProps> = ({className = '', ...props}) => {
           <div className="points">
             {/* First Point */}
             <div
-              className={`${pointStyles} w-5 h-5 z-40 point border-2 absolute top-1/2 -translate-y-1/2 -translate-x-1/2`}
+              className={clsx(pointStyles, 'w-5 h-5 z-40 point border-2 absolute top-1/2 -translate-y-1/2 -translate-x-1/2')}
               aria-label='point-minium'
               style={{left: `${positionPointMin}%`}}
             />
@@ -167,7 +168,7 @@ const Range: React.FC<InputProps> = ({className = '', ...props}) => {
             {/* Second Point (WHEN IS DUAL RANGE) */}
             {dualRange && (
               <div
-                className={`${pointStyles} w-5 h-5 z-40 point border-2 absolute top-1/2 -translate-y-1/2 -translate-x-1/2`}
+                className={clsx(pointStyles, 'w-5 h-5 z-40 point border-2 absolute top-1/2 -translate-y-1/2 -translate-x-1/2')}
                 aria-label='point-maxium'
                 style={{left: `${positionPointMax}%`}}
               />
@@ -179,14 +180,14 @@ const Range: React.FC<InputProps> = ({className = '', ...props}) => {
         {showValueInRange && (
           <div className='values flex gap-4 justify-center items-center mt-5'>
             <div className='min'>
-              <small className={`value font-semibold ${valueStyles}`}>{rangeValue}</small>
+              <small className={clsx(valueStyles, 'value font-semibold')}>{rangeValue}</small>
               <span className='name'>{props.nameValueInRange}</span>
             </div>
             {dualRange && (
               <>
                 <span className='separator'>-</span>
                 <div className='max'>
-                  <small className={`value font-semibold ${valueStyles}`}>{rangeValue2}</small>
+                  <small className={clsx(valueStyles, 'value font-semibold')}>{rangeValue2}</small>
                   <span className='name'>{props.nameValueInRange}</span>
                 </div>
               </>
