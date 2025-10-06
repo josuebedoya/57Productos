@@ -9,7 +9,6 @@ export interface TooltipProps extends HTMLAttributes<HTMLDivElement> {
   tooltipClass?: string;
   contentClass?: string;
   withArrow?: boolean;
-  dark?: boolean;
   delayShow?: number | string;
   variant?: 'solid' | 'outline';
   color?: string;

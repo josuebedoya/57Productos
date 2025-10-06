@@ -8,7 +8,7 @@ import Body from '@/components/body/index.tsx';
 const Tooltip: React.FC<TooltipProps> = (
   {
     withArrow = true,
-    contentClass = 'text-sm text-Primary',
+    contentClass = 'text-sm',
     content = '',
     className = '',
     position = 'center',
@@ -42,7 +42,7 @@ const Tooltip: React.FC<TooltipProps> = (
 
     setBodyClass(bodyClass + ' ' + getDirection(position, spaceX, spaceY));
     setArrowClass(arrowClass)
-  }, [position]);
+  }, [position, color, delayShow, variant, spaceY, spaceX]);
 
   return (
     <div className={`has-tooltip ${show ? 'group/tooltip' : ''} relative flex items-center justify-center`}>
