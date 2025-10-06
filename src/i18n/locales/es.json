@@ -10,7 +10,15 @@
       "cancel": "Cancelar"
     }
   },
-  "copyright":{
+  "copyright": {
     "label": "All rights reserved by"
+  },
+  "components": {
+    "code": {
+      "errors": {
+        "errorTryingCopy": "Error al intentar copiar texto.",
+        "noClipBoardAvailable": "Tú navegador no tiene soporte de ClipBoard."
+      }
+    }
   }
 }
