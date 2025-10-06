@@ -1,5 +1,5 @@
 import {BiSearchAlt, BiSolidPaperPlane} from 'react-icons/bi';
-import {MdOutlineCircle, MdOutlineSettings} from 'react-icons/md'
+import {MdOutlineCircle, MdOutlineSettings,MdSunny } from 'react-icons/md'
 import {GrUserSettings} from 'react-icons/gr';
 import {FaRegStar, FaHeartCircleCheck, FaHandshakeSimple, FaCirclePause} from 'react-icons/fa6';
 import {TiDocumentText, TiThMenuOutline} from 'react-icons/ti';
@@ -10,7 +10,7 @@ import {AiOutlineShoppingCart, AiTwotoneDislike, AiTwotoneLike} from 'react-icon
 import {PiEyeSlashDuotone, PiMoneyWavyBold} from 'react-icons/pi';
 import {
   IoIosArrowBack, IoIosArrowDown, IoIosArrowDropright, IoIosArrowForward, IoMdExit, IoMdAddCircleOutline,
-  IoMdAddCircle, IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose, IoMdRemove, IoIosAdd
+  IoMdAddCircle, IoMdRemoveCircle, IoMdRemoveCircleOutline, IoMdClose, IoMdRemove, IoIosAdd,IoMdMoon
 } from 'react-icons/io';
 import {
   FaArrowRight, FaRegHeart, FaStar, FaRegEye, FaPencilAlt, FaSeedling, FaTrash, FaTrashRestore, FaFacebook,
@@ -323,4 +323,14 @@ export const CopyCheckIcon: React.FC<IconProps> = (props) => (
 // Mark Icon
 export const MarkIcon: React.FC<IconProps> = (props) => (
   <GiCheckMark {...props} />
+);
+
+// sun Icon
+export const SunIcon: React.FC<IconProps> = (props) => (
+  <MdSunny  {...props} />
+);
+
+// sun Icon
+export const MoonIcon: React.FC<IconProps> = (props) => (
+  <IoMdMoon   {...props} />
 );
