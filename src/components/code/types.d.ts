@@ -8,3 +8,10 @@ export type IconsControllerProps = {
   className: string;
   fallback?: (e: any) => void;
 }
+
+export interface CodeProps{
+  children: string | string[],
+  onChange: (e: any) => void,
+  language?: string,
+  editable?: boolean
+}
