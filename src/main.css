@@ -1,7 +1,14 @@
 @import '@/styles/main.scss';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+  *{
+    @apply transition-all duration-500 delay-0;
+  }
+}
 
 *{
   font-family: 'Quicksand', sans-serif;
@@ -10,7 +17,7 @@
   box-sizing: border-box;
 }
 
-body {
+body{
   font-size: 1rem;
   background-color: #f1f1f18a;
   margin: 0;
