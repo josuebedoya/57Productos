@@ -19,4 +19,5 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   withLabel?: boolean;
   label?: string;
   labelClassName?: string;
+  patternSeparator?: string;
 }
