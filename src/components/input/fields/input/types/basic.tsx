@@ -6,6 +6,7 @@ import clsx from "clsx";
 const Basic: React.FC<InputProps> = (
   {
     type = 'text',
+    name = 'basic',
     label,
     withLabel,
     labelClassName,
@@ -22,11 +23,12 @@ const Basic: React.FC<InputProps> = (
   return (
     <div className='input-container w-full'>
       {(label && withLabel) && (
-        <label className={clsx('label', labelClassName)} htmlFor={props.name}>
+        <label className={clsx('label', labelClassName)} htmlFor={name}>
           {label}
         </label>
       )}
       <input
+        name={name}
         type={type}
         className={clsx(type, stylesClass, className)}
         {...props}

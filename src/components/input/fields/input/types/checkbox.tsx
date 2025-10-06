@@ -7,6 +7,7 @@ import clsx from "clsx";
 const CheckBox: React.FC<InputProps> = (
   {
     className = '',
+    name = 'checkBox',
     label,
     withLabel,
     labelClassName = '',
@@ -41,7 +42,7 @@ const CheckBox: React.FC<InputProps> = (
   return (
     <div className='checkbox-container w-full'>
       {(label && withLabel) && (
-        <label className={clsx('label', labelClassName)} htmlFor={props.name ?? 'checkbox'}>
+        <label className={clsx('label', labelClassName)} htmlFor={name}>
           {label}
         </label>
       )}
@@ -51,7 +52,7 @@ const CheckBox: React.FC<InputProps> = (
           className={clsx('checkbox', checkboxStyles, className)}
           onClick={() => setChecked(!checked)}
           {...props}
-          name={props.name ?? 'checkbox'}
+          name={name}
         />
         <span className={clsx('check-icon absolute text-center pointer-events-none duration-300', iconColor)}>
         {props.iconCheckbox ? props.iconCheckbox : <MarkIcon/>}
