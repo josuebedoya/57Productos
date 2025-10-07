@@ -1,9 +1,9 @@
 import React from 'react';
 import type {InputProps} from "./types.d.ts";
-import Basic from "./types/basic.tsx";
-import CheckBox from "./types/checkbox.tsx";
-import Range from "./types/range.tsx";
-import Number from "./types/number.tsx";
+import Basic from "./components/basic.tsx";
+import CheckBox from "./components/checkbox.tsx";
+import Range from "./components/range.tsx";
+import Number from "./components/number.tsx";
 
 const Input: React.FC<InputProps> = ({type, ...props}) => {
 
