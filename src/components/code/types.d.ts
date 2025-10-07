@@ -1,4 +1,5 @@
 import * as Icons from "@/assets/icons.tsx";
+import {langs} from '@uiw/codemirror-extensions-langs';
 
 export type IconsControllerProps = {
   active: boolean;
@@ -9,9 +10,9 @@ export type IconsControllerProps = {
   fallback?: (e: any) => void;
 }
 
-export interface CodeProps{
-  children: string | string[],
+export interface CodeProps {
+  children: string,
   onChange: (e: any) => void,
-  language?: string,
+  language?: keyof typeof langs,
   editable?: boolean
 }

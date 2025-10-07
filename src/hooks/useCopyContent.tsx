@@ -42,15 +42,7 @@ const useCopyContent = (value: any, onChange: (e: any) => void) => {
     }
   };
 
-  const codeMirrorProps = {
-    value, options: {
-      mode: 'javascript', theme: 'material', lineNumbers: true, viewportMargin: Infinity,
-    }, onBeforeChange: (_: any, __: any, val: any): void => {
-      onChange && onChange(val);
-    }
-  };
-
-  return {handleCopy, copied, codeMirrorProps, error};
+  return {handleCopy, copied, error};
 };
 
 export default useCopyContent;
