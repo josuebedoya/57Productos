@@ -4,7 +4,10 @@ import * as Icons from "@/assets/icons.tsx";
 import clsx from "clsx";
 import type {IconsControllerProps} from "@/components/code/types.js";
 
-const IconController = ({isDark, active, className, fallback, icon, iconActive}: IconsControllerProps) => {
+const IconController = (
+  {
+    isDark, active, className, fallback, icon, iconActive, label,children
+  }: IconsControllerProps) => {
   const Icon = Icons[icon];
   const IconActive = Icons[iconActive];
 
@@ -12,7 +15,7 @@ const IconController = ({isDark, active, className, fallback, icon, iconActive}:
 
   return (
     <Tooltip
-      content='Tema'
+      content={label}
       position='left'
       contentClass='text-15 font-semibold rounded-full'
       variant='solid'
@@ -36,6 +39,7 @@ const IconController = ({isDark, active, className, fallback, icon, iconActive}:
           onClick={fallback && fallback}
         />
       }
+      {children}
     </Tooltip>
   );
 };

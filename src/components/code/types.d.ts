@@ -1,7 +1,10 @@
 import * as Icons from "@/assets/icons.tsx";
 import {langs} from '@uiw/codemirror-extensions-langs';
+import React from "react";
 
 export type IconsControllerProps = {
+  label?: string;
+  children?: React.ReactNode;
   active: boolean;
   icon: keyof typeof Icons;
   iconActive: keyof typeof Icons;
@@ -11,8 +14,9 @@ export type IconsControllerProps = {
 }
 
 export interface CodeProps {
-  children: string,
-  onChange: (e: any) => void,
-  language?: keyof typeof langs,
-  editable?: boolean
+  children: string;
+  onChange: (e: any) => void;
+  langsToUse?: string[];
+  language?: keyof typeof langs;
+  editable?: boolean;
 }

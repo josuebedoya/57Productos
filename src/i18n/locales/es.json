@@ -18,6 +18,11 @@
       "errors": {
         "errorTryingCopy": "Error al intentar copiar texto.",
         "noClipBoardAvailable": "Tú navegador no tiene soporte de ClipBoard."
+      },
+      "controller": {
+        "lang": "Idioma",
+        "theme": "Tema",
+        "copy": "Copiar"
       }
     }
   }

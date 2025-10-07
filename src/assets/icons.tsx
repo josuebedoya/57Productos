@@ -4,7 +4,7 @@ import {GrUserSettings} from 'react-icons/gr';
 import {FaRegStar, FaHeartCircleCheck, FaHandshakeSimple, FaCirclePause} from 'react-icons/fa6';
 import {TiDocumentText, TiThMenuOutline} from 'react-icons/ti';
 import {IoAlert} from 'react-icons/io5';
-import {TbShoppingCartDown} from 'react-icons/tb';
+import {TbShoppingCartDown,TbLanguageKatakana} from 'react-icons/tb';
 import {RiInstagramFill} from 'react-icons/ri';
 import {AiOutlineShoppingCart, AiTwotoneDislike, AiTwotoneLike} from 'react-icons/ai';
 import {PiEyeSlashDuotone, PiMoneyWavyBold} from 'react-icons/pi';
@@ -333,4 +333,9 @@ export const SunIcon: React.FC<IconProps> = (props) => (
 // sun Icon
 export const MoonIcon: React.FC<IconProps> = (props) => (
   <IoMdMoon   {...props} />
+);
+
+// lang Icon
+export const LangIcon2: React.FC<IconProps> = (props) => (
+  <TbLanguageKatakana   {...props} />
 );

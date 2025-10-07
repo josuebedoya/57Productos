@@ -3,7 +3,6 @@ import {langs} from '@uiw/codemirror-extensions-langs';
 
 const useLang = (lang: keyof typeof langs = 'js'): Extension => {
   const langFn = langs[lang];
-
   if (typeof langFn === 'function') {
     return langFn();
   }

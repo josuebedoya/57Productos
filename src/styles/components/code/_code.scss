@@ -1,40 +1,51 @@
-.code-mirror{
-  & .cm-theme{
-    & .cm-editor{
-      padding-block: 20px;
-
-      & *{
-        font-style: italic;
-        font-family: 'Fira Code', monospace;
-        font-weight: 400;
-        line-height: 1.8;
+.code-block{
+  .head{
+    & .select-container{
+      & span{
+        display: none !important;
       }
+    }
+  }
 
-      & .cm-gutterElement{
-        color: #0a0a0a;
+  .code-mirror{
+    & .cm-theme{
+      & .cm-editor{
+        padding-block: 20px;
+        min-height: calc(1.5em * 10);
 
-        &:is(.cm-activeLineGutter){
-          font-weight: bold;
+        & *{
+          font-style: italic;
+          font-family: 'Fira Code', monospace;
+          font-weight: 400;
+          line-height: 1.8;
         }
-      }
-
-      & .cm-foldGutter{
-        width: 20px;
-        align-items: center;
-        position: relative;
-        top: -10px;
-        font-size: 20px;
-        transition: .5s linear;
-        border-right: 1px solid #0a0a0a80;
 
         & .cm-gutterElement{
-          span{
-            padding-block: 3px;
-          }
+          color: #0a0a0a;
 
-          & span[title="Unfold line"]{
-            top: 7px;
-            position: relative;
+          &:is(.cm-activeLineGutter){
+            font-weight: bold;
+          }
+        }
+
+        & .cm-foldGutter{
+          width: 20px;
+          align-items: center;
+          position: relative;
+          top: -10px;
+          font-size: 20px;
+          transition: .5s linear;
+          border-right: 1px solid #0a0a0a80;
+
+          & .cm-gutterElement{
+            span{
+              padding-block: 3px;
+            }
+
+            & span[title="Unfold line"]{
+              top: 7px;
+              position: relative;
+            }
           }
         }
       }
@@ -43,15 +54,17 @@
 }
 
 .dark{
-  .code-mirror{
-    & .cm-theme{
-      & .cm-editor{
-        & .cm-gutterElement{
-          color: #ffffff;
-        }
+  .code-block{
+    .code-mirror{
+      & .cm-theme{
+        & .cm-editor{
+          & .cm-gutterElement{
+            color: #ffffff;
+          }
 
-        & .cm-foldGutter{
-          border-right: 1px solid #ffffff80;
+          & .cm-foldGutter{
+            border-right: 1px solid #ffffff80;
+          }
         }
       }
     }
