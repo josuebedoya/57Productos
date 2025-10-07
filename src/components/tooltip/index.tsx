@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import type {TooltipProps} from "./types.ts";
 import {gVar} from "@/utils/gVar.ts";
 import {TriangleRight} from "@/assets/icons.tsx";
-import getDirection from './config.ts';
+import getDirection from '@/components/tooltip/helpers/getDirection.ts';
 import Body from '@/components/body/index.tsx';
 
 const Tooltip: React.FC<TooltipProps> = (
