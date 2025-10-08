@@ -7,6 +7,15 @@ export const vars = {
       white: 'text-white',
       black: 'text-black',
       gray: 'text-gray-500',
+
+      hover:{
+        primary: 'hover:text-Primary',
+        secondary: 'hover:text-Secondary',
+        accent: 'hover:text-Accent',
+        white: 'hover:text-white',
+        black: 'hover:text-black',
+        gray: 'hover:text-gray-500',
+      }
     },
 
     size: {
@@ -404,6 +413,18 @@ export const vars = {
           black: '[&:is(.active)]:bg-black/10 [&:is(.active)]:text-black [&:is(.active)]:border-transparent',
         }
       }
+    }
+  },
+  stars: {
+    base: 'cursor-pointer aria-disabled:cursor-auto aria-disabled:opacity-50',
+    
+    color: {
+      primary:'aria-checked:text-Primary',
+      secondary:'aria-checked:text-Secondary',
+      accent:'aria-checked:text-accent',
+      white:'aria-checked:text-white',
+      black:'aria-checked:text-black',
+      gray:'aria-checked:text-gray-500',
     }
   }
 }
