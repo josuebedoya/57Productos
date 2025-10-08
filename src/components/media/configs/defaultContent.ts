@@ -1,8 +1,8 @@
 export const defaultsImg = {
-  notfound: '/assets/images/system/not-found.png',
-  unsupported: '/assets/images/system/unsupported.png',
-  unknown: '/assets/images/system/unsupported.png',
-  default: '/assets/images/system/default-image.webp',
+  notfound: '/assets/images/system/c/media/not-found.png',
+  unsupported: '/assets/images/system//c/media/unsupported.png',
+  unknown: '/assets/images/system/c/media/unsupported.png',
+  default: '/assets/images/system/c/media/default-image.webp',
   image: ''
 };
 
