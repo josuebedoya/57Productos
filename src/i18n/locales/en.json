@@ -24,6 +24,13 @@
         "theme": "Theme",
         "copy": "Copy"
       }
+    },
+    "icons": {
+      "errors": {
+        "iconNotFound": "Icon {{iconName}} not found.",
+        "iconNameRequired": "Icon name is required.",
+        "versionLibNotFound": "Version v{{version}} is not available in family '{{family}}' of react-icons library."
+      }
     }
   }
 }

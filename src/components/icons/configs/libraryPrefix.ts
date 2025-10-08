@@ -1,0 +1,41 @@
+const libraryIcons = {
+  fa: {
+    default: () => import("react-icons/fa"),
+    v6: () => import("react-icons/fa6"),
+  },
+  hi: {
+    default: () => import("react-icons/hi"),
+    v2: () => import("react-icons/hi2"),
+  },
+  io: {
+    default: () => import("react-icons/io"),
+    v5: () => import("react-icons/io5"),
+  },
+  ai: {default: () => import("react-icons/ai")},
+  bi: {default: () => import("react-icons/bi")},
+  bs: {default: () => import("react-icons/bs")},
+  ci: {default: () => import("react-icons/ci")},
+  cg: {default: () => import("react-icons/cg")},
+  di: {default: () => import("react-icons/di")},
+  fc: {default: () => import("react-icons/fc")},
+  fi: {default: () => import("react-icons/fi")},
+  gi: {default: () => import("react-icons/gi")},
+  go: {default: () => import("react-icons/go")},
+  gr: {default: () => import("react-icons/gr")},
+  im: {default: () => import("react-icons/im")},
+  lia: {default: () => import("react-icons/lia")},
+  lu: {default: () => import("react-icons/lu")},
+  md: {default: () => import("react-icons/md")},
+  pi: {default: () => import("react-icons/pi")},
+  ri: {default: () => import("react-icons/ri")},
+  rx: {default: () => import("react-icons/rx")},
+  si: {default: () => import("react-icons/si")},
+  sl: {default: () => import("react-icons/sl")},
+  tb: {default: () => import("react-icons/tb")},
+  tfi: {default: () => import("react-icons/tfi")},
+  ti: {default: () => import("react-icons/ti")},
+  vsc: {default: () => import("react-icons/vsc")},
+  wi: {default: () => import("react-icons/wi")},
+} as const;
+
+export default libraryIcons;
