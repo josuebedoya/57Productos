@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import ReactPaginate from "react-paginate";
 import type {PaginationProps} from "./types.d.ts";
-import {AngleLeftIcon, AngleRightIcon} from "@/assets/icons.tsx";
 import {gVar} from "@/utils/gVar.js";
+import Icon from "@/components/icons/index.js";
 
 const Pagination: React.FC<PaginationProps> = (
   {
@@ -10,8 +10,8 @@ const Pagination: React.FC<PaginationProps> = (
     breakLabel = '...',
     nextLabel = '',
     previousLabel = '',
-    nextIcon = <AngleRightIcon/>,
-    previousIcon = <AngleLeftIcon/>,
+    nextIcon = 'IoIosArrowForward',
+    previousIcon = 'IoIosArrowBack',
     previousClassName = '',
     nextClassName = '',
     breakLinkClassName = '',
@@ -61,8 +61,8 @@ const Pagination: React.FC<PaginationProps> = (
         breakLabel={breakLabel}
         previousAriaLabel={previousLabel}
         nextAriaLabel={nextLabel}
-        nextLabel={<>{nextLabel} {nextIcon}</>}
-        previousLabel={<>{previousIcon} {previousLabel}</>}
+        nextLabel={<>{nextLabel} <Icon name={previousIcon}/> </>}
+        previousLabel={<><Icon name={previousIcon}/> {previousLabel}</>}
 
         containerClassName='flex justify-between items-center max-w-max relative overflow-y-hidden'
         disabledClassName={`disabled`}

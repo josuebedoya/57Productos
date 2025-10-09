@@ -106,8 +106,8 @@ const CodeBlocks: React.FC<CodeProps> = (
           <IconController
             label={t('components.code.controller.copy')}
             active={copied}
-            icon='CopyCheckIcon'
-            iconActive='CopyIcon'
+            icon='LuCopyCheck'
+            iconActive='FaCopy'
             isDark={isDark}
             className={copyClass}
             fallback={() => (value && !copied) && copyHandleAnimating()}

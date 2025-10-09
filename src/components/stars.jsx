@@ -1,5 +1,5 @@
-import { StarLineIcon, StarIcon } from '@/assets/icons';
 import { useState } from 'react';
+import Icon from "@/components/icons/index.js";
 
 const Stars = ( { classIcons } ) => {
   const [ select, setSelect ] = useState( 0 );
@@ -24,22 +24,14 @@ const Stars = ( { classIcons } ) => {
       onMouseLeave={ handleMouseLeave }
      >
        { [ 1, 2, 3, 4, 5 ].map( ( i ) => (
-        hover >= i || select >= i ? (
-         <StarIcon
+         <Icon
+          name={ hover >= i || select >= i ? 'FaStar' : 'FaRegStar' }
           key={ i }
           onClick={ () => handleSelect( i ) }
           onMouseEnter={ () => handleMouseEnter( i ) }
-          classIcons={ classIcons }
-         />
-        ) : (
-         <StarLineIcon
-          key={ i }
-          onClick={ () => handleSelect( i ) }
-          onMouseEnter={ () => handleMouseEnter( i ) }
-          classIcons={ classIcons }
-         />
+          classNaMe={ classIcons }/>
         )
-       ) ) }
+       ) }
      </div>
    </>
   );

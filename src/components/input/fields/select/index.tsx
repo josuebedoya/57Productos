@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import type {OptionsProps, SelectProps} from './types.ts';
 import {gVar} from "@/utils/gVar.js";
-import {AngleRightIcon} from '@/assets/icons.tsx'
 import clsx from "clsx";
+import Icon from "@/components/icons/index.js";
 
 const Select: React.FC<SelectProps> = (
   {
@@ -75,9 +75,7 @@ const Select: React.FC<SelectProps> = (
 
         {!rest?.multiple && <span
          className={clsx('right-2 order-1 absolute', open ? 'rotate-90' : 'rotate-0', selectStyles, '!w-auto max-w-max')}>
-        {
-          icon ? icon : <AngleRightIcon/>
-        }
+          <Icon name={icon || 'IoIosArrowForward'}/>
       </span>}
       </div>
     </div>

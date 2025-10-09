@@ -1,10 +1,13 @@
 import { useRef, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import Button from './button/index.tsx';
-import { ExitArrowIcon } from '@/assets/icons';
+import Icon from "@/components/icons/index.js";
 
-const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, animationExit, type = 3 , children,
-                        withButtonClose = true} ) => {
+const Modal = (
+ {
+   isOpen, onClose, iconClose = 'IoMdExit', classModal, animationEntrance,
+   animationExit, type = 3, children, withButtonClose = true
+ } ) => {
   const modalRef = useRef( null );
   const [ showing, setShowing ] = useState( isOpen );
 
@@ -20,12 +23,12 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
 
   useEffect( () => {
     // Open Modal
-    if(isOpen) setShowing(isOpen);
+    if ( isOpen ) setShowing( isOpen );
 
     //Disabled Scroll Window
-      const preventScroll = (event) => event.preventDefault();
-      // isOpen ? document.body.addEventListener("wheel", preventScroll, { passive: false })
-      //  : document.body.removeEventListener("wheel", preventScroll);
+    const preventScroll = ( event ) => event.preventDefault();
+    // isOpen ? document.body.addEventListener("wheel", preventScroll, { passive: false })
+    //  : document.body.removeEventListener("wheel", preventScroll);
 
     //interval to prevent onClose from being executed once at startup
     let waitingTime;
@@ -38,7 +41,7 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
     return () => {
       clearTimeout( waitingTime );
       window.removeEventListener( 'click', clickOutside );
-      window.removeEventListener("wheel", preventScroll);
+      window.removeEventListener( "wheel", preventScroll );
     };
 
   }, [ isOpen, clickOutside ] );
@@ -54,7 +57,7 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
   if ( !showing ) return null;
 
   switch ( type ) {
-    // Left
+   // Left
     case( 1 ):
       return ReactDOM.createPortal( <div
        className={ `${ classContainer } ${ isOpen ? animationEntrance || 'animate-fade-in' : animationExit || 'animate-fade-out' }` }
@@ -64,9 +67,9 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
            className={ `bg-white modal-content w-full max-w-xs md:max-w-lg x-w-lg h-screen py-10 px-4 ${ classModal } max-h-full-vh` }
            ref={ modalRef }
            onClick={ handleModalClick }>
-            {withButtonClose && (
+            { withButtonClose && (
              <div className='bnt-close flex justify-end'>
-               <Button icon={ iconClose ? iconClose : <ExitArrowIcon classIcons='cursor-pointer'/> }
+               <Button icon={ <Icon name={ iconClose }/> }
                        onClick={ onClose }/>
              </div>
             ) }
@@ -84,9 +87,9 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
            className={ `bg-white modal-content w-full max-w-xs md:max-w-lg x-w-lg h-screen py-10 px-4 ${ classModal } max-h-full-vh` }
            ref={ modalRef }
            onClick={ handleModalClick }>
-            {withButtonClose && (
+            { withButtonClose && (
              <div className='bnt-close flex justify-end'>
-               <Button icon={ iconClose ? iconClose : <ExitArrowIcon classIcons='cursor-pointer'/> }
+               <Button icon={ <Icon name={ iconClose }/> }
                        onClick={ onClose }/>
              </div>
             ) }
@@ -106,9 +109,9 @@ const Modal = ( { isOpen, onClose, iconClose, classModal, animationEntrance, ani
            onClick={ handleModalClick }
           >
             <div className='body'>
-              {withButtonClose && (
+              { withButtonClose && (
                <div className='bnt-close flex justify-end'>
-                 <Button icon={ iconClose ? iconClose : <ExitArrowIcon classIcons='cursor-pointer'/> }
+                 <Button icon={ <Icon name={ iconClose }/> }
                          onClick={ onClose }/>
                </div>
               ) }

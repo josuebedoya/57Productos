@@ -4,7 +4,7 @@ import { Path_page } from '@/routes.jsx';
 import { TextAnimatedWrite } from '@/components/textAnimatedWrite.jsx'
 import { Grafic } from '@/pages/home/components/grafic.jsx'
 import Button from '@/components/button/index.tsx'
-import { AngleRightIcon } from '@/assets/icons.jsx'
+import Icon from "@/components/icons/index.js";
 
 const Blog = () => {
 
@@ -38,7 +38,7 @@ const Blog = () => {
          <Button
           classes='btn-go-to-services family-oswald tracking-widest max-[1024px]:text-15'
           size='lg'
-          icon={ <AngleRightIcon classIcons='icon'/> }
+          icon={ <Icon name='IoIosArrowForward' className='icon'/> }
           iconRight={ true }
           onClick={ GotoServices }>
            Navegar blog

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { AngleBottomIcon, AngleRightIcon } from '@/assets/icons.jsx';
+import Icon from "@/components/icons/index.js";
 
 const Collapsible = ( {
                         items, iconClose, iconShow, classItem = '', classItemActive = 'bg-gray-100',
@@ -67,7 +67,7 @@ const Collapsible = ( {
             onClick={ () => handleOpen( index ) }
            >
              <h4 className='title'>{ item.title }</h4>
-             { open[ index ] === true ? iconClose || <AngleBottomIcon/> : iconShow || <AngleRightIcon/> }
+             <Icon name={ open[ index ] === true ? iconClose || 'IoIosArrowDown' : iconShow || 'IoIosArrowForward' }/>
            </div>
            <div
             ref={ ( el ) => ( contentRefs.current[ index ] = el ) }

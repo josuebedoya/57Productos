@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { TextCustom } from '@/components/textCustom.jsx'
-import { AngleBottomIcon, AngleRightIcon } from '@/assets/icons.jsx'
+import Icon from "@/components/icons/index.js";
 
 const MissionAndVision = () => {
   const [ open, setOpen ] = useState( null );
@@ -28,7 +28,7 @@ const MissionAndVision = () => {
                   className='flex justify-between items-center w-full'>
             <TextCustom title={ content[ 0 ].title } lineTitle linePosition='start'
                         classTitle='textPrimary capitalize text-xl text-2xl text-shadow-black'/>
-            { open === 0 ? <AngleBottomIcon/> : <AngleRightIcon/> }
+            <Icon name={ open === 0 ? 'IoIosArrowDown' : 'IoIosArrowForward' }/>
           </button>
           {
            open === 0 && (
@@ -46,7 +46,7 @@ const MissionAndVision = () => {
                   className='flex justify-between items-center w-full'>
             <TextCustom title={ content[ 1 ].title } lineTitle linePosition='start'
                         classTitle=' textPrimary capitalize text-2xl text-xl text-shadow-black'/>
-            { open === 1 ? <AngleBottomIcon/> : <AngleRightIcon/> }
+            <Icon name={ open === 1 ? 'IoIosArrowDown' : 'IoIosArrowForward' }/>
           </button>
           {
            open === 1 && (

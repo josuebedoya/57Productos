@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect, } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { AddIcon, CartDown, CartIcon, RemoveIcon, TicketMoney, TrashIcon, TrashOpenIcon } from '@/assets/icons';
 import Button from './button/index.tsx';
 import { Path_page } from '@/routes.jsx';
 import { Slug } from "@/utils/handleText.js";
 import { useCart } from '@/context/cart.jsx';
 import Media from '@/components/media/index.tsx';
 import Tooltip from "@/components/tooltip/index.tsx";
+import Icon from "@/components/icons/index.js";
 
 const Cart = ( { close } ) => {
   const navigate = useNavigate();
@@ -74,7 +74,9 @@ const Cart = ( { close } ) => {
      <div ref={ modalRef }
           className='cart flex items-center relative bg-Primary hover:bg-transparent rounded-full border border-Primary hover:border hover:border-Secondary d duration-150 group/cart cursor-pointer z-[100]'
           role='show-cart'>
-       <CartIcon classIcons='text-white duration-150 cursor-pointer group-hover/cart:text-Secondary'/>
+       <Icon
+        name='AiOutlineShoppingCart'
+        className='text-white duration-150 cursor-pointer group-hover/cart:text-Secondary'/>
        { totalAmountProducts > 0 && !openModal && (
         <div className='absolute top-five right-five flex items-center justify-center translate-x-1/2 -translate-y-1/2'>
               <span
@@ -118,13 +120,13 @@ const Cart = ( { close } ) => {
                           <span className='price text-zinc-600'>${ item.price }</span>
                           <div className='item-amount family-oswald text-Primary flex justify-between'>
                             <i onMouseDown={ () => decrementAmount( item.id ) }>
-                              <RemoveIcon classIcons='cursor-pointer text-base'/>
+                              <Icon name='IoMdRemove' className='cursor-pointer text-base'/>
                             </i>
                             <span className='text-xs mx-1 max-w-12 overflow-hidden  text-ellipsis cursor-default'>
                                     x{ item.amount }
                                 </span>
                             <i onMouseDown={ () => incrementAmount( item.id ) }>
-                              <AddIcon classIcons='cursor-pointer text-base'/>
+                              <Icon name='IoIosAdd' className='cursor-pointer text-base'/>
                             </i>
                           </div>
                         </div>
@@ -140,7 +142,8 @@ const Cart = ( { close } ) => {
                           >
                             <i className='flex justify-center items-center'
                                onClick={ () => removeItem( item.id ) }>
-                              <CartDown classIcons='remove-item text-red-600 cursor-pointer hover:scale-110'/>
+                              <Icon name='TbShoppingCartDown'
+                                    className='remove-item text-red-600 cursor-pointer hover:scale-110'/>
                             </i>
                           </Tooltip>
                         </div>
@@ -153,7 +156,7 @@ const Cart = ( { close } ) => {
                  <Button
                   size='sm'
                   padding='md'
-                  classes='tracking-wider' iconRight icon={ <TicketMoney classIcons='text-lg'/> }
+                  classes='tracking-wider' iconRight icon={ <Icon name='PiMoneyWavyBold' className='text-lg'/> }
                   onClick={ () => {
                     goToPayments();
                     setOpenModal( false )
@@ -168,11 +171,8 @@ const Cart = ( { close } ) => {
                       onMouseLeave={ () => setIconDelete( false ) }
                       onClick={ () => removeAll() }
                    >
-                     {
-                       iconDelete ?
-                        <TrashOpenIcon classIcons='remove-item text-red-600 cursor-pointer hover:scale-110'/>
-                        : <TrashIcon classIcons='remove-item text-red-600 cursor-pointer hover:scale-110 '/>
-                     }
+                     <Icon name={ iconDelete ? 'FaTrashRestore' : 'FaTrash' }
+                           className='remove-item text-red-600 cursor-pointer hover:scale-110'/>
                    </i>
                  </Tooltip>
                </div>

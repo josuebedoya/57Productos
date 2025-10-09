@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom'
 import { TextCustom } from '@/components/textCustom.jsx'
 import mercadeo from '/assets/images/mercadeo.jpg'
-import  Button  from '@/components/button/index.tsx'
-import { ArrowRightIcon } from '@/assets/icons.jsx'
+import Button from '@/components/button/index.tsx'
 import { Path_page } from '@/routes.jsx'
+import Icon from "@/components/icons/index.js";
 
 const Chance = () => {
   const navigate = useNavigate();
@@ -46,7 +46,7 @@ const Chance = () => {
              </div>
              <div className='buttongotocontact mt-6 xl:mt-14'>
                <Button
-                icon={ <ArrowRightIcon/> }
+                icon={ <Icon name='FaArrowRight'/> }
                 iconRight={ true }
                 onClick={ functionGoToContact }
                 classes='btn-join family-oswald hover:scale-105'

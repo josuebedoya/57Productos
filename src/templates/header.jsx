@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { ProfileIcon, AngleBottomIcon } from '@/assets/icons';
 import logoBlack from '/logo-black.png';
 import logoWhite from '/logo-white.png';
 import { Search } from "@/components/search.jsx";
@@ -7,6 +6,7 @@ import { Cart } from '@/components/cart.jsx';
 import { Menu } from '@/components/menu/menu.jsx';
 import { Path_page } from '@/routes';
 import { Link } from "react-router-dom";
+import Icon from "@/components/icons/index.js";
 
 const menuItems = [
   { name: 'Inicio', url: Path_page.HOME },
@@ -104,7 +104,7 @@ const Header = () => {
            <div className='profile-section'>
              <Link to={ Path_page.AUTH.MAIN } target='_self' className='profile-section-icon text-white bg-Primary border border-Primary rounded-full p-2 flex items-center
               hover:bg-transparent hover:text-Secondary hover:border-Secondary transition duration-150'>
-               <ProfileIcon/>
+               <Icon name='GrUserSettings'/>
              </Link>
            </div>
          </div>
@@ -112,7 +112,7 @@ const Header = () => {
        {/* Icon Dropdown icons Mobile */ }
        <span
         className={ `${ showIcons ? 'mn:-translate-y-0 mn:delay-0 mn:h-5' : 'mn:translate-y-14 mn:delay-300 mn:h-8' } mn:absolute  duration-500 sm:hidden mx-auto w-full flex justify-center items-center bg-white` }
-        onClick={ handleShowIconsMobile }> < AngleBottomIcon/></span>
+        onClick={ handleShowIconsMobile }> <Icon name='IoIosArrowDown'/></span>
      </div>
    </header>
   );

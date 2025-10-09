@@ -2,8 +2,8 @@ import type {ReactPaginateProps} from "react-paginate";
 import type {ReactNode} from "react";
 
 export interface PaginationProps extends ReactPaginateProps {
-  nextIcon?: ReactNode;
-  previousIcon?: ReactNode;
+  nextIcon?: string;
+  previousIcon?: string;
   variant?: 'outline' | 'solid' | 'flat';
   variantActive?: 'outline' | 'solid' | 'flat';
   color?: string;

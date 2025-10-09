@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import type {StarsProps} from "@/components/stars/types.js";
-import {StarIcon, StarLineIcon} from "@/assets/icons.tsx";
 import clsx from "clsx";
 import {gVar} from "@/utils/gVar.js";
+import Icon from "@/components/icons/index.js";
 
 const Stars: React.FC<StarsProps> = (
   {
@@ -46,25 +46,16 @@ const Stars: React.FC<StarsProps> = (
     <div className='stars'>
       <div className={clsx('flex gap-1 my-1', className)}>
         {[...Array(quantity)]?.map((_, i) => (
-          variant === 'outlined' ?
-            <StarLineIcon
-              key={i}
-              id={`${i}`}
-              className={clsx(starStyles, classNameStar)}
-              aria-label={`Star ${i}`}
-              aria-disabled={readOnly}
-              aria-checked={i <= activeIndex}
-              onClick={() => handleOnchangeActive(i)}
-            /> :
-            <StarIcon
-              key={i}
-              id={`${i}`}
-              className={clsx(starStyles, classNameStar)}
-              aria-label={`Star ${i}`}
-              aria-disabled={readOnly}
-              aria-checked={i <= activeIndex}
-              onClick={() => handleOnchangeActive(i)}
-            />
+          <Icon
+            name={variant === 'outlined' ? 'FaStar' : 'FaRegStar'}
+            key={i}
+            id={`${i}`}
+            className={clsx(starStyles, classNameStar)}
+            aria-label={`Star ${i}`}
+            aria-disabled={readOnly}
+            aria-checked={i <= activeIndex}
+            onClick={() => handleOnchangeActive(i)}
+          />
         ))}
       </div>
     </div>

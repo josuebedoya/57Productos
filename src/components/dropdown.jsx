@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { CloseIcon } from "@/assets/icons.jsx";
+import Icon from "@/components/icons/index.js";
 
 const Dropdown = ( {
                      show, classDropdown, animationEntrance, animationExit, closed,
-                     withButton, closeIcon, position = 'bottom', children
+                     withButton, closeIcon = 'IoMdClose', position = 'bottom', children
                    } ) => {
 
   const defaultClass = 'top-12 right-0 w-64 p-2 border border-gray-200 bg-white';
@@ -60,7 +60,7 @@ const Dropdown = ( {
           <div className="header border-b border-gray-200 text-end text-lg">
             <button className="mb-2 text-Primary hover:text-Secondary duration-200"
                     onClick={ closed }>
-              { closeIcon || <CloseIcon/> }
+              <Icon name={ closeIcon }/>
             </button>
           </div>
          }

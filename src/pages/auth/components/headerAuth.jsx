@@ -1,5 +1,4 @@
 import Tooltip from "@/components/tooltip/index.tsx";
-import { ExitArrowIcon, SettingIcon } from "@/assets/icons.jsx";
 import Media from '@/components/media/index.tsx';
 import { Money } from "@/pages/auth/components/money.jsx";
 import { useSettings } from "@/context/settings.jsx";
@@ -8,6 +7,7 @@ import { useState } from "react";
 import { clearStorage } from "@/utils/storage.js";
 import { Path_page as path } from "@/routes.jsx";
 import { WarningModal } from "@/components/warningModal.jsx";
+import Icon from "@/components/icons/index.js";
 
 const HeaderAuth = () => {
   const navigate = useNavigate();
@@ -51,7 +51,7 @@ const HeaderAuth = () => {
                         spaceX={ 4 }
                         contentClass='text-nowrap text-sm family-oswald'
                >
-                 <ExitArrowIcon classIcons='cursor-pointer text-xl rotate-180' onClick={ logout }/>
+                 <Icon name='IoMdExit' className='cursor-pointer text-xl rotate-180' onClick={ logout }/>
                </Tooltip>
                <Tooltip content='Ajustes'
                         position='right'
@@ -59,8 +59,9 @@ const HeaderAuth = () => {
                         spaceX={ 4 }
                         contentClass='text-nowrap text-sm family-oswald'
                >
-                 <SettingIcon classIcons='cursor-pointer text-xl  hover:animate-spin hover:text-Secondary '
-                              onClick={ () => navigate( path.AUTH.EDIT_INFO ) }/>
+                 <Icon name='MdOutlineSettings'
+                       className='cursor-pointer text-xl  hover:animate-spin hover:text-Secondary'
+                       onClick={ () => navigate( path.AUTH.EDIT_INFO ) }/>
                </Tooltip>
              </div>
              <div className='user-info border-l-2 border-gray-300 pl-4 flex items-center'>

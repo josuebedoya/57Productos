@@ -1,5 +1,5 @@
 import  { useEffect, useState } from "react";
-import { BoxOpen } from "@/assets/icons.jsx";
+import Icon from "@/components/icons/index.js";
 
 const WarningModal = ({type, timeClose = 5000, isFloating, bgColor = 'bg-Secondary', itemClass, children}) => {
   const [show, setShow] = useState(true);
@@ -16,7 +16,7 @@ const WarningModal = ({type, timeClose = 5000, isFloating, bgColor = 'bg-Seconda
   if( !isFloating ) {
     return( <div className={`text-white ${ bgColor } ${ itemClass ? itemClass : '' } flex items-center  gap-4 max-w-max px-6 py-3 text-15 tracking-wide mx-auto`}>
       <span>  {children } </span>
-      <BoxOpen classIcons='icon text-lg animate-shaking'/>
+      <Icon name={ 'FaDropbox'} className='icon text-lg animate-shaking'/>
     </div>);
   }
 

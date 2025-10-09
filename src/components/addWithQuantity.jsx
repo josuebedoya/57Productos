@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Button from './button/index.tsx';
-import { AddCircleIcon, CartIcon, RemoveCircleIcon } from '@/assets/icons.jsx';
 import Input from "@/components/input/fields/input/index.tsx"
+import Icon from "@/components/icons/index.js";
 
 const AddWithQuantity = ( { functionAdd, handleAmount } ) => {
   const [ changeIconBtnAdd, setChangeIconBtnAdd ] = useState( false );
@@ -51,8 +51,8 @@ const AddWithQuantity = ( { functionAdd, handleAmount } ) => {
           onMouseDown={ decrementAmount }
           onMouseUp={ stopChangingAmount }
          >
-           <RemoveCircleIcon classIcons={ !changeIconBtnRemove ? 'text-Primary' : 'textSecondary duration-150' }/>
-
+           <Icon name='IoMdRemoveCircle'
+                 className={ !changeIconBtnRemove ? 'text-Primary' : 'textSecondary duration-150' }/>
          </Button>
          <Input value={ amount } type='number' onChange={ onChangeAmount } minLength={ 0 } className='input-amount'/>
          <Button
@@ -67,11 +67,12 @@ const AddWithQuantity = ( { functionAdd, handleAmount } ) => {
           onMouseDown={ incrementAmount }
           onMouseUp={ stopChangingAmount }
          >
-           <AddCircleIcon classIcons={ !changeIconBtnAdd ? 'text-Primary' : 'textSecondary duration-150' }/>
+           <Icon name='IoMdAddCircle'
+                 className={ !changeIconBtnAdd ? 'text-Primary' : 'textSecondary duration-150' }/>
          </Button>
        </div>
        <div>
-         <Button classes='btn-add' padding='lg' icon={ <CartIcon/> } onClick={ () => {
+         <Button classes='btn-add' padding='lg' icon={ <Icon name='AiOutlineShoppingCart'/> } onClick={ () => {
            functionAdd();
            setAmount( 1 )
          } }>

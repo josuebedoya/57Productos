@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import type {InputProps} from "../types.ts";
 import {gVar} from "@/utils/gVar.js";
-import {MarkIcon} from '@/assets/icons.tsx'
 import clsx from "clsx";
+import Icon from "@/components/icons/index.js";
 
 const CheckBox: React.FC<InputProps> = (
   {
@@ -55,7 +55,7 @@ const CheckBox: React.FC<InputProps> = (
           name={name}
         />
         <span className={clsx('check-icon absolute text-center pointer-events-none duration-300', iconColor)}>
-        {props.iconCheckbox ? props.iconCheckbox : <MarkIcon/>}
+          <Icon name={props.iconCheckbox || 'GiCheckMark'}/>
       </span>
       </div>
     </div>

@@ -1,10 +1,10 @@
 import React, {useRef} from 'react';
 import type {PaginateProps} from "@/components/pagination/type.js";
-import {AngleLeftIcon, AngleRightIcon} from "@/assets/icons.tsx";
 import {usePaginate} from "@/components/pagination/hooks/usePaginate.js";
 import PaginateItem from "@/components/pagination/components/paginateItem.tsx";
 import PaginateButton from "@/components/pagination/components/paginateButton.js";
 import clsx from "clsx";
+import Icon from "@/components/icons/index.js";
 
 const Paginate: React.FC<PaginateProps> = (
   {
@@ -14,9 +14,9 @@ const Paginate: React.FC<PaginateProps> = (
     defaultSelected = 2,
     linksSpace = 1,
     linkClassName = '',
-    nextIcon = <AngleRightIcon/>,
+    nextIcon = 'IoIosArrowForward',
     prevLabel,
-    prevIcon = <AngleLeftIcon/>,
+    prevIcon = 'IoIosArrowBack',
     nextLabel,
     rounded = 'full',
     padding = 2,
@@ -58,7 +58,7 @@ const Paginate: React.FC<PaginateProps> = (
     <div className='paginate'>
       <div className='flex items-center justify-center'>
         <PaginateButton
-          icon={prevIcon}
+          icon={<Icon name={prevIcon}/>}
           label={prevLabel}
           onClick={goToBack}
           className={linkClassName}
@@ -90,7 +90,7 @@ const Paginate: React.FC<PaginateProps> = (
         </div>
 
         <PaginateButton
-          icon={nextIcon}
+          icon={<Icon name={nextIcon}/>}
           label={nextLabel}
           onClick={goToNext}
           className={linkClassName}

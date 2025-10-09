@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useFormatMoney } from "@/context/formatMoney.jsx";
-import { AlertIcon, CloseIcon, EyeCloseIcon, EyeOpenIcon, PencilIcon, SettingIcon } from '@/assets/icons.jsx';
 import Input from '@/components/input/fields/input/index.tsx';
 import { getSetting } from "@/settings.js";
 import { useSettings } from "@/context/settings.jsx";
+import Icon from "@/components/icons/index.js";
 
 const Money = () => {
   const amount = getSetting( 'user.money' );
@@ -67,12 +67,13 @@ const Money = () => {
    <div className='amountMoney relative'>
      <div className='top-section flex justify-between mb-2'>
        <h3>Tu saldo:</h3>
-       <SettingIcon classIcons='hover:animate-spin hover:text-Secondary cursor-pointer'
-                    onClick={ () => setOpenModalAddRate( !openModalAddRate ) }/>
+       <Icon name='MdOutlineSettings'
+             className='hover:animate-spin hover:text-Secondary cursor-pointer'
+             onClick={ () => setOpenModalAddRate( !openModalAddRate ) }/>
      </div>
      <div className='flex items-center gap-2'>
        <i onClick={ () => setShowMoney( !showMoney ) }>
-         { showMoney ? <EyeCloseIcon classIcons='close'/> : <EyeOpenIcon classIcons='open'/> }
+         { showMoney ? <Icon name='PiEyeSlashDuotone' className='close'/> : <Icon name='FaRegEye' className='open'/> }
        </i>
 
        { !showMoney ? amountCharacters : (
@@ -100,7 +101,7 @@ const Money = () => {
                    <div className='modal-top flex justify-between gap-4'>
                      <h2 className='title text-xs tracking-wider mb-2'>DIVISAS INVALIDAS:</h2>
                      <i onClick={ () => setOpenModal( !openModal ) }>
-                       <CloseIcon classIcons='cursor-pointer'/>
+                       <Icon name='IoMdClose' className='cursor-pointer'/>
                      </i>
                    </div>
 
@@ -111,7 +112,7 @@ const Money = () => {
                           <li className='rate text-red-600 font-semibold marker:underline text-xs'>
                             { invalid }
                           </li>
-                          <PencilIcon classIcons='cursor-pointer text-xs text-Primary'/>
+                          <Icon name='FaPencilAlt' className='cursor-pointer text-xs text-Primary'/>
                         </ul>
                        ) )
                      }
@@ -122,7 +123,9 @@ const Money = () => {
             ) : (
              <i onClick={ () => setOpenModal( !openModal ) }
                 title='Algunas divisas ingresadas no son válidas. Haz clic para ver más detalles.'>
-               <AlertIcon classIcons='icon-alert cursor-pointer text-red-700 font-bold text-xl'/>
+               <Icon name='IoAlert'
+                     className='icon-alert cursor-pointer text-red-700 font-bold text-xl'
+                     versionFamily={ 5 }/>
              </i>
             )
            )

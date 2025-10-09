@@ -10,7 +10,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   variant?: 'solid' | 'outline' | 'flat';
   color?: string;
   padding?: string;
-  iconCheckbox?: ReactNode;
+  iconCheckbox?: string;
   showValueInRange?: boolean;
   dualRange?: boolean;
   sizeValueRange?: string;

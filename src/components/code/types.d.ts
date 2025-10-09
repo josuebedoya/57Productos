@@ -1,4 +1,3 @@
-import * as Icons from "@/assets/icons.tsx";
 import {langs} from '@uiw/codemirror-extensions-langs';
 import React from "react";
 
@@ -6,8 +5,8 @@ export type IconsControllerProps = {
   label?: string;
   children?: React.ReactNode;
   active: boolean;
-  icon: keyof typeof Icons;
-  iconActive: keyof typeof Icons;
+  icon: string;
+  iconActive:string;
   isDark: boolean;
   className: string;
   fallback?: (e: any) => void;

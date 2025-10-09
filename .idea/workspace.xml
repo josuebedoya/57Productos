@@ -4,14 +4,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="+ Added files default types">
+    <list default="true" id="92db5605-ee67-4929-a8ab-70dcc706a9ba" name="Changes" comment="+ Add CuInstagramColor component and update libraryPrefix for custom icons">
+      <change afterPath="$PROJECT_DIR$/src/components/icons/lib/cu/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/numberControl/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/numberControl/types.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/addWithQuantity.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/addWithQuantity.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/code/components/iconController.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/code/components/iconController.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/code/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/code/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/code/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/code/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/collapsible.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collapsible.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dropdown.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/components/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icons/components/loading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icons/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/fields/input/components/checkbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/fields/input/components/checkbox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/fields/input/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/fields/input/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/fields/select/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/fields/select/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/fields/select/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/fields/select/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/paginate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/paginate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/paginate/index2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/paginate/index2.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/paginate/type.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/paginate/type.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/paginate/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/paginate/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/product/modalProduct.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/modalProduct.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/product/product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/spin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spin.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/stars.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/stars.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/stars/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/stars/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tooltip/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tooltip/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/warningModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/warningModal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/auth/components/headerAuth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/components/headerAuth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/auth/components/money.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/components/money.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/auth/pages/settingsInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/pages/settingsInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/auth/partials/UserInformation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/partials/UserInformation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/comments/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/comments/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/contact/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/templates/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/templates/slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/components/grafic.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/components/grafic.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/components/opinionItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/components/opinionItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/templates/blog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/templates/blog.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/templates/categoriesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/templates/categoriesList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/templates/chance.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/templates/chance.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/templates/opinions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/templates/opinions.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/us/templates/misionAndVision.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/us/templates/misionAndVision.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/header.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,11 +186,11 @@
       <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Imagina\Desktop\YO\57Productos\src\components\media\helpers" />
-      <recent name="C:\Users\Imagina\Desktop\YO\57Productos\src\context" />
-      <recent name="C:\Users\Imagina\PhpstormProjects\57-productos\src\components\button" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts" />
-      <recent name="C:\Users\USUARIO\Desktop\Practices\josue-practices\shopp-online\src\layouts\auth\templates" />
+      <recent name="C:\Users\Imagina\Desktop\YO\57Productos\src\components\icons\lib\components" />
+      <recent name="C:\Users\Imagina\Desktop\YO\57Productos\public\assets\images\system" />
+      <recent name="C:\Users\Imagina\Desktop\YO\57Productos\public\assets\images\system\c\icon" />
+      <recent name="C:\Users\Imagina\Desktop\YO\57Productos\public\assets\images\system\c\media" />
+      <recent name="C:\Users\Imagina\Desktop\YO\57Productos\public\assets\images\system\c" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -263,143 +305,13 @@
       <workItem from="1758664891461" duration="15924000" />
       <workItem from="1758739518411" duration="6130000" />
       <workItem from="1759158515105" duration="26144000" />
-      <workItem from="1759242052232" duration="17427000" />
-    </task>
-    <task id="LOCAL-00070" summary="↔ Extension utils files | ↔ getMedia method">
-      <option name="closed" value="true" />
-      <created>1743010769640</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1743010769640</updated>
-    </task>
-    <task id="LOCAL-00071" summary="- Media files extensioon">
-      <option name="closed" value="true" />
-      <created>1743010815525</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1743010815525</updated>
-    </task>
-    <task id="LOCAL-00072" summary="+ new images products">
-      <option name="closed" value="true" />
-      <created>1743010860133</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1743010860133</updated>
-    </task>
-    <task id="LOCAL-00073" summary="- innecesary for">
-      <option name="closed" value="true" />
-      <created>1743015916016</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1743015916016</updated>
-    </task>
-    <task id="LOCAL-00074" summary="+ Refactor Struture Templates">
-      <option name="closed" value="true" />
-      <created>1743706201382</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1743706201382</updated>
-    </task>
-    <task id="LOCAL-00075" summary="+ Functions clear &amp;&amp; removeItem to storage.js | + storage to cart context  | ↔ fix cart component">
-      <option name="closed" value="true" />
-      <created>1748373691688</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1748373691688</updated>
-    </task>
-    <task id="LOCAL-00076" summary="↔ Fix root id modal">
-      <option name="closed" value="true" />
-      <created>1748383871528</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1748383871528</updated>
-    </task>
-    <task id="LOCAL-00077" summary="+ Add CopyRight Component | ↔ fix settings functions">
-      <option name="closed" value="true" />
-      <created>1748446287774</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1748446287774</updated>
-    </task>
-    <task id="LOCAL-00078" summary="+ Add Amount in settings">
-      <option name="closed" value="true" />
-      <created>1748531087914</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1748531087914</updated>
-    </task>
-    <task id="LOCAL-00079" summary="+ Add session login to storage">
-      <option name="closed" value="true" />
-      <created>1748546380878</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1748546380879</updated>
-    </task>
-    <task id="LOCAL-00080" summary="↔ use rate with storage settings">
-      <option name="closed" value="true" />
-      <created>1748546505571</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1748546505571</updated>
-    </task>
-    <task id="LOCAL-00081" summary="↔ Change name the format amount function ---- Before: finalAmount __ After: formatMoney ----">
-      <option name="closed" value="true" />
-      <created>1748550744775</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1748550744775</updated>
-    </task>
-    <task id="LOCAL-00082" summary="+add attributes dom">
-      <option name="closed" value="true" />
-      <created>1748613945835</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1748613945835</updated>
-    </task>
-    <task id="LOCAL-00083" summary="+ Add Metas component for SEO in multiple pages">
-      <option name="closed" value="true" />
-      <created>1750267116953</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1750267116954</updated>
-    </task>
-    <task id="LOCAL-00084" summary="+ Add package-lock.json to .gitignore">
-      <option name="closed" value="true" />
-      <created>1750267170511</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1750267170511</updated>
-    </task>
-    <task id="LOCAL-00085" summary="↔ Fix import of metas component">
-      <option name="closed" value="true" />
-      <created>1750267944165</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1750267944165</updated>
-    </task>
-    <task id="LOCAL-00086" summary="+ Add Collapsible component">
-      <option name="closed" value="true" />
-      <created>1750287355900</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1750287355900</updated>
+      <workItem from="1759242052232" duration="26510000" />
+      <workItem from="1759500845700" duration="1508000" />
+      <workItem from="1759504587949" duration="9671000" />
+      <workItem from="1759760187743" duration="51059000" />
+      <workItem from="1759955180062" duration="2266000" />
+      <workItem from="1759957645721" duration="6967000" />
+      <workItem from="1760020420261" duration="14213000" />
     </task>
     <task id="LOCAL-00087" summary="Remove console log and unused effect in settingsInfo component">
       <option name="closed" value="true" />
@@ -657,11 +569,152 @@
       <option name="project" value="LOCAL" />
       <updated>1759265464263</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="↔ Fix usage Media">
+      <option name="closed" value="true" />
+      <created>1759265916659</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1759265916659</updated>
+    </task>
+    <task id="LOCAL-00120" summary="-- Remove back Media Component">
+      <option name="closed" value="true" />
+      <created>1759265999974</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1759265999974</updated>
+    </task>
+    <task id="LOCAL-00121" summary="+ Add name Attribute Required">
+      <option name="closed" value="true" />
+      <created>1759522514898</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1759522514898</updated>
+    </task>
+    <task id="LOCAL-00122" summary="↔ fix Class input   &amp;&amp; Order in checkbox">
+      <option name="closed" value="true" />
+      <created>1759523761234</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1759523761234</updated>
+    </task>
+    <task id="LOCAL-00123" summary="↔ fix basic inputs, use a hook to handle styles">
+      <option name="closed" value="true" />
+      <created>1759525018824</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1759525018824</updated>
+    </task>
+    <task id="LOCAL-00124" summary="+ Use clsx to inputs components">
+      <option name="closed" value="true" />
+      <created>1759526103957</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1759526103957</updated>
+    </task>
+    <task id="LOCAL-00125" summary="- Remove log from function">
+      <option name="closed" value="true" />
+      <created>1759761015786</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1759761015786</updated>
+    </task>
+    <task id="LOCAL-00126" summary="+ Added default name prop to Basic and CheckBox components">
+      <option name="closed" value="true" />
+      <created>1759778090978</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1759778090978</updated>
+    </task>
+    <task id="LOCAL-00127" summary="+ Added function to formatted value tel">
+      <option name="closed" value="true" />
+      <created>1759782680065</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1759782680065</updated>
+    </task>
+    <task id="LOCAL-00128" summary="+ Added prop to input, +Added Number-Tel component, + Added main input index file">
+      <option name="closed" value="true" />
+      <created>1759782758081</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1759782758081</updated>
+    </task>
+    <task id="LOCAL-00129" summary="↔ Refactor function to helper">
+      <option name="closed" value="true" />
+      <created>1759852395085</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1759852395085</updated>
+    </task>
+    <task id="LOCAL-00130" summary="+ Added code Compoennt + Update codeMirror library">
+      <option name="closed" value="true" />
+      <created>1759858600059</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1759858600059</updated>
+    </task>
+    <task id="LOCAL-00131" summary="+ Add language selection feature and update code styles">
+      <option name="closed" value="true" />
+      <created>1759867421493</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1759867421493</updated>
+    </task>
+    <task id="LOCAL-00132" summary="Update default image paths to new media directory">
+      <option name="closed" value="true" />
+      <created>1759956125040</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1759956125040</updated>
+    </task>
+    <task id="LOCAL-00133" summary="+ Add Icon component with error handling, loading state &amp;&amp; dinamic load">
+      <option name="closed" value="true" />
+      <created>1759964568520</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1759964568520</updated>
+    </task>
+    <task id="LOCAL-00134" summary="↔ Separate helper to get lib icons &amp;&amp; add type to libraryPrefix">
+      <option name="closed" value="true" />
+      <created>1760023274829</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1760023274830</updated>
+    </task>
+    <task id="LOCAL-00135" summary="+ Add CuInstagramColor component and update libraryPrefix for custom icons">
+      <option name="closed" value="true" />
+      <created>1760029662879</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1760029662879</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/components/icons/lib/cu/index.d.ts" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -688,23 +741,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add Tab component" />
-    <MESSAGE value="+ Body component" />
-    <MESSAGE value="↔ Change @import by @use into sass files" />
-    <MESSAGE value="↔ Fix default variant in hover" />
-    <MESSAGE value="- Remove Space in default variant" />
-    <MESSAGE value="Refactor button component to simplify props destructuring and improve variant handling" />
-    <MESSAGE value="Refactor paginate button icon prop to allow custom icons" />
-    <MESSAGE value="Refactor pagination component types and improve code formatting" />
-    <MESSAGE value="+ Add pagination component and related items with customizable props" />
-    <MESSAGE value="+ Add Video component with customizable props and support for multiple video formats" />
-    <MESSAGE value="+ Add Audio component with customizable props and support for multiple audio formats" />
-    <MESSAGE value="Rename Video component to Audio and update mime type handling for audio formats" />
-    <MESSAGE value="Add AVPlayer component and refactor Audio component to use it for audio playback" />
-    <MESSAGE value="Add Doc to helper" />
-    <MESSAGE value="+ Document component" />
-    <MESSAGE value="+ Fix size document default" />
-    <MESSAGE value="+ Added Image component | ↔ Separate mimes files" />
     <MESSAGE value="+ Fix capitalize name" />
     <MESSAGE value="Add media handling utilities for file type detection" />
     <MESSAGE value="- context.Settings.ts" />
@@ -713,7 +749,24 @@
     <MESSAGE value="+ Added default values file" />
     <MESSAGE value="-- Remove memo to default content" />
     <MESSAGE value="+ Added files default types" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Added files default types" />
+    <MESSAGE value="↔ Fix usage Media" />
+    <MESSAGE value="-- Remove back Media Component" />
+    <MESSAGE value="+ Add name Attribute Required" />
+    <MESSAGE value="↔ fix Class input   &amp;&amp; Order in checkbox" />
+    <MESSAGE value="↔ fix basic inputs, use a hook to handle styles" />
+    <MESSAGE value="+ Use clsx to inputs components" />
+    <MESSAGE value="- Remove log from function" />
+    <MESSAGE value="+ Added default name prop to Basic and CheckBox components" />
+    <MESSAGE value="+ Added function to formatted value tel" />
+    <MESSAGE value="+ Added prop to input, +Added Number-Tel component, + Added main input index file" />
+    <MESSAGE value="↔ Refactor function to helper" />
+    <MESSAGE value="+ Added code Compoennt + Update codeMirror library" />
+    <MESSAGE value="+ Add language selection feature and update code styles" />
+    <MESSAGE value="Update default image paths to new media directory" />
+    <MESSAGE value="+ Add Icon component with error handling, loading state &amp;&amp; dinamic load" />
+    <MESSAGE value="↔ Separate helper to get lib icons &amp;&amp; add type to libraryPrefix" />
+    <MESSAGE value="+ Add CuInstagramColor component and update libraryPrefix for custom icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Add CuInstagramColor component and update libraryPrefix for custom icons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -729,9 +782,9 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/media.jsx</url>
-          <line>57</line>
-          <option name="timeStamp" value="45" />
+          <url>file://$PROJECT_DIR$/src/components/product/modalProduct.jsx</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

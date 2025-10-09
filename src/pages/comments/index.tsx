@@ -35,9 +35,14 @@ const Comments = () => {
     return (
       <div className=' container  py-[200px] bg-gray-300 mx-auto px-20'>
         <div className='flex justify-center items-center'>
-          <Select  options={options} className='g'/>
+          <Select
+            name='comments'
+            onChange={() => false}
+            options={options}
+          />
           <TextArea
             name='Hola'
+            onChange={() => false}
             placeholder='Placehoder'
           />
         </div>

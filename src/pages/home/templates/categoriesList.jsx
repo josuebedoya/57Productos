@@ -5,8 +5,8 @@ import { useDatabase } from "@/hooks/useDatabase.jsx";
 import { Path_page } from "@/routes.jsx";
 import { Slug } from "@/utils/handleText.js";
 import  Button from "@/components/button/index.tsx";
-import { ArrowRightIcon } from '@/assets/icons.jsx';
 import { WarningModal } from '@/components/warningModal.jsx';
+import Icon from "@/components/icons/index.js";
 
 const CategoriesList = () => {
   const [ categories, setCategories ] = useState( [] );
@@ -61,7 +61,7 @@ const CategoriesList = () => {
                 variant='flat'
                 color='white'
                 colorHover='white'
-                icon={ <ArrowRightIcon/> }
+                icon={   <Icon name='FaArrowRight'/> }
                 classes='opacity-0 group-hover/item:opacity-100'
                 iconRight
                 onClick={ () => goToCategory( Slug( category.nombre ) ) }>

@@ -16,6 +16,6 @@ export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   variant?: string,
   color?: string,
   rounded?: string,
-  icon?: ReactNode,
+  icon?: string,
   onChange: (e: ChangeEvent<HTMLSelectElement>) => void;
 }

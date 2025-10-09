@@ -15,9 +15,9 @@ export interface PaginateProps extends BaseProps {
   maxPages?: number;
   linkClassName?: string;
   linksSpace?: number | string;
-  nextIcon?: ReactNode;
+  nextIcon?: string;
   nextLabel?: string;
-  prevIcon?: ReactNode;
+  prevIcon?: string;
   prevLabel?: string;
   variantActive?: 'outline' | 'solid' | 'flat';
   colorActive?: string;

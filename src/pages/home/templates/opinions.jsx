@@ -2,10 +2,10 @@ import { useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import { Carousel } from '@/components/carousel.jsx';
 import { OpinionItem } from '../components/opinionItem.jsx';
-import  Button  from "@/components/button/index.tsx";
-import { AngleRightIcon } from '@/assets/icons.jsx';
+import Button from "@/components/button/index.tsx";
 import { Path_page } from "@/routes.jsx";
 import { useComment } from "@/context/comments.jsx";
+import Icon from "@/components/icons/index.js";
 
 const Opinions = () => {
   const navigate = useNavigate();
@@ -46,7 +46,7 @@ const Opinions = () => {
            variant='flat'
            variantHover='flat'
            iconRight
-           icon={ <AngleRightIcon/> }
+           icon={ <Icon name='IoIosArrowForward'/> }
            onClick={ gotToOpinios }
           >
             Ver más

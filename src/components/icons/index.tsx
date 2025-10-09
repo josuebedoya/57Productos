@@ -27,7 +27,7 @@ const Icon: React.FC<IconProps> = ({name, versionFamily, ...props}) => {
   if (!LoadedIcon) {
     return (
       <div className="flex justify-center p-4">
-        <Loading/>
+        <Loading className={props.className || ''}/>
       </div>
     );
   }

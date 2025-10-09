@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import  Form  from "@/components/form/index.tsx";
+import Form from "@/components/form/index.tsx";
 import Input from "@/components/input/fields/input/index.tsx"
-import { CloseIcon, MarkIcon, PencilIcon } from "@/assets/icons.jsx";
 import Tooltip from "@/components/tooltip/index.tsx";
+import Icon from "@/components/icons/index.js";
 
 const UserInformation = ( { userInfo } ) => {
 
@@ -28,7 +28,7 @@ const UserInformation = ( { userInfo } ) => {
        <div className='inputs'>
          { Object.values( info )?.map( ( value, i ) => ( <ul key={ i } className='list-none'>
            <li className='text-Primary text-md mb-2 flex'>
-           <Input value={value} disabled={!editInfo} className='disabled:border-0'/>
+             <Input value={ value } disabled={ !editInfo } className='disabled:border-0'/>
            </li>
          </ul> ) ) }
 
@@ -39,21 +39,25 @@ const UserInformation = ( { userInfo } ) => {
             <span
              className='bg-red-500 rounded-md p-2 cursor-pointer hover:shadow-md shadow-red-500 hover:bg-transparent duration-300 group/btn'
              onClick={ handleEditInfo }>
-                          <CloseIcon
-                           classIcons='text-white duration-200 text-lg font-[900] group-hover/btn:text-red-500'/>
+                <Icon
+                 name='IoMdClose'
+                 className='text-white duration-200 text-lg font-[900] group-hover/btn:text-red-500'/>
             </span>
             <span
              className='bg-green-500 rounded-md p-2 cursor-pointer hover:shadow-lg shadow-green-500 hover:bg-transparent duration-300 group/btn'
              onClick={ handleEditInfo }>
-                          <MarkIcon
-                           classIcons='text-white duration-200 text-lg font-[900] group-hover/btn:text-green-500'/>
+                <Icon
+                 name='MarkIcon'
+                 className='text-white duration-200 text-lg font-[900] group-hover/btn:text-green-500'/>
             </span>
           </div>
 
           : <Tooltip content={ `Editar Información` } delayShow={ 400 } position='right'
                      contentClass='text-sm text-nowrap'>
-            <PencilIcon classIcons='cursor-pointer hover:text-Secondary duration-200 text-xl'
-                        onClick={ handleEditInfo }/>
+            <Icon
+             name='FaPencilAlt'
+             className='cursor-pointer hover:text-Secondary duration-200 text-xl'
+             onClick={ handleEditInfo }/>
           </Tooltip>
          }
        </div>

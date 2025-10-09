@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { SearchEngineIcon } from '@/assets/icons.jsx';
-import  Button  from '@/components/button/index.tsx';
+import Button from '@/components/button/index.tsx';
 import Input from "@/components/input/fields/input/index.tsx"
 import { useDatabase } from '@/hooks/useDatabase.jsx';
 import { useResults } from '@/context/ParamsUrl.jsx';
@@ -9,6 +8,7 @@ import { normalizeText, Slug } from '@/utils/handleText.js';
 import { Path_page } from '@/routes.jsx';
 import { TextAnimatedWrite } from '@/components/textAnimatedWrite.jsx';
 import { Modal } from "@/components/modal.jsx";
+import Icon from "@/components/icons/index.js";
 
 
 const Search = () => {
@@ -89,7 +89,7 @@ const Search = () => {
    <>
      <div>
        <div className={ `search-btn-section duration-500 ${ showModal ? 'button-active' : '' }` }>
-         <Button icon={ <SearchEngineIcon/> } classes='search-btn' onClick={ openModal }/>
+         <Button icon={ <Icon name='BiSearchAlt'/> } classes='search-btn' onClick={ openModal }/>
        </div>
      </div>
 
@@ -99,7 +99,7 @@ const Search = () => {
          <form method='GET' onSubmit={ submitQuery } className='flex items-center w-full max-w-600 gap-5'>
            <Input type='text' maxLength={ 70 } value={ valueSearch } onChange={ handleValueSearch } name='search'
                   className='flex-grow'/>
-           <Button icon={ <SearchEngineIcon/> } onClick={ submitQuery } classes='search-btn' type='submit'/>
+           <Button icon={ <Icon name='BiSearchAlt'/> } onClick={ submitQuery } classes='search-btn' type='submit'/>
          </form>
        </div>
 

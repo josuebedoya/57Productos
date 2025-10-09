@@ -2,20 +2,12 @@ import { useState } from 'react';
 import TextArea from "@/components/input/fields/textarea/index.tsx";
 import { Path_page } from '@/routes';
 import Button from '@/components/button/index.tsx';
-import {
-  CloseIcon,
-  FacebookIcon,
-  InstagramColorIcon,
-  PaperPlane,
-  TikTokIcon,
-  WhatsappIcon,
-  YoutubeIcon
-} from '@/assets/icons';
 import { useComment } from '@/context/comments';
 import { Menu } from '@/components/menu/menu.jsx';
 import Form from '@/components/form/index.tsx';
 import { CSSTransition } from 'react-transition-group';
 import Copyright from "@/components/copyright/index.tsx";
+import Icon from "@/components/icons/index.js";
 
 const Footer = () => {
   const [ comment, setComment ] = useState( '' );
@@ -106,8 +98,8 @@ const Footer = () => {
            } }
                  inputs={ inputs } nameForm='FormComment' termsAndConditions/>
            <i className='relative w-2' onClick={ () => setShowForm( false ) }>
-             <CloseIcon
-              classIcons='text-white text-lg w-7 h-7 absolute -left-5 top-2 cursor-pointer hover:animate-shaking'/>
+             <Icon name='IoMdClose'
+                   className='text-white text-lg w-7 h-7 absolute -left-5 top-2 cursor-pointer hover:animate-shaking'/>
            </i>
          </div>
 
@@ -133,7 +125,7 @@ const Footer = () => {
           variantHover='outline'
           colorHover='white'
           size='md'
-          icon={ <PaperPlane/> }
+          icon={ <Icon name='BiSolidPaperPlane'/> }
           iconRight
           onClick={ handleShowForm }
          >
@@ -146,8 +138,9 @@ const Footer = () => {
        <div className='watssapp flex flex-row justify-center items-center'>
          <a href='https://wa.me/573247775394?text=¡Hola!%20Quiero%20más%20información' target='_blank' rel='noreferrer'>
            <i onMouseEnter={ () => setShowTextW( true ) } onMouseLeave={ () => setShowTextW( false ) }>
-             <WhatsappIcon
-              classIcons='whatsapp text-green-500 cursor-pointer w-6 h-6 sm:w-9 sm:h-9 p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#72B01D] rounded-full duration-200'/>
+
+             <Icon name='FaWhatsapp'
+                   className='whatsapp text-green-500 cursor-pointer w-6 h-6 sm:w-9 sm:h-9 p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#72B01D] rounded-full duration-200'/>
            </i>
          </a>
          <p
@@ -159,22 +152,23 @@ const Footer = () => {
          <a href='https://www.facebook.com'
             className=' facebook p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#090C9B] rounded-full duration-200'
             target='_blank'>
-           <FacebookIcon classIcons='text-blue-700 cursor-pointer w-5 h-5 sm:w-6 sm:h-6'/>
+           <Icon name='FaFacebook' className='text-blue-700 cursor-pointer w-5 h-5 sm:w-6 sm:h-6'/>
          </a>
          <a href='https://youtube.com'
             className='youtube p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#BF0603] rounded-full duration-200'
             target='_blank'>
-           <YoutubeIcon classIcons='text-red-600 cursor-pointer w-5 h-5 sm:w-6 sm:h-6'/>
+           <Icon name='FaYoutube' className='text-red-600 cursor-pointer w-5 h-5 sm:w-6 sm:h-6'/>
          </a>
          <a href='https://www.instagram.com'
             className='instagram p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#FDB833] rounded-full duration-200'
             target='_blank'>
-           <InstagramColorIcon classIcons='cursor-pointer w-5 h-5 sm:w-6 sm:h-6 rounded-full'/>
+           <Icon name='CuInstagramColor'
+                 className='cursor-pointer w-5 h-5 sm:w-6 sm:h-6 rounded-full'/>
          </a>
          <a href='https://www.tiktok.com'
             className='tiktok p-0.5 sm:p-1.5 hover:shadow-[0_0_5px_5px_#FFFFFF] rounded-full duration-200'
             target='_blank'>
-           <TikTokIcon classIcons='text-stone-200 cursor-pointer w-5 h-5 sm:w-6 sm:h-6'/>
+           <Icon name='FaTiktok' className='text-stone-200 cursor-pointer w-5 h-5 sm:w-6 sm:h-6'/>
          </a>
        </div>
      </div>

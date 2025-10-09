@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import type {TooltipProps} from "./types.ts";
 import {gVar} from "@/utils/gVar.ts";
-import {TriangleRight} from "@/assets/icons.tsx";
 import getDirection from '@/components/tooltip/helpers/getDirection.ts';
 import Body from '@/components/body/index.tsx';
+import Icon from "@/components/icons/index.js";
 
 const Tooltip: React.FC<TooltipProps> = (
   {
@@ -48,7 +48,7 @@ const Tooltip: React.FC<TooltipProps> = (
     <div className={`has-tooltip ${show ? 'group/tooltip' : ''} relative flex items-center justify-center`}>
       <div className={`tooltip ${bodyClass} ${className}`} data-child='tooltip' {...props}>
          <span className='flex justify-center w-full h-full'>
-           <TriangleRight className={`arrow-tooltip ${arrowClass}`}/>
+           <Icon name='FaCaretRight' className={`arrow-tooltip ${arrowClass}`}/>
         </span>
         <Body className={contentClass}>
           {content}

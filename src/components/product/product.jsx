@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { useCart } from '@/context/cart.jsx';
-
-import { CartIcon, HearthCheckIcon, HearthLineIcon, DocumentIcon } from '@/assets/icons.jsx';
 import Button from '@/components/button/index.tsx';
 import { Stars } from '@/components/stars.jsx';
 import { ModalProduct } from './modalProduct.jsx';
 import Media from '@/components/media/index.tsx';
+import Icon from "@/components/icons/index.js";
 
 
 const Product = ( props ) => {
@@ -92,7 +91,7 @@ const Product = ( props ) => {
          <div className='group-buttons flex gap-1 items-center justify-between'>
            <div className='btn-add-to-basket'>
              <Button
-              icon={ <CartIcon/> }
+              icon={ <Icon name='AiOutlineShoppingCart'/> }
               iconRight
               size='sm' onClick={ addToCart }>
                Añadir
@@ -100,11 +99,11 @@ const Product = ( props ) => {
            </div>
            <div className='btns-check flex gap-2'>
              <div className='btn-outstanding'>
-               <Button icon={ !outstanding ? <HearthLineIcon/> : <HearthCheckIcon/> } onClick={ Added }
+               <Button icon={ <Icon name={ !outstanding ? 'FaRegHeart' : 'FaHeartCircleCheck' }/> } onClick={ Added }
                        size='sm'/>
              </div>
              <div className='btn-modal-information'>
-               <Button icon={ <DocumentIcon/> } size='sm' onClick={ OpenModal }/>
+               <Button icon={ <Icon name='TiDocumentText'/> } size='sm' onClick={ OpenModal }/>
              </div>
            </div>
          </div>

@@ -1,11 +1,11 @@
 import Media from '@/components/media/index.tsx';
 import { useSettings } from "@/context/settings.jsx";
-import { CameraIcon, PencilIcon } from "@/assets/icons.jsx";
 import { Dropdown } from "@/components/dropdown.jsx";
 import { useEffect, useState } from "react";
 import defaultImg from '/assets/images/system/default-profile.png';
 import { Tabs } from "@/components/tabList.jsx";
 import { UserInformation } from "../partials/UserInformation.jsx";
+import Icon from "@/components/icons/index.js";
 
 const SettingsInfo = () => {
 
@@ -112,10 +112,10 @@ const SettingsInfo = () => {
       classLabel: 'text-Primary'
     } ];
 
-  const texts = [ { title: 'Información', icon: <PencilIcon/> }, {
+  const texts = [ { title: 'Información', icon: <Icon name='FaPencilAlt'/> }, {
     title: 'Seguridad',
-    icon: <PencilIcon/>
-  }, { title: 'Zona roja', icon: <PencilIcon/> }, ]
+    icon: <Icon name='FaPencilAlt'/>
+  }, { title: 'Zona roja', icon: <Icon name='FaPencilAlt'/> }, ]
 
   return ( <div className='user-info'>
     <div className="container mx-auto px-4">
@@ -169,7 +169,7 @@ const SettingsInfo = () => {
                          alt: settings?.user?.photo || 'User Avatar',
                          className: 'max-w-64 max-h-64 rounded-full object-cover'
                        } }
-                       defaults={defaultImg}
+                       defaults={ defaultImg }
                 />
                 <div className="edit-photo absolute bottom-0 left-0">
                   <Dropdown show={ dropdown } closed={ () => setDropdown( false ) } classDropdown='bg-white p-0'
@@ -193,8 +193,9 @@ const SettingsInfo = () => {
                       </li> }
                     </ul>
                   </Dropdown>
-                  <CameraIcon classIcons='cursor-pointer text-2xl text-Primary hover:text-Secondary duration-200'
-                              onClick={ () => setDropdown( !dropdown ) }/>
+                  <Icon name='BsCameraFill'
+                        className='cursor-pointer text-2xl text-Primary hover:text-Secondary duration-200'
+                        onClick={ () => setDropdown( !dropdown ) }/>
                 </div>
               </div>
             </div>
