@@ -1,0 +1,1 @@
+export { CuInstagramColor } from "@/components/icons/lib/components/cuInstagramColor.js";
