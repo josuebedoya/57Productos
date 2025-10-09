@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
-import libraryIcons from "@/components/icons/configs/libraryPrefix.ts";
+import getLibIcon from "@/components/icons/helpers/getLibIcon.js";
 
 export const useImportIcon = (iconName: string, version?: number) => {
   const [icon, setIcon] = useState<React.ComponentType | null>(null);
@@ -15,19 +15,7 @@ export const useImportIcon = (iconName: string, version?: number) => {
 
     const loadIcon = async () => {
       try {
-
-        const prefix = iconName.match(/^([A-Z][a-z]+)/)?.[1]?.toLowerCase() ?? null;
-        const libs = Object.entries(libraryIcons).find(([k]) => k === prefix) || [];
-        const versionUSe = version ? `v${version}` : "default";
-        const versionLib = libs[1]?.[versionUSe as keyof typeof libs[1]];
-
-        if (!versionLib) throw new Error(t("components.icons.errors.versionLibNotFound", {version, family: prefix}));
-
-        const entry = libs[1]?.[versionUSe as keyof typeof libs[1]] ?? libs[1]?.default;
-
-        if (!entry) throw new Error(t("components.icons.errors.iconNotFound", {iconName}));
-
-        const libUse = await entry();
+        const libUse = await getLibIcon(iconName, version);
         const Icon = libUse[iconName as keyof typeof libUse] as unknown as React.ComponentType;
 
         if (!Icon) throw new Error(t("components.icons.errors.iconNotFound", {iconName}));
