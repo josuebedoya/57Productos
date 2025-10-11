@@ -2,7 +2,7 @@ import { useState } from 'react';
 import TextArea from "@/components/input/fields/textarea/index.tsx";
 import { Path_page } from '@/routes';
 import Button from '@/components/button/index.tsx';
-import { useComment } from '@/context/comments';
+import { useComment } from '@/modules/comments/context/comments.jsx';
 import { Menu } from '@/components/menu/menu.jsx';
 import Form from '@/components/form/index.tsx';
 import { CSSTransition } from 'react-transition-group';

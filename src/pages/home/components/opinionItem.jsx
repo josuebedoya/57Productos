@@ -1,6 +1,6 @@
 import { Stars } from '@/components/stars.jsx'
 import img from '/assets/images/profile.png'
-import { useComment } from "@/context/comments.jsx";
+import { useComment } from "@/modules/comments/context/comments.jsx";
 import Icon from "@/components/icons/index.js";
 
 

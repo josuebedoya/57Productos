@@ -4,9 +4,9 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async';
 import '@/i18n/i18n.js';
 import './main.css'
-import { CartProvider } from './context/cart.jsx'
-import { CommentProvider } from "@/context/comments.jsx"
-import { ParamsUrlProvider } from '@/context/ParamsUrl.jsx'
+import { CartProvider } from './modules/icommerce/context/cart.jsx'
+import { CommentProvider } from "@/modules/comments/context/comments.jsx"
+import { ParamsUrlProvider } from '@/modules/search/context/ParamsUrl.jsx'
 import { FormatMoneyProvider } from '@/context/formatMoney.jsx'
 import ErrorBoundary from "@/components/errorBoundary.jsx";
 import { SettingsProvider } from "@/context/settings.jsx";

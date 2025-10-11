@@ -2,8 +2,8 @@ import { useState } from 'react';
 import Button  from '@/components/button/index.tsx';
 import signImg from '/assets/images/profile.png';
 import { Modal } from '@/components/modal.jsx';
-import { FormLogin } from '../components/formLogin.jsx';
-import { FormRegister } from '../components/formRegister.jsx';
+import { FormLogin } from '../../auth/components/formLogin.jsx';
+import { FormRegister } from '../../auth/components/formRegister.jsx';
 
 const Guest = ( { isLogin } ) => {
 

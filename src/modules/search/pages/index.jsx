@@ -1,9 +1,9 @@
 import { useDatabase } from "@/hooks/useDatabase.jsx";
-import { useResults } from "@/context/ParamsUrl.jsx";
+import { useResults } from "@/modules/search/context/ParamsUrl.jsx";
 import { useEffect, useState } from "react";
 import { normalizeText } from "@/utils/handleText.js";
 import { List } from '@/components/list.jsx';
-import { Product } from "@/components/product/product.jsx";
+import { Product } from "@/modules/icommerce/components/product.jsx";
 import img from '/assets/images/products/lettuce.jpg';
 import { Metas } from "@/components/metas/metas.jsx";
 

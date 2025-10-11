@@ -4,10 +4,10 @@ import { Dropdown } from "@/components/dropdown.jsx";
 import { useEffect, useState } from "react";
 import defaultImg from '/assets/images/system/default-profile.png';
 import { Tabs } from "@/components/tabList.jsx";
-import { UserInformation } from "../partials/UserInformation.jsx";
-import Icon from "@/components/icons/index.js";
+import { Information } from "./information.jsx";
+import Icon from "@/components/icons/index.tsx";
 
-const SettingsInfo = () => {
+const UserInfo = () => {
 
   const [ dropdown, setDropdown ] = useState( false );
   const { settings, emptySetting, updateSettings } = useSettings();
@@ -147,7 +147,7 @@ const SettingsInfo = () => {
               </div>
               <div>
                 <Tabs.BodyITem activeClass="animate-fade-in" active={ activeTab === 0 }>
-                  <UserInformation userInfo={ userInfo }/>
+                  <Information userInfo={ userInfo }/>
                 </Tabs.BodyITem>
                 <Tabs.BodyITem activeClass="animate-fade-in p-10" active={ activeTab === 1 }>
                   <p>Seguridad</p>
@@ -215,5 +215,5 @@ const SettingsInfo = () => {
 };
 
 export {
-  SettingsInfo
+  UserInfo
 };

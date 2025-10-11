@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import logoBlack from '/logo-black.png';
 import logoWhite from '/logo-white.png';
-import { Search } from "@/components/search.jsx";
-import { Cart } from '@/components/cart.jsx';
+import { Search } from "@/modules/search/components/search.jsx";
+import { Cart } from '@/modules/icommerce/components/cart.jsx';
 import { Menu } from '@/components/menu/menu.jsx';
 import { Path_page } from '@/routes';
 import { Link } from "react-router-dom";

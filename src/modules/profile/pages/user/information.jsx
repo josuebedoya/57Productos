@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import Form from "@/components/form/index.tsx";
 import Input from "@/components/input/fields/input/index.tsx"
 import Tooltip from "@/components/tooltip/index.tsx";
-import Icon from "@/components/icons/index.js";
+import Icon from "@/components/icons/index.tsx";
 
-const UserInformation = ( { userInfo } ) => {
+const Information = ( { userInfo } ) => {
 
   const [ editInfo, setEditInfo ] = useState( false );
   const [ info, setInfo ] = useState( {} );
@@ -66,4 +66,4 @@ const UserInformation = ( { userInfo } ) => {
   );
 };
 
-export { UserInformation };
+export { Information };

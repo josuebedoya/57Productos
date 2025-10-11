@@ -4,8 +4,8 @@ import { Stars } from '@/components/stars.jsx';
 import Button from '@/components/button/index.tsx';
 import { AddWithQuantity } from '@/components/addWithQuantity.jsx';
 import { Modal } from '@/components/modal.jsx';
-import { useCart } from '@/context/cart.jsx';
-import Icon from "@/components/icons/index.js";
+import { useCart } from '@/modules/icommerce/context/cart.jsx';
+import Icon from "@/components/icons/index.tsx";
 
 const ModalProduct = ( { close, title, price, description, img, imgHover, isOpen, id } ) => {
   const [ changeImg, setChangeImg ] = useState( false );

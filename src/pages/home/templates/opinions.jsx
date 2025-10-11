@@ -4,7 +4,7 @@ import { Carousel } from '@/components/carousel.jsx';
 import { OpinionItem } from '../components/opinionItem.jsx';
 import Button from "@/components/button/index.tsx";
 import { Path_page } from "@/routes.jsx";
-import { useComment } from "@/context/comments.jsx";
+import { useComment } from "@/modules/comments/context/comments.jsx";
 import Icon from "@/components/icons/index.js";
 
 const Opinions = () => {

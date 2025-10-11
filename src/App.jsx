@@ -6,16 +6,16 @@ import { Slug } from "@/utils/handleText.js";
 import { Header } from '@/templates/header'
 import { Home } from '@/pages/home/index.jsx'
 import { Us } from '@/pages/us/index.jsx'
-import { Error } from '@/pages/error/index.jsx'
+import { Error } from '@/modules/error/pages/index.jsx'
 import { Services } from '@/pages/services/index.jsx'
-import { Store } from '@/pages/store/index.jsx'
+import { Store } from '@/modules/icommerce/pages/index.jsx'
 import { Contact } from '@/pages/contact/index.jsx'
-import { Profile } from '@/pages/auth/index.jsx'
+import { Profile } from '@/modules/profile/pages/index.jsx'
 import { TermsAndConditions } from '@/pages/privacy/tyc.jsx'
-import { Payments } from '@/pages/store/indexPay.jsx'
+import { Payments } from '@/modules/icommerce/pages/indexPay.jsx'
 import { Footer } from '@/templates/footer.jsx'
-import { Search } from "@/pages/search/index.jsx";
-import { SettingsInfo } from "@/pages/auth/pages/settingsInfo.jsx";
+import { Search } from "@/modules/search/pages/index.jsx";
+import { UserInfo } from "@/modules/profile/pages/user/userInfo.jsx";
 
 function App() {
   const location = useLocation();
@@ -32,7 +32,7 @@ function App() {
          <Route path={ Path_page.STORE } element={ <Store/> }/>
          <Route path={ Path_page.CONTACT } element={ <Contact/> }/>
          <Route path={ Path_page.AUTH.MAIN } element={ <Profile/> }>
-           <Route path={ Path_page.AUTH.EDIT_INFO } element={ <SettingsInfo/> }/>
+           <Route path={ Path_page.AUTH.EDIT_INFO } element={ <UserInfo/> }/>
          </Route>
          <Route path={ Path_page.PAYMENTS } element={ <Payments/> }/>
          <Route path={ Path_page.SEARCH } element={ <Search/> }/>

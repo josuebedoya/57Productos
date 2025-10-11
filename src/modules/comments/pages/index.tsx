@@ -1,5 +1,5 @@
 // @ts-ignore
-import {useComment} from '@/context/comments.jsx'
+import {useComment} from '@/modules/comments/context/comments.jsx'
 import {useState, useEffect} from "react";
 import TextArea from '@/components/input/fields/textarea/index.tsx'
 import Select from "@/components/input/fields/select/index.js";

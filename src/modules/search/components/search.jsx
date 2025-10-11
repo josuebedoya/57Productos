@@ -3,12 +3,12 @@ import { useNavigate, Link } from 'react-router-dom';
 import Button from '@/components/button/index.tsx';
 import Input from "@/components/input/fields/input/index.tsx"
 import { useDatabase } from '@/hooks/useDatabase.jsx';
-import { useResults } from '@/context/ParamsUrl.jsx';
+import { useResults } from '@/modules/search/context/ParamsUrl.jsx';
 import { normalizeText, Slug } from '@/utils/handleText.js';
 import { Path_page } from '@/routes.jsx';
 import { TextAnimatedWrite } from '@/components/textAnimatedWrite.jsx';
 import { Modal } from "@/components/modal.jsx";
-import Icon from "@/components/icons/index.js";
+import Icon from "@/components/icons/index.tsx";
 
 
 const Search = () => {

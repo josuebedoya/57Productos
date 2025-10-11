@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect, } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Button from './button/index.tsx';
+import Button from '../../../components/button/index.tsx';
 import { Path_page } from '@/routes.jsx';
 import { Slug } from "@/utils/handleText.js";
-import { useCart } from '@/context/cart.jsx';
+import { useCart } from '@/modules/icommerce/context/cart.jsx';
 import Media from '@/components/media/index.tsx';
 import Tooltip from "@/components/tooltip/index.tsx";
-import Icon from "@/components/icons/index.js";
+import Icon from "@/components/icons/index.tsx";
 
 const Cart = ( { close } ) => {
   const navigate = useNavigate();

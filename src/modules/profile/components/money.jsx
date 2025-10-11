@@ -3,7 +3,7 @@ import { useFormatMoney } from "@/context/formatMoney.jsx";
 import Input from '@/components/input/fields/input/index.tsx';
 import { getSetting } from "@/settings.js";
 import { useSettings } from "@/context/settings.jsx";
-import Icon from "@/components/icons/index.js";
+import Icon from "@/components/icons/index.tsx";
 
 const Money = () => {
   const amount = getSetting( 'user.money' );

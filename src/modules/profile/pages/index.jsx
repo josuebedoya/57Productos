@@ -1,11 +1,11 @@
-import { Guest } from '@/pages/auth/pages/guest.jsx';
-import { Dashboard } from '@/pages/auth/pages/dashboard.jsx';
+import { Guest } from '@/modules/profile/pages/guest.jsx';
+import { Dashboard } from '@/modules/profile/pages/dashboard.jsx';
 import { setStorage, getStorage } from "@/utils/storage.js";
 import { useCallback, useEffect, useState } from "react";
 import { Outlet } from 'react-router-dom';
 import { Metas } from "@/components/metas/metas.jsx";
 import { useSettings } from "@/context/settings.jsx";
-import { HeaderAuth } from "@/pages/auth/components/headerAuth.jsx";
+import { HeaderAuth } from "@/modules/profile/components/headerAuth.jsx";
 import { Path_page } from "@/routes.jsx";
 
 const Profile = () => {
