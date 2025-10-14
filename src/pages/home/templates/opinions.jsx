@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Carousel } from '@/components/carousel.jsx';
 import { OpinionItem } from '../components/opinionItem.jsx';
 import Button from "@/components/button/index.tsx";
-import { Path_page } from "@/routes.jsx";
+import { Path_page } from '@/routes.ts';
 import { useComment } from "@/modules/comments/context/comments.jsx";
 import Icon from "@/components/icons/index.js";
 

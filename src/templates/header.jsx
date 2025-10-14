@@ -4,16 +4,20 @@ import logoWhite from '/logo-white.png';
 import { Search } from "@/modules/search/components/search.jsx";
 import { Cart } from '@/modules/icommerce/components/cart.jsx';
 import { Menu } from '@/components/menu/menu.jsx';
-import { Path_page } from '@/routes';
+import { Path_page } from '@/routes.ts';
 import { Link } from "react-router-dom";
 import Icon from "@/components/icons/index.js";
 
 const menuItems = [
-  { name: 'Inicio', url: Path_page.HOME },
-  { name: 'Nosotros', url: Path_page.US },
-  { name: 'Servicios', url: Path_page.SERVICES, items: [{name: 'Servicio 1', url: Path_page.SERVICES + 'Servicio-1'}] },
-  { name: 'Tienda', url: Path_page.STORE },
-  { name: 'Contacto', url: Path_page.CONTACT },
+  { name: 'Inicio', url: Path_page?.HOME },
+  { name: 'Nosotros', url: Path_page?.US },
+  {
+    name: 'Servicios',
+    url: Path_page?.SERVICES,
+    items: [ { name: 'Servicio 1', url: Path_page.SERVICES + 'Servicio-1' } ]
+  },
+  { name: 'Tienda', url: Path_page?.STORE },
+  { name: 'Contacto', url: Path_page?.CONTACT },
 ];
 
 const classLink = 'text-Primary hover:shadow-Secondary hover:text-Secondary family-oswald text-lg tracking-wide px-4';
@@ -89,7 +93,8 @@ const Header = () => {
          {/* List Menu */ }
          <div
           className='list-menu-section px-4 lg:pr-0 col-span-2 sm:col-span-1 lg:col-span-7 flex items-center justify-end order-2 sm:order-3 lg:order-2'>
-           <Menu items={ menuItems } classLink={ classLink } horizontal withMenuBars openMenu={ handldeOpenModal } typeMenuMobile={ 1 }/>
+           <Menu items={ menuItems } classLink={ classLink } horizontal withMenuBars openMenu={ handldeOpenModal }
+                 typeMenuMobile={ 1 }/>
          </div>
 
          {/* Search button, cart, and profile */ }
@@ -102,7 +107,7 @@ const Header = () => {
              <Cart close={ modalCart }/>
            </div>
            <div className='profile-section'>
-             <Link to={ Path_page.AUTH.MAIN } target='_self' className='profile-section-icon text-white bg-Primary border border-Primary rounded-full p-2 flex items-center
+             <Link to={ Path_page.PROFILE } target='_self' className='profile-section-icon text-white bg-Primary border border-Primary rounded-full p-2 flex items-center
               hover:bg-transparent hover:text-Secondary hover:border-Secondary transition duration-150'>
                <Icon name='GrUserSettings'/>
              </Link>

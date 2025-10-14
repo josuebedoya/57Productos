@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import TextArea from "@/components/input/fields/textarea/index.tsx";
-import { Path_page } from '@/routes';
+import { Path_page } from '@/routes.ts';
 import Button from '@/components/button/index.tsx';
 import { useComment } from '@/modules/comments/context/comments.jsx';
 import { Menu } from '@/components/menu/menu.jsx';
@@ -41,19 +41,19 @@ const Footer = () => {
   const itemsMenus = [
     [
       { url: Path_page.STORE, name: 'Tienda' },
-      { url: Path_page.STORE + Path_page.CATEGORIES_STORE.FEATURED, name: 'Destacados' },
-      { url: Path_page.STORE + Path_page.CATEGORIES_STORE.OFFER, name: 'Ofertas' },
-      { url: Path_page.STORE + Path_page.CATEGORIES_STORE.NEW, name: 'Nuevos' }
+      { url: Path_page.FEATURED, name: 'Destacados' },
+      { url: Path_page.OFFER, name: 'Ofertas' },
+      { url: Path_page.NEW, name: 'Nuevos' }
     ],
     [ { url: Path_page.SERVICES, name: 'Servicios' },
       { url: Path_page.US, name: 'Nosotros' },
       { url: Path_page.CONTACT, name: 'Contacto' },
-      { url: Path_page.AUTH.MAIN, name: 'Tu Perfil' }
+      { url: Path_page.PROFILE, name: 'Tu Perfil' }
     ],
     [
       { url: Path_page.TERMS_AND_CONDITIONS, name: 'Términos y Condiciones', target: '_blank' },
       { url: Path_page.PRIVACY_POLICY, name: 'Politica de Privacidad', target: '_blank' },
-      { url: Path_page.FREQUENTLY_ASKED_QUESTIONS, name: 'Preguntas Frecuentes', target: '_blank' }
+      { url: Path_page.FAQ, name: 'Preguntas Frecuentes', target: '_blank' }
     ]
   ];
 

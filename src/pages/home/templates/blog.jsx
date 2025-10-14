@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { Path_page } from '@/routes.jsx';
+import { Path_page } from '@/routes.ts';
 
 import { TextAnimatedWrite } from '@/components/textAnimatedWrite.jsx'
 import { Grafic } from '@/pages/home/components/grafic.jsx'
