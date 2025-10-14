@@ -14,7 +14,6 @@ export const usePage = (modulePath: string): UsePageResult => {
     '/src/pages/*/*.{tsx,jsx}' // Search in pages, only first level
   ]);
 
-  console.log(viewModules);
   const formattedSrc = modulePath.replace('@', '/src');
   const importFn = viewModules[formattedSrc];
 
