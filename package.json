@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
     "@uiw/codemirror-extensions-color": "^4.25.2",
     "@uiw/codemirror-extensions-langs": "^4.25.2",
     "@uiw/codemirror-themes": "^4.25.2",
