@@ -9,7 +9,12 @@ export const usePage = (modulePath: string): UsePageResult => {
   const {t} = useTranslation();
   const [error, setError] = useState(false);
 
-  const viewModules = import.meta.glob('/src/**/*.{tsx,jsx}');
+  const viewModules = import.meta.glob([
+    '/src/modules/**/pages/**/*.{tsx,jsx}', // Search in page directory pages
+    '/src/pages/*/*.{tsx,jsx}' // Search in pages, only first level
+  ]);
+
+  console.log(viewModules);
   const formattedSrc = modulePath.replace('@', '/src');
   const importFn = viewModules[formattedSrc];
 

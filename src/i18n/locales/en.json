@@ -36,7 +36,7 @@
   "modules": {
     "page": {
       "errors": {
-        "noFoundModule": "The module {{formattedSrc}} does not have export default or named exports",
+        "noFoundModule": "The module {{path}} does not have export default or named exports",
         "noValidModule": "No valid component was found in the module"
       }
     }
