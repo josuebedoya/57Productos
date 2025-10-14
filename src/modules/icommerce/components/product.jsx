@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useCart } from '@/modules/icommerce/context/cart.jsx';
 import Button from '@/components/button/index.tsx';
-import { Stars } from '@/components/stars.jsx';
+import Stars from '@/components/stars/index.js';
 import { ModalProduct } from './modalProduct.jsx';
 import Media from '@/components/media/index.tsx';
 import Icon from "@/components/icons/index.tsx";
@@ -74,7 +74,7 @@ const Product = ( props ) => {
          ) }
        </div>
        <div className='item-stars text-13'>
-         <Stars classIcons='cursor-pointer hover:rotate-45 duration-300 '/>
+         <Stars onChange={ e => ( e ) } classIcons='cursor-pointer hover:rotate-45 duration-300 '/>
        </div>
        <div className='content mx-2'>
          <div className='item-title text-base font-bold my-3'>

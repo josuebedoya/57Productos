@@ -1,6 +1,5 @@
 import { useState } from 'react';
-
-import { Stars } from '@/components/stars.jsx';
+import Stars from '@/components/stars/index.tsx';
 import Button from '@/components/button/index.tsx';
 import { AddWithQuantity } from '@/components/addWithQuantity.jsx';
 import { Modal } from '@/components/modal.jsx';
@@ -61,7 +60,7 @@ const ModalProduct = ( { close, title, price, description, img, imgHover, isOpen
 
              </div>
              <div className='rating-stars mt-6'>
-               <Stars classIcons='cursor-pointer hover:rotate-45 duration-300'/>
+               <Stars onChange={ e => ( e ) } classIcons='cursor-pointer hover:rotate-45 duration-300'/>
              </div>
              <div className='content-description my-6 whitespace-pre-wrap text-lg text-justify'>
                <p>{ description }</p>
