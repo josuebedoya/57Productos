@@ -8,6 +8,7 @@ const Stars: React.FC<StarsProps> = (
   {
     quantity = 5,
     readOnly = false,
+    value = 0,
     onChange,
     classNameStar,
     className,
@@ -17,7 +18,7 @@ const Stars: React.FC<StarsProps> = (
     size = 'md',
   }) => {
   const [starStyles, setStarStyle] = useState<string>('');
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [activeIndex, setActiveIndex] = useState<number>(value);
 
   // Handle star styles
   const handleStarStyle = (index: number): string => {

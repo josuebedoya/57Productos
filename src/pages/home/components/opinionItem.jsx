@@ -1,4 +1,4 @@
-import { Stars } from '@/components/stars.jsx'
+import Stars from '@/components/stars/index.tsx';
 import img from '/assets/images/profile.png'
 import { useComment } from "@/modules/comments/context/comments.jsx";
 import Icon from "@/components/icons/index.js";
@@ -6,7 +6,7 @@ import Icon from "@/components/icons/index.js";
 
 const OpinionItem = ( props ) => {
 
-  const { rateLike } = useComment();
+  const { rateLike, handlerRating } = useComment();
 
   return (
    <div className='item-option-users'>
@@ -28,7 +28,10 @@ const OpinionItem = ( props ) => {
          </div>
          <div className='content-icons flex justify-between items-center mt-4 md:mt-6 tl:pt-3 border-t border-Primary'>
            <div className="content-stars">
-             <Stars classIcons='cursor-pointer duration-100 hover:scale-125'/>
+             <Stars
+              onChange={ e => handlerRating( props.id, ( e + 1 ) ) }
+              value={ ( props.rating - 1 ) }
+              classNameStar='cursor-pointer duration-100 hover:scale-125'/>
            </div>
            <div className="content-likes flex justify-between items-center gap-2">
              <span>

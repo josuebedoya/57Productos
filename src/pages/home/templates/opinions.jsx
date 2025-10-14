@@ -19,6 +19,7 @@ const Opinions = () => {
       id={ opinion.id }
       name={ opinion.name }
       likes={ opinion.likes || 0 }
+      rating={opinion.star_rating}
       dontLike={ opinion.dont_likes || 0 }
       key={ opinion.id }
      >

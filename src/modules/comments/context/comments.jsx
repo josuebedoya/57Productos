@@ -49,15 +49,27 @@ const CommentProvider = ( { children } ) => {
     update( 'comments_users', qualification, 'id', id );
 
     // update local qualification per comment
-    const newComments = comments.map( c => c.id === id ? { ...c, ...qualification }: c );
+    const newComments = comments.map( c => c.id === id ? { ...c, ...qualification } : c );
 
     setLocalComments( newComments );
   };
 
+  const handlerRating = ( id, rating ) => {
+    if ( !id || !rating ) {
+      return;
+    }
+
+    update( 'comments_users', { star_rating: rating }, 'id', id );
+
+    // update local qualification per rating
+    const newComments = comments.map( c => c.id === id ? { ...c, star_rating: rating } : c );
+    setLocalComments( newComments );
+  }
+
   return ( <CommentContext.Provider
-    value={ {
-      localComments, comments, successful, showMessage, loading, error, addMessage, rateLike
-    } }>
+   value={ {
+     localComments, comments, successful, showMessage, loading, error, addMessage, rateLike, handlerRating
+   } }>
     { children }
   </CommentContext.Provider> );
 };
