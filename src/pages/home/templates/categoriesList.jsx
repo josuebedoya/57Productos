@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { useDatabase } from "@/hooks/useDatabase.jsx";
 import { Path_page } from '@/routes.ts';
-import { Slug } from "@/utils/handleText.js";
+import { Slug } from "@/utils/handleText.ts";
 import  Button from "@/components/button/index.tsx";
 import { WarningModal } from '@/components/warningModal.jsx';
 import Icon from "@/components/icons/index.js";

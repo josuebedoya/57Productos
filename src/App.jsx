@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { Path_page, Routes as RoutesApp } from '@/routes.ts';
-import { Slug } from "@/utils/handleText.js";
+import { Slug } from "@/utils/handleText.ts";
 import { clsx } from "clsx";
 import ViewComponent from "@/modules/page/pages/index.tsx";
 import { Header } from '@/templates/header';
