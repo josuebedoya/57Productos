@@ -7,6 +7,7 @@ import { CategoriesList } from '@/pages/home/templates/categoriesList.jsx';
 import { useEffect } from "react";
 import { Metas } from "@/components/metas/metas.jsx";
 import { useSettings } from "@/context/settings.jsx";
+import Skeleton from "@/modules/page/components/skeleton.js";
 
 const Home = () => {
 
@@ -61,24 +62,7 @@ const Home = () => {
       type='website'
      />
      <section className='mb-12'>
-       <Slider/>
-       <Blog/>
-       <TextMain/>
-       <CategoriesList/>
-       <Chance/>
-       <Opinions/>
-       <style>{ `
-            #menu-header.top, 
-            #menu-header.top .content-items.modal {
-                background: transparent !important; transition: .4s; }
-            #menu-header.top .item-link { color: #fff !important; transition: color .3s;}
-            #menu-header.top{ .cart, .search-btn, .profile-section-icon{
-                background: transparent !important;
-                border: 1px solid #fff !important; }}
-            #menu-header.top{ .cart:hover, .search-btn:hover, .profile-section-icon:hover{
-                background: #fff !important; }}
-        ` }
-       </style>
+  <Skeleton/>
      </section>
    </>
   )

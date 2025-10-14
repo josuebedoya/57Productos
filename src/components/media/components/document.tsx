@@ -17,7 +17,7 @@ const Document: React.FC<DocumentProps> = (
   const newSrc = isOffice ? `${baseSrcOffice}${src}` : src;
 
   return (
-    <div className='f-document'>
+    <div className='f-document h-full w-full'>
       <iframe
         src={newSrc}
         className={`iframe ${className} ${isOffice ? 'office' : 'google'}-document`}

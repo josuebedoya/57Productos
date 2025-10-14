@@ -13,7 +13,7 @@ const Image: React.FC<ImageProps> = (
   }) => {
 
   return (
-    <div className='f-image'>
+    <div className='f-image h-full w-full'>
       <img
         src={src}
         alt={alt}

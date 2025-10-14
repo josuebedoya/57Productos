@@ -14,7 +14,7 @@ const AvPlayer: React.FC<AVPlayerProps> = (
   const Component = type == 1 ? 'video' : 'audio';
 
   return (
-    <div {...events} className={`f-${Component}`}>
+    <div {...events} className={`f-${Component} h-full w-full`}>
       <Component  {...props}>
         {data?.map((s: Record<string, string>, i: number) => (
           <source
