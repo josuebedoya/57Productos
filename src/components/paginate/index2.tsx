@@ -1,8 +1,8 @@
 import React, {useRef} from 'react';
-import type {PaginateProps} from "@/components/pagination/type.js";
-import {usePaginate} from "@/components/pagination/hooks/usePaginate.js";
-import PaginateItem from "@/components/pagination/components/paginateItem.tsx";
-import PaginateButton from "@/components/pagination/components/paginateButton.js";
+import type {PaginateProps} from "@/components/paginate/type.js";
+import {usePaginate} from "@/components/paginate/hooks/usePaginate.tsx";
+import PaginateItem from "@/components/paginate/components/paginateItem.tsx";
+import PaginateButton from "@/components/paginate/components/paginateButton.js";
 import clsx from "clsx";
 import Icon from "@/components/icons/index.js";
 
