@@ -1,5 +1,5 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
-import { Path_page, Routes as RoutesApp } from '@/routes'
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { Path_page, Routes as RoutesApp } from '@/routes.ts';
 import { Slug } from "@/utils/handleText.js";
 import { clsx } from "clsx";
 import ViewComponent from "@/modules/page/pages/index.tsx";
@@ -8,7 +8,7 @@ import { Footer } from '@/templates/footer';
 
 function App() {
   const path = useLocation()?.pathname;
-  const isProfilePage = location.pathname.includes( Path_page.AUTH.MAIN );
+  const isProfilePage = location.pathname.includes( Path_page?.PROFILE );
 
   return (
    <div
