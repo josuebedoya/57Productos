@@ -32,5 +32,13 @@
         "versionLibNotFound": "Version v{{version}} is not available in family '{{family}}' of react-icons library."
       }
     }
+  },
+  "modules": {
+    "page": {
+      "errors": {
+        "noFoundModule": "The module {{formattedSrc}} does not have export default or named exports",
+        "noValidModule": "No valid component was found in the module"
+      }
+    }
   }
 }
