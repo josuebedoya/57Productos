@@ -5,7 +5,7 @@ import { useSettings } from "@/context/settings.jsx";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { clearStorage } from "@/utils/storage.js";
-import { Path_page as path } from "@/routes.jsx";
+import { Path_page as path } from "@/routes.ts";
 import { WarningModal } from "@/components/warningModal.jsx";
 import Icon from "@/components/icons/index.tsx";
 

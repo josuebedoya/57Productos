@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom';
 import { Metas } from "@/components/metas/metas.jsx";
 import { useSettings } from "@/context/settings.jsx";
 import { HeaderAuth } from "@/modules/profile/components/headerAuth.jsx";
-import { Path_page } from "@/routes.jsx";
+import { Path_page } from "@/routes.ts";
 
 const Profile = () => {
   const [ isLogin, setIsLogin ] = useState( false )
@@ -22,8 +22,8 @@ const Profile = () => {
     setIsLogin( getStorage( 'login' ) )
   }, [] );
 
-  const isSubPage = location.pathname !== Path_page.AUTH.MAIN;
-  const isEditInfo = location.pathname.split( '/' ).slice( -1 )[ 0 ] === Path_page.AUTH.EDIT_INFO;
+  const isSubPage = location.pathname !== Path_page.PROFILE;
+  const isEditInfo = location.pathname.split( '/' ).slice( -1 )[ 0 ] === Path_page.EDIT_INFO;
 
   return (
    <>
