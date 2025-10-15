@@ -8,7 +8,7 @@ import { CartProvider } from './modules/icommerce/context/cart.jsx'
 import { CommentProvider } from "@/modules/comments/context/comments.jsx"
 import { ParamsUrlProvider } from '@/modules/search/context/ParamsUrl.jsx'
 import { FormatMoneyProvider } from '@/context/formatMoney.jsx'
-import ErrorBoundary from "@/components/errorBoundary.jsx";
+import ErrorBoundary from "@/modules/error/components/errorBoundary.tsx";
 import { SettingsProvider } from "@/context/settings.jsx";
 import { GlobalMetas } from "@/components/metas/global.jsx";
 import { App } from './App.jsx'

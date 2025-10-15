@@ -18,6 +18,7 @@ class Settings {
       },
       user: {
         role: 'admin',
+        role_id: 0,
         id: 1,
         username: 'josuebedoya',
         photo: '/assets/images/user/profile-cat.jpg',
