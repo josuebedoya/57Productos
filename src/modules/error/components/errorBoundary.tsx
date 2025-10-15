@@ -1,5 +1,5 @@
 import {Component, type ErrorInfo, type ReactNode} from "react";
-import ViewBoundary from "@/modules/error/components/viewBoundary.js";
+import F01 from "@/modules/error/pages/f01.js";
 
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -27,7 +27,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   render() {
     if (this.state.hasError) {
       const message = this.state.error?.message || "Index desconocido";
-      return <ViewBoundary message={message}/>;
+      return <F01 message={message}/>;
     }
 
     return this.props.children;

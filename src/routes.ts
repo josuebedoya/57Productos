@@ -99,7 +99,7 @@ export const Routes = [
   {
     id: 'ERROR',
     path: '*',
-    view: '@/modules/error/pages/index.jsx'
+    view: '@/modules/error/pages/404.jsx'
   }
 ];
 
