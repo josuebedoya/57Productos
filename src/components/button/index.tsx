@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import type {ButtonProps} from './types.d.ts';
 import {gVar} from "@/utils/gVar.ts";
+import Icon from "@/components/icons/index.js";
 
 const Button: React.FC<ButtonProps> = (
   {
     children,
-    icon,
+    icon = '',
     iconRight = false,
     noStyles = false,
     className = '',
@@ -39,9 +40,9 @@ const Button: React.FC<ButtonProps> = (
       className={`btn ${!noStyles && `btn-${variant} ${btnStyle}`} ${className}`}
       {...props}
     >
-      {!iconRight && icon}
+      {!iconRight && <Icon name={icon}/>}
       {children}
-      {iconRight && icon}
+      {iconRight && <Icon name={icon}/>}
     </button>
   );
 };
