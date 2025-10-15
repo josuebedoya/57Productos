@@ -13,7 +13,7 @@ const Copyright = (props: HTMLAttributes<HTMLDivElement>) => {
     <div className='copyright containter'>
       <div {...props}>
         © {date}. {label}
-        <em className='name' style={{fontFamily: "inherit"}}> {siteName}</em>
+        <em className='name font-semibold' style={{fontFamily: "inherit"}}> {siteName}</em>
       </div>
     </div>
   );
