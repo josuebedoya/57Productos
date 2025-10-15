@@ -1,5 +1,6 @@
 import { useSettings } from '@/context/settings.jsx';
 import { Metas } from '@/components/metas/metas.jsx';
+import NumberControl from "@/components/numberControl/index.js";
 
 const Contact = () => {
   const { settings } = useSettings();
@@ -12,6 +13,7 @@ const Contact = () => {
       type='website'/>
      <section className='container mx-auto'>
        <h1>Asesorate, deja tus datos y te contactaremos los más rápido posible</h1>
+       <NumberControl/>
      </section>
    </>
   );

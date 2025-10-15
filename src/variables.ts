@@ -213,7 +213,7 @@ export const vars = {
   },
 
   input: {
-    base: 'block w-full text-sm transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-1',
+    base: 'block w-full text-sm transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-1 h-full',
 
     padding: {
       sm: 'px-2 py-1',

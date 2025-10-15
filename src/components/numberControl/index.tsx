@@ -2,18 +2,21 @@ import React, {useState} from 'react';
 import Input from "@/components/input/fields/input/index.js";
 import Button from "@/components/button/index.js";
 import type {NumberControlProps} from "@/components/numberControl/types.js";
+import clsx from "clsx";
 
 const NumberControl: React.FC<NumberControlProps> = (
   {
     inputProps,
-    buttonProps
+    buttonProps,
+    onChange
   }
 ) => {
 
   const [amount, setAmount] = useState<number>(1);
 
   const handleAmount = (e: string | number): void => {
-    setAmount(e);
+    setAmount(Number(e));
+    onChange && onChange(e);
   }
 
   const controllerAmount = (type: 'add' | 'reduce'): void => {
@@ -29,6 +32,7 @@ const NumberControl: React.FC<NumberControlProps> = (
       <div className="flex align-center">
         <Button
           onClick={() => controllerAmount('reduce')}
+          className={clsx(buttonProps?.className, '!rounded-r-none')}
           {...buttonProps}
         >
           -</Button>
@@ -38,11 +42,15 @@ const NumberControl: React.FC<NumberControlProps> = (
           value={amount}
           minLength={inputProps?.minLength || 1}
           min={inputProps?.min || 1}
-          type='TEL'
+          type='number'
+          rounded='none'
+          className={clsx(inputProps?.className, 'opacity-70')}
+
           {...inputProps}
         />
         <Button
           onClick={() => controllerAmount('add')}
+          className={clsx(buttonProps?.className, '!rounded-l-none')}
           {...buttonProps}
         >+</Button>
       </div>
