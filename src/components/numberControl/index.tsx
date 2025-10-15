@@ -17,13 +17,15 @@ const NumberControl: React.FC<NumberControlProps> = (
   const handleAmount = (e: string | number): void => {
     setAmount(Number(e));
     onChange && onChange(e);
+    console.log(e)
   }
 
-  const controllerAmount = (type: 'add' | 'reduce'): void => {
+  const controllerAmount = (type: 'add' | 'reduce'): void | null => {
     if (type === 'add') {
-      setAmount(prev => prev + 1);
+      handleAmount(amount + 1);
     } else {
-      setAmount(prev => prev - 1);
+      if (amount > (Number(inputProps?.min || 1)))
+        handleAmount(amount - 1);
     }
   }
 

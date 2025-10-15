@@ -30,7 +30,6 @@ const Number: React.FC<InputProps> = (
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const value = e.target.value;
-
     const isDeleting = valueInput.toString().length > value.length;
 
     if (type === 'tel') {
@@ -42,6 +41,11 @@ const Number: React.FC<InputProps> = (
       onChange?.(e);
     }
   };
+
+  // Listen value changes
+  useEffect(() => {
+    value && setValueInput(value as string | number);
+  }, [value]);
 
   return (
     <div className='input-container w-full'>
