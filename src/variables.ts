@@ -171,6 +171,7 @@ export const vars = {
     base: 'focus:opacity-80 block w-full appearance-none focus:outline-none transition duration-300',
 
     padding: {
+      none: 'p-0',
       sm: 'p2',
       md: 'p-3',
       lg: 'p-5',
@@ -216,6 +217,7 @@ export const vars = {
     base: 'block w-full text-sm transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-1 h-full',
 
     padding: {
+      none: 'p-0',
       sm: 'px-2 py-1',
       md: 'px-3 py-2',
       lg: 'px-4 py-3',
@@ -250,6 +252,7 @@ export const vars = {
       base: 'appearance-none !auto max-w-max cursor-pointer border',
 
       padding: {
+        none: 'p-0',
         sm: 'p-2',
         md: 'p-4',
         lg: 'p-5',

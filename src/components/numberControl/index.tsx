@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 import Input from "@/components/input/fields/input/index.js";
 import Button from "@/components/button/index.js";
 import type {NumberControlProps} from "@/components/numberControl/types.js";
@@ -7,31 +7,32 @@ import clsx from "clsx";
 const NumberControl: React.FC<NumberControlProps> = (
   {
     inputProps,
+    value,
     buttonProps,
     onChange
   }
 ) => {
 
-  const amountRef = useRef<number>(1);
-  const [amount, setAmount] = useState<number>(1);
   const intervalRef = useRef<number | null>(null);
+  const amountRef = useRef<number>(value || 1);
+
+  useEffect(() => {
+    amountRef.current = value || 1;
+  }, [value]);
 
   const handleAmount = (e: string | number): void => {
     const value = Number(e);
     amountRef.current = value;
-    setAmount(value);
     onChange && onChange(value);
   }
 
   const controllerAmount = (type: 'add' | 'reduce'): void | null => {
     if (intervalRef.current) return;
-
     intervalRef.current = setInterval(() => {
-      const current = amountRef.current;
       const min = Number(inputProps?.min || 1);
       const action = type === 'add' ? 1 : -1;
-      const next = Math.max(current + action, min);
-
+      const next = Math.max(amountRef.current + action, min);
+      amountRef.current = next;
       handleAmount(next);
     }, 130);
   }
@@ -57,7 +58,7 @@ const NumberControl: React.FC<NumberControlProps> = (
       <div className="flex align-center">
         <Button
           onMouseDown={() => controllerAmount('reduce')}
-          onClick={() => handleAmount(amountRef.current - 1)}
+          onClick={() => handleAmount((value || 1) - 1)}
           onMouseUp={stopController}
           onMouseLeave={stopController}
           className={clsx(buttonProps?.className, '!rounded-r-none')}
@@ -68,7 +69,7 @@ const NumberControl: React.FC<NumberControlProps> = (
         <Input
           name='amount-control'
           onChange={e => handleAmount(e.target.value)}
-          value={amount}
+          value={value}
           minLength={inputProps?.minLength || 1}
           min={inputProps?.min || 1}
           type='number'
@@ -78,7 +79,7 @@ const NumberControl: React.FC<NumberControlProps> = (
         />
         <Button
           onMouseDown={() => controllerAmount('add')}
-          onClick={() => handleAmount(amountRef.current + 1)}
+          onClick={() => handleAmount((value || 1) + 1)}
           onMouseUp={stopController}
           onMouseLeave={stopController}
           className={clsx(buttonProps?.className, '!rounded-l-none')}
