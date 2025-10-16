@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import Stars from '@/components/stars/index.tsx';
 import Button from '@/components/button/index.tsx';
-import { AddWithQuantity } from '@/components/addWithQuantity.jsx';
+import AddWithQuantity from '@/modules/icommerce/components/addWithQuantity.tsx';
 import { Modal } from '@/components/modal.jsx';
 import { useCart } from '@/modules/icommerce/context/cart.jsx';
-import Icon from "@/components/icons/index.tsx";
 
 const ModalProduct = ( { close, title, price, description, img, imgHover, isOpen, id } ) => {
   const [ changeImg, setChangeImg ] = useState( false );
@@ -69,9 +68,9 @@ const ModalProduct = ( { close, title, price, description, img, imgHover, isOpen
                <span>${ price }</span>
              </div>
              <div className='btns-group flex justify-between'>
-               < AddWithQuantity functionAdd={ addToCart } handleAmount={ handleAmount }/>
+               < AddWithQuantity functionAdd={ addToCart } onChange={ handleAmount }/>
                <div className='btn-outstanding'>
-                 <Button icon={ <Icon name={ !outstanding ? 'FaRegHeart' : 'FaHeartCircleCheck' }/> } onClick={ Added }
+                 <Button icon={ !outstanding ? 'FaRegHeart' : 'FaHeartCircleCheck' } onClick={ Added }
                          size='lg'/>
                </div>
              </div>
