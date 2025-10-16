@@ -9,7 +9,8 @@ const NumberControl: React.FC<NumberControlProps> = (
     inputProps,
     value,
     buttonProps,
-    onChange
+    onChange,
+    className
   }
 ) => {
 
@@ -55,7 +56,7 @@ const NumberControl: React.FC<NumberControlProps> = (
 
   return (
     <div className='control'>
-      <div className="flex align-center">
+      <div className={clsx('flex items-center justify-between', className)}>
         <Button
           onMouseDown={() => controllerAmount('reduce')}
           onClick={() => handleAmount((value || 1) - 1)}

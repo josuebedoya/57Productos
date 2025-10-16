@@ -5,5 +5,6 @@ export interface NumberControlProps {
   onChange?: (e?: any) => void;
   value?: number;
   inputProps?: InputProps;
-  buttonProps?: ButtonProps
+  buttonProps?: ButtonProps;
+  className?: string;
 }
