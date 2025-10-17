@@ -31,6 +31,12 @@
         "iconNameRequired": "Icon name is required.",
         "versionLibNotFound": "Version v{{version}} is not available in family '{{family}}' of react-icons library."
       }
+    },
+    "modal": {
+      "buttons": {
+        "close": "Close",
+        "action": "Action"
+      }
     }
   },
   "modules": {
