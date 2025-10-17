@@ -1,0 +1,53 @@
+import {
+  A11y,
+  EffectCreative,
+  EffectCube,
+  EffectFade,
+  EffectFlip,
+  EffectCards,
+  EffectCoverflow,
+  Grid,
+  Navigation,
+  HashNavigation,
+  History,
+  Keyboard,
+  Mousewheel,
+  Pagination,
+  Parallax,
+  Scrollbar,
+  Thumbs,
+  Virtual,
+  Zoom,
+  Autoplay,
+  Controller,
+  FreeMode,
+  Manipulation
+} from "swiper/modules";
+
+const swiperModules = {
+  A11y,
+  EffectCreative,
+  EffectCube,
+  EffectFade,
+  EffectFlip,
+  EffectCards,
+  EffectCoverflow,
+  Grid,
+  Navigation,
+  HashNavigation,
+  History,
+  Keyboard,
+  Mousewheel,
+  Pagination,
+  Parallax,
+  Scrollbar,
+  Thumbs,
+  Virtual,
+  Zoom,
+  Autoplay,
+  Controller,
+  FreeMode,
+  Manipulation
+};
+
+export default swiperModules;
