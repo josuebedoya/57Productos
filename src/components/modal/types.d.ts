@@ -28,3 +28,14 @@ type PropsSlotFooter = {
   onClickActionButtonFooter?: (e?: any) => void;
   propsActionButtonFooter?: ButtonProps;
 }
+
+type TypeModal = 'alert' | 'drawer' | 'popup';
+
+export interface ContainerModalProps {
+  isOpen: boolean;
+  children?: React.ReactNode;
+  animation?: Record<'entrance' | 'exit', string>;
+  withBackground?: boolean;
+  className?: string;
+  type?: TypeModal;
+}
