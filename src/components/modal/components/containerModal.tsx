@@ -15,19 +15,23 @@ const ContainerModal: React.FC<ContainerModalProps> = (
   }) => {
   const [show, setShow] = useState<boolean>(isOpen);
 
-  const handleShowing = () => {
-    if (!isOpen) setShow(false);
-  };
-
   useEffect(() => {
-    if (isOpen) setShow(isOpen);
+    if (!isOpen) return;
+
+    setShow(true);
   }, [isOpen]);
+
+  const handleAnimationEnd = () => {
+    if (!isOpen && show) {
+      setShow(false);
+    }
+  };
 
   if (!show) return null;
   return (
     <div
       className={clsx(isOpen ? animation?.entrance || 'animate-fade-in' : animation?.exit || 'animate-fade-out', className)}
-      onAnimationEnd={handleShowing}>
+      onAnimationEnd={handleAnimationEnd}>
       <Body className={clsx(gVar('modal.base'), {'bg-black/70 ': withBackground || type === 'popup'})}>
         <div className='modal w-full h-full bg-transparent'>
           {children}
