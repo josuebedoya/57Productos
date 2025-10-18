@@ -8,7 +8,7 @@ export const vars = {
       black: 'text-black',
       gray: 'text-gray-500',
 
-      hover:{
+      hover: {
         primary: 'hover:text-Primary',
         secondary: 'hover:text-Secondary',
         accent: 'hover:text-Accent',
@@ -420,14 +420,56 @@ export const vars = {
   },
   stars: {
     base: 'cursor-pointer aria-disabled:cursor-auto aria-disabled:opacity-50',
-    
+
     color: {
-      primary:'aria-checked:text-Primary',
-      secondary:'aria-checked:text-Secondary',
-      accent:'aria-checked:text-accent',
-      white:'aria-checked:text-white',
-      black:'aria-checked:text-black',
-      gray:'aria-checked:text-gray-500',
+      primary: 'aria-checked:text-Primary',
+      secondary: 'aria-checked:text-Secondary',
+      accent: 'aria-checked:text-accent',
+      white: 'aria-checked:text-white',
+      black: 'aria-checked:text-black',
+      gray: 'aria-checked:text-gray-500',
+    }
+  },
+  modal: {
+    base: 'absolute inset-0 z-modal flex items-center justify-center h-screen w-screen pointer-events-none overflow-hidden max-h-full max-w-full',
+    drawer: {
+      side: {
+        size: {
+          sm: 'w-[95%] sm:w-1/4',
+          md: 'w-[95%] sm:w-1/3',
+          lg: 'w-[95%] sm:w-1/2',
+          xl: 'w-[95%] sm:w-2/3',
+          full: 'w-full',
+        }
+      },
+      vertical: {
+        size: {
+          sm: 'h-1/4',
+          md: 'h-1/3',
+          lg: 'h-1/2',
+          xl: 'h-2/3',
+          full: 'h-full',
+        }
+      },
+      position: {
+        left: 'justify-start items-stretch',
+        right: 'justify-end items-stretch',
+        top: 'justify-center items-start',
+        bottom: 'justify-center items-end',
+      },
+      // Fix animations
+      animation: {
+        entrance: {
+          side: 'translate-x-0',
+          vertical: 'translate-y-0'
+        },
+        exit: {
+          left: '-translate-x-full',
+          right: 'translate-x-full',
+          top: '-translate-y-full',
+          bottom: 'translate-y-full'
+        }
+      },
     }
   }
 }
