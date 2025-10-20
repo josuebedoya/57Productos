@@ -78,10 +78,10 @@ module.exports = {
         'shaking': 'shaking  2.5s linear infinite',
         'collapse-top-in': 'collapse-top-in .5s ease-in both',
         'collapse-top-out': 'collapse-top-out .5s ease-out both',
-        'fade-up-in': 'fade-up-in .33s ease-in both',
-        'fade-down-in': 'fade-down-in .33 ease-in both',
-        'fade-up-out': 'fade-up-out .33s ease-in both',
-        'fade-down-out': 'fade-down-out .33 ease-in both'
+        'fade-up-in': 'fade-up-in .53s ease-in both',
+        'fade-down-in': 'fade-down-in .53 ease-in both',
+        'fade-up-out': 'fade-up-out .53s ease-in both',
+        'fade-down-out': 'fade-down-out .53 ease-in both'
       },
       keyframes: {
         'fade-out': {
