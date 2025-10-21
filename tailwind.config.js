@@ -79,9 +79,13 @@ module.exports = {
         'collapse-top-in': 'collapse-top-in .5s ease-in both',
         'collapse-top-out': 'collapse-top-out .5s ease-out both',
         'fade-up-in': 'fade-up-in .53s ease-in both',
-        'fade-down-in': 'fade-down-in .53 ease-in both',
         'fade-up-out': 'fade-up-out .53s ease-in both',
-        'fade-down-out': 'fade-down-out .53 ease-in both'
+        'fade-down-in': 'fade-down-in .53s ease-in both',
+        'fade-down-out': 'fade-down-out .53 ease-in both',
+        'fade-left-out': 'fade-left-out .53s ease-in both',
+        'fade-left-in': 'fade-left-in .53s ease-in both',
+        'fade-right-out': 'fade-right-out .53s ease-in both',
+        'fade-right-in': 'fade-right-in .53s ease-in both',
       },
       keyframes: {
         'fade-out': {
@@ -132,6 +136,22 @@ module.exports = {
         'fade-down-out': {
           '0%': { transform: 'translateY(0)', opacity: 1 },
           '100%': { transform: 'translateY(-70px)', opacity: 0 }
+        },
+        'fade-left-out': {
+          '0%': { transform: 'translateX(0)', opacity: 1 },
+          '100%': { transform: 'translateX(70px)', opacity: 0 }
+        },
+        'fade-left-in': {
+          '0%': { transform: 'translateX(-70px)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 }
+        },
+        'fade-right-out': {
+          '0%': { transform: 'translateX(0)', opacity: 1 },
+          '100%': { transform: 'translateX(-70px)', opacity: 0 }
+        },
+        'fade-right-in': {
+          '0%': { transform: 'translateX(70px)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 }
         }
       },
     },
