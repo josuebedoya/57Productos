@@ -4,6 +4,7 @@ import clsx from "clsx";
 import type {ComponentModalProps, PropsSlotFooter, PropsSlotHeader} from "@/components/modal/types.js";
 import HeaderModal from "@/components/modal/components/headerModal.tsx";
 import FooterModal from "@/components/modal/components/footerModal.js";
+import usePropsHeaderFooter from "@/components/modal/hooks/usePropsHeaderFooter.js";
 
 const Drawer: React.FC<ComponentModalProps> = (
   {
@@ -25,33 +26,15 @@ const Drawer: React.FC<ComponentModalProps> = (
 
   const sizeModal = gVar(`modal.drawer.${orientation}.size.${size}`);
   const baseModal = gVar(`modal.baseComponent`);
-  const headerProps = {
-    headerClassName,
-    headerSticky,
+  const {headerProps, footerProps} = usePropsHeaderFooter({
     withHeader,
-    titleHeader: props?.titleHeader,
-    subtitleHeader: props?.subtitleHeader,
-    labelCloseButtonHeader: props?.labelCloseButtonHeader,
-    onClickCloseButtonHeader: props?.onClickCloseButtonHeader,
-    propsCloseButtonHeader: props?.propsCloseButtonHeader,
-    childrenHeader: props?.childrenHeader,
-    closeButtonHeaderPosition: props?.closeButtonHeaderPosition
-  } as PropsSlotHeader;
-  const footerProps = {
     withFooter,
-    footerClassName,
     footerSticky,
-    childrenFooter: props?.childrenFooter,
-    subtitleFooter: props?.subtitleFooter,
-    titleFooter: props?.titleFooter,
-    onClickActionButtonFooter: props?.onClickActionButtonFooter,
-    actionButtonFooter: props?.actionButtonFooter,
-    labelActionButtonFooter: props?.labelActionButtonFooter,
-    propsActionButtonFooter: props?.propsActionButtonFooter,
-    propsCloseButtonFooter: props?.propsCloseButtonFooter,
-    labelCloseButtonFooter: props?.labelCloseButtonFooter,
-    onClickCloseButtonFooter: props?.onClickCloseButtonFooter
-  } as PropsSlotFooter;
+    headerSticky,
+    footerClassName,
+    headerClassName,
+    ...props
+  });
 
   return (
     <div className={clsx('drawer w-full h-full flex', gVar(`modal.drawer.position.${position}`))}>
