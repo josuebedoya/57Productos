@@ -25,25 +25,27 @@ const ContainerModal: React.FC<ContainerModalProps> = (
     if (!isOpen && show) {
       setTimeout(() => {
         setShow(false);
-      }, 300);
+      }, 500);
     }
   };
 
   if (!show) return null;
   return (
-    <div
-      className={clsx(isOpen ? animation?.entrance || 'animate-fade-in' : animation?.exit || 'animate-fade-out', className,
-        'w-full h-full max-h-full max-w-full')}
-      onAnimationEnd={handleAnimationEnd}>
-      <Body className={clsx(gVar('modal.base'), {'bg-black/70 ': withBackground || type === 'popup'})}>
-        <div className='modal w-full h-full bg-transparent'>
-          {children}
-        </div>
-      </Body>
-      <style>{`#modal-root{position:absolute; inset:0; width:100%;height:100%;z-index:999999;}
+    <div className='overflow-hidden w-full h-full max-w-full max-h-full rounded-none z-modal'>
+      <div
+        className={clsx(isOpen ? animation?.entrance || 'animate-fade-in' : animation?.exit || 'animate-fade-out', className,
+          'w-full h-full')}
+        onAnimationEnd={handleAnimationEnd}>
+        <Body className={clsx(gVar('modal.base'), {'bg-black/70 ': withBackground || type === 'popup'})}>
+          <div className='modal w-full h-full bg-transparent'>
+            {children}
+          </div>
+        </Body>
+        <style>{`#modal-root{position:absolute; inset:0; width:100%;height:100%;z-index:999999;}
                #modal-root .body .modal *{pointer-events:auto;}
                `}
-      </style>
+        </style>
+      </div>
     </div>
   );
 };
