@@ -31,12 +31,15 @@ const ContainerModal: React.FC<ContainerModalProps> = (
 
   if (!show) return null;
   return (
-    <div className='overflow-hidden w-full h-full max-w-full max-h-full rounded-none z-modal'>
+    <div
+      className={clsx('overflow-hidden w-full h-full max-w-full max-h-full rounded-none z-modal', {'bg-black/70 ': withBackground || type === 'popup'},
+        isOpen ? 'animate-fade-in' : 'animate-fade-out')}
+    >
       <div
         className={clsx(isOpen ? animation?.entrance || 'animate-fade-in' : animation?.exit || 'animate-fade-out', className,
           'w-full h-full')}
         onAnimationEnd={handleAnimationEnd}>
-        <Body className={clsx(gVar('modal.base'), {'bg-black/70 ': withBackground || type === 'popup'})}>
+        <Body className={clsx(gVar('modal.base'))}>
           <div className='modal w-full h-full bg-transparent'>
             {children}
           </div>
