@@ -13,12 +13,13 @@ const HeaderModal: React.FC<PropsSlotHeader> = (
     childrenHeader,
     propsCloseButtonHeader,
     withHeader = true,
-    onClickCloseButtonHeader
+    onClickCloseButtonHeader,
+    closeButtonHeaderPosition = 'right',
   }) => {
   return (
     <div
       className={clsx('header p-5 border-b border-b-gray-300', headerClassName, {'sticky top-0 z-10': headerSticky})}>
-      <div className="control flex justify-end">
+      <div className={clsx('control flex', closeButtonHeaderPosition === 'right' ? 'justify-end' : 'justify-start')}>
         <Button
           variant={propsCloseButtonHeader?.variant || 'flat'}
           {...propsCloseButtonHeader}
