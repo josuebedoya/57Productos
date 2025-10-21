@@ -73,8 +73,8 @@ const CodeBlocks: React.FC<CodeProps> = (
             <IconController
               label={t('components.code.controller.lang')}
               active={isDark}
-              icon='LangIcon2'
-              iconActive='LangIcon2'
+              icon='TbLanguageKatakana'
+              iconActive='TbLanguageKatakana'
               isDark={isDark}
               className={`mr-5 ${langClass}`}
               fallback={LangHandleAnimating}
@@ -95,8 +95,8 @@ const CodeBlocks: React.FC<CodeProps> = (
           <IconController
             label={t('components.code.controller.theme')}
             active={isDark}
-            icon='SunIcon'
-            iconActive='MoonIcon'
+            icon='MdSunny'
+            iconActive='IoMdMoon'
             isDark={isDark}
             className={`mr-5 ${themeClass}`}
             fallback={themeHandleAnimating}
@@ -104,10 +104,10 @@ const CodeBlocks: React.FC<CodeProps> = (
 
           {/*Copy Icon*/}
           <IconController
-            label={t('components.code.controller.copy')}
+            label={copied ? t('components.code.controller.copied') : t('components.code.controller.copy')}
             active={copied}
-            icon='LuCopyCheck'
-            iconActive='FaCopy'
+            icon='FaCopy'
+            iconActive='LuCopyCheck'
             isDark={isDark}
             className={copyClass}
             fallback={() => (value && !copied) && copyHandleAnimating()}

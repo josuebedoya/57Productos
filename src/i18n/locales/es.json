@@ -22,7 +22,8 @@
       "controller": {
         "lang": "Idioma",
         "theme": "Tema",
-        "copy": "Copiar"
+        "copy": "Copiar",
+        "copied": "Copiado"
       }
     },
     "icons": {
