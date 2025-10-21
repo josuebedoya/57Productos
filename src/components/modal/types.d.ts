@@ -10,8 +10,9 @@ type PropsSlotHeader = {
   subtitleHeader?: string;
   labelCloseButtonHeader?: string;
   onClickCloseButtonHeader?: (e?: any) => void;
+  closeButtonHeaderPosition?: "left" | "right";
   propsCloseButtonHeader?: ButtonProps;
-}
+};
 
 type PropsSlotFooter = {
   withFooter?: boolean;
@@ -27,74 +28,47 @@ type PropsSlotFooter = {
   labelActionButtonFooter?: string;
   onClickActionButtonFooter?: (e?: any) => void;
   propsActionButtonFooter?: ButtonProps;
-}
+};
 
-type TypeModal = 'alert' | 'drawer' | 'popup';
-type PositionDrawer = 'left' | 'right' | 'top' | 'bottom';
-type PositionAlert = 'center' | 'top' | 'bottom' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+type TypeModal = "alert" | "drawer" | "popup";
+
+type PositionDrawer = "left" | "right" | "top" | "bottom";
+type PositionAlert = | "center" | "top" | "bottom" | "top-left" | "top-right" | "bottom-left" | "bottom-right";
+type PositionModal = PositionDrawer | PositionAlert | undefined;
 
 export interface ContainerModalProps {
   isOpen: boolean;
   children?: React.ReactNode;
-  animation?: Record<'entrance' | 'exit', string>;
+  animation?: Record<"entrance" | "exit", string | null>;
   withBackground?: boolean;
   className?: string;
   type?: TypeModal;
-  animationRefs?: React.RefObject<HTMLElement>[];
 }
 
-export interface ComponentModalProps extends PropsSlotFooter, PropsSlotHeader {
-  show: boolean;
-  position?: TypeModal extends 'drawer'
-    ? PositionDrawer
-    : TypeModal extends 'alert'
-      ? PositionAlert
-      : never;
-  size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
+export interface ComponentModalProps extends PropsSlotHeader, PropsSlotFooter {
+  position?: PositionModal;
+  size?: "sm" | "md" | "lg" | "xl" | "full" | (string);
   children?: React.ReactNode;
-  animationRefs?: React.RefObject<HTMLElement>[];
-  onRefsReady?: (refs: React.RefObject<HTMLElement>[]) => void;
 }
+
+type CommonModalProps = ComponentModalProps & {
+  children?: React.ReactNode;
+  type: TypeModal;
+  isOpen: boolean;
+  onClose: () => void;
+  withBackground?: boolean;
+  animation?: Record<"entrance" | "exit", string | null>;
+  footerProps?: PropsSlotFooter;
+};
 
 export type ModalProps =
-  | {
-  type: TypeModal;
+  | (CommonModalProps) & {
   withHeader: true;
-  headerProps: PropsSlotHeader;
   withFooter: true;
-  footerProps: PropsSlotFooter;
-  withBackground?: boolean;
-  animation?: Record<'entrance' | 'exit', string>;
-  isOpen: boolean;
-  onClose: () => void;
-}
-  | {
-  type: TypeModal;
+} | (CommonModalProps) & {
   withHeader: true;
-  headerProps: PropsSlotHeader;
   withFooter?: false;
-  withBackground?: boolean;
-  animation?: Record<'entrance' | 'exit', string>;
-  isOpen: boolean;
-  onClose: () => void;
-}
-  | {
-  type: TypeModal;
+} | (CommonModalProps) & {
   withHeader?: false;
   withFooter: true;
-  footerProps: PropsSlotFooter;
-  withBackground?: boolean;
-  animation?: Record<'entrance' | 'exit', string>;
-  isOpen: boolean;
-  onClose: () => void;
-}
-  | {
-  type: TypeModal;
-  withHeader?: false;
-  footerProps: PropsSlotFooter;
-  withFooter?: false;
-  withBackground?: boolean;
-  animation?: Record<'entrance' | 'exit', string>;
-  isOpen: boolean;
-  onClose: () => void;
 };

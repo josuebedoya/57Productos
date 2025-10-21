@@ -1,5 +1,5 @@
+import React from "react";
 import type {ModalProps} from "@/components/modal/types.js";
-import React, {useLayoutEffect, useState} from "react";
 import ReactDOM from 'react-dom';
 import Alert from "@/components/modal/components/alert.js";
 import Popup from "@/components/modal/components/popup.js";
@@ -8,9 +8,30 @@ import ContainerModal from "@/components/modal/components/containerModal.js";
 
 const Modal: React.FC<ModalProps> = (
   {
-    type = 'popup', withBackground = false, animation, isOpen, onClose, ...props
+    type = 'popup', withBackground = false, animation, isOpen, onClose, position, ...props
   }) => {
   if (!type) return null;
+
+  // Choose default animation to drawer modal
+  const getPosition = (type: string = 'drawer', position: string = 'top'): Record<string, string | null> => {
+    switch (type) {
+      case 'drawer':
+        switch (position) {
+          case 'top':
+            return {entrance: 'animate-fade-up-in', exit: 'animate-fade-down-out'};
+          case 'bottom':
+            return {entrance: 'animate-fade-down-in', exit: 'animate-fade-up-out'};
+          case 'left':
+            return {entrance: 'animate-fade-left-in', exit: 'animate-fade-right-out'};
+          case 'right':
+            return {entrance: 'animate-fade-right-in', exit: 'animate-fade-left-out'};
+          default:
+            return {entrance: null, exit: null};
+        }
+      default:
+        return {entrance: null, exit: null};
+    }
+  }
 
   // Choose Component to render
   const Component = () => {
@@ -20,9 +41,9 @@ const Modal: React.FC<ModalProps> = (
       case 'drawer':
         return <Drawer
           {...props}
-          show={isOpen}
           onClickCloseButtonHeader={onClose}
           onClickCloseButtonFooter={onClose}
+          position={position}
         />;
       case 'popup':
         return <Popup {...props}/>;
@@ -37,7 +58,7 @@ const Modal: React.FC<ModalProps> = (
       isOpen={isOpen}
       type={type}
       withBackground={type === 'popup' || withBackground}
-      animation={animation as Record<'entrance' | 'exit', string>}>
+      animation={animation || getPosition(type, position)}>
       <Component/> {/* Render Modal type*/}
     </ContainerModal>,
     document.getElementById('modal-root') as HTMLElement

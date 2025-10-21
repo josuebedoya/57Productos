@@ -10,28 +10,13 @@ const Drawer: React.FC<ComponentModalProps> = (
     position = 'left',
     size = 'sm',
     children,
-    childrenHeader,
-    childrenFooter,
-    labelCloseButtonHeader,
-    propsCloseButtonHeader,
     headerClassName = 'bg-white',
     headerSticky = true,
     footerSticky = true,
     footerClassName = 'bg-white',
-    titleHeader,
-    subtitleHeader,
-    subtitleFooter,
-    titleFooter,
-    withFooter,
-    onClickActionButtonFooter,
-    onClickCloseButtonHeader,
-    propsActionButtonFooter,
-    propsCloseButtonFooter,
-    labelCloseButtonFooter,
-    actionButtonFooter,
-    labelActionButtonFooter,
-    onClickCloseButtonFooter,
+    withFooter = false,
     withHeader = true,
+    ...props
   }) => {
 
   const orientation = ['left', 'right'].includes(position) ? 'side' :
@@ -41,29 +26,30 @@ const Drawer: React.FC<ComponentModalProps> = (
   const headerProps = {
     headerClassName,
     headerSticky,
-    titleHeader,
-    subtitleHeader,
-    labelCloseButtonHeader,
-    onClickCloseButtonHeader,
-    propsCloseButtonHeader,
     withHeader,
-    childrenHeader
+    titleHeader: props?.titleHeader,
+    subtitleHeader: props?.subtitleHeader,
+    labelCloseButtonHeader: props?.labelCloseButtonHeader,
+    onClickCloseButtonHeader: props?.onClickCloseButtonHeader,
+    propsCloseButtonHeader: props?.propsCloseButtonHeader,
+    childrenHeader: props?.childrenHeader,
+    closeButtonHeaderPosition: props?.closeButtonHeaderPosition
   } as PropsSlotHeader;
 
   const footerProps = {
     withFooter,
     footerClassName,
-    childrenFooter,
     footerSticky,
-    subtitleFooter,
-    titleFooter,
-    onClickActionButtonFooter,
-    actionButtonFooter,
-    labelActionButtonFooter,
-    propsActionButtonFooter,
-    propsCloseButtonFooter,
-    labelCloseButtonFooter,
-    onClickCloseButtonFooter,
+    childrenFooter: props?.childrenFooter,
+    subtitleFooter: props?.subtitleFooter,
+    titleFooter: props?.titleFooter,
+    onClickActionButtonFooter: props?.onClickActionButtonFooter,
+    actionButtonFooter: props?.actionButtonFooter,
+    labelActionButtonFooter: props?.labelActionButtonFooter,
+    propsActionButtonFooter: props?.propsActionButtonFooter,
+    propsCloseButtonFooter: props?.propsCloseButtonFooter,
+    labelCloseButtonFooter: props?.labelCloseButtonFooter,
+    onClickCloseButtonFooter: props?.onClickCloseButtonFooter
   } as PropsSlotFooter;
 
   return (
