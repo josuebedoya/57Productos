@@ -5,6 +5,7 @@ import Alert from "@/components/modal/components/alert.js";
 import Popup from "@/components/modal/components/popup.js";
 import Drawer from "@/components/modal/components/drawer.js";
 import ContainerModal from "@/components/modal/components/containerModal.js";
+import clsx from "clsx";
 
 const Modal: React.FC<ModalProps> = (
   {
@@ -58,7 +59,8 @@ const Modal: React.FC<ModalProps> = (
       isOpen={isOpen}
       type={type}
       withBackground={type === 'popup' || withBackground}
-      animation={animation || getPosition(type, position)}>
+      animation={animation || getPosition(type, position)}
+      className={clsx(props?.className)}>
       <Component/> {/* Render Modal type*/}
     </ContainerModal>,
     document.getElementById('modal-root') as HTMLElement

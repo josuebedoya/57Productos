@@ -16,6 +16,7 @@ const Drawer: React.FC<ComponentModalProps> = (
     footerClassName = 'bg-white',
     withFooter = false,
     withHeader = true,
+    classNameContainer,
     ...props
   }) => {
 
@@ -23,6 +24,7 @@ const Drawer: React.FC<ComponentModalProps> = (
     ['top', 'bottom'].includes(position) ? 'vertical' : 'side';
 
   const sizeModal = gVar(`modal.drawer.${orientation}.size.${size}`);
+  const baseModal = gVar(`modal.baseComponent`);
   const headerProps = {
     headerClassName,
     headerSticky,
@@ -35,7 +37,6 @@ const Drawer: React.FC<ComponentModalProps> = (
     childrenHeader: props?.childrenHeader,
     closeButtonHeaderPosition: props?.closeButtonHeaderPosition
   } as PropsSlotHeader;
-
   const footerProps = {
     withFooter,
     footerClassName,
@@ -55,8 +56,7 @@ const Drawer: React.FC<ComponentModalProps> = (
   return (
     <div className={clsx('drawer w-full h-full flex', gVar(`modal.drawer.position.${position}`))}>
       <div
-        className={clsx('content bg-white flex flex-col overflow-auto relative transition-transform duration-500',
-          sizeModal, orientation === 'side' ? 'h-full' : 'w-full')}>
+        className={clsx('content ', baseModal, sizeModal, classNameContainer, orientation === 'side' ? 'h-full' : 'w-full')}>
         <HeaderModal {...headerProps}/>
         <div className="body flex-auto p-5">
           {children}

@@ -432,6 +432,7 @@ export const vars = {
   },
   modal: {
     base: 'absolute inset-0 z-modal flex items-center justify-center h-screen w-screen pointer-events-none overflow-hidden max-h-full max-w-full',
+    baseComponent: 'bg-white flex flex-col overflow-auto relative transition-transform duration-500',
     drawer: {
       side: {
         size: {
@@ -444,10 +445,10 @@ export const vars = {
       },
       vertical: {
         size: {
-          sm: 'h-1/4',
-          md: 'h-1/3',
-          lg: 'h-1/2',
-          xl: 'h-2/3',
+          sm: 'h-3/4 sm:h-1/4',
+          md: 'h-3/4 sm:h-1/3',
+          lg: 'h-3/4 sm:h-1/2',
+          xl: 'h-3/4 sm:h-2/3',
           full: 'h-full',
         }
       },
@@ -470,6 +471,15 @@ export const vars = {
           bottom: 'translate-y-full'
         }
       },
+    },
+    popup: {
+      size: {
+        sm: 'w-11/12 sm:w-1/4',
+        md: 'w-11/12 sm:w-1/3',
+        lg: 'w-11/12 sm:w-1/2',
+        xl: 'w-11/12 sm:w-2/3',
+        full: 'w-full h-full',
+      }
     }
   }
 }

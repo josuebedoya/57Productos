@@ -49,16 +49,17 @@ export interface ComponentModalProps extends PropsSlotHeader, PropsSlotFooter {
   position?: PositionModal;
   size?: "sm" | "md" | "lg" | "xl" | "full" | (string);
   children?: React.ReactNode;
+  classNameContainer?: string;
 }
 
 type CommonModalProps = ComponentModalProps & {
   children?: React.ReactNode;
+  className?: string;
   type: TypeModal;
   isOpen: boolean;
   onClose: () => void;
   withBackground?: boolean;
   animation?: Record<"entrance" | "exit", string | null>;
-  footerProps?: PropsSlotFooter;
 };
 
 export type ModalProps =

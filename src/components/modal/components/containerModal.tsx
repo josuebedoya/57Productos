@@ -32,7 +32,7 @@ const ContainerModal: React.FC<ContainerModalProps> = (
   if (!show) return null;
   return (
     <div
-      className={clsx('overflow-hidden w-full h-full max-w-full max-h-full rounded-none z-modal', {'bg-black/70 ': withBackground || type === 'popup'},
+      className={clsx('overflow-hidden w-full h-full max-w-full max-h-full rounded-none z-modal fixed', {'bg-black/70 ': withBackground || type === 'popup'},
         isOpen ? 'animate-fade-in' : 'animate-fade-out')}
     >
       <div

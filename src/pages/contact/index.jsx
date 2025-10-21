@@ -18,10 +18,44 @@ const Contact = () => {
      <section className='container mx-auto'>
        <h1>Asesorate, deja tus datos y te contactaremos los más rápido posible</h1>
        <Modal
-        type='drawer'
+        type='popup'
         onClose={ () => setOpen( false ) }
         isOpen={ open }
-        position='left'
+        position='bottom'
+        childrenHeader={ <p>HOLAAAAAAAAAAA</p> }
+        footerClassName='text-acenter'
+        footerSticky
+        className='text-center rounded-3xl'
+        classNameContainer='rounded-3xl p-0'
+        headerSticky
+        actionButtonFooter={ () => setOpen( false ) }
+        withFooter
+        onClickActionButtonFooter={ () => alert( 'click' ) }
+        labelCloseButtonHeader={ 'cerrar' }
+        withHeader
+        withBackground
+        titleHeader={ 'Contacto' }
+        titleFooter={ 'Contacto Footer' }
+        subtitleHeader={ 'Contacto' }
+        subtitleFooter={ 'Contacto' }
+        propsCloseButtonHeader={ {
+          variant: 'outline',
+        } }
+        propsCloseButtonFooter={ {
+          variant: 'flat'
+        } }
+        propsActionButtonFooter={{
+          color: 'secondary',
+        }}
+        onClickCloseButtonHeader={ () => alert('click Header') }
+        onClickCloseButtonFooter={ () => alert('click Close Header') }
+        labelCloseButtonFooter='Cerrar Footer'
+        labelActionButtonFooter={'Aceptar Footer'}
+        headerClassName='text-center'
+        closeButtonHeaderPosition='right'
+        childrenFooter={<p>HOLAAAAAAAAAAA Footer</p> }
+        size='md'
+
        />
        <Code>HOLOAAAAAAAAAAAAAAA</Code>
      </section>
