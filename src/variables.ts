@@ -480,6 +480,17 @@ export const vars = {
         xl: 'w-11/12 sm:w-2/3',
         full: 'w-full h-full',
       }
+    },
+    alert: {
+      position: {
+        'top-left': 'justify-start items-start',
+        'top-right': 'justify-end items-start',
+        'bottom-left': 'justify-start items-end',
+        'bottom-right': 'justify-end items-end',
+        top: 'justify-center items-start',
+        bottom: 'justify-center items-end',
+        center: 'justify-center items-center',
+      }
     }
   }
 }
