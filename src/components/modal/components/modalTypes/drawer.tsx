@@ -8,6 +8,8 @@ import defaultPropsModal from '@/components/modal/configs/defaultProps.js';
 const Drawer: React.FC<ComponentModalProps> = (
   {
     defaultPropsModal,
+    size = 'sm',
+    position = 'left',
     children,
     classNameContainer,
     ...props
@@ -22,13 +24,8 @@ const Drawer: React.FC<ComponentModalProps> = (
   ]);
 
   const bodyProps = {
+    ...defaultPropsModal,
     children,
-    withHeader,
-    withFooter,
-    footerSticky,
-    headerSticky,
-    footerClassName,
-    headerClassName,
     classNameContainer: 'content ' + configsClass + '' + classNameContainer + '' + orientation === 'side' ? 'h-full' : 'w-full',
     ...props
   };
