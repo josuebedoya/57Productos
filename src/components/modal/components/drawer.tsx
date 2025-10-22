@@ -1,10 +1,8 @@
 import React from 'react';
 import {gVar} from "@/utils/gVar.js";
 import clsx from "clsx";
-import type {ComponentModalProps, PropsSlotFooter, PropsSlotHeader} from "@/components/modal/types.js";
-import HeaderModal from "@/components/modal/components/headerModal.tsx";
-import FooterModal from "@/components/modal/components/footerModal.js";
-import usePropsHeaderFooter from "@/components/modal/hooks/usePropsHeaderFooter.js";
+import type {ComponentModalProps} from "@/components/modal/types.js";
+import BodyModal from "@/components/modal/components/bodyModal.js";
 
 const Drawer: React.FC<ComponentModalProps> = (
   {
@@ -24,28 +22,26 @@ const Drawer: React.FC<ComponentModalProps> = (
   const orientation = ['left', 'right'].includes(position) ? 'side' :
     ['top', 'bottom'].includes(position) ? 'vertical' : 'side';
 
-  const sizeModal = gVar(`modal.drawer.${orientation}.size.${size}`);
-  const baseModal = gVar(`modal.baseComponent`);
-  const {headerProps, footerProps} = usePropsHeaderFooter({
+  const configsClass = gVar([
+    `modal.drawer.${orientation}.size.${size}`,
+    `modal.baseComponent`
+  ]);
+
+  const bodyProps = {
+    children,
     withHeader,
     withFooter,
     footerSticky,
     headerSticky,
     footerClassName,
     headerClassName,
+    classNameContainer: 'content ' + configsClass + '' + classNameContainer + '' + orientation === 'side' ? 'h-full' : 'w-full',
     ...props
-  });
+  };
 
   return (
     <div className={clsx('drawer w-full h-full flex', gVar(`modal.drawer.position.${position}`))}>
-      <div
-        className={clsx('content ', baseModal, sizeModal, classNameContainer, orientation === 'side' ? 'h-full' : 'w-full')}>
-        <HeaderModal {...headerProps}/>
-        <div className="body flex-auto p-5">
-          {children}
-        </div>
-        <FooterModal {...footerProps} />
-      </div>
+      <BodyModal{...bodyProps}/>
     </div>
   );
 };
