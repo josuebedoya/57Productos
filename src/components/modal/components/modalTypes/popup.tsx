@@ -20,7 +20,7 @@ const Popup: React.FC<ComponentModalProps> = (
 
   const bodyProps = {
     ...defaultPropsModal,
-    classNameContainer: 'content ' + configsClass + '' + classNameContainer,
+    classNameContainer: 'content ' + configsClass + ' ' + classNameContainer,
     ...props
   };
 

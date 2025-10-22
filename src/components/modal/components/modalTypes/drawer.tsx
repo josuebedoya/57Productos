@@ -26,7 +26,7 @@ const Drawer: React.FC<ComponentModalProps> = (
   const bodyProps = {
     ...defaultPropsModal,
     children,
-    classNameContainer: 'content ' + configsClass + '' + classNameContainer + '' + orientation === 'side' ? 'h-full' : 'w-full',
+    classNameContainer: 'content ' + configsClass + ' ' + classNameContainer + ' ' + orientation === 'side' ? 'h-full' : 'w-full',
     ...props
   };
 
