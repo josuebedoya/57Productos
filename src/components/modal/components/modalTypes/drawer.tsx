@@ -7,7 +7,7 @@ import defaultPropsModal from '@/components/modal/configs/defaultProps.js';
 
 const Drawer: React.FC<ComponentModalProps> = (
   {
-    ...defaultPropsModal,
+    defaultPropsModal,
     children,
     classNameContainer,
     ...props

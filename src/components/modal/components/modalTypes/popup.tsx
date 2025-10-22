@@ -6,7 +6,7 @@ import defaultPropsModal from '@/components/modal/configs/defaultProps.js';
 
 const Popup: React.FC<ComponentModalProps> = (
   {
-    ...defaultProps,
+    defaultProps,
     children,
     classNameContainer,
     ...props
