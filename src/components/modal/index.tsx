@@ -1,9 +1,9 @@
 import React from "react";
 import type {ModalProps} from "@/components/modal/types.js";
 import ReactDOM from 'react-dom';
-import Alert from "@/components/modal/components/alert.js";
-import Popup from "@/components/modal/components/popup.js";
-import Drawer from "@/components/modal/components/drawer.js";
+import Alert from "@/components/modal/components/modalTypes/alert.js";
+import Popup from "@/components/modal/components/modalTypes/popup.js";
+import Drawer from "@/components/modal/components/modalTypes/drawer.js";
 import ContainerModal from "@/components/modal/components/containerModal.js";
 import clsx from "clsx";
 
