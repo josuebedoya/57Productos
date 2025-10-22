@@ -3,18 +3,12 @@ import {gVar} from "@/utils/gVar.js";
 import clsx from "clsx";
 import type {ComponentModalProps} from "@/components/modal/types.js";
 import BodyModal from "@/components/modal/components/bodyModal.js";
+import defaultPropsModal from '@/components/modal/configs/defaultProps.js';
 
 const Drawer: React.FC<ComponentModalProps> = (
   {
-    position = 'left',
-    size = 'sm',
+    ...defaultPropsModal,
     children,
-    headerClassName = 'bg-white',
-    headerSticky = true,
-    footerSticky = true,
-    footerClassName = 'bg-white',
-    withFooter = false,
-    withHeader = true,
     classNameContainer,
     ...props
   }) => {

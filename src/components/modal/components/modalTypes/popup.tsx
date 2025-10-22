@@ -2,18 +2,12 @@ import React from 'react';
 import {gVar} from "@/utils/gVar.js";
 import type {ComponentModalProps} from "@/components/modal/types.js";
 import BodyModal from "@/components/modal/components/bodyModal.js";
+import defaultPropsModal from '@/components/modal/configs/defaultProps.js';
 
 const Popup: React.FC<ComponentModalProps> = (
   {
-    position = 'left',
-    size = 'sm',
+    ...defaultProps,
     children,
-    headerClassName = 'bg-white',
-    headerSticky = true,
-    footerSticky = true,
-    footerClassName = 'bg-white',
-    withFooter = false,
-    withHeader = true,
     classNameContainer,
     ...props
   }) => {
