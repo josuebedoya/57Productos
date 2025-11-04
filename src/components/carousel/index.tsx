@@ -7,8 +7,9 @@ import swiperModuleCss from "@/components/carousel/configs/swiperModulesCss.ts";
 import type {CarouselProps} from "@/components/carousel/types.d.ts";
 import Media from "@/components/media/index.tsx";
 import clsx from "clsx";
+import getBreakpointValues from "@/components/carousel/helpers/getBreakpointValues.ts";
 
-const Carousel: React.FC<CarouselProps> = (
+const Carousels: React.FC<CarouselProps> = (
   {
     items = [],
     effect = '',
@@ -18,6 +19,9 @@ const Carousel: React.FC<CarouselProps> = (
     scrollbar = false,
     mousewheel = false,
     autoplay = true,
+    itemClassName,
+    breakpoints = [],
+    ...props
   }) => {
 
   const usageModules = useMemo(() => {
@@ -73,10 +77,14 @@ const Carousel: React.FC<CarouselProps> = (
     }
   }, [effect, navigation, pagination, scrollbar, mousewheel, autoplay]);
 
+  // Responsive values
+  const breakpointValues = getBreakpointValues(breakpoints);
+
   return (
     <div
       className={clsx('swiper-container h-full w-full overflow-hidden block relative', {'swiper-wrapper-2': effect === 'coverflow'})}>
       <Swiper
+        {...props}
         effect={effect && effect}
         slidesPerView={1}
         modules={[...usageModules]}
@@ -86,9 +94,11 @@ const Carousel: React.FC<CarouselProps> = (
         mousewheel={mousewheel}
         autoplay={autoplay}
         className='h-full'
+        centeredSlides={(effect === 'coverflow' || props?.centeredSlides) ?? false}
+        breakpoints={breakpointValues}
       >
         {items?.map((item, i) => (
-          <SwiperSlide key={i}>
+          <SwiperSlide key={i} className={itemClassName}>
             <div className='slide h-full' aria-label={`slide-${i}`}>
               {isMedia ? <Media src={item?.src} {...item} /> : item}
             </div>
@@ -99,4 +109,4 @@ const Carousel: React.FC<CarouselProps> = (
   );
 };
 
-export default Carousel;
+export default Carousels;
