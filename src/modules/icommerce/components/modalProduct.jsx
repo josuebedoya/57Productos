@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Stars from '@/components/stars/index.tsx';
 import Button from '@/components/button/index.tsx';
 import AddWithQuantity from '@/modules/icommerce/components/addWithQuantity.tsx';
-import { Modal } from '@/components/modal.jsx';
+import Modal from '@/components/modal/index.tsx';
 import { useCart } from '@/modules/icommerce/context/cart.jsx';
 
 const ModalProduct = ( { close, title, price, description, img, imgHover, isOpen, id } ) => {
@@ -40,7 +40,7 @@ const ModalProduct = ( { close, title, price, description, img, imgHover, isOpen
     return (
      <>
        <div id='modalProduct'>
-         <Modal isOpen={ isOpen } onClose={ close }>
+         <Modal isOpen={ isOpen } onClose={ close } type='popup' size='lg' classNameContainer='rounded-3xl shadow-lg'>
            <div className='content p-7'>
              <div className='content-title mb-8'>
                <h1 className='text-center text-4xl font-bold'>{ title }</h1>

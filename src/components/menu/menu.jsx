@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Dropdown } from "@/components/menu/dropdown.jsx";
-import { Modal } from '@/components/modal.jsx';
+import Modal from "@/components/modal/index.tsx";
 import Icon from "@/components/icons/index.js";
 
 const Menu = (
@@ -56,7 +56,14 @@ const Menu = (
          <span className='block lg:hidden text-2xl animate-fade-in' onClick={ handleOpenModal }>
            <Icon name='TiThMenuOutline' className='cursor-pointer'/>
          </span>
-       <Modal isOpen={ openMenuBars } onClose={ handleOpenModal } type={ typeMenuMobile }>
+       <Modal
+        isOpen={ openMenuBars }
+        onClose={ handleOpenModal }
+        type='drawer'
+        position='left'
+        withHeader={ false }
+        withFooter={ false }
+       >
          <div className='content-menu block lg:hidden'>
            <Dropdown items={ items } classLink={ classLink } target={ target } handleOpenModal={ handleOpenModal }
                      menuH={ horizontal }/>

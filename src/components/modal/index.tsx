@@ -57,7 +57,10 @@ const Modal: React.FC<ModalProps> = (
           position={position}
         />;
       case 'popup':
-        return <Popup {...props}/>;
+        return <Popup {...props}
+          onClickCloseButtonHeader={onClose}
+          onClickCloseButtonFooter={onClose}
+        />;
       default:
         return null;
     }

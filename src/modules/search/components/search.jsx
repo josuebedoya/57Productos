@@ -7,7 +7,7 @@ import { useResults } from '@/modules/search/context/ParamsUrl.jsx';
 import { normalizeText, Slug } from '@/utils/handleText.ts';
 import { Path_page } from '@/routes.ts';
 import { TextAnimatedWrite } from '@/components/textAnimatedWrite.jsx';
-import { Modal } from "@/components/modal.jsx";
+import Modal from "@/components/modal/index.tsx";
 import Icon from "@/components/icons/index.tsx";
 
 
@@ -94,7 +94,7 @@ const Search = () => {
      </div>
 
      {/* Search Engine Dropdown */ }
-     <Modal isOpen={ showModal } withButtonClose={ false } onClose={ closeModal } classModal='relative'>
+     <Modal isOpen={ showModal } withButtonClose={ false } onClose={ closeModal } type='alert' position="top">
        <div className='query-section flex items-center justify-center space-x-4  w-full px-4 sticky top-0 bg-white'>
          <form method='GET' onSubmit={ submitQuery } className='flex items-center w-full max-w-600 gap-5'>
            <Input type='text' maxLength={ 70 } value={ valueSearch } onChange={ handleValueSearch } name='search'

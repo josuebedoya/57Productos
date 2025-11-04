@@ -34,6 +34,7 @@ const Product = ( props ) => {
   /* open modal with information product */
   const OpenModal = () => {
     setIsOpen( !IsOpen );
+    alert('close')
   };
 
   if ( IsOpen ) {

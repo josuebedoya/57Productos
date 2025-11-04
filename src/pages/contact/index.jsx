@@ -18,22 +18,22 @@ const Contact = () => {
      <section className='container mx-auto'>
        <h1>Asesorate, deja tus datos y te contactaremos los más rápido posible</h1>
        <Modal
-        type='popup'
+        type='alert'
         onClose={ () => setOpen( false ) }
         isOpen={ open }
-        position='bottom'
+        position='left'
         childrenHeader={ <p>HOLAAAAAAAAAAA</p> }
         footerClassName='text-acenter'
         footerSticky
         className='text-center rounded-3xl'
-        classNameContainer='rounded-3xl p-0'
+        classNameContainer='rounded-3xl'
         headerSticky
         actionButtonFooter={ () => setOpen( false ) }
         withFooter
         onClickActionButtonFooter={ () => alert( 'click' ) }
         labelCloseButtonHeader={ 'cerrar' }
         withHeader
-        withBackground
+        withBackground={false}
         titleHeader={ 'Contacto' }
         titleFooter={ 'Contacto Footer' }
         subtitleHeader={ 'Contacto' }

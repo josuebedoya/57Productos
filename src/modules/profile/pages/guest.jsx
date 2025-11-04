@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Button  from '@/components/button/index.tsx';
+import Button from '@/components/button/index.tsx';
 import signImg from '/assets/images/profile.png';
-import { Modal } from '@/components/modal.jsx';
+import Modal from "@/components/modal/index.tsx";
 import { FormLogin } from '../../auth/components/formLogin.jsx';
 import { FormRegister } from '../../auth/components/formRegister.jsx';
 
@@ -75,7 +75,7 @@ const Guest = ( { isLogin } ) => {
          </div>
          <div>
            {/* The login and registration forms are displayed here */ }
-           <Modal isOpen={ isModalOpen } onClose={ closeModal } classModal='max-w-93'>
+           <Modal isOpen={ isModalOpen } onClose={ closeModal } type='popup' size='xl'>
              { isOpenLogin ? (
               <>
                 <FormLogin
