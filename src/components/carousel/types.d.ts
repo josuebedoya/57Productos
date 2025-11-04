@@ -8,5 +8,5 @@ export interface CarouselProps extends SwiperProps {
   isMedia?: boolean;
   itemClassName?: string;
   breakpoints?: Breakpoints;
-  [];
+  manipulation: boolean;
 }

@@ -40,9 +40,21 @@ const InfoAbout = () => {
             pagination={ { clickable: true } }
             navigation={ false }
             grabCursor
+            autoplay={ {
+              delay: 3000,
+              disableOnInteraction: true,
+              waitForTransition: true,
+            } }
             itemClassName='w-52 h-52 md:h-64 md:w-56 rounded-lg shadow-lg overflow-hidden'
             effect='coverflow'
             breakpoints={ breakpoints }
+            coverflowEffect={ {
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            } }
            />
          </div>
        </div>

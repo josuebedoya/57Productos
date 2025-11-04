@@ -44,22 +44,27 @@ export function Carousel( { items = [], itemsView = 3, itemsSpace = 10, navs = f
        spaceBetween={ itemsSpace }
        centeredSlides={ effect === 2 || centerItems }
        navigation={ navs }
+       freeMode
        pagination={ dots ? { clickable: true } : false }
        scrollbar={ lineProgress && !loop ? { draggable: true } : false }
-       autoplay={ autoplay ? {
+       autoplay={ autoplay ? { // ok
          delay: autoplayDelay,
          disableOnInteraction: true,
        } : false }
-       loop={ loop }
-       effect={ effect === 1 ? 'fade' : effect === 2 ? 'coverflow' : false }
-       coverflowEffect={ effect === 2 ? {
+       loop={ loop }  // ok
+       effect={ effect === 1 ? 'fade' : effect === 2 ? 'coverflow' : false }  // ok
+       coverflowEffect={ effect === 2 ? {  // ok
          rotate: 50,
          stretch: 0,
          depth: 100,
          modifier: 1,
          slideShadows: true,
+         scale: 1
        } : null }
-       breakpoints={ breakpoints }
+       fadeEffect={{  // ok
+         crossFade: true,
+       }}
+       breakpoints={ breakpoints } // ok
       >
         { items.map( ( item, i ) => (
          <SwiperSlide key={ i } className={ `item-slide ${ itemClass }` }>

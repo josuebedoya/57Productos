@@ -1,81 +1,68 @@
 import React, {useMemo} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
-import swiperModules from "@/components/carousel/configs/swiperModules.ts";
-import swiperModuleCss from "@/components/carousel/configs/swiperModulesCss.ts";
 
 import type {CarouselProps} from "@/components/carousel/types.d.ts";
 import Media from "@/components/media/index.tsx";
 import clsx from "clsx";
 import getBreakpointValues from "@/components/carousel/helpers/getBreakpointValues.ts";
+import getModule from "@/components/carousel/helpers/getModule.ts";
 
 const Carousels: React.FC<CarouselProps> = (
   {
     items = [],
     effect = '',
     isMedia = false,
-    navigation = true,
-    pagination = false,
-    scrollbar = false,
-    mousewheel = false,
-    autoplay = true,
     itemClassName,
     breakpoints = [],
     ...props
   }) => {
 
+  const swModules = {
+    a11y: props?.a11y ?? false,
+    effect: effect ?? false,
+    grid: props?.grid ?? false,
+    navigation: props?.navigation ?? true,
+    hashNavigation: props?.hashNavigation ?? false,
+    history: props?.history ?? false,
+    keyboard: props?.keyboard ?? false,
+    mousewheel: props?.mousewheel ?? false,
+    pagination: props?.pagination ?? false,
+    parallax: props?.parallax ?? false,
+    scrollbar: props?.scrollbar ?? false,
+    thumbs: props?.thumbs ?? false,
+    virtual: props?.virtual ?? false,
+    zoom: props?.zoom ?? false,
+    autoplay: props?.autoplay ?? true,
+    controller: props?.controller ?? false,
+    freeMode: props?.freeMode ?? false,
+    manipulation: props?.manipulation ?? false,
+  };
+
   const usageModules = useMemo(() => {
-    const modules = [];
-    if (effect) {
-      const mName = `Effect${effect.charAt(0).toUpperCase() + effect.slice(1).toLowerCase()}` as keyof typeof swiperModules;
-      if (swiperModules[mName]) {
-        modules.push(swiperModules[mName]);
+    const keys = Object.keys(swModules) as (keyof typeof swModules)[];
+    const modules = keys.reduce<any[]>((acc, m) => {
+      const enabled = (props as any)[m] ?? swModules[m];
+      if (enabled) {
+        const mod = getModule(m === 'effect' ? swModules.effect : m, m === 'effect');
+        if (mod) acc.push(mod);
       }
-    }
-
-    if (navigation) {
-      modules.push(swiperModules['Navigation']);
-    }
-    if (pagination) {
-      modules.push(swiperModules['Pagination']);
-    }
-    if (scrollbar) {
-      modules.push(swiperModules['Scrollbar']);
-    }
-    if (mousewheel) {
-      modules.push(swiperModules['Mousewheel']);
-    }
-    if (autoplay) {
-      modules.push(swiperModules['Autoplay']);
-    }
-
+      return acc;
+    }, []);
     return modules;
-  }, [effect, navigation, pagination, scrollbar, mousewheel, autoplay]);
+  }, [swModules, props]);
 
-  // load css
+  // load css e
   useMemo(() => {
-    if (effect) {
-      const mName = `Effect${effect.charAt(0).toUpperCase() + effect.slice(1).toLowerCase()}` as keyof typeof swiperModuleCss;
-      if (swiperModuleCss[mName]) {
-        swiperModuleCss[mName]();
+    const keys = Object.keys(swModules) as (keyof typeof swModules)[];
+    keys.forEach(m => {
+      const enabled = (props as any)[m] ?? swModules[m];
+      if (enabled) {
+        const mod = getModule(m === 'effect' ? swModules.effect : m, m === 'effect', true);
+        if (mod) mod();
       }
-    }
-    if (navigation) {
-      swiperModuleCss['Navigation']();
-    }
-    if (pagination) {
-      swiperModuleCss['Pagination']();
-    }
-    if (scrollbar) {
-      swiperModuleCss['Scrollbar']();
-    }
-    if (mousewheel) {
-      swiperModuleCss['Mousewheel']();
-    }
-    if (autoplay) {
-      swiperModuleCss['Autoplay']();
-    }
-  }, [effect, navigation, pagination, scrollbar, mousewheel, autoplay]);
+    }, []);
+  }, [swModules, props]);
 
   // Responsive values
   const breakpointValues = getBreakpointValues(breakpoints);
@@ -86,13 +73,9 @@ const Carousels: React.FC<CarouselProps> = (
       <Swiper
         {...props}
         effect={effect && effect}
-        slidesPerView={1}
+        slidesPerView={effect === 'fade' ? 1 : props?.slidesPerView || 1}
         modules={[...usageModules]}
-        navigation={navigation}
-        pagination={pagination}
-        scrollbar={scrollbar}
-        mousewheel={mousewheel}
-        autoplay={autoplay}
+        scrollbar={props?.scrollbar && !props?.loop ? props?.scrollbar : false}
         className='h-full'
         centeredSlides={(effect === 'coverflow' || props?.centeredSlides) ?? false}
         breakpoints={breakpointValues}
