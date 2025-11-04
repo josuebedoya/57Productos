@@ -1,12 +1,12 @@
 import React, {useMemo} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
-
 import type {CarouselProps} from "@/components/carousel/types.d.ts";
 import Media from "@/components/media/index.tsx";
 import clsx from "clsx";
 import getBreakpointValues from "@/components/carousel/helpers/getBreakpointValues.ts";
 import getModule from "@/components/carousel/helpers/getModule.ts";
+import useModuleProps from "@/components/carousel/hooks/useModuleProps.ts";
 
 const Carousels: React.FC<CarouselProps> = (
   {
@@ -18,26 +18,7 @@ const Carousels: React.FC<CarouselProps> = (
     ...props
   }) => {
 
-  const swModules = {
-    a11y: props?.a11y ?? false,
-    effect: effect ?? false,
-    grid: props?.grid ?? false,
-    navigation: props?.navigation ?? true,
-    hashNavigation: props?.hashNavigation ?? false,
-    history: props?.history ?? false,
-    keyboard: props?.keyboard ?? false,
-    mousewheel: props?.mousewheel ?? false,
-    pagination: props?.pagination ?? false,
-    parallax: props?.parallax ?? false,
-    scrollbar: props?.scrollbar ?? false,
-    thumbs: props?.thumbs ?? false,
-    virtual: props?.virtual ?? false,
-    zoom: props?.zoom ?? false,
-    autoplay: props?.autoplay ?? true,
-    controller: props?.controller ?? false,
-    freeMode: props?.freeMode ?? false,
-    manipulation: props?.manipulation ?? false,
-  };
+  const swModules = useModuleProps({items, effect, ...props});
 
   const usageModules = useMemo(() => {
     const keys = Object.keys(swModules) as (keyof typeof swModules)[];
