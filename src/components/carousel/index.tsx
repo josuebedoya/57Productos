@@ -8,7 +8,7 @@ import getBreakpointValues from "@/components/carousel/helpers/getBreakpointValu
 import getModule from "@/components/carousel/helpers/getModule.ts";
 import useModuleProps from "@/components/carousel/hooks/useModuleProps.ts";
 
-const Carousels: React.FC<CarouselProps> = (
+const Carousel: React.FC<CarouselProps> = (
   {
     items = [],
     effect = '',
@@ -73,4 +73,4 @@ const Carousels: React.FC<CarouselProps> = (
   );
 };
 
-export default Carousels;
+export default Carousel;

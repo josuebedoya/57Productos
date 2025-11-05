@@ -1,17 +1,13 @@
-import { Carousel } from '@/components/carousel.jsx';
 import img1 from '/logo-white.png';
 import img2 from '/logo-black.png';
-import Carousels from "@/components/carousel/index.tsx";
+import Carousel from "@/components/carousel/index.tsx";
 
 const InfoAbout = () => {
-  const responsive = [
-    { width: 0, itemsView: 'auto', spaceBetween: 0, },
-    { width: 640, itemsView: 'auto', spaceBetween: 5 },
-  ];
   const breakpoints = [
     { width: 0, slidesPerView: 'auto', spaceBetween: 0, },
     { width: 640, slidesPerView: 'auto', spaceBetween: 5 },
   ];
+
   const ImgsToCarousel = [
     [ ...Array( 5 ) ].map( () => ( { src: img1, type: 'image' } ) ),
     [ ...Array( 5 ) ].map( () => ( { src: img2, type: 'image' } ) )
@@ -33,7 +29,7 @@ const InfoAbout = () => {
            </p>
          </div>
          <div className='carousel tl:flex-1 w-full tl:w-1/2 tl:pr-5 lg:pl-7 rounded-3xl max-w-full order-1 tl:order-2'>
-           <Carousels
+           <Carousel
             items={ ImgsToCarousel }
             isMedia
             loop

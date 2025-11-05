@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router";
 import { useEffect, useState } from "react";
-import { Carousel } from '@/components/carousel.jsx';
 import { OpinionItem } from '../components/opinionItem.jsx';
 import Button from "@/components/button/index.tsx";
 import { Path_page } from '@/routes.ts';
 import { useComment } from "@/modules/comments/context/comments.jsx";
 import Icon from "@/components/icons/index.js";
+import Carousel from "@/components/carousel/index.tsx";
 
 const Opinions = () => {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const Opinions = () => {
       id={ opinion.id }
       name={ opinion.name }
       likes={ opinion.likes || 0 }
-      rating={opinion.star_rating}
+      rating={ opinion.star_rating }
       dontLike={ opinion.dont_likes || 0 }
       key={ opinion.id }
      >
@@ -55,8 +55,15 @@ const Opinions = () => {
         </div>
       </div>
       <div className="carousel-section p-10 pt-5">
-        <Carousel items={ AllComments } effect={ 1 } itemsSpace={ 0 } navs autoplay autoplayDelay={ 8000 }
-                  itemClass="rounded-3xl px-10 py-16 bg-white block"/>
+        <Carousel
+         items={ AllComments }
+         effect='fade'
+         spaceBetween={ 0 }
+         navigation
+         autoplay={ {
+           delay: 8000
+         } }
+         itemClassName="rounded-3xl px-10 py-16 bg-white block"/>
       </div>
     </div>
   </section> )
