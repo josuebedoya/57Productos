@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
-import  Button from '@/components/button/index.tsx';
-import { WarningModal } from "@/components/warningModal.jsx";
+import Button from '@/components/button/index.tsx';
 import { Pagination } from "@/components/pagination.jsx";
+import Alert from "@/components/alert/index.tsx";
 
 const List = ( {
                  columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, textEmpty, pagination = true,
@@ -63,9 +63,10 @@ const List = ( {
   //Render alert
   if ( !children ) {
     // console.log(children.length ===0 ? 'Cero ' : children.length)
-    return <WarningModal type='warning' bgColor='bg-gray-400' itemClass='rounded-lg shadow-white'>
+    return <Alert bgColor='bg-gray-400' className='rounded-lg shadow-white bg-gray-400 rounded-md'
+                  icon='FaDropbox' iconProps={ { className: 'icon text-lg animate-shaking' } }>
       { textEmpty ? textEmpty : 'No hay elementos para mostrar' }
-    </WarningModal>
+    </Alert>
   }
 
   // Render view

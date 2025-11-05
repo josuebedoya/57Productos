@@ -4,9 +4,9 @@ import { useNavigate } from "react-router";
 import { useDatabase } from "@/hooks/useDatabase.jsx";
 import { Path_page } from '@/routes.ts';
 import { Slug } from "@/utils/handleText.ts";
-import  Button from "@/components/button/index.tsx";
-import { WarningModal } from '@/components/warningModal.jsx';
+import Button from "@/components/button/index.tsx";
 import Icon from "@/components/icons/index.js";
+import Alert from "@/components/alert/index.tsx";
 
 const CategoriesList = () => {
   const [ categories, setCategories ] = useState( [] );
@@ -37,8 +37,9 @@ const CategoriesList = () => {
   }
 
   if ( error ) <div>Algo ha fallado: { error.message }</div>; // if something wrong in fetch
-  if ( loading ) <WarningModal timeClose={ 6000 } type={ error } className='text-white text-center text-lg'>Cargando, no
-    debería tardar demasiado</WarningModal>; // if are loading fetch
+  if ( true ) return <Alert className='text-white text-center text-lg bg-Secondary rounded-md my-10' icon='FaDropbox'
+                            iconProps={ { className: 'icon text-lg animate-shaking' } }>
+    Cargando, no debería tardar demasiado</Alert>; // if are loading fetch
 
   return (
    < section id='listCategories' className='bg-Primary py-16'>
@@ -61,7 +62,7 @@ const CategoriesList = () => {
                 variant='flat'
                 color='white'
                 colorHover='white'
-                icon={   <Icon name='FaArrowRight'/> }
+                icon={ <Icon name='FaArrowRight'/> }
                 classes='opacity-0 group-hover/item:opacity-100'
                 iconRight
                 onClick={ () => goToCategory( Slug( category.nombre ) ) }>

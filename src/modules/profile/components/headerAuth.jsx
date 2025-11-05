@@ -6,8 +6,9 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { clearStorage } from "@/utils/storage.js";
 import { Path_page as path } from "@/routes.ts";
-import { WarningModal } from "@/components/warningModal.jsx";
 import Icon from "@/components/icons/index.tsx";
+import Alert from "@/components/alert/index.tsx";
+import Modal from "@/components/modal/index.tsx";
 
 const HeaderAuth = () => {
   const navigate = useNavigate();
@@ -30,11 +31,21 @@ const HeaderAuth = () => {
 
   if ( error ) {
     return (
-     <WarningModal className='error-message' type='error'
-                   onClose={ () => setError( null ) }
-                   title='Error al cerrar sesión'>
-       <p>{ error }</p>
-     </WarningModal>
+     <Modal
+      isOpen={ !!error }
+      type='alert'
+      onClose={ () => setError( null ) }
+      position='top-right'
+      withHeader={ false }
+      withFooter={ false }
+     >
+       <Alert
+        className='error-message'
+        title='Error al cerrar sesión'>
+         <p>{ error }</p>
+       </Alert>
+     </Modal>
+
     );
   }
 
