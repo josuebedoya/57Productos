@@ -23,7 +23,7 @@ const Carousels: React.FC<CarouselProps> = (
   const usageModules = useMemo(() => {
     const keys = Object.keys(swModules) as (keyof typeof swModules)[];
     const modules = keys.reduce<any[]>((acc, m) => {
-      const enabled = (props as any)[m] ?? swModules[m];
+      const enabled = (props as CarouselProps)[m] ?? swModules[m];
       if (enabled) {
         const mod = getModule(m === 'effect' ? swModules.effect : m, m === 'effect');
         if (mod) acc.push(mod);
@@ -37,7 +37,7 @@ const Carousels: React.FC<CarouselProps> = (
   useMemo(() => {
     const keys = Object.keys(swModules) as (keyof typeof swModules)[];
     keys.forEach(m => {
-      const enabled = (props as any)[m] ?? swModules[m];
+      const enabled = (props as CarouselProps)[m] ?? swModules[m];
       if (enabled) {
         const mod = getModule(m === 'effect' ? swModules.effect : m, m === 'effect', true);
         if (mod) mod();
