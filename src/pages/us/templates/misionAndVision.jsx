@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { TextCustom } from '@/components/textCustom.jsx'
 import Icon from "@/components/icons/index.js";
+import Body from "@/components/body/index.js";
 
 const MissionAndVision = () => {
   const [ open, setOpen ] = useState( null );
@@ -26,15 +26,17 @@ const MissionAndVision = () => {
          className={ `md:col-end-12 col-span-full shadow-md px-3 pt-3 pb-4 rounded-2xl ${ open !== 0 ? 'max-h-16' : null }` }>
           <button type='button' onClick={ () => handleOpen( 0 ) }
                   className='flex justify-between items-center w-full'>
-            <TextCustom title={ content[ 0 ].title } lineTitle linePosition='start'
-                        classTitle='textPrimary capitalize text-xl text-2xl text-shadow-black'/>
+            <Body className='text-Primary capitalize text-xl xl:text-2xl text-shadow-black' withLine
+                  positionLine='start' color='primary'>
+              { content[ 0 ].title }
+            </Body>
             <Icon name={ open === 0 ? 'IoIosArrowDown' : 'IoIosArrowForward' }/>
           </button>
           {
            open === 0 && (
-            <TextCustom classSummary='text-15 tl:text-lg text-justify mt-4 animate-fade-in'>
+            <Body className='text-15 tl:text-lg text-justify mt-4 animate-fade-in'>
               { content[ 0 ].content }
-            </TextCustom>
+            </Body>
            )
           }
         </div>
@@ -44,15 +46,17 @@ const MissionAndVision = () => {
          className={ `md:col-start-2 col-span-full shadow-md px-3 pt-3 pb-4 rounded-2xl ${ open !== 1 ? 'max-h-16' : null }` }>
           <button type='button' onClick={ () => handleOpen( 1 ) }
                   className='flex justify-between items-center w-full'>
-            <TextCustom title={ content[ 1 ].title } lineTitle linePosition='start'
-                        classTitle=' textPrimary capitalize text-2xl text-xl text-shadow-black'/>
+            <Body className='text-Primary capitalize text-xl xl:text-2xl text-shadow-black' withLine
+                  positionLine='start' color='primary'>
+              { content[ 1 ].title }
+            </Body>
             <Icon name={ open === 1 ? 'IoIosArrowDown' : 'IoIosArrowForward' }/>
           </button>
           {
            open === 1 && (
-            <TextCustom classSummary='text-15 tl:text-lg text-justify mt-4 animate-fade-in'>
+            <Body className='text-15 tl:text-lg text-justify mt-4 animate-fade-in'>
               { content[ 1 ].content }
-            </TextCustom>
+            </Body>
            )
           }
         </div>

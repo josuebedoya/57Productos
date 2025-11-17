@@ -1,14 +1,13 @@
 import { useNavigate } from 'react-router-dom'
-import { TextCustom } from '@/components/textCustom.jsx'
 import mercadeo from '/assets/images/mercadeo.jpg'
 import Button from '@/components/button/index.tsx'
 import { Path_page } from '@/routes.ts';
-import Icon from "@/components/icons/index.js";
+import Body from "@/components/body/index.js";
 
 const Chance = () => {
   const navigate = useNavigate();
 
-  const styletilte = {
+  const styleTilte = {
     fontSize: '35px',
     textAlign: 'center',
     color: '$color-primary',
@@ -25,8 +24,9 @@ const Chance = () => {
      <section id='Chance' className='bg-black/10'>
        <div className='container mx-auto px-3 pt-10 pb-8 tl:pt-20 tl:pb-16 xl:pt-28 xl:pb-24'>
          <div className='section-title text-center'>
-           <TextCustom title='¿Estás listo para iniciar tu aventura con nosotros?' atrTitle={ styletilte }
-                       classTitle='text-shadow-white textPrimary font-semibold'/>
+           <Body className='text-shadow-white textPrimary font-semibold' style={styleTilte}>
+             ¿Estás listo para iniciar tu aventura con nosotros?
+           </Body>
          </div>
          <div className='content tl:flex items-center'>
            <div className='section-image w-full tl:w-1/2 flex justify-center tl:justify-start xl:justify-center'>
@@ -35,18 +35,18 @@ const Chance = () => {
            </div>
            <div className='section-info w-full tl:w-1/2  pl-3 pt-6 tl:pt-0'>
              <div
-              className='description text-justify tl:max-w-lg text-15 leading-7 md:text-lg md:leading-8 xl:text-xl xl:leading-9 '>
-               <TextCustom>
-                 ¡Únete a nuestro equipo y potencia tus oportunidades de éxito!{ '\n' }
+              className='description text-justify tl:max-w-lg'>
+               <Body className='text-15 leading-7 md:text-lg md:leading-8 xl:text-xl xl:leading-9'>
+                 ¡Únete a nuestro equipo y potencia tus oportunidades de éxito!<br/>
                  En nuestro ambiente colaborativo, te ofrecemos la oportunidad de facilitar transacciones que maximicen
                  tus ganancias. Juntos, optimizaremos cada operación y generaremos experiencias positivas para todos. Si
                  estás listo para aprovechar al máximo tu potencial y lograr resultados excepcionales.
                  ¡Nos encantaría contar contigo!
-               </TextCustom>
+               </Body>
              </div>
              <div className='buttongotocontact mt-6 xl:mt-14'>
                <Button
-                icon={ <Icon name='FaArrowRight'/> }
+                icon='FaArrowRight'
                 iconRight={ true }
                 onClick={ functionGoToContact }
                 classes='btn-join family-oswald hover:scale-105'

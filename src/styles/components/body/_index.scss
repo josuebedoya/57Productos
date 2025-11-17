@@ -1,0 +1,39 @@
+@use '@/styles/variables' as *;
+
+.body{
+
+  & .line-body-start::after,
+  & .line-body-center::after,
+  & .line-body-end::after{
+    content: '';
+    width: 20%;
+    height: 3px;
+    display: block;
+    position: relative;
+    bottom: 0;
+    margin: 5px 0;
+    background-color: $color-primary;
+  }
+
+  & .line-body-start::after, & .line-body-center::after{
+    left: 0;
+  }
+
+  & .line-body-end::after{
+    left: 80%;
+  }
+
+  & .line-body-end, & .line-body-center,
+  & .line-body-start{
+    &.primary{
+      &::after{
+        background-color: $color-primary;
+      }
+    }
+    &.secondary{
+      &::after{
+        background-color: $color-secondary;
+      }
+    }
+  }
+}

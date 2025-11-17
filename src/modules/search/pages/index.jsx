@@ -5,6 +5,7 @@ import { normalizeText } from "@/utils/handleText.ts";
 import { List } from '@/components/list.jsx';
 import { Product } from "@/modules/icommerce/components/product.jsx";
 import img from '/assets/images/products/lettuce.jpg';
+import '@/modules/search/styles/pages/_index.scss';
 import { Metas } from "@/components/metas/metas.jsx";
 
 const Search = () => {
