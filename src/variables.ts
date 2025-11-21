@@ -23,6 +23,7 @@ export const vars = {
       md: 'text-base leading-6',
       lg: 'text-lg leading-7',
       xl: 'text-xl leading-8',
+      extraLarge: 'text-4xl leading-10',
     },
 
     position: {
@@ -492,5 +493,13 @@ export const vars = {
         center: 'justify-center items-center',
       }
     }
+  },
+
+  spin: {
+    base: 'rounded-full flex items-center justify-center relative',
+    controls: {
+      base: 'absolute bottom-2 left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 flex items-center justify-center cursor-pointer max-h-max'
+    }
   }
+
 }

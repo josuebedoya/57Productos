@@ -1,4 +1,4 @@
-import { Spin } from '@ui/spin.jsx';
+import Spin from "@ui/spin/index.tsx";
 import { FigureOne } from '@/assets/svgFigures.jsx';
 import colombia from '/assets/images/flags/colombia.png'
 import usa from '/assets/images/flags/usa.png'
@@ -6,25 +6,25 @@ import japan from '/assets/images/flags/japan.png'
 import brazil from '/assets/images/flags/brazil.png'
 import canada from '/assets/images/flags/canada.png'
 import Media from '@ui/media/index.tsx'
-import  Tooltip  from "@ui/tooltip/index.tsx";
+import Tooltip from "@ui/tooltip/index.tsx";
 
-const Slider = ( ) => {
+const Slider = () => {
 
   const images = [
-     <Tooltip key={1} content='Colombia'>
-       <Media src={colombia} imageProps={{className:'h-12 w-12'}}/>
-     </Tooltip>,
-     <Tooltip key={2} content='Usa'>
-       <Media src={usa} imageProps={{className:'h-12 w-12'}}/>
-     </Tooltip>,
+    <Tooltip key={ 1 } content='Colombia'>
+      <Media src={ colombia } imageProps={ { className: 'h-12 w-12' } }/>
+    </Tooltip>,
+    <Tooltip key={ 2 } content='Usa'>
+      <Media src={ usa } imageProps={ { className: 'h-12 w-12' } }/>
+    </Tooltip>,
     <Tooltip key={ 3 } content='Japan'>
-      <Media src={ japan } imageProps={{className:'h-12 w-12'}}/>
+      <Media src={ japan } imageProps={ { className: 'h-12 w-12' } }/>
     </Tooltip>,
     <Tooltip key={ 4 } content='Brazil'>
-      < Media src={ brazil } imageProps={{className:'h-12 w-12'}}/>
+      < Media src={ brazil } imageProps={ { className: 'h-12 w-12' } }/>
     </Tooltip>,
     <Tooltip key={ 5 } content='Canada'>
-      <Media src={ canada } imageProps={{className:'h-12 w-12'}}/>
+      <Media src={ canada } imageProps={ { className: 'h-12 w-12' } }/>
     </Tooltip>
   ];
 
@@ -34,24 +34,26 @@ const Slider = ( ) => {
         <div className="max-w-screen-xl h-full mx-auto px-4">
           <div className="flex flex-row justify-between items-center h-full px-20">
             <div className="content z-10 text-center md:text-left bottom-[6vh] relative">
-              <h1 className="title leading-10 text-2xl tl:text-4xl xl:text-5xl font-bold text-white mb-6 max-w-lg relative">
-                 ¿Te gustaría que tus productos llegarán a todo el mundo?
+              <h1
+               className="title leading-10 text-2xl tl:text-4xl xl:text-5xl font-bold text-white mb-6 max-w-lg relative">
+                ¿Te gustaría que tus productos llegarán a todo el mundo?
               </h1>
               <div className="description w-3/4 mx-auto md:mx-0 text-white text-15 md:text-lg tl:text-xl">
-                 <p>Te ofrecemos la posibilidad de exportar tus productos.</p>
+                <p>Te ofrecemos la posibilidad de exportar tus productos.</p>
               </div>
             </div>
             <div className="spin px-5 z-10 hidden md:block bottom-[6vh] relative">
               <Spin
                items={ images }
-               withButton={ false }
-               classItem="h-12 w-12 flex items-center justify-center cursor-pointer duration-500"
-               rotateItem
-               autoPlay
-               pauseHover
+               autoPlay={ true }
+               pauseOnHover={ true }
+               classNameItem='h-12 w-12 flex items-center justify-center cursor-pointer duration-500 hover:scale-105'
+               classNameContainer='border border-white shadow-white'
+               rotateItem={ false }
+               direction='left'
                radio={ 170 }
                speed={ 0.8 }
-               border='border border-white shadow-white'
+               classNameControls='bg-white text-Prmary rounded-lg px-2'
               />
             </div>
           </div>

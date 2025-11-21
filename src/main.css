@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 @layer components{
-  *{
+  * .transition{
     @apply transition-all duration-500 delay-0;
   }
 }
