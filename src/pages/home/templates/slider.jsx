@@ -49,7 +49,7 @@ const Slider = () => {
                pauseOnHover={ true }
                classNameItem='h-12 w-12 flex items-center justify-center cursor-pointer duration-500 hover:scale-105'
                classNameContainer='border border-white shadow-white'
-               rotateItem={ false }
+               rotateItem
                direction='left'
                radio={ 170 }
                speed={ 0.8 }
