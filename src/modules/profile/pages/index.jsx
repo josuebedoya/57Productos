@@ -3,7 +3,7 @@ import { Dashboard } from '@/modules/profile/pages/dashboard.jsx';
 import { setStorage, getStorage } from "@/utils/storage.js";
 import { useCallback, useEffect, useState } from "react";
 import { Outlet } from 'react-router-dom';
-import { Metas } from "@/components/metas/metas.jsx";
+import { Metas } from "@ui/metas/metas.jsx";
 import { useSettings } from "@/context/settings.jsx";
 import { HeaderAuth } from "@/modules/profile/components/headerAuth.jsx";
 import { Path_page } from "@/routes.ts";

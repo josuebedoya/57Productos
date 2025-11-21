@@ -1,8 +1,8 @@
 import React from 'react';
-import type {AudioProps} from "@/components/media/types.js";
-import formattedSrc from "@/components/media/helpers/formattedSrc.ts";
-import AVPlayer from "@/components/media/components/AVPlayer.js";
-import {mimesAudio} from "@/components/media/configs/mimesFiles.ts";
+import type {AudioProps} from "@ui/media/types.js";
+import formattedSrc from "@ui/media/helpers/formattedSrc.ts";
+import AVPlayer from "@ui/media/components/AVPlayer.js";
+import {mimesAudio} from "@ui/media/configs/mimesFiles.ts";
 
 const Audio: React.FC<AudioProps> = (
   {

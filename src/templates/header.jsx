@@ -3,10 +3,10 @@ import logoBlack from '/logo-black.png';
 import logoWhite from '/logo-white.png';
 import { Search } from "@/modules/search/components/search.jsx";
 import { Cart } from '@/modules/icommerce/components/cart.jsx';
-import { Menu } from '@/components/menu/menu.jsx';
+import { Menu } from '@ui/menu/menu.jsx';
 import { Path_page } from '@/routes.ts';
 import { Link } from "react-router-dom";
-import Icon from "@/components/icons/index.js";
+import Icon from "@ui/icons/index.js";
 
 const menuItems = [
   { name: 'Inicio', url: Path_page?.HOME },

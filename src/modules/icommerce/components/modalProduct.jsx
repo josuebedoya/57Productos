@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Stars from '@/components/stars/index.tsx';
-import Button from '@/components/button/index.tsx';
+import Stars from '@ui/stars/index.tsx';
+import Button from '@ui/button/index.tsx';
 import AddWithQuantity from '@/modules/icommerce/components/addWithQuantity.tsx';
-import Modal from '@/components/modal/index.tsx';
+import Modal from '@ui/modal/index.tsx';
 import { useCart } from '@/modules/icommerce/context/cart.jsx';
 
 const ModalProduct = ( { close, title, price, description, img, imgHover, isOpen, id } ) => {

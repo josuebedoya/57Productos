@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon from "@/components/icons/index.tsx";
-import type {AlertProps} from "@/components/alert/types.d.ts";
+import Icon from "@ui/icons/index.tsx";
+import type {AlertProps} from "@ui/alert/types.d.ts";
 import clsx from "clsx";
 
 const Alert: React.FC<AlertProps> = ({children, icon, iconProps, className, ...props}) => {

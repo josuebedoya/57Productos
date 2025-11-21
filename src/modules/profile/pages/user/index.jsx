@@ -1,11 +1,11 @@
-import Media from '@/components/media/index.tsx';
+import Media from '@ui/media/index.tsx';
 import { useSettings } from "@/context/settings.jsx";
-import { Dropdown } from "@/components/dropdown.jsx";
+import { Dropdown } from "@ui/dropdown.jsx";
 import { useEffect, useState } from "react";
 import defaultImg from '/assets/images/system/default-profile.png';
-import { Tabs } from "@/components/tabList.jsx";
+import { Tabs } from "@ui/tabList.jsx";
 import { Information } from "./information.jsx";
-import Icon from "@/components/icons/index.tsx";
+import Icon from "@ui/icons/index.tsx";
 
 const UserInfo = () => {
 

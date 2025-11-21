@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import type {ContainerModalProps} from '@/components/modal/types.d.ts';
+import type {ContainerModalProps} from '@ui/modal/types.d.ts';
 import clsx from 'clsx';
-import Body from '@/components/body/index.tsx';
+import Body from '@ui/body/index.tsx';
 import {gVar} from "@/utils/gVar.js";
 
 const ContainerModal: React.FC<ContainerModalProps> = (

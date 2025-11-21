@@ -1,8 +1,8 @@
 import React, {FormHTMLAttributes} from "react";
-import type {InputProps} from "@/components/input/fields/input/types.js";
-import type {SelectProps} from "@/components/input/fields/select/types.js";
-import type {TextAreaProps} from "@/components/input/fields/textarea/types.js";
-import type {ButtonProps} from "@/components/button/types.js";
+import type {InputProps} from "@ui/input/fields/input/types.js";
+import type {SelectProps} from "@ui/input/fields/select/types.js";
+import type {TextAreaProps} from "@ui/input/fields/textarea/types.js";
+import type {ButtonProps} from "@ui/button/types.js";
 
 type FieldProps =
   | ({ type: "input" } & InputProps)

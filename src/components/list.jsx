@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
-import Button from '@/components/button/index.tsx';
-import { Pagination } from "@/components/pagination.jsx";
-import Alert from "@/components/alert/index.tsx";
+import Button from '@ui/button/index.tsx';
+import { Pagination } from "@ui/pagination.jsx";
+import Alert from "@ui/alert/index.tsx";
 
 const List = ( {
                  columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, textEmpty, pagination = true,

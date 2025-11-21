@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import type {InputProps} from "../types.ts";
 import {gVar} from "@/utils/gVar.js";
 import clsx from "clsx";
-import Icon from "@/components/icons/index.js";
+import Icon from "@ui/icons/index.js";
 
 const CheckBox: React.FC<InputProps> = (
   {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Button from '@/components/button/index.tsx';
+import Button from '@ui/button/index.tsx';
 import signImg from '/assets/images/profile.png';
-import Modal from "@/components/modal/index.tsx";
+import Modal from "@ui/modal/index.tsx";
 import { FormLogin } from '../../auth/components/formLogin.jsx';
 import { FormRegister } from '../../auth/components/formRegister.jsx';
 

@@ -1,12 +1,12 @@
-import { List } from "@/components/list.jsx";
+import { List } from "@ui/list.jsx";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { useDatabase } from "@/hooks/useDatabase.jsx";
 import { Path_page } from '@/routes.ts';
 import { Slug } from "@/utils/handleText.ts";
-import Button from "@/components/button/index.tsx";
-import Icon from "@/components/icons/index.js";
-import Alert from "@/components/alert/index.tsx";
+import Button from "@ui/button/index.tsx";
+import Icon from "@ui/icons/index.js";
+import Alert from "@ui/alert/index.tsx";
 
 const CategoriesList = () => {
   const [ categories, setCategories ] = useState( [] );

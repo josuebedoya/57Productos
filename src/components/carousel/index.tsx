@@ -1,12 +1,12 @@
 import React, {useMemo} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
-import type {CarouselProps} from "@/components/carousel/types.d.ts";
-import Media from "@/components/media/index.tsx";
+import type {CarouselProps} from "@ui/carousel/types.d.ts";
+import Media from "@ui/media/index.tsx";
 import clsx from "clsx";
-import getBreakpointValues from "@/components/carousel/helpers/getBreakpointValues.ts";
-import getModule from "@/components/carousel/helpers/getModule.ts";
-import useModuleProps from "@/components/carousel/hooks/useModuleProps.ts";
+import getBreakpointValues from "@ui/carousel/helpers/getBreakpointValues.ts";
+import getModule from "@ui/carousel/helpers/getModule.ts";
+import useModuleProps from "@ui/carousel/hooks/useModuleProps.ts";
 
 const Carousel: React.FC<CarouselProps> = (
   {

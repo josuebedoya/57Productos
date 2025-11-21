@@ -4,9 +4,9 @@ import Button from '../../../components/button/index.tsx';
 import { Path_page } from '@/routes.ts';
 import { Slug } from "@/utils/handleText.ts";
 import { useCart } from '@/modules/icommerce/context/cart.jsx';
-import Media from '@/components/media/index.tsx';
-import Tooltip from "@/components/tooltip/index.tsx";
-import Icon from "@/components/icons/index.tsx";
+import Media from '@ui/media/index.tsx';
+import Tooltip from "@ui/tooltip/index.tsx";
+import Icon from "@ui/icons/index.tsx";
 
 const Cart = ( { close } ) => {
   const navigate = useNavigate();

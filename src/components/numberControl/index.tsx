@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react';
-import Input from "@/components/input/fields/input/index.js";
-import Button from "@/components/button/index.js";
-import type {NumberControlProps} from "@/components/numberControl/types.js";
+import Input from "@ui/input/fields/input/index.js";
+import Button from "@ui/button/index.js";
+import type {NumberControlProps} from "@ui/numberControl/types.js";
 import clsx from "clsx";
 
 const NumberControl: React.FC<NumberControlProps> = (

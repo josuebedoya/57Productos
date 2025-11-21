@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Icon from "@/components/icons/index.js";
+import Icon from "@ui/icons/index.js";
 
 const Spin = ( {
                  items = [],
@@ -122,8 +122,7 @@ const Spin = ( {
        ) }
      </div>
    </div>
-  )
-   ;
+  );
 };
 
 export { Spin };

@@ -1,4 +1,4 @@
-import type {ComponentModalProps} from "@/components/modal/types.d.ts";
+import type {ComponentModalProps} from "@ui/modal/types.d.ts";
 
 const defaultPropsModal = {
   headerClassName: 'bg-white',

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import ReactPaginate from "react-paginate";
 import type {PaginationProps} from "./types.d.ts";
 import {gVar} from "@/utils/gVar.js";
-import Icon from "@/components/icons/index.js";
+import Icon from "@ui/icons/index.js";
 
 const Pagination: React.FC<PaginationProps> = (
   {

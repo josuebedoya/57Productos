@@ -1,4 +1,4 @@
-import type {IconProps} from "@/components/icons/types.d.ts";
+import type {IconProps} from "@ui/icons/types.d.ts";
 import React from "react";
 import type {HTMLAttributes} from "react";
 

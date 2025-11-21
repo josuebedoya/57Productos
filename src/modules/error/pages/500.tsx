@@ -1,6 +1,6 @@
-import {Metas} from "@/components/metas/metas.jsx";
+import {Metas} from "@ui/metas/metas.jsx";
 import {useSettings} from "@/context/settings.jsx";
-import Button from "@/components/button/index.js";
+import Button from "@ui/button/index.js";
 import {useNavigate} from "react-router";
 
 const Error500 = () => {

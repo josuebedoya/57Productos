@@ -1,6 +1,6 @@
 import ReactPaginate from "react-paginate";
 import { useState } from "react";
-import Icon from "@/components/icons/index.js";
+import Icon from "@ui/icons/index.js";
 
 const Pagination = (
  {

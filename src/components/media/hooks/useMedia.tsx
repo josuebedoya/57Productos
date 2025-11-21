@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import getMedia from "@/components/media/helpers/getMedia.ts";
+import getMedia from "@ui/media/helpers/getMedia.ts";
 
 const useMedia = (src: string, ext: string[]): Record<string, string> => {
   const [media, setMedia] = useState<Record<string, string>>({fileSrc: '', typeFile: ''});

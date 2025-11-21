@@ -1,6 +1,6 @@
 import React from "react";
-import type {InputProps} from "@/components/input/fields/input/types.js";
-import useInputStyles from "@/components/input/hooks/useInputStyles.js";
+import type {InputProps} from "@ui/input/fields/input/types.js";
+import useInputStyles from "@ui/input/hooks/useInputStyles.js";
 import clsx from "clsx";
 
 const Basic: React.FC<InputProps> = (

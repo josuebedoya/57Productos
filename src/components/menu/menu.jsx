@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Dropdown } from "@/components/menu/dropdown.jsx";
-import Modal from "@/components/modal/index.tsx";
-import Icon from "@/components/icons/index.js";
+import { Dropdown } from "@ui/menu/dropdown.jsx";
+import Modal from "@ui/modal/index.tsx";
+import Icon from "@ui/icons/index.js";
 
 const Menu = (
  {

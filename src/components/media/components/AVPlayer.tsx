@@ -1,5 +1,5 @@
 import React from 'react';
-import type {AVPlayerProps} from "@/components/media/types.js";
+import type {AVPlayerProps} from "@ui/media/types.js";
 
 const AvPlayer: React.FC<AVPlayerProps> = (
   {

@@ -1,12 +1,12 @@
-import { Spin } from '@/components/spin.jsx';
+import { Spin } from '@ui/spin.jsx';
 import { FigureOne } from '@/assets/svgFigures.jsx';
 import colombia from '/assets/images/flags/colombia.png'
 import usa from '/assets/images/flags/usa.png'
 import japan from '/assets/images/flags/japan.png'
 import brazil from '/assets/images/flags/brazil.png'
 import canada from '/assets/images/flags/canada.png'
-import Media from '@/components/media/index.tsx'
-import  Tooltip  from "@/components/tooltip/index.tsx";
+import Media from '@ui/media/index.tsx'
+import  Tooltip  from "@ui/tooltip/index.tsx";
 
 const Slider = ( ) => {
 

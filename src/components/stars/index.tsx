@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import type {StarsProps} from "@/components/stars/types.js";
+import type {StarsProps} from "@ui/stars/types.js";
 import clsx from "clsx";
 import {gVar} from "@/utils/gVar.js";
-import Icon from "@/components/icons/index.js";
+import Icon from "@ui/icons/index.js";
 
 const Stars: React.FC<StarsProps> = (
   {

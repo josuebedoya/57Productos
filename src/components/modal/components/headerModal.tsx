@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from "clsx";
-import Button from "@/components/button/index.js";
-import type {PropsSlotHeader} from "@/components/modal/types.js";
+import Button from "@ui/button/index.js";
+import type {PropsSlotHeader} from "@ui/modal/types.js";
 
 const HeaderModal: React.FC<PropsSlotHeader> = (
   {

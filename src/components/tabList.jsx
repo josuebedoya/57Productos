@@ -1,5 +1,5 @@
-import { Tab } from "@/components/tabs/tab.jsx";
-import Body from "@/components/body/index.tsx";
+import { Tab } from "@ui/tabs/tab.jsx";
+import Body from "@ui/body/index.tsx";
 
 const Tabs = ( { children } ) => {
 

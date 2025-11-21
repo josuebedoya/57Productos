@@ -1,8 +1,8 @@
 // @ts-ignore
 import {useComment} from '@/modules/comments/context/comments.jsx'
 import {useState, useEffect} from "react";
-import TextArea from '@/components/input/fields/textarea/index.tsx'
-import Select from "@/components/input/fields/select/index.js";
+import TextArea from '@ui/input/fields/textarea/index.tsx'
+import Select from "@ui/input/fields/select/index.js";
 
 const Comments = () => {
 

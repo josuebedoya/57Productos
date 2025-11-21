@@ -1,4 +1,4 @@
-import type {Breakpoints} from "@/components/carousel/types.d.ts";
+import type {Breakpoints} from "@ui/carousel/types.d.ts";
 
 const getBreakpointValues = (breakpoints: Breakpoints): Record<number, any> => {
   if (!breakpoints || breakpoints.length === 0) return {};

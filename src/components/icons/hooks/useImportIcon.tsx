@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
-import getLibIcon from "@/components/icons/helpers/getLibIcon.js";
+import getLibIcon from "@ui/icons/helpers/getLibIcon.js";
 
 export const useImportIcon = (iconName: string, version?: number) => {
   const [icon, setIcon] = useState<React.ComponentType | null>(null);

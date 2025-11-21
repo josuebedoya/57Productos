@@ -2,11 +2,11 @@ import { useDatabase } from "@/hooks/useDatabase.jsx";
 import { useResults } from "@/modules/search/context/ParamsUrl.jsx";
 import { useEffect, useState } from "react";
 import { normalizeText } from "@/utils/handleText.ts";
-import { List } from '@/components/list.jsx';
+import { List } from '@ui/list.jsx';
 import { Product } from "@/modules/icommerce/components/product.jsx";
 import img from '/assets/images/products/lettuce.jpg';
 import '@/modules/search/styles/pages/_index.scss';
-import { Metas } from "@/components/metas/metas.jsx";
+import { Metas } from "@ui/metas/metas.jsx";
 
 const Search = () => {
   const { get, data } = useDatabase();

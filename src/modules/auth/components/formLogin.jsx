@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Form from "@/components/form/index.tsx";
+import Form from "@ui/form/index.tsx";
 
 const FormLogin = ( { actionForm } ) => {
 

@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import { Path_page } from '@/routes.ts';
 
-import { TextAnimatedWrite } from '@/components/textAnimatedWrite.jsx'
+import { TextAnimatedWrite } from '@ui/textAnimatedWrite.jsx'
 import { Grafic } from '@/pages/home/components/grafic.jsx'
-import Button from '@/components/button/index.tsx'
-import Icon from "@/components/icons/index.js";
+import Button from '@ui/button/index.tsx'
+import Icon from "@ui/icons/index.js";
 
 const Blog = () => {
 

@@ -1,7 +1,7 @@
-import Stars from '@/components/stars/index.tsx';
+import Stars from '@ui/stars/index.tsx';
 import img from '/assets/images/profile.png'
 import { useComment } from "@/modules/comments/context/comments.jsx";
-import Icon from "@/components/icons/index.js";
+import Icon from "@ui/icons/index.js";
 
 
 const OpinionItem = ( props ) => {

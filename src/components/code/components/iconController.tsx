@@ -1,9 +1,9 @@
 import React from 'react';
-import Tooltip from "@/components/tooltip/index.tsx";
+import Tooltip from "@ui/tooltip/index.tsx";
 
 import clsx from "clsx";
-import type {IconsControllerProps} from "@/components/code/types.js";
-import Icon from "@/components/icons/index.js";
+import type {IconsControllerProps} from "@ui/code/types.js";
+import Icon from "@ui/icons/index.js";
 
 const IconController = (
   {

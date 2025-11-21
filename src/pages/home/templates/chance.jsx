@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import mercadeo from '/assets/images/mercadeo.jpg'
-import Button from '@/components/button/index.tsx'
+import Button from '@ui/button/index.tsx'
 import { Path_page } from '@/routes.ts';
-import Body from "@/components/body/index.js";
+import Body from "@ui/body/index.js";
 
 const Chance = () => {
   const navigate = useNavigate();

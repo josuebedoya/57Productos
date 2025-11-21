@@ -1,5 +1,5 @@
 import React from 'react';
-import type {DocumentProps} from "@/components/media/types.js";
+import type {DocumentProps} from "@ui/media/types.js";
 
 const Document: React.FC<DocumentProps> = (
   {

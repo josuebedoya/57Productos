@@ -1,11 +1,11 @@
 import type {MediaProps} from "./types.d.ts";
 import React, {useEffect} from "react";
-import useMedia from "@/components/media/hooks/useMedia.js";
-import Image from "@/components/media/components/image.js";
-import Video from "@/components/media/components/video.js";
-import Audio from "@/components/media/components/audio.js";
-import Document from "@/components/media/components/document.js";
-import {defaultExt, defaultsImg} from "@/components/media/configs/defaultContent.js";
+import useMedia from "@ui/media/hooks/useMedia.js";
+import Image from "@ui/media/components/image.js";
+import Video from "@ui/media/components/video.js";
+import Audio from "@ui/media/components/audio.js";
+import Document from "@ui/media/components/document.js";
+import {defaultExt, defaultsImg} from "@ui/media/configs/defaultContent.js";
 
 const Media: React.FC<MediaProps> = (
   {

@@ -1,9 +1,9 @@
 import React from 'react';
 import {gVar} from "@/utils/gVar.js";
 import clsx from "clsx";
-import type {ComponentModalProps} from "@/components/modal/types.js";
-import BodyModal from "@/components/modal/components/bodyModal.js";
-import defaultPropsModal from '@/components/modal/configs/defaultProps.js';
+import type {ComponentModalProps} from "@ui/modal/types.js";
+import BodyModal from "@ui/modal/components/bodyModal.js";
+import defaultPropsModal from '@ui/modal/configs/defaultProps.js';
 
 const Drawer: React.FC<ComponentModalProps> = (
   {

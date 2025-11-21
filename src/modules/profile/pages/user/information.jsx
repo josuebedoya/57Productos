@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import Form from "@/components/form/index.tsx";
-import Input from "@/components/input/fields/input/index.tsx"
-import Tooltip from "@/components/tooltip/index.tsx";
-import Icon from "@/components/icons/index.tsx";
+import Form from "@ui/form/index.tsx";
+import Input from "@ui/input/fields/input/index.tsx"
+import Tooltip from "@ui/tooltip/index.tsx";
+import Icon from "@ui/icons/index.tsx";
 
 const Information = ( { userInfo } ) => {
 

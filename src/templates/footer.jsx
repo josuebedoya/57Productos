@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import TextArea from "@/components/input/fields/textarea/index.tsx";
+import TextArea from "@ui/input/fields/textarea/index.tsx";
 import { Path_page } from '@/routes.ts';
-import Button from '@/components/button/index.tsx';
+import Button from '@ui/button/index.tsx';
 import { useComment } from '@/modules/comments/context/comments.jsx';
-import { Menu } from '@/components/menu/menu.jsx';
-import Form from '@/components/form/index.tsx';
+import { Menu } from '@ui/menu/menu.jsx';
+import Form from '@ui/form/index.tsx';
 import { CSSTransition } from 'react-transition-group';
-import Copyright from "@/components/copyright/index.tsx";
-import Icon from "@/components/icons/index.js";
+import Copyright from "@ui/copyright/index.tsx";
+import Icon from "@ui/icons/index.js";
 
 const Footer = () => {
   const [ comment, setComment ] = useState( '' );

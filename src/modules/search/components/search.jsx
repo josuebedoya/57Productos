@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import Button from '@/components/button/index.tsx';
-import Input from "@/components/input/fields/input/index.tsx"
+import Button from '@ui/button/index.tsx';
+import Input from "@ui/input/fields/input/index.tsx"
 import { useDatabase } from '@/hooks/useDatabase.jsx';
 import { useResults } from '@/modules/search/context/ParamsUrl.jsx';
 import { normalizeText, Slug } from '@/utils/handleText.ts';
 import { Path_page } from '@/routes.ts';
-import { TextAnimatedWrite } from '@/components/textAnimatedWrite.jsx';
-import Modal from "@/components/modal/index.tsx";
-import Icon from "@/components/icons/index.tsx";
+import { TextAnimatedWrite } from '@ui/textAnimatedWrite.jsx';
+import Modal from "@ui/modal/index.tsx";
+import Icon from "@ui/icons/index.tsx";
 
 
 const Search = () => {

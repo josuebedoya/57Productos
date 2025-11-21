@@ -1,4 +1,4 @@
-import type {CarouselProps} from "@/components/carousel/types.d.ts";
+import type {CarouselProps} from "@ui/carousel/types.d.ts";
 
 const useModuleProps = ({...props}: CarouselProps) => {
   return {

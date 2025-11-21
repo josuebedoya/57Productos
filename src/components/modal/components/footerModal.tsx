@@ -1,7 +1,7 @@
 import React from 'react';
-import type {PropsSlotFooter} from "@/components/modal/types.js";
+import type {PropsSlotFooter} from "@ui/modal/types.js";
 import clsx from "clsx";
-import Button from "@/components/button/index.js";
+import Button from "@ui/button/index.js";
 import {useTranslation} from "react-i18next";
 
 const FooterModal: React.FC<PropsSlotFooter> = (

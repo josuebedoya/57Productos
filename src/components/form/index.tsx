@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import type {FormProps} from "./types.js";
-import Select from "@/components/input/fields/select/index.tsx";
-import TextArea from "@/components/input/fields/textarea/index.tsx";
-import Input from "@/components/input/fields/input/index.tsx";
-import Button from "@/components/button/index.tsx";
+import Select from "@ui/input/fields/select/index.tsx";
+import TextArea from "@ui/input/fields/textarea/index.tsx";
+import Input from "@ui/input/fields/input/index.tsx";
+import Button from "@ui/button/index.tsx";
 import {useTranslation} from "react-i18next";
 import {gVar} from "@/utils/gVar.js";
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import type {ImageProps} from "@/components/media/types.d.ts";
+import type {ImageProps} from "@ui/media/types.d.ts";
 
 const Image: React.FC<ImageProps> = (
   {

@@ -3,17 +3,17 @@ import CodeMirror from '@uiw/react-codemirror';
 import {vscodeLight, tokyoNight} from '@uiw/codemirror-themes-all';
 import {color} from '@uiw/codemirror-extensions-color';
 import {langs} from '@uiw/codemirror-extensions-langs';
-import useLang from "@/components/code/hooks/useLang.js";
+import useLang from "@ui/code/hooks/useLang.js";
 import clsx from "clsx";
-import useAnimatingIcons from "@/components/code/hooks/useAnimatingIcons.tsx";
+import useAnimatingIcons from "@ui/code/hooks/useAnimatingIcons.tsx";
 import useCopyContent from "@/hooks/useCopyContent.tsx";
-import IconController from "@/components/code/components/iconController.tsx";
-import type {CodeProps} from "@/components/code/types.d.ts";
+import IconController from "@ui/code/components/iconController.tsx";
+import type {CodeProps} from "@ui/code/types.d.ts";
 import '@/styles/components/code/_code.scss'
 import {useTranslation} from "react-i18next";
-import Select from "@/components/input/fields/select/index.js";
-import defaultLangs from "@/components/code/configs/defaultLangs.ts";
-import useOptionsLang from "@/components/code/hooks/useOptionsLang.js";
+import Select from "@ui/input/fields/select/index.js";
+import defaultLangs from "@ui/code/configs/defaultLangs.ts";
+import useOptionsLang from "@ui/code/hooks/useOptionsLang.js";
 
 const CodeBlocks: React.FC<CodeProps> = (
   {children, onChange, language = 'js', editable = false, langsToUse}) => {

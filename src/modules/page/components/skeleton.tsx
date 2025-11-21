@@ -1,6 +1,6 @@
 import React from 'react';
 import {array} from "prop-types";
-import Media from "@/components/media/index.js";
+import Media from "@ui/media/index.js";
 
 const Skeleton: React.FC = () => {
   return (

@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import type {TooltipProps} from "./types.ts";
 import {gVar} from "@/utils/gVar.ts";
-import getDirection from '@/components/tooltip/helpers/getDirection.ts';
-import Body from '@/components/body/index.tsx';
-import Icon from "@/components/icons/index.js";
+import getDirection from '@ui/tooltip/helpers/getDirection.ts';
+import Body from '@ui/body/index.tsx';
+import Icon from "@ui/icons/index.js";
 
 const Tooltip: React.FC<TooltipProps> = (
   {

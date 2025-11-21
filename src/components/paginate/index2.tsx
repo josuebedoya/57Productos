@@ -1,10 +1,10 @@
 import React, {useRef} from 'react';
-import type {PaginateProps} from "@/components/paginate/type.js";
-import {usePaginate} from "@/components/paginate/hooks/usePaginate.tsx";
-import PaginateItem from "@/components/paginate/components/paginateItem.tsx";
-import PaginateButton from "@/components/paginate/components/paginateButton.js";
+import type {PaginateProps} from "@ui/paginate/type.js";
+import {usePaginate} from "@ui/paginate/hooks/usePaginate.tsx";
+import PaginateItem from "@ui/paginate/components/paginateItem.tsx";
+import PaginateButton from "@ui/paginate/components/paginateButton.js";
 import clsx from "clsx";
-import Icon from "@/components/icons/index.js";
+import Icon from "@ui/icons/index.js";
 
 const Paginate: React.FC<PaginateProps> = (
   {

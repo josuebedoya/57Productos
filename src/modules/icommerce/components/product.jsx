@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useCart } from '@/modules/icommerce/context/cart.jsx';
-import Button from '@/components/button/index.tsx';
-import Stars from '@/components/stars/index.js';
+import Button from '@ui/button/index.tsx';
+import Stars from '@ui/stars/index.js';
 import { ModalProduct } from './modalProduct.jsx';
-import Media from '@/components/media/index.tsx';
-import Icon from "@/components/icons/index.tsx";
+import Media from '@ui/media/index.tsx';
+import Icon from "@ui/icons/index.tsx";
 
 
 const Product = ( props ) => {

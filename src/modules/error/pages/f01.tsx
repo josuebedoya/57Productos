@@ -1,6 +1,6 @@
 import React from 'react';
 import {fromEnv} from "@/utils/fromEnv.js";
-import Button from "@/components/button/index.js";
+import Button from "@ui/button/index.js";
 import {useNavigate} from "react-router";
 
 /*

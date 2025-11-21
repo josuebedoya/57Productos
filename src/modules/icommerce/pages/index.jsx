@@ -3,7 +3,7 @@ import { useDatabase } from '@/hooks/useDatabase.jsx';
 import { Product } from '@/modules/icommerce/components/product.jsx';
 import { useFormatMoney } from "@/context/formatMoney.jsx";
 import { useSettings } from "@/context/settings.jsx";
-import { Metas } from "@/components/metas/metas.jsx";
+import { Metas } from "@ui/metas/metas.jsx";
 
 const Store = () => {
   const [ products, setProducts ] = useState( [] );

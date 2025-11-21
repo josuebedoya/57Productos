@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import type {InputProps} from "@/components/input/fields/input/types.js";
+import type {InputProps} from "@ui/input/fields/input/types.js";
 import {gVar} from "@/utils/gVar.js";
 import clsx from "clsx";
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import type {VideoProps} from "@/components/media/types.js";
-import formattedSrc from "@/components/media/helpers/formattedSrc.ts";
-import AVPlayer from "@/components/media/components/AVPlayer.js";
-import {mimesVideo} from "@/components/media/configs/mimesFiles.js";
+import type {VideoProps} from "@ui/media/types.js";
+import formattedSrc from "@ui/media/helpers/formattedSrc.ts";
+import AVPlayer from "@ui/media/components/AVPlayer.js";
+import {mimesVideo} from "@ui/media/configs/mimesFiles.js";
 
 const Video: React.FC<VideoProps> = (
   {

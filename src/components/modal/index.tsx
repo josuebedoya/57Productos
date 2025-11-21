@@ -1,10 +1,10 @@
 import React from "react";
-import type {ModalProps} from "@/components/modal/types.js";
+import type {ModalProps} from "@ui/modal/types.js";
 import ReactDOM from 'react-dom';
-import Alert from "@/components/modal/components/modalTypes/alert.js";
-import Popup from "@/components/modal/components/modalTypes/popup.js";
-import Drawer from "@/components/modal/components/modalTypes/drawer.js";
-import ContainerModal from "@/components/modal/components/containerModal.js";
+import Alert from "@ui/modal/components/modalTypes/alert.js";
+import Popup from "@ui/modal/components/modalTypes/popup.js";
+import Drawer from "@ui/modal/components/modalTypes/drawer.js";
+import ContainerModal from "@ui/modal/components/containerModal.js";
 import clsx from "clsx";
 
 const Modal: React.FC<ModalProps> = (

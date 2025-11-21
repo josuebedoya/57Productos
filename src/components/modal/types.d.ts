@@ -1,5 +1,5 @@
 import React from "react";
-import type {ButtonProps} from "@/components/button/types.js";
+import type {ButtonProps} from "@ui/button/types.js";
 
 type PropsSlotHeader = {
   withHeader?: boolean;

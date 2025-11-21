@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import Button from '../../../components/button/index.tsx';
-import NumberControl from "@/components/numberControl/index.js";
-import type {InputProps} from "@/components/input/fields/input/types.js";
+import NumberControl from "@ui/numberControl/index.js";
+import type {InputProps} from "@ui/input/fields/input/types.js";
 
 type Props = {
   functionAdd: () => void;

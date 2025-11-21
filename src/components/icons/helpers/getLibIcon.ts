@@ -1,4 +1,4 @@
-import libraryIcons from "@/components/icons/configs/libraryPrefix.js";
+import libraryIcons from "@ui/icons/configs/libraryPrefix.js";
 import {t} from "i18next";
 
 const getLibIcon = async (iconName: string, version?: number) => {

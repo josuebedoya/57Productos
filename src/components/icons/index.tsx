@@ -1,9 +1,9 @@
 import React from "react";
 import {useTranslation} from "react-i18next";
-import {useImportIcon} from "@/components/icons/hooks/useImportIcon.tsx";
-import type {IconProps} from "@/components/icons/types.js";
-import Loading from "@/components/icons/components/loading.js";
-import Media from "@/components/media/index.js";
+import {useImportIcon} from "@ui/icons/hooks/useImportIcon.tsx";
+import type {IconProps} from "@ui/icons/types.js";
+import Loading from "@ui/icons/components/loading.js";
+import Media from "@ui/media/index.js";
 
 const Icon: React.FC<IconProps> = ({name, versionFamily, ...props}) => {
 

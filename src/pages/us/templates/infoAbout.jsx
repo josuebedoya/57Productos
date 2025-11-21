@@ -1,6 +1,6 @@
 import img1 from '/logo-white.png';
 import img2 from '/logo-black.png';
-import Carousel from "@/components/carousel/index.tsx";
+import Carousel from "@ui/carousel/index.tsx";
 
 const InfoAbout = () => {
   const breakpoints = [

@@ -1,8 +1,8 @@
 import React from 'react';
-import HeaderModal from "@/components/modal/components/headerModal.js";
-import FooterModal from "@/components/modal/components/footerModal.js";
-import usePropsHeaderFooter from "@/components/modal/hooks/usePropsHeaderFooter.js";
-import type {ComponentModalProps} from "@/components/modal/types.js";
+import HeaderModal from "@ui/modal/components/headerModal.js";
+import FooterModal from "@ui/modal/components/footerModal.js";
+import usePropsHeaderFooter from "@ui/modal/hooks/usePropsHeaderFooter.js";
+import type {ComponentModalProps} from "@ui/modal/types.js";
 import clsx from "clsx";
 
 const BodyModal: React.FC<ComponentModalProps> = ({children, ...props}) => {

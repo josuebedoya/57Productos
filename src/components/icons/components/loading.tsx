@@ -1,5 +1,5 @@
 import React from 'react';
-import Media from "@/components/media/index.js";
+import Media from "@ui/media/index.js";
 import clsx from "clsx";
 
 const Loading = ({className}: { className: string | undefined }) => {

@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
-import type {InputProps} from "@/components/input/fields/input/types.js";
+import type {InputProps} from "@ui/input/fields/input/types.js";
 import clsx from "clsx";
-import formattedNumber from "@/components/input/helpers/formattedNumber.js";
-import useInputStyles from "@/components/input/hooks/useInputStyles.js";
+import formattedNumber from "@ui/input/helpers/formattedNumber.js";
+import useInputStyles from "@ui/input/hooks/useInputStyles.js";
 
 const Number: React.FC<InputProps> = (
   {

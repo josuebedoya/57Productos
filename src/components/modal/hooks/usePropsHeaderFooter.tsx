@@ -1,4 +1,4 @@
-import type {ComponentModalProps, PropsSlotFooter, PropsSlotHeader} from "@/components/modal/types.js";
+import type {ComponentModalProps, PropsSlotFooter, PropsSlotHeader} from "@ui/modal/types.js";
 
 const usePropsHeaderFooter = (props: ComponentModalProps) => {
   const headerProps: PropsSlotHeader = {

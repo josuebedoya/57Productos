@@ -1,14 +1,14 @@
-import Tooltip from "@/components/tooltip/index.tsx";
-import Media from '@/components/media/index.tsx';
+import Tooltip from "@ui/tooltip/index.tsx";
+import Media from '@ui/media/index.tsx';
 import { Money } from "@/modules/profile/components/money.jsx";
 import { useSettings } from "@/context/settings.jsx";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { clearStorage } from "@/utils/storage.js";
 import { Path_page as path } from "@/routes.ts";
-import Icon from "@/components/icons/index.tsx";
-import Alert from "@/components/alert/index.tsx";
-import Modal from "@/components/modal/index.tsx";
+import Icon from "@ui/icons/index.tsx";
+import Alert from "@ui/alert/index.tsx";
+import Modal from "@ui/modal/index.tsx";
 
 const HeaderAuth = () => {
   const navigate = useNavigate();

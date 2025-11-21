@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Icon from "@/components/icons/index.js";
-import Body from "@/components/body/index.js";
+import Icon from "@ui/icons/index.js";
+import Body from "@ui/body/index.js";
 
 const MissionAndVision = () => {
   const [ open, setOpen ] = useState( null );
