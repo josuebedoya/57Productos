@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import type {SpinProps} from "@ui/spin/types.d.ts";
+import type {el, SpinProps} from "@ui/spin/types.d.ts";
 import getPosition from "@ui/spin/helpers/getPosition.ts";
 import clsx from "clsx";
 import {gVar} from "@/utils/gVar.ts";
@@ -25,7 +25,7 @@ const Spin: React.FC<SpinProps> = (
     pauseOnHover = true,
   }) => {
   const circleRef = useRef(null);
-  const itemRefs = useRef([]);
+  const itemRefs = useRef<el[]>([]);
 
   const {start, stop, paused} = useRotation({
     circleRef,
@@ -58,9 +58,9 @@ const Spin: React.FC<SpinProps> = (
             return (
               <ItemSpin
                 key={i}
-                position={{x: position.x, y: position.y}}
+                position={{x: position.x || 0, y: position.y || 0}}
                 aria-label={`spin-${i}`}
-                innerRef={(el) => (itemRefs.current[i] = el)}
+                innerRef={(el: el) => (itemRefs.current[i] = el)}
                 className={clsx(classNameItem)}
               >
                 {item}
@@ -69,8 +69,8 @@ const Spin: React.FC<SpinProps> = (
         </ul>
         {(controls && animate && !autoPlay) && (
           <div className={clsx('controls', gVar('spin.controls.base'), classNameControls)}>
-            {(controls.onlyOne || typeof controls === 'boolean') ? (
-              <Icon name={!paused ? icons[0] : icons[1]}
+            {((controls as Record<string, boolean>)?.onlyOne || typeof controls !== 'object') ? (
+              <Icon name={!paused ? icons[0] as string : icons[1] as string}
                     className={gVar(`text.size.${sizeButtons}`)}
                     onClick={() => handlerAnimation(!paused ? 0 : 1)}
               />

@@ -15,7 +15,7 @@ export type el = React.RefObject<HTMLElement | null>;
 export interface ItemSpinProps extends LiHTMLAttributes<HTMLLIElement> {
   children: React.ReactNode;
   position: { x: number; y: number; };
-  innerRef?: (el: HTMLDivElement | null) => void;
+  innerRef?: (el: el) => void;
 }
 
 export interface SpinProps extends configRotation {
