@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '@ui/button/index.tsx';
 import Input from "@ui/input/fields/input/index.tsx"
 import { useDatabase } from '@/hooks/useDatabase.jsx';
@@ -87,14 +87,15 @@ const Search = () => {
 
   return (
    <>
-     <div>
+     <div role='parent' id='searchdropdown' className='search-dropdown relative'>
        <div className={ `search-btn-section duration-500 ${ showModal ? 'button-active' : '' }` }>
          <Button icon={ <Icon name='BiSearchAlt'/> } classes='search-btn' onClick={ openModal }/>
        </div>
      </div>
 
      {/* Search Engine Dropdown */ }
-     <Modal isOpen={ showModal } withButtonClose={ false } onClose={ closeModal } type='alert' position="top">
+     <Modal isOpen={ showModal } withButtonClose={ true } onClose={ closeModal } type='dropdown' position="top"
+            parentId='searchdropdown' classNameContainer='rounded-3xl shadow-custom-shadow w-full max-w-600'>
        <div className='query-section flex items-center justify-center space-x-4  w-full px-4 sticky top-0 bg-white'>
          <form method='GET' onSubmit={ submitQuery } className='flex items-center w-full max-w-600 gap-5'>
            <Input type='text' maxLength={ 70 } value={ valueSearch } onChange={ handleValueSearch } name='search'

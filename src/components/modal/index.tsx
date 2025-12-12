@@ -4,7 +4,9 @@ import ReactDOM from 'react-dom';
 import Alert from "@ui/modal/components/modalTypes/alert.js";
 import Popup from "@ui/modal/components/modalTypes/popup.js";
 import Drawer from "@ui/modal/components/modalTypes/drawer.js";
+import Dropdown from "@ui/modal/components/modalTypes/dropdown.js";
 import ContainerModal from "@ui/modal/components/containerModal.js";
+import getAnimationModal  from "@ui/modal/helpers/getAnimationModal.ts";
 import clsx from "clsx";
 
 const Modal: React.FC<ModalProps> = (
@@ -12,32 +14,6 @@ const Modal: React.FC<ModalProps> = (
     type = 'popup', withBackground = false, animation, isOpen, onClose, position, ...props
   }) => {
   if (!type) return null;
-
-  // Choose default animation to drawer modal
-  const getPosition = (type: string = 'drawer', position: string = 'top'): Record<string, string | null> => {
-    switch (type) {
-      case 'drawer':
-      case 'alert':
-        switch (position) {
-          case 'top':
-          case 'top-left':
-          case 'top-right':
-            return {entrance: 'animate-fade-up-in', exit: 'animate-fade-down-out'};
-          case 'bottom':
-          case 'bottom-left':
-          case 'bottom-right':
-            return {entrance: 'animate-fade-down-in', exit: 'animate-fade-up-out'};
-          case 'left':
-            return {entrance: 'animate-fade-left-in', exit: 'animate-fade-right-out'};
-          case 'right':
-            return {entrance: 'animate-fade-right-in', exit: 'animate-fade-left-out'};
-          default:
-            return {entrance: null, exit: null};
-        }
-      default:
-        return {entrance: null, exit: null};
-    }
-  }
 
   // Choose Component to render
   const Component = () => {
@@ -61,6 +37,10 @@ const Modal: React.FC<ModalProps> = (
           onClickCloseButtonHeader={onClose}
           onClickCloseButtonFooter={onClose}
         />;
+      case 'dropdown':
+        return <Dropdown {...props}
+          onClose={onClose}
+        />;
       default:
         return null;
     }
@@ -72,9 +52,9 @@ const Modal: React.FC<ModalProps> = (
       isOpen={isOpen}
       type={type}
       withBackground={type === 'popup' || withBackground}
-      animation={animation || getPosition(type, position)}
+      animation={animation || getAnimationModal(type, position)}
       className={clsx(props?.className)}>
-      <Component/> {/* Render Modal type*/}
+      <Component/>
     </ContainerModal>,
     document.getElementById('modal-root') as HTMLElement
   );

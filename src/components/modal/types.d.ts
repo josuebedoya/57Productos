@@ -30,11 +30,19 @@ type PropsSlotFooter = {
   propsActionButtonFooter?: ButtonProps;
 };
 
-type TypeModal = "alert" | "drawer" | "popup";
+type TypeModal = "alert" | "drawer" | "popup" | "dropdown";
 
 type PositionDrawer = "left" | "right" | "top" | "bottom";
 type PositionAlert = | "center" | "top" | "bottom" | "top-left" | "top-right" | "bottom-left" | "bottom-right";
 type PositionModal = PositionDrawer | PositionAlert | undefined;
+type DropDownProps = {
+  parentId?: string;
+  withButtonClose?: boolean;
+  closeIcon?: string;
+  children?: React.ReactNode;
+  onClose: () => void;
+  classNameContainer?: string;
+}
 
 export interface ContainerModalProps {
   isOpen: boolean;
@@ -60,6 +68,7 @@ type CommonModalProps = ComponentModalProps & {
   onClose: () => void;
   withBackground?: boolean;
   animation?: Record<"entrance" | "exit", string | null>;
+  parentId?: string;
 };
 
 export type ModalProps =
