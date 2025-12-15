@@ -28,7 +28,7 @@ const Dropdown: React.FC<DropDownProps> = (
 
   return (
     <div ref={refModal} id={parentId} className='absolute' role='child' onClick={handleModalClick}
-         style={{top: `${position.x}px`, left: `${position.x}px`}}>
+         style={{top: `${position.y}px`, left: `${position.x}px`}}>
       <div className={clsx(classNameContainer, 'relative bg-white p-3 shadow-md rounded')}>
         {withButtonClose &&
          <div className="header border-b border-gray-200 text-end text-lg">

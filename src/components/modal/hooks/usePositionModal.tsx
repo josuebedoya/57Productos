@@ -9,8 +9,8 @@ const usePositionModal = (el: refEl, parentId: string | number): Res => {
 
   const anchorRect = parentEl.getBoundingClientRect();
   return {
-    x: anchorRect.left + window.scrollX,
-    y: anchorRect.bottom + window.scrollY
+    x: anchorRect.x - el.current.offsetWidth / 2 + anchorRect.width / 2,
+    y: anchorRect.y + anchorRect.height + 8
   };
 };
 
