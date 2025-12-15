@@ -1,11 +1,11 @@
 import Media from '@ui/media/index.tsx';
 import { useSettings } from "@/context/settings.jsx";
-import { Dropdown } from "@ui/dropdown.jsx";
 import { useEffect, useState } from "react";
 import defaultImg from '/assets/images/system/default-profile.png';
 import { Tabs } from "@ui/tabList.jsx";
 import { Information } from "./information.jsx";
 import Icon from "@ui/icons/index.tsx";
+import Modal from "@ui/modal/index.tsx";
 
 const UserInfo = () => {
 
@@ -172,8 +172,8 @@ const UserInfo = () => {
                        defaults={ defaultImg }
                 />
                 <div className="edit-photo absolute bottom-0 left-0">
-                  <Dropdown show={ dropdown } closed={ () => setDropdown( false ) } classDropdown='bg-white p-0'
-                            position='left'>
+                  <Modal type='dropdown' isOpen={ dropdown } onClose={ () => setDropdown( false ) }
+                         classNameContainer='!p-0'>
                     <ul>
                       <label htmlFor="upload-photo"
                              className="item edit family-oswald text-md h-8 cursor-pointer px-2 flex items-center justify-center rounded-md hover:text-gray-500 hover:bg-stone-200 duration-150">
@@ -192,7 +192,7 @@ const UserInfo = () => {
                         Eliminar
                       </li> }
                     </ul>
-                  </Dropdown>
+                  </Modal>
                   <Icon name='BsCameraFill'
                         className='cursor-pointer text-2xl text-Primary hover:text-Secondary duration-200'
                         onClick={ () => setDropdown( !dropdown ) }/>
@@ -214,6 +214,4 @@ const UserInfo = () => {
   </div> );
 };
 
-export {
-  UserInfo
-};
+export { UserInfo };
