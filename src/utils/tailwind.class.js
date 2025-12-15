@@ -2,36 +2,44 @@
  * You must add array with values in the map  function
  * @returns {Array}
  */
+const colours = [
+  'blue',
+  'red',
+  'yellow',
+  'purple',
+  'green',
+  'cyan',
+  'fuchsia',
+  'pink',
+  'orange',
+];
 
-const colours = [ 'blue', 'red', 'yellow', 'purple','green', 'cyan', 'fuchsia', 'pink', 'orange'];
-const breakpoints = [ 'mn:', 'xn:', 'sm:', 'md:', 'tl:', 'lg:', 'xl:', '2xl:' ];
+const breakpoints = [ 'mn', 'xn', 'sm', 'md', 'tl', 'lg', 'xl', '2xl' ];
 
-export default function CSafelist() {
-  const safelist = [
+const safelist = [
+  // grid-cols-1 → grid-cols-12
+  { pattern: /grid-cols-(1[0-2]|[1-9])/ },
 
-    // ['grid-cols-1', ...]
-    [...Array(12)].map((_, i) => `grid-cols-${i + 1}`),
+  // gap-1 → gap-20
+  { pattern: /gap-(1\d|[1-9]|20)/ },
 
-    // ['gap-1', ...]
-    [...Array(20)].map((_, i) => `gap-${i + 1}`),
+  // shadow-color-500 + hover
+  {
+    pattern: new RegExp( `shadow-(${colours.join('|')})-500` ),
+    variants: [ 'hover' ],
+  },
 
-    // ['shadow-blue-500',...]
-    colours.map(color => `shadow-${color}-500`, color => `hover:shadow-${color}-500`),
+  // responsive grid-cols
+  {
+    pattern: /grid-cols-(1[0-2]|[1-9])/,
+    variants: breakpoints,
+  },
 
+  // tooltip translate (+ / -)
+  {
+    pattern: /translate-(x|y)-(1\d|[1-9]|20)/,
+    variants: [ 'group-hover/tooltip', '-' ],
+  }
+];
 
-    // ['hover:shadow-blue-500',...]
-    colours.map(color => `hover:shadow-${color}-500`),
-
-    // ['mn:grid-cols-1'...]
-    breakpoints.flatMap(( b ) => [...Array(12)].map((_, i) => `${ b }grid-cols-${i + 1}`)),
-
-    // positive and negative Values to translate for tooltip
-    [...Array(20)].map((_, i) => `group-hover/tooltip:translate-x-${i + 1}
-      group-hover/tooltip:-translate-x-${i + 1}
-      group-hover/tooltip:translate-y-${i + 1}
-      group-hover/tooltip:-translate-y-${i + 1}`
-    )
-
-  ].flat(); // Join Arrays
-  return safelist;
-};
+export default safelist;

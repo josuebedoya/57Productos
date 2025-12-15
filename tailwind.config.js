@@ -1,4 +1,4 @@
-import CSafelist from './src/utils/tailwind.class';
+import safelist from './src/utils/tailwind.class';
 
 const plugin = require( 'tailwindcss' );
 
@@ -6,7 +6,7 @@ const plugin = require( 'tailwindcss' );
 module.exports = {
   important: true,
   darkMode: 'class',
-  safelist: [ ...CSafelist(), 'flex', 'flex-col', 'min-h-screen', '!hidden' ],
+  safelist: [ ...safelist, 'flex', 'flex-col', 'min-h-screen', '!hidden' ],
   content: [
     './src/**/*.{js,jsx,ts,tsx, html}',
   ],
