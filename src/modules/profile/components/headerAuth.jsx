@@ -72,7 +72,7 @@ const HeaderAuth = () => {
                >
                  <Icon name='MdOutlineSettings'
                        className='cursor-pointer text-xl  hover:animate-spin hover:text-Secondary'
-                       onClick={ () => navigate( path.AUTH.EDIT_INFO ) }/>
+                       onClick={ () => navigate( path.EDIT_INFO ) }/>
                </Tooltip>
              </div>
              <div className='user-info border-l-2 border-gray-300 pl-4 flex items-center'>

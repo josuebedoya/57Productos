@@ -46,17 +46,8 @@ export const Routes = [
   {
     id: 'PROFILE',
     path: '/perfil',
+    view: '@/modules/profile/pages/index.jsx',
     children: [
-      {
-        id: 'LOGIN',
-        path: '/auth/iniciar-sesion',
-        view: '@/modules/auth/pages/login.jsx'
-      },
-      {
-        id: 'REGISTER',
-        path: '/auth/registrarse',
-        view: '@/modules/auth/pages/login.jsx'
-      },
       {
         id: 'EDIT_INFO',
         path: '/editar-informacion',
@@ -64,9 +55,25 @@ export const Routes = [
       },
       {
         id: 'PAYMENTS',
-        path: '/perfil/pagos',
+        path: '/pagos',
         view: '@/modules/icommmerce/pages/payments.jsx'
       }
+    ]
+  },
+  {
+    id: 'AUTH',
+    path: '/auth',
+    children: [
+      {
+        id: 'LOGIN',
+        path: '/iniciar-sesion',
+        view: '@/modules/auth/pages/login.jsx'
+      },
+      {
+        id: 'REGISTER',
+        path: '/registrarse',
+        view: '@/modules/auth/pages/login.jsx'
+      },
     ]
   },
   {

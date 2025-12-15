@@ -1,5 +1,5 @@
 import {useTranslation} from "react-i18next";
-import React, {lazy, useState, useMemo} from "react";
+import React, {lazy, useState, useMemo, useEffect} from "react";
 
 type UsePageResult =
   | { Component: React.LazyExoticComponent<any> | null; error: false }
@@ -9,36 +9,39 @@ export const usePage = (modulePath: string): UsePageResult => {
   const {t} = useTranslation();
   const [error, setError] = useState(false);
 
+  useEffect(() => {
+    setError(false);
+  }, [modulePath]);
+
   const viewModules = import.meta.glob([
-    '/src/modules/**/pages/**/*.{tsx,jsx}', // Search in page directory pages
-    '/src/pages/*/*.{tsx,jsx}' // Search in pages, only first level
+    "/src/modules/**/pages/**/*.{tsx,jsx}",
+    "/src/pages/*/*.{tsx,jsx}",
   ]);
 
-  const formattedSrc = modulePath.replace('@', '/src');
+  const formattedSrc = modulePath.replace("@", "/src");
   const importFn = viewModules[formattedSrc];
 
   const Component = useMemo(() => {
-    if (!importFn || typeof importFn !== 'function') {
-      console.error(t('modules.page.errors.noFoundModule', {path: formattedSrc}));
-      setError(true);
-      return null;
+    if (!importFn) {
+      return lazy(() => {
+        setError(true);
+        return Promise.reject(
+          new Error(
+            t("modules.page.errors.noFoundModule", {path: formattedSrc})
+          )
+        );
+      });
     }
 
     return lazy(async () => {
       try {
-        const mod = await importFn() as Record<string, any>;
+        const mod = (await importFn()) as Record<string, any>;
+        const Page = mod.default ?? mod[Object.keys(mod)[0] as string];
 
-        if (mod?.default) return {default: mod.default};
+        if (!Page) throw new Error(t('modules.page.errors.noValidModule'));
 
-        const firstKey = Object.keys(mod)[0];
-        if (!firstKey || !mod[firstKey]) {
-          console.error(t('modules.page.errors.noFoundModule', {path: formattedSrc}));
-          throw new Error(t('modules.page.errors.noValidModule'));
-        }
-
-        return {default: mod[firstKey]};
+        return {default: Page};
       } catch (err) {
-        console.error(t('modules.page.errors.noValidModule'), err);
         setError(true);
         throw err;
       }

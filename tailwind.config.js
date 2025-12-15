@@ -6,7 +6,7 @@ const plugin = require( 'tailwindcss' );
 module.exports = {
   important: true,
   darkMode: 'class',
-  safelist: CSafelist(),
+  safelist: [ ...CSafelist(), 'flex', 'flex-col', 'min-h-screen', '!hidden' ],
   content: [
     './src/**/*.{js,jsx,ts,tsx, html}',
   ],

@@ -1,3 +1,5 @@
+import joinPath from "@/utils/joinPath.ts";
+
 interface RouteConfig {
   id: string
   path: string
@@ -8,14 +10,17 @@ interface RouteConfig {
 const getPathsPage = (routes: RouteConfig[]): Record<string, string> => {
   const map: Record<string, string> = {}
 
-  function traverse(routeList: RouteConfig[]) {
-    for (const {id, path, children} of routeList) {
-      if (id && path) map[id] = path;
-      if (children) traverse(children);
+  const traverse = (list: RouteConfig[], parentPath = ''): void => {
+    for (const {id, path, children} of list) {
+      const fullPath = joinPath(parentPath, path)
+      map[id] = fullPath
+
+      if (children?.length) traverse(children, fullPath);
     }
   }
 
   traverse(routes);
   return map;
 }
+
 export default getPathsPage;

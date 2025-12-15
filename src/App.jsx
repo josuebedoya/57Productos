@@ -1,10 +1,10 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, useLocation } from 'react-router-dom';
 import { Path_page, Routes as RoutesApp } from '@/routes.ts';
 import { Slug } from "@/utils/handleText.ts";
 import { clsx } from "clsx";
-import ViewComponent from "@/modules/page/pages/index.tsx";
 import { Header } from '@/templates/header';
 import { Footer } from '@/templates/footer';
+import useRouterPages from "@/hooks/useRouterPages.tsx";
 
 function App() {
   const path = useLocation()?.pathname;
@@ -16,16 +16,8 @@ function App() {
      { !isProfilePage && <Header/> }
      <main className='flex-1'>
        <Routes>
-         { RoutesApp.map( ( { view, path }, i ) => {
-           if ( !view || typeof view !== 'string' ) return false;
-           return ( < Route
-            key={ i }
-            path={ path }
-            element={ <ViewComponent modulePath={ view }/> } // Here render the view if it's exist
-           /> )
-         } ) }
+         { useRouterPages( RoutesApp ) }
        </Routes>
-       <template className='flex flex-col min-h-screen !hidden'/>
      </main>
      { !isProfilePage && <Footer/> }
    </div>
