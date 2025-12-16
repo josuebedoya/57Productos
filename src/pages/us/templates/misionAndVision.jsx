@@ -1,67 +1,26 @@
-import { useState } from 'react';
-import Icon from "@ui/icons/index.js";
-import Body from "@ui/body/index.js";
+import Collapsible from "@ui/collapsible/index.tsx";
 
 const MissionAndVision = () => {
-  const [ open, setOpen ] = useState( null );
-
   const content = [
     {
       title: 'misión',
-      content: 'Facilitar el éxito comercial al conectar de manera efectiva a vendedores y compradores, ofreciendo soluciones personalizadas que maximicen los beneficios para los vendedores. Nos comprometemos proporcionar un servicio de intermediación transparente y eficiente, utilizando tecnología avanzada y un profundo conocimiento del mercado para asegurar que cada transacción sea beneficiosa y satisfactoria.'
+      children: 'Facilitar el éxito comercial al conectar de manera efectiva a vendedores y compradores, ofreciendo soluciones personalizadas que maximicen los beneficios para los vendedores. Nos comprometemos proporcionar un servicio de intermediación transparente y eficiente, utilizando tecnología avanzada y un profundo conocimiento del mercado para asegurar que cada transacción sea beneficiosa y satisfactoria.'
     },
     {
       title: 'visión',
-      content: ' Facilitar el éxito comercial al conectar de manera efectiva a vendedores y compradores, ofreciendo soluciones personalizadas que maximicen los beneficios para los vendedores. Nos comprometemos a proporcionar un servicio de intermediación transparente y eficiente, utilizando tecnología avanzada y un profundo conocimiento del mercado para asegurar que cada transacción sea beneficiosa y satisfactoria.'
+      children: ' Ser la plataforma líder en intermediación comercial, reconocida por nuestra capacidad para conectar vendedores y compradores de manera innovadora y eficiente. Aspiramos a expandir nuestra presencia global, ofreciendo soluciones integrales que impulsen el crecimiento y la rentabilidad de nuestros clientes, mientras fomentamos relaciones comerciales duraderas basadas en la confianza y la excelencia.'
     }
   ];
-
-  const handleOpen = ( index ) => {
-    setOpen( open === index ? null : index );
-  };
   return ( <section id='MissionAndVision' className='w-full border-b border-b-gray-300 pb-8 tl:pb-16'>
-    <div className='container mx-auto grid grid-cols-12 mt-6 tl:mt-10 px-3'>
-      <div className='section-mision grid grid-cols-12 col-span-full md:col-span-6'>
-        <div
-         className={ `md:col-end-12 col-span-full shadow-md px-3 pt-3 pb-4 rounded-2xl ${ open !== 0 ? 'max-h-16' : null }` }>
-          <button type='button' onClick={ () => handleOpen( 0 ) }
-                  className='flex justify-between items-center w-full'>
-            <Body className='text-Primary capitalize text-xl xl:text-2xl text-shadow-black' withLine
-                  positionLine='start' color='primary'>
-              { content[ 0 ].title }
-            </Body>
-            <Icon name={ open === 0 ? 'IoIosArrowDown' : 'IoIosArrowForward' }/>
-          </button>
-          {
-           open === 0 && (
-            <Body className='text-15 tl:text-lg text-justify mt-4 animate-fade-in'>
-              { content[ 0 ].content }
-            </Body>
-           )
-          }
-        </div>
-      </div>
-      <div className='section-vision grid grid-cols-12 col-span-full md:col-span-6'>
-        <div
-         className={ `md:col-start-2 col-span-full shadow-md px-3 pt-3 pb-4 rounded-2xl ${ open !== 1 ? 'max-h-16' : null }` }>
-          <button type='button' onClick={ () => handleOpen( 1 ) }
-                  className='flex justify-between items-center w-full'>
-            <Body className='text-Primary capitalize text-xl xl:text-2xl text-shadow-black' withLine
-                  positionLine='start' color='primary'>
-              { content[ 1 ].title }
-            </Body>
-            <Icon name={ open === 1 ? 'IoIosArrowDown' : 'IoIosArrowForward' }/>
-          </button>
-          {
-           open === 1 && (
-            <Body className='text-15 tl:text-lg text-justify mt-4 animate-fade-in'>
-              { content[ 1 ].content }
-            </Body>
-           )
-          }
-        </div>
-      </div>
-    </div>
+    <Collapsible
+     items={ content }
+     className='container mx-auto grid grid-cols-2 mt-6 tl:mt-10 px-3 gap-0 md:gap-6 tl:gap-16 xl:gap-24'
+     classNameItem='col-span-full md:col-span-1 shadow-md rounded-2xl py-3'
+     classNameTitle='text-shadow-black text-Primary capitalize text-xl xl:text-2xl'
+     classNameTitleActive='font-bold'
+     classNameBody='!p-5 text-15 tl:text-lg text-justify animate-fade-in'
+     multiple
+    />
   </section> )
 }
 

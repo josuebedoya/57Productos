@@ -500,6 +500,15 @@ export const vars = {
     controls: {
       base: 'absolute bottom-2 left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 flex items-center justify-center cursor-pointer max-h-max'
     }
-  }
+  },
 
+  collapsible: {
+    item: {
+      base: 'item-collapsible',
+      active: 'active',
+      header: 'header flex flex-nowrap justify-between items-center cursor-pointer py-3 px-4 duration-300 transition-all',
+      body: 'body overflow-hidden transition-[max-height] duration-500 ease-in-out aria-hidden:max-h-0',
+      content: 'content'
+    }
+  }
 }
