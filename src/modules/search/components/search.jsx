@@ -6,9 +6,8 @@ import { useDatabase } from '@/hooks/useDatabase.jsx';
 import { useResults } from '@/modules/search/context/ParamsUrl.jsx';
 import { normalizeText, Slug } from '@/utils/handleText.ts';
 import { Path_page } from '@/routes.ts';
-import  WriteAnimationText  from '@/components/writeAnimationText/index.tsx';
+import WriteAnimationText from '@/components/writeAnimationText/index.tsx';
 import Modal from "@ui/modal/index.tsx";
-import Icon from "@ui/icons/index.tsx";
 
 
 const Search = () => {
@@ -89,7 +88,7 @@ const Search = () => {
    <>
      <div role='parent' id='searchdropdown' className='search-dropdown relative'>
        <div className={ `search-btn-section duration-500 ${ showModal ? 'button-active' : '' }` }>
-         <Button icon={ <Icon name='BiSearchAlt'/> } classes='search-btn' onClick={ openModal }/>
+         <Button icon='BiSearchAlt' classes='search-btn' onClick={ openModal }/>
        </div>
      </div>
 
@@ -100,7 +99,7 @@ const Search = () => {
          <form method='GET' onSubmit={ submitQuery } className='flex items-center w-full max-w-600 gap-5'>
            <Input type='text' maxLength={ 70 } value={ valueSearch } onChange={ handleValueSearch } name='search'
                   className='flex-grow'/>
-           <Button icon={ <Icon name='BiSearchAlt'/> } onClick={ submitQuery } classes='search-btn' type='submit'/>
+           <Button icon='BiSearchAlt' onClick={ submitQuery } classes='search-btn' type='submit'/>
          </form>
        </div>
 
