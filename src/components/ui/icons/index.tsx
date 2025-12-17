@@ -9,7 +9,6 @@ const Icon: React.FC<IconProps> = ({name, versionFamily, ...props}) => {
 
   const {icon: LoadedIcon, error} = useImportIcon(name, versionFamily);
   const {t} = useTranslation();
-
   // Error state
   if (error) {
     return (
@@ -31,7 +30,6 @@ const Icon: React.FC<IconProps> = ({name, versionFamily, ...props}) => {
       </div>
     );
   }
-
   return (
     <div className='icon' aria-label={name}>
       <LoadedIcon {...props} />

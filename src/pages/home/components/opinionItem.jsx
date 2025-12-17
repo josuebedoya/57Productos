@@ -36,7 +36,7 @@ const OpinionItem = ( props ) => {
            <div className="content-likes flex justify-between items-center gap-2">
              <span>
                <Icon
-                name={ 'AiTwotoneLike' }
+                name='AiTwotoneLike'
                 className='cursor-pointer duration-100 hover:scale-125'
                 onClick={ () => rateLike( props.id, { likes: props.likes + 1 } ) }
                />
@@ -44,7 +44,7 @@ const OpinionItem = ( props ) => {
              </span>
              <span>
                <Icon
-                name={ 'AiTwotoneDislike' }
+                name='AiTwotoneDislike'
                 className='cursor-pointer duration-100 hover:scale-125'
                 onClick={ () => rateLike( props.id, { dont_likes: props.dontLike + 1 } ) }
                />

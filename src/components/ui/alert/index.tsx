@@ -8,7 +8,7 @@ const Alert: React.FC<AlertProps> = ({children, icon, iconProps, className, ...p
     <div
       className={clsx('alert flex items-center gap-4 max-w-max px-6 py-3 text-15 tracking-wide mx-auto', className)} {...props}>
       <span>{children}</span>
-      {icon && <Icon name={icon} {...iconProps}/>}
+      {icon && <Icon  {...iconProps} name={icon}/>}
     </div>
   );
 };

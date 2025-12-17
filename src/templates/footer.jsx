@@ -125,7 +125,7 @@ const Footer = () => {
           variantHover='outline'
           colorHover='white'
           size='md'
-          icon={ <Icon name='BiSolidPaperPlane'/> }
+          icon='BiSolidPaperPlane'
           iconRight
           onClick={ handleShowForm }
          >

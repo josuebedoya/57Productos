@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { clsx } from 'clsx';
 import Button from '@ui/button/index.tsx';
 import { Pagination } from "@ui/pagination.jsx";
@@ -7,7 +7,7 @@ import Alert from "@ui/alert/index.tsx";
 const List = ( {
                  columns = 4, gap = 10, itemClass = '', rows = 1, breakpoints, textEmpty, pagination = true,
                  typePagination = 2, classLinkPagination, activeClassPagination, classDotsPagination,
-                 iconNextPagination, iconPrevPagination, labelNextPagination, labelPrevPagination,
+                 iconNextPagination ='IoIosArrowForward', iconPrevPagination = 'IoIosArrowBack', labelNextPagination, labelPrevPagination,
                  children
                } ) => {
 
@@ -97,6 +97,7 @@ const List = ( {
           </Button>
         </div>
        ) }
+
        <div className={ clsx( 'content grid',
         `grid-cols-${ breakpoints?.zero ?? defaultBreakpoints.zero } gap-${ gap }`,
         /* Breakpoints */

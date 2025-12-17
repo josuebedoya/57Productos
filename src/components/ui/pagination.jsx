@@ -26,7 +26,7 @@ const Pagination = (
      <ReactPaginate
       breakLabel="..."
       nextLabel={ <>{ labelNext }<Icon name={ iconNext }/></> }
-      previousLabel={ <><Icon name={ iconPrev }/> { labelPrev }</> }
+      previousLabel={ <><Icon name={ iconPrev || 'IoIosArrowBack' }/> { labelPrev || 'IoIosArrowForward' }</> }
       nextLinkClassName='flex items-center justify-center'
       previousLinkClassName='flex items-center justify-center'
       onPageChange={ handlePage }
