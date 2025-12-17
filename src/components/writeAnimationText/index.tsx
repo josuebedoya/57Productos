@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import clsx from "clsx";
 import useWriteAnimation from "@/components/writeAnimationText/hooks/useWriteAnimation.tsx";
-import type {WriteAnimationTextProps} from "@ui/writeAnimationText/types.d.ts";
+import type {WriteAnimationTextProps} from "@/components/writeAnimationText/types.d.ts";
 
 const WriteAnimationText: React.FC<WriteAnimationTextProps> = (
   {

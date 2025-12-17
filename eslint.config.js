@@ -9,7 +9,7 @@ import tsParser from '@typescript-eslint/parser'
 export default [
   { ignores: [ 'dist' ] },
   {
-    files: [ '**/*.{js,jsx}' ],
+    files: [ '**/*.{js,jsx,tsx,ts}' ],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,

@@ -1,5 +1,5 @@
 import { useSettings } from '@/context/settings.jsx';
-import { Metas } from '@ui/metas/metas.jsx';
+import { Metas } from '@/components/metas/metas.jsx';
 import Spin from "@ui/spin/index.tsx";
 import Tooltip from "@ui/tooltip/index.tsx";
 import Media from "@ui/media/index.tsx";
