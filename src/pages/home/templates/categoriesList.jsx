@@ -42,7 +42,7 @@ const CategoriesList = () => {
        <List items={ categories }
              cols='grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10'
              colItem='col-span-1'
-             keyExtractor={ item => item }
+             keyExtractor={ ( _, i ) => `category-${ i }` }
              propsItem={ {
                className: 'flex items-center shadow rounded-lg  px-4 py-10 hover:scale-105 duration-300 group/item'
              } }

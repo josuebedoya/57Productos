@@ -2,7 +2,11 @@ import libraryIcons from "@ui/icons/configs/libraryPrefix.js";
 import {t} from "i18next";
 
 const getLibIcon = async (iconName: string, version?: number) => {
-  const prefix = iconName?.match(/^([A-Z][a-z]+)/)?.[1]?.toLowerCase() ?? null;
+  if (typeof iconName !== 'number' && typeof iconName !== 'string') throw new Error(t("components.icons.errors.iconNameNotString"));
+
+  if (!iconName || !iconName.trim()) throw new Error(t("components.icons.errors.iconNoName"));
+
+  const prefix = iconName?.toString()?.match(/^([A-Z][a-z]+)/)?.[1]?.toLowerCase() ?? null;
   const libs = Object.entries(libraryIcons).find(([k]) => k === prefix) || [];
 
   const versionUSe = version ? `v${version}` : "default";

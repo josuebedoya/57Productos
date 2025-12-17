@@ -4,7 +4,6 @@ import { OpinionItem } from '../components/opinionItem.jsx';
 import Button from "@ui/button/index.tsx";
 import { Path_page } from '@/routes.ts';
 import { useComment } from "@/modules/comments/context/comments.jsx";
-import Icon from "@ui/icons/index.js";
 import Carousel from "@ui/carousel/index.tsx";
 
 const Opinions = () => {
@@ -47,7 +46,7 @@ const Opinions = () => {
            variant='flat'
            variantHover='flat'
            iconRight
-           icon={ <Icon name='IoIosArrowForward'/> }
+           icon='IoIosArrowForward'
            onClick={ gotToOpinios }
           >
             Ver más

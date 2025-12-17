@@ -30,7 +30,9 @@
       "errors": {
         "iconNotFound": "Icono {{iconName}} no encontrado.",
         "iconNameRequired": "Se requiere el nombre del icono.",
-        "versionLibNotFound": "La versión v{{version}} no se encuentra disponible en la familia '{{family}}' de la librería react-icons."
+        "versionLibNotFound": "La versión v{{version}} no se encuentra disponible en la familia '{{family}}' de la librería react-icons.",
+        "iconNoName": "No se llegó un nombre para el icono.",
+        "iconNameNotString": "El nombre del icono debe ser una cadena."
       }
     },
     "modal": {
