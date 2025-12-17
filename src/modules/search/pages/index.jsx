@@ -2,7 +2,7 @@ import { useDatabase } from "@/hooks/useDatabase.jsx";
 import { useResults } from "@/modules/search/context/ParamsUrl.jsx";
 import { useEffect, useState } from "react";
 import { normalizeText } from "@/utils/handleText.ts";
-import { List } from '@ui/list.jsx';
+import List from "@/components/ui/list/index.tsx";
 import { Product } from "@/modules/icommerce/components/product.jsx";
 import img from '/assets/images/products/lettuce.jpg';
 import '@/modules/search/styles/pages/_index.scss';
@@ -59,26 +59,27 @@ const Search = () => {
               : null
            }
          </div>
-         <List textEmpty={ `No se encontraron productos relacionados con "${ query }".` } breakpoints={ breakpoints }
-               columns={ 1 } rows={ 2 } pagination typePagination={ 2 }>
-           {
-            found.length > 0 && query !== '' &&
-            found.map( item => (
-             <div key={ item.id } className={ `item-found-${ item.id }` }>
-               <Product
-                id={ item.id }
-                title={ item.nombre }
-                price={ item.precio }
-                img={ img }
-                imgHover={ img }
-                amount={ 1 }
-               >
-                 { item.descripcion }
-               </Product>
-             </div>
-            ) )
-           }
-         </List>
+         <List
+          items={ found }
+          keyExtractor={ item => item?.id }
+          renderItem={ item => (
+           <div key={ item.id } className={ `item-found-${ item.id }` }>
+             <Product
+              id={ item.id }
+              title={ item.nombre }
+              price={ item.precio }
+              img={ img }
+              imgHover={ img }
+              amount={ 1 }
+             >
+               { item.descripcion }
+             </Product>
+           </div>
+          ) }
+          cols='grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'
+          colItem='col-span-1'
+          labelEmpty={ `No se encontraron productos relacionados con "${ query }".` }
+         />
        </div>
      </section>
    </>
