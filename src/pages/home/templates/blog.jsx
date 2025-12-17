@@ -1,10 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { Path_page } from '@/routes.ts';
-
-import { TextAnimatedWrite } from '@ui/textAnimatedWrite.jsx'
 import { Grafic } from '@/pages/home/components/grafic.jsx'
 import Button from '@ui/button/index.tsx'
-import Icon from "@ui/icons/index.js";
+import WriteAnimationText from "@/components/writeAnimationText/index.tsx";
 
 const Blog = () => {
 
@@ -18,10 +16,12 @@ const Blog = () => {
    <section id='Blog'>
      <div className='container mx-auto flex flex-col items-center py-8 md:py-12 lg:py-20 px-3'>
        <div className='title-section max-w-4xl min-h-11 text-center mb-8 tl:mb-14'>
-         <TextAnimatedWrite atrText={ { fontSize: '35px', letterSpacing: '0.5px', maxWidth: '715px' } }
-                            classText='textPrimary font-bold family-oswald'>
-           Impulsa tu éxito y multiplica tus beneficios con nuestros servicios especializados.
-         </TextAnimatedWrite>
+         <WriteAnimationText
+          className='textPrimary font-bold family-oswald max-w-[715px] text-3xl tracking-wider flex-wrap'
+          text='Impulsa tu éxito y multiplica tus beneficios con nuestros servicios especializados.'
+          writer={"char"}
+          speed={200}
+         />
        </div>
        <div className='grafic-section w-full mb-9'>
          <Grafic/>
@@ -38,7 +38,7 @@ const Blog = () => {
          <Button
           classes='btn-go-to-services family-oswald tracking-widest max-[1024px]:text-15'
           size='lg'
-          icon={ <Icon name='IoIosArrowForward' className='icon'/> }
+          icon='IoIosArrowForward'
           iconRight={ true }
           onClick={ GotoServices }>
            Navegar blog

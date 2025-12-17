@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect, } from 'react';
+import { useEffect, useRef, useState, } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Button from '../../../components/button/index.tsx';
+import Button from '@ui/button/index';
 import { Path_page } from '@/routes.ts';
 import { Slug } from "@/utils/handleText.ts";
 import { useCart } from '@/modules/icommerce/context/cart.jsx';

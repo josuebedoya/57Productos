@@ -6,7 +6,7 @@ import { useDatabase } from '@/hooks/useDatabase.jsx';
 import { useResults } from '@/modules/search/context/ParamsUrl.jsx';
 import { normalizeText, Slug } from '@/utils/handleText.ts';
 import { Path_page } from '@/routes.ts';
-import { TextAnimatedWrite } from '@ui/textAnimatedWrite.jsx';
+import  WriteAnimationText  from '@/components/writeAnimationText/index.tsx';
 import Modal from "@ui/modal/index.tsx";
 import Icon from "@ui/icons/index.tsx";
 
@@ -121,9 +121,7 @@ const Search = () => {
                 { message }
                 {
                  message === messages[ 0 ] &&
-                 <TextAnimatedWrite classText='family-oswald'>
-                   !Escribe algo para realizar la BUSQUEDA¡
-                 </TextAnimatedWrite>
+                 <WriteAnimationText classText='family-oswald' text='!Escribe algo para realizar la BUSQUEDA¡'/>
                 }
               </h1>
             </div>
