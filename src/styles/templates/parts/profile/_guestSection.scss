@@ -75,6 +75,11 @@
         .tab-header > *{
           transform: rotate(-45deg);
         }
+
+        .tab-header .icon{
+          left: -10px;
+          position: relative;
+        }
       }
     }
   }

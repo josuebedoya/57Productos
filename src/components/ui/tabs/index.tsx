@@ -32,7 +32,7 @@ const Tabs: React.FC<TabsProps> = (
             items?.map(({label, iconLabel}, i) => (
               <div
                 key={i}
-                className={clsx('tab-header', classNameItemHeader, i === activeIndex && ['active', classNameItemHeaderActive])}
+                className={clsx('tab-header cursor-pointer', classNameItemHeader, i === activeIndex && ['active', classNameItemHeaderActive])}
                 data-active={i === activeIndex}
                 onClick={() => handlerTabChange(i)}
               >
