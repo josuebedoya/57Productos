@@ -51,7 +51,7 @@ export const Routes = [
       {
         id: 'EDIT_INFO',
         path: '/editar-informacion',
-        view: '@/modules/profile/pages/user/information.jsx'
+        view: '@/modules/profile/pages/user/index.jsx'
       },
       {
         id: 'PAYMENTS',

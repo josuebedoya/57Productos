@@ -1,16 +1,16 @@
 @use '@/styles/variables' as *;
 
-#GuestSection {
-  .section-content {
-    .section-buttons {
+#GuestSection{
+  .section-content{
+    .section-buttons{
 
       .btn-login,
-      .btn-register {
+      .btn-register{
         position: relative;
         transition: all 0.4s ease;
 
         &::before,
-        &::after {
+        &::after{
           content: '';
           position: absolute;
           width: 20px;
@@ -20,48 +20,60 @@
           transition: transform 0.4s ease;
         }
 
-        &::before {
+        &::before{
           top: 0;
           left: 70%;
         }
 
-        &::after {
+        &::after{
           bottom: 0;
           left: 20%;
         }
 
-        &:hover {
+        &:hover{
 
-          &::before {
+          &::before{
             transform: translateX(-450%);
             transition: transform 0.4s ease;
           }
 
-          &::after {
+          &::after{
             transform: translateX(450%);
             transition: transform 0.4s ease;
           }
         }
       }
 
-      .btn-login {
+      .btn-login{
 
-        &:hover {
+        &:hover{
 
           &::before,
-          &::after {
+          &::after{
             background: #22c55e;
           }
         }
       }
 
-      .btn-register {
-        &:hover {
+      .btn-register{
+        &:hover{
 
           &::before,
-          &::after {
+          &::after{
             background: $color-secondary;
           }
+        }
+      }
+    }
+  }
+}
+
+.user-info{
+  .common{
+    .tabs-wrapper{
+      .tabs-header{
+        .tab-header > *{
+          transform: rotate(-45deg);
         }
       }
     }
