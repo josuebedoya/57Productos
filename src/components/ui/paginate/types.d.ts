@@ -1,14 +1,27 @@
-import type {ReactPaginateProps} from "react-paginate";
-import type {ReactNode} from "react";
+import type {HTMLAttributes} from "react";
 
-export interface PaginationProps extends ReactPaginateProps {
-  nextIcon?: string;
-  previousIcon?: string;
+type CommonProps = {
   variant?: 'outline' | 'solid' | 'flat';
   variantActive?: 'outline' | 'solid' | 'flat';
   color?: string;
   colorActive?: string;
-  marginItems?: number | string;
   rounded?: string;
-  padding?: string;
+  padding?: string | number;
+  space?: 1 | 2 | 3 | 4 | 5;
+}
+
+type ItemPaginateProps = HTMLAttributes<HTMLLiElement> & CommonProps & {
+  label: string;
+  query: string;
+  isActive?: boolean;
+}
+
+export interface PaginateProps extends CommonProps {
+  query: string;
+  visiblePages: number;
+  totalPages: number;
+  itemsPerPage?: number;
+  classNameItem?: string;
+  className?: string;
+  onClick?: (page?: any) => void;
 }

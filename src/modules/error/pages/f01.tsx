@@ -9,9 +9,9 @@ import {useNavigate} from "react-router";
 *  The code F01 is the identifier from fronted
 * */
 
-const F01 = async ({message}: { message: string }) => {
+const F01 = ({message}: { message: string }) => {
   const navigate = useNavigate();
-  const envApp = await fromEnv('VITE_APP_ENV', '');
+  const envApp = fromEnv('VITE_APP_ENV', '');
 
   return (
     <>

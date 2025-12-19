@@ -8,9 +8,11 @@ import japan from '/assets/images/flags/japan.png'
 import brazil from '/assets/images/flags/brazil.png'
 import canada from '/assets/images/flags/canada.png'
 import List from "@ui/list/index.tsx";
+import Paginate from "@ui/paginate/index.tsx";
 
 const Contact = () => {
   const { settings } = useSettings();
+  const totalItems = 5;
 
   const images = [
     <Tooltip key={ 1 } content='Colombia'>
@@ -38,7 +40,7 @@ const Contact = () => {
      <section className='container mx-auto'>
        <h1>Asesorate, deja tus datos y te contactaremos los más rápido posible</h1>
        <List
-        items={ images}
+        items={ images }
         renderItem={ ( item ) => item }
         keyExtractor={ ( item ) => item }
         className='py-10'
@@ -48,6 +50,20 @@ const Contact = () => {
           className: 'flex justify-center items-center shadow-lg p-4 rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer',
         } }
        />
+
+       <Paginate
+        visiblePages={ 20 }
+        totalPages={ 200 }
+        itemsPerPage={ 3 }
+        query='test'
+        colorActive='black'
+        variantActive='flat'
+        color='primary'
+        variant='flat'
+        space={ 1 }
+        className='shadow-md'
+       />
+       <Paginate visiblePages={ 10 } query='dstsd'/>
      </section>
    </div>
   );

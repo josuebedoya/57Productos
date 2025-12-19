@@ -2,7 +2,6 @@ import { useState } from 'react';
 import TextArea from "@ui/input/fields/textarea/index.tsx";
 import { Path_page } from '@/routes.ts';
 import Button from '@ui/button/index.tsx';
-import { useComment } from '@/modules/comments/context/comments.jsx';
 import { Menu } from '@ui/menu/menu.jsx';
 import Form from '@ui/form/index.tsx';
 import { CSSTransition } from 'react-transition-group';
@@ -12,7 +11,10 @@ import Icon from "@ui/icons/index.js";
 const Footer = () => {
   const [ comment, setComment ] = useState( '' );
   const [ showTextW, setShowTextW ] = useState( false );
-  const { addMessage } = useComment();
+  const { addMessage } = {
+    message: 'HOlaaaaa', addMessage: () => {
+    }
+  };//useComment();
   const [ sendEmpty, setSendEmpty ] = useState( false );
   const [ showForm, setShowForm ] = useState( false );
   const [ email, setEmail ] = useState( '' );

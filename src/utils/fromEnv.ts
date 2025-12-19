@@ -1,4 +1,4 @@
-const fromEnv = async (key: string, fallback = ''): Promise<string> => {
+const fromEnv = (key: string, fallback = ''): Promise<string> => {
   return import.meta.env[key] ?? fallback;
 };
 
