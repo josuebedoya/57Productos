@@ -10,12 +10,14 @@ const resources = {
   es: {translation: es},
 } as const;
 
+export const defaultLng = 'en';
+
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en', // Default language
-    fallbackLng: 'en',
+    lng: defaultLng, // Default language
+    fallbackLng: defaultLng,
     interpolation: {
       escapeValue: false,
     },

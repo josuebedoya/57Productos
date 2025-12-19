@@ -1,7 +1,7 @@
 import { MissionAndVision } from '@/pages/us/templates/misionAndVision.jsx'
 import { InfoAbout } from '@/pages/us/templates/infoAbout.jsx'
 import imgFruitFlat from '/assets/images/img-fruit-flat.webp'
-import { Metas } from "@/components/metas/metas.jsx";
+import { Metas } from "@/layouts/metas/metas.tsx";
 import { useSettings } from "@/context/settings.jsx";
 
 const Us = () => {

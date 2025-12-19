@@ -6,7 +6,7 @@ import List from "@/components/ui/list/index.tsx";
 import { Product } from "@/modules/icommerce/components/product.jsx";
 import img from '/assets/images/products/lettuce.jpg';
 import '@/modules/search/styles/pages/_index.scss';
-import { Metas } from "@/components/metas/metas.jsx";
+import { Metas } from "@/layouts/metas/metas.tsx";
 
 const Search = () => {
   const { get, data } = useDatabase();

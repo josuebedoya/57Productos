@@ -1,5 +1,4 @@
 import { useSettings } from '@/context/settings.jsx';
-import { Metas } from '@/components/metas/metas.jsx';
 import Tooltip from "@ui/tooltip/index.tsx";
 import Media from "@ui/media/index.tsx";
 import colombia from '/assets/images/flags/colombia.png'
@@ -9,10 +8,10 @@ import brazil from '/assets/images/flags/brazil.png'
 import canada from '/assets/images/flags/canada.png'
 import List from "@ui/list/index.tsx";
 import Paginate from "@ui/paginate/index.tsx";
+import MainLayout from "@/layouts/mainLayout.tsx";
 
 const Contact = () => {
   const { settings } = useSettings();
-  const totalItems = 5;
 
   const images = [
     <Tooltip key={ 1 } content='Colombia'>
@@ -32,41 +31,55 @@ const Contact = () => {
     </Tooltip>
   ];
   return (
-   <div className='flex justify-center flex-col items-center my-10'>
-     <Metas
-      title={ `${ settings?.site.name } | Contacto` }
-      description='Contactanos, y dejános tus datos, te contactaremos lo más rápido posible.'
-      type='website'/>
-     <section className='container mx-auto'>
-       <h1>Asesorate, deja tus datos y te contactaremos los más rápido posible</h1>
-       <List
-        items={ images }
-        renderItem={ ( item ) => item }
-        keyExtractor={ ( item ) => item }
-        className='py-10'
-        cols='grid-cols-3 gap-10'
-        colItem='col-span-1'
-        propsItem={ {
-          className: 'flex justify-center items-center shadow-lg p-4 rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer',
-        } }
-       />
+   <MainLayout
+    title={ `${ settings?.site.name } | Contacto` }
+    description='Contactanos, y dejános tus datos, te contactaremos lo más rápido posible.'
+    type='website'
+   >
+     <div className=' flex justify-center flex-col items-center my-10'>
+       < section
+        className='container mx-auto'>
+         < h1> Asesorate, deja
+           tus
+           datos
+           y
+           te
+           contactaremos
+           los
+           más
+           rápido
+           posible < /h1>
+         <List
+          items={ images }
+          renderItem={ ( item ) => item }
+          keyExtractor={ ( item ) => item }
+          className='py-10'
+          cols='grid-cols-3 gap-10'
+          colItem='col-span-1'
+          propsItem={ {
+            className: 'flex justify-center items-center shadow-lg p-4 rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer',
+          } }
+         />
 
-       <Paginate
-        visiblePages={ 20 }
-        totalPages={ 200 }
-        itemsPerPage={ 3 }
-        query='test'
-        colorActive='black'
-        variantActive='flat'
-        color='primary'
-        variant='flat'
-        space={ 1 }
-        className='shadow-md'
-       />
-       <Paginate visiblePages={ 10 } query='dstsd'/>
-     </section>
-   </div>
+         <Paginate
+          visiblePages={ 20 }
+          totalPages={ 200 }
+          itemsPerPage={ 3 }
+          query='test'
+          colorActive='black'
+          variantActive='flat'
+          color='primary'
+          variant='flat'
+          space={ 1 }
+          className='shadow-md'
+         />
+         <Paginate visiblePages={ 10 } query='dstsd'/>
+       </section>
+     </div>
+   </MainLayout>
   );
 };
 
-export { Contact };
+export {
+  Contact
+};

@@ -10,7 +10,7 @@ import { ParamsUrlProvider } from '@/modules/search/context/ParamsUrl.jsx'
 import { FormatMoneyProvider } from '@/context/formatMoney.jsx'
 import ErrorBoundary from "@/modules/error/components/errorBoundary.tsx";
 import { SettingsProvider } from "@/context/settings.jsx";
-import { GlobalMetas } from "@/components/metas/global.jsx";
+import { GlobalMetas } from "@/layouts/metas/global.tsx";
 import { App } from './App.jsx'
 
 createRoot( document.getElementById( 'root' ) ).render( <StrictMode>

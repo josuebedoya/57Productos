@@ -1,5 +1,5 @@
 import {useSettings} from "@/context/settings.jsx";
-import {Metas} from "@/components/metas/metas.jsx";
+import {Metas} from "@/layouts/metas/metas.tsx";
 
 const TermsAndConditions = () => {
   const {settings} = useSettings();

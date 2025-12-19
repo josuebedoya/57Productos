@@ -5,7 +5,7 @@ import { TextMain } from '@/pages/home/templates/text-main.jsx';
 import { Opinions } from '@/pages/home/templates/opinions.jsx';
 import { CategoriesList } from '@/pages/home/templates/categoriesList.jsx';
 import { useEffect } from "react";
-import { Metas } from "@/components/metas/metas.jsx";
+import { Metas } from "@/layouts/metas/metas.tsx";
 import { useSettings } from "@/context/settings.jsx";
 
 const Home = () => {
