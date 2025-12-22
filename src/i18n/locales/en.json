@@ -8,6 +8,15 @@
     "buttons": {
       "send": "Send",
       "cancel": "Cancel"
+    },
+    "input": {
+      "label": {
+        "name": "Name",
+        "username": "Username",
+        "password": "Password",
+        "emailText": "Email",
+        "email": "youremail@gmail.com"
+      }
     }
   },
   "copyright": {
