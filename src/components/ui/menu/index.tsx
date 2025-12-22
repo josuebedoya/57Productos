@@ -1,38 +1,26 @@
 import React from 'react';
 import type {MenuProps} from "@ui/menu/types.d.ts";
-import ItemMenu from "@ui/menu/components/itemMenu.tsx";
-import clsx from "clsx";
+import RepeaterMenu from "@ui/menu/components/repeaterMenu.tsx";
 
 const MenuNav: React.FC<MenuProps> = (
   {
-    items,
-    onSelect,
-    className,
-    classNameItemActive,
-    classNameItem,
     orientation = 'horizontal',
+    animateInDropdown = 'animate-fade-right-in',
+    ...props
   }
 ) => {
   return (
     <div className='menu-wrapper'>
       <nav className='navbar'>
-        <ul className={clsx('menu-list flex', className, {'flex-col': orientation === 'vertical'})}>
-          {
-            items?.map((item, i: number) => (
-              <ItemMenu
-                key={i}
-                {...item}
-                onClick={onSelect as any}
-                aria-label={`Item Menu ${i}`}
-                className={classNameItem}
-                classNameActive={classNameItemActive}
-              />
-            ))
-          }
-        </ul>
+        <RepeaterMenu
+          {...props}
+          orientation={orientation}
+          level={0}
+          animateInDropdown={animateInDropdown}
+        />
       </nav>
     </div>
   );
-};
+}
 
 export default MenuNav;

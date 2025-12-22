@@ -14,21 +14,20 @@ const ItemMenu: React.FC<ItemMenuProps> = (
     classNameActive,
     ...props
   }) => {
-  const isActive: boolean = getActiveItem(link);
+  const isActive: boolean = getActiveItem(link || '');
 
   return (
-    <li {...props} className='menu-item' data-active={isActive}>
-      <Link
-        to={link}
-        className={clsx('menu-link flex items-center justify-between', className,
-          {[classNameActive as string]: isActive, active: isActive})}
-        data-selected={isActive}
-        target={props.target || '_self'}
-      >
-        {icon && <Icon name={icon} className='menu-icon mr-2'/>}
-        <span className='menu-labe font-[inherit]'>{label}</span>
-      </Link>
-    </li>
+    <Link
+      to={link}
+      {...props}
+      className={clsx('menu-link flex items-center justify-between', className,
+        {[classNameActive as string]: isActive, active: isActive})}
+      data-active={isActive}
+      target={props.target || '_self'}
+    >
+      {icon && <Icon name={icon} className='menu-icon mr-2'/>}
+      <span className='menu-labe font-[inherit]'>{label}</span>
+    </Link>
   );
 };
 
