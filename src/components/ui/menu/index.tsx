@@ -9,14 +9,18 @@ const MenuNav: React.FC<MenuProps> = (
     ...props
   }
 ) => {
+
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 992;
+
   return (
     <div className='menu-wrapper'>
-      <nav className='navbar'>
+      <nav className='navbar' data-collapse={isMobile}>
         <RepeaterMenu
           {...props}
           orientation={orientation}
           level={0}
           animateInDropdown={animateInDropdown}
+          isMobile={isMobile}
         />
       </nav>
     </div>

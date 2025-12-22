@@ -26,8 +26,6 @@ const Collapsible: React.FC<CollapsibleProps> = (
     ));
   };
 
-  console.log(items)
-
   return (
     <div id='collapsible'>
       <div className={clsx('wrapper mb-2', className)}>

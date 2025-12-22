@@ -1,4 +1,5 @@
 import type {LiHTMLAttributes} from "react";
+import type {ModalProps} from "@ui/modal/types.d.ts";
 
 type ItemMenuProps = LiHTMLAttributes<HTMLAnchorElement> & {
   label?: string;
@@ -11,6 +12,25 @@ type ItemMenuProps = LiHTMLAttributes<HTMLAnchorElement> & {
 
 export type RepeaterMenuProps = MenuProps & {
   level?: number;
+  isMobile?: boolean;
+  iconMenuOpen?: string;
+  modalProps?: ModalProps;
+}
+
+export type MapMenuProps = {
+  items: ItemMenuProps[];
+  onSelect?: ((item?: ItemMenuProps) => void) | undefined;
+  classNameItem?: string | undefined;
+  classNameItemActive?: string | undefined;
+  isMobile?: boolean;
+  level?: number;
+  animateInDropdown?: string;
+}
+
+export type MenuMobileProps = {
+  items: ItemMenuProps[];
+  iconMenuOpen?: string;
+  modalProps?: ModalProps;
 }
 
 export interface MenuProps {

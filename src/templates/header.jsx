@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import logoBlack from '/logo-black.png';
 import logoWhite from '/logo-white.png';
 import { Search } from "@/modules/search/components/search.jsx";
@@ -7,6 +7,7 @@ import { Menu } from '@ui/menu/menu.jsx';
 import { Path_page } from '@/routes.ts';
 import { Link } from "react-router-dom";
 import Icon from "@ui/icons/index.js";
+import MenuNav from "@ui/menu/index.tsx";
 
 const menuItems = [
   { name: 'Inicio', url: Path_page?.HOME },
@@ -119,6 +120,22 @@ const Header = () => {
         className={ `${ showIcons ? 'mn:-translate-y-0 mn:delay-0 mn:h-5' : 'mn:translate-y-14 mn:delay-300 mn:h-8' } mn:absolute  duration-500 sm:hidden mx-auto w-full flex justify-center items-center bg-white` }
         onClick={ handleShowIconsMobile }> <Icon name='IoIosArrowDown'/></span>
      </div>
+     <MenuNav
+      items={ menuItems.map( m => ( {
+        label: m.name,
+        link: m.url,
+        icon: 'FaHome',
+        subItems: menuItems.map( m => ( {
+          label: m.name,
+          link: m.url,
+          icon: 'FaHome',
+          subItems: menuItems.map( m => ( { label: m.name, link: m.url, icon: 'FaHome' } ) )
+        } ) )
+      } ) ) }
+      className='bg-red-300'
+      classNameItem='font-semibold text-Primary hover:text-Secondary hover:bg-gray-100'
+      classNameItemActive='font-bold  text-Secondary border-b-2 border-Secondary'
+     />
    </header>
   );
 };

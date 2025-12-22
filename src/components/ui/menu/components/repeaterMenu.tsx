@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import clsx from "clsx";
-import ItemMenu from "@ui/menu/components/itemMenu.tsx";
 import type {RepeaterMenuProps} from "@ui/menu/types.d.ts";
+import Icon from "@ui/icons/index.tsx";
+import Modal from "@ui/modal/index.tsx";
+import MapMenu from "@ui/menu/components/mapMenu.tsx";
 
 const RepeaterMenu: React.FC<RepeaterMenuProps> = (
   {
@@ -13,72 +15,62 @@ const RepeaterMenu: React.FC<RepeaterMenuProps> = (
     orientation = "horizontal",
     level = 0,
     animateInDropdown = 'animate-fade-right-in',
+    isMobile = false,
+    iconMenuOpen = 'FaBars',
+    modalProps,
   }) => {
-  const [openMap, setOpenMap] = useState<Record<string | number, boolean>>({});
+  const [isOpen, setIsOpen] = useState(false);
 
-  const openItem = (key: string | number): void =>
-    setOpenMap((prev) => ({...prev, [key]: true}));
+  const handlerClick = () => {
+    setIsOpen(prev => !prev);
+  }
 
-  const closeItem = (key: string | number): void =>
-    setOpenMap((prev) => ({...prev, [key]: false}));
+  const mapMenuProps = {
+    items,
+    classNameItem,
+    classNameItemActive,
+    isMobile,
+    onSelect,
+    animateInDropdown,
+    level,
+  };
 
   return (
     <ul
       className={clsx(
-        "menu-list flex",
+        "flex",
         {
-          "flex-row relative": level === 0 && orientation === "horizontal",
-          "flex-col": level > 0 || orientation === "vertical",
+          "menu-list": !isMobile,
+          "menu-list-mobile": isMobile,
+          "flex-row relative": level === 0 && orientation === "horizontal" && !isMobile,
+          "flex-col": level > 0 || orientation === "vertical" || isMobile,
         },
         className,
       )}
     >
-      {items?.map(({subItems, ...item}, index: number) => {
-        const key = `item-${index}`;
-        const isOpen = openMap[key];
-        const hasChildren = Boolean(subItems?.length);
-
-        return (
-          <li
-            key={key}
-            className="relative"
-            onMouseEnter={() => hasChildren && openItem(key)}
-            onMouseLeave={() => hasChildren && closeItem(key)}
-            data-item={`item-${index}`}
-            aria-expanded={isOpen}
-            data-has-children={hasChildren}
+      {
+        isMobile && (
+          <div className="open" onClick={handlerClick}>
+            <Icon name={iconMenuOpen}/>
+          </div>
+        )
+      }
+      {
+        isMobile && isOpen ? (
+          <Modal
+            {...modalProps}
+            type='drawer'
+            size={modalProps?.size ?? 'lg'}
+            position={modalProps?.position ?? 'left'}
+            withHeader={true}
+            withFooter={false}
+            isOpen={isOpen}
+            onClose={handlerClick}
           >
-            <ItemMenu
-              {...item}
-              className={classNameItem}
-              classNameActive={classNameItemActive}
-              onClick={(e) => {
-                if (hasChildren) {
-                  e.preventDefault();
-                  openItem(key);
-                }
-                onSelect?.(item);
-              }}
-            />
-
-            {hasChildren && isOpen && (
-              <RepeaterMenu
-                items={subItems || []}
-                onSelect={onSelect}
-                className={clsx(
-                  "absolute z-50 bg-white shadow-lg rounded-md p-3",
-                  level === 0 ? "top-full left-0" : "top-0 left-full",
-                  animateInDropdown
-                )}
-                classNameItem={classNameItem}
-                classNameItemActive={classNameItemActive}
-                orientation="vertical"
-                level={level + 1}
-              />
-            )}
-          </li>
-        );
-      })}
+            <MapMenu {...mapMenuProps}/>
+          </Modal>
+        ) : !isMobile && (<MapMenu {...mapMenuProps}/>)
+      }
     </ul>
   );
 };
