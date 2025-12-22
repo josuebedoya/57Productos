@@ -25,13 +25,13 @@ const Drawer: React.FC<ComponentModalProps> = (
   const bodyProps = {
     ...defaultPropsModal,
     children,
-    classNameContainer: configsClass + ' ' + classNameContainer + ' ' + orientation === 'side' ? 'h-full' : 'w-full',
+    classNameContainer: `${configsClass} ${classNameContainer} ${orientation === 'side' ? 'h-full' : 'w-full'}`,
     ...props
   };
 
   return (
     <div className={clsx('drawer w-full h-full flex', gVar(`modal.drawer.position.${position}`))}>
-      <BodyModal{...bodyProps}/>
+      <BodyModal {...bodyProps}/>
     </div>
   );
 };
