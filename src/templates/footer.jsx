@@ -2,13 +2,16 @@ import { useState } from 'react';
 import TextArea from "@ui/input/fields/textarea/index.tsx";
 import { Path_page } from '@/routes.ts';
 import Button from '@ui/button/index.tsx';
-import { Menu } from '@ui/menu/menu.jsx';
 import Form from '@ui/form/index.tsx';
 import { CSSTransition } from 'react-transition-group';
 import Copyright from "@ui/copyright/index.tsx";
 import Icon from "@ui/icons/index.js";
+import MenuNav from "@ui/menu/index.tsx";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   const [ comment, setComment ] = useState( '' );
   const [ showTextW, setShowTextW ] = useState( false );
   const { addMessage } = {
@@ -21,7 +24,8 @@ const Footer = () => {
   const [ name, setName ] = useState( '' );
 
   const handleComments = ( e ) => {
-    setComment( e.value );
+    console.log( e.target.value );
+    setComment( e.target.value );
     setSendEmpty( false );
   };
 
@@ -42,20 +46,20 @@ const Footer = () => {
 
   const itemsMenus = [
     [
-      { url: Path_page.STORE, name: 'Tienda' },
-      { url: Path_page.FEATURED, name: 'Destacados' },
-      { url: Path_page.OFFER, name: 'Ofertas' },
-      { url: Path_page.NEW, name: 'Nuevos' }
+      { link: Path_page.STORE, label: 'Tienda' },
+      { link: Path_page.FEATURED, label: 'Destacados' },
+      { link: Path_page.OFFER, label: 'Ofertas' },
+      { link: Path_page.NEW, label: 'Nuevos' }
     ],
-    [ { url: Path_page.SERVICES, name: 'Servicios' },
-      { url: Path_page.US, name: 'Nosotros' },
-      { url: Path_page.CONTACT, name: 'Contacto' },
-      { url: Path_page.PROFILE, name: 'Tu Perfil' }
+    [ { link: Path_page.SERVICES, label: 'Servicios' },
+      { link: Path_page.US, label: 'Nosotros' },
+      { link: Path_page.CONTACT, label: 'Contacto' },
+      { link: Path_page.PROFILE, label: 'Tu Perfil' }
     ],
     [
-      { url: Path_page.TERMS_AND_CONDITIONS, name: 'Términos y Condiciones', target: '_blank' },
-      { url: Path_page.PRIVACY_POLICY, name: 'Politica de Privacidad', target: '_blank' },
-      { url: Path_page.FAQ, name: 'Preguntas Frecuentes', target: '_blank' }
+      { link: Path_page.TERMS_AND_CONDITIONS, label: 'Términos y Condiciones', target: '_blank' },
+      { link: Path_page.PRIVACY_POLICY, label: 'Politica de Privacidad', target: '_blank' },
+      { link: Path_page.FAQ, label: 'Preguntas Frecuentes', target: '_blank' }
     ]
   ];
 
@@ -72,7 +76,7 @@ const Footer = () => {
   const inputs = [
     {
       value: name,
-      placeholder: 'Nombre...',
+      placeholder: t( 'forms.input.label.name' ),
       type: 'text',
       name: 'name',
       onChange: onChangeValueName,
@@ -80,7 +84,7 @@ const Footer = () => {
     },
     {
       value: email,
-      placeholder: 'micorreo@gmail.com',
+      placeholder: t( 'forms.input.label.email' ),
       type: 'email',
       name: 'email',
       onChange: onChangeValueEmail,
@@ -98,13 +102,16 @@ const Footer = () => {
              sendMessage( comment, name );
              setShowForm( false )
            } }
-                 inputs={ inputs } nameForm='FormComment' termsAndConditions/>
+                 fields={ inputs }
+                 withButton
+                 nameForm='FormComment'
+                 termsAndConditions
+           />
            <i className='relative w-2' onClick={ () => setShowForm( false ) }>
              <Icon name='IoMdClose'
                    className='text-white text-lg w-7 h-7 absolute -left-5 top-2 cursor-pointer hover:animate-shaking'/>
            </i>
          </div>
-
        </div>
      </CSSTransition>
      <div className='comments container mx-auto px-3 pb-5 tl:pb-10'>
@@ -177,14 +184,26 @@ const Footer = () => {
      <div className='menus grid grid-cols-1 xn:grid-cols-3 container mx-auto px-3 py-6 sm:py-10'>
        <div
         className='menu-store block sm:flex sm:justify-center xn:border-r xn:border-r-white sm:border-r-0 mr-0  xn:mr-10 sm:mr-0'>
-         <Menu items={ itemsMenus[ 0 ] } classLink={ artMenus }/>
+         <MenuNav
+          items={ itemsMenus[ 0 ] }
+          orientation='vertical'
+          classNameItem={ artMenus }
+         />
        </div>
        <div
         className='menu-info block sm:flex sm:justify-center  border-y xn:border-y-0 border-y-white xn:border-r xn:border-r-white sm:border-x sm:border-x-white py-6 my-6 xn:py-0 xn:my-0 mx-0 xn:mr-10 sm:mr-0'>
-         <Menu items={ itemsMenus[ 1 ] } classLink={ artMenus }/>
+         <MenuNav
+          items={ itemsMenus[ 1 ] }
+          orientation='vertical'
+          classNameItem={ artMenus }
+         />
        </div>
        <div className='menu-policy block sm:flex sm:justify-center'>
-         <Menu items={ itemsMenus[ 2 ] } classLink={ artMenus }/>
+         <MenuNav
+          items={ itemsMenus[ 2 ] }
+          orientation='vertical'
+          classNameItem={ artMenus }
+         />
        </div>
      </div>
      <Copyright
