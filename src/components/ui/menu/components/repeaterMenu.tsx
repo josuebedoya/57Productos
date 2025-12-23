@@ -18,6 +18,7 @@ const RepeaterMenu: React.FC<RepeaterMenuProps> = (
     isMobile = false,
     iconMenuOpen = 'FaBars',
     modalProps,
+    classNameIconOPen
   }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -51,7 +52,7 @@ const RepeaterMenu: React.FC<RepeaterMenuProps> = (
       {
         isMobile && (
           <div className="open" onClick={handlerClick}>
-            <Icon name={iconMenuOpen}/>
+            <Icon name={iconMenuOpen} className={classNameIconOPen}/>
           </div>
         )
       }

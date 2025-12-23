@@ -13,8 +13,7 @@ type ItemMenuProps = LiHTMLAttributes<HTMLAnchorElement> & {
 export type RepeaterMenuProps = MenuProps & {
   level?: number;
   isMobile?: boolean;
-  iconMenuOpen?: string;
-  modalProps?: ModalProps;
+
 }
 
 export type MapMenuProps = {
@@ -29,8 +28,8 @@ export type MapMenuProps = {
 
 export type MenuMobileProps = {
   items: ItemMenuProps[];
-  iconMenuOpen?: string;
-  modalProps?: ModalProps;
+  iconMenuOpen?: string | undefined;
+  modalProps?: ModalProps | undefined;
 }
 
 export interface MenuProps {
@@ -41,4 +40,7 @@ export interface MenuProps {
   classNameItemActive?: string | undefined;
   className?: string | undefined;
   animateInDropdown?: string;
+  iconMenuOpen?: string | undefined;
+  modalProps?: ModalProps | undefined;
+  classNameIconOPen?: string | undefined;
 }

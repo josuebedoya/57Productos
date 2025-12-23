@@ -3,22 +3,22 @@ import logoBlack from '/logo-black.png';
 import logoWhite from '/logo-white.png';
 import { Search } from "@/modules/search/components/search.jsx";
 import { Cart } from '@/modules/icommerce/components/cart.jsx';
-import { Menu } from '@ui/menu/menu.jsx';
 import { Path_page } from '@/routes.ts';
 import { Link } from "react-router-dom";
 import Icon from "@ui/icons/index.js";
 import MenuNav from "@ui/menu/index.tsx";
 
 const menuItems = [
-  { name: 'Inicio', url: Path_page?.HOME },
-  { name: 'Nosotros', url: Path_page?.US },
+  { label: 'Inicio', link: Path_page?.HOME },
+  { label: 'Nosotros', link: Path_page?.US },
   {
-    name: 'Servicios',
-    url: Path_page?.SERVICES,
-    items: [ { name: 'Servicio 1', url: Path_page.SERVICES + 'Servicio-1' } ]
+    label: 'Servicios', link: Path_page?.SERVICES,
+    items: [
+      { label: 'Servicio 1', link: Path_page.SERVICES + 'Servicio-1' }
+    ]
   },
-  { name: 'Tienda', url: Path_page?.STORE },
-  { name: 'Contacto', url: Path_page?.CONTACT },
+  { label: 'Tienda', link: Path_page?.STORE },
+  { label: 'Contacto', link: Path_page?.CONTACT },
 ];
 
 const classLink = 'text-Primary hover:shadow-Secondary hover:text-Secondary family-oswald text-lg tracking-wide px-4';
@@ -94,8 +94,14 @@ const Header = () => {
          {/* List Menu */ }
          <div
           className='list-menu-section px-4 lg:pr-0 col-span-2 sm:col-span-1 lg:col-span-7 flex items-center justify-end order-2 sm:order-3 lg:order-2'>
-           <Menu items={ menuItems } classLink={ classLink } horizontal withMenuBars openMenu={ handldeOpenModal }
-                 typeMenuMobile={ 1 }/>
+           <MenuNav
+            items={ menuItems }
+            classNameItem={ classLink }
+            orientation='horizontal'
+            classNameItemActive='text-Secondary font-bold'
+            iconMenuOpen='TiThMenuOutline'
+            classNameIconOPen='text-2xl'
+           />
          </div>
 
          {/* Search button, cart, and profile */ }
@@ -120,22 +126,6 @@ const Header = () => {
         className={ `${ showIcons ? 'mn:-translate-y-0 mn:delay-0 mn:h-5' : 'mn:translate-y-14 mn:delay-300 mn:h-8' } mn:absolute  duration-500 sm:hidden mx-auto w-full flex justify-center items-center bg-white` }
         onClick={ handleShowIconsMobile }> <Icon name='IoIosArrowDown'/></span>
      </div>
-     <MenuNav
-      items={ menuItems.map( m => ( {
-        label: m.name,
-        link: m.url,
-        icon: 'FaHome',
-        subItems: menuItems.map( m => ( {
-          label: m.name,
-          link: m.url,
-          icon: 'FaHome',
-          subItems: menuItems.map( m => ( { label: m.name, link: m.url, icon: 'FaHome' } ) )
-        } ) )
-      } ) ) }
-      className='bg-red-300'
-      classNameItem='font-semibold text-Primary hover:text-Secondary hover:bg-gray-100'
-      classNameItemActive='font-bold  text-Secondary border-b-2 border-Secondary'
-     />
    </header>
   );
 };
