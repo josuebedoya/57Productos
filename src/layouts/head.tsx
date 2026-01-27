@@ -4,20 +4,18 @@ const Head = (
   {
     title,
     description,
-    favicon = "favicon.png",
+    favicon,
     children
   }: MetaProps) => {
   return (
-    <>
-      <head>
-        <meta charSet='UTF-8'/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>{title}</title>
-        <meta name="description" content={description}/>
-        <link rel="icon" href={favicon}/>
-        {children}
-      </head>
-    </>
+    <head>
+      <meta charSet='UTF-8'/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>{title}</title>
+      <meta name="description" content={description}/>
+      <link rel="icon" href={favicon ?? '/img/favicon.png'}/>
+      {children}
+    </head>
   );
 }
 
