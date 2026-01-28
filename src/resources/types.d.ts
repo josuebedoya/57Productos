@@ -1,15 +1,15 @@
-import {ReactNode} from "react";
-
-// Metas
-export interface MetaProps {
-  title: string;
-  description?: string;
-  favicon?: string;
-  children?: ReactNode;
-}
+import { ReactNode } from "react";
 
 // Root Layout
 export interface RootLayoutProps {
-  headProps: MetaProps;
   children: ReactNode;
+}
+
+// SEO
+export interface SEOProps {
+  title: string;
+  description?: string;
+  image?: string;
+  pathname?: string;
+  keywords?: string[];
 }

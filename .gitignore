@@ -39,9 +39,9 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # env files (can opt-in for committing if needed)
-.env*
 .env
-.env.*
+.env.local
+.env.production
 
 # vercel
 .vercel
@@ -62,4 +62,4 @@ next-env.d.ts
 *.sw?
 php.xml
 .idea/
-*.pem
+*.hintrc
