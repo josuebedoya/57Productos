@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Header = () => {
+const Header = ({lang}: { lang: string }) => {
   return (
     <header className='py-10 container mx-auto text-center flex'>
       <div className='flex-auto relative'>

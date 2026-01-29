@@ -1,0 +1,46 @@
+{
+  "home": {
+    "label": "Inicio",
+    "link": "/"
+  },
+  "about": {
+    "label": "Nosotros",
+    "link": "/#",
+    "items": {
+      "history": {
+        "label": "Historia",
+        "link": "/nosotros/historia"
+      },
+      "team": {
+        "label": "Equipo",
+        "link": "/nosotros/equipo"
+      }
+    }
+  },
+  "products": {
+    "label": "Productos",
+    "link": "/productos"
+  },
+  "to_you": {
+    "label": "Para ti",
+    "link": "#",
+    "items": {
+      "farmers": {
+        "label": "¿Eres Agricultor?",
+        "link": "/para-ti/agricultores"
+      },
+      "buyers": {
+        "label": "¿Eres Comprador?",
+        "link": "/para-ti/compradores"
+      }
+    }
+  },
+  "blog": {
+    "label": "Blog",
+    "link": "/blog"
+  },
+  "contact": {
+    "label": "Contacto",
+    "link": "/contacto"
+  }
+}
