@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import type {SEOProps} from './types';
 import {config} from './config';
 import {ENV} from './ENV';
-import {defaultLanguage} from "@/i18n";
+import {routing} from "@/i18n/routing";
 
 const {siteName, siteDescription} = config;
 const siteUrl = ENV('NEXT_PUBLIC_SITE_URL');
@@ -14,13 +14,13 @@ export function SEO(
     image,
     pathname = '/',
     keywords = [],
-    lang
+    locale
   }: SEOProps): Metadata {
   const ttle = title || siteName;
   const dsc = description || siteDescription;
   const img = image || '/img/favicon.png';
   const url = `${siteUrl}${pathname}`;
-  const lng = lang || defaultLanguage;
+  const lng = locale || routing.defaultLocale;
 
   return {
     title: `${ttle} | ${siteName}`,

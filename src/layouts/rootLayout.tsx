@@ -1,18 +1,19 @@
 import Header from "@/layouts/header";
 import Footer from "@/layouts/footer";
 import {RootLayoutProps} from "@/resources/types";
-import {languages} from "@/i18n";
+import {routing} from "@/i18n/routing";
+import {NextIntlClientProvider} from 'next-intl';
 
 export async function generateStaticParams() {
-  return languages.map((lang) => ({lang}));
+  return routing.locales.map((locale) => ({locale}));
 }
 
-export default function RootLayout({children, lang}: RootLayoutProps) {
+export default async function RootLayout({children, locale}: RootLayoutProps) {
   return (
-    <>
-      <Header lang={lang}/>
+    <NextIntlClientProvider>
+      <Header locale={locale}/>
       <main className="flex-1f">{children}</main>
-      <Footer lang={lang}/>
-    </>
+      <Footer locale={locale}/>
+    </NextIntlClientProvider>
   )
 }

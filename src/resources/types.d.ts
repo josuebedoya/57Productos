@@ -1,5 +1,7 @@
 import {ReactNode} from "react";
-import {Lang} from "@/i18n";
+import {routing} from './routing';
+
+export type Locale = (typeof routing.locales)[number]
 
 type Children = {
   children: ReactNode;
@@ -7,7 +9,7 @@ type Children = {
 
 // Tye params
 export interface Params {
-  lang: Lang;
+  locale: Locale;
 }
 
 export interface ParamsPromise {
@@ -15,21 +17,29 @@ export interface ParamsPromise {
 }
 
 // SEO
-export interface SEOProps {
+export interface SEOProps extends Params {
   title: string;
   description?: string;
   image?: string;
   pathname?: string;
   keywords?: string[];
-  lang?: Lang;
 }
 
 // Root Layout
-export interface RootLayoutProps extends Children {
-  lang: Lang;
+export interface RootLayoutProps extends Children, Params {
 }
 
 // App layout
 export interface AppLayoutProps extends Children {
   params: Params;
+}
+
+// Menu
+export interface ItemMenu {
+  label: string;
+  link: string;
+}
+
+export interface MenuProps {
+  items: ItemMenu[];
 }

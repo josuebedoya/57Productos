@@ -1,6 +1,7 @@
 import Image from "next/image";
+import {Locale} from "@/resources/types";
 
-const Header = ({lang}: { lang: string }) => {
+const Header = ({locale}: Locale) => {
   return (
     <header className='py-10 container mx-auto text-center flex'>
       <div className='flex-auto relative'>
