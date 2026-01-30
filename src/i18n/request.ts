@@ -9,10 +9,8 @@ export default getRequestConfig(async ({requestLocale}) => {
     ? requested
     : routing.defaultLocale;
 
-  const lib = 'menu';
-
   return {
     locale,
-    messages: (await import(`../i18n/${lib}/${locale}`)).default
+    messages: (await import(`../i18n/${locale}`)).default
   };
 });
