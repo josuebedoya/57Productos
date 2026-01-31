@@ -1,28 +1,15 @@
 'use client';
 
-import {usePathname} from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
-import type {ItemMenuProps} from "@/resources/types";
-import {clsx} from "clsx";
-import {useEffect, useState} from "react";
+import type { ItemMenuProps } from "@/resources/types";
+import { clsx } from "clsx";
+import { useState } from "react";
 
-const ItemMenu = ({link, label, ...ui}: ItemMenuProps) => {
+const ItemMenu = ({ link, label, ...ui }: ItemMenuProps) => {
   const pathname = usePathname();
   const isActive = pathname === link || link === '/';
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    if (isOpen) setShow(isOpen);
-  }, [isOpen]);
-
-  const handleAnimationEnd = () => {
-    if (!isOpen && show) {
-      setShow(false);
-    }
-  };
+  const [ isOpen, setIsOpen ] = useState(false);
 
   return (
     <li
@@ -32,7 +19,6 @@ const ItemMenu = ({link, label, ...ui}: ItemMenuProps) => {
         isActive && ui?.classNameItemActive,
         ui?.className
       )}
-      data-active={isActive}
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
@@ -46,17 +32,17 @@ const ItemMenu = ({link, label, ...ui}: ItemMenuProps) => {
       >
         {label}
       </Link>
-      {show && (
-        <div
-          className={clsx(
-            "absolute transition-all duration-300 ease-out z-10",
-            isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
-          )}
-          onAnimationEnd={handleAnimationEnd}
-        >
-          {ui?.children}
-        </div>
-      )}
+
+      <div
+        className={clsx(
+          "absolute z-10 transition-all duration-500 ease-out pt-3",
+          isOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-4 pointer-events-none"
+        )}
+      >
+        {ui?.children}
+      </div>
     </li>
   );
 };
