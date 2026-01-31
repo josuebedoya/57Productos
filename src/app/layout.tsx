@@ -2,10 +2,11 @@ import '@/styles/vendor/tailwind.css';
 import '@/styles/_main.scss';
 import {Children} from "@/resources/types";
 import {routing} from "@/i18n/routing";
+import {sofiaSans} from "@/resources/font";
 
 const Root = ({children}: Children) => {
   return (
-    <html lang={routing.defaultLocale}>
+    <html lang={routing.defaultLocale} className={sofiaSans.className}>
     <body className='flex flex-col min-h-screen'>{children}</body>
     </html>
   )

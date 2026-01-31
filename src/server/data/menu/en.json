@@ -1,46 +1,46 @@
-{
-  "home": {
+[
+  {
     "label": "Home",
     "link": "/"
   },
-  "about": {
+  {
     "label": "About Us",
     "link": "#",
-    "items": {
-      "history": {
+    "items": [
+      {
         "label": "History",
         "link": "/about/history"
       },
-      "team": {
+      {
         "label": "Team",
         "link": "/about/team"
       }
-    }
+    ]
   },
-  "products": {
+  {
     "label": "Products",
     "link": "/products"
   },
-  "to_you": {
+  {
     "label": "For You",
     "link": "#",
-    "items": {
-      "farmers": {
+    "items": [
+      {
         "label": "Are you a Farmer?",
         "link": "/for-you/farmers"
       },
-      "buyers": {
+      {
         "label": "Are you a Buyer?",
         "link": "/for-you/buyers"
       }
-    }
+    ]
   },
-  "blog": {
+  {
     "label": "Blog",
     "link": "/blog"
   },
-  "contact": {
+  {
     "label": "Contact",
     "link": "/contact"
   }
-}
+]
