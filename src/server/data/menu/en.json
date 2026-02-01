@@ -1,7 +1,8 @@
 [
   {
     "label": "Home",
-    "link": "/"
+    "link": "/",
+    "icon": "home"
   },
   {
     "label": "About Us",

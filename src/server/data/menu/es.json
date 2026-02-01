@@ -1,7 +1,9 @@
 [
   {
     "label": "Inicio",
-    "link": "/"
+    "link": "/",
+    "icon": "home"
+  
   },
   {
     "label": "Nosotros",

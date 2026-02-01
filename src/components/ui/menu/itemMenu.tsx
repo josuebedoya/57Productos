@@ -31,7 +31,7 @@ const ItemMenu = ({ link, label, icon, ...ui }: ItemMenuProps) => {
           isActive && ui?.classNameLinkActive
         )}
       >
-        {icon && <Icon name={icon} className={ui?.classNameIcon} />}
+        {icon && <Icon name={icon} className={ui?.classNameIcon} size='20' />}
         {label}
       </Link>
 

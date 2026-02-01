@@ -8,16 +8,19 @@ const Menu = ({items, dir = 'vertical', ...ui}: MenuProps) => {
     classNameItem: ui?.classNameItem,
     classNameItemActive: ui?.classNameItemActive,
     classNameLink: ui?.classNameLink,
-    classNameLinkActive: ui?.classNameLinkActive
+    classNameLinkActive: ui?.classNameLinkActive,
+    classNameIcon: ui?.classNameIcon
+
   } as ItemClassNameMenu;
 
   return (
     <nav className={clsx('menu', ui?.className)}>
       <ul className={clsx('nav-list flex m-0', dir === 'horizontal' ? 'flex-row' : 'flex-col')}>
         {
-          items?.map(({link, label, items: subItems}: Item, index: number) => (
+          items?.map(({link, label, items: subItems, ...item}: Item, index: number) => (
             <ItemMenu
               {...itemProps}
+              {...item}
               key={index}
               link={link}
               label={label}

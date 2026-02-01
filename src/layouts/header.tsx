@@ -17,6 +17,7 @@ const Header = async ({locale}: Locale) => {
           dir='horizontal'
           classNameItem='first-letter:uppercase lowercase text-base xl:text-lg px-2 py-1'
           classNameItemActive='font-bold text-primary'
+          classNameIcon="mr-1.5 text-sm"
         />
       </div>
     </header>
