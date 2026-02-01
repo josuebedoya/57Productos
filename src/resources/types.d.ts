@@ -1,5 +1,7 @@
 import {LiHTMLAttributes, ReactNode} from "react";
 import {routing} from './routing';
+import type {IconName} from 'lucide-react/dynamic';
+import type {LucideProps} from "lucide-react";
 
 // locate type to languages
 export type Locale = (typeof routing.locales)[number]
@@ -47,18 +49,21 @@ export interface AppLayoutProps extends Children {
 }
 
 // Menu
-export interface ItemMenu {
+export interface ItemMenu extends Omit<IconProps, 'name'> {
   label: string;
   link: string;
   items?: ItemMenu[];
+  icon?: IconProps[ 'name' ];
 }
 
 //props item menu
 export interface ItemClassNameMenu extends ItemClassName {
   classNameLink?: string;
   classNameLinkActive?: string;
+  classNameIcon?: string;
 }
 
+//Item menu props
 export interface ItemMenuProps
   extends ItemMenu, ItemClassNameMenu, LiHTML {
 }
@@ -75,4 +80,9 @@ export interface LogoProps {
   locale?: Locale;
   width?: number;
   height?: number;
+}
+
+// Icon props
+export interface IconProps extends LucideProps {
+  name: IconName;
 }

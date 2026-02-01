@@ -2,7 +2,7 @@ import '@/styles/vendor/tailwind.css';
 import '@/styles/_main.scss';
 import {Children} from "@/resources/types";
 import {routing} from "@/i18n/routing";
-import {sofiaSans} from "@/resources/font";
+import {sofiaSans} from "@/resources/font.config";
 
 const Root = ({children}: Children) => {
   return (

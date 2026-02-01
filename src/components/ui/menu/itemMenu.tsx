@@ -5,8 +5,9 @@ import Link from "next/link";
 import type { ItemMenuProps } from "@/resources/types";
 import { clsx } from "clsx";
 import { useState } from "react";
+import Icon from "@/components/ui/icon";
 
-const ItemMenu = ({ link, label, ...ui }: ItemMenuProps) => {
+const ItemMenu = ({ link, label, icon, ...ui }: ItemMenuProps) => {
   const pathname = usePathname();
   const isActive = pathname === link || link === '/';
   const [ isOpen, setIsOpen ] = useState(false);
@@ -25,11 +26,12 @@ const ItemMenu = ({ link, label, ...ui }: ItemMenuProps) => {
       <Link
         href={link}
         className={clsx(
-          'nav-link px-3 py-2 text-inherit',
+          'nav-link px-3 py-2 text-inherit flex items-center',
           ui?.classNameLink,
           isActive && ui?.classNameLinkActive
         )}
       >
+        {icon && <Icon name={icon} className={ui?.classNameIcon} />}
         {label}
       </Link>
 
