@@ -12,7 +12,7 @@ const Theme = () => {
       dark:shadow-white transition-all duration-300 opacity-30 hover:opacity-100'
       onClick={() => setDark(!dark)}
     >
-      <Icon name='sun' className='text-white dark:text-primary'/>
+      <Icon name={dark ? 'sun' : 'moon'} className='text-white dark:text-primary'/>
     </div>
   );
 };
