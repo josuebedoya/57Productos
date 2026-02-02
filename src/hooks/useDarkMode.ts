@@ -1,7 +1,7 @@
-import {useEffect, useState} from "react";
+import {Dispatch, SetStateAction, useEffect, useState} from "react";
 
-function useDarkMode() {
-  const [dark, setDark] = useState(() => {
+function useDarkMode(): [boolean, Dispatch<SetStateAction<boolean>>] {
+  const [dark, setDark] = useState<boolean>(() => {
     const saved = localStorage?.getItem("theme");
     if (saved) {
       return saved === "dark";
