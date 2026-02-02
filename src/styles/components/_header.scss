@@ -17,3 +17,26 @@ header nav .nav-list .nav-item:is(.has-child)::after{
 header nav .nav-list .nav-item:is(.open)::after{
   transform: rotate(-90deg) translateX(50%);
 }
+
+header .controls .icon::before{
+  content: "";
+  width: 115%;
+  height: 115%;
+  background: #fff;
+  position: absolute;
+  left: -7.5%;
+  right: 0;
+  z-index: 0;
+  bottom: -115%;
+  transition: .3s ease-in-out;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+header .controls .icon:hover::before{
+  bottom: 0;
+}
+
+header .controls .icon:hover svg{
+  color: var(--primary-color);
+}
