@@ -5,16 +5,18 @@
     "icon": "home"
   },
   {
-    "label": "About Us",
+    "label": "About us",
     "link": "#",
     "items": [
       {
         "label": "History",
-        "link": "/about/history"
+        "link": "/about/history",
+        "icon": "book-open"
       },
       {
         "label": "Team",
-        "link": "/about/team"
+        "link": "/about/team",
+        "icon": "users"
       }
     ]
   },
@@ -23,7 +25,7 @@
     "link": "/products"
   },
   {
-    "label": "For You",
+    "label": "For you",
     "link": "#",
     "items": [
       {

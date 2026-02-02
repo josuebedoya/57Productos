@@ -1,0 +1,19 @@
+header nav .nav-list .nav-item:is(.has-child)::after{
+  content: '';
+  display: block;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 3px;
+  background-image: url("/img/shapes/arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: .2s ease-in-out;
+}
+
+header nav .nav-list .nav-item:is(.open)::after{
+  transform: rotate(-90deg) translateX(50%);
+}

@@ -2,6 +2,7 @@ import {Locale} from "@/resources/types";
 import Menu from "@ui/menu";
 import readMenu from "@/server/services/menu/readMenu";
 import Logo from "@/components/logo";
+import '@/styles/components/_header.scss';
 
 const Header = async ({locale}: Locale) => {
   const {data: menuItems} = await readMenu(locale);
@@ -15,7 +16,7 @@ const Header = async ({locale}: Locale) => {
         <Menu
           items={menuItems}
           dir='horizontal'
-          classNameItem='first-letter:uppercase lowercase text-base xl:text-lg px-2 py-1'
+          classNameItem='text-base xl:text-lg px-2 py-1'
           classNameItemActive='font-bold text-primary'
           classNameIcon="mr-1.5 text-sm"
         />

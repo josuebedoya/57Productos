@@ -30,10 +30,11 @@ const Menu = ({items, dir = 'vertical', ...ui}: MenuProps) => {
                   key={index}
                   items={subItems}
                   dir='vertical'
-                  className='bg-white pl-5 pr-10 py-8 rounded-xl z-20 shadow-xl
+                  className='bg-white pl-10 pr-10 py-4 rounded-xl z-20 shadow-xl
                   min-w-max max-w-8'
-                  classNameItem='list-disc ml-7 mb-4 last:mb-0'
+                  classNameItem='mb-1 last:mb-0'
                   classNameLink='!px-0'
+                  classNameIcon='mr-1.5'
                 />
               )}
             </ItemMenu>

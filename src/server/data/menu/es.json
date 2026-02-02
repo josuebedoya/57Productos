@@ -3,7 +3,6 @@
     "label": "Inicio",
     "link": "/",
     "icon": "home"
-  
   },
   {
     "label": "Nosotros",
@@ -12,20 +11,12 @@
       {
         "label": "Historia",
         "link": "/nosotros/historia",
-        "items": [
-          {
-            "label": "Misión",
-            "link": "/nosotros/historia#mision"
-          },
-          {
-            "label": "Visión",
-            "link": "/nosotros/historia#vision"
-          }
-        ]
+        "icon": "book-open"
       },
       {
         "label": "Equipo",
-        "link": "/nosotros/equipo"
+        "link": "/nosotros/equipo",
+        "icon": "users"
       }
     ]
   },
