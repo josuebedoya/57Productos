@@ -10,6 +10,9 @@ module.exports = {
     extend: {
       colors: {
         primary: "#110000"
+      },
+      zIndex: {
+        modal: '1050',
       }
     },
   },

@@ -1,44 +1,61 @@
-header nav .nav-list .nav-item:is(.has-child)> .nav-link::after{
-  content: '';
-  display: block;
-  width: 13px;
-  height: 13px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -5px;
-  background-image: url("/img/shapes/arrow-down.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  transition: .2s ease-in-out;
-}
+header{
+  background: linear-gradient(0deg, transparent 0, #0003);
+  border-bottom: 1px solid #ddd;
 
-header nav .nav-list .nav-item:is(.open)>.nav-link::after{
-  transform: rotate(-90deg) translateX(50%);
-}
+  nav{
+    .nav-list:is(.has-child){
+      & > .nav-link{
+        &::after{
+          content: '';
+          display: block;
+          width: 13px;
+          height: 13px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -5px;
+          background-image: url("/img/shapes/arrow-down.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          transition: .2s ease-in-out;
+        }
+      }
+    }
 
-header .controls .icon::before{
-  content: "";
-  width: 115%;
-  height: 115%;
-  background: #fff;
-  position: absolute;
-  left: -7.5%;
-  right: 0;
-  z-index: 0;
-  bottom: -115%;
-  transition: .3s ease-in-out;
-  border-radius: 8px;
-  pointer-events: none;
-}
+    .nav-list .nav-item{
+      &.open > .nav-link::after{
+        transform: rotate(-90deg) translateX(50%);
+      }
+    }
+  }
 
-header .controls .icon:hover::before{
-  bottom: 0;
-}
+  .controls{
+    .icon{
+      &::before{
+        content: "";
+        width: 115%;
+        height: 115%;
+        background: #fff;
+        position: absolute;
+        left: -7.5%;
+        right: 0;
+        z-index: 0;
+        bottom: -115%;
+        transition: .3s ease-in-out;
+        border-radius: 8px;
+        pointer-events: none;
+      }
 
-header .controls .icon:hover svg{
-  color: var(--primary-color);
+      &:hover::before{
+        bottom: 0;
+      }
+
+      &:hover svg{
+        color: var(--primary-color);
+      }
+    }
+  }
 }
 
 @media (max-width: 600px){

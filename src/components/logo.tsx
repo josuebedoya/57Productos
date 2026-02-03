@@ -13,7 +13,7 @@ const Logo = ({locale, ...ui}: LogoProps) => {
         loading='eager'
         width={ui?.width ?? 170}
         height={ui?.height ?? 70}
-        className="object-contain max-h-20 max-w-32 sm:max-w-full"
+        className="object-contain max-h-[85px] max-w-32 sm:max-w-full"
       />
     </Link>
   );
