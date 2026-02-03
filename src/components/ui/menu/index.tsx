@@ -1,46 +1,60 @@
-import {ItemClassNameMenu, ItemMenu as Item, MenuProps} from "@/resources/types";
-import ItemMenu from "@ui/menu/itemMenu";
+'use client';
+
+import {ItemClassNameMenu, MenuProps} from "@/resources/types";
 import {clsx} from "clsx";
+import useIsMobile from "@/hooks/useIsMobile";
+import Icon from "@ui/icon";
+import {useState} from "react";
+import MappingItemsMenu from "@ui/menu/mappingItemsMenu";
+import {listStyles, mobilePanelStyles, navStyles} from "./menu.styles";
 
-const Menu = ({items, dir = 'vertical', ...ui}: MenuProps) => {
-
-  const itemProps = {
+const Menu = ({items, dir = 'vertical', isCollapsible = false, ...ui}: MenuProps) => {
+  const itemProps: ItemClassNameMenu = {
     classNameItem: ui?.classNameItem,
     classNameItemActive: ui?.classNameItemActive,
     classNameLink: ui?.classNameLink,
     classNameLinkActive: ui?.classNameLinkActive,
     classNameIcon: ui?.classNameIcon
+  };
 
-  } as ItemClassNameMenu;
+  const isMobile = useIsMobile();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const showDesktopMenu = (isCollapsible && !isMobile) || !isCollapsible;
 
   return (
-    <nav className={clsx('menu', ui?.className)}>
-      <ul className={clsx('nav-list flex m-0', dir === 'horizontal' ? 'flex-row' : 'flex-col')}>
-        {
-          items?.map(({link, label, items: subItems, ...item}: Item, index: number) => (
-            <ItemMenu
-              {...itemProps}
-              {...item}
-              key={index}
-              link={link}
-              label={label}
-            >
-              {subItems && (
-                <Menu
-                  key={index}
-                  items={subItems}
-                  dir='vertical'
-                  className='bg-white pl-10 pr-10 py-4 rounded-xl z-20 shadow-xl
-                  min-w-max max-w-8'
-                  classNameItem='mb-1 last:mb-0'
-                  classNameLink='!px-0'
-                  classNameIcon='mr-1.5'
-                />
-              )}
-            </ItemMenu>
-          ))
-        }
-      </ul>
+    <nav className={clsx(navStyles(), ui?.className)}>
+      {showDesktopMenu && (
+        <ul
+          className={listStyles({
+            direction: dir,
+            mobileCollapsible: isCollapsible && isMobile,
+          })}
+        >
+          <MappingItemsMenu itemProps={itemProps} items={items}/>
+        </ul>
+      )}
+
+      {isMobile && isCollapsible && (
+        <>
+          <Icon name="menu" onClick={() => setIsOpen(!isOpen)}/>
+
+          <div className={mobilePanelStyles({open: isOpen})}>
+            <div className="flex justify-end">
+              <button
+                className="p-5 cursor-pointer"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <Icon name="x"/>
+              </button>
+            </div>
+
+            <ul className="nav-list flex flex-col m-0 py-10 px-5">
+              <MappingItemsMenu itemProps={itemProps} items={items}/>
+            </ul>
+          </div>
+        </>
+      )}
     </nav>
   );
 };

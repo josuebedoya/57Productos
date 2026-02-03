@@ -73,6 +73,13 @@ export interface MenuProps extends Exclude<ItemClassNameMenu, LiHTML> {
   items: ItemMenu[];
   className?: string;
   dir?: 'horizontal' | 'vertical';
+  isCollapsible?: boolean;
+}
+
+// Mapping items menu props
+export interface MappingItemsProps {
+  itemProps: ItemClassNameMenu;
+  items?: ItemMenu[];
 }
 
 // component logo

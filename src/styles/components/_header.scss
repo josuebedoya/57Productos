@@ -1,4 +1,4 @@
-header nav .nav-list .nav-item:is(.has-child)::after{
+header nav .nav-list .nav-item:is(.has-child)> .nav-link::after{
   content: '';
   display: block;
   width: 13px;
@@ -6,7 +6,7 @@ header nav .nav-list .nav-item:is(.has-child)::after{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 3px;
+  right: -5px;
   background-image: url("/img/shapes/arrow-down.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -14,7 +14,7 @@ header nav .nav-list .nav-item:is(.has-child)::after{
   transition: .2s ease-in-out;
 }
 
-header nav .nav-list .nav-item:is(.open)::after{
+header nav .nav-list .nav-item:is(.open)>.nav-link::after{
   transform: rotate(-90deg) translateX(50%);
 }
 
@@ -39,4 +39,11 @@ header .controls .icon:hover::before{
 
 header .controls .icon:hover svg{
   color: var(--primary-color);
+}
+
+@media (max-width: 600px){
+  header .controls .icon svg{
+    height: 16px;
+    width: 16px;
+  }
 }
