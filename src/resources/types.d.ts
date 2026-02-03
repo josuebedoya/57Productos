@@ -22,7 +22,7 @@ export type ItemClassName = {
 
 // Tye params
 export interface Params {
-  locale: Locale;
+  locale: string;
 }
 
 // Type to params with promise
@@ -41,11 +41,6 @@ export interface SEOProps extends Params {
 
 // Root Layout
 export interface RootLayoutProps extends Children, Params {
-}
-
-// App layout
-export interface AppLayoutProps extends Children {
-  params: Params;
 }
 
 // Menu

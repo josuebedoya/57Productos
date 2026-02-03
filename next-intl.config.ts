@@ -1,6 +1,6 @@
-import {defaultLanguage, languages} from "@/i18n";
+import {routing} from '@/i18n/routing';
 
 module.exports = {
-  locales: languages,
-  defaultLocale: defaultLanguage
+  locales: routing.locales,
+  defaultLocale: routing.defaultLocale,
 };

@@ -1,4 +1,4 @@
-import {AppLayoutProps, ParamsPromise} from "@/resources/types";
+import {ParamsPromise} from "@/resources/types";
 import {config} from "@/resources/config";
 import {Metadata} from "next";
 import {SEO} from "@/resources/SEO";
@@ -25,10 +25,18 @@ export async function generateMetadata({params}: ParamsPromise): Promise<Metadat
   })
 }
 
-const AppLayout = async ({children, params}: AppLayoutProps) => {
-  const {locale} = await params;
-  return (<RootLayout locale={locale}>{children}</RootLayout>
+const AppLayout = async (
+  {
+    children,
+    params,
+  }: LayoutProps<'/[locale]'>) => {
+  const {locale} = await params
+
+  return (
+    <RootLayout locale={locale}>
+      {children}
+    </RootLayout>
   )
-};
+}
 
 export default AppLayout;
