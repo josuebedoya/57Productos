@@ -3,7 +3,7 @@ header{
   border-bottom: 1px solid #ddd;
 
   nav{
-    .nav-list:is(.has-child){
+    .nav-list .nav-item:is(.has-child){
       & > .nav-link{
         &::after{
           content: '';
@@ -21,10 +21,21 @@ header{
           transition: .2s ease-in-out;
         }
       }
+
+      .menu a{
+        font-weight: 300;
+        text-decoration: none;
+        color: var(--text-color);
+        transition: .2s ease-in-out;
+
+        &:hover{
+          color: var(--primary-color);
+        }
+      }
     }
 
-    .nav-list .nav-item{
-      &.open > .nav-link::after{
+    .nav-list .nav-item:is(.open){
+      & > .nav-link::after{
         transform: rotate(-90deg) translateX(50%);
       }
     }

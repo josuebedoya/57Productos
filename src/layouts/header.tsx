@@ -14,7 +14,7 @@ const Header = async ({locale}: Locale) => {
 
   return (
     <>
-      <header className='px-1 sm:px-3 px-xl-0 z-modal'>
+      <header className='px-1 sm:px-3 px-xl-0 z-modal sticky top-0'>
         <div className='container mx-auto text-center flex items-center justify-between gap-2 sm:gap-5'>
           <div className='py-2 order-1 flex-1 lg:flex-initial flex justify-start'>
             <Logo locale={locale}/>
@@ -24,9 +24,11 @@ const Header = async ({locale}: Locale) => {
               items={menuItems}
               dir='horizontal'
               isCollapsible={true}
-              classNameItem='text-base xl:text-lg px-2 py-1 hover:text-primary duration-200'
+              classNameItem='text-base xl:text-[17px] px-2 py-1 hover:text-primary duration-200'
               classNameItemActive='font-bold text-primary'
-              classNameIcon="mr-1.5 text-sm"
+              classNameIcon="mr-1 text-sm"
+              classNameLink='no-underline hover:no-underline font-light'
+              classNameLinkActive='!font-bold'
             />
           </div>
           <div
