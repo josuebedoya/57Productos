@@ -7,7 +7,7 @@ import {sofiaSans} from "@/resources/font.config";
 const Root = ({children}: Children) => {
   return (
     <html lang={routing.defaultLocale} className={sofiaSans.className}>
-    <body className='flex flex-col min-h-screen'>{children}</body>
+    <body className='flex flex-col min-h-scree bg-white dark:bg-primary'>{children}</body>
     </html>
   )
 };

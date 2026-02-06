@@ -10,7 +10,7 @@ const Header = async ({locale}: Locale) => {
   const {data: menuItems} = await readMenu(locale);
 
   const iconClasses = 'm-1 xl:m-2 rounded-md text-primary cursor-pointer font-semibold duration-200 ' +
-    ' relative overflow-hidden';
+    ' relative overflow-hidden dark:text-white dark:hover:bg-white/10';
 
   return (
     <>
@@ -24,8 +24,8 @@ const Header = async ({locale}: Locale) => {
               items={menuItems}
               dir='horizontal'
               isCollapsible={true}
-              classNameItem='text-base xl:text-[17px] px-2 py-1 hover:text-primary duration-200'
-              classNameItemActive='font-bold text-primary'
+              classNameItem='text-base xl:text-[17px] px-2 py-1 hover:text-primary dark:hover:text-white dark:text-light duration-200'
+              classNameItemActive='font-bold text-primary dark:text-white'
               classNameIcon="mr-1 text-sm"
               classNameLink='no-underline hover:no-underline font-light'
               classNameLinkActive='!font-bold'

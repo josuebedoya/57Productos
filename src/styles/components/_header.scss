@@ -1,11 +1,11 @@
-header{
+header {
   background: linear-gradient(0deg, transparent 0, #0003);
   border-bottom: 1px solid #ddd;
 
-  nav{
-    .nav-list .nav-item:is(.has-child){
-      & > .nav-link{
-        &::after{
+  nav {
+    .nav-list .nav-item:is(.has-child) {
+      & > .nav-link {
+        &::after {
           content: '';
           display: block;
           width: 13px;
@@ -22,28 +22,28 @@ header{
         }
       }
 
-      .menu a{
+      .menu a {
         font-weight: 300;
         text-decoration: none;
         color: var(--text-color);
         transition: .2s ease-in-out;
 
-        &:hover{
+        &:hover {
           color: var(--primary-color);
         }
       }
     }
 
-    .nav-list .nav-item:is(.open){
-      & > .nav-link::after{
+    .nav-list .nav-item:is(.open) {
+      & > .nav-link::after {
         transform: rotate(-90deg) translateX(50%);
       }
     }
   }
 
-  .controls{
-    .icon{
-      &::before{
+  .controls {
+    .icon {
+      &::before {
         content: "";
         width: 115%;
         height: 115%;
@@ -58,19 +58,33 @@ header{
         pointer-events: none;
       }
 
-      &:hover::before{
+      &:hover::before {
         bottom: 0;
       }
 
-      &:hover svg{
+      &:hover svg {
         color: var(--primary-color);
       }
     }
   }
 }
 
-@media (max-width: 600px){
-  header .controls .icon svg{
+.dark header {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+
+  & nav {
+    .nav-list .nav-item:is(.has-child) {
+      & > .nav-link {
+        &::after {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  header .controls .icon svg {
     height: 16px;
     width: 16px;
   }
