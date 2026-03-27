@@ -6,8 +6,8 @@ type Res = {
   data: ItemMenu[];
 }
 
-const readMenu = async (locale: string): Promise<Res> => {
+const getMenu = async (locale: string): Promise<Res> => {
   return await get<Res>({api: apiRoutes.menu, params: {locale}});
 };
 
-export default readMenu;
+export default getMenu;

@@ -12,7 +12,7 @@ async function apiResponse(request: NextRequest, lib: string) {
     const data = await read(lib, locale);
     return response(data);
   } catch (error) {
-    return response({MESSAGE: 'Failed to load menu data', error});
+    return response({MESSAGE: `Failed to load ${lib} data`, error});
   }
 }
 
