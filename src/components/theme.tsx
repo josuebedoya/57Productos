@@ -1,10 +1,10 @@
 'use client';
 
-import useDarkMode from "@/hooks/useDarkMode";
+import {useTheme} from "@/contexts/ThemeContext";
 import Icon from "@ui/icon";
 
 const Theme = () => {
-  const [dark, setDark] = useDarkMode();
+  const {dark, setDark} = useTheme();
   return (
     <div
       className='w-12 h-12 rounded-full  dark:bg-white bg-primary flex items-center
