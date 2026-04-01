@@ -1,13 +1,13 @@
 import {Locale} from "@/resources/types";
 import Menu from "@ui/menu";
-import {getMenu} from "@/server/menuRepository";
+import {getMenu} from "@db/repositories/menuRepository";
 import Logo from "@/components/logo";
 import '@/styles/components/_header.scss';
 import Icon from "@ui/icon";
 import Theme from "@/components/theme";
 
 const Header = async ({locale}: Locale) => {
-  const {data: menuItems} = await getMenu(locale);
+  const {data: {items: menuItems}} = await getMenu(locale);
 
   const iconClasses = 'm-1 xl:m-2 rounded-md text-primary cursor-pointer font-semibold duration-200 ' +
     ' relative overflow-hidden dark:text-white dark:hover:bg-white/10';
