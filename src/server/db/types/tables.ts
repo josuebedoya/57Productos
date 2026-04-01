@@ -1,4 +1,4 @@
-import {CommonColumns} from "@/server/db/types/common";
+import { CommonColumns, Id, TransCommonColumns } from "@/server/db/types/common";
 
 export type TablesObj = {
   menu: Menu;
@@ -9,6 +9,16 @@ export type TablesObj = {
 export type Tables = keyof TablesObj; // Key of from tables available
 
 export type Menu = CommonColumns;
-export type MenuTrans = CommonColumns;
-export type MenuItemTrans = CommonColumns;
-export type MenuItems = CommonColumns;
+
+export type MenuTrans = TransCommonColumns & {
+  menu_id: Id;
+};
+export type MenuItems = CommonColumns & {
+  menu_id: Id;
+  parent_id: Id | null;
+  order_num: number;
+};
+
+export type MenuItemTrans = TransCommonColumns & {
+  menu_item_id: Id;
+};
