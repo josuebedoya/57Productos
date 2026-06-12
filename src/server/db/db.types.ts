@@ -17,7 +17,7 @@ export type GetParams<T extends Tables> = {
   table: T;
   count?: 'exact' | 'estimated';
   justCount?: boolean; // If true, only return the count of items matching the query without fetching the actual data
-  columns?: (keyof TablesObj[ T ])[] | '*'; // Access only to available columns from each table
+  columns?: (keyof TablesObj[ T ] | string)[] | '*'; // Access only to available columns from each table
   eq?: TableQueryObj<T>;
   page?: number;
   pageSize?: number;
@@ -31,14 +31,14 @@ export type GetParams<T extends Tables> = {
 
 export type GetTableParams<T extends Tables> = Omit<GetParams<T>, 'table' | 'count'>;
 
-export type Data<T extends Tables> = {
-  items: TablesObj[ T ][] | [];
+export type Data<I> = {
+  items: I[] | [];
   count: number;
   page: number;
   pageSize: number;
 }
-export type ResGet<T extends Tables> = {
-  data: Data<T>;
+export type ResGet<I> = {
+  data: Data<I>;
   success: boolean;
   message: string;
   status: number;

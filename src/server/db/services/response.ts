@@ -1,5 +1,4 @@
 import {Data} from "@db/db.types";
-import {Tables} from "@db/types/tables";
 
 type Params = {
   success: boolean;
@@ -9,12 +8,13 @@ type Params = {
   code?: string;
 }
 
-type ApiResponse<T extends Tables> = {
-  data: Data<T>;
-} & Params;
+type ApiResponse<I> = {
+  data: Data<I>;
+  message: string;
+} & Omit<Params, 'message'>;
 
-type ApiResponseParams<T extends Tables> = {
-  data: Data<T> | null;
+type ApiResponseParams<I> = {
+  data: Data<I> | null;
 } & Params;
 
 const nullDataResponse: Data<never> = {
@@ -25,15 +25,15 @@ const nullDataResponse: Data<never> = {
 };
 
 const Response =
-  <T extends Tables>({data, error, status, success, message, code}: ApiResponseParams<T>)
-    : ApiResponse<T> => {
+  <I>({data, error, status, success, message, code}: ApiResponseParams<I>)
+    : ApiResponse<I> => {
 
     if (error || !success) console.error(error);
 
     return {
       data: (data ?? nullDataResponse),
       success,
-      message,
+      message: message ?? '',
       error,
       status,
       code

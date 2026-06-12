@@ -2,6 +2,7 @@ import {LiHTMLAttributes, ReactNode} from "react";
 import {routing} from './routing';
 import type {IconName} from 'lucide-react/dynamic';
 import type {LucideProps} from "lucide-react";
+import {MenuItem} from "@db/types/tables";
 
 // locate type to languages
 export type Locale = (typeof routing.locales)[number]
@@ -65,7 +66,7 @@ export interface ItemMenuProps
 
 // component menu
 export interface MenuProps extends Exclude<ItemClassNameMenu, LiHTML> {
-  items: ItemMenu[];
+  items: MenuItem[];
   className?: string;
   dir?: 'horizontal' | 'vertical';
   isCollapsible?: boolean;
@@ -74,7 +75,7 @@ export interface MenuProps extends Exclude<ItemClassNameMenu, LiHTML> {
 // Mapping items menu props
 export interface MappingItemsProps {
   itemProps: ItemClassNameMenu;
-  items?: ItemMenu[];
+  items?: MenuItem[];
 }
 
 // component logo

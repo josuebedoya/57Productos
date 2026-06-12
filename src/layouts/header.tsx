@@ -1,13 +1,13 @@
 import {Locale} from "@/resources/types";
 import Menu from "@ui/menu";
-import {getMenu} from "@db/repositories/menuRepository";
 import Logo from "@/components/logo";
 import '@/styles/components/_header.scss';
 import Icon from "@ui/icon";
 import Theme from "@/components/theme";
+import _get_menu from "@db/repositories/menuRepository/menu";
 
 const Header = async ({locale}: Locale) => {
-  const {data: {items: menuItems}} = await getMenu(locale);
+  const {data: {items: menuItems}} = await _get_menu();
 
   const iconClasses = 'm-1 xl:m-2 rounded-md text-primary cursor-pointer font-semibold duration-200 ' +
     ' relative overflow-hidden dark:text-white dark:hover:bg-white/10';
@@ -21,7 +21,7 @@ const Header = async ({locale}: Locale) => {
           </div>
           <div className='lg:flex-1 self-center flex justify-center items-center order-3 lg:order-2'>
             <Menu
-              items={menuItems}
+              items={menuItems as never}
               dir='horizontal'
               isCollapsible={true}
               classNameItem='text-base xl:text-[17px] px-2 py-1 hover:text-primary dark:hover:text-white dark:text-light duration-200'

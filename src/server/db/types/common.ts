@@ -20,5 +20,4 @@ export type Obj = Record<string, string | number | boolean>;
 
 export type TransCommonColumns = CommonColumns & {
   code_lang: string;
-  body: string;
 }

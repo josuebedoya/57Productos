@@ -1,4 +1,4 @@
-import getMenu from "@db/repositories/menuRepository/getMenu";
+import getMenu from "@db/repositories/menuRepository/menu";
 
 export {
   getMenu

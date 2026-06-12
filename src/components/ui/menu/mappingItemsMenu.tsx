@@ -1,22 +1,23 @@
 import React from 'react';
 import ItemMenu from "@ui/menu/itemMenu";
-import {ItemMenu as Item, MappingItemsProps} from "@/resources/types";
+import {MenuItem} from "@db/types/tables";
+import {MappingItemsProps} from "@/resources/types";
 import Menu from "@ui/menu";
 
 const MappingItemsMenu = ({items, itemProps}: MappingItemsProps) => {
   return (
-    items?.map(({link, label, items: subItems, ...item}: Item, index: number) => (
+    items?.map(({id,...item}: MenuItem, index: number) => (
       <ItemMenu
         {...itemProps}
         {...item}
         key={index}
-        link={link}
-        label={label}
+        link={String(id)}
+        label={String(id)}
       >
-        {subItems && (
+        {id && (
           <Menu
             key={index}
-            items={subItems}
+            items={[]}
             dir='vertical'
             classNameItem='mb-1 last:mb-0'
             classNameLink='!px-0'

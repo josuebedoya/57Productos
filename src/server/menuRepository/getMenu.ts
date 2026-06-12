@@ -1,9 +1,11 @@
 import get from "@/server/services/get";
-import {ItemMenu} from "@/resources/types";
+import {MenuItem} from "@/server/db/types/tables";
 import {apiRoutes} from "@/server/services/api/apiRoutes";
 
 type Res = {
-  data: ItemMenu[];
+  data: {
+    items: MenuItem[];
+  };
 }
 
 const getMenu = async (locale: string): Promise<Res> => {
