@@ -1,4 +1,55 @@
 # +57 Productos
+
+57Productos/
+├── public/
+│   ├── fonts/agrandir/            # Familia tipográfica Agrandir
+│   └── img/                       # Logo, favicon, shapes
+│
+├── src/
+│   ├── app/                       # App Router (Next.js)
+│   │   ├── layout.tsx
+│   │   ├── (default)/
+│   │   ├── [locale]/              # Rutas dinámicas por idioma
+│   │   └── api/menu/route.ts      # Endpoint API del menú
+│   │
+│   ├── components/
+│   │   ├── logo.tsx / theme.tsx
+│   │   └── ui/
+│   │       ├── icon/
+│   │       └── menu/              # Componentes del menú (estilos CSS-in-JS)
+│   │
+│   ├── contexts/ThemeContext.tsx   # Dark/light mode
+│   ├── hooks/useIsMobile.ts
+│   │
+│   ├── i18n/                      # Traducciones EN/ES + routing
+│   │   ├── en.json / es.json
+│   │   ├── proxy.ts / request.ts / routing.ts
+│   │
+│   ├── layouts/                   # Header, Footer, RootLayout
+│   │
+│   ├── resources/                 # Configuración global
+│   │   ├── ENV.ts / SEO.ts / config.ts
+│   │   ├── font.config.ts / tailwindtheme.config.ts
+│   │   └── types.d.ts
+│   │
+│   ├── server/
+│   │   ├── data/menu/             # JSON de menú estático (EN/ES)
+│   │   ├── db/                    # Capa de base de datos (Supabase)
+│   │   │   ├── client.ts / server.ts / proxy.ts
+│   │   │   ├── db.types.ts
+│   │   │   ├── types/ (common.ts, tables.ts, tables.sql)
+│   │   │   ├── services/ (get.ts, response.ts)
+│   │   │   └── repositories/menuRepository/
+│   │   ├── menuRepository/getMenu.ts
+│   │   └── services/api/          # apiResponse, apiRoutes, read, response
+│   │
+│   ├── styles/                    # SCSS global + componentes + vendor
+│   └── utils/index.ts
+│
+├── next.config.ts / next-intl.config.ts
+├── tailwind.config.ts / tsconfig.json
+└── +57_Productos.md               
+
 # Características Generales
 
 ## Idiomas
@@ -744,8 +795,20 @@ Si una animación llama más la atención que el contenido, debe eliminarse.
 
 El contenido siempre debe ser el protagonista.
 
+----------------------------------------------------------------------
 
+## Paginas + 57 Productos
 
+1. Inicio
+2. Nosotros
+    - Historia
+    - Equipo
+3. Productos
+4. Agricultores
+5. Compradores
+6. Blog
+7. Contacto
+8. ¿Eres Agricultor?
 
 ## Blog - item
 
@@ -1326,18 +1389,4 @@ Botón: Conoce el equipo
 8. Adaptabilidad
 9. Cumplimiento
 10. Nobleza
-
 ---
-
-## Paginas + 57 Productos
-
-1. Inicio
-2. Nosotros
-   - Historia
-   - Equipo
-3. Productos
-4. Agricultores
-5. Compradores
-6. Blog
-7. Contacto
-8. ¿Eres Agricultor?
